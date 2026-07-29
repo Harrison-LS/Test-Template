@@ -1,0 +1,178 @@
+{% import "partials/post-macros.njk" as posts %}
+<!DOCTYPE html>
+<html lang="{{ article.language | default('en') }}">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="{{ article.brief | default('') }}">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+	<title>{{ article.title }}</title>
+
+	<!-- Google font -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CMuli:400,700" rel="stylesheet">
+
+	<!-- Bootstrap -->
+	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+
+	<!-- Font Awesome Icon -->
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+
+	<!-- Custom stlylesheet -->
+	<link type="text/css" rel="stylesheet" href="css/style.css" />
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+</head>
+
+<body>
+	<!-- HEADER -->
+	<header id="header">
+		{% include "partials/shared-header.njk" %}
+
+		<!-- PAGE HEADER -->
+		<div id="post-header" class="page-header">
+			<div class="page-header-bg" style="background-image: url('{{ article.title_img }}');" data-stellar-background-ratio="0.5"></div>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-10">
+						<div class="post-category">
+							<a href="{{ article.category_url | default('category.html') }}">{{ article.category_detail }}</a>
+						</div>
+						<h1>{{ article.title }}</h1>
+						<ul class="post-meta">
+							{% if article.author is defined %}
+							<li><a href="{{ article.author_url | default('author.html') }}">{{ article.author }}</a></li>
+							{% endif %}
+							<li>{{ article.time }}</li>
+							{% if article.comments is defined %}
+							<li><i class="fa fa-comments"></i> {{ article.comments }}</li>
+							{% endif %}
+							{% if article.rate is defined %}
+							<li><i class="fa fa-eye"></i> {{ article.rate }}</li>
+							{% endif %}
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /PAGE HEADER -->
+	</header>
+	<!-- /HEADER -->
+
+	<!-- section -->
+	<div class="section">
+		<!-- container -->
+		<div class="container">
+			<!-- row -->
+			<div class="row">
+				<div class="col-md-8">
+					<!-- post content -->
+					<div class="section-row" data-article-id="{{ article.id }}" data-category-id="{{ article.category_detail_id }}">
+						{{ article.content | safe }}
+
+						{% if article.origin_url %}
+						<p class="post-source">
+							Source: <a href="{{ article.origin_url }}" target="_blank" rel="noopener noreferrer">{{ article.origin_url }}</a>
+						</p>
+						{% endif %}
+					</div>
+					<!-- /post content -->
+
+					{% if article.tags is defined and article.tags | length %}
+					<!-- post tags -->
+					<div class="section-row">
+						<div class="post-tags">
+							<ul>
+								<li>TAGS:</li>
+								{% for tag in article.tags %}
+								<li><a href="{{ tag.url | default('#') }}">{{ tag.name }}</a></li>
+								{% endfor %}
+							</ul>
+						</div>
+					</div>
+					<!-- /post tags -->
+					{% endif %}
+
+					{% if article.previous_post is defined or article.next_post is defined %}
+					<!-- post nav -->
+					<div class="section-row">
+						<div class="post-nav">
+							{% if article.previous_post is defined %}
+							<div class="prev-post">
+								<a class="post-img" href="{{ article.previous_post.url }}"><img src="{{ article.previous_post.title_img }}" alt="{{ article.previous_post.title }}"></a>
+								<h3 class="post-title"><a href="{{ article.previous_post.url }}">{{ article.previous_post.title }}</a></h3>
+								<span>Previous post</span>
+							</div>
+							{% endif %}
+							{% if article.next_post is defined %}
+							<div class="next-post">
+								<a class="post-img" href="{{ article.next_post.url }}"><img src="{{ article.next_post.title_img }}" alt="{{ article.next_post.title }}"></a>
+								<h3 class="post-title"><a href="{{ article.next_post.url }}">{{ article.next_post.title }}</a></h3>
+								<span>Next post</span>
+							</div>
+							{% endif %}
+						</div>
+					</div>
+					<!-- /post nav -->
+					{% endif %}
+
+					{% if article.related_posts is defined and article.related_posts | length %}
+					<!-- related posts -->
+					<div>
+						<div class="section-title">
+							<h3 class="title">{{ article.related_title | default("Related Posts") }}</h3>
+						</div>
+						<div class="row">
+							{% for post in article.related_posts %}
+							<div class="col-md-4">
+								<div class="post post-sm">
+									<a class="post-img" href="{{ post.url }}">
+										<img src="{{ post.title_img }}" alt="{{ post.title }}">
+									</a>
+									<div class="post-body">
+										<div class="post-category">
+											<a href="{{ post.category_url | default('category.html') }}">{{ post.category_detail }}</a>
+										</div>
+										<h3 class="post-title title-sm"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+										<ul class="post-meta">
+											<li>{{ post.time }}</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							{% endfor %}
+						</div>
+					</div>
+					<!-- /related posts -->
+					{% endif %}
+
+				</div>
+				<!-- shared-sidebar:start -->
+				{% include "partials/shared-sidebar.njk" %}
+				<!-- shared-sidebar:end -->
+			</div>
+			<!-- /row -->
+		</div>
+		<!-- /container -->
+	</div>
+	<!-- /SECTION -->
+
+	{% include "partials/shared-footer.njk" %}
+
+	<!-- jQuery Plugins -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.stellar.min.js"></script>
+	<script src="js/main.js"></script>
+
+</body>
+
+</html>

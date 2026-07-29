@@ -1,0 +1,28 @@
+{% macro card(post, postClass="", titleClass="", showExcerpt=false) %}
+<div class="post{% if postClass %} {{ postClass }}{% endif %}">
+	<a class="post-img" href="{{ post.url | default('blog-post.html') }}">
+		<img src="{{ post.image }}" alt="{{ post.title }}">
+	</a>
+	<div class="post-body">
+		<div class="post-category">
+			{% for category in post.categories %}
+			<a href="{{ category.url | default('category.html') }}">{{ category.name }}</a>
+			{% endfor %}
+		</div>
+		<h3 class="post-title{% if titleClass %} {{ titleClass }}{% endif %}">
+			<a href="{{ post.url | default('blog-post.html') }}">{{ post.title }}</a>
+		</h3>
+		<ul class="post-meta">
+			<li>
+				<a href="{{ post.authorUrl | default('author.html') }}">
+					{{ post.author | default('John Doe') }}
+				</a>
+			</li>
+			<li>{{ post.date | default('20 April 2018') }}</li>
+		</ul>
+		{% if showExcerpt %}
+		<p>{{ post.excerpt }}</p>
+		{% endif %}
+	</div>
+</div>
+{% endmacro %}

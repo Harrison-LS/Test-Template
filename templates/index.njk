@@ -1,0 +1,141 @@
+{% import "partials/post-macros.njk" as posts %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+	<title>Callie HTML Template</title>
+
+	<!-- Google font -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CMuli:400,700" rel="stylesheet">
+
+	<!-- Bootstrap -->
+	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+
+	<!-- Font Awesome Icon -->
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+
+	<!-- Custom stlylesheet -->
+	<link type="text/css" rel="stylesheet" href="css/style.css" />
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+</head>
+
+<body>
+	<!-- HEADER -->
+	<header id="header">
+		{% include "partials/shared-header.njk" %}
+	</header>
+	<!-- /HEADER -->
+
+	<!-- SECTION -->
+	<div class="section">
+		<!-- container -->
+		<div class="container">
+			<!-- row -->
+			<div id="hot-post" class="row hot-post">
+				<div class="col-md-8 hot-post-left">
+					{{ posts.card(page.hotPosts.featured, "post-thumb", "title-lg") }}
+				</div>
+				<div class="col-md-4 hot-post-right">
+					{% for post in page.hotPosts.secondary %}
+					{{ posts.card(post, "post-thumb") }}
+					{% endfor %}
+				</div>
+			</div>
+			<!-- /row -->
+		</div>
+		<!-- /container -->
+	</div>
+	<!-- /SECTION -->
+
+	<!-- SECTION -->
+	<div class="section">
+		<!-- container -->
+		<div class="container">
+			<!-- row -->
+			<div class="row">
+				<div class="col-md-8">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="section-title">
+								<h2 class="title">Recent posts</h2>
+							</div>
+						</div>
+						{% for post in page.recentPosts %}
+						<div class="col-md-6">
+							{{ posts.card(post) }}
+						</div>
+						{% if loop.index % 2 == 0 and not loop.last %}
+						<div class="clearfix visible-md visible-lg"></div>
+						{% endif %}
+						{% endfor %}
+					</div>
+
+					{% for section in page.categorySections %}
+					<div class="row">
+						<div class="col-md-12">
+							<div class="section-title">
+								<h2 class="title">{{ section.title }}</h2>
+							</div>
+						</div>
+						{% for post in section.posts %}
+						<div class="col-md-4">
+							{{ posts.card(post, "post-sm", "title-sm") }}
+						</div>
+						{% endfor %}
+					</div>
+					{% endfor %}
+				</div>
+				<!-- shared-sidebar:start -->
+				{% include "partials/shared-sidebar.njk" %}
+				<!-- shared-sidebar:end -->
+			</div>
+			<!-- /row -->
+		</div>
+		<!-- /container -->
+	</div>
+	<!-- /SECTION -->
+
+	<!-- SECTION -->
+	<div class="section">
+		<!-- container -->
+		<div class="container">
+			<!-- row -->
+			<div class="row">
+				<div class="col-md-8">
+					{% for post in page.feedPosts %}
+					{{ posts.card(post, "post-row", "", true) }}
+					{% endfor %}
+					<div class="section-row loadmore text-center">
+						<a href="#" class="primary-button">Load More</a>
+					</div>
+				</div>
+			</div>
+			<!-- /row -->
+		</div>
+		<!-- /container -->
+	</div>
+	<!-- /SECTION -->
+
+	{% include "partials/shared-footer.njk" %}
+
+	<!-- jQuery Plugins -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.stellar.min.js"></script>
+	<script src="js/main.js"></script>
+
+</body>
+
+</html>

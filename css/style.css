@@ -364,6 +364,26 @@ textarea.input {
   max-height: 70px;
 }
 
+.nav-logo .brand-text {
+  color: #1b1c1e;
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  white-space: nowrap;
+}
+
+.brand-text .brand-pink {
+  color: #ee4266;
+}
+
+.brand-text .brand-blue {
+  color: #2d7dd2;
+}
+
+.brand-text .brand-gold {
+  color: #f2a900;
+}
+
 /*----------------------------*\
 	search
 \*----------------------------*/
@@ -1192,6 +1212,10 @@ textarea.input {
   margin-bottom: 30px;
 }
 
+.popular-posts-widget .post.post-widget {
+  margin-bottom: 45px;
+}
+
 /*----------------------------*\
 	social widget
 \*----------------------------*/
@@ -1376,6 +1400,17 @@ textarea.input {
 
 #footer {
   color: #97989b;
+}
+
+#footer.compact-footer {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+#footer.compact-footer .footer-bottom {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 0;
 }
 
 #footer a {
