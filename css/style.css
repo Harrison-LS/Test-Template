@@ -171,6 +171,14 @@ figure>figcaption {
   margin-bottom: 30px;
 }
 
+.section-row[data-article-id] img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .section-title {
   position: relative;
   margin-bottom: 20px;
@@ -712,6 +720,9 @@ textarea.input {
   left: 0;
   right: 0;
   bottom: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .page-header .page-header-bg:after {

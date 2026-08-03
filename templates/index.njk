@@ -34,6 +34,7 @@
 <body>
 	<!-- HEADER -->
 	<header id="header">
+		{% set headerMenuTabs = [page.menuTabs[0]] %}
 		{% include "partials/shared-header.njk" %}
 	</header>
 	<!-- /HEADER -->
@@ -98,6 +99,7 @@
 					{% endfor %}
 				</div>
 				<!-- shared-sidebar:start -->
+				{% set sidebarCategories = [sidebar.categories[0]] %}
 				{% include "partials/shared-sidebar.njk" %}
 				<!-- shared-sidebar:end -->
 			</div>

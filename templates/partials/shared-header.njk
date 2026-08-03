@@ -1,4 +1,5 @@
 {% import "partials/post-macros.njk" as posts %}
+{% set menuTabs = headerMenuTabs | default(page.menuTabs) %}
 		<!-- NAV -->
 		<div id="nav">
 			<!-- Top Nav -->
@@ -40,14 +41,14 @@
 								<div class="row">
 									<div class="col-md-2">
 										<ul class="tab-nav">
-											<li class="active"><a data-toggle="tab" href="#tab1">Travel</a></li>
-											<li><a data-toggle="tab" href="#tab2">Hotel</a></li>
-											<li><a data-toggle="tab" href="#tab1">Restaurant</a></li>
+											{% for tab in menuTabs %}
+											<li{% if loop.first %} class="active"{% endif %}><a data-toggle="tab" href="#{{ tab.id }}">{{ tab.name }}</a></li>
+											{% endfor %}
 										</ul>
 									</div>
 									<div class="col-md-10">
 										<div class="dropdown-body tab-content">
-											{% for tab in page.menuTabs %}
+											{% for tab in menuTabs %}
 											<div id="{{ tab.id }}" class="tab-pane fade in{% if loop.first %} active{% endif %}">
 												<div class="row">
 													{% for post in tab.posts %}
@@ -63,8 +64,6 @@
 								</div>
 							</div>
 						</li>
-						<li><a href="#">Hotel</a></li>
-						<li><a href="#">Restaurant</a></li>
 					</ul>
 					<!-- /nav -->
 				</div>
@@ -78,8 +77,6 @@
 					<li class="has-dropdown"><a>Categories</a>
 						<ul class="dropdown">
 							<li><a href="#">Travel</a></li>
-							<li><a href="#">Hotel</a></li>
-							<li><a href="#">Restaurant</a></li>
 						</ul>
 					</li>
 					<li><a href="about.html">About Us</a></li>

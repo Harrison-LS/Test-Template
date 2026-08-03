@@ -1,3 +1,4 @@
+{% set categories = sidebarCategories | default(sidebar.categories) %}
 <aside class="col-md-4">
 	<div class="aside-widget">
 		<div class="section-title">
@@ -5,7 +6,7 @@
 		</div>
 		<div class="category-widget">
 			<ul>
-				{% for category in sidebar.categories %}
+				{% for category in categories %}
 				<li>
 					<a href="{{ category.url }}">
 						{{ category.name }} <span>{{ category.count }}</span>
@@ -22,9 +23,11 @@
 		</div>
 		{% for post in sidebar.posts %}
 		<article class="post post-widget">
+			{% if post.image %}
 			<a class="post-img" href="{{ post.url }}">
 				<img src="{{ post.image }}" alt="{{ post.title }}">
 			</a>
+			{% endif %}
 			<div class="post-body">
 				<div class="post-category">
 					{% for category in post.categories %}

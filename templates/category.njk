@@ -1,268 +1,149 @@
+{% import "partials/post-macros.njk" as posts %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ language | default('en') }}">
 
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-
-	<title>Callie HTML Template</title>
-
-	<!-- Google font -->
+	<title>{{ category.name }} | San Francisco</title>
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CMuli:400,700" rel="stylesheet">
-
-	<!-- Bootstrap -->
-	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
-
-	<!-- Font Awesome Icon -->
+	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/font-awesome.min.css">
-
-	<!-- Custom stlylesheet -->
-	<link type="text/css" rel="stylesheet" href="css/style.css" />
-
-	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-	<!--[if lt IE 9]>
-		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-		<![endif]-->
-
+	<link type="text/css" rel="stylesheet" href="css/style.css">
+	<style>
+		.category-page-post[hidden] { display: none !important; }
+		.category-featured .post.post-thumb .post-img {
+			height: 430px;
+		}
+		.category-featured .post.post-thumb .post-img img,
+		.category-grid-post .post-img img {
+			height: 100%;
+			object-fit: cover;
+		}
+		.category-grid-post .post-img {
+			aspect-ratio: 1 / 1;
+		}
+		.category-grid {
+			display: flex;
+			flex-wrap: wrap;
+		}
+		.category-grid-post {
+			display: flex;
+			float: none;
+		}
+		.category-grid-post .post {
+			width: 100%;
+		}
+		@media only screen and (max-width: 767px) {
+			.category-featured .post.post-thumb .post-img {
+				height: 320px;
+			}
+			.category-grid-post {
+				width: 100%;
+			}
+		}
+	</style>
 </head>
 
 <body>
-	<!-- HEADER -->
 	<header id="header">
+		{% set headerMenuTabs = [page.menuTabs[0]] %}
 		{% include "partials/shared-header.njk" %}
 
-		<!-- PAGE HEADER -->
 		<div class="page-header">
-			<div class="page-header-bg" style="background-image: url('./img/header-2.jpg');" data-stellar-background-ratio="0.5"></div>
+			<div
+				class="page-header-bg"
+				{% if category.image %}style="background-image: url('{{ category.image }}');"{% endif %}
+				data-stellar-background-ratio="0.5"
+			></div>
 			<div class="container">
 				<div class="row">
 					<div class="col-md-offset-1 col-md-10 text-center">
-						<h1 class="text-uppercase">Lifestyle</h1>
+						<h1 class="text-uppercase">{{ category.name }}</h1>
 					</div>
 				</div>
 			</div>
 		</div>
-		<!-- /PAGE HEADER -->
 	</header>
-	<!-- /HEADER -->
 
-	<!-- SECTION -->
 	<div class="section">
-		<!-- container -->
 		<div class="container">
-			<!-- row -->
 			<div class="row">
-				<div class="col-md-8">
-					<!-- post -->
-					<div class="post post-thumb">
-						<a class="post-img" href="blog-post.html"><img src="./img/hot-post-3.jpg" alt=""></a>
-						<div class="post-body">
-							<div class="post-category">
-								<a href="category.html">Fashion</a>
-								<a href="category.html">Lifestyle</a>
-							</div>
-							<h3 class="post-title title-lg"><a href="blog-post.html">Mel ut impetus suscipit tincidunt. Cum id ullum laboramus persequeris.</a></h3>
-							<ul class="post-meta">
-								<li><a href="author.html">John Doe</a></li>
-								<li>20 April 2018</li>
-							</ul>
-						</div>
+				<div class="col-md-8" id="category-article-list" data-total-pages="{{ total_pages }}">
+					{% for article in articles %}
+					{% if loop.index == 1 %}
+					<div
+						class="category-page-post category-featured"
+						data-page="{{ article.page_number }}"
+					>
+						{{ posts.card(article, "post-thumb", "title-lg") }}
 					</div>
-					<!-- /post -->
-
-					<div class="row">
-						<!-- post -->
-						<div class="col-md-6">
-							<div class="post">
-								<a class="post-img" href="blog-post.html"><img src="./img/post-3.jpg" alt=""></a>
-								<div class="post-body">
-									<div class="post-category">
-										<a href="category.html">Lifestyle</a>
-									</div>
-									<h3 class="post-title"><a href="blog-post.html">Ne bonorum praesent cum, labitur persequeris definitionem quo cu?</a></h3>
-									<ul class="post-meta">
-										<li><a href="author.html">John Doe</a></li>
-										<li>20 April 2018</li>
-									</ul>
-								</div>
-							</div>
+					{% elif loop.index >= 2 and loop.index <= 5 %}
+					{% if loop.index == 2 %}<div class="row category-grid">{% endif %}
+						<div class="col-sm-6 category-page-post category-grid-post" data-page="{{ article.page_number }}">
+							{{ posts.card(article) }}
 						</div>
-						<!-- /post -->
-
-						<!-- post -->
-						<div class="col-md-6">
-							<div class="post">
-								<a class="post-img" href="blog-post.html"><img src="./img/post-5.jpg" alt=""></a>
-								<div class="post-body">
-									<div class="post-category">
-										<a href="category.html">Lifestyle</a>
-									</div>
-									<h3 class="post-title"><a href="blog-post.html">Postea senserit id eos, vivendo periculis ei qui</a></h3>
-									<ul class="post-meta">
-										<li><a href="author.html">John Doe</a></li>
-										<li>20 April 2018</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<!-- /post -->
-
-						<div class="clearfix visible-md visible-lg"></div>
-
-						<!-- post -->
-						<div class="col-md-6">
-							<div class="post">
-								<a class="post-img" href="blog-post.html"><img src="./img/post-9.jpg" alt=""></a>
-								<div class="post-body">
-									<div class="post-category">
-										<a href="category.html">Lifestyle</a>
-									</div>
-									<h3 class="post-title"><a href="blog-post.html">Sed ut perspiciatis, unde omnis iste natus error sit</a></h3>
-									<ul class="post-meta">
-										<li><a href="author.html">John Doe</a></li>
-										<li>20 April 2018</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<!-- /post -->
-
-						<!-- post -->
-						<div class="col-md-6">
-							<div class="post">
-								<a class="post-img" href="blog-post.html"><img src="./img/post-7.jpg" alt=""></a>
-								<div class="post-body">
-									<div class="post-category">
-										<a href="category.html">Health</a>
-										<a href="category.html">Lifestyle</a>
-									</div>
-									<h3 class="post-title"><a href="blog-post.html">Sed ut perspiciatis, unde omnis iste natus error sit</a></h3>
-									<ul class="post-meta">
-										<li><a href="author.html">John Doe</a></li>
-										<li>20 April 2018</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<!-- /post -->
+					{% if loop.index == 5 or loop.last %}</div>{% endif %}
+					{% else %}
+					<div
+						class="category-page-post"
+						data-page="{{ article.page_number }}"
+						{% if article.page_number > 1 %}hidden{% endif %}
+					>
+						{{ posts.card(article, "post-row", "", true) }}
 					</div>
-
-					<!-- post -->
-					<div class="post post-row">
-						<a class="post-img" href="blog-post.html"><img src="./img/post-13.jpg" alt=""></a>
-						<div class="post-body">
-							<div class="post-category">
-								<a href="category.html">Travel</a>
-								<a href="category.html">Lifestyle</a>
-							</div>
-							<h3 class="post-title"><a href="blog-post.html">Mel ut impetus suscipit tincidunt. Cum id ullum laboramus persequeris.</a></h3>
-							<ul class="post-meta">
-								<li><a href="author.html">John Doe</a></li>
-								<li>20 April 2018</li>
-							</ul>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
-						</div>
+					{% endif %}
+					{% else %}
+					<div class="section-row text-center">
+						<p>No articles found.</p>
 					</div>
-					<!-- /post -->
+					{% endfor %}
 
-					<!-- post -->
-					<div class="post post-row">
-						<a class="post-img" href="blog-post.html"><img src="./img/post-6.jpg" alt=""></a>
-						<div class="post-body">
-							<div class="post-category">
-								<a href="category.html">Fashion</a>
-								<a href="category.html">Lifestyle</a>
-							</div>
-							<h3 class="post-title"><a href="blog-post.html">Sed ut perspiciatis, unde omnis iste natus error sit</a></h3>
-							<ul class="post-meta">
-								<li><a href="author.html">John Doe</a></li>
-								<li>20 April 2018</li>
-							</ul>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
-						</div>
+					{% if total_pages > 1 %}
+					<div class="section-row loadmore text-center" id="category-load-more-wrap">
+						<button type="button" class="primary-button" id="category-load-more">Load More</button>
 					</div>
-					<!-- /post -->
-
-					<!-- post -->
-					<div class="post post-row">
-						<a class="post-img" href="blog-post.html"><img src="./img/post-8.jpg" alt=""></a>
-						<div class="post-body">
-							<div class="post-category">
-								<a href="category.html">Fashion</a>
-								<a href="category.html">Lifestyle</a>
-							</div>
-							<h3 class="post-title"><a href="blog-post.html">Postea senserit id eos, vivendo periculis ei qui</a></h3>
-							<ul class="post-meta">
-								<li><a href="author.html">John Doe</a></li>
-								<li>20 April 2018</li>
-							</ul>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
-						</div>
-					</div>
-					<!-- /post -->
-
-					<!-- post -->
-					<div class="post post-row">
-						<a class="post-img" href="blog-post.html"><img src="./img/post-12.jpg" alt=""></a>
-						<div class="post-body">
-							<div class="post-category">
-								<a href="category.html">Lifestyle</a>
-							</div>
-							<h3 class="post-title"><a href="blog-post.html">Sed ut perspiciatis, unde omnis iste natus error sit</a></h3>
-							<ul class="post-meta">
-								<li><a href="author.html">John Doe</a></li>
-								<li>20 April 2018</li>
-							</ul>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
-						</div>
-					</div>
-					<!-- /post -->
-
-					<!-- post -->
-					<div class="post post-row">
-						<a class="post-img" href="blog-post.html"><img src="./img/post-7.jpg" alt=""></a>
-						<div class="post-body">
-							<div class="post-category">
-								<a href="category.html">Health</a>
-								<a href="category.html">Lifestyle</a>
-							</div>
-							<h3 class="post-title"><a href="blog-post.html">Ne bonorum praesent cum, labitur persequeris definitionem quo cu?</a></h3>
-							<ul class="post-meta">
-								<li><a href="author.html">John Doe</a></li>
-								<li>20 April 2018</li>
-							</ul>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
-						</div>
-					</div>
-					<!-- /post -->
-
-					<div class="section-row loadmore text-center">
-						<a href="#" class="primary-button">Load More</a>
-					</div>
+					{% endif %}
 				</div>
 
-				<!-- shared-sidebar:start -->
+				{% set sidebarCategories = [sidebar.categories[0]] %}
 				{% include "partials/shared-sidebar.njk" %}
-				<!-- shared-sidebar:end -->
 			</div>
-			<!-- /row -->
 		</div>
-		<!-- /container -->
 	</div>
-	<!-- /SECTION -->
 
 	{% include "partials/shared-footer.njk" %}
 
-	<!-- jQuery Plugins -->
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/jquery.stellar.min.js"></script>
 	<script src="js/main.js"></script>
+	<script>
+		(function () {
+			var list = document.getElementById("category-article-list");
+			var button = document.getElementById("category-load-more");
+			var wrapper = document.getElementById("category-load-more-wrap");
 
+			if (!list || !button || !wrapper) return;
+
+			var currentPage = 1;
+			var totalPages = Number(list.getAttribute("data-total-pages")) || 1;
+
+			button.addEventListener("click", function () {
+				currentPage += 1;
+				var nextItems = list.querySelectorAll('[data-page="' + currentPage + '"]');
+
+				for (var index = 0; index < nextItems.length; index += 1) {
+					nextItems[index].hidden = false;
+				}
+
+				if (currentPage >= totalPages) {
+					wrapper.hidden = true;
+				}
+			});
+		})();
+	</script>
 </body>
 
 </html>

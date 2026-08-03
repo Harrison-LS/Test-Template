@@ -102,9 +102,6 @@ Optional fields for features not present in the base database object:
 ```js
 {
   category_url: "category.html",
-  author: "John Doe",
-  author_url: "author.html",
-  comments: 3,
   tags: [
     {
       name: "Travel",
@@ -134,6 +131,9 @@ Optional fields for features not present in the base database object:
   ]
 }
 ```
+
+The `author`, `time`, `comments`, and `rate` values are not displayed by
+`blog-post.njk`.
 
 The `content` field is rendered with Nunjucks `safe`. The external application
 must sanitize untrusted HTML before passing it to the template.
