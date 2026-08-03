@@ -18,7 +18,7 @@
 		<ul class="post-meta">
 			{% if post.author %}
 			<li>
-				<a href="{{ post.authorUrl | default('author.html') }}">
+				<a href="{{ post.authorUrl | default('../author.html') }}">
 					{{ post.author }}
 				</a>
 			</li>
