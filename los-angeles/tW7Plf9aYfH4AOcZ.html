@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <title>Los Angeles [RV Micro-Trip] Special Edition</title>
+    <style>
+      :root {
+        --paper: #f5f1eb;
+        --ink: #163d36;
+        --body: #3f3a34;
+        --muted: #8a8379;
+        --line: #ddd5ca;
+        --accent: #d9782f;
+        --white: #fffaf4;
+        --shadow: 0 22px 70px rgba(28, 25, 20, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        line-height: 1.72;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .hero {
+        min-height: clamp(330px, 48vw, 560px);
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        padding: clamp(28px, 7vw, 70px) clamp(24px, 8vw, 76px);
+        background: #28463f;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.12)),
+          url("https://pixabay.com/get/g9c51b3136f633060bcdd6e7c51d34b509841db38f7b4baf9a18fb87070ab1124a5a285711d40a296e6353618633212cd.jpg");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .heroInner {
+        position: relative;
+        width: min(900px, 100%);
+        color: #ffffff;
+      }
+
+      .heroLocation {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 24px;
+        color: rgba(255, 255, 255, 0.78);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .heroLocation svg {
+        width: 17px;
+        height: 17px;
+        color: #f0a45f;
+      }
+
+      h1 {
+        max-width: 880px;
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(30px, 4.8vw, 54px);
+        font-weight: 900;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .brief {
+        width: min(760px, 100%);
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 18px;
+        color: #5a5148;
+        font-size: clamp(17px, 1.9vw, 20px);
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.58;
+      }
+
+      .articleWrap {
+        width: min(900px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: clamp(42px, 6vw, 68px) 0 72px;
+      }
+
+      .content {
+        width: min(760px, 100%);
+        color: var(--body);
+        font-size: clamp(16px, 1.8vw, 18px);
+        line-height: 1.5;
+      }
+
+      .content p {
+        margin: 0 0 0.5em;
+      }
+
+      .content h2,
+      .content h3,
+      .content h4 {
+        margin: 46px 0 18px;
+        color: var(--ink);
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+
+      .content h2 {
+        font-size: clamp(28px, 4vw, 38px);
+      }
+
+      .content h3 {
+        font-size: clamp(23px, 3vw, 30px);
+      }
+
+      .content ul,
+      .content ol {
+        margin: 0 0 30px;
+        padding-left: 28px;
+      }
+
+      .content li {
+        margin: 8px 0;
+      }
+
+      .content blockquote {
+        margin: 34px 0;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 20px;
+        color: #5a5148;
+        font-style: italic;
+      }
+
+      .content img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 42px 0 12px;
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+      }
+
+      .content figure {
+        margin: 42px 0;
+      }
+
+      .content figure img {
+        margin: 0 0 12px;
+      }
+
+      .content figcaption {
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .backLink {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 46px;
+        border-top: 1px solid var(--line);
+        padding-top: 28px;
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.18em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .backLink:hover {
+        color: var(--accent);
+      }
+
+      @media (max-width: 720px) {
+        .hero {
+          min-height: 420px;
+          padding: 30px 24px;
+        }
+
+        .articleWrap {
+          width: min(100% - 28px, 900px);
+          padding-bottom: 48px;
+        }
+
+        .content {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="heroInner">
+        <p class="heroLocation">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+            />
+          </svg>
+          <span>Los Angeles</span>
+        </p>
+        <h1>Los Angeles [RV Micro-Trip] Special Edition</h1>
+      </div>
+    </header>
+
+    <main class="articleWrap">
+      
+
+      <article class="content">
+        
+          <p>Road Trip RV Introduction</p><p><br></p><p>                                        Los Angeles Micro-travel Series</p><p><br></p><p>                                        NO1: Joshua Tree National Park + Salvation Mountain, 2 Days 1 Night</p><p><br></p><p>                                        NO2: California Highway 1 Road, 3 Days 2 Nights Niche Travel</p><p><br></p><p>                                        DAY1: Los Angeles - Santa Barbara - Denmark Town</p><p><br></p><p>                    Drive along Highway 1 early in the morning to Santa Barbara, a Spanish-style town bathed in California sunshine. Here, sunlight, tree shadows, blue waves, and white sands instantly slow down your pace of mind. Then drive to Denmark Town, a fairy tale-like small town, as if you are in your childhood dreams.</p><p><br></p><p>                                        DAY2: Carmel Town - Monterey</p><p><br></p><p>                        After breakfast at Carmel Town, drive along Highway 1 to the "utopia" of California Bay Area - Carmel Town. This quiet town with mountains behind and sea in front offers various theaters, galleries, art exhibitions, and rich cultural activities, radiating unique artistic temperament. Then drive to Monterey</p><p><br></p><p>                                        DAY3: Monterey - Los Angeles</p><p><br></p><p>                        After breakfast, drive along the bay coast with stops en route, admiring the magnificent Pacific Ocean scenery of 17-Mile Drive, the famous Pebble Beach Golf Course, and various style ocean view mansions. Or walk at Fisherman's Wharf for a break, bathing in sunlight, enjoying the tranquility of the moment. Finally drive back to Los Angeles.</p><p><br></p><p>                                        NO3: Pilgrimage Route 66 + Kingman + Seligman + Williams + 3 Days 2 Nights</p><p><br></p><p>                                        DAY1: Los Angeles</p><p><br></p><p><img src="https://pixabay.com/get/g648fc60e0386c7444833c575f21748ad9f58ac9b697f5ae681479a34bad55e1df723818ba2454b9c9c6a62d2dde48130.jpg" alt="Los Angeles RV micro-travel routes" loading="lazy"></p>
+<p>                    Highway 66, Ghost Towns, Wild Horse Saloon Morning drive from Los Angeles to Highway 66, affectionately called "Mother Road" by Americans. Highway 66 is filled with human tragedy and suffering, and has also given this road so much meaning of "freedom" and "romance." First arriving at the ghost town located on Highway 66, there are abandoned gas stations, barren deserts, glaring sunlight, and abandoned mailboxes. Except for huge cacti, no other sign of life can be found. Then arrive at the declining gold rush town hidden along Highway 66—Wild Horse Saloon. Wild horses strolling leisurely on the street, Harleys parked by the roadside, and small shops with yellowed facades on both sides all exude a strong Western atmosphere.</p><p><br></p><p>                                        DAY2: Kingman-Seligman-Williams</p><p><br></p><p>                    Highway 66 After breakfast, drive to Kingman to experience the freedom of Highway 66. Then drive to Seligman. Some say Seligman is the best-preserved Highway 66 town. The shop fronts are lined with various vintage cars and Harley-Davidsons scattered about. Stars and stripes flags flutter in the breeze everywhere, while "66" signs are visible throughout, creating an authentic Western cultural atmosphere. Finally, drive to Williams—though small, this town holds an extraordinary history. Named in honor of early legendary hunter and guide Mountain Man William Shirley Williams. The railroad museum features daily Old West gunfight reenactments, with Highway 66 elements scattered throughout the streets.</p><p><br></p><p>                                        DAY3: Return to Los Angeles</p><p><br></p><p><img src="https://pixabay.com/get/gd6483abb890d41dfc324546123f499af62c19d3601e7a9fdde70cd39880a7ebe2aa6461c306f3287d5c0429941dbca76.jpg" alt="Highway 66 road trip" loading="lazy"></p>
+<p>                    Bottle Forest, after breakfast at the world's only McDonald's restaurant we drove to Bottle Forest town, famous for its special bottle forest on the roadside sand. This place is visually stunning, with all kinds of glass bottles everywhere before your eyes - blue, green, white, red, brown intricately interwoven together. On top of each bottle tree there is a strange item: an old typewriter, carousel's white wooden horse, owl statue, deer antlers, saxophone, propeller, oil drum, hunting rifle, and oversized Coca-Cola badges, etc. These things that could never be together appear so harmoniously in this forest. Afterward we drove back to Los Angeles, heading to the world's only McDonald's restaurant, which has now become a McDonald's Museum, a great place to experience American fast food culture.</p><p><br></p><p>                                        NO4: Joshua Tree National Park + Salvation Mountain + Potato Chip Rock + San Diego</p><p><br></p><p>                                        DAY1: Los Angeles - Joshua Tree National Park - Salvation Mountain</p><p><br></p><p>9:00AM Early morning drive to the national park composed of desert, high mountains, stone forests, dry riverbeds and canyons, growing Mexican palo verde trees called "prayer trees" and prickly cacti -- Joshua Tree National Park. Hidden Valley's unique terrain, desert plants and mountain scenery make this road a must-visit for travelers, where you can see magnificent giant rock formations and Joshua Trees everywhere. This road is easy to drive, suitable for both adults and children.</p><p><img src="https://pixabay.com/get/gbce1143ee8439f90038d4b2bdafb6e41c9fe7f2a6671b8f5f7d87873213c7312430de4a7a22a0014dafa0e1fd91cb949.jpg" alt="Joshua Tree National Park" loading="lazy"></p>
+<p>12:30 Outdoor Picnic Split Rock sits directly across from the famous Jumbo Rock, which appears as if it was split by a giant wielding an axe. Nearby, two miles of easy hiking trails are available to explore. Pack some food and enjoy a wilderness lunch at the picnic area - it adds unique charm to your experience. The temperature inside the rock's crevice is noticeably cooler than outside. Arch Rock's arch-like natural formation draws visitors in, making it ideal for both rock climbing and photography. Simply follow an easy hiking trail briefly and you'll discover the spectacular Arch Rock landscape.</p><p>15:00 Cacti & Joshua Trees The Cholla Cactus Garden This natural garden abundant with cacti resembles a world from Dr. Seuss's books (legend holds this was his inspiration). You can walk along the short hiking trails here, but you'll likely stop midway being captivated by the vibrant cactus scenery surrounding you. Just be careful - getting pricked by cactus spines won't be enjoyable.</p><p>17:30 Scenery at Sunset Remember that San Andreas Fault earthquake film starring Dwayne Johnson? At Keys View, you can see that famous fault line. Beyond this, the Salton Lake views and dramatic mountain landscapes under sunset appear like those unrealistically beautiful scenes from films.</p><p><br></p><p>                                        DAY 2: Red Rock Canyon - San Diego</p><p><br></p><p><img src="https://images.pexels.com/photos/36559831/pexels-photo-36559831.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt="Outdoor activities itinerary Split Rock Arch Rock Cholla Cactus Garden Keys View sunset hiking trails Red Rock Canyon San Diego" loading="lazy"></p>
+<p>                    Drive to Salvation Mountain, then visit Salvation Mountain to admire the religious art made from adobe, straw, and thousands of gallons of lead-free paint, experiencing a different kind of religious culture. Salvation Mountain is a spontaneous performance art piece created locally by Leonard Knight. The entire mountain is covered with Bible verses praising God. He believed that love exists everywhere and hoped people could spread love to make the world better.</p><p>15:00 Visit San Diego Old Town. Afterward, drive to San Diego's historic old town - the birthplace of California, a beautiful and fun historical city. The old town is filled with ancient Spanish architecture, churches, museums, and authentic Mexican restaurants. Stroll along the cultural walking street, admire the unique shops on both sides and locals dressed in folk attire, feeling as if you're in a 19th-century Mexican village.</p><p><br></p><p>                                        DAY3: San Diego - Potato Chip Rock - Los Angeles</p><p><br></p><p>                    After breakfast, climb Potato Chip Rock. Drive to one of the world's 9 most thrilling destinations - the famous rock at the top of Woodson Mountain in San Diego, California, USA -- Potato Chip Rock. Upon reaching the parking area near Potato Chip Rock, a hiking adventure lasting about an hour begins. Along the way, laughter and joy with companions, breathing fresh air. Finally summiting the rock formation, leaving behind thrilling photos to flood Instagram and social media feeds.</p><p><br></p><p>                                        NO5: Death Valley National Park + Moving Rocks + Zabriskie Point - 3 Days, 2 Nights</p><p><br></p><p>                                        DAY1: Los Angeles - Death Valley National Park</p><p><br></p><p><img src="https://pixabay.com/get/g6f805538e82f6ea64a7662ba0a4fb6479dd120f62896c2d880d544a47291ea944598db51fb12417764f9ea970f1d1418.jpg" alt="Salvation Mountain" loading="lazy"></p>
+<p>                    Death Valley National Park morning drive to golden sand dunes, vast wilderness, deep canyons, towering mountains and valleys composed - America's hottest and driest national park--Death Valley National Park. Evening view sunset, night observe Milky Way galaxy. Then drive to Death Valley Running Desert Basin.</p><p><br></p><p>                                        DAY2: Death Valley National Park</p><p><br></p><p>                    Death Valley Running Desert Basin after breakfast drive to southern Death Valley, admire canyons, deserts, rock beaches. Finally drive to Running Desert Basin.</p><p><br></p><p>                                        DAY3: Los Angeles</p><p><br></p><p>                    Running Rocks After breakfast drive to Running Desert Basin, view natural wonder--"Rocks that run by themselves". World's hardest puzzle to crack: huge rocks actually run on their own! Some rocks can run hundreds of meters. So far, no scientist has given a reasonable explanation. Finally drive back to Los Angeles.</p><p><br></p><p>                                        NO6: Yosemite Depth Tour 3 Days 2 Nights</p><p><br></p><p>                                        DAY1: Los Angeles-Yosemite National Park</p><p><br></p><p>                    Early morning drive to Yosemite National Park possessing magnificent waterfalls, towering granite and peaceful valleys, starting three-day wonderful journey. Arrive at Yosemite National Park drive to Wawona area. Here most fascinating is the giant sequoia forest regarded as living fossil of plants--Mariposa Grove Giant Sequoia Forest. Sequoias, also commonly called redwoods, belong to evergreen giant trees, tree age about 2000-3000 years, some can grow tall to 100 meters, diameter over 10 meters above ground. Sequoia trunks straight, strong and erect, reaching directly toward sky, as if supporting heavens like sky pillars.</p><p><br></p><p><img src="https://pixabay.com/get/g0a264a181b5dbec605f420d17bdf65181ed007948b765786a7ed15424be44d2cab3de4267fb91d7c6105668d2e452c3f.jpg" alt="Death Valley National Park tour itinerary" loading="lazy"></p>
+<p>DAY2: Yosemite National Park</p><p><br></p><p>After breakfast at Yosemite National Park, drive to Yosemite Valley. Going up a winding mountain road to the mountainside, passing through a tunnel, then parking at an overlook parking lot on one side of the valley allows you to appreciate the full view of Yosemite Valley. On the left is El Capitan rock formation, in the distance is Half Dome, on the right are Glacier Point and Bridalveil Falls, and at the bottom of the valley flows the winding Merced River. Next drive to Bridalveil Fall. After getting out, follow a narrow path while experiencing the gentle mist from the cascading waterfall, feeling as if the bride's beautiful veil is floating before your eyes. Finally drive to Yosemite Falls. Stroll across the vast Sentinel Meadow while listening to the nearby babbling water, feeling as if the entire world has slowed down.</p><p><br></p><p>DAY3: Yosemite National Park - Los Angeles</p><p><br></p><p>After breakfast at Yosemite's Tenaya Lake, drive to Tenaya Lake named after an Indian chief. At an elevation of 2450 meters above sea level, it is like a high alpine lake such as Hai Zi or Tianchi in China. Surrounded by mountains, walking on the lakeside path, the crystal blue water reflects several peaks across from the lake. You cannot help but feel that the wind is blue, sunlight is blue, and you are completely surrounded by beautiful lake blue. Finally drive back to Los Angeles.</p><p><br></p><p>Tips:</p><p>Visit our shop for more information!</p><p><img src="https://pixabay.com/get/g3f69aff37ea8cd0071f831406f14741db0381ae02d9909e4c8cb7bae9250b7fd5e3f60eaed8cb0f321bc460790bc440b.jpg" alt="Yosemite National Park itinerary" loading="lazy"></p>
+        
+
+        <a class="backLink" href="list-1.html">← Back to Los Angeles</a>
+      </article>
+    </main>
+  </body>
+</html>

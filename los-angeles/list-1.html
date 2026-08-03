@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content=""
+    />
+    <title>Los Angeles</title>
+    <style>
+      :root {
+        --paper: #f5f1eb;
+        --ink: #163d36;
+        --body: #5d5a54;
+        --muted: #8a8379;
+        --line: #ddd5ca;
+        --accent: #d9782f;
+        --white: #fffaf4;
+        --text-width: 720px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        line-height: 1.7;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .page {
+        width: min(900px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 10px 0 40px;
+      }
+
+      .hero {
+        min-height: clamp(180px, 29vw, 260px);
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        border-radius: 12px;
+        padding: clamp(22px, 4vw, 38px);
+        background: #28463f;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.05) 64%),
+          url("https://images.pexels.com/photos/35291216/pexels-photo-35291216.jpeg");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .heroTitle {
+        position: relative;
+        display: flex;
+        align-items: baseline;
+        gap: 10px;
+        color: #ffffff;
+      }
+
+      .heroTitle h1 {
+        margin: 0;
+        font-size: clamp(30px, 5vw, 46px);
+        font-weight: 900;
+        line-height: 1;
+        letter-spacing: 0;
+      }
+
+      .heroTitle span {
+        color: rgba(255, 255, 255, 0.64);
+        font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+        font-size: clamp(16px, 2vw, 24px);
+        font-weight: 700;
+      }
+
+      .intro {
+        margin: 34px 0 54px;
+        color: #4f4a43;
+        font-size: clamp(17px, 2vw, 20px);
+        line-height: 1.8;
+      }
+
+      .sectionTitle {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+        gap: 14px;
+        margin: 0 0 44px;
+        color: var(--muted);
+        font-size: 14px;
+        letter-spacing: 0.16em;
+      }
+
+      .sectionTitle::before,
+      .sectionTitle::after {
+        content: "";
+        height: 1px;
+        background: var(--line);
+      }
+
+      .articleList {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .articleItem {
+        display: grid;
+        grid-template-columns: minmax(0, var(--text-width)) 140px;
+        gap: 28px;
+        justify-content: space-between;
+        border-bottom: 1px solid var(--line);
+        padding: 0 0 34px;
+        margin-bottom: 34px;
+      }
+
+      .articleItem:not(.hasImage) {
+        grid-template-columns: minmax(0, var(--text-width));
+        justify-content: start;
+      }
+
+      .articleBody {
+        width: min(100%, var(--text-width));
+        border-left: 2px solid transparent;
+        padding-left: 14px;
+        transform: translateX(0);
+        transition:
+          border-color 160ms ease,
+          transform 180ms ease;
+      }
+
+      .articleItem:hover .articleBody {
+        border-left-color: var(--accent);
+        transform: translateX(8px);
+      }
+
+      .meta {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin: 0 0 10px;
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+      }
+
+      .pin {
+        color: var(--accent);
+      }
+
+      .articleTitle {
+        width: 100%;
+        margin: 0 0 10px;
+        color: var(--ink);
+        font-size: clamp(21px, 2.5vw, 26px);
+        font-weight: 900;
+        line-height: 1.34;
+        letter-spacing: 0;
+      }
+
+      .brief {
+        width: 100%;
+        max-width: none;
+        margin: 0 0 14px;
+        color: var(--body);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        font-size: 16px;
+        line-height: 1.72;
+      }
+
+      .readMore {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        color: var(--accent);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 800;
+      }
+
+      .articleImage {
+        width: 140px;
+        aspect-ratio: 16 / 10;
+        align-self: center;
+        overflow: hidden;
+        border-radius: 9px;
+        background: var(--line);
+      }
+
+      .articleImage img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+      }
+
+      .emptyState {
+        border: 1px dashed var(--line);
+        border-radius: 10px;
+        padding: 42px 20px;
+        color: var(--muted);
+        text-align: center;
+      }
+
+      .pagination {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        margin-top: 12px;
+      }
+
+      .pageLink {
+        min-width: 96px;
+        min-height: 40px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 0 16px;
+        background: var(--white);
+        color: var(--ink);
+        font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+        font-size: 14px;
+        font-weight: 800;
+      }
+
+      .pageLink[aria-disabled="true"] {
+        pointer-events: none;
+        opacity: 0.45;
+      }
+
+      @media (max-width: 720px) {
+        .page {
+          width: min(100% - 24px, 900px);
+          padding-top: 8px;
+        }
+
+        .hero {
+          min-height: 220px;
+        }
+
+        .articleItem,
+        .articleItem.hasImage {
+          grid-template-columns: minmax(0, 1fr);
+          gap: 16px;
+        }
+
+        .articleImage {
+          width: 100%;
+          max-width: 260px;
+          justify-self: start;
+        }
+
+        .sectionTitle {
+          margin-bottom: 30px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <section class="hero">
+        <div class="heroTitle">
+          <h1>Los Angeles</h1>
+        </div>
+      </section>
+
+      
+      <p class="intro">
+        Los Angeles is the largest city in California and the second-largest city in the United States. Because its name originates from Spanish meaning "City of Angels," it often bears this nickname. As a world-famous entertainment and cultural center, it features sunny weather and pleasant climate, serving as the birthplace of the Hollywood film industry.
+      </p>
+      
+
+      <div class="sectionTitle"></div>
+
+      <section class="articleList" aria-label="article-list">
+        
+        
+        <article class="articleItem hasImage">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="tW7Plf9aYfH4AOcZ.html">Los Angeles [RV Micro-Trip] Special Edition</a>
+            </h2>
+
+            
+            <p class="brief"><p>Road Trip RV Introduction</p><p><br></p><p>                                        Los Angeles Mi</p>
+            
+
+          </div>
+
+          
+          <a class="articleImage" href="tW7Plf9aYfH4AOcZ.html" aria-label="Los Angeles [RV Micro-Trip] Special Edition">
+            <img src="https://pixabay.com/get/g9c51b3136f633060bcdd6e7c51d34b509841db38f7b4baf9a18fb87070ab1124a5a285711d40a296e6353618633212cd.jpg" alt="Los Angeles [RV Micro-Trip] Special Edition" />
+          </a>
+          
+        </article>
+        
+        
+        <article class="articleItem hasImage">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="hH9UTlxgd0PjNS9L.html">All of Los Angeles' Top Instagrammable Spots Covered in 24 Hours! (Includes Complete Route Guide)</a>
+            </h2>
+
+            
+            <p class="brief"><p>Los Angeles is the second largest city in the United States by area, after only New York City. It</p>
+            
+
+          </div>
+
+          
+          <a class="articleImage" href="hH9UTlxgd0PjNS9L.html" aria-label="All of Los Angeles' Top Instagrammable Spots Covered in 24 Hours! (Includes Complete Route Guide)">
+            <img src="https://pixabay.com/get/gba02fe73adf01816d4b6345458ffa2b9a60c96436796a8506f2e4e9bc2123b8ff7735dfde72d8974fd12a1b3d57bcb86.jpg" alt="All of Los Angeles' Top Instagrammable Spots Covered in 24 Hours! (Includes Complete Route Guide)" />
+          </a>
+          
+        </article>
+        
+        
+        <article class="articleItem hasImage">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="M-Q8fnigbKjrsXyq.html">Sincere Guide: The Science-Backed Way to Enjoy the World's Premier Disney!</a>
+            </h2>
+
+            
+            <p class="brief">When it comes to visiting the universe's first Disney, besides excitement, there are countless worries? Packed queues, feeling overwhelmed by endless choices... But don't worry—here's a comprehensive and thoughtful guide that shows you how to use the app for convenience, recommends must-see attractions, and suggests smart routes. Just go ahead and have fun!</p>
+            
+
+          </div>
+
+          
+          <a class="articleImage" href="M-Q8fnigbKjrsXyq.html" aria-label="Sincere Guide: The Science-Backed Way to Enjoy the World's Premier Disney!">
+            <img src="https://pixabay.com/get/gf7a445f3a28d4941636586b30b4bc599ba2ab575aa0b857bfd3b789293f9453908c63e40a7bf10daa39c622d3bf2c7c6.jpg" alt="Sincere Guide: The Science-Backed Way to Enjoy the World's Premier Disney!" />
+          </a>
+          
+        </article>
+        
+      </section>
+
+      
+      
+      
+      
+      
+    </main>
+  </body>
+</html>
