@@ -65,12 +65,6 @@
 					<!-- post content -->
 					<div class="section-row" data-article-id="{{ article.id }}" data-category-id="{{ article.category_detail_id }}">
 						{{ article.content | safe }}
-
-						{% if article.origin_url %}
-						<p class="post-source">
-							Source: <a href="{{ article.origin_url }}" target="_blank" rel="noopener noreferrer">{{ article.origin_url }}</a>
-						</p>
-						{% endif %}
 					</div>
 					<!-- /post content -->
 

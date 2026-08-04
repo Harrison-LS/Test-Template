@@ -1399,6 +1399,61 @@ textarea.input {
 }
 
 /*=========================================================
+	PRIVACY POLICY
+===========================================================*/
+
+.privacy-hero {
+  padding: 75px 0;
+  background-color: #1b1c1e;
+  text-align: center;
+}
+
+.privacy-hero h1 {
+  margin: 0;
+  color: #fff;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+.privacy-content {
+  max-width: 900px;
+  padding-top: 18px;
+  padding-bottom: 55px;
+}
+
+.privacy-section {
+  margin-bottom: 32px;
+}
+
+.privacy-section:last-child {
+  margin-bottom: 0;
+}
+
+.privacy-section-title {
+  margin: 0 0 16px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #e8eaed;
+  font-size: 23px;
+  text-transform: none;
+}
+
+.privacy-section p,
+.privacy-section li {
+  color: #4b4c4e;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.privacy-section p {
+  margin-bottom: 12px;
+}
+
+.privacy-section ul {
+  padding-left: 20px;
+  list-style: disc;
+}
+
+/*=========================================================
 	FOOTER
 ===========================================================*/
 

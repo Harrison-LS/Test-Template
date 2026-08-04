@@ -79,8 +79,8 @@
 							<li><a href="#">Travel</a></li>
 						</ul>
 					</li>
-					<li><a href="../about.html">About Us</a></li>
-					<li><a href="../contact.html">Contacts</a></li>
+					<li><a href="{{ about_url | default('../about.html') }}">About Us</a></li>
+					<li><a href="{{ contact_url | default('../contact.html') }}">Contacts</a></li>
 				</ul>
 				<button class="nav-close nav-aside-close"><span></span></button>
 			</div>
