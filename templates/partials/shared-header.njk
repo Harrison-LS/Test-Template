@@ -64,6 +64,10 @@
 								</div>
 							</div>
 						</li>
+						<li><a href="{{ about_url | default('../about.html') }}">About</a></li>
+						<li><a href="{{ contact_url | default('../contact.html') }}">Contact</a></li>
+						<li><a href="{{ privacy_url | default('../privacy-policy.html') }}">Privacy Policy</a></li>
+						<li><a href="{{ terms_url | default('../terms-of-use.html') }}">Terms of Use</a></li>
 					</ul>
 					<!-- /nav -->
 				</div>
@@ -79,8 +83,10 @@
 							<li><a href="#">Travel</a></li>
 						</ul>
 					</li>
-					<li><a href="{{ about_url | default('../about.html') }}">About Us</a></li>
-					<li><a href="{{ contact_url | default('../contact.html') }}">Contacts</a></li>
+					<li><a href="{{ about_url | default('../about.html') }}">About</a></li>
+					<li><a href="{{ contact_url | default('../contact.html') }}">Contact</a></li>
+					<li><a href="{{ privacy_url | default('../privacy-policy.html') }}">Privacy Policy</a></li>
+					<li><a href="{{ terms_url | default('../terms-of-use.html') }}">Terms of Use</a></li>
 				</ul>
 				<button class="nav-close nav-aside-close"><span></span></button>
 			</div>

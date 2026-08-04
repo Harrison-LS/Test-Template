@@ -1,0 +1,58 @@
+{% set site_name = site_name | default('Letreco Green Living Guide') %}
+{% set support_email = support_email | default('support@Letreco.onl') %}
+<!DOCTYPE html>
+<html lang="{{ language | default('en') }}">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Contact Us | {{ site_name }}</title>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CMuli:400,700" rel="stylesheet">
+	<link type="text/css" rel="stylesheet" href="{{ asset_prefix | default('../') }}css/bootstrap.min.css">
+	<link rel="stylesheet" href="{{ asset_prefix | default('../') }}css/font-awesome.min.css">
+	<link type="text/css" rel="stylesheet" href="{{ asset_prefix | default('../') }}css/style.css">
+</head>
+
+<body class="information-page">
+	<header id="header">
+		{% include "partials/shared-header.njk" %}
+
+		<div class="page-header">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-offset-1 col-md-10 text-center">
+						<h1 class="text-uppercase">Contact Us</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<main class="section">
+		<div class="container information-content">
+			<div class="row">
+				<div class="col-md-12">
+					<section class="section-row">
+						<div class="section-title"><h2 class="title">Contact Information</h2></div>
+						<p>Thank you for visiting <strong>{{ site_name }}</strong>. If you have any questions about our sustainability insights, renewable-energy resources, environmental research, or collaboration opportunities, please feel free to contact us using the details below. Our editorial and support team are here to assist readers, eco-professionals, and partners, and we will respond to your inquiry as quickly as possible.</p>
+						<ul class="contact">
+							<li><i class="fa fa-phone"></i><a href="tel:+16085619981">+1 (608) 561-9981</a></li>
+							<li><i class="fa fa-envelope"></i><a href="mailto:{{ support_email }}">{{ support_email }}</a></li>
+							<li><i class="fa fa-map-marker"></i>1500 N Grant St, Ste R, Denver, CO 80203, USA</li>
+						</ul>
+					</section>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	{% include "partials/shared-footer.njk" %}
+
+	<script src="{{ asset_prefix | default('../') }}js/jquery.min.js"></script>
+	<script src="{{ asset_prefix | default('../') }}js/bootstrap.min.js"></script>
+	<script src="{{ asset_prefix | default('../') }}js/jquery.stellar.min.js"></script>
+	<script src="{{ asset_prefix | default('../') }}js/main.js"></script>
+</body>
+
+</html>
