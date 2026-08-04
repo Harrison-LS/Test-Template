@@ -1,6 +1,6 @@
 {% import "partials/post-macros.njk" as posts %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ language | default('en') }}">
 
 <head>
 	<meta charset="utf-8">
@@ -8,7 +8,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-	<title>Callie HTML Template</title>
+	<title>{{ category.name }} | San Francisco</title>
 
 	<!-- Google font -->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CMuli:400,700" rel="stylesheet">
@@ -115,13 +115,21 @@
 		<div class="container">
 			<!-- row -->
 			<div class="row">
-				<div class="col-md-8">
+				<div class="col-md-8" id="index-feed-list" data-total-pages="{{ total_pages }}">
 					{% for post in page.feedPosts %}
-					{{ posts.card(post, "post-row", "", true) }}
-					{% endfor %}
-					<div class="section-row loadmore text-center">
-						<a href="#" class="primary-button">Load More</a>
+					<div
+						class="index-feed-post"
+						data-page="{{ post.page_number }}"
+						{% if post.page_number > 1 %}hidden{% endif %}
+					>
+						{{ posts.card(post, "post-row", "", true) }}
 					</div>
+					{% endfor %}
+					{% if total_pages > 1 %}
+					<div class="section-row loadmore text-center" id="index-load-more-wrap">
+						<button type="button" class="primary-button" id="index-load-more">Load More</button>
+					</div>
+					{% endif %}
 				</div>
 			</div>
 			<!-- /row -->
@@ -137,6 +145,31 @@
 	<script src="../js/bootstrap.min.js"></script>
 	<script src="../js/jquery.stellar.min.js"></script>
 	<script src="../js/main.js"></script>
+	<script>
+		(function () {
+			var list = document.getElementById("index-feed-list");
+			var button = document.getElementById("index-load-more");
+			var wrapper = document.getElementById("index-load-more-wrap");
+
+			if (!list || !button || !wrapper) return;
+
+			var currentPage = 1;
+			var totalPages = Number(list.getAttribute("data-total-pages")) || 1;
+
+			button.addEventListener("click", function () {
+				currentPage += 1;
+				var nextItems = list.querySelectorAll('[data-page="' + currentPage + '"]');
+
+				for (var index = 0; index < nextItems.length; index += 1) {
+					nextItems[index].hidden = false;
+				}
+
+				if (currentPage >= totalPages) {
+					wrapper.hidden = true;
+				}
+			});
+		})();
+	</script>
 
 </body>
 
