@@ -1,6 +1,8 @@
 {% import "partials/post-macros.njk" as posts %}
 {% set ad_unit_prefix = ad_unit_prefix | default('/23323840973/ca-pub-5241421136842676-tag') %}
 {% set ad_site = ad_site | default('green.letreco.cc') %}
+{% set anchor_ad_suffix = anchor_ad_suffix | default('Bottom-Anchor') %}
+{% set anchor_out_of_page_format = anchor_out_of_page_format | default('BOTTOM_ANCHOR') %}
 {% set ga4_measurement_id = ga4_measurement_id | default('') %}
 <!DOCTYPE html>
 <html lang="{{ language | default('en') }}">
@@ -37,8 +39,8 @@
 			).addService(googletag.pubads());
 
 			var anchorSlot = googletag.defineOutOfPageSlot(
-				'{{ ad_unit_prefix }}/{{ ad_site }}-Bottom-Anchor',
-				googletag.enums.OutOfPageFormat.BOTTOM_ANCHOR
+				'{{ ad_unit_prefix }}/{{ ad_site }}-{{ anchor_ad_suffix }}',
+				googletag.enums.OutOfPageFormat.{{ anchor_out_of_page_format }}
 			);
 
 			if (anchorSlot) {

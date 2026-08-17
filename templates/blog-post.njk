@@ -1,6 +1,8 @@
 {% import "partials/post-macros.njk" as posts %}
 {% set ad_unit_prefix = ad_unit_prefix | default('/23323840973/ca-pub-5241421136842676-tag') %}
 {% set ad_site = ad_site | default('green.letreco.cc') %}
+{% set anchor_ad_suffix = anchor_ad_suffix | default('Bottom-Anchor') %}
+{% set anchor_out_of_page_format = anchor_out_of_page_format | default('BOTTOM_ANCHOR') %}
 {% set ga4_measurement_id = ga4_measurement_id | default('') %}
 <!DOCTYPE html>
 <html lang="{{ article.language | default('en') }}">
@@ -32,14 +34,14 @@
 
 		googletag.cmd.push(function () {
 			googletag.defineSlot(
-				'{{ ad_unit_prefix }}/{{ ad_site }}-Top-1',
+				'{{ ad_unit_prefix }}/{{ ad_site }}-Top-2',
 				[[300, 100], [336, 280], [320, 100], [300, 250], 'fluid'],
-				'div-top-1'
+				'div-top-2'
 			).addService(googletag.pubads());
 
 			var anchorSlot = googletag.defineOutOfPageSlot(
-				'{{ ad_unit_prefix }}/{{ ad_site }}-Bottom-Anchor',
-				googletag.enums.OutOfPageFormat.BOTTOM_ANCHOR
+				'{{ ad_unit_prefix }}/{{ ad_site }}-{{ anchor_ad_suffix }}',
+				googletag.enums.OutOfPageFormat.{{ anchor_out_of_page_format }}
 			);
 
 			if (anchorSlot) {
@@ -66,7 +68,7 @@
 			googletag.pubads().collapseEmptyDivs(true);
 			googletag.enableServices();
 
-			googletag.display('div-top-1');
+			googletag.display('div-top-2');
 
 			if (anchorSlot) {
 				googletag.display(anchorSlot);
@@ -103,8 +105,8 @@
 
 <body>
 	<center>
-	<!-- {{ ad_unit_prefix }}/{{ ad_site }}-Top-1 -->
-	<div id="div-top-1" style="min-width:300px;min-height:100px;"></div>
+	<!-- {{ ad_unit_prefix }}/{{ ad_site }}-Top-2 -->
+	<div id="div-top-2" style="min-width:300px;min-height:100px;"></div>
 	</center>
 
 	<!-- HEADER -->
