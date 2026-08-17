@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Tasty Food Tasting Group" />
+    <title># Explore San Francisco | Find Small Joys in Rainy Days</title>
+    <style>
+      :root {
+        --paper: #f5f1eb;
+        --ink: #163d36;
+        --body: #3f3a34;
+        --muted: #8a8379;
+        --line: #ddd5ca;
+        --accent: #d9782f;
+        --white: #fffaf4;
+        --shadow: 0 22px 70px rgba(28, 25, 20, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        line-height: 1.72;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .hero {
+        min-height: clamp(330px, 48vw, 560px);
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        padding: clamp(28px, 7vw, 70px) clamp(24px, 8vw, 76px);
+        background: #28463f;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.12)),
+          url("https://p1-q.mafengwo.net/s15/M00/C5/6A/CoUBGV5U5kyAAB8eAAJopVcQH3Y17.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F90");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .heroInner {
+        position: relative;
+        width: min(900px, 100%);
+        color: #ffffff;
+      }
+
+      .heroLocation {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 24px;
+        color: rgba(255, 255, 255, 0.78);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .heroLocation svg {
+        width: 17px;
+        height: 17px;
+        color: #f0a45f;
+      }
+
+      h1 {
+        max-width: 880px;
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(30px, 4.8vw, 54px);
+        font-weight: 900;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .brief {
+        width: min(760px, 100%);
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 18px;
+        color: #5a5148;
+        font-size: clamp(17px, 1.9vw, 20px);
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.58;
+      }
+
+      .articleWrap {
+        width: min(900px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: clamp(42px, 6vw, 68px) 0 72px;
+      }
+
+      .content {
+        width: min(760px, 100%);
+        color: var(--body);
+        font-size: clamp(16px, 1.8vw, 18px);
+        line-height: 1.5;
+      }
+
+      .content p {
+        margin: 0 0 0.5em;
+      }
+
+      .content h2,
+      .content h3,
+      .content h4 {
+        margin: 46px 0 18px;
+        color: var(--ink);
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+
+      .content h2 {
+        font-size: clamp(28px, 4vw, 38px);
+      }
+
+      .content h3 {
+        font-size: clamp(23px, 3vw, 30px);
+      }
+
+      .content ul,
+      .content ol {
+        margin: 0 0 30px;
+        padding-left: 28px;
+      }
+
+      .content li {
+        margin: 8px 0;
+      }
+
+      .content blockquote {
+        margin: 34px 0;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 20px;
+        color: #5a5148;
+        font-style: italic;
+      }
+
+      .content img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 42px 0 12px;
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+      }
+
+      .content figure {
+        margin: 42px 0;
+      }
+
+      .content figure img {
+        margin: 0 0 12px;
+      }
+
+      .content figcaption {
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .backLink {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 46px;
+        border-top: 1px solid var(--line);
+        padding-top: 28px;
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.18em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .backLink:hover {
+        color: var(--accent);
+      }
+
+      @media (max-width: 720px) {
+        .hero {
+          min-height: 420px;
+          padding: 30px 24px;
+        }
+
+        .articleWrap {
+          width: min(100% - 28px, 900px);
+          padding-bottom: 48px;
+        }
+
+        .content {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="heroInner">
+        <p class="heroLocation">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+            />
+          </svg>
+          <span>Los Angeles</span>
+        </p>
+        <h1># Explore San Francisco | Find Small Joys in Rainy Days</h1>
+      </div>
+    </header>
+
+    <main class="articleWrap">
+      
+      <p class="brief">Tasty Food Tasting Group</p>
+      
+
+      <article class="content">
+        
+          <p>Mentioning San Francisco's weather, locals know it's notoriously unpredictable, but even light rain doesn't mean an imperfect trip. On the contrary, rainy San Francisco has its own charm with different scenery that gives everyone a chance to try exciting activities they might not attempt on sunny days!</p><p><br></p><p>                                        Gastronomic Experience Group</p><p><br></p><p>                    Join experienced local guides for a culinary journey through San Francisco - doesn't that sound incredibly tempting! These guides know intimately those hidden gem restaurants, leading you to taste while they share the rich history and little anecdotes hidden behind each dish. This activity is a favorite among locals and tourists alike! Because whether it's windy or rainy, food remains delicious!</p><p><br></p><p>                                        Walt Disney Family Museum</p><p><br></p><p>                    Disney fans, look here! Visiting the Walt Disney Family Museum can make your child's tale-of-fantasy dreams come true! Here you'll learn about founder Walt Disney's life story and how he created iconic cartoon characters like Mickey Mouse.</p>
+<p>                        Walt Disney Family Museum</p><p>                        The Walt Disney Family Museum is located next to the Golden Gate Bridge in San Francisco with beautiful scenery surrounding it. This museum does not belong to the Disney Company but features three floors of exhibition halls with an incredibly rich collection of exhibits, including various awards Walter received, precious early sketch works, and even a massive model of original Disneyland.</p><p>In the museum, all staff are very enthusiastic, and there is a wide variety of exquisite products perfect for die-hard Disney fans to purchase!</p><p>The museum houses over 1600 precious historical exhibits and original art manuscripts. The animation section is particularly rich, featuring everything from Mickey's earliest sketches to the storyboard wall for the first Mickey work "Steamboat Willie" from 1928 (348 frames of images in just 16 seconds!). The richness and vividness exceed everyone's expectations!</p><p><br></p><p>                                        Aquarium of the Bay</p><p><br></p><p>                    The Aquarium of the Bay features a transparent tunnel approximately 300 feet long, showcasing sharks, rays, and over 20,000 other species of marine animals from San Francisco Bay and nearby waters.</p>
+Visitors can interact up close and even participate in feeding experiences. Stroll through the world of jellyfish, explore cavernous exhibits, and glimpse those little-known deep sea creatures... At the Bay Aquarium, you never have to worry about bad weather.</p><p><br></p><p>Bay Aquarium</p><p>The Bay Aquarium is located at the Embarcadero and Beach Street in San Francisco, focusing on showcasing marine life native to the San Francisco Bay. The aquarium features three distinct areas: 1. Exploring the Bay. In this section, numerous tanks are displayed, featuring beautiful marine fish including moray eels, bay pipefish, Garibaldi fish, and many more. 2. Below the Bay. This is the largest section of the aquarium. It includes a 300-foot transparent underwater viewing tunnel, where thousands of marine creatures and other aquatic life can be admired. This viewing tunnel is one of San Francisco Bay's famous entertainment attractions. 3. Touching the Bay. This area allows visitors to personally touch fascinating marine animals like frogfish, leopard sharks, starfish, sea cucumbers, and more, which children love most.</p><p><br></p><p>Oracle Park</p><p>As the home stadium of the San Francisco Giants baseball team, Oracle Park is the only ballpark in America where home runs can create a splash hits effect.</p>
+As a baseball enthusiast or fan being able to enter Oracle Park's interior, explore the practice areas of players and coaches - such a behind-the-scenes tour is truly an unforgettable experience.
+
+Image source: david._.keum
+
+Image source: thefamilytravelguy
+
+Union Square Shopping
+
+Situated in Union Square, Westfield San Francisco Centre is a large shopping mall with 9 floors high, boasting over 200 shops and restaurants - an ideal destination that shopping enthusiasts and food lovers cannot miss! Additionally, nearby Union Square features other top American shopping destinations including Macy's Bloomingdale's and Nordstrom, offering a one-stop shopping experience guaranteed to keep you happily browsing for hours!
+</p><p><br></p><p>                                            Image source: plates_and_tales</p><p><br></p><p>                        Union Square</p><p>                        Located in the bustling downtown area, Union Square features a towering monument at its center, erected to commemorate the American navy's victory over the Spanish fleet in Manila Bay. Surrounded by four streets, the square is lined with unique shops and designer boutiques. In addition to major department stores I. Magnin and Macy&#39;s, there are hundreds of high-end fashion retailers making it a paradise for shoppers. Furthermore, San Francisco&#39;s theater district lies just southwest of Union Square. Even if you don&#39;t plan to shop, casual strolling will constantly surprise and delight you.</p><p><br></p><p>                                        SPiN SF</p><p><br></p><p>                    Ping pong enthusiasts raise your hands! If you&#39;re looking for a comfortable and authentic table tennis practice venue, then SPiN SF is exactly what you need! This place is filled with rich street art atmosphere, with graffiti murals visible everywhere. Live DJ performances keep the energy high, plus there are private bars and outdoor terraces waiting for you. What are you waiting for? Let&#39;s start playing ping pong!</p>
+</p><p><br></p><p>San Francisco Museum of Modern Art</p><p><br></p><p>The San Francisco Museum of Modern Art (SFMOMA) offers seven floors full of modern and contemporary artworks that will surely make you forget the dull weather outside. Within its 170,000 square feet venue, over 33,000 works are displayed, giving you a chance to encounter masterpieces by global artists including: Frida Kahlo, Gerhard Richter, Andy Warhol, Julie Mehretu, and many more - absolutely packed with content, truly amazing</p><p><br></p><p>San Francisco Museum of Modern Art</p><p>San Francisco Museum of Modern Art is the first museum on the US West Coast dedicated exclusively to collecting modern art. Its most distinctive feature is a tall cylindrical zebra-patterned skylight that allows light from the roof to stream down directly to the ground floor, creating excellent natural illumination. The building's innovative architectural design captures San Francisco's creative essence while drawing photography enthusiasts from around the world.</p>
+<p>The museum houses works by representative Western artists from the 20th century, such as Henri Matisse (French Fauvist painter), Andy Warhol (American Pop Art artist), Frida Kahlo (Mexican female painter), and others.</p><p>The San Francisco Museum of Contemporary Art is a branch of MoMA in New York. It's slightly smaller in scale but still contains many highlights, especially if you're lucky enough to encounter some special exhibitions!</p>
+        
+
+        <a class="backLink" href="list-1.html">← Back to Los Angeles</a>
+      </article>
+    </main>
+  </body>
+</html>

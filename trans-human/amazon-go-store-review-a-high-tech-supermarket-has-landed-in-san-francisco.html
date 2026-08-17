@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="First of all—" />
+    <title>Amazon Go Store Review: A High-Tech Supermarket Has Landed in San Francisco! Come See It Yourself!</title>
+    <style>
+      :root {
+        --paper: #f5f1eb;
+        --ink: #163d36;
+        --body: #3f3a34;
+        --muted: #8a8379;
+        --line: #ddd5ca;
+        --accent: #d9782f;
+        --white: #fffaf4;
+        --shadow: 0 22px 70px rgba(28, 25, 20, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        line-height: 1.72;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .hero {
+        min-height: clamp(330px, 48vw, 560px);
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        padding: clamp(28px, 7vw, 70px) clamp(24px, 8vw, 76px);
+        background: #28463f;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.12)),
+          url("https://p1-q.mafengwo.net/s12/M00/67/9E/wKgED1vY_DqAD54wAApV8KhfqHs95.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F90");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .heroInner {
+        position: relative;
+        width: min(900px, 100%);
+        color: #ffffff;
+      }
+
+      .heroLocation {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 24px;
+        color: rgba(255, 255, 255, 0.78);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .heroLocation svg {
+        width: 17px;
+        height: 17px;
+        color: #f0a45f;
+      }
+
+      h1 {
+        max-width: 880px;
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(30px, 4.8vw, 54px);
+        font-weight: 900;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .brief {
+        width: min(760px, 100%);
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 18px;
+        color: #5a5148;
+        font-size: clamp(17px, 1.9vw, 20px);
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.58;
+      }
+
+      .articleWrap {
+        width: min(900px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: clamp(42px, 6vw, 68px) 0 72px;
+      }
+
+      .content {
+        width: min(760px, 100%);
+        color: var(--body);
+        font-size: clamp(16px, 1.8vw, 18px);
+        line-height: 1.5;
+      }
+
+      .content p {
+        margin: 0 0 0.5em;
+      }
+
+      .content h2,
+      .content h3,
+      .content h4 {
+        margin: 46px 0 18px;
+        color: var(--ink);
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+
+      .content h2 {
+        font-size: clamp(28px, 4vw, 38px);
+      }
+
+      .content h3 {
+        font-size: clamp(23px, 3vw, 30px);
+      }
+
+      .content ul,
+      .content ol {
+        margin: 0 0 30px;
+        padding-left: 28px;
+      }
+
+      .content li {
+        margin: 8px 0;
+      }
+
+      .content blockquote {
+        margin: 34px 0;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 20px;
+        color: #5a5148;
+        font-style: italic;
+      }
+
+      .content img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 42px 0 12px;
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+      }
+
+      .content figure {
+        margin: 42px 0;
+      }
+
+      .content figure img {
+        margin: 0 0 12px;
+      }
+
+      .content figcaption {
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .backLink {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 46px;
+        border-top: 1px solid var(--line);
+        padding-top: 28px;
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.18em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .backLink:hover {
+        color: var(--accent);
+      }
+
+      @media (max-width: 720px) {
+        .hero {
+          min-height: 420px;
+          padding: 30px 24px;
+        }
+
+        .articleWrap {
+          width: min(100% - 28px, 900px);
+          padding-bottom: 48px;
+        }
+
+        .content {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="heroInner">
+        <p class="heroLocation">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+            />
+          </svg>
+          <span>Los Angeles</span>
+        </p>
+        <h1>Amazon Go Store Review: A High-Tech Supermarket Has Landed in San Francisco! Come See It Yourself!</h1>
+      </div>
+    </header>
+
+    <main class="articleWrap">
+      
+      <p class="brief">First of all—</p>
+      
+
+      <article class="content">
+        
+          <p>What is Amazon Go?</p><p>A supermarket.</p><p>A high-tech supermarket.</p><p>A supermarket where you're independent when going in and out.</p><p>A supermarket that doesn't require "checking out".</p><p>A supermarket where you can freely "take" items.</p><p><br></p><p>                    It's just such a supermarket. After opening the first one globally in Seattle, it now grandly landed in San Francisco! I'm sure everyone has already been flooded with this information, so I'll avoid the hype and only add my experience now~</p><p><br></p><p>                                        First—</p><p><br></p><p>                    Before entering, you need to download the "amazongo" app, then follow the demonstration steps in the app to understand how to operate and shop inside Amazon Go.</p><p>Below I've created a puzzle collection that can help foodies who haven't downloaded the app yet get a head start. It looks like this.</p><p><br></p><p>                                        Next—</p><p><br></p><p>                    Register/login to your amazongo account, bind a bank card for payment settlement. After completing this, the system will generate your unique code. This code is what you'll use for "face scanning"—scan it at entry, and everything you pick up in the store will be recorded on this code.</p>
+<p><br></p><p>Live footage of entering the store👇</p><p>Amazon Go's storefront is very simple, without complex or gorgeous decorations; the entrance system is also incredibly simple; technological content is their real gold mine.</p><p><br></p><p>After swiping in, you can begin the buy-buy-buy, take-take-take, put-put-put, play-play-play, snap-snap-snap, peek-peek-peek mode.</p><p><br></p><p>I'd heard before that the real value in Amazon Go supermarket is all in these camera trackers on top; sure enough, upon looking up, this number was truly shocking!!</p><p><br></p><p>Currently, the items in Amazon Go supermarket are very everyday/ordinary; nothing particularly unique appears; it's just a normal supermarket. Moreover, many shelves are empty with no new products restocked yet. I believe merchants know at this stage that people come mainly for the experience rather than to actually purchase.</p><p><br></p><p>During the process, we simply picked up and put down items, mirroring normal supermarket behavior. We'd lift things to read descriptions, discard what we didn't need, or set aside anything if our minds changed mid-shopping, though we never experimented with placing items in alternative locations.</p>
+</p><p><br></p><p>                    Amazon Go has all the essentials you need for everyday life. Imagine a supermarket right at your doorstep that requires no staff whatsoever, truly liberating productivity.</p><p><br></p><p>                    Of course, there are still humanized services available. Amazon Go offers shopping bags - both disposable and eco-friendly ones - each with different price tags marked on them. It's perfectly fine if you'd like to walk out with an orange-yellow shopping bag.</p><p><br></p><p>                    Inside the store, there are exclusive passageways reserved for staff that customers are not allowed to use. The system automatically recognizes this.</p><p><br></p><p>                    Finally, you can simply walk out freely! No checkout required, no waiting in line - saving both time and effort. It perfectly aligns with modern people's various needs!</p><p><br></p><p>                                        Last but not least—</p><p><br></p><p>                    Now it is the moment to verify Amazon Go's technological sophistication! How do you view your bill?</p><p>It's simple - within the same app, there is a small icon labeled "Statement", tap on it and you can view your purchases.</p>
+</p><p>However, my experience when trying it out on that day was that the bills were not synced in real-time; I still had to wait about 3-5 minutes before seeing the final bill. But the fact that there were absolutely no errors is solid proof - great!</p><p><br></p><p>                    After shopping, if you want to eat and drink here, Amazon Go also has seating areas; they even have a microwave, disposable forks, knives, and chopsticks.</p><p><br></p><p>                    While sitting, you could see many people constantly coming and going. Everyone's first thing upon entering the door was to take out their phone to take pictures!!! 😂 There were also many people from different countries observing it, causing a crush at the entrance 😂 This influence is truly impressive!</p><p><br></p><p>                    After waiting another 3-5 minutes, we finally saw the actual bill - and indeed there were no issues at all. Amazing word choice from Amazon!</p><p><br></p><p>                    The food purchased was quite average - the taste wasn't as captivating as the technology itself 😂</p><p><br></p><p>                    The biggest advantage of living in the Bay Area is that you're constantly immersed in cutting-edge global tech developments. These innovations genuinely transform our daily lives - from innovative small shops to groundbreaking products, society evolves hand-in-hand with technological progress.</p>
+</p>
+        
+
+        <a class="backLink" href="list-1.html">← Back to Los Angeles</a>
+      </article>
+    </main>
+  </body>
+</html>

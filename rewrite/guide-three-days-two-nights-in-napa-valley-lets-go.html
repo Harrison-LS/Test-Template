@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Pre-trip Tips" />
+    <title>Guide | Three Days Two Nights in Napa Valley, Let's Go!</title>
+    <style>
+      :root {
+        --paper: #f5f1eb;
+        --ink: #163d36;
+        --body: #3f3a34;
+        --muted: #8a8379;
+        --line: #ddd5ca;
+        --accent: #d9782f;
+        --white: #fffaf4;
+        --shadow: 0 22px 70px rgba(28, 25, 20, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        line-height: 1.72;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .hero {
+        min-height: clamp(330px, 48vw, 560px);
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        padding: clamp(28px, 7vw, 70px) clamp(24px, 8vw, 76px);
+        background: #28463f;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.12)),
+          url("https://p1-q.mafengwo.net/s12/M00/E9/E9/wKgED1wgku2ANE3rAARr4VJYqlU40.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F90");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .heroInner {
+        position: relative;
+        width: min(900px, 100%);
+        color: #ffffff;
+      }
+
+      .heroLocation {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 24px;
+        color: rgba(255, 255, 255, 0.78);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .heroLocation svg {
+        width: 17px;
+        height: 17px;
+        color: #f0a45f;
+      }
+
+      h1 {
+        max-width: 880px;
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(30px, 4.8vw, 54px);
+        font-weight: 900;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .brief {
+        width: min(760px, 100%);
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 18px;
+        color: #5a5148;
+        font-size: clamp(17px, 1.9vw, 20px);
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.58;
+      }
+
+      .articleWrap {
+        width: min(900px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: clamp(42px, 6vw, 68px) 0 72px;
+      }
+
+      .content {
+        width: min(760px, 100%);
+        color: var(--body);
+        font-size: clamp(16px, 1.8vw, 18px);
+        line-height: 1.5;
+      }
+
+      .content p {
+        margin: 0 0 0.5em;
+      }
+
+      .content h2,
+      .content h3,
+      .content h4 {
+        margin: 46px 0 18px;
+        color: var(--ink);
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+
+      .content h2 {
+        font-size: clamp(28px, 4vw, 38px);
+      }
+
+      .content h3 {
+        font-size: clamp(23px, 3vw, 30px);
+      }
+
+      .content ul,
+      .content ol {
+        margin: 0 0 30px;
+        padding-left: 28px;
+      }
+
+      .content li {
+        margin: 8px 0;
+      }
+
+      .content blockquote {
+        margin: 34px 0;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 20px;
+        color: #5a5148;
+        font-style: italic;
+      }
+
+      .content img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 42px 0 12px;
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+      }
+
+      .content figure {
+        margin: 42px 0;
+      }
+
+      .content figure img {
+        margin: 0 0 12px;
+      }
+
+      .content figcaption {
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .backLink {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 46px;
+        border-top: 1px solid var(--line);
+        padding-top: 28px;
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.18em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .backLink:hover {
+        color: var(--accent);
+      }
+
+      @media (max-width: 720px) {
+        .hero {
+          min-height: 420px;
+          padding: 30px 24px;
+        }
+
+        .articleWrap {
+          width: min(100% - 28px, 900px);
+          padding-bottom: 48px;
+        }
+
+        .content {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="heroInner">
+        <p class="heroLocation">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+            />
+          </svg>
+          <span>Los Angeles</span>
+        </p>
+        <h1>Guide | Three Days Two Nights in Napa Valley, Let's Go!</h1>
+      </div>
+    </header>
+
+    <main class="articleWrap">
+      
+      <p class="brief">Pre-trip Tips</p>
+      
+
+      <article class="content">
+        
+          <p>Driving about 1.5 hours north from San Francisco brings you to the famous wine country Napa Valley. Here you'll find bright sunshine, typical Mediterranean climate, over 400 wineries, endless food (including 9 Michelin-starred restaurants... this guide is recommended for those who love drinking and living.)</p><p><br></p><p>What this article includes:</p><p>1/ Pre-trip tips</p><p>2/ Winery recommendations</p><p>3/ Restaurant recommendations</p><p>4/ Accommodation recommendations</p><p>-----</p><p><br></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Pre-trip tips</p><p><br></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1. Most wineries require advance reservations (some require paid deposits), which can be completed through websites, email, or phone calls. Some wineries allow unreserved visits, but most close at 5 PM daily, so please pay attention to timing.</p><p><br></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2. We spent three days and two nights in Napa Valley, visiting 2 wineries each day (one in the morning/afternoon). Of course this can be adjusted based on your drinking habits; if you're on a tight schedule, visiting 4 wineries per day is no problem.</p><p><br></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3. To avoid drunk driving, after arriving in Napa Valley we parked the car at our hotel and used Uber to travel between wineries.</p>
+Napa Valley also has a "wine train" as well as other public transportation, but the routes may not pass through the wineries you want to visit, so using Uber is still the most flexible.</p><p><br></p><p>                                        Winery Recommendations</p><p><br></p><p>                    This time in Napa we visited four wineries in total. Here I recommend two that I particularly like.</p><p><br></p><p>                                        Duckhorn Vineyards - Duckhorn Vineyard</p><p><br></p><p>                    If you arrive at your first stop in Napa and want something more relaxed, you can go to Duckhorn Vineyards. Established in 1976, Duckhorn was already quite famous, but its reputation grew even more after being selected as the guest wine for President Obama's inauguration lunch. Greatly, though this winery is famous, it's not on Napa's main road, so there are fewer tourists crowding and making noise, with a warm and lazy rural atmosphere.</p><p><br></p><p>                    Another thing I like about Duckhorn is that you can choose to taste wine on the terrace, enjoy some sunshine and breeze - it's incredibly relaxing.</p>
+</p><p><br></p><p>                    We chose the basic Portfolio Tasting ($40, tax and gratuity extra), which includes six red and white wines. The servers will provide a brief introduction, and detailed tasting notes are available on the table for reference.</p><p><br></p><p>                    One characteristic of Duckhorn is that unlike most California wines dominated by Cabernet Sauvignon or Zinfandel, it focuses primarily on the Merlot grape variety. Founder Dan Duckhorn became deeply fascinated with Merlot's smoothness, color, and unique charm during his travels through St. Emilion and Pomerol in France. Upon returning to America, he used California soil to produce high-quality Merlot wines. If you visit Duckhorn, be sure to try their Merlot.</p><p><br></p><p>                    Duckhorn also offers more extensive tasting options, such as private tasting ($85) or A Day at Duckhorn ($325), which are worth considering.</p><p><br></p><p>Duckhorn Vineyards</p><p>Website: ***</p><p>Price Range: Tasting packages $40-325 (tax and service fee extra)</p><p><br></p><p>                                        Stags&#39;
+<p>Leap Winery Stag's Leap Vineyard</p><p><br></p><p>The first point to clarify is that Napa has two wineries with extremely similar names: "Stag's Leap Wine Cellars" and "Stags' Leap Winery". For those interested, here's a brief introduction:</p><p><br></p><p>These two neighboring wineries share the prestigious reputation of the Stags Leap AVA wine region. For a long time, they've been competing for the naming rights to "Stags Leap", until 1985 when a judge ruled both could use it. Since neither side could definitively win or lose, the wineries differentiated themselves through punctuation: one became "Stag's Leap Wine Cellars" and the other "Stags' Leap Winery". In Chinese translations, they're rendered as Stag's Leap Wine Vineyard and Stag's Leap Wine Cave.</p><p><br></p><p>The logos of Stag's Leap vs. Stags' Leap</p><p><br></p><p>The winery I visited this time (and highly recommend) was &quot;
+Stags&#39; Leap Winery" Stags&#39; Leap Winery (above, right). There are several reasons why we love it so much: the wine tastes great, the estate is beautiful, the tasting experience is private, and the staff members are friendly and warm. It feels less like touring a winery and more like visiting a friend with excellent taste - that kind of feeling.</p><p><br></p><p>                    When we arrived at Stags&#39; Leap in the morning, it was still quite cold. The already gray-haired winery staff member Robert greeted us at the door to enter their warm house with 100-year history. We chose Estate Tour & Tasting ($75 USD, tax and service fee extra), a two-hour tour and tasting activity that had only two other guests besides us - very private.</p><p><br></p><p>                    Robert has immense passion for wine as well as Stags&#39; Leap; he&#39;s been working here since retiring over 7 years ago. His wine-tasting itinerary begins at the villa, starting with the winery&#39;s founding (1888), sharing many interesting anecdotes without getting bogged down in too much heavy detail - everything felt perfectly balanced.</p><p><br></p><p>                    He also led us into the vineyard to taste small grapes still clinging to branches after harvest.
+<p><br></p><p>                    According to Robert, founders Horace Chase and Marry Mizner were a hospitable couple; Mrs. even opened a speakeasy in the basement of their home during Prohibition to cater to fellow alcohol enthusiasts (very cool, still accessible for visits today). I won't repeat Stags' Leap Winery's colorful history here, hoping you can experience it firsthand on-site.</p><p><br></p><p>                    Stags&#39; Leap Winery was my favorite winery tour of this trip - private and in-depth, unlike the rushed tours at large wineries. Highly recommended for you.</p><p><br></p><p>                    Stags&#39; Leap Winery</p><p>Website:***</p><p>Fee:Estate Tour &amp; Tasting $75 USD (tax and service fee extra)</p><p><br></p><p>                                        Restaurant Recommendations</p><p><br></p><p>                    Napa Valley has many excellent restaurants, including 9 Michelin-starred restaurants - impossible to finish eating at all of them in just two nights.</p>
+<html><body><p>Here are five relatively relaxed small restaurants recommended first for your reference.</p><p><br></p><p>                                        1/ R+D Kitchen</p><p><br></p><p>                    6795 Washington Street, Yountville, CA</p><p><br></p><p>R+D Kitchen is very close to where we stayed, and it was the first meal we had upon arriving in Napa. The midday atmosphere is leisurely, and both the shrimp salad and signature burger were quite good; it's a great place for a relaxed meal.</p><p><br></p><p>                                        2/ ad hoc</p><p><br></p><p>                    6476 Washington St, Yountville, CA</p><p><br></p><p>If you want to taste famous chef Thomas Keller's dishes but don't want to spend hundreds of dollars at his three-star restaurant French Laundry, you can choose ad hoc. The fried chicken here is famously delicious, though the menu changes every night, so getting a specific dish depends on luck.</p></body></html>
+Family-style sharing sets are around $55 per person.</p><p><br></p><p>3/ Farmstead at Long Meadow Ranch</p><p><br></p><p>738 Main St, St Helena, CA</p><p><br></p><p>A restaurant with a farm atmosphere, located in St. Helena about a 15-minute drive from Yountville. Going there around noon is a good choice to sit outdoors. The beef marrow, raw beef tartare, and hand-pulled pork burgers are all delicious.</p><p><br></p><p>4/ Bouchon Bakery</p><p><br></p><p>6528 Washington St, Yountville, CA</p><p><br></p><p>If the hotel you're staying at doesn't provide breakfast or if you get a little hungry in the afternoon, you can visit Bouchon Bakery to buy freshly baked bread and pastries made that day. This French bakery and the neighboring Bouchon Bistro are both under the renowned chef Thomas Keller's brand mentioned earlier, so quality is naturally excellent.</p>
+</p><p><br></p><p>5/ bottega</p><p><br></p><p>V Marketplace, 6525 Washington Street, Yountville, CA</p><p><br></p><p>We had incredibly delicious grilled octopus at this lively Italian restaurant, and I'm still drooling thinking about it (though the portions were quite small, so order more!). By the way, there's a local favorite Italian restaurant called Ciccio's nearby. I've heard their pizzas are excellent, but unfortunately they weren't open on our day... Hope you get to try it sometime, and let me know if it's good!</p><p><br></p><p>Accommodation Recommendation</p><p><br></p><p>Vintage House</p><p><br></p><p>The Vintage House we stayed at in Napa this time was a small hotel that satisfied us with its design and comfort, without being overly expensive.</p>
+<p>The location is right in Yountville, within a 5-10 minute walk from several restaurants recommended earlier, couldn't be more convenient. Special thanks to Mr. K for introducing this hotel to me - the Stags' Leap Winery visit and the other restaurants I went to were also based on his recommendations~</p><p><br></p><p>The moment you enter the hotel, there's a delightful sense of surprise - the design blends vintage elements with modern touches. Thoughtfully placed seating areas throughout encourage guests to relax, while evening fireside gatherings create an intimate and warm atmosphere.</p><p><br></p><p>The pool area offers seasonal charm despite cooler temperatures. While swimming isn't feasible in November, the outdoor jacuzzi provides year-round relaxation, complemented by cozy fire-seated zones perfect for gathering.</p><p><br></p><p>Nearby rooms offer convenient access, with this premium king room featuring additional privacy through a secluded pathway that evokes a village-like retreat.</p><p><br></p><p>Inside, the room combines thoughtful luxury: private balcony, indoor fireplace, plush bedding, Nespresso coffee station, dual-sink bathroom, and spacious soaking tub designed for two - creating an intimate, refined retreat.</p>
+<p>The fireplace in the room not only adds atmosphere but also really warms up. If firewood runs out, you can request more from customer service. The delivered firewood comes in bundles, is easy to light, and there's no need to worry about safety concerns.</p><p>---</p><p>✈️ ✈️ ✈️</p><p>---</p><p>With the year-end approaching, I've already started planning my travel plans for next year—thinking of going to Hokkaido for skiing, traveling to Africa to see the great migration, visiting Bali for a wedding, heading to Antarctica to cross New Year with penguins...</p><p>Where will your next trip take you?</p><p>Leave a message and share it with me :)</p><p>Photo/Text: Sugared &amp; Spiced</p><p>Welcome to share on WeChat Moments | Reposting from other platforms, please leave a comment first for authorization</p>
+        
+
+        <a class="backLink" href="list-1.html">← Back to Los Angeles</a>
+      </article>
+    </main>
+  </body>
+</html>

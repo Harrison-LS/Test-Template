@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="July 4 saw the official opening of the "Walking Dead" themed area at Universal Studios Hollywood in Los Angeles. The zombie haunted house, created based on the American TV series "The Walking Dead," drew fans from all over the world, allowing visitors to fully experience a zombie-themed adventure." />
+    <title>[For the timid, beware] Zombies are coming! Huanying unveils the world's first "Zombie Experience Park"</title>
+    <style>
+      :root {
+        --paper: #f5f1eb;
+        --ink: #163d36;
+        --body: #3f3a34;
+        --muted: #8a8379;
+        --line: #ddd5ca;
+        --accent: #d9782f;
+        --white: #fffaf4;
+        --shadow: 0 22px 70px rgba(28, 25, 20, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        line-height: 1.72;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .hero {
+        min-height: clamp(330px, 48vw, 560px);
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        padding: clamp(28px, 7vw, 70px) clamp(24px, 8vw, 76px);
+        background: #28463f;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.12)),
+          url("");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .heroInner {
+        position: relative;
+        width: min(900px, 100%);
+        color: #ffffff;
+      }
+
+      .heroLocation {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 24px;
+        color: rgba(255, 255, 255, 0.78);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .heroLocation svg {
+        width: 17px;
+        height: 17px;
+        color: #f0a45f;
+      }
+
+      h1 {
+        max-width: 880px;
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(30px, 4.8vw, 54px);
+        font-weight: 900;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .brief {
+        width: min(760px, 100%);
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 18px;
+        color: #5a5148;
+        font-size: clamp(17px, 1.9vw, 20px);
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.58;
+      }
+
+      .articleWrap {
+        width: min(900px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: clamp(42px, 6vw, 68px) 0 72px;
+      }
+
+      .content {
+        width: min(760px, 100%);
+        color: var(--body);
+        font-size: clamp(16px, 1.8vw, 18px);
+        line-height: 1.5;
+      }
+
+      .content p {
+        margin: 0 0 12px;
+      }
+
+      .content h2,
+      .content h3,
+      .content h4 {
+        margin: 46px 0 18px;
+        color: var(--ink);
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+
+      .content h2 {
+        font-size: clamp(28px, 4vw, 38px);
+      }
+
+      .content h3 {
+        font-size: clamp(23px, 3vw, 30px);
+      }
+
+      .content ul,
+      .content ol {
+        margin: 0 0 30px;
+        padding-left: 28px;
+      }
+
+      .content li {
+        margin: 8px 0;
+      }
+
+      .content blockquote {
+        margin: 34px 0;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 20px;
+        color: #5a5148;
+        font-style: italic;
+      }
+
+      .content img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 42px 0 12px;
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+      }
+
+      .content figure {
+        margin: 42px 0;
+      }
+
+      .content figure img {
+        margin: 0 0 12px;
+      }
+
+      .content figcaption {
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .backLink {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 46px;
+        border-top: 1px solid var(--line);
+        padding-top: 28px;
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.18em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .backLink:hover {
+        color: var(--accent);
+      }
+
+      @media (max-width: 720px) {
+        .hero {
+          min-height: 420px;
+          padding: 30px 24px;
+        }
+
+        .articleWrap {
+          width: min(100% - 28px, 900px);
+          padding-bottom: 48px;
+        }
+
+        .content {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="heroInner">
+        <p class="heroLocation">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+            />
+          </svg>
+          <span>Los Angeles</span>
+        </p>
+        <h1>[For the timid, beware] Zombies are coming! Huanying unveils the world's first "Zombie Experience Park"</h1>
+      </div>
+    </header>
+
+    <main class="articleWrap">
+      
+      <p class="brief">July 4 saw the official opening of the "Walking Dead" themed area at Universal Studios Hollywood in Los Angeles. The zombie haunted house, created based on the American TV series "The Walking Dead," drew fans from all over the world, allowing visitors to fully experience a zombie-themed adventure.</p>
+      
+
+      <article class="content">
+        
+          <p>On July 4, 2016, the &quot;zombie&quot; experience project created by the original team behind the hit American TV series The Walking Dead officially opened at Universal Studios Hollywood in Los Angeles. On its opening day, it attracted over 10,000 fans and tourists to visit and support the event. A wave after wave of ultimate zombies surged toward visitors, continuously raising the temperature of that day&#39;s opening ceremony.</p><p><br></p><p>The Walking Dead is Americas first zombie-themed series drama. Since premiering on AMC in 2010, it has produced six seasons and has been wildly popular with film fans around the globe.</p><p><br></p><p>A horde of realistic zombies combined with bloody fight scenes are the shows biggest selling points. The Walking Dead experience park at Universal Studios recreates many storylines from the series, which surely wins over the hearts of many fans.</p><p><br></p><p>Universal Studios had previously held a series of scary zombie activities during Halloween, but none lasted long. In contrast, this Walking Dead themed area will become a long-term project, open all year round.</p><p><br></p><p>This Walking Dead themed zone is located within Universal Studios Hollywood Park. Visitors who purchase park tickets can directly experience it. The entire project requires walking exploration, so the trick of closing your eyes wont work!</p><p><br></p><p>As soon as visitors enter the themed area, they see an iron door with Don&#39;t Open Zombies Inside written on it, exactly mirroring the scene when the male protagonist in the drama just woke up in the hospital.</p><p>Just as tourists hesitate whether to move forward, the iron doors will swing violently accompanied by zombie growls, unveiling the beginning of this horror journey. During the walk-through, visitors will encounter a series of &#39;zombie&#39; attacks, most portrayed by real actors. The dim atmosphere, terrifying sound effects, combined with the spectacular prosthetic skills of special effects makeup artists have scared many tourists who came to challenge themselves. Due to the project being too frightening, Huanying has also set up warning signs at the entrance - only visitors aged 13 and above are qualified to experience this attraction. Multiple scenes from &#39;The Walking Dead&#39; series are faithfully recreated throughout, such as the episode where Daryl and Beth burn down a small cabin, which is excellently reproduced here. The realistic fire effects created using lights and steam can even be felt on your skin. Visitors can also see zombies with flames on their bodies charging at you. Of course, if you&#39;re not afraid, you can even pose for a photo with the zombies. The project maintains strict requirements for zombie actors - notably, they must never initiate physical contact with visitors. This means no need to worry about unwanted &#39;intimate encounters&#39; - if they successfully frighten you, their job is done! Do not underestimate these zombie makeup designs. These terrifying transformations are meticulously crafted by professional special effects artists, with the creative team largely composed of original show personnel.</p><p>Each makeup design and creation undergoes 4-6 hours of sculpting and coloring, truly a &quot;grand production.&quot; Beyond just perfect makeup, all staff members have undergone highly professional training. These training projects include their facial expressions, walking style, and each zombie character they portray - all packaged professionally to bring tourists an unforgettable real experience for life. Picture: The Walking Dead project at Universal Studios. Universal Studios Hollywood&#39;s The Walking Dead attraction has been officially open for less than a month, making it the park&#39;s most popular ride with longer queue times. Visitors are best served arriving early and queuing first thing in the morning; otherwise they&#39;ll have to spend significant time on this extremely popular attraction.</p>
+        
+
+        <a class="backLink" href="list-1.html">← Back to Los Angeles</a>
+      </article>
+    </main>
+  </body>
+</html>

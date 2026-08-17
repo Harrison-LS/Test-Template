@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <title>Broaden Your Horizons | Do All Fashionable Big Brands Love Opening Bookstores?!</title>
+    <style>
+      :root {
+        --paper: #f5f1eb;
+        --ink: #163d36;
+        --body: #3f3a34;
+        --muted: #8a8379;
+        --line: #ddd5ca;
+        --accent: #d9782f;
+        --white: #fffaf4;
+        --shadow: 0 22px 70px rgba(28, 25, 20, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        line-height: 1.72;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .hero {
+        min-height: clamp(330px, 48vw, 560px);
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        padding: clamp(28px, 7vw, 70px) clamp(24px, 8vw, 76px);
+        background: #28463f;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.12)),
+          url("");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .heroInner {
+        position: relative;
+        width: min(900px, 100%);
+        color: #ffffff;
+      }
+
+      .heroLocation {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 24px;
+        color: rgba(255, 255, 255, 0.78);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .heroLocation svg {
+        width: 17px;
+        height: 17px;
+        color: #f0a45f;
+      }
+
+      h1 {
+        max-width: 880px;
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(30px, 4.8vw, 54px);
+        font-weight: 900;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .brief {
+        width: min(760px, 100%);
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 18px;
+        color: #5a5148;
+        font-size: clamp(17px, 1.9vw, 20px);
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.58;
+      }
+
+      .articleWrap {
+        width: min(900px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: clamp(42px, 6vw, 68px) 0 72px;
+      }
+
+      .content {
+        width: min(760px, 100%);
+        color: var(--body);
+        font-size: clamp(16px, 1.8vw, 18px);
+        line-height: 1.5;
+      }
+
+      .content p {
+        margin: 0 0 12px;
+      }
+
+      .content h2,
+      .content h3,
+      .content h4 {
+        margin: 46px 0 18px;
+        color: var(--ink);
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+
+      .content h2 {
+        font-size: clamp(28px, 4vw, 38px);
+      }
+
+      .content h3 {
+        font-size: clamp(23px, 3vw, 30px);
+      }
+
+      .content ul,
+      .content ol {
+        margin: 0 0 30px;
+        padding-left: 28px;
+      }
+
+      .content li {
+        margin: 8px 0;
+      }
+
+      .content blockquote {
+        margin: 34px 0;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 20px;
+        color: #5a5148;
+        font-style: italic;
+      }
+
+      .content img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 42px 0 12px;
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+      }
+
+      .content figure {
+        margin: 42px 0;
+      }
+
+      .content figure img {
+        margin: 0 0 12px;
+      }
+
+      .content figcaption {
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .backLink {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 46px;
+        border-top: 1px solid var(--line);
+        padding-top: 28px;
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.18em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .backLink:hover {
+        color: var(--accent);
+      }
+
+      @media (max-width: 720px) {
+        .hero {
+          min-height: 420px;
+          padding: 30px 24px;
+        }
+
+        .articleWrap {
+          width: min(100% - 28px, 900px);
+          padding-bottom: 48px;
+        }
+
+        .content {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="heroInner">
+        <p class="heroLocation">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+            />
+          </svg>
+          <span>Los Angeles</span>
+        </p>
+        <h1>Broaden Your Horizons | Do All Fashionable Big Brands Love Opening Bookstores?!</h1>
+      </div>
+    </header>
+
+    <main class="articleWrap">
+      
+
+      <article class="content">
+        
+          <p>Fashion&#39;s major brands have never been content to stick strictly to their main business! Their cross-industry ventures are endless—limited collaborations, exhibitions, restaurants... touching on art, culture, dining and everything in between. Shopping is no longer just about products; it has become a holistic lifestyle experience.</p><p><br></p><p>And recently, Gucci opened a bookstore in New York, instantly becoming the talk of town. Actually, luxury brands opening bookstores isn&#39;t exactly new anymore. And as for their craftsmanship compared to fashion design—whether we say they surpass or fall short, one thing is certain: every location is worth exploring.</p><p><br></p><p>GUCCI</p><p>Two weeks ago, Gucci opened its first bookstore in New York&#39;s SoHo district, and it immediately made my list of must-visit spots on my next trip! Located within a 155-year-old building, the cast-iron loft blends industrial design with rich Italian classical charm. Emerald green archways, deep red bookshelves, elegant reading nooks, and vibrant sofas; beneath the exposed red brick walls you&#39;ll find Gucci&#39;s signature prints everywhere—beautiful enough to feel like sets from a theatrical production.</p><p><br></p><p>The space was designed in collaboration with Dashwood Books, New York&#39;s most enigmatic independent photography bookstore. Beyond an atmosphere that keeps visitors captivated, it&#39;s the book collection of over 2,000 new releases and rare editions that truly holds people&#39;s attention.</p><p>A vast collection of avant-garde photography books featuring Italian artists and writers, covering categories like fashion, art, design, niche magazines, and more—naturally including Gucci&#39;s own publications.</p><p><br></p><p>In fact, this bookstore extends from Wooster Gucci, the arts and culture space created by Gucci earlier. Just a wall away at Wooster Gucci, there is not only their exclusive cinema screening avant-garde experimental films produced through collaborations between Gucci and artists from various fields, but also many limited edition collaborative series or DIY custom pieces available for purchase. While shopping, visitors experience Gucci&#39;s unique aesthetics~</p><p><br></p><p>Using this vibrant bookstore as a platform, fun collaborative activities continue to emerge. Like the book &quot;Now Here Then&quot; by Gucci in collaboration with photographer Huger Foote; fashion blogger Leandra Medine&#39;s blog &quot;The Man Repeller&quot; creating collaborative outfits paired with books from the Gucci bookstore as inspiration—these sound very interesting~</p><p><br></p><p>LOUIS VUITTON</p><p><br></p><p>If opening a bookstore isn&#39;t impressive enough, Louis Vuitton has taken it further by establishing its own publishing house!</p><p>This is truly one-of-a-kind among global luxury brands! LV Publishing has been around for over a decade, with more than 80 publications under its name. The most famous of these is undoubtedly the City Guide covering 60 countries worldwide—I love to browse it before traveling to discover unique destinations. Last month, LV collaborated with five world-renowned photographers on a new travel photography series called Fashion Eye. Just looking at the teasers on their website was stunningly beautiful! I want to own them all!</p><p><br></p><p>In early November, Paris hosted a city-themed photography exhibition, and LV set up a pop-up bookstore in the Honorary Spiral Staircase of the Grand Palais. Not only did they release the latest 2019 City Guide featuring more artists and trendsetters sharing their favorite travel destinations, but photographers from Fashion Eye also came for book signings.</p><p><br></p><p>Throughout its history, books have always held an important place at LV. While not operating a standalone bookstore chain, Louis Vuitton preserves a special space in each of its global flagship stores as a bookstore. Beyond publishing their own titles, the store doesn&#39;t rely on bestsellers but instead selects fashion, art, lifestyle, and travel literature with LV&#39;s distinctive attitude and taste. Next time you visit one of their stores, why not spend some time browsing while shopping?</p><p><br></p><p>ALAÏA</p><p>Last month, Alaia unveiled The Association Azzedine Alaïa bookstore in Le Marais, Paris. It is said that opening a bookstore has long been Azzedine Alaïa&#39;s dream; he hoped to share his work and collection with younger generations. This dream finally became reality on the first anniversary of his death. The bookstore will also become part of the Alaïa museum.</p><p><br></p><p>Inside this compact bookstore, almost everything is from his collection: Jean Prouvé bookshelves, Julian Schnabel paintings, Serge Mouille chandeliers, and more. Carla Sozzani, who runs the shop, said that &quot;more than opening a store, we&#39;re like cataloging his private collection.&quot;</p><p><br></p><p>Beyond publications about the brand, there are many books on fashion history, exhibitions, as well as artists and designers that Azzedine Alaïa admired during his lifetime. While reading, visitors can also take home some souvenirs as mementos. Postcards featuring works by fashion illustration master Gladys Perint Palmer are definitely worth buying.</p><p><br></p><p>The house where The Association Azzedine Alaïa is located was precisely the place where Azzedine Alaïa lived and worked during his lifetime.</p><p>Apart from the bookstore that just opened and the cafe scheduled to open next year in January, there will also be a display of Azzedine Alaïa&#39;s classic works at the gallery. Highly recommended viewing.</p><p><br></p><p>BOOKMARC</p><p>In 2010, Marc Jacobs opened his first bookstore, BookMarc, in New York&#39;s West Village. But it turns out the first store wasn&#39;t originally part of the plan.</p><p><br></p><p>Marc Jacobs and his partner Robert Duff discovered a beloved local bookstore they both frequented was about to close, so they decided to purchase it.</p><p><br></p><p>After acquiring the shop, they expanded its collection with more art, photography, and design literature, complemented by their popular Marc Jacobs stationery and T-shirt lines. Visitors almost invariably leave empty-handed. BookMarc quickly gained popularity, eventually establishing four locations worldwide—Los Angeles, New York, Tokyo, and Paris—establishing itself as an independent brand. Though the Los Angeles store has since closed, it was consistently one of my favorite stops during visits to Melrose.</p><p><br></p><p>Leveraging Marc Jacobs&#39; brand influence, BookMarc frequently collaborates with other artists and brands on limited-edition collections.</p><p>From my earlier visits with Anna Sui to the recent House of Holland scarf, which excels at creating slogans—every trip brings different surprises.</p><p><br></p><p>Bookmarc also frequently hosts VIPs. Many celebrities choose to hold their new book launches and signings there, making it probably the bookstore with the highest chance of celebrity encounters~ Grace Coddington, Caroline (of &quot;How to be a Parisian&quot;), Yoko Ono, and Kendall Jenner have all held events here.</p><p><br></p><p>CLUB MONACO</p><p>Although Club Monaco is not as big-name as the brands mentioned above, it&#39;s always one of my favorite brands. The clothing style is simple and relaxed, expanding its domain into lifestyle while naturally continuing this same aesthetic. At the flagship store on Fifth Avenue in New York, the pure white modern decoration feels cozy like home, and there can&#39;t be missing a dazzling &quot;study&quot;~</p><p><br></p><p>This bookstore hidden inside the clothing store was created jointly with The Strand, a landmark bookstore in New York with over 90 years of history. Being called one of the world&#39;s best bookstores, The Strand designed an exclusive reading list tailored to Club Monaco&#39;s style.</p><p>Covers art, travel, photography, dining, fashion, and more. Inside Club Monaco&#39;s flagship store, the shop-within-a-shop concept even includes Toby&#39;s Estates, one of the city&#39;s hottest cafes. Order a cup of coffee, flip through some books, and while you&#39;re shopping, you can easily spend an entire afternoon strolling around this clothing store~ After reading today&#39;s post, aren&#39;t you as tempted as Lulu to add all these places to your itinerary and check them out one by one? Assistant Editor: Nicole</p>
+        
+
+        <a class="backLink" href="list-1.html">← Back to Los Angeles</a>
+      </article>
+    </main>
+  </body>
+</html>

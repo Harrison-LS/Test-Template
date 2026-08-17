@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <title>Deep dive | Discover a lesser-known side of the Greater Los Angeles area - absolutely amazing!</title>
+    <style>
+      :root {
+        --paper: #f5f1eb;
+        --ink: #163d36;
+        --body: #3f3a34;
+        --muted: #8a8379;
+        --line: #ddd5ca;
+        --accent: #d9782f;
+        --white: #fffaf4;
+        --shadow: 0 22px 70px rgba(28, 25, 20, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        line-height: 1.72;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .hero {
+        min-height: clamp(330px, 48vw, 560px);
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        padding: clamp(28px, 7vw, 70px) clamp(24px, 8vw, 76px);
+        background: #28463f;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.12)),
+          url("");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .heroInner {
+        position: relative;
+        width: min(900px, 100%);
+        color: #ffffff;
+      }
+
+      .heroLocation {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 24px;
+        color: rgba(255, 255, 255, 0.78);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .heroLocation svg {
+        width: 17px;
+        height: 17px;
+        color: #f0a45f;
+      }
+
+      h1 {
+        max-width: 880px;
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(30px, 4.8vw, 54px);
+        font-weight: 900;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .brief {
+        width: min(760px, 100%);
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 18px;
+        color: #5a5148;
+        font-size: clamp(17px, 1.9vw, 20px);
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.58;
+      }
+
+      .articleWrap {
+        width: min(900px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: clamp(42px, 6vw, 68px) 0 72px;
+      }
+
+      .content {
+        width: min(760px, 100%);
+        color: var(--body);
+        font-size: clamp(16px, 1.8vw, 18px);
+        line-height: 1.5;
+      }
+
+      .content p {
+        margin: 0 0 12px;
+      }
+
+      .content h2,
+      .content h3,
+      .content h4 {
+        margin: 46px 0 18px;
+        color: var(--ink);
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+
+      .content h2 {
+        font-size: clamp(28px, 4vw, 38px);
+      }
+
+      .content h3 {
+        font-size: clamp(23px, 3vw, 30px);
+      }
+
+      .content ul,
+      .content ol {
+        margin: 0 0 30px;
+        padding-left: 28px;
+      }
+
+      .content li {
+        margin: 8px 0;
+      }
+
+      .content blockquote {
+        margin: 34px 0;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 20px;
+        color: #5a5148;
+        font-style: italic;
+      }
+
+      .content img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 42px 0 12px;
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+      }
+
+      .content figure {
+        margin: 42px 0;
+      }
+
+      .content figure img {
+        margin: 0 0 12px;
+      }
+
+      .content figcaption {
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .backLink {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 46px;
+        border-top: 1px solid var(--line);
+        padding-top: 28px;
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.18em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .backLink:hover {
+        color: var(--accent);
+      }
+
+      @media (max-width: 720px) {
+        .hero {
+          min-height: 420px;
+          padding: 30px 24px;
+        }
+
+        .articleWrap {
+          width: min(100% - 28px, 900px);
+          padding-bottom: 48px;
+        }
+
+        .content {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="heroInner">
+        <p class="heroLocation">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+            />
+          </svg>
+          <span>Los Angeles</span>
+        </p>
+        <h1>Deep dive | Discover a lesser-known side of the Greater Los Angeles area - absolutely amazing!</h1>
+      </div>
+    </header>
+
+    <main class="articleWrap">
+      
+
+      <article class="content">
+        
+          <p>There are countless articles online about Los Angeles tourism - Universal Studios, the Walk of Fame, Beverly Hills, the Hollywood Sign, the Observatory, The Grove. These names have become so familiar they&#39;ve worn into my ears. This article takes a different approach, taking you to discover a lesser-known Greater Los Angeles area.</p><p><br></p><p>LA River</p><p>The Los Angeles River is probably familiar to fans of American racing movies or racing games. Surprisingly, this waterway is actually open to the public. As long as you can find an entrance point, people often come in here to film.</p><p>Walking along the riverbed, you&#39;ll discover many sewer outlets on both sides - those interested might bring a flashlight and explore inside.</p><p><br></p><p>Hollywood Sign</p><p>The Hollywood Sign is usually only visible from afar at the Observatory or Hollywood Lake Park. However, with the right route, getting close isn&#39;t too difficult. Strictly speaking, that area isn&#39;t open to the public. If you want to go up, you must climb before sunrise - once the sun rises, helicopters start circling to clear people out.</p><p><br></p><p>Hollywood Bowl Overlook</p><p>This small park closes at sunset, but apparently no one seems to mind this rule. Go around the rightmost side of the fence, and you can easily slip through a gap. I think this is the best place in Los Angeles to view the night sky.</p><p><br></p><p>Ave 26 Taco Stand</p><p>Taco stands are definitely a major feature of Los Angeles. The most famous one is undoubtedly the taco stand on 26th Street, absolutely worth trying. While wandering around Downtown LA, you&#39;ll discover many similar food stalls.</p><p><br></p><p>Plane Graveyard</p><p>This plane graveyard is located at the edge of the famous Edwards Air Force Base. Like many interesting places in America, it&#39;s technically not allowed to enter, but everyone goes there... Note: some students nearby got tickets after entering.</p><p><br></p><p>Los Angeles Harbor, PV Mountain Area</p><p>Go down along a storm drain and through a rocky beach, then you&#39;ll reach shipwreck remains - scattered rusted ship parts lying on the coastline beneath the cliffs.</p><p><br></p><p>This part of the city slid into the sea with the land, so this ruin has become heaven for graffiti artists.</p><p>Known as Sunken City.</p><p><br></p><p>On weekend evenings, many locals bring beer to build bonfires and have parties there, with quite a few couples hiding in the corners.</p><p><br></p><p>A seafood market restaurant by the Los Angeles harbor - you buy seafood for them to cook. Listening to bands play while drinking beer by the beach is one of life&#39;s great pleasures.</p><p><br></p><p>Chips Ranch</p><p><br></p><p>A photographer&#39;s paradise. Three hours from the front mountain side, 50 minutes from the back mountain side.</p><p><br></p><p>Topanga State Park</p><p><br></p><p>Topanga offers more than just its shopping center; the scenic views on the mountains are not to be missed.</p><p><br></p><p>Crossing this mountain leads directly to Malibu Beach.</p><p><br></p><p>Cliffs Point Park</p><p><br></p><p>This small park is located between Malibu and Santa Monica, with a clear view of the Ferris wheel at the pier amusement area from afar.</p><p><br></p><p>Angels Flight</p><p>Famous Angel Train Railway, the shortest railway in the world. One of LALA Land&#39;s tourist attractions. By the time I visited it had already ceased operations, but I believe it has reopened now.</p><p><br></p><p>Bakersfield ~ Arvin</p><p>California produces abundant big almonds. Between Bakersfield and Arvin there are vast expanses of apricot orchards. Actually what&#39;s called &quot;big almond&quot; is a type of almond tree - more like peach blossoms in appearance.</p><p><br></p><p>Like the divine personage from Guye, naturally gifted and elegant with lofty character.</p><p><br></p><p>When spring arrives on Arvin&#39;s mountainside, wildflowers bloom everywhere across the hills - truly beautiful scenery.</p><p><br></p><p>Salton Sea Salt Lake Region</p><p>Salvation Mountain, a small attraction with distinct Christian coloring, quite unique in its character.</p><p><br></p><p>Adjacent to it lies an area called East Jesus - going there at noon feels incredibly eerie. A traveling companion mentioned that Salvation Mountain perhaps represents heaven while this area represents hell.</p><p><br></p><p>An abandoned little fishing village by the salt lake shore - many houses remain intact, and household items inside haven&#39;t been taken away either.</p><p>Malibu Beach</p><p>They say Malibu Beach, but actually Malibu consists of more than a dozen beaches. The pier beach where most people go isn&#39;t very interesting. Highly recommend El Matdor; I think it&#39;s the most beautiful one in Malibu.</p><p>Lechuza Beach - You enter this beach from a residential area, there are very few people, and it&#39;s extremely quiet.</p><p><br></p><p>Pirate Tower</p><p>This tower is not actually at Laguna Beach, but in another residential district of this city. Many people come here to take wedding photos in the afternoon.</p><p><br></p><p>Angels National Forest</p><p>In winter it transforms into a ski resort where you need cable cars to get up. Summer weekends also open; as long as it&#39;s cloudy or overcast below the mountain, there will be a sea of clouds above the mountains.</p><p><br></p><p>Dodger Stadium, Paradise Park</p><p>The location of the most classic Fast &amp; Furious poster.</p><p><br></p><p>Skid Row</p><p>Just one last tip: when exploring downtown, it&#39;s best to avoid the Skid Row area. The streets are completely populated by homeless individuals, with odors of urine and weed lingering in the air.</p>
+        
+
+        <a class="backLink" href="list-1.html">← Back to Los Angeles</a>
+      </article>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="City Overview" />
+    <title>A complete guide to help you flawlessly plan your San Francisco itinerary!</title>
+    <style>
+      :root {
+        --paper: #f5f1eb;
+        --ink: #163d36;
+        --body: #3f3a34;
+        --muted: #8a8379;
+        --line: #ddd5ca;
+        --accent: #d9782f;
+        --white: #fffaf4;
+        --shadow: 0 22px 70px rgba(28, 25, 20, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        line-height: 1.72;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .hero {
+        min-height: clamp(330px, 48vw, 560px);
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        padding: clamp(28px, 7vw, 70px) clamp(24px, 8vw, 76px);
+        background: #28463f;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.12)),
+          url("https://p1-q.mafengwo.net/s14/M00/CA/6C/wKgE2l0wO-uAc-v9AAJ8qURzFos83.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F90");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .heroInner {
+        position: relative;
+        width: min(900px, 100%);
+        color: #ffffff;
+      }
+
+      .heroLocation {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 24px;
+        color: rgba(255, 255, 255, 0.78);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .heroLocation svg {
+        width: 17px;
+        height: 17px;
+        color: #f0a45f;
+      }
+
+      h1 {
+        max-width: 880px;
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(30px, 4.8vw, 54px);
+        font-weight: 900;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .brief {
+        width: min(760px, 100%);
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 18px;
+        color: #5a5148;
+        font-size: clamp(17px, 1.9vw, 20px);
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.58;
+      }
+
+      .articleWrap {
+        width: min(900px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: clamp(42px, 6vw, 68px) 0 72px;
+      }
+
+      .content {
+        width: min(760px, 100%);
+        color: var(--body);
+        font-size: clamp(16px, 1.8vw, 18px);
+        line-height: 1.5;
+      }
+
+      .content p {
+        margin: 0 0 0.5em;
+      }
+
+      .content h2,
+      .content h3,
+      .content h4 {
+        margin: 46px 0 18px;
+        color: var(--ink);
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+
+      .content h2 {
+        font-size: clamp(28px, 4vw, 38px);
+      }
+
+      .content h3 {
+        font-size: clamp(23px, 3vw, 30px);
+      }
+
+      .content ul,
+      .content ol {
+        margin: 0 0 30px;
+        padding-left: 28px;
+      }
+
+      .content li {
+        margin: 8px 0;
+      }
+
+      .content blockquote {
+        margin: 34px 0;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 20px;
+        color: #5a5148;
+        font-style: italic;
+      }
+
+      .content img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 42px 0 12px;
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+      }
+
+      .content figure {
+        margin: 42px 0;
+      }
+
+      .content figure img {
+        margin: 0 0 12px;
+      }
+
+      .content figcaption {
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .backLink {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 46px;
+        border-top: 1px solid var(--line);
+        padding-top: 28px;
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.18em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .backLink:hover {
+        color: var(--accent);
+      }
+
+      @media (max-width: 720px) {
+        .hero {
+          min-height: 420px;
+          padding: 30px 24px;
+        }
+
+        .articleWrap {
+          width: min(100% - 28px, 900px);
+          padding-bottom: 48px;
+        }
+
+        .content {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="heroInner">
+        <p class="heroLocation">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+            />
+          </svg>
+          <span>Los Angeles</span>
+        </p>
+        <h1>A complete guide to help you flawlessly plan your San Francisco itinerary!</h1>
+      </div>
+    </header>
+
+    <main class="articleWrap">
+      
+      <p class="brief">City Overview</p>
+      
+
+      <article class="content">
+        
+          <p>Mentioning the Golden Gate Bridge, cable cars, and Fisherman's Wharf will bring San Francisco to mind, but it offers far more than these fragments. Here you'll find human culture, natural beauty, cutting-edge technology, exotic locales, and countless other attractions—a blend of modern and classical charm, hailed as "the city everyone loves." So what can you do in this city, and how exactly should you explore? This guide will answer all your questions!</p><p><br></p><p>                                        City Overview</p><p><br></p><p>                    San Francisco boasts a pleasant climate and numerous attractions. No matter which style of travel you prefer, you'll find the perfect destination here. Whether riding cable cars to appreciate the city's intricate details, renting a bicycle to ride through Fisherman's Wharf while enjoying a king crab, or crossing the Golden Gate Bridge and strolling through Golden Gate Park—all are ideal ways to experience this diverse, romantic West Coast metropolis.</p><p><br></p><p>                                        Best Time to Visit</p><p><br></p><p>                    San Francisco enjoys moderate temperatures throughout most of the year, with few extremes of heat or cold, earning it a reputation as the most comfortable city in the United States. Generally, December through February is rainy season with unpredictable weather conditions.</p>
+<p>May-June and September-October are neither too cold nor too hot, making them ideal times for traveling and sightseeing.</p><p><br></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cost of Living</p><p><br></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;San Francisco has the highest rent and second-highest prices in the entire United States. Typically, grocery stores, attractions, dining, and transportation are all more expensive than the national average.</p><p><br></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Transportation Options</p><p><br></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Local Transportation</p><p><br></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Public Transit: San Francisco has a highly developed public transportation system. Buses, subways, historic cable cars (cable railways), and streetcars are all available, with at least one transit option perfect for your trip to help you explore every corner of the city.</p><p><br></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Self-Drive: Sometimes relying solely on public transportation has its limitations, so renting a car is also an option. However, San Francisco's downtown streets have many one-way roads and steep hills, so drive carefully.</p>
+If you visit during peak season, parking spaces at scenic areas will also be tight; allow extra time.</p><p><br></p><p>                                        External Transportation</p><p><br></p><p>                    - Airplane: San Francisco has three airports. San Francisco International Airport (SFO) is the main airport of San Francisco, located in southern San Francisco. Oakland International Airport (OAK) is on the east coast, spanning across the Bay Bridge. And Norman Y Mineta San Jose International Airport (SJC) is one hour's drive south of the city.</p><p><br></p><p>                                        Must-Visit Attractions</p><p><br></p><p>                                        Golden Gate Bridge</p><p><br></p><p>                    Introduction: Built with over 100,000 tons of steel, it is a landmark building for San Francisco and all of America, also a miracle in modern bridge engineering. The orange-red bridge spans the San Francisco Bay and the Golden Gate Strait, very magnificent and spectacular, often appearing as filming locations in movies and TV series.</p><p>Address: Golden Gate Bridge, San Francisco, CA, USA</p><p>Ticket Price: Free</p><p>Opening Hours: All day</p><p>Transportation: Take buses 2/4/8/10/18/24/27/38/44/54/56/58/70/72/72X/74/76/92/93/97/101/101X to the Golden Gate Bridge Toll Plaza stop.</p>
+<html><body>
+<p>Official Website: ***</p>
+<p><br></p>
+<p>                                        Fisherman&#39;s Wharf</p>
+<p><br></p>
+<p>                    Introduction: The name Fisherman&#39;s Wharf is household famous, extending from Ghirardelli Square to Pier 35 all fall within its scope. Among them, Pier 39 is the most lively, with various specialty shops, restaurants, street performances, you can watch sea lions, and enjoy distant views of Alcatraz Island, Golden Gate Bridge, and Bay Bridge scenery.</p>
+<p>Address: Fisherman&#39;s Wharf, Pier 39, San Francisco, CA 94133, America</p>
+<p>Ticket Price: Free</p>
+<p>Opening Hours: All Day</p>
+<p>Transportation: Take buses #2, #4, #8, #18, #24, #27, #38, #44, #54, #56, #58, #72, #74, #76 to Beach St &amp; Taylor St station, then walk 2 minutes. Or take the F Market light rail line to Beach St &amp; Stockton St station or The Embarcadero &amp; Stockton St station.</p>
+<p>Attraction Official Website: ***</p>
+<p><br></p>
+<p>                                        Nine Curves Flower Street</p>
+<p><br></p>
+<p>                    Introduction: Nine Curves Flower Street is one of the most winding streets in the world. With eight bends in a short stretch and greenery and flowers planted beside it, creating beautiful scenery, it has become a landmark of San Francisco.</p>
+</body></html>
+<p>From Flower Street's high vantage point, you can also see the Bay Bridge and Coit Tower in the distance, creating an incomparable view.</p><p>Address: Lombard Street, San Francisco, California</p><p>Ticket Price: Free</p><p>Opening Hours: All Day</p><p>Transportation: Take the Powell-Hyde Cable Car Line to Lombard St & Hyde St station</p><p>Attraction Official Website: ***</p><p><br></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Alcatraz Island</p><p><br></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Introduction: Alcatraz is a rocky 22-acre island. From the 1930s to the 60s, it served as a federal prison for housing serious criminals. In the 1970s, Alcatraz ended its prison life and was designated a National Historic Landmark of America in 1986. Today, the entire island has retained much of its original prison appearance; visitors can still see remnants of the cell blocks, restaurant, lighthouse, water tower, and warden's office from those days. It truly is an eerie yet essential stop on any San Francisco journey.</p><p>Address: Alcatraz Island San Francisco, CA</p><p>Ticket Price: Daytime rates - Adults $37.25, Youth $37.25, Seniors $35.25, Children $23 USD.</p>
+Nighttime rates: Adult $37, Youth $36, Senior $34.25, Child $21.75.</p><p>Opening hours: 8:45-21:25</p><p>Transportation: Take the ferry from San Francisco Ferry Building</p><p>Official website: ***</p><p><br></p><p>                                        Palace of Fine Arts</p><p><br></p><p>                    Description: The Palace of Fine Arts in San Francisco was originally built in 1915, with a century-old history. The main building features a circular hall, Roman-style dome paired with two rows of arched columns, adorned with delicate reliefs—grand and magnificent, elegant and refined, resembling ancient Roman palace ruins. In front lies a lake and green space where swans and ducks play together in the water, reminiscent of Greek European gardens. It's a popular leisure spot for San Francisco residents.</p><p>Address: 3301 Lyon St, San Francisco, CA 94123</p><p>Ticket price: Free</p><p>Opening hours: All day</p><p>Transportation: Take the PresidiGO bus to Crissy Field stop at Palace of Fine Arts</p><p>Official website: ***</p><p><br></p><p>                                        Golden Gate Park</p><p><br></p><p>                    Description: Golden Gate Park extends from the Pacific Ocean coastline where waves crash onto the shore all the way to downtown San Francisco. It is the world's largest man-made park and can be compared with New York's Central Park.</p>
+The park features a golf course, tennis courts, children's playground, museums, art galleries, and botanical gardens, making it an ideal destination for family leisure travel, with a genuine feeling of being part of American life.
+
+Address: Golden Gate Park, San Francisco, CA, USA
+
+Ticket Price: Free
+
+Opening Hours: All Day
+
+Transportation: Take buses 21 and 33 to Stanyan St & Hayes St stop
+
+Official Website: ***
+
+Twin Peaks
+
+Introduction: If you're looking for the best place to enjoy nighttime views of the entire San Francisco Bay Area, Twin Peaks is your ideal choice. These are two hills with an elevation of about 270 meters, and they are the only natural hills that remain in San Francisco. Driving along the winding mountain road all the way to the summit offers panoramic views of the entire city of San Francisco and the Golden Gate Bridge.
+
+Address: 501 Twin Peaks Blvd, San Francisco, CA 94114
+
+Ticket Price: Free
+
+Opening Hours: All Day
+
+Transportation: Take bus route 37 to Twin Peaks stop
+
+Official Website: ***
+
+Telegraph Hill/Coit Tower
+
+Introduction: If you want to see a panoramic view of San Francisco, besides Twin Peaks, there is another option - Coit Tower.
+<p>Coit Tower is located on Telegraph Hill with a height of 60m, in a very conspicuous position that can be seen from anywhere in San Francisco. The wide view from the top allows 360-degree views of downtown San Francisco and the bay scenery, as well as a distant view of the Golden Gate Bridge. This landmark building is also known as San Francisco's most meaningful public architecture.</p><p>Address: 1 Telegraph Hill Blvd, San Francisco, CA 94133</p><p>Ticket prices: Free admission, elevator to top $9 for adults, $2 for children</p><p>Opening hours: 10:00-17:00</p><p>Transportation: Take buses 2/4/8/18/27/24/38/44/54/58/72/74/76 to Sansome St & Lombard St station, walk 200m west along Lombard Street to arrive</p><p>Official website: ***</p><p><br></p><p>                                        Travel route recommendations</p><p><br></p><p>                                        One-day tour</p><p><br></p><p>                    Spend one day exploring San Francisco's classic landmarks and attractions, play from multiple angles, cannot be missed.</p>
+</p><p>Route 1: Union Square (30 minutes) - City Hall (30 minutes) - San Francisco Fisherman's Wharf (1 hour) - The Twisted Lanes (1 hour) - Palace of Fine Arts (1 hour) - Golden Gate Bridge (1 hour) - Twin Peaks (1 hour) - St. Mary's Cathedral (30 minutes)</p><p><br></p><p>                    Route 2: Palace of Fine Arts (1 hour) - Golden Gate Bridge (1 hour) - The Twisted Lanes (1 hour) - San Francisco Fisherman's Wharf (1 hour) - St. Peter and St. Paul Church (1 hour) - Alamo Square (1 hour) - San Francisco Beach (1 hour)</p><p><br></p><p>                                        Two-Day Itinerary</p><p><br></p><p>                    Spend two days to visit the 8 most famous attractions in San Francisco. Focus on one area route per day, saving time and energy.</p><p>DAY 1: San Francisco Fisherman's Wharf (1 hour) - Alcatraz Island (3 hours) - Palace of Fine Arts (1 hour) - Golden Gate Bridge (2 hours)</p><p>DAY 2: The Twisted Lanes (1 hour) - Telegraph Hill (2 hours) - Golden Gate Park (2 hours) - Twin Peaks (2 hours)</p><p><br></p><p>                                        Three-Day Itinerary</p><p><br></p><p>                    Spend three days to visit the 11 most famous attractions in San Francisco. The time arrangement is well-balanced, with one area route per day, making it efficient, energy-saving, and relaxing.
+<p>DAY1 Alcatraz Island (3 hours) - San Francisco Fisherman's Wharf (1 hour) - Palace of Fine Arts (2 hours) - Golden Gate Bridge (2 hours)</p><p>DAY2 Lombard Street (1 hour) - Telegraph Hill (2 hours) - Chinatown (2 hours) - Union Square (2 hours)</p><p>DAY3 San Francisco City Hall (1 hour) - Six Sisters Bridge (1 hour) - Golden Gate Park (2 hours) - Twin Peaks (2 hours) - Cliff House (1 hour)</p><p><br></p><p>Accommodation Recommendations</p><p><br></p><p>San Francisco is the birthplace of boutique hotels, each offering unique room styles. Rooms typically range from $100-$300 nightly, with an additional $35-$50 for parking. Most visitors prefer staying near Union Square for its convenient location and easy access to attractions. Some choose Fisherman's Wharf despite higher prices, drawn by the area's culinary scene and proximity to sites.</p><p><br></p><p>Food Recommendations</p><p><br></p><p>Crab House</p><p>Awarded recognition by Zagat as one of the best restaurants in Fisherman's Wharf, this establishment specializes in exceptional crab dishes that are both fresh and generously portioned. Key menu highlights include their signature "Killer Crab," sizzling crab claws, rich crab bisque, Crab Caesar salad, and crispy crab cakes.</p>
+</p><p>Address: 203 C Pier 39 San Francisco CA, 9413</p><p><br></p><p>Boudin Sourdough Factory</p><p>A local specialty of San Francisco mentioned in almost all travel guidebooks, truly a "star of the bread world." The most distinctive food is thick soup served in bowls made from their signature sourdough bread. Highly recommended online are the crab and chilled beef dishes. The bread is extremely fresh, all baked on-site, with crowds often gathered by the windows watching the process.</p><p>Address: 160 Jefferson St. Lower Level San Francisco, CA 94133</p><p><br></p><p>Cliff House</p><p>Perched on a cliff at the western edge of Ocean Beach in San Francisco, established in 1858, this is a unique scenic restaurant where diners can enjoy panoramic ocean views and historical landmarks.</p><p>Address: 1090 Point Lobos, San Francisco, CA 94121</p><p><br></p><p>Conclusion</p><p><br></p><p>If you have the opportunity to visit the US West Coast, you must not miss this leisurely and romantic city—San Francisco.
+<p>Hurry up and bring this guide along to experience the most authentic and comfortable San Francisco lifestyle!</p>
+        
+
+        <a class="backLink" href="list-1.html">← Back to Los Angeles</a>
+      </article>
+    </main>
+  </body>
+</html>

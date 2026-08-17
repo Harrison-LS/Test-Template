@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <title>Los Angeles 6 Flea Markets | From Ancient Coins to Trendy Fashion, You Can't Miss Them!</title>
+    <style>
+      :root {
+        --paper: #f5f1eb;
+        --ink: #163d36;
+        --body: #3f3a34;
+        --muted: #8a8379;
+        --line: #ddd5ca;
+        --accent: #d9782f;
+        --white: #fffaf4;
+        --shadow: 0 22px 70px rgba(28, 25, 20, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        line-height: 1.72;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .hero {
+        min-height: clamp(330px, 48vw, 560px);
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        padding: clamp(28px, 7vw, 70px) clamp(24px, 8vw, 76px);
+        background: #28463f;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.12)),
+          url("");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .heroInner {
+        position: relative;
+        width: min(900px, 100%);
+        color: #ffffff;
+      }
+
+      .heroLocation {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 24px;
+        color: rgba(255, 255, 255, 0.78);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .heroLocation svg {
+        width: 17px;
+        height: 17px;
+        color: #f0a45f;
+      }
+
+      h1 {
+        max-width: 880px;
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(30px, 4.8vw, 54px);
+        font-weight: 900;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .brief {
+        width: min(760px, 100%);
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 18px;
+        color: #5a5148;
+        font-size: clamp(17px, 1.9vw, 20px);
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.58;
+      }
+
+      .articleWrap {
+        width: min(900px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: clamp(42px, 6vw, 68px) 0 72px;
+      }
+
+      .content {
+        width: min(760px, 100%);
+        color: var(--body);
+        font-size: clamp(16px, 1.8vw, 18px);
+        line-height: 1.5;
+      }
+
+      .content p {
+        margin: 0 0 12px;
+      }
+
+      .content h2,
+      .content h3,
+      .content h4 {
+        margin: 46px 0 18px;
+        color: var(--ink);
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+
+      .content h2 {
+        font-size: clamp(28px, 4vw, 38px);
+      }
+
+      .content h3 {
+        font-size: clamp(23px, 3vw, 30px);
+      }
+
+      .content ul,
+      .content ol {
+        margin: 0 0 30px;
+        padding-left: 28px;
+      }
+
+      .content li {
+        margin: 8px 0;
+      }
+
+      .content blockquote {
+        margin: 34px 0;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 20px;
+        color: #5a5148;
+        font-style: italic;
+      }
+
+      .content img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 42px 0 12px;
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+      }
+
+      .content figure {
+        margin: 42px 0;
+      }
+
+      .content figure img {
+        margin: 0 0 12px;
+      }
+
+      .content figcaption {
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .backLink {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 46px;
+        border-top: 1px solid var(--line);
+        padding-top: 28px;
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.18em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .backLink:hover {
+        color: var(--accent);
+      }
+
+      @media (max-width: 720px) {
+        .hero {
+          min-height: 420px;
+          padding: 30px 24px;
+        }
+
+        .articleWrap {
+          width: min(100% - 28px, 900px);
+          padding-bottom: 48px;
+        }
+
+        .content {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="heroInner">
+        <p class="heroLocation">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+            />
+          </svg>
+          <span>Los Angeles</span>
+        </p>
+        <h1>Los Angeles 6 Flea Markets | From Ancient Coins to Trendy Fashion, You Can't Miss Them!</h1>
+      </div>
+    </header>
+
+    <main class="articleWrap">
+      
+
+      <article class="content">
+        
+          <p>Wandering around Los Angeles definitely means hitting some flea markets to find exquisite and fun vintage items.</p><p>Follow along as our little group explores the great flea markets Los Angeles has to offer.</p><p><br></p><p>1. Rose Bowl Flea Market</p><p>Located in artistic Pasadena, this is probably the most famous flea market in the LA area.</p><p>Surrounding a stadium that can hold 90,000 people, the entire market is divided into different sections offering a dazzling array of products with diverse styles. It takes quite a while to thoroughly explore just one section.</p><p><br></p><p>Address: 1001 Rose Bowl Dr, Pasadena, CA 91103</p><p>Hours: Second Sunday of each month</p><p>Tickets: Regular $9, Standard $12 (entry at 8am), Premium $15 (entry at 7am), VIP $20 (entry at 5am)</p><p>*Children under 12 enter free</p><p><br></p><p>Rose Bowl Flea Market</p><p><br></p><p>2. Artists &amp; Fleas</p><p>This flea market rose from fame in New York to Los Angeles, offering art pieces, clothing, accessories, furniture, and more. Many handmade items are personally crafted by local designers.</p><p>Next to the flea market are various mobile food carts where you can enjoy delicious food while shopping around.</p><p>Address: 1010 Abbot Kinney Blvd, Venice, CA 90291</p><p>Operating Hours: Every Saturday from Memorial Day (5/28) to Labor Day (9/1)</p><p>Admission: Free</p><p><br></p><p>Artists &amp; Fleas</p><p>3. Long Beach Antique Flea Market</p><p><br></p><p>As the flea market most loved by fashion-forward people, it showcases various exquisite vintage items—second-hand clothing or furniture. For example: wooden suitcases from the 1920s, vintage Model T cars, and punk-style jackets. You won&#39;t be disappointed if you come here to find treasures.</p><p>Address: 5000 E LewDavis St, Long Beach, CA 90808</p><p>Operating Hours: Third Sunday of each month</p><p>Admission: Regular ticket: $7, 6:30 AM – 2:00 PM; Early bird ticket: $12, 5:30 AM – 6:30 AM</p><p><br></p><p>Long Beach Antique Market</p><p>4.Melrose Trading Post</p><p>Located near Melrose&#39;s popular Instagrammable walls, this flea market is also beloved by many celebrities and influencers. BCBG&#39;s creative director Lubov Azria and fashionista Dana Goldberg are frequent visitors. Here you can find vintage items from around the world, plus there&#39;s live music and a food court on-site. It&#39;s perfect for a lazy Sunday morning to invite a few friends to browse together.</p><p><br></p><p>Address: 7850 Melrose Avenue, Los Angeles, CA 90046</p><p>Operating Hours: Every Sunday 9AM – 5PM</p><p>General Admission: $3</p><p><br></p><p>Melrose Sunday Flea Market</p><p><br></p><p>5.Santa Monica Airport Antiques &amp; Collectibles</p><p>This Westside market at Santa Monica Airport has earned a reputation as one of the top ten flea markets in America. This market is famous for selling vintage items, including paintings by local artists and old posters, plus mid-century vintage furniture, retro clothing, and more.</p><p>A good place for West Side shoppers to find bargains.</p><p>Address: 3050 Airport Ave, Santa Monica, CA 9040</p><p>Business Hours: First and fourth Sunday of each month</p><p>6. Silver Lake Art/Craft &amp; Vintage</p><p>As an independent flea market located on the playground of Micheltorena Elementary School, it allows East Side shoppers to conveniently find bargains too. Here you can not only find vintage items, but also many artworks from artists in the Silver Lake area and handcrafted goods by independent designers.</p><p>Address: 1511 Micheltorena Street, CA 90026</p><p>Business Hours: Second Saturday of each month, 10 AM – 4 PM</p><p><br></p><p>If you like us and don&#39;t know where to get the latest discount information, open your phone: WeChat search: ChiHuoXiaoFenDui ZhangShangDiTu. The entire US is at your fingertips!</p>
+        
+
+        <a class="backLink" href="list-1.html">← Back to Los Angeles</a>
+      </article>
+    </main>
+  </body>
+</html>

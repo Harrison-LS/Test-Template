@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Self-Driving Route Book, A Virtual Guide" />
+    <title>Ultimate San Francisco Self-Drive Route Guide – GPS Coordinates Navigate You Straight to the Parking Lot!</title>
+    <style>
+      :root {
+        --paper: #f5f1eb;
+        --ink: #163d36;
+        --body: #3f3a34;
+        --muted: #8a8379;
+        --line: #ddd5ca;
+        --accent: #d9782f;
+        --white: #fffaf4;
+        --shadow: 0 22px 70px rgba(28, 25, 20, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        line-height: 1.72;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .hero {
+        min-height: clamp(330px, 48vw, 560px);
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        padding: clamp(28px, 7vw, 70px) clamp(24px, 8vw, 76px);
+        background: #28463f;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.12)),
+          url("https://p1-q.mafengwo.net/s9/M00/FC/C3/wKgBs1gjAKaAWeZDAAKLfV2wSwk52.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F90");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .heroInner {
+        position: relative;
+        width: min(900px, 100%);
+        color: #ffffff;
+      }
+
+      .heroLocation {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 24px;
+        color: rgba(255, 255, 255, 0.78);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .heroLocation svg {
+        width: 17px;
+        height: 17px;
+        color: #f0a45f;
+      }
+
+      h1 {
+        max-width: 880px;
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(30px, 4.8vw, 54px);
+        font-weight: 900;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .brief {
+        width: min(760px, 100%);
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 18px;
+        color: #5a5148;
+        font-size: clamp(17px, 1.9vw, 20px);
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.58;
+      }
+
+      .articleWrap {
+        width: min(900px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: clamp(42px, 6vw, 68px) 0 72px;
+      }
+
+      .content {
+        width: min(760px, 100%);
+        color: var(--body);
+        font-size: clamp(16px, 1.8vw, 18px);
+        line-height: 1.5;
+      }
+
+      .content p {
+        margin: 0 0 0.5em;
+      }
+
+      .content h2,
+      .content h3,
+      .content h4 {
+        margin: 46px 0 18px;
+        color: var(--ink);
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+
+      .content h2 {
+        font-size: clamp(28px, 4vw, 38px);
+      }
+
+      .content h3 {
+        font-size: clamp(23px, 3vw, 30px);
+      }
+
+      .content ul,
+      .content ol {
+        margin: 0 0 30px;
+        padding-left: 28px;
+      }
+
+      .content li {
+        margin: 8px 0;
+      }
+
+      .content blockquote {
+        margin: 34px 0;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 20px;
+        color: #5a5148;
+        font-style: italic;
+      }
+
+      .content img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 42px 0 12px;
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+      }
+
+      .content figure {
+        margin: 42px 0;
+      }
+
+      .content figure img {
+        margin: 0 0 12px;
+      }
+
+      .content figcaption {
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .backLink {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 46px;
+        border-top: 1px solid var(--line);
+        padding-top: 28px;
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.18em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .backLink:hover {
+        color: var(--accent);
+      }
+
+      @media (max-width: 720px) {
+        .hero {
+          min-height: 420px;
+          padding: 30px 24px;
+        }
+
+        .articleWrap {
+          width: min(100% - 28px, 900px);
+          padding-bottom: 48px;
+        }
+
+        .content {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="heroInner">
+        <p class="heroLocation">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+            />
+          </svg>
+          <span>Los Angeles</span>
+        </p>
+        <h1>Ultimate San Francisco Self-Drive Route Guide – GPS Coordinates Navigate You Straight to the Parking Lot!</h1>
+      </div>
+    </header>
+
+    <main class="articleWrap">
+      
+      <p class="brief">Self-Driving Route Book, A Virtual Guide</p>
+      
+
+      <article class="content">
+        
+          <p>A self-driving road guide, a virtual tour guide</p><p><br></p><p>                    A professional self-driving road guide differs from travel tips; its purpose is not to spark everyone's interest in traveling, but to help you accurately find every attraction after arriving at your destination, how to plan your itinerary reasonably, know how to play here, where to eat, how to book various entertainment activities, and so on. Especially the first point - accurately finding every attraction you want to visit.</p><p>Students who frequently travel independently may have experienced this. Sometimes when you Google-search an address, it only provides a general location, but once there, how do you park? How do you find the specific entrance? It's not easy at all, especially in cities. For example, 5 years ago on my first self-driving trip to America, I used navigation to go to The Venetian Hotel in Las Vegas. This hotel is enormous and located near the bustling main street of Las Vegas. However, the navigation address based on the house number only brought you nearby; you could see the hotel but went around several times without finding the parking entrance. In the end, I illegally parked by the roadside, asked a security guard, and then learned how to drive to the front of the lobby. If you self-drive in America for many days, you'll often encounter such problems.</p><p>A self-driving road guide is like giving independent travelers a virtual tour guide that leads you to accurately locate every destination and reasonably plan your itinerary, making your independent travel simpler.</p><p>The following are excerpts from "70 Miles International Professional Self-Driving Road Guide - San Francisco Edition". I hope this helps with your itinerary.</p>
+</p><p><br></p><p>                                        How to enjoy San Francisco?</p><p><br></p><p>                    San Francisco is one of America's West Coast most beautiful cities with rich cultural atmosphere. There are many places worth visiting, mainly: Golden Gate Bridge, Nine-Bend Hill (Lombard Street), Fisherman's Wharf, Union Square, Chinatown, and Twin Peaks for panoramic views of the entire city. None take much time; a half day plus the morning of the second day is enough to complete them all.</p><p>For families with children, I recommend visiting Exploratorium museum, as it is one of America's better science and technology museums.</p><p>Downtown San Francisco isn't very large, comparable in size to a major county town in China, but city roads are complex with many steep hills. I suggest combining car driving, public transportation, and walking for touring. This city is quite small - only 4 kilometers from Fisherman's Wharf in the north to Union Square or City Hall in the south. The only attractions slightly farther away that aren't convenient by walking are Golden Gate Bridge and Twin Peaks.</p><p>South of Market Street, there are not many tourist destinations, and it's also not particularly safe, so I don't recommend going there.</p><p><br></p><p>                                        Best GPS coordinates for driving to Twin Peaks</p><p><br></p><p>                    Bird's-eye view of San Francisco from Twin Peaks is absolutely recommended.
+But here, there are occasional thieves around; be careful your car windows get smashed. If you only search for Twin Peaks in navigation, it will just take you to the vicinity: first, you might not find a good spot to see San Francisco's full view, and second, parking is too far away to keep an eye on your car.</p><p>I recommend not parking your car too far away; try to keep it within your line of sight. So I'm recommending a navigation address that is the best viewpoint, with parking right next to it.</p><p>Navigation address: Christmas Tree Point Rd, San Francisco, CA 94131</p><p>GPS coordinates: 37°45'17.0"N 122°26'47.4"W</p><p>Google Maps coordinates: 37.754720, -122.446487</p><p>Recommended visiting time: 30 minutes.</p><p><br></p><p>    Best navigation coordinates for self-driving to the Golden Gate Bridge</p><p><br></p><p>                The Golden Gate Bridge is an absolute must-see stop on a self-drive trip through Western America. There are many navigation points for it; if you only use Google Maps and search "Golden Gate Bridge," it will just take you onto the bridge itself, with no place to park.</p>
+We recommend you use the following navigation points:
+
+Navigation Address: Fort Point National Historic Site, Marine Drive, San Francisco, CA
+
+GPS Coordinates: 37°48&#39;37.3&quot;N 122°28&#39;35.4&quot;W
+
+Google Maps Coordinates for your phone: 37.810369, -122.476508
+
+Fort Point is located on the south side under the Golden Gate Bridge. The scenery here is excellent, and parking is free. After parking, you can take photos at the spot or walk to Torpedo Wharf for more photos, or follow the Battery Trail to walk up and visit the Golden Gate Bridge.
+
+Recommended visiting time: 1 hour.
+
+Tips:
+
+If you are a photography enthusiast, or want to drive across the Golden Gate Bridge, then we recommend you go to:
+
+Battery Spencer, Conzelman Road, Sausalito, CA, United States
+
+GPS Coordinates: 37°49&#39;46.6&quot;
+<p>N 122°29&#39;00.1&quot;W</p><p>Google Maps coordinates on mobile phone: 37.829611, -122.483351</p><p><br></p><p>However, exiting the city via Golden Gate Bridge is free, but returning to the city requires a $7.25 toll fee. The inconvenience is that there are no cash payment stations at the Golden Gate Bridge; they directly scan license plates for billing. Therefore, you need to prepay online in advance, or pay online within 48 hours after crossing the Golden Gate Bridge.</p><p>The method is as follows:</p><p>*** 1. Select: Pay with credit card (Pay Toll Now with a Credit Card)</p><p>2. Choose to pay in advance (Pay your Toll in Advance) or pay within 48 hours after passing through (Pay For a Recent Toll Crossing).</p><p>If payment is not made on time, the toll bill will be sent to your rental company, and they will pay it on your behalf (handling fees vary from $20-30).</p><p>When paying, please charge according to the rate for a 2-axis vehicle. You can also use credit card phone payment: (877) 229-8655.</p><p><br></p><p>Techniques for driving through Lombard Street in San Francisco</p><p><br></p><p>San Francisco is a hilly city, with over 40 small hills in the downtown area. Driving around San Francisco is very enjoyable, and of course, the most enjoyable experience is navigating the world&#39;s most winding street - Lombard Street.</p>
+</p><p><br></p><p>
+Nine Curves Flower Street is the section with the most curves on Lombard Street, which runs east-west across San Francisco, and is a one-way street from west to east. If you want to drive through this section of Nine Curves, it's difficult to search for only Lombard Street (navigation will default to bypassing this section). So what should you do?
+</p><p>
+You need to start from any point on the west side of Nine Curves street, and navigate to one of the following points: 37°48'07.9"N 122°25'07.4"W (37.802194, -122.418722) or 1025 Lombard St # 6, San Francisco, CA.
+</p><p>
+After driving through Nine Curves street, you can park in free roadside parking and get out briefly to take photos (roadside parking is limited, so spots aren't guaranteed, and there are reports of cars being damaged or items stolen while people were taking pictures).
+</p><p>
+Alternatively, after completing the drive through Nine Curves street, you don't need to park—just turn left directly to Fisherman's Wharf. That area has abundant parking options and is notably safer.
+</p><p><br></p><p>
+How to park at Fisherman's Wharf?
+</p><p><br></p><p>
+Recommended visit duration: 2-4 hours
+</p><p>
+If you're staying at a hotel in Fisherman's Wharf, simply park your car at the hotel and then walk around to explore.
+Parking at this hotel costs $50 per day including tax, which is indeed quite expensive. But it's convenient for those who want to drive around the American West Coast - besides here, there are basically no parking fees elsewhere. If you're not staying at this hotel, I recommend the following parking lot:
+
+Address: 400 North Point St, San Francisco, CA (Outdoor open-air parking lot, convenient for entry and exit, and very close to various attractions and restaurants at Fisherman's Wharf.)
+
+After parking, please pay at the automatic payment machine at the exit ($25 for all day), cash or card accepted. After paying, be sure to place the receipt on your car's windshield so the parking attendant can check if you've paid. If not paid, the car will be towed away.
+
+Parking here allows you to walk around various places at Fisherman's Wharf.
+
+For exploring Fisherman's Wharf, I recommend first finding the large crab sign of Fisherman's Wharf and taking a photo to mark it.
+
+This sign is located at the intersection of Jefferson St and Taylor St, near Pier 43. The bustling area of Fisherman's Wharf spans primarily from Pier 43 to Pier 39. This area features numerous renowned seafood restaurants, night markets, shops, bars, and street performer shows.
+
+Here are some popular restaurants that locals recommend:
+
+The fan favorite at Fisherman's Wharf is the Crab House, which specializes in a variety of crab dishes. Their signature offerings include the famous "Killer Crab," sizzling crab legs, rich crab bisque, decadent crab Caesar salad, and delicate crab cakes, among others.
+<p>For groups of 4 or more, recommend ordering a Crab Feast!</p><p>Location: 2nd floor on the west side of Pier 39</p><p>Address: 203 Pier 39 Concourse, San Francisco, CA 94133</p><p>Phone: 1 415-434-2722</p><p>Hours: 11:30–22:00</p><p>Reservations: ***</p><p>Menu: ***</p><p>Average cost per person: $40</p><p><br></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pier 39 [Boudin Sourdough Factory]:b&gt;A famous restaurant known by almost everyone in America. Besides sourdough bread, here you can also find local San Francisco specialties like Clam Chowder and Beef Chili, etc. Friends who love trying new things may come to try (some people really like it, some cannot get used to it~~).</p><p>Address: 2890 Taylor St, San Francisco, CA 94133</p><p>Phone: 415- 776-1849</p><p>Hours: 11:00am – 8:00pm</p><p><br></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If you have extra time, you can take the [Red and White Fleet] tour boat, which will take you from Fisherman's Wharf, pass Alcatraz Island to under the Golden Gate Bridge, then return to Fisherman's Wharf. The entire journey takes about 1 hour.
+Along the way you can admire beautiful San Francisco Bay Area architecture. The boat features Chinese audio narration providing detailed insights into San Francisco's cultural history and major landmarks visible along the route.</p><p>Board at Pier 43, where tickets are also sold. Prices are approximately $25 USD, with three routes available to choose from.</p><p><br></p><p>Walking + Bus Tour of San Francisco City Center (approximately 3-4 hours)</p><p><br></p><p>Walking, bus, or streetcar: First, you can slow down and carefully savor the city's charm; second, it eliminates the hassle of driving through complex areas.</p><p>Here is my recommended walking tour route:</p><p>Fisherman's Wharf as the starting point, then visit the Nine-Bend Flower Street, Washington Square with St. Paul Peter Church, Pan American Pyramid, Exploratorium Museum (requires 2-3 hours; if you plan to leave San Francisco by noon, this may not be ideal), Ferry Building, San Francisco CBD, Chinatown, Union Square, Macy's Department Store, Apple Store, streetcar station (where you can take a streetcar directly back to Fisherman's Wharf), City Hall, and finally return to Fisherman's Wharf via bus route 47. This forms a complete loop, allowing flexibility to start from any point.</p><p><br></p><p>Where to stay in San Francisco?</p>
+How to choose a hotel?</p><p><br></p><p>                    San Francisco hotels have the highest average prices in the world. Off-season at 1300 yuan per night, peak season at 2500 yuan per night, still for ordinary 3-4 star level accommodations. Parking is also extra expensive, 25 US dollars - 50 US dollars per night. If your budget and time are not very flexible, staying here for one night would be enough.</p><p>San Francisco's first choice for accommodation is Fisherman's Wharf, right outside you have the seaside and busy shopping district. Fisherman's Wharf and Nine Bends Flower Street are both here. When playing around, no need to drive; walking, cable cars or buses will handle it because the city is so small. This area is also the safest zone (San Francisco overall isn't chaotic, but there are often cases of thieves smashing car windows and stealing things). The disadvantage of staying at Fisherman's Wharf is that it's expensive.</p><p>Another recommended place to stay is near Union Square, but don't go south of Market Street. Hotel prices here, compared to Fisherman's Wharf, are slightly cheaper, convenient for going everywhere. Surrounded by shopping malls and stores, Chinatown is also nearby.</p><p>Then there's accommodation near San Francisco Airport. First, the prices are much lower with more choices. Getting to downtown takes about 30 minutes of driving time, parking usually doesn't cost anything, especially convenient for friends whose flights arrive in the evening. When going downtown for fun, park your car at Fisherman's Wharf and then walk or take buses around, completely no problem. There are also shopping malls, restaurants, and large supermarkets nearby.</p><p><br></p><p>                    Tips:</p><p>                    Personally not recommending staying in Oakland next to San Francisco; that area is too chaotic.</p>
+</p><p><br></p><p>                    If staying in San Francisco for 2 nights, you can consider visiting Stanford University and Silicon Valley or going to Napa wineries in the north. Due to space limitations, for detailed navigation addresses, coordinates, panoramic reference images, parking spots, restaurant recommendations, hiking routes, etc., related to Stanford University and Silicon Valley, please refer to Seventy-Mile International Driving Professional Route Guide.</p><p><br></p><p>                                US West Coast 16-day 14-night Group Tour Self-driving (California Highway One + Yellowstone National Park + Arches National Park + Grand Canyon + Antelope Valley + Route 66 + San Francisco + Las Vegas + Los Angeles)</p><p>                                 Huge SUV/ Professional Self-driving Guide / Boutique Small Fleet / Flexible Flight Booking Available/</p><p><br></p><p>                                US 16-day 14-night Independent Travel Customization - Road and Beach Cruise (Highway One + Yellowstone National Park + Magical Antelope Valley + Hollywood Studios + San Francisco + Stanford University + Salt Lake City + Santa Barbara + Las Vegas + Bryce Canyon + Arches)</p><p>                                 Online Guide / Transparent Pricing / Custom Professional Route Book / Includes Flexible Flights/</p>
+        
+
+        <a class="backLink" href="list-1.html">← Back to Los Angeles</a>
+      </article>
+    </main>
+  </body>
+</html>

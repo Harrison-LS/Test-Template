@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <title>Where to go this weekend? A roundup of upcoming events around Los Angeles, California</title>
+    <style>
+      :root {
+        --paper: #f5f1eb;
+        --ink: #163d36;
+        --body: #3f3a34;
+        --muted: #8a8379;
+        --line: #ddd5ca;
+        --accent: #d9782f;
+        --white: #fffaf4;
+        --shadow: 0 22px 70px rgba(28, 25, 20, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        line-height: 1.72;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .hero {
+        min-height: clamp(330px, 48vw, 560px);
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        padding: clamp(28px, 7vw, 70px) clamp(24px, 8vw, 76px);
+        background: #28463f;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.12)),
+          url("");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .heroInner {
+        position: relative;
+        width: min(900px, 100%);
+        color: #ffffff;
+      }
+
+      .heroLocation {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 24px;
+        color: rgba(255, 255, 255, 0.78);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .heroLocation svg {
+        width: 17px;
+        height: 17px;
+        color: #f0a45f;
+      }
+
+      h1 {
+        max-width: 880px;
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(30px, 4.8vw, 54px);
+        font-weight: 900;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .brief {
+        width: min(760px, 100%);
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 18px;
+        color: #5a5148;
+        font-size: clamp(17px, 1.9vw, 20px);
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.58;
+      }
+
+      .articleWrap {
+        width: min(900px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: clamp(42px, 6vw, 68px) 0 72px;
+      }
+
+      .content {
+        width: min(760px, 100%);
+        color: var(--body);
+        font-size: clamp(16px, 1.8vw, 18px);
+        line-height: 1.5;
+      }
+
+      .content p {
+        margin: 0 0 12px;
+      }
+
+      .content h2,
+      .content h3,
+      .content h4 {
+        margin: 46px 0 18px;
+        color: var(--ink);
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+
+      .content h2 {
+        font-size: clamp(28px, 4vw, 38px);
+      }
+
+      .content h3 {
+        font-size: clamp(23px, 3vw, 30px);
+      }
+
+      .content ul,
+      .content ol {
+        margin: 0 0 30px;
+        padding-left: 28px;
+      }
+
+      .content li {
+        margin: 8px 0;
+      }
+
+      .content blockquote {
+        margin: 34px 0;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 20px;
+        color: #5a5148;
+        font-style: italic;
+      }
+
+      .content img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 42px 0 12px;
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+      }
+
+      .content figure {
+        margin: 42px 0;
+      }
+
+      .content figure img {
+        margin: 0 0 12px;
+      }
+
+      .content figcaption {
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .backLink {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 46px;
+        border-top: 1px solid var(--line);
+        padding-top: 28px;
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.18em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .backLink:hover {
+        color: var(--accent);
+      }
+
+      @media (max-width: 720px) {
+        .hero {
+          min-height: 420px;
+          padding: 30px 24px;
+        }
+
+        .articleWrap {
+          width: min(100% - 28px, 900px);
+          padding-bottom: 48px;
+        }
+
+        .content {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="heroInner">
+        <p class="heroLocation">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+            />
+          </svg>
+          <span>Los Angeles</span>
+        </p>
+        <h1>Where to go this weekend? A roundup of upcoming events around Los Angeles, California</h1>
+      </div>
+    </header>
+
+    <main class="articleWrap">
+      
+
+      <article class="content">
+        
+          <p>LA Art Show | Los Angeles Art Exhibition</p><p>LA Art Show</p><p>The grandest art exhibition in all of Los Angeles is the annual LA Art Show, where visitors can appreciate contemporary, modern, historical, and traditional artworks. Whether you know a little about art or not, I&#39;m sure there will be pieces that move you here. Last year, the art show attracted nearly 70,000 participants, covering an area of 150,000 square feet. Single-day tickets are $30, four-day passes are $60, and VIP opening night tickets are $200.</p><p>Specific schedule:</p><p>January 23: 7-11pm</p><p>January 24-26: 11am-7pm</p><p>January 27: 11am-5pm</p><p>Address: Los Angeles Convention Center</p><p>1201 South Figueroa Street, West Hall, CA, 90015</p><p><br></p><p>A Blessing for Photography Enthusiasts | Women of Vision | Limited-Time Photography Exhibition</p><p>Forest Lawn Museum</p><p>Forest Lawn Museum presents the Women of Vision limited-time photography exhibition, featuring nearly a hundred works from eleven award-winning National Geographic female photographers.</p><p>This exhibition gives you a unique opportunity to discover the stories behind photographers&#39; lenses and pay tribute to the pioneering female photographers whose vision and ambition have reshaped photography. The show will feature nearly 100 photographs, including evocative portraits of distant and unknown cultures; striking conceptual themes such as memory and adolescent brain chemistry; and powerful works addressing social issues like child marriage and contemporary slavery in the twenty-first century. Additionally, the exhibition reveals how National Geographic&#39;s photo editors collaborate closely with photographers throughout their creative process. On-site video clips filmed from a first-person perspective vividly highlight each photographer&#39;s unique style, passion, and masterful techniques.</p><p><br></p><p>Date: Jan 09, 2019 – Apr 7, 2019</p><p>Address: 1712 S. Glendale Avenue, Glendale, California</p><p><br></p><p>Disneyland Lunar New Year - Disneyland Chinese New Year Celebration</p><p><br></p><p>Disneyland hosts a charming Chinese New Year celebration every year, and this years event is happening earlier than usual. In previous years, the park features many beloved characters dressed in traditional Chinese attire to entertain visitors throughout the festivities.</p><p>This year Mulan has also prepared special performances for everyone to enjoy, along with photo opportunities with Mulan herself. There will be exciting highlights including special drumming performances, Asian music shows, marching band performances, and delicious Asian cuisine you must not miss. A night of revelry awaits you~</p><p><br></p><p>Circus Vargas | Circus Performance</p><p>Circus Vargas</p><p>Circus Vargas is the most traditional and classic circus, beloved by both children and adults alike. Don&#39;t think that because it&#39;s called a circus there are tigers and lions; in fact, this circus features no animals at all—only professional performers showcasing high-difficulty acrobatic acts for everyone. This year&#39;s theme is &quot;The Greatest of Ease,&quot; with incredible acrobatics sure to leave you amazed. During the performance, the actors will interact with children in the audience, making it thoroughly entertaining~</p><p><br></p><p>Time: Jan 17 – Feb 3</p><p>Address: 777 N Front St, Burbank, CA 91502</p><p><br></p><p>Fine Wines | LA Wine Festival</p><p>LA Wine Festival</p><p>If you are a wine enthusiast, then this is your lucky chance!</p><p>Los Angeles Wine Festival will be held at Union Station - isn&#39;t that fitting with the classic and elegant impression people associate with wine? This event features unique selections from over 50 California local and international wineries, offering many types of wine you may not have tasted before. There are also food trucks and live music to add entertainment.</p><p><br></p><p>Time: Saturday, January 26, 2019, 5:00 PM – 9:00 PM PST</p><p>Address: Union Station, 800 North Alameda Street, Los Angeles, CA 90012</p>
+        
+
+        <a class="backLink" href="list-1.html">← Back to Los Angeles</a>
+      </article>
+    </main>
+  </body>
+</html>

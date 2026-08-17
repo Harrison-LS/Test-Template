@@ -1,0 +1,861 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="City of Angels"
+    />
+    <title>Los Angeles</title>
+    <style>
+      :root {
+        --paper: #f5f1eb;
+        --ink: #163d36;
+        --body: #5d5a54;
+        --muted: #8a8379;
+        --line: #ddd5ca;
+        --accent: #d9782f;
+        --white: #fffaf4;
+        --text-width: 720px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        line-height: 1.7;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .page {
+        width: min(900px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 10px 0 40px;
+      }
+
+      .hero {
+        min-height: clamp(180px, 29vw, 260px);
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        border-radius: 12px;
+        padding: clamp(22px, 4vw, 38px);
+        background: #28463f;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.05) 64%),
+          url("https://p1-q.mafengwo.net/s9/M00/A8/87/wKgBs1eSKJmAJrPTABckyB0Qyd851.jpeg?imageView2%2F2%2Fw%2F680%2Fq%2F90");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .heroTitle {
+        position: relative;
+        display: flex;
+        align-items: baseline;
+        gap: 10px;
+        color: #ffffff;
+      }
+
+      .heroTitle h1 {
+        margin: 0;
+        font-size: clamp(30px, 5vw, 46px);
+        font-weight: 900;
+        line-height: 1;
+        letter-spacing: 0;
+      }
+
+      .heroTitle span {
+        color: rgba(255, 255, 255, 0.64);
+        font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+        font-size: clamp(16px, 2vw, 24px);
+        font-weight: 700;
+      }
+
+      .intro {
+        margin: 34px 0 54px;
+        color: #4f4a43;
+        font-size: clamp(17px, 2vw, 20px);
+        line-height: 1.8;
+      }
+
+      .sectionTitle {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+        gap: 14px;
+        margin: 0 0 44px;
+        color: var(--muted);
+        font-size: 14px;
+        letter-spacing: 0.16em;
+      }
+
+      .sectionTitle::before,
+      .sectionTitle::after {
+        content: "";
+        height: 1px;
+        background: var(--line);
+      }
+
+      .articleList {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .articleItem {
+        display: grid;
+        grid-template-columns: minmax(0, var(--text-width)) 140px;
+        gap: 28px;
+        justify-content: space-between;
+        border-bottom: 1px solid var(--line);
+        padding: 0 0 34px;
+        margin-bottom: 34px;
+      }
+
+      .articleItem:not(.hasImage) {
+        grid-template-columns: minmax(0, var(--text-width));
+        justify-content: start;
+      }
+
+      .articleBody {
+        width: min(100%, var(--text-width));
+        border-left: 2px solid transparent;
+        padding-left: 14px;
+        transform: translateX(0);
+        transition:
+          border-color 160ms ease,
+          transform 180ms ease;
+      }
+
+      .articleItem:hover .articleBody {
+        border-left-color: var(--accent);
+        transform: translateX(8px);
+      }
+
+      .meta {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin: 0 0 10px;
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+      }
+
+      .pin {
+        color: var(--accent);
+      }
+
+      .articleTitle {
+        width: 100%;
+        margin: 0 0 10px;
+        color: var(--ink);
+        font-size: clamp(21px, 2.5vw, 26px);
+        font-weight: 900;
+        line-height: 1.34;
+        letter-spacing: 0;
+      }
+
+      .brief {
+        width: 100%;
+        max-width: none;
+        margin: 0 0 14px;
+        color: var(--body);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        font-size: 16px;
+        line-height: 1.72;
+      }
+
+      .readMore {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        color: var(--accent);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 800;
+      }
+
+      .articleImage {
+        width: 140px;
+        aspect-ratio: 16 / 10;
+        align-self: center;
+        overflow: hidden;
+        border-radius: 9px;
+        background: var(--line);
+      }
+
+      .articleImage img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+      }
+
+      .emptyState {
+        border: 1px dashed var(--line);
+        border-radius: 10px;
+        padding: 42px 20px;
+        color: var(--muted);
+        text-align: center;
+      }
+
+      .pagination {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        margin-top: 12px;
+      }
+
+      .pageLink {
+        min-width: 96px;
+        min-height: 40px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 0 16px;
+        background: var(--white);
+        color: var(--ink);
+        font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+        font-size: 14px;
+        font-weight: 800;
+      }
+
+      .pageLink[aria-disabled="true"] {
+        pointer-events: none;
+        opacity: 0.45;
+      }
+
+      @media (max-width: 720px) {
+        .page {
+          width: min(100% - 24px, 900px);
+          padding-top: 8px;
+        }
+
+        .hero {
+          min-height: 220px;
+        }
+
+        .articleItem,
+        .articleItem.hasImage {
+          grid-template-columns: minmax(0, 1fr);
+          gap: 16px;
+        }
+
+        .articleImage {
+          width: 100%;
+          max-width: 260px;
+          justify-self: start;
+        }
+
+        .sectionTitle {
+          margin-bottom: 30px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <section class="hero">
+        <div class="heroTitle">
+          <h1>Los Angeles</h1>
+        </div>
+      </section>
+
+      
+      <p class="intro">
+        Los Angeles is located on the west coast of the United States, with a city proper population of approximately 3.8 million people, making it the second-largest city in the US (after New York). It has a typical Mediterranean climate with minimal temperature variation throughout the year, rainy winters and dry summers; spring and autumn are best for tourism. The English name is Los Angeles, abbreviated as LA. The official nickname is "City of Angels," while the colloquial term is Sank Village.
+      </p>
+      
+
+      <div class="sectionTitle"></div>
+
+      <section class="articleList" aria-label="article-list">
+        
+        
+        <article class="articleItem hasImage">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="who-says-you-have-to-drive-yourself-see-how-to-take-public.html">Who says you have to drive yourself? See how to take public transportation to Yosemite!</a>
+            </h2>
+
+            
+            <p class="brief">Why choose public transportation?</p>
+            
+
+          </div>
+
+          
+          <a class="articleImage" href="who-says-you-have-to-drive-yourself-see-how-to-take-public.html" aria-label="Who says you have to drive yourself? See how to take public transportation to Yosemite!">
+            <img src="https://p1-q.mafengwo.net/s11/M00/DA/2C/wKgBEFr1V9CAKcYiABbc3GLlfA421.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F90" alt="Who says you have to drive yourself? See how to take public transportation to Yosemite!" />
+          </a>
+          
+        </article>
+        
+        
+        <article class="articleItem hasImage">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="its-already-2018-are-you-still-planning-to-line-up-in-long.html">It's already 2018, are you still planning to line up in long queues for 'Black Friday'?</a>
+            </h2>
+
+            
+            <p class="brief">Preface</p>
+            
+
+          </div>
+
+          
+          <a class="articleImage" href="its-already-2018-are-you-still-planning-to-line-up-in-long.html" aria-label="It's already 2018, are you still planning to line up in long queues for 'Black Friday'?">
+            <img src="https://p1-q.mafengwo.net/s12/M00/1A/D8/wKgED1vpUP-AUrmeAAdFeJtNGpY29.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F90" alt="It's already 2018, are you still planning to line up in long queues for 'Black Friday'?" />
+          </a>
+          
+        </article>
+        
+        
+        <article class="articleItem hasImage">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="san-francisco-travel-guide-public-transportation-guide.html">San Francisco Travel Guide: Public Transportation Guide</a>
+            </h2>
+
+            
+            <p class="brief">Muni Bus</p>
+            
+
+          </div>
+
+          
+          <a class="articleImage" href="san-francisco-travel-guide-public-transportation-guide.html" aria-label="San Francisco Travel Guide: Public Transportation Guide">
+            <img src="https://b1-q.mafengwo.net/s12/M00/C9/E8/wKgED1uM452AbeoQAAD1pWKK2uo91.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F90" alt="San Francisco Travel Guide: Public Transportation Guide" />
+          </a>
+          
+        </article>
+        
+        
+        <article class="articleItem hasImage">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="explore-san-francisco-find-small-joys-in-rainy-days.html"># Explore San Francisco | Find Small Joys in Rainy Days</a>
+            </h2>
+
+            
+            <p class="brief">Tasty Food Tasting Group</p>
+            
+
+          </div>
+
+          
+          <a class="articleImage" href="explore-san-francisco-find-small-joys-in-rainy-days.html" aria-label="# Explore San Francisco | Find Small Joys in Rainy Days">
+            <img src="https://p1-q.mafengwo.net/s15/M00/C5/6A/CoUBGV5U5kyAAB8eAAJopVcQH3Y17.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F90" alt="# Explore San Francisco | Find Small Joys in Rainy Days" />
+          </a>
+          
+        </article>
+        
+        
+        <article class="articleItem hasImage">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="guide-three-days-two-nights-in-napa-valley-lets-go.html">Guide | Three Days Two Nights in Napa Valley, Let's Go!</a>
+            </h2>
+
+            
+            <p class="brief">Pre-trip Tips</p>
+            
+
+          </div>
+
+          
+          <a class="articleImage" href="guide-three-days-two-nights-in-napa-valley-lets-go.html" aria-label="Guide | Three Days Two Nights in Napa Valley, Let's Go!">
+            <img src="https://p1-q.mafengwo.net/s12/M00/E9/E9/wKgED1wgku2ANE3rAARr4VJYqlU40.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F90" alt="Guide | Three Days Two Nights in Napa Valley, Let's Go!" />
+          </a>
+          
+        </article>
+        
+        
+        <article class="articleItem hasImage">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="top-experience-recommendations-for-union-square-san-francisco-and-surrounding-areas.html">Top Experience Recommendations for Union Square San Francisco and Surrounding Areas</a>
+            </h2>
+
+            
+            <p class="brief">MOIC Ice Cream Museum</p>
+            
+
+          </div>
+
+          
+          <a class="articleImage" href="top-experience-recommendations-for-union-square-san-francisco-and-surrounding-areas.html" aria-label="Top Experience Recommendations for Union Square San Francisco and Surrounding Areas">
+            <img src="https://p1-q.mafengwo.net/s13/M00/04/93/wKgEaVxtI4CABlPTAAIcXOugo9Q50.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F90" alt="Top Experience Recommendations for Union Square San Francisco and Surrounding Areas" />
+          </a>
+          
+        </article>
+        
+        
+        <article class="articleItem hasImage">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="the-bay-areas-hottest-color-factory-is-now-open.html">The Bay Area's hottest Color Factory is now open!</a>
+            </h2>
+
+            
+            <p class="brief">Buy tickets</p>
+            
+
+          </div>
+
+          
+          <a class="articleImage" href="the-bay-areas-hottest-color-factory-is-now-open.html" aria-label="The Bay Area's hottest Color Factory is now open!">
+            <img src="https://p1-q.mafengwo.net/s11/M00/53/3E/wKgBEFsnKhWAE9fAAAIauT2MuzM49.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F90" alt="The Bay Area's hottest Color Factory is now open!" />
+          </a>
+          
+        </article>
+        
+        
+        <article class="articleItem hasImage">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="guide-mastering-14-extraordinary-festivals-around-the-world.html">Guide | Mastering 14 Extraordinary Festivals Around the World</a>
+            </h2>
+
+            
+            <p class="brief">1.January</p>
+            
+
+          </div>
+
+          
+          <a class="articleImage" href="guide-mastering-14-extraordinary-festivals-around-the-world.html" aria-label="Guide | Mastering 14 Extraordinary Festivals Around the World">
+            <img src="https://p1-q.mafengwo.net/s11/M00/D7/54/wKgBEFqryTqAWnVBAAf4wrNI2js81.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F90" alt="Guide | Mastering 14 Extraordinary Festivals Around the World" />
+          </a>
+          
+        </article>
+        
+        
+        <article class="articleItem hasImage">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="first-time-usa-must-see-summary-how-to-film-yellowstone-james-favorite-american.html">First Time USA Must-See Summary | How to Film Yellowstone - James' Favorite American Drama ⛹</a>
+            </h2>
+
+            
+            <p class="brief">1. For your first trip to America, should you choose the East Coast or West Coast?</p>
+            
+
+          </div>
+
+          
+          <a class="articleImage" href="first-time-usa-must-see-summary-how-to-film-yellowstone-james-favorite-american.html" aria-label="First Time USA Must-See Summary | How to Film Yellowstone - James' Favorite American Drama ⛹">
+            <img src="https://p1-q.mafengwo.net/s14/M00/8D/37/wKgE2l1CzrSABdtQAAJb56FbP6800.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F90" alt="First Time USA Must-See Summary | How to Film Yellowstone - James' Favorite American Drama ⛹" />
+          </a>
+          
+        </article>
+        
+        
+        <article class="articleItem hasImage">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="san-francisco-bay-area-fillmore-shopping-guide.html">San Francisco Bay Area | Fillmore Shopping Guide</a>
+            </h2>
+
+            
+            <p class="brief">French patisserie B.</p>
+            
+
+          </div>
+
+          
+          <a class="articleImage" href="san-francisco-bay-area-fillmore-shopping-guide.html" aria-label="San Francisco Bay Area | Fillmore Shopping Guide">
+            <img src="https://p1-q.mafengwo.net/s15/M00/1C/97/CoUBGV2ygpiADRCJAAE74AOeMbo36.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F90" alt="San Francisco Bay Area | Fillmore Shopping Guide" />
+          </a>
+          
+        </article>
+        
+        
+        <article class="articleItem hasImage">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="californias-highway-1-is-now-completely-reopened-its-time-to-visit.html">California's Highway 1 is now completely reopened. It's time to visit.</a>
+            </h2>
+
+            
+            <p class="brief">Monterrey | Indulgent Comfort, Freedom — Explore the Unknown</p>
+            
+
+          </div>
+
+          
+          <a class="articleImage" href="californias-highway-1-is-now-completely-reopened-its-time-to-visit.html" aria-label="California's Highway 1 is now completely reopened. It's time to visit.">
+            <img src="https://p1-q.mafengwo.net/s12/M00/EB/FA/wKgED1vZXPSAWyXtAAJPHg-EY8E10.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F90" alt="California's Highway 1 is now completely reopened. It's time to visit." />
+          </a>
+          
+        </article>
+        
+        
+        <article class="articleItem hasImage">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="explore-san-francisco-like-a-local-discover-these-off-the-beaten-path-spots.html">Explore San Francisco like a local—discover these off-the-beaten-path spots.</a>
+            </h2>
+
+            
+            <p class="brief">Cliff Lighthouse and Stunning Bird Island Reefs</p>
+            
+
+          </div>
+
+          
+          <a class="articleImage" href="explore-san-francisco-like-a-local-discover-these-off-the-beaten-path-spots.html" aria-label="Explore San Francisco like a local—discover these off-the-beaten-path spots.">
+            <img src="https://p1-q.mafengwo.net/s10/M00/1D/E0/wKgBZ1mv1keATmLLAAHOM963pt400.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F90" alt="Explore San Francisco like a local—discover these off-the-beaten-path spots." />
+          </a>
+          
+        </article>
+        
+        
+        <article class="articleItem hasImage">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="capture-the-golden-gate-bridge-in-this-style-and-take-center-stage.html">Capture the Golden Gate Bridge in this style and take center stage on your social media!</a>
+            </h2>
+
+            
+            <p class="brief">First form: Presidio Park, walk or ride to unlock the Golden Gate</p>
+            
+
+          </div>
+
+          
+          <a class="articleImage" href="capture-the-golden-gate-bridge-in-this-style-and-take-center-stage.html" aria-label="Capture the Golden Gate Bridge in this style and take center stage on your social media!">
+            <img src="https://p1-q.mafengwo.net/s11/M00/DB/75/wKgBEFtoF5SAf1u1AAO1VCqYGSA22.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F90" alt="Capture the Golden Gate Bridge in this style and take center stage on your social media!" />
+          </a>
+          
+        </article>
+        
+        
+        <article class="articleItem hasImage">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="san-francisco-alcatraz-island-cant-get-tickets-but-really-want-to-go.html">San Francisco Alcatraz Island | Can't Get Tickets But Really Want To Go - What Should I Do?</a>
+            </h2>
+
+            
+            <p class="brief">Legendary Demon Island</p>
+            
+
+          </div>
+
+          
+          <a class="articleImage" href="san-francisco-alcatraz-island-cant-get-tickets-but-really-want-to-go.html" aria-label="San Francisco Alcatraz Island | Can't Get Tickets But Really Want To Go - What Should I Do?">
+            <img src="https://p1-q.mafengwo.net/s10/M00/D1/21/wKgBZ1mvcx2AGoV_AAKyU2NT1_k61.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F90" alt="San Francisco Alcatraz Island | Can't Get Tickets But Really Want To Go - What Should I Do?" />
+          </a>
+          
+        </article>
+        
+        
+        <article class="articleItem hasImage">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="only-by-visiting-san-francisco-can-you-truly-understand-americas-west-coast.html">Only by visiting San Francisco can you truly understand America's West Coast.</a>
+            </h2>
+
+            
+            <p class="brief">PLAN A: Wasting a Day at the Museum & Bookstore</p>
+            
+
+          </div>
+
+          
+          <a class="articleImage" href="only-by-visiting-san-francisco-can-you-truly-understand-americas-west-coast.html" aria-label="Only by visiting San Francisco can you truly understand America's West Coast.">
+            <img src="https://p1-q.mafengwo.net/s13/M00/A9/4F/wKgEaVy-n9-AKaBaAAHTnVxp-MU51.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F90" alt="Only by visiting San Francisco can you truly understand America's West Coast." />
+          </a>
+          
+        </article>
+        
+        
+        <article class="articleItem hasImage">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="let-exquisite-lighting-art-brighten-up-your-moments.html">Let exquisite lighting art brighten up your moments!</a>
+            </h2>
+
+            
+            <p class="brief">The Bay Lights</p>
+            
+
+          </div>
+
+          
+          <a class="articleImage" href="let-exquisite-lighting-art-brighten-up-your-moments.html" aria-label="Let exquisite lighting art brighten up your moments!">
+            <img src="https://p1-q.mafengwo.net/s15/M00/A0/08/CoUBGV4mls-AcHviAAM0AcJMgEk64.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F90" alt="Let exquisite lighting art brighten up your moments!" />
+          </a>
+          
+        </article>
+        
+        
+        <article class="articleItem hasImage">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="san-francisco-travel-shopping-guide.html">San Francisco Travel & Shopping Guide</a>
+            </h2>
+
+            
+            <p class="brief">Large Shopping Malls Section</p>
+            
+
+          </div>
+
+          
+          <a class="articleImage" href="san-francisco-travel-shopping-guide.html" aria-label="San Francisco Travel & Shopping Guide">
+            <img src="https://p1-q.mafengwo.net/s14/M00/06/D2/wKgE2l1syWKAV_y0AAxLDq6Ee-Q64.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F90" alt="San Francisco Travel & Shopping Guide" />
+          </a>
+          
+        </article>
+        
+        
+        <article class="articleItem hasImage">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="h2-four-must-visit-museums-in-san-francisco-h2.html"><h2>Four Must-Visit Museums in San Francisco</h2></a>
+            </h2>
+
+            
+            <p class="brief">California Science Museum</p>
+            
+
+          </div>
+
+          
+          <a class="articleImage" href="h2-four-must-visit-museums-in-san-francisco-h2.html" aria-label="<h2>Four Must-Visit Museums in San Francisco</h2>">
+            <img src="https://p1-q.mafengwo.net/s15/M00/E5/ED/CoUBGV32DOuAb_tbAAL8HLKCF4g61.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F90" alt="<h2>Four Must-Visit Museums in San Francisco</h2>" />
+          </a>
+          
+        </article>
+        
+        
+        <article class="articleItem hasImage">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="san-francisco-trendy-street-photography-collection-curated-and-personally-tested-by-a.html">San Francisco Trendy Street Photography Collection: Curated and Personally Tested by a Designer</a>
+            </h2>
+
+            
+            <p class="brief">Explore San Francisco's trendiest neighborhoods with Color Factory</p>
+            
+
+          </div>
+
+          
+          <a class="articleImage" href="san-francisco-trendy-street-photography-collection-curated-and-personally-tested-by-a.html" aria-label="San Francisco Trendy Street Photography Collection: Curated and Personally Tested by a Designer">
+            <img src="https://p1-q.mafengwo.net/s10/M00/FC/82/wKgBZ1n2Uu2AEwJNAAU3wrjMuUM59.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F90" alt="San Francisco Trendy Street Photography Collection: Curated and Personally Tested by a Designer" />
+          </a>
+          
+        </article>
+        
+        
+        <article class="articleItem hasImage">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="2019-u-s-nba-preseason-regular-season-schedule-and-complete-viewing-guide.html">2019 U.S. NBA Preseason/Regular Season Schedule and Complete Viewing Guide</a>
+            </h2>
+
+            
+            <p class="brief">What are the key things you need to know before booking weekday game tickets?</p>
+            
+
+          </div>
+
+          
+          <a class="articleImage" href="2019-u-s-nba-preseason-regular-season-schedule-and-complete-viewing-guide.html" aria-label="2019 U.S. NBA Preseason/Regular Season Schedule and Complete Viewing Guide">
+            <img src="https://p1-q.mafengwo.net/s12/M00/61/83/wKgED1uJEKiAcNcBAAFeForLyWg44.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F90" alt="2019 U.S. NBA Preseason/Regular Season Schedule and Complete Viewing Guide" />
+          </a>
+          
+        </article>
+        
+      </section>
+
+      
+      
+      
+      
+      
+      <nav class="pagination" aria-label="pagination">
+        <a
+          class="pageLink"
+          href="list-2.html"
+          aria-disabled="false"
+        >
+          Previous
+        </a>
+        <a
+          class="pageLink"
+          href="list-4.html"
+          aria-disabled="false"
+        >
+          Next
+        </a>
+      </nav>
+      
+    </main>
+  </body>
+</html>

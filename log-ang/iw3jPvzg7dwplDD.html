@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Can you imagine the spectacular sight of different species of whales breaching the surface with splashing water, rolling their massive bodies through the waves? If you want to witness these oceanic wonders, boarding a professional whale-watching boat for an expedition at sea is the best choice." />
+    <title>Whales spotted! Here are the top whale-watching destinations in the US.</title>
+    <style>
+      :root {
+        --paper: #f5f1eb;
+        --ink: #163d36;
+        --body: #3f3a34;
+        --muted: #8a8379;
+        --line: #ddd5ca;
+        --accent: #d9782f;
+        --white: #fffaf4;
+        --shadow: 0 22px 70px rgba(28, 25, 20, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        line-height: 1.72;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .hero {
+        min-height: clamp(330px, 48vw, 560px);
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        padding: clamp(28px, 7vw, 70px) clamp(24px, 8vw, 76px);
+        background: #28463f;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.12)),
+          url("");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .heroInner {
+        position: relative;
+        width: min(900px, 100%);
+        color: #ffffff;
+      }
+
+      .heroLocation {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 24px;
+        color: rgba(255, 255, 255, 0.78);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .heroLocation svg {
+        width: 17px;
+        height: 17px;
+        color: #f0a45f;
+      }
+
+      h1 {
+        max-width: 880px;
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(30px, 4.8vw, 54px);
+        font-weight: 900;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .brief {
+        width: min(760px, 100%);
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 18px;
+        color: #5a5148;
+        font-size: clamp(17px, 1.9vw, 20px);
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.58;
+      }
+
+      .articleWrap {
+        width: min(900px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: clamp(42px, 6vw, 68px) 0 72px;
+      }
+
+      .content {
+        width: min(760px, 100%);
+        color: var(--body);
+        font-size: clamp(16px, 1.8vw, 18px);
+        line-height: 1.5;
+      }
+
+      .content p {
+        margin: 0 0 12px;
+      }
+
+      .content h2,
+      .content h3,
+      .content h4 {
+        margin: 46px 0 18px;
+        color: var(--ink);
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+
+      .content h2 {
+        font-size: clamp(28px, 4vw, 38px);
+      }
+
+      .content h3 {
+        font-size: clamp(23px, 3vw, 30px);
+      }
+
+      .content ul,
+      .content ol {
+        margin: 0 0 30px;
+        padding-left: 28px;
+      }
+
+      .content li {
+        margin: 8px 0;
+      }
+
+      .content blockquote {
+        margin: 34px 0;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 20px;
+        color: #5a5148;
+        font-style: italic;
+      }
+
+      .content img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 42px 0 12px;
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+      }
+
+      .content figure {
+        margin: 42px 0;
+      }
+
+      .content figure img {
+        margin: 0 0 12px;
+      }
+
+      .content figcaption {
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .backLink {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 46px;
+        border-top: 1px solid var(--line);
+        padding-top: 28px;
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.18em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .backLink:hover {
+        color: var(--accent);
+      }
+
+      @media (max-width: 720px) {
+        .hero {
+          min-height: 420px;
+          padding: 30px 24px;
+        }
+
+        .articleWrap {
+          width: min(100% - 28px, 900px);
+          padding-bottom: 48px;
+        }
+
+        .content {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="heroInner">
+        <p class="heroLocation">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+            />
+          </svg>
+          <span>Los Angeles</span>
+        </p>
+        <h1>Whales spotted! Here are the top whale-watching destinations in the US.</h1>
+      </div>
+    </header>
+
+    <main class="articleWrap">
+      
+      <p class="brief">Can you imagine the spectacular sight of different species of whales breaching the surface with splashing water, rolling their massive bodies through the waves? If you want to witness these oceanic wonders, boarding a professional whale-watching boat for an expedition at sea is the best choice.</p>
+      
+
+      <article class="content">
+        
+          <p>There are many places to watch whales in the United States. Which locations are best? How to view them? What should be noted? You can find answers to all of these here!</p><p><br></p><p>America&#39;s Top Three Popular Whale Watching Locations</p><p><br></p><p>Taking Hawaii as an example, let&#39;s first watch a video to understand the whale watching process.</p><p><br></p><p>West Coast Los Angeles Orange County</p><p>Whale Watching Location</p><p>Map of Los Angeles Orange County</p><p><br></p><p>The waters off Southern California are warm, and often whale groups swim from cold waters to this area to reproduce. Especially in Orange County, located south of Los Angeles, when you stroll along the beach, there&#39;s a chance to spot whales on the sea surface. Not only that, Orange County is one of the rare places in the world where you have opportunities to watch whales year-round.</p><p><br></p><p>Orange County&#39;s Beach Scenery</p><p><br></p><p>Types and Timing of Whales for Viewing</p><p>Humpback whales are among the most common and scenic varieties. They swim relatively slowly, but their leaps out of the water are extremely graceful. The best time to view them is during winter and spring (December through April). Along with humpback whales, gray whales can also be observed during these same winter and spring months.</p><p><br></p><p>The optimal time for viewing blue whales is summer and autumn (May to October). Blue whales are the largest animals on Earth.</p><p><br></p><p>Humpback whale rolling its massive body in the water</p><p>Orca: The Killer of the Ocean</p><p>Other Marine Wildlife</p><p>In Los Angeles, killer whales can be seen throughout all four seasons. Sometimes you can witness their fascinating hunting scenes where they clearly divide tasks to prey on seals.</p><p><br></p><p>Dolphins appear here year-round, including common dolphins, bottlenose dolphins, Pacific short-beaked dolphins, and larger gray dolphins. Dolphins prefer living in groups, always appearing as pods.</p><p><br></p><p>Sea lions and seals are also quite common. Sometimes you can see them walking on land like dogs or climbing up rocks.</p><p>Cute sea lions on the shore</p><p>In summer, there are also unique-looking flying fish that love to swim at the water&#39;s surface with amazing jumping ability, capable of leaping up more than 10 meters above the water. Choose a midday departure for a better chance of encountering flying fish.</p><p><br></p><p>Take a whale-watching boat tour</p><p>The fleet boasts 30 years of offshore experience. The experienced captains are familiar with every whale species&#39; habits and migration routes in different seasons, using this knowledge to plan different whale-watching routes.</p><p><br></p><p>After entering the area where whales are active, the captain turns off the engine and slows down the boat speed. You&#39;ll only hear the sound of waves, whale breathing as they spray water, and distant seagull calls. The whale-watching lasts about 2-2.5 hours - feel free to take plenty of photos. The captains and crew possess professional knowledge in marine biology.</p><p><br></p><p>Enjoy watching whales dance from aboard</p><p>The whale-watching boats are designed for observing marine life, and every tourist can find their preferred viewing angle on board. The ships have complete facilities and offer various food and drinks for sale.</p><p><br></p><p>Departure by whale-watching boat</p><p>Operating hours: Ships depart daily at 9:30 AM</p><p>10:00; 12:00; 13:00; 14:30; 15:30; 18:00.</p><p>Address: 400 Main Street, Newport Beach, CA 92661.</p><p>Tips:</p><p>1. Guests can exchange the electronic voucher at the ticket counter directly without printing it. Please note the departure time and arrive 20-30 minutes early as recommended.</p><p>2. Overall, each whale watching time offers different experiences. However, I personally prefer morning and evening sessions, allowing you to enjoy sunrises and sunsets at sea while watching whales - also a great experience.</p><p><br></p><p>East Coast Boston Stellwagen Bank</p><p>Whale Watching Location</p><p>Map of Boston&#39;s geographical location</p><p><br></p><p>The most famous whale-watching destination on the East Coast is Stellwagen Bank National Marine Sanctuary off the coast of Boston. Every year, numerous whales migrate there to breed and give birth.</p><p><br></p><p>Stellwagen Bank National Marine Sanctuary</p><p># Whale Species and Viewing Times</p><p><br></p><p>## In Boston</p><p><br></p><p>In Boston, whales can be observed year-round. During winter and spring (December through April), there are typically more whales and a greater variety of species present.</p><p><br></p><p>The most spectacular whale here is still the humpback whale. These giants average 50 feet in length and weigh up to 37 tons! Their massive bodies create dramatic water columns and rolling waves that captivate visitors&#39; attention.</p><p><br></p><p>Beyond these, you can also encounter blue whales, fin whales, and other species (typically swimming alone or in groups of 2-3 individuals).</p><p><br></p><p>## Whales&#39; Massive Tails</p><p><br></p><p>## Viewing Other Marine Life</p><p><br></p><p>This area is also an exceptional bird-watching destination. Abundant plankton and fish attract over 40 species of seabirds. The most common include silver gulls, large black-backed gulls, laughing gulls, common terns, red-rumped terns, Northern gannets, storm petrels, shearwaters, red phalaropes, and short-tailed skuas. Additionally, there&#39;s an opportunity to spot dolphins appearing in groups.</p><p><br></p><p>## Boston as a Bird-Watching Paradise</p><p><br></p><p>## Whale Watching by Boat</p><p>The journey is fully planned and guided by the New England Whale Center, which has over twenty years of whale research experience and is considered an authoritative institution in the field of whale research. The whale watching experience is explained by natural guides from the center, ensuring that this whale-hunting trip is both exciting and educational. The whale watching duration is 3 hours - a long time sufficient for you to take photos and keep memories.</p><p><br></p><p>Taking a Whale-Watching Boat Out at Sea</p><p>The catamaran has three outdoor decks, allowing everyone on board to see whales from the best positions. Inside is a temperature-controlled cabin with cushioned seats, tables, and an audio-visual system; you can also purchase various foods and drinks in the galley/kitchen area.</p><p><br></p><p>New England Whale Center Whale-Watching Boat</p><p>Operating Hours: Daily departures at 9:30, 10:00, 11:00, 12:00, 13:30, 14:30, 15:30, and 17:00.</p><p><br></p><p>Address: 1 Long Wharf, Boston, MA 02110</p><p><br></p><p>Tips:</p><p>1. Guests exchange their printed vouchers for tickets directly at the ticket counter of the attraction. Please pay attention to departure times; it is recommended to arrive 20-30 minutes early.</p><p>2. Overall, whale watching at different times yields different experiences. However, I prefer morning and evening sessions, as you can also enjoy sunrises and sunsets at sea while observing these magnificent creatures, making it a wonderful experience.</p><p>Pacific Ocean Hawaii Islands Whale Watching Locations</p><p>Hawaii Geographic Location Map</p><p><br></p><p>Hawaii is one of the world&#39;s premier whale watching destinations. On Maui, Kahoolawe, Oahu, Big Island of Hawaii, and others, you can witness these spirits of the sea in their natural habitat.</p><p><br></p><p>Although whale watching is possible on each island, the Auau Channel between Maui, Molokai, and Lanai stands out as the optimal location due to its calm, crystal-clear waters. You might even spot whales from the beach itself.</p><p>Hawaii Beach Scenery</p><p><br></p><p>Types of Whales and Viewing Seasons in Hawaii</p><p><br></p><p>Humpback whales are the most commonly sighted species in Hawaiian waters.</p><p><br></p><p>Every year starting at the end of November, approximately 4,000 to 6,000 humpback whales migrate from the cold Alaskan waters to the warm Hawaiian seas for mating and breeding purposes.</p><p>These whales stay here until the end of April; sometimes they can still be seen until mid-May before making their long journey back to Alaska. Among them, the number of whale groups reaches its peak from January to April.</p><p><br></p><p>Big creatures leaping out of the sea</p><p>Watching other marine life</p><p><br></p><p>Hawaii is also a paradise for various animals. While on a boat watching whales, you can share the water with dolphins and see gulls and seabirds everywhere.</p><p><br></p><p>Dolphins swimming in groups</p><p>Going whale watching by boat</p><p><br></p><p>Although regulations state that viewing boats should not appear within 100 meters of humpback whale activity areas, there is no accurate legal regulation on how close humpback whales can voluntarily approach humans. Experienced captains slowly steer their boats toward the humpback whales and attract them to swim toward the ship, giving you the best viewing opportunity. The typical whale watching duration is 2.5 hours.</p><p><br></p><p>Pick up your camera and take photos freely</p><p>On the cruise, you can also enjoy delicious buffets and participate in colorful Hawaiian-themed entertainment activities. For example: Hawaiian lei-making workshops, traditional hula dance performances, and popular ukulele shows to entertain.</p><p><br></p><p>Looking at the blue sea</p><p>Business hours: Ships depart daily with different times by viewing tour company; please verify based on actual conditions.</p><p><br></p><p>Address: Maui, HI; Oahu, HI</p><p><br></p><p>Tips:</p><p>1. Each year during humpback whale active season, many cruise companies have &quot;whale watching excursion&quot; activities. Friends who like this may choose one and go out to sea to find humpback whales.</p><p>2. During peak whale-watching season, some travel agencies only have one boat departure per day. Seats are limited; please book in advance.</p><p><br></p><p>Whale watching - an experience not to be missed</p><p><br></p><p>Riding on a whale-watching boat, seeing these huge creatures rolling at sea from such close distance. At this moment, humans and whales create the most harmonious scene at sea.</p>
+        
+
+        <a class="backLink" href="list-1.html">← Back to Los Angeles</a>
+      </article>
+    </main>
+  </body>
+</html>

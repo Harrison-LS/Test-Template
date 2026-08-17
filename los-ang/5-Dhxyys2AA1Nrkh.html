@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <title>How to properly explore San Francisco!</title>
+    <style>
+      :root {
+        --ink: #171512;
+        --muted: #5f5a54;
+        --line: #ded6cc;
+        --paper: #ffffff;
+        --warm: #f8efe5;
+        --accent: #c47a29;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        line-height: 1.55;
+      }
+
+      .hero {
+        width: 100%;
+        height: clamp(260px, 38vw, 520px);
+        overflow: hidden;
+      }
+
+      .hero img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+      }
+
+      .article {
+        width: min(760px, calc(100% - 40px));
+        margin: 0 auto;
+        padding: 34px 0 72px;
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin: 0;
+        font-family: Georgia, "Times New Roman", serif;
+        letter-spacing: 0;
+        line-height: 1.05;
+      }
+
+      h1 {
+        max-width: 620px;
+        font-size: clamp(34px, 5vw, 54px);
+        font-weight: 800;
+      }
+
+      .location {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin: 18px 0;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .location svg {
+        width: 18px;
+        height: 18px;
+        flex: 0 0 auto;
+      }
+
+      .subtitle {
+        max-width: 650px;
+        margin: 0 0 22px;
+        color: var(--muted);
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(18px, 2.4vw, 23px);
+        font-style: italic;
+        line-height: 1.45;
+      }
+
+      .description {
+        max-width: 650px;
+        margin: 0 0 28px;
+        color: #302c27;
+        font-size: 15px;
+      }
+
+      .brief {
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        border-radius: 6px;
+        padding: 18px 20px;
+        background: var(--warm);
+      }
+
+      .brief-title {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 10px;
+        color: var(--accent);
+        font-weight: 800;
+      }
+
+      .brief-title svg {
+        width: 18px;
+        height: 18px;
+      }
+
+      .brief p {
+        margin: 0;
+        color: #302c27;
+        font-size: 15px;
+      }
+
+      .content {
+        border-top: 1px solid var(--line);
+        padding-top: 24px;
+      }
+
+      h2 {
+        margin-bottom: 16px;
+        font-size: 30px;
+      }
+
+      .section {
+        margin: 0 0 24px;
+      }
+
+      .section h3 {
+        margin-bottom: 8px;
+        font-size: 18px;
+        line-height: 1.25;
+      }
+
+      .section p,
+      .section-body {
+        margin: 0;
+        color: #292520;
+        font-size: 14px;
+        white-space: pre-line;
+      }
+
+      .section-body img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 16px 0;
+        border-radius: 8px;
+      }
+
+      .section-body a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      @media (max-width: 640px) {
+        .article {
+          width: min(100% - 28px, 760px);
+          padding-top: 26px;
+        }
+
+        .hero {
+          height: 260px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <figure class="hero">
+      <img src="https://p1-q.mafengwo.net/s13/M00/0B/E9/wKgEaVxyoOCAMu-XAAIJHV9GH1A84.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F90" alt="How to properly explore San Francisco!" />
+    </figure>
+
+    <main class="article">
+      <h1>How to properly explore San Francisco!</h1>
+
+      <p class="location">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            fill="currentColor"
+            d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+          />
+        </svg>
+        <span>Los Angeles</span>
+      </p>
+
+      <p class="subtitle"></p>
+      <p class="description"></p>
+
+      <aside class="brief">
+        <p class="brief-title">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M7 3h10a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Zm1 4v2h8V7H8Zm0 4v2h8v-2H8Zm0 4v2h5v-2H8Z"
+            />
+          </svg>
+          Brief
+        </p>
+        <p><h2>San Francisco Tour Overview</h2></p>
+      </aside>
+
+      <section class="content" aria-labelledby="content-title">
+        <h2 id="content-title">Content</h2>
+        
+          <article class="section">
+            <div class="section-body"><p>San Francisco Tour Overview</p><p><br></p><p>San Francisco, also known as San Fran, is an international metropolis marked by fashion, European style, uniqueness, and diversity. It features rolling streets, expansive ocean views, and various distinctive architectural landmarks. Here, you can experience the modern pace of a big city, explore shopping districts, luxury restaurants, and historical art museums, or head to Napa Valley, Highway 1, and other destinations for breathtaking natural scenery.</p><p><br></p><p>#Tour Suggestions#</p><p><br></p><p>San Francisco offers diverse experiences. You can spend three days sightseeing famous attractions in a hurry, or allocate five days for a food, shopping, or arts-themed journey. You can also depart from San Francisco to explore Napa Valley or Highway 1. Even with ten or more days of exploration, you likely won't get tired.</p><p><br></p><p>Main Touring Areas</p><p><br></p><p>#San Francisco City Area#</p><p><br></p><p>Even if you know nothing about San Francisco's history and culture, iconic landmarks like the Golden Gate Bridge, Fisherman's Wharf, and the Nine Curves Flower Street are surely familiar.</p>
+<p>Most of San Francisco's major attractions are concentrated in the downtown area. Marvel at the majestic Golden Gate Bridge from a distance, enjoy the sea breeze at Fisherman's Wharf, ride cable cars along California Street, and experience San Francisco's openness in the Castro district - this is truly a perfect journey through iconic landmarks.</p><p><br></p><p>                                        #San Francisco Bay Area#</p><p><br></p><p>                    Starting from San Francisco heading to South Bay, first stop must be Stanford University famous for its beauty, then Silicon Valley renowned worldwide. Along the way you can visit Google headquarters, Apple's main campus, and Computer History Museum, immersing yourself in world-leading technological atmosphere.</p><p><br></p><p>                                        #Highway 1: Most Beautiful Coastline#</p><p><br></p><p>                    From San Francisco traveling south to Los Angeles via Highway 1 offers endless scenic beauty. Each attraction along the highway has unique characteristics - Monterey and Carmel Town filled with artistic charm, Denmark Village; there's also naturally spectacular Big Sur and Elephant Seal Beach. From culture to scenery, it truly lives up to its title as "most beautiful self-driving road."</p><p><br></p><p>                                        #Napa Valley: Land of Wine#</p><p><br></p><p>                    If you have enough time during your San Francisco visit, consider visiting the nearby Napa Valley for wine tasting.
+In Napa Valley, nearly every winery has its own charming story - what you taste isn't just fine wine in the glass, but also a culture.</p><p><br></p><p>                                        Traveler Impressions</p><p><br></p><p>                                        #Spring all year round, colorful like a painting#</p><p><br></p><p>                    San Francisco is a beautiful city with pleasant temperatures throughout the four seasons. Flowers bloom along both sides of the streets. While it lacks New York's luxury, Las Vegas's allure, and Los Angeles's cosmopolitan energy, it allows you to let down your guard and approach it with affection to enjoy its unique warmth and languid pace. Although this is a frequent earthquake zone, many wealthy Americans still choose to settle here in the Bay Area, enjoying this perpetually spring-like climate.</p><p><br></p><p>                                        #Mountain city#</p><p><br></p><p>                    The terrain within the city varies undulating, with dynamic spatial changes. The scenery possesses remarkable layered depth. Buildings employ bold colors - a rarity among major American cities;</p><p><br></p><p>                                        #Bay city#</p><p><br></p><p>                    It faces the Pacific Ocean to the west, positioned at the northern tip of the San Francisco Peninsula, with three sides surrounded by water. It boasts enchanting ocean and bay views.</p>
+Especially during summer, the climate is very pleasant;
+
+#Cultural Diversity#
+
+It is one of the few cities in the world (possibly the only one) where multiple ethnic groups have coexisted and integrated since its founding. With rich cultural landscapes, plus a large population of Chinese immigrants, you can see Traditional Chinese characters everywhere, creating a sense of familiarity and warmth;
+
+#Liberal Atmosphere#
+
+It is the most open, bold, and avant-garde city in America. It's one of the centers of American hippie culture and modern liberalism, as well as a major hub for gay Americans. The sexual liberation movement in America originated at UC Berkeley near San Francisco.
+
+#Precious Land#
+
+San Francisco is a free and artistic city. Although not large in area, this city is remarkably inclusive.
+Civil rights movements such as the hippie movement and the gay movement all germinated and developed in this city. The entire city inherited the construction philosophy of miners, possessing ups and downs large and small; although these hills created some difficulty for self-driving tourists, they also added unique charm to San Francisco - a delicate experience similar to the "Inception" effect.</p><p><br></p><p>As one of America's wealthiest regions, San Francisco Bay Area's housing prices often compete with Manhattan's, truly "an inch of land costs an inch of gold." The Bay Area is also home to the world's most famous high-tech industry park - Silicon Valley, gathering countless high-tech talents who come here to live. What impresses me most about San Francisco is probably the pursuit and fighting spirit for a high-quality life among people living here.</p><p><br></p><p>                                        Tour Guide</p><p><br></p><p>                                        #San Francisco Compact One-Day Trip#</p><p><br></p><p>A single day makes it difficult to fully experience San Francisco, so only a few classic destinations can be selected.</p><p><br></p><p>                                        #Morning#</p><p><br></p><p>                    Get up early to view the Golden Gate Bridge from a distance near Fort Point, then visit the Palace of Fine Arts and Nine Curves Street (Lombard Street), and have lunch at Fisherman's Wharf in the afternoon.
+</p><p><br></p><p>                                        #Afternoon#</p><p><br></p><p>                    Stroll around Pier 39 after lunch, then take San Francisco's iconic cable car to Union Square. After exploring Union Square, enjoy dinner in Chinatown.</p><p><br></p><p>                                        #Evening#</p><p><br></p><p>                    In the evening, head to Twin Peaks to admire San Francisco's stunning night view. If you have energy left, you can visit bars to experience San Francisco's nightlife, or simply return to your hotel to rest and conclude the day's journey.</p><p><br></p><p>                                        #San Francisco Classic Three-Day Tour#</p><p><br></p><p>                                        #Day One#</p><p><br></p><p>                    In the morning, take a Golden Gate ferry from Pier 39 to view the Golden Gate Bridge. Then explore attractions along Pier 39. At noon, have lunch at Ferry Building, then head to Castro District (the LGBTQ+ community area). In the evening, climb Twin Peaks to enjoy San Francisco's night views.</p>
+<p><br></p><p>                                        #Day Two#</p><p><br></p><p>                    Today's itinerary focuses mainly on the downtown area. Start early in the morning for a distant view of the Golden Gate Bridge, then visit San Francisco Art Palace and Cable Car Hill (Nine Curves). Have lunch at noon in Little Italy. In the afternoon, wander around Union Square to admire California Street and watch cable cars turning. Dinner can be enjoyed at Union Square in the evening.</p><p><br></p><p>                                        #Day Three#</p><p><br></p><p>                    Start early in the morning to visit the California Science Museum in Golden Gate Park. At noon, head to Alamo Square for lunch and take photos with the iconic "Seven Sisters" row houses. In the afternoon, tour City Hall before having dinner in Chinatown.</p><p><br></p><p>                                        #San Francisco Classic Self-Drive Tour Route#</p><p><br></p><p>                    There is a classic self-drive route within the city called 49-mile-scenic-drive. It can be enjoyed over 1-2 days, with 4-5 attractions per day.</p>
+The route covers 37 attractions of various sizes, including famous spots like Fisherman's Wharf, Golden Gate Bridge, and Nine Curved Flower Street (Jiuqu Huajie), as well as some less famous smaller attractions that can be freely chosen based on time and preferences. Along the way, you'll see light blue signs reading "49 mile SCENIC DRIVE" as shown in the picture.</p><p><br></p><p>                                        #SanFranciscoSelfDrivingOneDayTripRecommendation#</p><p><br></p><p>                    This route is taken from a segment of the 49-mile-scenic-drive. Activities at these attractions include viewing Twin Peaks with panoramic views of San Francisco, admiring Golden Gate Bridge at Lands End Beach, visiting Palace of Fine Arts - the filming location for "The Rock" movie, and recommended seafood dining spots. Within Golden Gate Park there are art museums, science centers, and Japanese gardens, making this itinerary quite rich in activities.</p><p><br></p><p>                                        #Route#</p><p><br></p><p>                    Twin Peaks (Twin Peaks) -> Golden Gate Park -> Baker Beach ->
+Palace of Fine Arts-&gt;Fisherman's Wharf (eating crab)-&gt;Chinatown-&gt;City Hall</p><p><br></p><p>                                        #San Francisco Self-Drive Two-Day Tour Recommendation#</p><p><br></p><p>                    Day one visits some scattered inland attractions, focusing on sightseeing and photography. In the evening, go to Golden Gate Bridge for sunset viewing; Day two is spent wandering through the Hippie District and Gay District, breathing San Francisco's free and inclusive air. Focusing on small shops, bookstores, and delicious food, so more time is reserved.</p><p><br></p><p>                                        #Day One#</p><p><br></p><p>                    Pier 39-&gt;Fisherman's Wharf-&gt;Lombard Street (Nine Curves Lane)-&gt;Coit Tower-&gt;Union Square-&gt;Alamo Square-&gt;San Francisco City Hall-&gt;Golden Gate Bridge</p><p><br></p><p>                                        #Day Two#</p><p><br></p><p>                    Castro District-&gt;
+<p>Haight-Ashbury District → Twin Peaks for night view</p><p><br></p><p>                                        #San Francisco Easy Self-Driving Three-Day Tour Recommendation#</p><p><br></p><p>                    San Francisco is a hilly city with many slopes, so taking the cable car up hills is an experience you must try. The most popular route is the Powell-Hyde Line, which passes through North Beach, Russian Hill, Chinatown, Cable Car Museum, Lombard Street, all the way to Fisherman's Wharf, with a total journey of 30 minutes. You can buy a one-day ticket on any day to experience it. I spent 3 days self-driving around San Francisco.</p><p><br></p><p>                                        #Day One#</p><p><br></p><p>                    Stanford University → Hotel Check-in → Golden Gate Bridge → Fisherman's Wharf</p><p><br></p><p>                                        #Day Two#</p><p><br></p><p>                    Lombard Street →</p>
+Park at Union Square -> Take Hyde Line cable car to Fisherman's Wharf for lunch -> Return to Macy's department store in Union Square for shopping -> Dinner at The Cheese Factory on the 7th floor of the department store</p><p><br></p><p>                                        #Day 3#</p><p><br></p><p>                    Alamo Square -> Self-drive to Silicon Valley to visit Apple and Google companies -> Shopping spree (Gilroy Premium Outlets) -> Twin Peaks</p><p><br></p><p>                                        #San Francisco Bay Area Self-Driving Tour Route#</p><p><br></p><p>                                        #Day 1#</p><p><br></p><p>                    Start from San Jose in the South Bay, first visit Google headquarters to experience the high-tech atmosphere and campus layout. If you have a friend inside, you can register as a visitor to enter the building and tour the working environment, including Google products.</p>
+Then proceed to Apple Headquarters, visiting the Infinite Loop campus and the Apple Store #1. In the afternoon, go to Stanford University, explore the campus scenery, Mormon Chapel, Rodin Memorial Museum, climb Hu Fu Tower for a panoramic view of Palo Alto cityscape.</p><p><br></p><p>                                        #Day 2#</p><p><br></p><p>                    Day 2's itinerary focuses mainly on San Francisco's downtown area. Visit classic attractions such as the Golden Gate Bridge, Palace of Fine Arts, and Lombard Street (Nine-Curves Hill).</p><p><br></p><p>                                        #Day 3#</p><p><br></p><p>                    After crossing Bay Bridge to East Bay's University of California Berkeley, explore the campus, climb the clock tower for a panoramic view of Berkeley. Security around Berkeley is not very good; outside campus there's no need to wander much. In the afternoon go to Livermore Outlets for shopping with brands at all levels - high, mid, and low-end all available. After shopping, return to San Jose.</p><p><br></p><p>                                        #Bay Area Itinerary Recommendation#</p><p><br></p><p>                    The Bay Area originally includes San Francisco's downtown area; from a tour route perspective it is separated here. This mainly refers to two prestigious universities in Northern California (University of California Berkeley and Stanford University) and Silicon Valley where major tech companies are distributed.</p>
+</p><p><br></p><p>                                        #Route#</p><p><br></p><p>                    Stanford University-&gt;Facebook HQ "Like" sign-&gt;Google Mountain View HQ-&gt;UC Berkeley (including campus, Lawrence Lab on top of the hill and Indian Rock which offers views of the entire Bay Area)</p><p><br></p><p>                                        #Tour Experience#</p><p><br></p><p>                    Both UC Berkeley and Stanford can be visited for free. Among Silicon Valley tech giants, Google is an open campus suitable for self-driving tourists to visit and worship at. EA Games Company offers scheduled tours. Most other closed campuses only allow photo opportunities at the entrance; entering their premises requires being escorted by a working employee inside. Therefore, it's best to plan a one-day itinerary covering the entire Bay Area.</p></div>
+          </article>
+        
+      </section>
+    </main>
+  </body>
+</html>

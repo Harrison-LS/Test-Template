@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Monterrey | Indulgent Comfort, Freedom — Explore the Unknown" />
+    <title>California's Highway 1 is now completely reopened. It's time to visit.</title>
+    <style>
+      :root {
+        --paper: #f5f1eb;
+        --ink: #163d36;
+        --body: #3f3a34;
+        --muted: #8a8379;
+        --line: #ddd5ca;
+        --accent: #d9782f;
+        --white: #fffaf4;
+        --shadow: 0 22px 70px rgba(28, 25, 20, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        line-height: 1.72;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .hero {
+        min-height: clamp(330px, 48vw, 560px);
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        padding: clamp(28px, 7vw, 70px) clamp(24px, 8vw, 76px);
+        background: #28463f;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.12)),
+          url("https://p1-q.mafengwo.net/s12/M00/EB/FA/wKgED1vZXPSAWyXtAAJPHg-EY8E10.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F90");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .heroInner {
+        position: relative;
+        width: min(900px, 100%);
+        color: #ffffff;
+      }
+
+      .heroLocation {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 24px;
+        color: rgba(255, 255, 255, 0.78);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .heroLocation svg {
+        width: 17px;
+        height: 17px;
+        color: #f0a45f;
+      }
+
+      h1 {
+        max-width: 880px;
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(30px, 4.8vw, 54px);
+        font-weight: 900;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .brief {
+        width: min(760px, 100%);
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 18px;
+        color: #5a5148;
+        font-size: clamp(17px, 1.9vw, 20px);
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.58;
+      }
+
+      .articleWrap {
+        width: min(900px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: clamp(42px, 6vw, 68px) 0 72px;
+      }
+
+      .content {
+        width: min(760px, 100%);
+        color: var(--body);
+        font-size: clamp(16px, 1.8vw, 18px);
+        line-height: 1.5;
+      }
+
+      .content p {
+        margin: 0 0 0.5em;
+      }
+
+      .content h2,
+      .content h3,
+      .content h4 {
+        margin: 46px 0 18px;
+        color: var(--ink);
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+
+      .content h2 {
+        font-size: clamp(28px, 4vw, 38px);
+      }
+
+      .content h3 {
+        font-size: clamp(23px, 3vw, 30px);
+      }
+
+      .content ul,
+      .content ol {
+        margin: 0 0 30px;
+        padding-left: 28px;
+      }
+
+      .content li {
+        margin: 8px 0;
+      }
+
+      .content blockquote {
+        margin: 34px 0;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 20px;
+        color: #5a5148;
+        font-style: italic;
+      }
+
+      .content img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 42px 0 12px;
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+      }
+
+      .content figure {
+        margin: 42px 0;
+      }
+
+      .content figure img {
+        margin: 0 0 12px;
+      }
+
+      .content figcaption {
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .backLink {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 46px;
+        border-top: 1px solid var(--line);
+        padding-top: 28px;
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.18em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .backLink:hover {
+        color: var(--accent);
+      }
+
+      @media (max-width: 720px) {
+        .hero {
+          min-height: 420px;
+          padding: 30px 24px;
+        }
+
+        .articleWrap {
+          width: min(100% - 28px, 900px);
+          padding-bottom: 48px;
+        }
+
+        .content {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="heroInner">
+        <p class="heroLocation">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+            />
+          </svg>
+          <span>Los Angeles</span>
+        </p>
+        <h1>California's Highway 1 is now completely reopened. It's time to visit.</h1>
+      </div>
+    </header>
+
+    <main class="articleWrap">
+      
+      <p class="brief">Monterrey | Indulgent Comfort, Freedom — Explore the Unknown</p>
+      
+
+      <article class="content">
+        
+          <p>Most journeys are both in search of distant similarities and exploration of boundless unknowns. This trip to California, USA, was sparked by the globally renowned Highway 1 being fully reopened. This "Dream Drive" self-driving journey spans a long coastline, connecting destinations with distinctly different styles from south to north across California—from vibrant San Francisco onward, passing through Monterey, Big Sur, Santa Luis Obispo County, Santa Barbara, and ending in Los Angeles, truly capturing the essence of California's charm.</p><p><br></p><p>    Monterey ｜Luxury Comfort & Freedom to Explore the Unknown</p><p><br></p><p>              Within the Dream Drive convoy, I rode a 1960 Chevrolet Corvette Convertible. Monterey Peninsula is surrounded on three sides by ocean, featuring beaches caressed by sea breezes, tranquil small bays, and luxurious resorts. Our first stop in Monterey County was the internationally renowned Cannery Row—once home to a thriving sardine canning industry, once a globally recognized port, and the place that Pulitzer Prize winner John Steinbeck endlessly dreamed about as his creative inspiration. After World War II, overfishing left this area in distress. Today, the Pacific waters near Cannery Row are protected as a National Marine Sanctuary, bringing renewed vitality to the entire street. Many historic cannery buildings have been restored into restaurants, galleries, and boutique shops. A Taste of Monterey, Lalla Oceanside Grill, Fish Hopper, The C Restaurant at InterContinental The Clement Monterey, and Sardine Factory are among the trendy restaurants that have gained widespread popularity.</p>
+Of course, from Cannery Row you can easily embark on a trip to the pristine Monterey Bay to try single-person kayaking and get close-up views of wild marine animals like sea otters in their natural habitat.</p><p><br></p><p>                                            Sierra Mar within Post Ranch Inn has won numerous awards</p><p><br></p><p>                    Say goodbye to Cannery Row and drive straight to Bixby Bridge, one of the most famous attractions on Highway 1. Along the Big Sur coast, no camera is good enough to capture this romantic meeting point between sea and sky - you must witness it with your own eyes. After winding through Monterey pine forests, we arrive at the award-winning Sierra Mar restaurant within Post Ranch Inn.</p><p><br></p><p>Sierra Mar sits on a hillside, and dining here feels like reaching the edge of land. The contemporary-style architecture is spectacular; the building connects seamlessly to a stretch of Big Sur coastline. Looking westward, the restaurant appears to float above the ocean. The dishes are equally extraordinary, with chefs skilled at incorporating signature ingredients from the Big Sur region into each meal.</p><p><br></p><p>If you'd rather not spend your beautiful afternoon driving, consider making a stop at Hearst Ranch in San Simeon. Hearst Ranch spans 335 square kilometers and raises 100% grass-fed cattle that are never given hormones or antibiotics during the farming process.</p>
+Heschky Ranch Winery is also located here, with vast vineyards planted with Malbec, Petite Syrah, and Cabernet Sauvignon. Of course, do not drink while driving, and do not drive after drinking. I recommend that my traveling companions fully enjoy the charm of California wines.</p><p><br></p><p>                                        San Luis Obispo ｜ Vibrant Energy, Diverse Vitality</p><p><br></p><p>                                            Heschky Castle is a must-visit destination on Highway 1 road trips</p><p><br></p><p>                    After spending one night at the Inn at the Pier hotel, adjacent to Pismo Beach, I had an opportunity to thoroughly explore San Luis Obispo County. Here you can find uniquely styled wineries such as Sextant and Stolo, farm-to-table restaurants, The Groves on 41 - olive oil experts from the Paso Robles area, plus stunning scenery.</p><p><br></p><p>From monarch butterflies that flutter gracefully like feathers to elephant seals weighing over 5000 pounds, San Luis Obispo County boasts a rich variety of wildlife. At Piedras Blancas north of San Simeon, from observation areas above the beach, you can watch male elephant seals, as big as minivans, fighting for territory.</p>
+</p><p><br></p><p>It's only a ten-minute drive from here to Hearst Castle. Estates in California are not uncommon; movie stars and tech moguls invest heavily in mansions, adding wings, pools, yoga studios to them. But no estate can compare with the luxurious Hearst Castle. Hearst Castle was designed by Julia Morgan, California's first female architect, and was the private residence of publishing magnate William Randolph Hearst; the entire complex was completed in 1947. The castle has 165 rooms, and the terraced gardens cover 127 acres. The grand ballroom features soaring ceilings where decades ago movie stars and other guests enjoyed cocktails, conversed with one another; now visitors can also stop here to admire the walnut wood paneling above their heads and sixteenth-century tapestries. Hearst Castle's two pools—the outdoor Neptune Pool and indoor Roman Pool—are as luxurious as the castle itself. Especially the latter, decorated with cobalt blue and gold tiles, whose design and architectural inspiration are drawn from Venice, Italy. Looking up reveals detailed mosaic patterns covering the roof and dome, depicting a starry night sky.</p><p><br></p><p>Stolo Vineyards has long been known as the only family-owned winery in the culturally rich Cambria region. Under the cool climate conditions of Central Coast, Stolo produces small-batch, exquisite local wines.
+Since 2004, a young team has crafted unique Chardonnay, Pinot Noir, and Syrah with love for this land. During dinner service, Stolo partnered with Moonstone Bar & Grill to create an amazing wine and food pairing experience that is unforgettable at first taste.</p><p><br></p><p>Speaking of landmark buildings, we must mention Madonna Inn. Since 1958, this hotel has been a legend in San Luis Obispo. With 110 uniquely designed rooms, it attracts tourists to the Central Coast area. If you prefer a feminine living environment, you can choose "American Beauty" or "Rose Room." It is said that Hotel Owner Madonna lady loves pink very much.</p><p><br></p><p>                                        Santa Barbara | Where Sea and Sky Meet - Tranquil Luxury</p><p><br></p><p>                                            The Finca District of Santa Barbara has a rich artistic atmosphere</p><p><br></p><p>                    Bougainvillea climbs the red brick rooftops, while ocean breezes accompany bird songs. Islands and spouting whales form an horizon landscape—Santa Barbara is filled everywhere with charming tranquility and luxury.</p>
+<p>In fact, this summary comes from many movie stars' reviews; they always come to Santa Barbara to steal half a day of leisure time. Some even move here permanently.</p><p><br></p><p>Our first stop in Santa Barbara is the Eat This, Shoot That! food photography tour. This route in the Funk Zone brings together several locally distinctive restaurants, beer halls, and spirits bars such as Enterprise Fish Co., Lucky Penny, Loquita, etc. Not only can you taste local delicacies but also learn about this city's history and culture, while capturing travel photos that are "unique to no one else." Speaking of the Funk Zone, it was once a narrow warehouse area between America's Highway 101 and Oceanfront; now it has become an exclusive district with galleries, upscale restaurants, and trendy bars.</p><p><br></p><p>Toma is one of Santa Barbara's most popular seaside restaurants. The cuisine style centers on Italian and Mediterranean concepts, with fresh high-quality seafood, seasonal vegetables, and various local ingredients frequently adding points to the dishes themselves. Toma's wine list features California wines on the left side and fine Italian wines on the right, offering abundant choices for pairing meals with beverages. Notably, Toma's executive chef Nat Ely previously served as head chef at Los Olivos Café, making him familiar to movie buffs and wine enthusiasts alike; Los Olivos Café made a notable appearance in the film "Sideways."</p>
+</p><p><br></p><p>On your way from Santa Barbara to Los Angeles, consider making a short stop at the Camarillo Outlets along Highway 101. With convenient access and over 160 brands including Kate Spade New York, Michael Kors, Vince, and Lululemon, diverse dining options, and even an Edwards Camarillo Palace Stadium IMAX theater, this one-stop shopping center makes it easy to complete your shopping list and enjoy a leisurely afternoon.</p><p><br></p><p>                    Tips:</p><p>                    Hotel Recommendations</p><p>Monterey Plaza Hotel & Spa</p><p>The hotel is centrally located on Cannery Row in Monterey, where elegant room design complements the stunning views of Monterey Bay. The on-site Schooners Coastal Kitchen & Bar restaurant serves modern American cuisine with an emphasis on fresh, high-quality, and sustainably sourced ingredients. The Vista Blue Spa on the top floor was selected for Travel + Leisure magazine's list of 25 Best Spas worldwide. After your treatment session, be sure to enjoy the 360-degree ocean views from the outdoor terrace.</p>
+</p><p>Carmel Valley Ranch</p><p>This resort hotel spanning 500 acres is nestled in the Santa Lucia Mountains beside the romantic seaside town of Carmel. Beyond its world-class 18-hole golf course, this expansive property has thoughtfully curated various themed experiences including guided hiking tours, organic farm visits, beekeeping farm excursions, and mountain-top yoga sessions. The hotel features 181 guest rooms, each offering stunning views across three distinct natural areas: forest valley, sunset cliffs, and tranquil lawns.</p><p>Hilton Santa Barbara Beachfront Resort</p><p>For a quiet beach town like Santa Barbara, staying at a coastal resort is an excellent choice. The newly opened Hilton Santa Barbara Beachfront Resort occupies 24 acres of luxurious space with 338 elegantly designed rooms and 22 luxury suites nestled among outdoor pools and rolling gardens. With three world-class dining options, outdoor tennis courts, and abundant meeting and banquet facilities, this destination serves as both a top choice for travelers and a popular venue for locals hosting weddings.</p>
+        
+
+        <a class="backLink" href="list-1.html">← Back to Los Angeles</a>
+      </article>
+    </main>
+  </body>
+</html>

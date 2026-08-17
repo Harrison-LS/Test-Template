@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <title>Master Los Angeles' Instagram-Famous Walls: Complete Guide to Locations and Highlights</title>
+    <style>
+      :root {
+        --paper: #f5f1eb;
+        --ink: #163d36;
+        --body: #3f3a34;
+        --muted: #8a8379;
+        --line: #ddd5ca;
+        --accent: #d9782f;
+        --white: #fffaf4;
+        --shadow: 0 22px 70px rgba(28, 25, 20, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        line-height: 1.72;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .hero {
+        min-height: clamp(330px, 48vw, 560px);
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        padding: clamp(28px, 7vw, 70px) clamp(24px, 8vw, 76px);
+        background: #28463f;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.12)),
+          url("");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .heroInner {
+        position: relative;
+        width: min(900px, 100%);
+        color: #ffffff;
+      }
+
+      .heroLocation {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 24px;
+        color: rgba(255, 255, 255, 0.78);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .heroLocation svg {
+        width: 17px;
+        height: 17px;
+        color: #f0a45f;
+      }
+
+      h1 {
+        max-width: 880px;
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(30px, 4.8vw, 54px);
+        font-weight: 900;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .brief {
+        width: min(760px, 100%);
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 18px;
+        color: #5a5148;
+        font-size: clamp(17px, 1.9vw, 20px);
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.58;
+      }
+
+      .articleWrap {
+        width: min(900px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: clamp(42px, 6vw, 68px) 0 72px;
+      }
+
+      .content {
+        width: min(760px, 100%);
+        color: var(--body);
+        font-size: clamp(16px, 1.8vw, 18px);
+        line-height: 1.5;
+      }
+
+      .content p {
+        margin: 0 0 12px;
+      }
+
+      .content h2,
+      .content h3,
+      .content h4 {
+        margin: 46px 0 18px;
+        color: var(--ink);
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+
+      .content h2 {
+        font-size: clamp(28px, 4vw, 38px);
+      }
+
+      .content h3 {
+        font-size: clamp(23px, 3vw, 30px);
+      }
+
+      .content ul,
+      .content ol {
+        margin: 0 0 30px;
+        padding-left: 28px;
+      }
+
+      .content li {
+        margin: 8px 0;
+      }
+
+      .content blockquote {
+        margin: 34px 0;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 20px;
+        color: #5a5148;
+        font-style: italic;
+      }
+
+      .content img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 42px 0 12px;
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+      }
+
+      .content figure {
+        margin: 42px 0;
+      }
+
+      .content figure img {
+        margin: 0 0 12px;
+      }
+
+      .content figcaption {
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .backLink {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 46px;
+        border-top: 1px solid var(--line);
+        padding-top: 28px;
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.18em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .backLink:hover {
+        color: var(--accent);
+      }
+
+      @media (max-width: 720px) {
+        .hero {
+          min-height: 420px;
+          padding: 30px 24px;
+        }
+
+        .articleWrap {
+          width: min(100% - 28px, 900px);
+          padding-bottom: 48px;
+        }
+
+        .content {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="heroInner">
+        <p class="heroLocation">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+            />
+          </svg>
+          <span>Los Angeles</span>
+        </p>
+        <h1>Master Los Angeles' Instagram-Famous Walls: Complete Guide to Locations and Highlights</h1>
+      </div>
+    </header>
+
+    <main class="articleWrap">
+      
+
+      <article class="content">
+        
+          <p>▶︎ Surprising Discoveries at Street Corners</p><p>Tips:</p><p>2019 Latest Update, Most Complete Guide Including Addresses!</p><p><br></p><p>If you often follow well-known international fashion bloggers on Instagram, you&#39;ll frequently see beautiful and stylish street art murals (street art, murals, graffiti).</p><p><br></p><p>However, as a world-renowned Street Art city, LA&#39;s street art has always been one of the aspects that fascinates me most about this city.</p><p><br></p><p>Whether it&#39;s Downtown LA&#39;s Arts District, Venice&#39;s bohemian Abbot Kinney, trendy West Hollywood, or along highways, roadside alleys, beaches—anywhere you go, with a little attention, you&#39;ll discover all kinds of creative and colorful graffiti art. It truly combines fashion and art! (Sometimes even serving as one method for brand advertising campaigns)</p><p><br></p><p>LA Influencer Wall Distribution Map (Simplified)</p><p><br></p><p>Each piece reflects LA&#39;s unique character and lifestyle, creating creative artworks full of life and vitality.</p><p>Inspiration is everywhere and that&#39;s what I love about LA. These murals bring life and soul to the city. Murals that appear unexpectedly in any corner fill people with wonder, providing artistic inspiration for both us who live here and tourists from afar. As a creative professional, my appreciation and gratitude for them is no less than for any artwork housed in museums. Through these street artists&#39; paintings, I feel more of the city&#39;s vitality, character, and current state! Now, let me take everyone on a journey through LA&#39;s street art scene.</p><p><br></p><p>Tips:</p><p>The so-called &quot;Instagrammable walls&quot; of Los Angeles are not all in one location but scattered throughout the city.</p><p><br></p><p>LA&#39;s famous street graffiti and mural scenes are mainly concentrated in three areas: West Hollywood/Westside, Arts District of Downtown LA, and Abbot Kinney Blvd.</p><p><br></p><p>West Hollywood (WeHo) &amp; Westside</p><p>LA&#39;s famous fashion district concentrates all unique independent shops with great design sense as well as designer boutiques here, and it is also the place where celebrities and fashion bloggers most frequently appear. Being close to my residence, it is LA&#39;s favorite area for me and where I hang out most often.</p><p><br></p><p>◎ Pink Wall</p><p>Location: 8221 Melrose Ave, Los Angeles, CA 90046</p><p>Features: The Paul Smith specialty store located in the fashionable Melrose Ave district has pink brick walls (and each Paul Smith store features different designs at every location!), it is always girls&#39; favorite and one of LA&#39;s most famous fashion walls. With its simple background, anything suits perfectly for photography.</p><p><br></p><p>Tips:</p><p>But there are always many people taking photos in front of this wall at the same time, and Paul Smith has administrators managing how many people can take photos. So you cannot just go anytime to take photos like other spots; you have to queue and wait for your turn!</p><p><br></p><p>Los Angeles Pink Wall</p><p><br></p><p>◎ Made in LA</p><p>Location: 8025 Melrose Ave, Los Angeles, CA 90046</p><p>Features: The &quot;Made in LA&quot; wall along Melrose Ave is one of the iconic symbols of LA. When you&#39;re in LA, how can you not take a selfie here, pretending to be a local?! But in this city filled with immigrants from all over, having something that says &quot;Made in LA&quot; carries special significance!</p><p>Tips:</p><p>It&#39;s on the side wall of furniture store Cisco Home - you have to turn into the alleyway to see it.</p><p><br></p><p>◎ Silver Retna Mural</p><p>Location: 140 S Orlando Ave, Los Angeles, CA 90048</p><p>Features: Not far from Melrose Ave, there are many more street art pieces hidden in alleys or even driveways on the side of shops. One such is the mysterious text left by LA&#39;s renowned local artist Retna on the back wall of Gallery Brown - a must-photograph spot for fashion enthusiasts. (And these alien-like text creations are exactly Retna&#39;s signature design!)</p><p>)</p><p>Tips:</p><p>Retna has also created similar designs and graffiti walls in different colors at various locations across LA, such as the wall in front of Craig&#39;s, a well-known upscale restaurant in Los Angeles - 8826 Melrose Ave., West Hollywood; and vibrant elephant graffiti with mysterious text, created in collaboration with Shepard Fairey &amp; Kenny Scharf - 625 N San Vicente Blvd, West Hollywood, CA 90069</p><p>◎ Angel Wings</p><p>Location: There are numerous locations across LA, each wing has its own unique characteristics</p><p>Feature: Initiated by Colette Miller, a well-known local artist in LA, The Global Angel Wings Project began in 2002 at the Art District in downtown LA. It aims to remind people that there is too much anger and sadness in this world - we should all be &quot;Angels of the Earth&quot; - spreading love, peace, kindness, hope, care, empathy throughout society. (You can also find traces of it in Mexico, Kenya, France, and Australia)</p><p>– Hollywood: 7373 Sunset Blvd, Los Angeles, CA 90046 (Aroma Cafe)</p><p>– WeHo: 8401 W 3rd St. (near the Beverly Grove, on the side wall of St. Regis Wine &amp; Liquor)</p><p>– WeHo: 8430 Sunset Blvd, West Hollywood, CA 90069</p><p>– WeHo: 7850 Melrose Ave Los Angeles, CA 90046 (opposite Fairfax High School)</p><p>– Westside: 8801 Santa Monica Blvd (Santa Monica Blvd &amp; Palm Ave)</p><p>– K-Town: W Olympic Blvd and Irolo St (near Normandie- Orange wall)</p><p>– K-Town: 701 S Catalina St, Los Angeles, CA 90005 (Robert Kennedy School RFK school)</p><p>– DTLA: Arts District, 453 Colyton St, Los Angeles, CA 90013</p><p>– DTLA: Angel City Brewery (Traction and 2nd), 216 Alameda St, Los Angeles, CA 90012</p><p>– DTLA: 662 S. Santa Fe Ave, Los Angeles, CA 90021 (Lyft)</p><p>– DTLA: 446 Main St (between 5th &amp; Winston)</p><p>– DTLA: Art Share – near 4th Place and Hewitt (and Traction) on a silver gate</p><p>– DTLA: 566 S San Pedro St, Los Angeles, CA 90013 (Africa Wings for the man shot at 6th and Pedro, Skidrow)</p><p>– DTLA: The Bloc LA (WRDSMTH + Colette Miller – Angels Wings Mural)</p><p>– DTLA: 633 W 5th St #840, Los Angeles, CA 90071 (OUE Skyspace LA, there are two here, one on each side of the observation deck; one is hidden behind the Slide slide and easy to miss)</p><p>– DTLA: 267 S Main St, Los Angeles, CA 90012 (Pet Stop Angel Wings Water Station DTLA)</p><p>– Glendale: 400 W Cerritos Ave, Glendale, CA 91204 (Glendale Transportation Center, Glendale TIRE wings recycled CAR TIRES)</p><p>– Glendale: 1368 E Colorado St, Glendale, CA 91205 (Glendale, Los Angeles - Heaven Garden flower shop)</p><p>– Pasadena: 459 E Colorado Blvd, Pasadena, CA 91101</p><p>– Pasadena: 480 N Arroyo Blvd, Pasadena, CA 91103 (Pasadena Childrens Museum)</p><p>– Pasadena: 300 E Green St, Pasadena, CA 91101 (Pasadena Convention Center)</p><p>◎ Love Wall</p><p>Location: 8549 Higuera St, Culver City, CA 90232</p><p>Features: A wall at Smashbox Studios created by NYC street artist Curtis Kulig. His &quot;Love Me&quot; designs are scattered throughout LA, and this most famous one consists of a large red wall with white Love lettering. Coming here feels like even the air is filled with love!</p><p><br></p><p>◎ Dream Big Butterfly</p><p>Location: 621 N La Cienega Blvd, West Hollywood, CA 90069</p><p>Features: Another famous fashion photography spot, the wall is filled with colorful butterflies flying around, covered in &quot;dream big&quot; text, very childlike and fun. The vibrant graffiti makes you dream about and expect for the future! (But parking on the street here is super difficult - I went around at least five times, finally gave up, so had to find photos online to show everyone)</p><p><br></p><p>◎ Bleeding Hearts</p><p>Location: Scattered throughout Los Angeles</p><p><br></p><p>Features: Designed by artist J. Goldcrown, walls adorned with countless colorful hearts that instantly lift your mood!</p><p><br></p><p>Alfred Coffee Beverly Hills</p><p>Brentwood Country Mart</p><p>Cafe Gratitude DTLA</p><p>Alfred Coffee in the Alley</p><p>◎ The Mondrian Wall</p><p>Location: 1660 S. La Cienega Blvd., Los Angeles</p><p>Features: Artist &amp; Craftsman Supply&#39;s exterior wall; as an art supplies store and artists&#39; paradise, its facade is equally artistic and bold, inspired by Dutch artist Piet Mondrian&#39;s work. Inside features various drawing and craft items; visiting here will definitely awaken your latent artistic cells—perhaps you can even become a Picasso!</p><p><br></p><p>◎ California Dreaming</p><p>Location: 3423 S. La Cienega Blvd., Los Angeles, CA 90016</p><p>Features: Besides Made in LA which represents Los Angeles well, this &quot;California Dreaming&quot; also has a very Californian vibe! The pink-blue color scheme reminds one of California&#39;s blue sky combined with the popular and comfortable pink that young people love today. I personally love this wall more than Paul Smith&#39;s pink wall!</p><p>◎ Hello Wall</p><p>Location: 8251 Melrose Ave, Los Angeles, CA 90046 (Carrera Cafe Wall)</p><p>Features: The wall art changes frequently but always looks great; previously featured La La Land themes.</p><p>A passerby even brought two dogs to match the mural, and everyone ended up borrowing the dogs for photos</p><p><br></p><p>◎ 4,300-square-foot mural by Kobra</p><p>Location: LGBT Youth Center &amp; Annex, 1220 N. Highland Ave. (between Lexington &amp; Fountain Avenues), Hollywood</p><p><br></p><p>◎ Technicolor Ooze</p><p>Location: 8850 Washington Blvd, Culver City, CA 90232</p><p>◎ Chris Uphues Wall</p><p>Location: 310 N Stanley Ave, Los Angeles, CA 90036</p><p>◎ Others</p><p>▶︎ Venice – Abbot Kinney</p><p><br></p><p>Nearby attractions Venice Beach, Abbot Kinney Blvd is LA&#39;s most famous bohemian district, lined with iconic California palm trees and featuring various art galleries, furniture stores, and coffee shops. It&#39;s also a well-known gathering place for food trucks in Los Angeles. In recent years, more designer brands have begun establishing storefronts here, replacing the original furniture and decorative item stores. The area has shifted from its original lifestyle vibe to something more fashion-focused. Besides excellent shopping opportunities, the street art graffiti along the road combined with the California-style palm trees lining both sides make it one of the favorite photography spots for fashion bloggers! Additionally, famous spots like Intelligentsia coffee shop, TOMS flagship store, The Piece Collective&#39;s yellow and white hut, plus restaurants Gelina, The Tasting Kitchen, and The Butcher&#39;s Daughter are must-visit destinations when you come here.</p><p>◎  Sea Walls by Tristan Eaton</p><p>Location: 1429 Abbot Kinney Blvd. (at Milwood Avenue), Venice</p><p>Features: Located in Venice at Gjelina - a renowned restaurant beloved by local fashion-forward individuals, the original leopard wall has been replaced with an ocean whale mural created by LA&#39;s famous graffiti artist Tristan Eaton.</p><p><br></p><p>◎  Love Wall</p><p>Location: Scattered throughout various parts of Los Angeles</p><p>Features: Created by artist J. Goldcrown, these walls are adorned with vibrant, colorful hearts that instantly lift your mood!</p><p><br></p><p>◎  Mural behind Wylie Wilson boutique</p><p>Location: 490 Santa Clara Ave. (between Electric Avenue &amp; Abbot Kinney), Venice</p><p><br></p><p>◎  Love Berto Mural</p><p>Location: The Otheroom, 1201 Abbot Kinney Blvd., Venice</p><p>◎ So Far So Good</p><p>Location: 1118 Abbot Kinney Blvd, Venice, CA 90291</p><p>◎ Roosterfish</p><p>Location: 1302 Abbot Kinney Blvd, Venice, CA 90291</p><p>◎ Aviator Nation</p><p>Location: 1224 Abbot Kinney Blvd, Venice, CA 90291</p><p>◎ Innocent Wonder</p><p>Location: 1317 Abbot Kinney Blvd, Venice, CA 90291</p><p>◎ Other</p><p>▶ Downtown LA (DTLA) – Arts District</p><p><br></p><p>Over the past few years, Downtown LA has undergone major renovations. The Arts District, as its name suggests, has become a new favorite gathering place for creative types besides Abbot Kinney. This area is filled with various specialty coffee shops, restaurants, and artistic small stores. Famous ones include Blue Bottle Coffee&#39;s first Los Angeles store, Stumptown Coffee&#39;s LA outpost, and Blacktop Coffee are all here. Angel City Brewery is even this district&#39;s landmark, everywhere around there are amazing graffiti that everyone must visit!</p><p><br></p><p>Tips:</p><p>But I want to especially remind you - parking in this area is very difficult. You need to be prepared with the mindset of spending a lot of time and constantly going in circles looking for parking spots!</p><p><br></p><p>◎ Polka Dot Wall</p><p>Location: Polka Dot Wall</p><p>Features: Located on the side wall of the parking lot behind The Springs, a famous all-around wellness center (which includes yoga classrooms, plant-based healthy meals, cold-pressed juices, etc.) on Imperial Street, created by street artist known by the pseudonym The Most Famous Artist.</p><p>As long as you visit here, you can enjoy a healthy day and take beautiful photos! Besides just the origin wall, there are other lovely graffiti pieces to photograph around both the main entrance and back door.</p><p><br></p><p>◎ The Heart of Los Angeles</p><p>Location: Scattered throughout DTLA and K-Town, with each heart featuring slight differences</p><p><br></p><p>– The Angel: Located at Angel City Brewery in DTLA. This famous brewery in LA&#39;s Arts District occupies 27,000 square feet and serves as a landmark for the area. Surrounding the industrial building are numerous street murals, with many specialty shops and restaurants nearby. These include The Pie Hole, famous for their pies; Wurstküche, a secretive sausage shop known for its frightening flavors like rattlesnake and rabbit; and Salt &amp; Straw, an ice cream shop offering healthy creative options. The Heart of Los Angeles graffiti can be found in the northwest corner near Traction Ave. I must admit, however, that my friends and I walked around Angel City Brewery without spotting it—either we were blind or someone has added a new mural since then!</p><p>)– Head + Heart: across from STAPLES Center, Downtown LA– Angel Dust: Pico Blvd &amp; Flower St, Downtown LA– Cornerstone: Olympic Blvd &amp; Olive St– Luck: Alvarado St &amp; 8th St., Macarthur Park– Blown Head: 110 Fwy &amp; Pico Blvd, Downtown LA– So Tall: 29th St. east of the Coliseum, Exposition Park– Giant Tears: Wilshire Blvd &amp; Westmoreland Ave, Koreatown– Foxy: Fox Hills Dr &amp; Pico Blvd</p><p>Feature: As one of LA&#39;s most famous street murals, The Heart of Los Angeles series was created by artist Tiphanie Brooke (pseudonym antigirl) and partner Mike Polson, expressing their love for the city. The inspiration actually began with Brooke&#39;s response to artist Milton Glaser&#39;s &quot;I Heart New York&quot; logo designed in 1977. Unexpectedly, this series quickly became one of the representatives of Los Angeles Urban Art and can now be seen all over LA.</p><p>◎  ArtShare LA</p><p>Location: 801 E. 4th Pl (at S Hewitt St), DTLA Arts District</p><p>Features: This colorful building painted by Insa is definitely one of the most eye-catching landmarks in DTLA. The black background with bold font colors makes it impossible to miss when passing through DTLA! (And note that they change colors and patterns periodically!)</p><p><br></p><p>◎  Row DTLA</p><p>Location: 777 Alameda St, Los Angeles, CA 90021</p><p>Features: Row DTLA is the trendiest lifestyle and entertainment hub in downtown LA recently. Located in the Arts District, it features many local fashion boutiques and cultural shops from around LA. On weekends there&#39;s Smorgasburg LA - like a daytime version of Taiwan&#39;s night markets, with exotic fusion dishes from all over the world, even bubble tea (卦包) and giant chicken cutlets! Besides the regular famous vendors, food stalls also change weekly. (I&#39;ll introduce properly another day). There are two famous photo spots here for social media enthusiasts.</p><p><br></p><p>◎  Peace Goddess &amp; Girl with Bubbles</p><p>Location: E 3rd St &amp; Traction Ave, Los Angeles, CA 90013</p><p>Features: (Peace Goddess has been replaced)</p><p>◎ UNTITLED by VYAL + RISK</p><p>Location: 707 E 4th Pl, Los Angeles, CA 90013</p><p>◎ Hopscotch City of Angels</p><p>Location: 580 Mateo St, Los Angeles, CA 90013</p><p>◎ Audrey Hepburn- Free Humanity</p><p>Location: 425 S Los Angeles St, Los Angeles, CA 90013</p><p>◎ Others</p><p>▶ Featured Recommendation: Artist Tristan Eaton</p><p>Local famous LA street graffiti artist Tristan Eaton has his works scattered all over LA. And Retna has also collaborated with another well-known graffiti artist El Mac on multiple art walls. Plus there are works by D&#39;Face featuring a comic book style.</p><p><br></p><p>▶ Conclusion</p><p>Los Angeles streets and alleys still have many, many wonderful street arts waiting for you to discover~</p><p><br></p><p># Los Angeles Travel, You Might Like</p><p>Go Los Angeles Card - visit Universal Studios and 30 other popular attractions</p><p><br></p><p>More Related Guides</p><p>Go Los Angeles City Card - Attractions Overview</p><p>↓ Who Is This Go Los Angeles Card For?</p><p>▶︎ Must-Visit Popular Attractions in Los Angeles</p><p>66012234</p><p>Guide</p>
+        
+
+        <a class="backLink" href="list-1.html">← Back to Los Angeles</a>
+      </article>
+    </main>
+  </body>
+</html>

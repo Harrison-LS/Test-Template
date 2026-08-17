@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <title>Los Angeles' incredibly delicious and budget-friendly eats that even Hollywood celebs love!</title>
+    <style>
+      :root {
+        --ink: #171512;
+        --muted: #5f5a54;
+        --line: #ded6cc;
+        --paper: #ffffff;
+        --warm: #f8efe5;
+        --accent: #c47a29;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        line-height: 1.55;
+      }
+
+      .hero {
+        width: 100%;
+        height: clamp(260px, 38vw, 520px);
+        overflow: hidden;
+      }
+
+      .hero img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+      }
+
+      .article {
+        width: min(760px, calc(100% - 40px));
+        margin: 0 auto;
+        padding: 34px 0 72px;
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin: 0;
+        font-family: Georgia, "Times New Roman", serif;
+        letter-spacing: 0;
+        line-height: 1.05;
+      }
+
+      h1 {
+        max-width: 620px;
+        font-size: clamp(34px, 5vw, 54px);
+        font-weight: 800;
+      }
+
+      .location {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin: 18px 0;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .location svg {
+        width: 18px;
+        height: 18px;
+        flex: 0 0 auto;
+      }
+
+      .subtitle {
+        max-width: 650px;
+        margin: 0 0 22px;
+        color: var(--muted);
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(18px, 2.4vw, 23px);
+        font-style: italic;
+        line-height: 1.45;
+      }
+
+      .description {
+        max-width: 650px;
+        margin: 0 0 28px;
+        color: #302c27;
+        font-size: 15px;
+      }
+
+      .brief {
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        border-radius: 6px;
+        padding: 18px 20px;
+        background: var(--warm);
+      }
+
+      .brief-title {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 10px;
+        color: var(--accent);
+        font-weight: 800;
+      }
+
+      .brief-title svg {
+        width: 18px;
+        height: 18px;
+      }
+
+      .brief p {
+        margin: 0;
+        color: #302c27;
+        font-size: 15px;
+      }
+
+      .content {
+        border-top: 1px solid var(--line);
+        padding-top: 24px;
+      }
+
+      h2 {
+        margin-bottom: 16px;
+        font-size: 30px;
+      }
+
+      .section {
+        margin: 0 0 24px;
+      }
+
+      .section h3 {
+        margin-bottom: 8px;
+        font-size: 18px;
+        line-height: 1.25;
+      }
+
+      .section p,
+      .section-body {
+        margin: 0;
+        color: #292520;
+        font-size: 14px;
+        white-space: pre-line;
+      }
+
+      .section-body img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 16px 0;
+        border-radius: 8px;
+      }
+
+      .section-body a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      @media (max-width: 640px) {
+        .article {
+          width: min(100% - 28px, 760px);
+          padding-top: 26px;
+        }
+
+        .hero {
+          height: 260px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <figure class="hero">
+      <img src="" alt="Los Angeles' incredibly delicious and budget-friendly eats that even Hollywood celebs love!" />
+    </figure>
+
+    <main class="article">
+      <h1>Los Angeles' incredibly delicious and budget-friendly eats that even Hollywood celebs love!</h1>
+
+      <p class="location">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            fill="currentColor"
+            d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+          />
+        </svg>
+        <span>Los Angeles</span>
+      </p>
+
+      <p class="subtitle"></p>
+      <p class="description"></p>
+
+      <aside class="brief">
+        <p class="brief-title">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M7 3h10a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Zm1 4v2h8V7H8Zm0 4v2h8v-2H8Zm0 4v2h5v-2H8Z"
+            />
+          </svg>
+          Brief
+        </p>
+        <p>Have you heard that eating out in America can be quite expensive? Just thinking about it hurts your wallet. But no matter how high the cost of living is in any city, there are always some affordable culinary gems hidden around every corner. After extensive searching, I've finally discovered a cluster of popular and budget-friendly restaurants in Los Angeles where you can enjoy delicious food at great prices. They say there's even a chance to run into celebrities! Food lovers, come on in and take a look!</p>
+      </aside>
+
+      <section class="content" aria-labelledby="content-title">
+        <h2 id="content-title">Content</h2>
+        
+          <article class="section">
+            <div class="section-body">Pink's Hot Dog - A Hot Dog That Attracts Countless Celebrities
+BY @SiShiSanZhuoHua
+
+When it comes to American cuisine, you must start with hot dogs. Let's get to know a hot dog that everyone loves, from Hollywood celebrities down to regular folks: Pink's Hot Dog. Opened in 1939 and still operating today, Pink's is absolutely the king of popularity among hot dog joints. Despite being a small street-side shop, it has attracted countless Hollywood stars including Jackson, Katy Perry, Mrs. Obama... too many famous people have visited, so I won't list them all - just go check out the photo wall yourself.
+
+Image by @ChloeAlwaysOnTheRoad
+
+Pink's Hot Dog portions are substantial and there are plenty of varieties to choose from. What makes it most special is that they add Mexican chili sauce and guacamole, creating a rich flavor experience. The hot dogs themselves are named after Hollywood movies or TV shows, giving the place an authentic Hollywood atmosphere. You never know which star you might encounter at Pink's!
+
+Tips:
+- Average cost per person: $10 USD
+- Address: 709 North La Brea Avenue, Los Angeles, CA, United States
+- Website: ***
+Pink's Hot Dog
+Pink's Hot Dog has been serving delicious food in Los Angeles for over 70 years and remains extremely popular today, often with long lines forming outside.
+The restaurant walls are adorned with photos of many famous people who have visited, such as Michael Jackson and Tom Hanks.
+Their hot dogs come in large portions with a wide variety of options. Adding Mexican chorizo and guacamole makes the flavor truly outstanding.
+
+Philippe the Original - Classic French Dip Sandwich
+Founded in 1908, Philippe the Original is absolutely a century-old establishment that is well-known everywhere. After 1951, it relocated to next to Chinatown. It is said that The French Dip was invented here. Legend has it that when police officers came in to order, the owner accidentally dropped a piece of baguette into a dish full of dipping sauce. This fortunate coincidence led to the creation of this delicious food. It seems every food has an unexpected story behind it, such as Yunnan Bridge Noodle Soup.
+
+This classic French Dip Sandwich is made with cheese-filled French bread rolls stuffed with roasted beef, roasted pork, roasted lamb leg, turkey, or ham. You can choose single sauce, double sauce, or fully covered in sauce based on your preference for richness. It's recommended to try the mustard sauce - the flavor is truly excellent.
+Tips:
+Price per person: $1-$20
+Address: 1001 N Alameda St, Los Angeles, CA 90012
+Phone: (213) 628-3781
+Hours: 6:00—22:00
+
+Philippe The Original
+Price range: $1-$20
+Dining options: Breakfast/Brunch, Lunch, Dinner, Takeout, Dessert
+Cuisines: Soups, American, Delicatessen
+Website: ***
+
+We know they have tuna sandwiches and peanut butter & jelly too, but you must order French fries - it's their specialty! You can also try one or two slices of Lomaonica's New York Pizza.
+
+Irv's Burgers - Affordable burgers you must eat in Los Angeles
+Irv's Burgers has been open since 1946, the most popular is the Old School burger. Friendly service and reasonable prices have made it stand firm for decades.
+Even with soaring rent, prices remain surprisingly affordable. Burgers are the signature dish—generous portions that deliver excellent value. Alongside In n' Out, this is a must-visit budget-friendly burger spot in Los Angeles. The burgers here are noticeably larger than those at In n' Out.
+
+Tips:
+Average meal costs around $1-15 USD. Another solid option, In n' Out, averages about $6 per person.
+
+Address: Irv's Burgers - 7998 Santa Monica Blvd, West Hollywood, CA 90046, USA
+Phone: (323) 650-2456
+
+Steaks at Musso & Frank Grill - One of Hollywood's oldest restaurants
+
+Steaks at Musso & Frank Grill was recommended by Cai Lan, a renowned food critic in the Chinese community, and included in his book "Restaurants You Must Visit in Your Life." This makes it definitely worth a visit. Founded in 1919, this restaurant is among Hollywood's most historic dining establishments. Except for one renovation in 1937, nothing has changed since then. Walking into a restaurant from over 100 years ago offers an experience that's truly unique.
+Even if you can find steaks and cutlets that taste better than here at other places, yet you cannot feel the unique sentiment left behind by this Hollywood from a bygone era. Order a martini along with Welsh Rarebit (which has existed for 100 years) and Shrimp Louie salad; choose a hot steak, let's enjoy eternity of time.
+
+Tips:
+Average cost per person: $30-40
+Address: 6667 Hollywood Blvd, Hollywood, CA 90028
+Phone: (323) 467-5123
+Website: ***
+
+Musso & Frank Grill
+Subway Station: Hollywood / Highland Station
+URL: ***
+
+Santa Monica Fish Market - fresh and affordable seafood here
+By @Life Travel
+
+There are many expensive high-end seafood restaurants along the Santa Monica coast, but there's still a super affordable great place hidden.
+As they say, no matter where you are, if you want to enjoy affordable fresh food, you can't miss visiting various farmers markets. However, this seafood market is a bit different from what you might imagine. It's not messy or dirty; rather it functions more like a clean seafood supermarket. The service here is very attentive. On one side you can buy the freshest daily seafood to cook at home, while on the other side there's a small restaurant where you can sit down and enjoy the freshest oysters or American crab - prices are more than 50% cheaper than other seafood restaurants!
+
+Image by: @LifeTravel
+
+**Tips:**
+Average spending per person: $40
+Address: 1000 Wilshire Blvd, Santa Monica, CA 90401
+Operating hours: Weekdays 9:00-21:00, Sunday 9:00-20:00
+Website: ***
+
+**Santa Monica Fish Market**
+- This seafood processing shop with over 60 years of history is renowned for its high-quality seafood varieties and tidy dining environment.
+- Diners select their own seafood at the market first, then have it processed and cooked on-site in the restaurant.
+- Though a seafood market, the dining experience is excellent and prices remain very reasonable.
+
+**Local - Delicious food from a Michelin chef's food cart**
+True delicacy is never confined to fancy restaurants. LocoL was created by founders—the father of LA food trucks Roy Choi and Michelin-starred chef Daniel Patterson—two highly renowned chefs who joined forces to craft truck cuisine. Despite being Michelin-level restaurant chefs, they went out onto the street to make food truck delights, all just so poor people could eat healthy, affordable food.
+
+**Price Reference in the Shop - Tips:**
+*   Per person: $1-6 USD (please refer to price menu)
+*   Address: Watts LocoL - 1950 E. 103rd St., Los Angeles, CA 90002, USA
+*   Opening hours: Tuesday through Saturday, daily from 11:30 AM to 2:00 PM
+*   Website: ***
+
+**Sapp Coffee Shop - Thai Boat Noodles at Great Value and Price**
+
+Those who have been to Thailand surely know that even in Thailand, boat noodles are famous for their excellent value. The restaurant offers pork or beef varieties of the noodle dish. Inside you'll find beef, vermicelli-like rice noodles, meatballs, tripe, liver, crispy fried pork skin, chilies, green onions, bean sprouts, etc., all served with beef broth that has been simmering since 5 AM—extremely delicious.
+Tips:
+Average price per person: $6
+Recommended dishes: Crab meat egg noodles, Thai-style stir-fried rice noodles are also great
+Address: Sapp Coffee Shop - 5183 Hollywood Blvd, Los Angeles, CA 90027, USA
+Phone: (323) 665-1035
+Taste of Tehran-Autentic Persian Restaurant
+There are many Iranian descendants gathered in Beverly Hills and West Los Angeles area, and here have emerged many Persian restaurants. Along Westwood Blvd, there is a Persian restaurant every few steps. The most highly recommended ones are Taste of Tehran and Naab Café; both restaurants offer authentic Middle Eastern/Mediterranean cuisine (grilled skewers & shawarma & salads & spiced rice)
+Tips:
+Average price per person: $10
+Address: 1915 Westwood Blvd, Los Angeles, CA 90025, USA
+Phone: (310) 470-0022
+Website: ***
+Closing remarks
+The gourmet restaurants featured in these reviews are all located near Hollywood, the San Fernando Valley, and Santa Monica—areas that are easily accessible on foot. Overall, they are very convenient to reach. In Los Angeles, you can almost taste delicious cuisine from all over the world. Thanks to its immigrant culture, people from countries around the globe have settled here, imprinting their home countries' culinary traditions onto this city. There is European, Asian, South American, and African food. They still retain their original flavors, with some even importing raw ingredients directly from their homeland. So you don't need to travel globally to experience these cuisines—Los Angeles alone is sufficient.
+
+Beyond food, Los Angeles iconic photo spots must not be missed. Universal Studios and Disneyland will help you rediscover your inner child; those who want to avoid long queues can purchase direct access passes. You can also visit Madame Tussauds Wax Museum in Hollywood for some photos. This city of delicious food and endless fun has me eagerly anticipating it~</div>
+          </article>
+        
+      </section>
+    </main>
+  </body>
+</html>

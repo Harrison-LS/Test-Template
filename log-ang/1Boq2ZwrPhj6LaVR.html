@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Stay at beaches loved by locals, and have fun like them!" />
+    <title>Embracing the Ocean | Living on California's Most Beautiful Beaches</title>
+    <style>
+      :root {
+        --paper: #f5f1eb;
+        --ink: #163d36;
+        --body: #3f3a34;
+        --muted: #8a8379;
+        --line: #ddd5ca;
+        --accent: #d9782f;
+        --white: #fffaf4;
+        --shadow: 0 22px 70px rgba(28, 25, 20, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        line-height: 1.72;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .hero {
+        min-height: clamp(330px, 48vw, 560px);
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        padding: clamp(28px, 7vw, 70px) clamp(24px, 8vw, 76px);
+        background: #28463f;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.12)),
+          url("");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .heroInner {
+        position: relative;
+        width: min(900px, 100%);
+        color: #ffffff;
+      }
+
+      .heroLocation {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 24px;
+        color: rgba(255, 255, 255, 0.78);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .heroLocation svg {
+        width: 17px;
+        height: 17px;
+        color: #f0a45f;
+      }
+
+      h1 {
+        max-width: 880px;
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(30px, 4.8vw, 54px);
+        font-weight: 900;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .brief {
+        width: min(760px, 100%);
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 18px;
+        color: #5a5148;
+        font-size: clamp(17px, 1.9vw, 20px);
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.58;
+      }
+
+      .articleWrap {
+        width: min(900px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: clamp(42px, 6vw, 68px) 0 72px;
+      }
+
+      .content {
+        width: min(760px, 100%);
+        color: var(--body);
+        font-size: clamp(16px, 1.8vw, 18px);
+        line-height: 1.5;
+      }
+
+      .content p {
+        margin: 0 0 12px;
+      }
+
+      .content h2,
+      .content h3,
+      .content h4 {
+        margin: 46px 0 18px;
+        color: var(--ink);
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+
+      .content h2 {
+        font-size: clamp(28px, 4vw, 38px);
+      }
+
+      .content h3 {
+        font-size: clamp(23px, 3vw, 30px);
+      }
+
+      .content ul,
+      .content ol {
+        margin: 0 0 30px;
+        padding-left: 28px;
+      }
+
+      .content li {
+        margin: 8px 0;
+      }
+
+      .content blockquote {
+        margin: 34px 0;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 20px;
+        color: #5a5148;
+        font-style: italic;
+      }
+
+      .content img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 42px 0 12px;
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+      }
+
+      .content figure {
+        margin: 42px 0;
+      }
+
+      .content figure img {
+        margin: 0 0 12px;
+      }
+
+      .content figcaption {
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .backLink {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 46px;
+        border-top: 1px solid var(--line);
+        padding-top: 28px;
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.18em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .backLink:hover {
+        color: var(--accent);
+      }
+
+      @media (max-width: 720px) {
+        .hero {
+          min-height: 420px;
+          padding: 30px 24px;
+        }
+
+        .articleWrap {
+          width: min(100% - 28px, 900px);
+          padding-bottom: 48px;
+        }
+
+        .content {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="heroInner">
+        <p class="heroLocation">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+            />
+          </svg>
+          <span>Los Angeles</span>
+        </p>
+        <h1>Embracing the Ocean | Living on California's Most Beautiful Beaches</h1>
+      </div>
+    </header>
+
+    <main class="articleWrap">
+      
+      <p class="brief">Stay at beaches loved by locals, and have fun like them!</p>
+      
+
+      <article class="content">
+        
+          <p>Venice Beach Hotel (Los Angeles)</p><p>Venice Beach Hotel</p><p><br></p><p>The hotel is located just one block from Venice Beach, with a sightseeing bus stop nearby. A delicious and hearty breakfast is served every morning, and there are many restaurants worth trying in the area.</p><p><br></p><p>The rooms are modern and stylish, with clean and tidy beds. The bathrooms are spacious, making the stay very comfortable.</p><p><br></p><p>Venice Beach Hotel</p><p>Venice Beach Hotel is located in Venice, right next to the riverside promenade, within a 10-minute walk of Venice Beach and the Venice Beach Boardwalk. This boutique hotel is 1.8 miles (2.9 km) from Santa Monica Beach and 3 miles (4.8 km) from Santa Monica Pier. You can make full use of vacation facilities such as bicycle rental, or enjoy the views from the terrace and garden. Other features include free WiFi, concierge service, and vending machines. Additional services and amenities include 24-hour front desk, luggage storage, and a safe at reception. Self-parking is available with an additional fee.</p><p><br></p><p>The 43 air-conditioned rooms come equipped with refrigerators to ensure home-like comfort during your trip. Complimentary wireless internet keeps you connected with friends; cable channels meet your entertainment needs.</p><p>Private bathrooms feature complimentary toiletries and hair dryers. Amenities include a safe, tea/coffee making facilities, and a telephone with free local calls.</p><p><br></p><p>Kenny Venice Beach Hotel</p><p><br></p><p>It is very convenient for getting to the beach from the hotel. It&#39;s also close to the airport and allows you to walk to many nearby restaurants, bars, and shops. Parking and breakfast are provided, offering excellent value for money.</p><p><br></p><p>The room design has a warm and cozy style with comfortable bedding and fully equipped facilities that truly match the Venice vibe.</p><p><br></p><p>Kenny Venice Beach Hotel</p><p>Kenny Venice Beach Hotel is located in Venice within the shopping district, less than 10 minutes by car from Venice Beach and Santa Monica Pier. This hotel is 2.3 miles (3.8 kilometers) from Santa Monica Beach and 8.2 miles (13.2 kilometers) from Kia Forum. Guests can fully utilize the vacation facilities offered by the hotel, including an outdoor pool, hot tub, and fitness center. Other features of this hotel include free WiFi, concierge service, and vending machines. Complimentary room service is available during select hours. Special services and amenities include dry cleaning/laundry service, 24-hour front desk, and multilingual staff.</p><p>Hotel offers self-service parking at an additional charge. Our 68 air-conditioned rooms will surely make you feel like home on your journey. Complimentary wireless Internet keeps you connected with friends; satellite TV channels satisfy your entertainment needs. Bathrooms feature shower/tub combinations and free toiletries. Amenities include a safe and desk, and room service is available upon request.</p><p><br></p><p>Final Words</p><p>Staying by this beach - walking along the waves during the day and falling asleep under the gentle sea breeze, exotic music, and rhythmic surf at night - makes for an exceptional vacation experience!</p><p><br></p><p>When visiting California, how can you not experience its sunshine and beaches?! Santa Monica and Venice are the most popular beach areas in town, offering breathtaking sunsets, soft sandy shores, and beautiful scenery full of attractive people. It&#39;s a perfect place for vacationing, leisure activities, photography, and artistic sketching.</p><p><br></p><p>Staying in Santa Monica</p><p>Ameraldina Santa Monica Hotel</p><p>The hotel is just two blocks from Santa Monica Beach, offering free parking plus complimentary bicycle rentals.</p><p>Ride bikes through the streets and relax by the seaside, living like locals. The room features blue and white tones that are relaxing, with a very comfortable bed; pull back the curtains to enjoy the view. From the balcony, you can see colorful buildings in the distance and where sea meets sky as one on the beach, creating a scene like a painting.</p><p><br></p><p>Hyatt Centric Santa Monica Delphi Hotel</p><p><br></p><p>Hyatt Centric Delphi Santa Monica is located at Santa Monica Ocean Park, just 3 minutes by car from Pier 21 and only 7 minutes from Santa Monica Beach. The hotel is 1.9 miles (3 km) from Venice Beach and 10.3 miles (16.6 km) from Kia Forum. Make full use of the resort facilities provided by the hotel, such as an outdoor swimming pool, a 24-hour fitness center, and bicycle rental. Other amenities include free WiFi, concierge service, and a ballroom.</p><p><br></p><p>Dine deliciously at Coastal Harvest, serving guests staying at Hyatt Centric Delphi Santa Monica. After a busy day, relax at the bar/lounge. A made-to-order breakfast is available daily from 6:30 AM to 11:00 AM for a fee.</p><p><br></p><p>Special services and amenities include dry cleaning/laundry service, 24-hour front desk, and multilingual service.</p><p>Planning an event in Santa Monica? This hotel features 1,394 square meters (15,000 square feet) of space including meeting venues and 11 conference rooms. Complimentary self-parking is available for guests. There are 315 uniquely decorated guest rooms equipped with refrigerators and LCD televisions; you&#39;ll find home-like comfort throughout your stay. Your bedding includes duvets and premium linens. Free wireless internet keeps you connected with friends, while cable channels satisfy your entertainment needs. Private bathrooms featuring shower/tub combinations provide complimentary toiletries and hairdryers.</p><p><br></p><p>Huntley Santa Monica Beach Hotel</p><p>Located in downtown Santa Monica, this hotel is just minutes away from the beach and commercial district, making travel, dining, and shopping very convenient. The Penthouse restaurant offers expansive views with stunning scenery - every corner provides magnificent ocean vistas, and both the food and dining atmosphere are exceptional! Rooms are spacious and bright with ample natural light, clean and comfortable, while bathrooms feature Bulgari toiletries.</p><p><br></p><p>Huntley Santa Monica Beach Hotel</p><p>The Huntley Hotel is located at Wilshire Montana in Santa Monica, only 3 minutes by car from the Santa Monica Pier, and a 6-minute drive to Santa Monica Beach.</p><p>This beachfront hotel is 2.3 miles (3.7 km) from Venice Beach and 14.1 miles (22.7 km) from Hollywood Walk of Fame. Guests can enjoy extensive vacation amenities including a hot tub, fitness center, and bicycle rental. Additional features include complimentary WiFi, concierge service, and babysitting service (fee applies). Free shuttle service is available with coverage up to 3 miles. You can dine at The Penthouse restaurant serving California cuisine, or relax at the bar/lounge while enjoying ocean views. Alternatively, stay in your room with room service available during select hours. A complimentary full breakfast is served daily from 7:00 AM to 11:00 AM. Special services include high-speed cable internet (fee applies), a 24-hour business center, and luxury car or executive vehicle transportation. Planning an event at Santa Monica? This hotel provides 465 square meters (5,000 square feet) of space, including a meeting center and conference rooms. A fee is charged for on-demand airport shuttle service from the property. Of the 204 guest rooms, each features a minibar and espresso machine to provide home-like comfort during your stay. The extra-thick mattresses include down comforters and Egyptian cotton sheets. A 60-inch LCD television with digital channels caters to entertainment needs; complimentary wireless internet keeps you connected with friends. Private bathrooms offer branded toiletries and hair dryers. Santa Monica Beach Hotel</p><p>The location is excellent - Santa Monica Beach is directly across from the main entrance, very close to an amusement park. Restaurants line both sides, with Nordstrom mall nearby - extremely convenient! The rooms feature modern decor, are bright and airy, with clean bathrooms that feel fresh yet comfortable.</p><p><br></p><p>Shoreside Hotel</p><p>Located in central Santa Monica, a 4-minute walk to Santa Monica Pier and 7 minutes to Santa Monica Beach. This beach hotel is 1.6 miles (2.5 km) from Venice Beach and 1.8 miles (2.9 km) from the Venice Beach Boardwalk.</p><p><br></p><p>Don&#39;t miss out on vacation amenities including an outdoor pool, hot tubs, bike rentals, and more. The hotel offers free WiFi, concierge service, a gift shop/newsstand, two restaurants - try Shoreside Restaurant for American cuisine; in-room dining available during select hours. Welcome to the poolside bar for a relaxing drink; plus two additional bars/lounges to choose from. Paid made-to-order breakfast served daily from 6:30 AM to noon.</p><p><br></p><p>Premium services and facilities include limousine or executive car service, computer stations, and complimentary morning newspapers in the lobby. Planning an event in Santa Monica?</p><p>This hotel features 74 square meters (800 square feet) of space, including meeting venues and conference rooms. With 164 guest rooms offering iPod docks and minibars; you&#39;ll surely find the comfort of home during your journey. Your plush mattresses come with down comforters and Egyptian cotton sheets. Rooms feature private furnished balconies. A 55-inch LED TV is provided with cable channels. The private bathrooms equipped with showers offer large rainfall showerheads and designer toiletries.</p>
+        
+
+        <a class="backLink" href="list-1.html">← Back to Los Angeles</a>
+      </article>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <title>Los Angeles Travel Guide: La La Land Film Location Tour</title>
+    <style>
+      :root {
+        --paper: #f5f1eb;
+        --ink: #163d36;
+        --body: #3f3a34;
+        --muted: #8a8379;
+        --line: #ddd5ca;
+        --accent: #d9782f;
+        --white: #fffaf4;
+        --shadow: 0 22px 70px rgba(28, 25, 20, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        line-height: 1.72;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .hero {
+        min-height: clamp(330px, 48vw, 560px);
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        padding: clamp(28px, 7vw, 70px) clamp(24px, 8vw, 76px);
+        background: #28463f;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.12)),
+          url("");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .heroInner {
+        position: relative;
+        width: min(900px, 100%);
+        color: #ffffff;
+      }
+
+      .heroLocation {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 24px;
+        color: rgba(255, 255, 255, 0.78);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .heroLocation svg {
+        width: 17px;
+        height: 17px;
+        color: #f0a45f;
+      }
+
+      h1 {
+        max-width: 880px;
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(30px, 4.8vw, 54px);
+        font-weight: 900;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .brief {
+        width: min(760px, 100%);
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 18px;
+        color: #5a5148;
+        font-size: clamp(17px, 1.9vw, 20px);
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.58;
+      }
+
+      .articleWrap {
+        width: min(900px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: clamp(42px, 6vw, 68px) 0 72px;
+      }
+
+      .content {
+        width: min(760px, 100%);
+        color: var(--body);
+        font-size: clamp(16px, 1.8vw, 18px);
+        line-height: 1.5;
+      }
+
+      .content p {
+        margin: 0 0 12px;
+      }
+
+      .content h2,
+      .content h3,
+      .content h4 {
+        margin: 46px 0 18px;
+        color: var(--ink);
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+
+      .content h2 {
+        font-size: clamp(28px, 4vw, 38px);
+      }
+
+      .content h3 {
+        font-size: clamp(23px, 3vw, 30px);
+      }
+
+      .content ul,
+      .content ol {
+        margin: 0 0 30px;
+        padding-left: 28px;
+      }
+
+      .content li {
+        margin: 8px 0;
+      }
+
+      .content blockquote {
+        margin: 34px 0;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 20px;
+        color: #5a5148;
+        font-style: italic;
+      }
+
+      .content img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 42px 0 12px;
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+      }
+
+      .content figure {
+        margin: 42px 0;
+      }
+
+      .content figure img {
+        margin: 0 0 12px;
+      }
+
+      .content figcaption {
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .backLink {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 46px;
+        border-top: 1px solid var(--line);
+        padding-top: 28px;
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.18em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .backLink:hover {
+        color: var(--accent);
+      }
+
+      @media (max-width: 720px) {
+        .hero {
+          min-height: 420px;
+          padding: 30px 24px;
+        }
+
+        .articleWrap {
+          width: min(100% - 28px, 900px);
+          padding-bottom: 48px;
+        }
+
+        .content {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="heroInner">
+        <p class="heroLocation">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+            />
+          </svg>
+          <span>Los Angeles</span>
+        </p>
+        <h1>Los Angeles Travel Guide: La La Land Film Location Tour</h1>
+      </div>
+    </header>
+
+    <main class="articleWrap">
+      
+
+      <article class="content">
+        
+          <p>Play City of Stars 00:00... Volume</p><p><br></p><p>About this city, Hollywood has dreamed countless dreams; &quot;La La Land&quot; is neither the first nor will it be the last. The charm of LA extends far beyond just the places shown in this film. Now, follow in the characters&#39; footsteps to discover your own romantic legends in this city!</p><p><br></p><p>Tips:</p><p>If you take some time to explore Los Angeles, you&#39;ll discover that this city is like an onion, gradually revealing its &quot;inner core.&quot;</p><p>— Director and screenwriter Damien Chazelle</p><p><br></p><p>Griffith Park - Cathy&#39;s Corner</p><p>Griffith Park covers 1741.5 hectares and is the 11th largest municipal park in the United States.</p><p><br></p><p>The most famous scene from the film must be when Mia and Sebastian dance together on a hillside with panoramic views of Los Angeles. This beautiful moment was filmed at Cathy&#39;s Corner along Mount Hollywood Drive within Griffith Park.</p><p>Griffith Park</p><p>In the movie &quot;La La Land,&quot; the two lead characters danced together here, presenting a &quot;Wonderful Tonight.&quot; The memorable starlit dance under the night sky also took place at the observatory within the park. The park features multiple attractions including an observatory, zoo, Owyhee National Center, and Victorian-style train station buildings. You can stroll along the paths, climb mountains, play golf, ride horses, or enjoy rides on miniature trains.</p><p><br></p><p>The Lighthouse Café</p><p>Located in Hermosa Beach, The Lighthouse Café has been a venue for jazz performances since May 1949. Legendary jazz musicians Miles Davis, Chet Baker, Art Blakey, and Cannonball Adderley have all performed here. This is the very jazz bar that Mia and Sebastian frequently visited after their relationship began. Today, in addition to jazz, the café also features reggae and rock music.</p><p><br></p><p>In &quot;La La Land,&quot; Sebastian and Mia shared jazz at The Lighthouse Café, where Sebastian told Mia his dream of opening his own authentic jazz club.</p><p>Lighthouse Cafe is located on Hermosa Beach and has been a jazz performance venue since it opened in 1949, a paradise for jazz musicians.</p><p><br></p><p>Hermosa Pier</p><p><br></p><p>The most famous beach in Los Angeles has to be Santa Monica, but the director chose not this one, going instead to Hermosa Beach further south with fewer tourists and more local atmosphere. However, the real pier doesn&#39;t actually have those vintage streetlights from the movie.</p><p><br></p><p>Hermosa Beach stretches along the Pacific Ocean, making it a favored spot for fishing and watching sunsets.</p><p><br></p><p>After leaving Lighthouse Cafe, Sebastian walks along the pier, singing &quot;City of Stars.&quot;</p><p><br></p><p>Hermosa Beach is a filming location for the movie La La Land. After leaving Lighthouse Cafe, Sebastian walked along the pier and sang City of Stars. Near Hermosa Beach is Hermosa Pier, a romantic spot for couples where most nearby restaurants offer beautiful ocean views. One can enjoy a romantic candlelit dinner while watching the sunset glow here.</p><p><br></p><p>Colorado Street Bridge</p><p><br></p><p>The ornate bridge that the two people walk hand in hand as their feelings grow toward each other is Colorado Street Bridge.</p><p>The Colorado Street Bridge serves as a transportation hub connecting Los Angeles with Old Pasadena and stands as one of the oldest concrete bridges in the Los Angeles area. When first constructed in 1913, the Colorado Street Bridge was known as the world&#39;s tallest concrete bridge, featuring massive arched openings that rise 150 feet high.</p><p><br></p><p>Colorado Street Bridge</p><p>Colorado Street Bridge was one of the locations where Mia and Sebastian shared romantic summer dates. In reality, this bridge functions as a transportation hub connecting downtown Los Angeles with Old Pasadena, while in the film, it becomes a place where the two protagonists stroll and share their thoughts and feelings.</p><p><br></p><p>The Colorado Bridge spans 1500 feet with its elegant curved design, serving as a transportation hub linking Los Angeles and Old Pasadena, and was the final stop along the famous Route 66. Every July, grand celebrations are held here.</p><p><br></p><p>Griffith Observatory</p><p>Griffith Observatory is Los Angeles&#39;s greatest cultural attraction, appearing repeatedly in television shows and films. Its most famous appearance is undoubtedly in the 1955 classic &quot;Rebel Without a Cause,&quot; starring James Dean and Natalie Wood. To pay tribute to this iconic film, Mia and Sebastian also visited the observatory and performed an unforgettable romantic dance at the Samuel Oschin Planetarium.</p><p>Griffith Observatory</p><p>• Located on a hilltop northwest of Los Angeles, offering panoramic views of the entire city.</p><p>• Features astronomical exhibits about planets and the universe; the top features a dome theater modeled after the sky that shows 360° films of celestial evolution using naked-eye 3D technology that makes cosmic wonders feel close at hand.</p><p>• The open-air platform offers stunning views over Los Angeles, where orderly streets, neat city buildings, and downtown skyscrapers are clearly visible.</p><p>• After sunset, the observatory becomes accessible for free, allowing visitors to admire the starry night sky and lunar surface features.</p><p><br></p><p>Angels Flight Railway</p><p>Under montage-style cinematography, Mia and Sebastian board the iconic Angels Flight on Hill Street in downtown Los Angeles.</p><p>Built in 1901, this 99-meter railway stands as the world&#39;s shortest cable system, exuding a rich vintage charm.</p><p>Although operations ceased in 2013, producers successfully obtained filming rights for a single day on this historic Angels Flight. Restoration efforts are now underway by the operating committee, promising soon to bring back these memorable cinematic moments from &quot;La La Land.&quot;</p><p><br></p><p>Angels Flight was a filming location for the movie &quot;La La Land,&quot; where Mia and Sebastian had a romantic date and shared sweet kisses in the wooden carriages.</p><p>Angel Railway has been operating since 1901 and is the world&#39;s shortest railway. Visitors can take Angel Railway to experience this brief and enchanting journey in a vintage car with orange and black stripes, riding wooden cars.</p><p><br></p><p>Los Angeles Grand Central Market</p><p>Located opposite Angel Railway, director used montage techniques in the film to showcase this popular location for viewers. Established in 1917, this market gathers various traditional and modern food stalls. It is a hippie-style food city directly across from Angel Railway, a holy site that must-visit destinations for foodies in Los Angeles.</p><p><br></p><p>In the movie, Mia and Sebastian visited Sarita&#39;s Pupuseria, a small stall in the market, which is the popular restaurant.</p><p><br></p><p>Watts Towers</p><p>Mia and Sebastian&#39;s date spots also include the uniquely styled Watts Towers. This oddly-shaped tower is hailed as an architectural miracle because it was completely built by Italian architect Simon Rodia over 33 years alone. Japanese architecture master Tadao Andō praised Watts Towers as Rodia&#39;s &quot;soul cry&quot; expression.</p><p>Perhaps La La Land, a film about dreams, serves as a fitting epilogue as well.</p><p><br></p><p>Watts Tower</p><p>One of the date scenes between the male and female leads in La La Land was filmed here.</p><p><br></p><p>Watts Towers was built over more than 30 years by a man named Simon Rodia. The structure features unique architecture that is magnificent and imposing. Standing at more than 30 meters tall, it was constructed primarily from simple materials such as scrap metal, pottery shards, stone, and glass, using steel, cement, and mortar to hold everything together. This tower can be considered a work of art that transcends architectural laws in every aspect. Every year it attracts visitors from all over the world who come specifically to see it. In any way you look at it, this tower stands as an artistic creation that goes beyond absolute architectural principles, making it extremely worth viewing.</p><p><br></p><p>Smoke House Restaurant</p><p>The place where Mia and Sebastian first met is actually just one street away from Warner Bros. Studios — the Smoke House Restaurant. Thanks to its convenient location, many major Hollywood stars, directors, and producers are regulars here. If you&#39;re visiting LA and want to follow celebrity trails, you must come have a meal at this place.</p><p><br></p><p>This legendary steakhouse also features a night club where Sebastian played holiday music.</p><p>Warner Bros. Studio Location frequently hosts various events such as the Annual Drum Festival and Jazz Music Festival. Smoke House Restaurant.</p><p><br></p><p>The coffee shop where Mia works is located at Warner Bros. Studios - the dream-making place that countless people aspire to visit. From &quot;Casablanca&quot; to &quot;Friends&quot; (the Central Perk coffee shop is right inside the studio) and the &quot;Harry Potter&quot; series, this place has produced countless classics and continues to do so today.</p><p><br></p><p>If you are a true fan of Friends and The Big Bang Theory, when you come to Los Angeles, you must join their tours at Warner Bros. Studios to truly immerse yourself in the iconic scenes from these classic American TV shows.</p>
+        
+
+        <a class="backLink" href="list-1.html">← Back to Los Angeles</a>
+      </article>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="American celebrity Oprah Winfrey once asked Julia Roberts: "What's your favorite thing to sleep on?" She smiled and said, "Sleeping in the beds at The Four Seasons Hotel."" />
+    <title>Go to Los Angeles and sleep in this hotel with Hollywood stars!</title>
+    <style>
+      :root {
+        --paper: #f5f1eb;
+        --ink: #163d36;
+        --body: #3f3a34;
+        --muted: #8a8379;
+        --line: #ddd5ca;
+        --accent: #d9782f;
+        --white: #fffaf4;
+        --shadow: 0 22px 70px rgba(28, 25, 20, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        line-height: 1.72;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .hero {
+        min-height: clamp(330px, 48vw, 560px);
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        padding: clamp(28px, 7vw, 70px) clamp(24px, 8vw, 76px);
+        background: #28463f;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.12)),
+          url("");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .heroInner {
+        position: relative;
+        width: min(900px, 100%);
+        color: #ffffff;
+      }
+
+      .heroLocation {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 24px;
+        color: rgba(255, 255, 255, 0.78);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .heroLocation svg {
+        width: 17px;
+        height: 17px;
+        color: #f0a45f;
+      }
+
+      h1 {
+        max-width: 880px;
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(30px, 4.8vw, 54px);
+        font-weight: 900;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .brief {
+        width: min(760px, 100%);
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 18px;
+        color: #5a5148;
+        font-size: clamp(17px, 1.9vw, 20px);
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.58;
+      }
+
+      .articleWrap {
+        width: min(900px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: clamp(42px, 6vw, 68px) 0 72px;
+      }
+
+      .content {
+        width: min(760px, 100%);
+        color: var(--body);
+        font-size: clamp(16px, 1.8vw, 18px);
+        line-height: 1.5;
+      }
+
+      .content p {
+        margin: 0 0 12px;
+      }
+
+      .content h2,
+      .content h3,
+      .content h4 {
+        margin: 46px 0 18px;
+        color: var(--ink);
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+
+      .content h2 {
+        font-size: clamp(28px, 4vw, 38px);
+      }
+
+      .content h3 {
+        font-size: clamp(23px, 3vw, 30px);
+      }
+
+      .content ul,
+      .content ol {
+        margin: 0 0 30px;
+        padding-left: 28px;
+      }
+
+      .content li {
+        margin: 8px 0;
+      }
+
+      .content blockquote {
+        margin: 34px 0;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 20px;
+        color: #5a5148;
+        font-style: italic;
+      }
+
+      .content img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 42px 0 12px;
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+      }
+
+      .content figure {
+        margin: 42px 0;
+      }
+
+      .content figure img {
+        margin: 0 0 12px;
+      }
+
+      .content figcaption {
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .backLink {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 46px;
+        border-top: 1px solid var(--line);
+        padding-top: 28px;
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.18em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .backLink:hover {
+        color: var(--accent);
+      }
+
+      @media (max-width: 720px) {
+        .hero {
+          min-height: 420px;
+          padding: 30px 24px;
+        }
+
+        .articleWrap {
+          width: min(100% - 28px, 900px);
+          padding-bottom: 48px;
+        }
+
+        .content {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="heroInner">
+        <p class="heroLocation">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+            />
+          </svg>
+          <span>Los Angeles</span>
+        </p>
+        <h1>Go to Los Angeles and sleep in this hotel with Hollywood stars!</h1>
+      </div>
+    </header>
+
+    <main class="articleWrap">
+      
+      <p class="brief">American celebrity Oprah Winfrey once asked Julia Roberts: "What's your favorite thing to sleep on?" She smiled and said, "Sleeping in the beds at The Four Seasons Hotel."</p>
+      
+
+      <article class="content">
+        
+          <p>Late at night, I flew from Shanghai Pudong Airport to Los Angeles on Delta Air Lines DL185 in Premium Business Class. There may be a hundred reasons why one loves a city, but Los Angeles holds a special and different significance for me.</p><p><br></p><p>Last year, I drove the legendary Route 66 from Chicago myself, with Los Angeles as my final stop—the terminus of Route 66. Even though I only stayed for two days, I began to fall in love with this city.</p><p><br></p><p>Beverly Wilshire, a Four Seasons Hotel Los Angeles</p><p><br></p><p>About the Hotel</p><p><br></p><p>Many people started to appreciate Julia Roberts through the movie &quot;Pretty Woman.&quot; The Beverly Wilshire at Four Seasons Hotel Los Angeles was the filming location of this classic film. After flying for ten hours, I just wanted to sleep here.</p><p><br></p><p>Four Seasons Hotel Los Angeles at Beverly Hills</p><p>¥3127</p><p>It took about 40 minutes from the airport to reach the hotel. Before I even entered, I could see a massive BW logo - it felt like I had arrived in a movie. The property has been a famous landmark building since 1928, rich with historical charm and stories, and very close to the Rodeo Drive shopping and dining district.</p><p><br></p><p>The entire hotel consists of two parts. In front is the Wilshire Building with 10 floors, where you can see fashionable Wilshire Boulevard and the Rodeo Drive corner intersection - home to countless luxury stores and restaurants. Behind is the Beverly Building with 14 floors; this time I stayed in that one.</p><p><br></p><p>What makes or breaks a hotel, beyond its physical amenities, ultimately comes down to service. Pushing open the door and finding the bed already made, chocolate and hot tea prepared - friendly without being intrusive. For someone who has traveled long distances, quickly and comfortably arriving at your room feels like coming home. After taking a warm shower, I was ready to find something to eat.</p><p><br></p><p>Hotel Amenities:</p><p>THE Blvd Restaurant</p><p><br></p><p>Many people come to Beverly Hills even if they&#39;re not staying or dining - just to take a photo in front of THE Blvd at this hotel for the memories. Indeed!</p><p>Who would have thought this landmark was so famous? That night I arrived happened to be US presidential election day. Almost everyone in the restaurant kept glancing back at the big screen every fifteen minutes or so to check the vote counting results. California was definitely supporting Hillary, but unfortunately they were still disappointed that night.</p><p><br></p><p>THE Blvd has a strong European atmosphere with many dish options and generous portions. You might even feel embarrassed coming to this restaurant if you&#39;re not dressed nicely. Of course, it&#39;s like that throughout Beverly Hills - every day feels like living on a movie set. Let&#39;s start the wonderful dinner with a glass of California red wine full of fruity aroma!</p><p><br></p><p>Bedding</p><p><br></p><p>Good sleep is my first standard when evaluating a good hotel, and no matter how much money you spend or how designed, artistic, or luxurious a hotel may be, if you don&#39;t sleep well everything else is in vain. The Four Seasons bedding has never disappointed, years ago they even commissioned authoritative institutions to conduct sleep surveys. They are the global first hotel brand to offer replaceable top mattress services. With silky duvets and sinking pillows, I slept until morning without a single wake-up.</p><p><br></p><p>The next morning I found a window seat for breakfast. THE Blvd&#39;s bread and newspapers are placed at the entrance for guests to take freely, while breakfast items are individually ordered with plenty of options. Many Hollywood stars and celebrities come here for breakfast, so seeing famous actors at The Beverly Hills Hotel is as normal as anything else. And don&#39;t be surprised if you happen to meet Justin Bieber for breakfast - he frequently comes here too.</p><p>You must try this black truffle fried egg dish - rich and savory eggs enveloped with cheese and green beans, the aroma of black truffles is intoxicating, I ate the entire plate.</p><p><br></p><p>As for just how famous this hotel truly is, and why Hollywood stars love it so much, one could write an entire book about it.</p><p><br></p><p>It is said that influenced by Elvis Presley (who himself loved staying here!), Beatles lead singer John Lennon once stayed at this hotel for several months straight. In addition, musician Elton John is also a regular guest here.</p><p><br></p><p>There are many legendary stories to tell. The 1998 &quot;Princess Ball&quot; held by the movie Titanic was hosted at this very hotel, and it was also at this hotels Sotheby&#39;s auction that the famous &quot;Heart of the Ocean&quot; diamond, valued at over $2.5 million, was sold. It is rumored that many years of Oscar after-party galas were also held here.</p><p><br></p><p>SPA</p><p><br></p><p>For most travelers crossing time zones, jet lag is inevitable - how to adjust it becomes the first concern of any journey. Why not start with a swim or thirty minutes of aerobic exercise, and book a SPA treatment to help alleviate jet lag symptoms.</p><p><br></p><p>Before arriving I had already booked a Travel Recovery Treatment by ELEMIS, ideal for combating jet-lag.</p><p><br></p><p>First, a full-body detoxification is performed, ending with the application of detox mud. After washing it off, massage begins, followed by facial treatment. The 90-minute session will leave you completely relaxed. It is said that many Hollywood stars are also regulars here. Before leaving, remember to try out the stone therapy steam sauna.</p><p>If you happen to see this old mailbox while waiting for the elevator, this hotel with its stories and history retains many services that exceed your expectations. For example, on the third-floor stairwell, you can drop a handwritten letter into the chute of your floor, and it will slide down through the pipe all the way to the lobby. We have long gotten used to sending digital &quot;I love you&quot; emails, but we&#39;ve forgotten how to write a handwritten letter to someone we love.</p><p><br></p><p>Before departing, I heard that one friend&#39;s boyfriend wrote over ten letters for her to open one each day. That focused happiness is something many people have already lost. I wonder if she has ever replied using this old mailbox?</p><p><br></p><p>Four Seasons hotel rooms consistently convey a warm and comfortable atmosphere, avoiding excessive ostentation while not lacking luxury. Every detail is adjusted according to the building itself - massive arched windows, high ceilings with natural lighting. The designer integrated all natural light into the spaces. Even on journeys, you want this to feel like home. I believe this is ultimately what hotels aspire to create - eliminating unfamiliarity, replacing it with warmth and familiarity.</p><p><br></p><p>CUT Restaurant</p><p><br></p><p>If you randomly ask a passerby in Beverly Hills where they get the best steak, I&#39;m confident they&#39;ll immediately recommend CUT at The Beverly Hills.</p><p><br></p><p>Indeed, Calvin Harris and Taylor Swift held hands as they exited this steakhouse together. The celebrities who frequent this premier Los Angeles dining destination extend far beyond them.</p><p>This Michelin restaurant has never disappointed you. Even if you had dinner at Spago (which ranks #1) earlier that night, you will still feel that only CUT is truly exceptional. Of course, you should try both to compare and know for yourself.</p><p><br></p><p>This restaurant, created by renowned architect Richard Meier and celebrity chef Wolfgang Puck together, has always been one of the hottest spots in Los Angeles. As one of America&#39;s top three premium steakhouse restaurants, CUT never fails to disappoint.</p><p><br></p><p>Personal suggestion: Although appetizers are delicious, I recommend leaving some room for the delectable main courses.</p><p><br></p><p>Whether it is local beef or wagyu, the texture is excellent - tender and smooth, melting in your mouth.</p><p><br></p><p>Our journey of discovery remains ongoing; uncovering and exploring this world&#39;s beauty defines life&#39;s true purpose.</p><p><br></p><p>When visiting Los Angeles, don&#39;t miss the chance to stay at this hotel where Hollywood stars have previously slept.</p><p><br></p><p>Address: Beverly Wilshire, Beverly Hills (A Four Seasons Hotel)</p><p>9500 Wilshire Boulevard</p><p>Beverly Hills, California 90210</p><p><br></p><p>Phone: +1 (310) 275-5200</p><p><br></p><p>Click the original link to learn more about this hotel.</p>
+        
+
+        <a class="backLink" href="list-1.html">← Back to Los Angeles</a>
+      </article>
+    </main>
+  </body>
+</html>

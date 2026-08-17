@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <title>Home Sweet Home</title>
+    <style>
+      :root {
+        --paper: #f5f1eb;
+        --ink: #163d36;
+        --body: #3f3a34;
+        --muted: #8a8379;
+        --line: #ddd5ca;
+        --accent: #d9782f;
+        --white: #fffaf4;
+        --shadow: 0 22px 70px rgba(28, 25, 20, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        line-height: 1.72;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .hero {
+        min-height: clamp(330px, 48vw, 560px);
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        padding: clamp(28px, 7vw, 70px) clamp(24px, 8vw, 76px);
+        background: #28463f;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.12)),
+          url("https://imagedelivery.net/TdQQyAHCLdZMYcdCJx_3LA/5b11ab7c-9bff-4ab8-60ec-87c06a7cda00/public");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .heroInner {
+        position: relative;
+        width: min(900px, 100%);
+        color: #ffffff;
+      }
+
+      .heroLocation {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 24px;
+        color: rgba(255, 255, 255, 0.78);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .heroLocation svg {
+        width: 17px;
+        height: 17px;
+        color: #f0a45f;
+      }
+
+      h1 {
+        max-width: 880px;
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(30px, 4.8vw, 54px);
+        font-weight: 900;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .brief {
+        width: min(760px, 100%);
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 18px;
+        color: #5a5148;
+        font-size: clamp(17px, 1.9vw, 20px);
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.58;
+      }
+
+      .articleWrap {
+        width: min(900px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: clamp(42px, 6vw, 68px) 0 72px;
+      }
+
+      .content {
+        width: min(760px, 100%);
+        color: var(--body);
+        font-size: clamp(16px, 1.8vw, 18px);
+        line-height: 1.5;
+      }
+
+      .content p {
+        margin: 0 0 0.5em;
+      }
+
+      .content h2,
+      .content h3,
+      .content h4 {
+        margin: 46px 0 18px;
+        color: var(--ink);
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+
+      .content h2 {
+        font-size: clamp(28px, 4vw, 38px);
+      }
+
+      .content h3 {
+        font-size: clamp(23px, 3vw, 30px);
+      }
+
+      .content ul,
+      .content ol {
+        margin: 0 0 30px;
+        padding-left: 28px;
+      }
+
+      .content li {
+        margin: 8px 0;
+      }
+
+      .content blockquote {
+        margin: 34px 0;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 20px;
+        color: #5a5148;
+        font-style: italic;
+      }
+
+      .content img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 42px 0 12px;
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+      }
+
+      .content figure {
+        margin: 42px 0;
+      }
+
+      .content figure img {
+        margin: 0 0 12px;
+      }
+
+      .content figcaption {
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .backLink {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 46px;
+        border-top: 1px solid var(--line);
+        padding-top: 28px;
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.18em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .backLink:hover {
+        color: var(--accent);
+      }
+
+      @media (max-width: 720px) {
+        .hero {
+          min-height: 420px;
+          padding: 30px 24px;
+        }
+
+        .articleWrap {
+          width: min(100% - 28px, 900px);
+          padding-bottom: 48px;
+        }
+
+        .content {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="heroInner">
+        <p class="heroLocation">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+            />
+          </svg>
+          <span>North America</span>
+        </p>
+        <h1>Home Sweet Home</h1>
+      </div>
+    </header>
+
+    <main class="articleWrap">
+      
+
+      <article class="content">
+        
+          <p>On Monday, July 13, we wrapped up our trip. The main focus of this day was our long drive back home. We spent about six hours on the road before we finally returned to Omaha, Nebraska, and then arrived back at home sweet home.</p>
+<p>There’s a bit of everything when it comes to the conclusion of a trip. While we’re all sad to see it end, we had a great time, and will always remember the time we spent together. While the boys will be excited to start summer activities, it will be nice for everyone to be able to sleep in their own beds again. There is still a lot of summer to enjoy in Minnesota!</p><p><img src="https://imagedelivery.net/TdQQyAHCLdZMYcdCJx_3LA/4378f0da-0d7a-41cd-e731-881bfaf07b00/public" alt="Minnesota summer" loading="lazy"></p>
+<p>With breakfast done and the last bit of packing complete, we got on the road again. Pizza Rach places are rare out west so we decided that stopping at one would be a good last lunch pick in Iowa. The boys agreed easily. 😁 </p>
+<p>During our drive home we spent over 4,550 miles in the van with lots of great bonding time. We passed through seven states (UT, CO, AZ, NM, NE, IA, MN) and saw seven national parks, a national monument, and even a state park. We arrived home safe on Monday at about 4:30. Over the course of the trip, we managed a single flat tire, temps ranging from 33 to 106 degrees, and above all, created countless great memories. We’re grateful that God kept us safe.</p><p><img src="https://imagedelivery.net/TdQQyAHCLdZMYcdCJx_3LA/ce5f36aa-b50e-4c39-4073-de55c3baed00/public" alt="road trip recap" loading="lazy"></p>
+<p>The trip this year had its challenges, but there was so much to be grateful to God for.&nbsp; Each family trip has to have some fun first time experiences, lessons learned, and family memories to take with us. Flat tire, crazy heat, and some not so happy moments (from kids and parents).</p><p>A few of the best memories from this trip include:</p><p>Favorite state:</p><p>Elam: Utah</p><p>Ezra: Colorado</p><p>Micah: New Mexico</p><p>Josiah: Colorado</p><p>Mom: Utah</p><p>Dad: Utah</p><p>Favorite National Park:</p><p>Elam: Arches</p><p>Ezra: Zion</p><p>Micah: Great Sand Dunes</p><p>Josiah: Zion</p><p>Mom: Bryce/Arches (tie)</p><p>Dad: Bryce Canyon</p><p><img src="https://imagedelivery.net/TdQQyAHCLdZMYcdCJx_3LA/bd24e3a8-a8c4-4457-e38d-0b4846a92400/public" alt="Family road trip" loading="lazy"></p>
+<p>IMG<em>6333.jpeg</em></p> <p>The Junior Ranger programs at Zion and Arches had the boys super excited along with some extra activities from the park booklets. If your plans allow, these programs are a super easy and very rewarding way to learn about the places around you!</p><p>Most Loved Tree, Plant, Flower or Rock:</p> <p>Elam: Cacti  Ezral: Belly Button Rock at Goblin Valley   Micah: Goblin Rocks   Josiah: Whale Rock  Mom: A lone flower along the Bryce trail  Dad: Any tree with shade!</p> <p>IMG<em>6501.jpeg</em></p><p>Most Favorite Arch:</p> <p>Elam: Navajo Arch <br> Ezra: Delicate Arch <br> Micah: Double Arch <br> Josiah: Double Arch</p><p><img src="https://imagedelivery.net/TdQQyAHCLdZMYcdCJx_3LA/593b3c6e-ea52-481e-7459-160fe18ead00/public" alt="Junior Ranger programs" loading="lazy"></p>
+Mom: Partition Arch\
+Dad: Mesa Arch, Canyonlands\
+IMG 6910.jpeg \
+Favorite Activity:\
+Elam: Swimming\
+Ezra: Bowling\
+Micah: Colorado Rockies baseball game\
+Josiah: video games at the condo clubhouse\
+Mom: Hiking\
+Dad: Hiking \
+IMG 6084.jpeg.
+Favorite Hikes:\
+Elam: River Walk and The Narrows Trail, Zion\
+Ezra: Little Wild Horse Canyon Trail, Goblin Valley\
+Micah: Devils Garden Loop Trail, Arches\
+Josiah: Upper Emerald Pools Trail, Zion\
+Mom: Queen's Garden to Navajo Loop Trail, Bryce Canyon
+<p><img src="https://imagedelivery.net/TdQQyAHCLdZMYcdCJx_3LA/32bd7533-642f-4204-2c1e-88f4ff22b200/public" alt="Family hiking favorites" loading="lazy"></p>
+<p>Dad: Little Wild Horse Canyon Trail, right outside Goblin Valley</p><p>33804280-7f9e-11f1-8940-c17bbd7b0476.jpeg</p><p>We went over 33 miles on trails, also a lot of extra walking and running. It felt amazing to be back hiking. Getting an early start was the best for cooler weather and quieter trails.</p> <p>Favorite Animal/Bird/Creature:</p> <p>Elam: Lizard</p> <p>Ezra: Bear</p> <p>Micah: Chipmunk</p> <p>Josiah: Black beetle</p> <p>Mom: Yearly bear</p> <p>Dad: Deer at Devils Garden</p> <p>IMG<em>6435.jpegIMG</em>6160.jpeg</p><p><img src="https://imagedelivery.net/TdQQyAHCLdZMYcdCJx_3LA/82daf997-465a-4b3d-750a-ce5883aab500/public" alt="Goblin Valley hiking" loading="lazy"></p>
+<p>We saw a lot of cool animals this year. There were all types of lizards, chipmunks, deer, mule deer, pronghorn, all kinds of cattle, long horned sheep, prairie dogs, squirrels, and even a bear!</p><p>Favorite Meal:</p><p>Elam: Canyon Pizza Co. <br />Ezra: Moab Grill <br />Micah: IHOP <br/> Josiah: Wendy's <br /> Mom: Canyon Pizza Co. <br /> Dad: Canyon Pizza Co.</p><p>IMG_6778.jpeg</p><p>Favorite Game:</p><p>Elam: Ping pong <br /> Ezra: Bowling, first game <br /> Micah: Bowling, second game <br /> Josiah: Space Invaders <br /> Mom: Rack-o <br /> Dad: Risk</p><p><img src="https://imagedelivery.net/TdQQyAHCLdZMYcdCJx_3LA/aa3cf436-1f58-4396-c246-d7a11f025a00/public" alt="Wildlife sightings" loading="lazy"></p>
+<p>Our family took the license plate game very seriously this trip. It started as a competition but it didn’t take long for everyone to start collaborating. By the end of the trip, we spotted licenses from 48 states. The only misses were Alaska and New Hampshire. Josiah calls it "New Hamster" 🐹.</p><p>Favorite Place We Stayed:</p><p>Elam: Moab condo</p><p>Ezra: Moab condo</p><p>Micah: Moab condo</p><p>Josiah: Hampton Inn in downtown Denver</p><p>Mom: Brian Head condo</p><p>Dad: Brian Head condo</p><p>Favorite Car Activity:</p><p>Elam: Sleeping with a neck pillow</p><p>Ezra: Playing tic-tac-toe with Micah</p><p><img src="https://imagedelivery.net/TdQQyAHCLdZMYcdCJx_3LA/3c5a8fea-e75c-4871-0fb3-e840d9851900/public" alt="Family road trip" loading="lazy"></p>
+<p>Micah: Dad's Game Boy</p><p>Josiah: Video game consoles</p><p>Mom: Percy Jackson audiobooks and looking out the window</p><p>Dad: Audiobook</p><p>Most Memorable Moment:</p><p>Elam: The Narrows</p><p>Ezra: Climbing rocks in the Arches</p><p>Micah: The Narrows</p><p>Josiah: Goblin Valley clubhouse</p><p>Mom: Slot canyon hike</p><p>Dad: The tire debacle</p><p>IMG_6806.jpeg</p><p><img src="https://imagedelivery.net/TdQQyAHCLdZMYcdCJx_3LA/a38df763-75d3-4d20-447e-b86bb263ca00/public" alt="Family road trip" loading="lazy"></p>
+<p>Some of the other things I remember include Micah losing things, Josiah kicking his hat, finding a ton of lizards, and seeing fireworks on the Fourth of July at 6 in the morning. We also enjoyed watching God's creation as far as we could see and spotted a double rainbow, three Hawaii license plates, and some power pellets.</p> <p>329c7230-7f9e-11f1-b83b-737301074a6a.jpeg</p><p><img src="https://imagedelivery.net/TdQQyAHCLdZMYcdCJx_3LA/66760d54-df2a-477a-1303-782d8417f500/public" alt="travel memories" loading="lazy"></p>
+<p>One of the most surprising questions came from Josiah. He asked, "Is there love in Oklahoma?" This is actually a line from Westward Whoa!, the school play that the older boys acted in this year. It is a mystery why this kept coming up during the trip. 🤪</p><p>Lessons From This Trip:</p><p><img src="https://imagedelivery.net/TdQQyAHCLdZMYcdCJx_3LA/10621411-f537-4f32-1a7e-4cab6eb82d00/public" alt="Oklahoma road trip" loading="lazy"></p><p>1. Peter learned a tire patching technique that kept us mobile, at least in the short run. <p>2. Gen Alpha children can be entertained by even very old cartoons. <p>3. IHOP has a kids eat free special every day. <p>4. When temperatures exceed 100 a "dry heat" is only marginally better.
+<p>5. Utah’s Mighty 5, Mesa Verde National Park, Great Sand Dunes National Park, Cedar Breaks National Monument, and Goblin Valley State Park should also be included.</p><p>92661540-7f9e-11f1-867c-65474638af11.jpeg</p><p>Now, the biggest question is where to go next summer. The boys have already suggested an impressive list of options. Elam wants to go to China, Ezra is suggesting to Chicago for the MLB All-Star Game, Micah wants to go to Chuck E. Cheese in Minnesota, and Josiah is proposing Treasure Island in Minnesota. It seems like the planning committee is very creative!</p><p><img src="https://imagedelivery.net/TdQQyAHCLdZMYcdCJx_3LA/cd5a5e67-4f18-46e1-6eed-9ca3d0d5e900/public" alt="Utah Mighty 5" loading="lazy"></p>
+Home is a blessing, but summer brings exciting opportunities, possibilities and adventures. With God's grace, we hope to explore more of his creation. We will treasure family time and the new memories we will create together. We will appreciate all life blessings until the next travel adventure.","I hope we will have the opportunity to travel.
+<p><img src="https://imagedelivery.net/TdQQyAHCLdZMYcdCJx_3LA/81054e4b-d699-4126-3771-8f9232760900/public" alt="family travel" loading="lazy"></p>
+        
+
+        <a class="backLink" href="list-1.html">← Back to North America</a>
+      </article>
+    </main>
+  </body>
+</html>

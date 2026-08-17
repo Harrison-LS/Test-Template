@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="About the Ice Cream Museum" />
+    <title>San Francisco Ice Cream Museum—air thick with pink, bubbly romance</title>
+    <style>
+      :root {
+        --paper: #f5f1eb;
+        --ink: #163d36;
+        --body: #3f3a34;
+        --muted: #8a8379;
+        --line: #ddd5ca;
+        --accent: #d9782f;
+        --white: #fffaf4;
+        --shadow: 0 22px 70px rgba(28, 25, 20, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        line-height: 1.72;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .hero {
+        min-height: clamp(330px, 48vw, 560px);
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        padding: clamp(28px, 7vw, 70px) clamp(24px, 8vw, 76px);
+        background: #28463f;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.12)),
+          url("https://p1-q.mafengwo.net/s11/M00/55/CA/wKgBEFsnLFqAHOFSAAJtLDaxnCo97.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F90");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .heroInner {
+        position: relative;
+        width: min(900px, 100%);
+        color: #ffffff;
+      }
+
+      .heroLocation {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 24px;
+        color: rgba(255, 255, 255, 0.78);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .heroLocation svg {
+        width: 17px;
+        height: 17px;
+        color: #f0a45f;
+      }
+
+      h1 {
+        max-width: 880px;
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(30px, 4.8vw, 54px);
+        font-weight: 900;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .brief {
+        width: min(760px, 100%);
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 18px;
+        color: #5a5148;
+        font-size: clamp(17px, 1.9vw, 20px);
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.58;
+      }
+
+      .articleWrap {
+        width: min(900px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: clamp(42px, 6vw, 68px) 0 72px;
+      }
+
+      .content {
+        width: min(760px, 100%);
+        color: var(--body);
+        font-size: clamp(16px, 1.8vw, 18px);
+        line-height: 1.5;
+      }
+
+      .content p {
+        margin: 0 0 0.5em;
+      }
+
+      .content h2,
+      .content h3,
+      .content h4 {
+        margin: 46px 0 18px;
+        color: var(--ink);
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+
+      .content h2 {
+        font-size: clamp(28px, 4vw, 38px);
+      }
+
+      .content h3 {
+        font-size: clamp(23px, 3vw, 30px);
+      }
+
+      .content ul,
+      .content ol {
+        margin: 0 0 30px;
+        padding-left: 28px;
+      }
+
+      .content li {
+        margin: 8px 0;
+      }
+
+      .content blockquote {
+        margin: 34px 0;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 20px;
+        color: #5a5148;
+        font-style: italic;
+      }
+
+      .content img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 42px 0 12px;
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+      }
+
+      .content figure {
+        margin: 42px 0;
+      }
+
+      .content figure img {
+        margin: 0 0 12px;
+      }
+
+      .content figcaption {
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .backLink {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 46px;
+        border-top: 1px solid var(--line);
+        padding-top: 28px;
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.18em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .backLink:hover {
+        color: var(--accent);
+      }
+
+      @media (max-width: 720px) {
+        .hero {
+          min-height: 420px;
+          padding: 30px 24px;
+        }
+
+        .articleWrap {
+          width: min(100% - 28px, 900px);
+          padding-bottom: 48px;
+        }
+
+        .content {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="heroInner">
+        <p class="heroLocation">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+            />
+          </svg>
+          <span>Los Angeles</span>
+        </p>
+        <h1>San Francisco Ice Cream Museum—air thick with pink, bubbly romance</h1>
+      </div>
+    </header>
+
+    <main class="articleWrap">
+      
+      <p class="brief">About the Ice Cream Museum</p>
+      
+
+      <article class="content">
+        
+          <p>Let's set aside everything else and talk about this trending ice cream museum experience!</p><p><br></p><p>                                        About the Ice Cream Museum</p><p><br></p><p>                    The Museum of Ice Cream announced ticket sales, and this massive marketing campaign really makes all legitimate museums look humble. I suppose no other museum sells tickets with such earth-shattering momentum and grandeur!</p><p><br></p><p>                    Long before the official launch, various social media influencers started promoting freely and spreading beautiful images everywhere, starting from New York, then to Los Angeles, now arriving in San Francisco—building hype all along this route, driving popularity sky-high! It's said that LA tickets sold out within less than 5 minutes of going on sale, so just imagine how difficult it is to grab one!</p><p><br></p><p>                                        Entry</p><p><br></p><p>                    It's better to arrive a little early because you'll need to queue and wait due to the number of people.</p><p>After check-in, about 15 people will enter as a group. At the entrance, they explain some minor rules—mostly meant to get everyone excited, like giving your team a name or choosing a leader😂 This leader's job is just to ensure everyone has fun~ Honestly though, it doesn't really matter.</p>
+</p><p>From the start everyone was on their own~ So all of what I mentioned above was prepared just to get everyone excited about playing.</p><p><br></p><p>                                        Enter</p><p><br></p><p>                    Now begins the wild play mode!</p><p>Before entering, someone will give an overall explanation and ask some small questions based on information on the walls. Overall it talks about the history of ice cream, but because the entire exhibition hall is so beautiful beyond all reason, everyone seems to be having fun and not really reading the text seriously.</p><p><br></p><p>                                        What's in the museum?</p><p><br></p><p>                                        Magic Door</p><p><br></p><p>                    Before this huge door lies the official start of a colorful ice cream world journey~</p><p>From this moment, all adults and children become children!!</p><p>Relax and start playing!</p><p><br></p><p>                                        Cream Ring Toss</p><p><br></p><p>                    The room below begins with various fun programs appearing, like this ring toss round. Basically no one succeeds in tossing the rings through, but it's still quite cute to try out.</p>
+<p>The TV screen nearby can take photos, send them to your own email~</p><p><br></p><p>                                        Knowledge Corridor + Bi-Rite</p><p><br></p><p>                    In the corridor at the corner, signs on the wall have different small knowledge points written about ice cream. Flip the sign to see the answer - it's a great way to expand your horizons.</p><p><br></p><p>                    Since it's an ice cream museum, there must be ice cream to eat~ The representative ice cream shop from San Francisco this time is Bi-Rite. The pink bar below that even straight women find a bit too cute is the tasting area. A player with a bit of retro style makes for great photo opportunities~</p><p><br></p><p>                                        Tasting can't stop</p><p><br></p><p>                    The tasting segment keeps going, and the mochi below is delicious~ I ordered chocolate and strawberry flavors. Actually you can have both, plus you could order three at once if you could eat that much. 😂</p><p><br></p><p>                    The cotton candy line requires waiting in queue, and it's right next to the mochi ice cream above. This tasting pace feels overwhelming - there's just too much food to consume at this speed.</p>
+</p><p>😂 Cotton candy tastes good, but it's a bit too sweet; I threw it away after eating half. Those who really love sweets can finish theirs~ It turns out many people actually do finish them.</p><p><br></p><p>                                        Cotton Candy</p><p><br></p><p>                    As expected, the cotton candy tasting was prepared for this room below. Although it's small, but this cotton candy lamp is really soft and fun~ You can take many beautiful photos of yourself weaving through clouds; paired with cotton candy, in short, it's a photo spot where you can pose endlessly.</p><p><br></p><p>                                        Growing Candy</p><p><br></p><p>                    Another reason people couldn't finish their cotton candy is because this room below doesn't allow bringing cotton candy inside... shrugging helplessly. So many people ended up walking in with cotton candy here, forced to discard it.</p><p><br></p><p>                                        Ice Pops</p><p><br></p><p>                    This set also blew up on social media: the world of ice pops, whether you're holding an ice pop, biting into it, or even sitting on it, how you take it, how beautiful it is~</p><p><br></p><p>                    Tips:</p><p>                    I suggest everyone wear white clothes when visiting~ Because each room has different colors, but white is versatile and can match any room's color scheme.</p>
+</p><p><br></p><p>                                        The World of Unicorns</p><p><br></p><p>                    Below are several rooms that are all connected, with excellent connectivity, so let's count them together as part of Unicorn World. The first one you enter is Prism Mirror's world; although it's just a small wall, it awakens feelings of childhood toys.</p><p>That's right! Don't get excited! This is the spot for your dream unicorn posing point, please check!</p><p>Next to it is the last tasting area, and also the ice cream that personally I think tastes best when eaten all the way through, called Unicorn Ice Cream 😂 Super sweet but the taste is truly not bad!</p><p><br></p><p>                    Next to the unicorn area, there are two tiny doors on the wall that need climbing into; inside is a glistening and shimmering world ~ The height can only allow adults to enter by squatting, and once inside you can only take photos while sitting, but it's indeed quite beautiful ~ What's best is the ample lighting, and you can even check yourself in a mirror to touch up your makeup 😂</p><p><br></p><p>                                        Rock Climbing & Jelly</p><p><br></p><p>                    After taking so many beautiful photos, we should appropriately exercise our physical strength 😂</p><p>They've thoughtfully prepared a pink climbing wall - want to come and try your skills?</p>
+</p><p><br></p><p>
+You can also pick up strawberry popping candy at this jelly wall next door. After posing, follow the pointed shape upwards. Passing by even the restroom with pink doors... the staircase in the corner is very attractive, but since it's a high-traffic area, those who want to take photos really need to move quickly~</p><p><br></p><p>
+Tips:</p><p>
+Here we remind you that you're about to enter the last room. So if you haven't taken enough photos here yet, you can stay a bit longer.</p><p><br></p><p>
+Candy Pool</p><p><br></p><p>
+Finally, the main event of this last stop has arrived!</p><p>
+The famous Candy Pool - surely many who follow Museum of Ice Cream were attracted to this pool first. There are more people here and you need to queue/wait in line. Generally, about 10 people at a time will enter, then you get 10 minutes to play before the next group replaces you.</p><p>
+So those wanting to take photos really need to be fast - playing well and photographing well is very important.</p><p><br></p><p>
+After waiting in line to enter, they'll tell you some simple rules. These candy pieces are not real but made of plastic, so absolutely don't!
+<p>Can eat! Shoes should be placed in the shoe cabinet, easy-to-lose small items also put inside, don't throw them into the pool then it would not be good.</p><p><br></p><p> Finally, like all pools that come out with this, there is also a bathing room set up here of course not for you to wash with water, but an air blaster👍</p><p><br></p><p> Posing little hut</p><p><br></p><p> After playing the last scene, there are three or four more small scenes below for you to pose in play. Three of them are swing houses. Everyone queues up very orderly. When there is a crowd, do not get impatient.</p><p><br></p><p> Then there is also a museum sofa, the most formal photo spot in the entire hall😂</p><p>If you want to exercise you can even play table tennis for a while over there~ It just means if there are many people you have to wait😂</p><p><br></p><p> Gift house</p><p><br></p><p> Classic segment gift shop, this is definitely not missing, pass by how could you not buy something?</p><p><br></p><p> End</p><p><br></p><p> So thus pink museum has been visited completed.</p>
+<p>As a museum's positioning, you honestly can't learn any ice cream knowledge because it's so beautiful and fun that you completely won't look at introductory text about ice cream development and such; pros and cons I guess.</p><p>But, as a fun museum, it really lives up to its gimmicks, with novel ideas, making an actually unremarkable history look so spectacular and grandiose in such a way that even compared to all other museums, it's impressive.</p><p><br></p><p>[Ticket Purchase Reference]</p><p>You need to book in advance (but booking very far ahead doesn't guarantee you'll get a ticket), details on the official website.</p><p>Official Website: ***</p><p><br></p><p>[Average Price Reference]</p><p>Per person cost approximately $41/person</p><p><br></p><p>Address:</p><p>1 Grant Ave, San Francisco, CA 94108</p>
+        
+
+        <a class="backLink" href="list-1.html">← Back to Los Angeles</a>
+      </article>
+    </main>
+  </body>
+</html>

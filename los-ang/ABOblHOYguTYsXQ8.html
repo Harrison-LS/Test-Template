@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <title>Los Angeles's hot and lively beaches — which one do you like?</title>
+    <style>
+      :root {
+        --ink: #171512;
+        --muted: #5f5a54;
+        --line: #ded6cc;
+        --paper: #ffffff;
+        --warm: #f8efe5;
+        --accent: #c47a29;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        line-height: 1.55;
+      }
+
+      .hero {
+        width: 100%;
+        height: clamp(260px, 38vw, 520px);
+        overflow: hidden;
+      }
+
+      .hero img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+      }
+
+      .article {
+        width: min(760px, calc(100% - 40px));
+        margin: 0 auto;
+        padding: 34px 0 72px;
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin: 0;
+        font-family: Georgia, "Times New Roman", serif;
+        letter-spacing: 0;
+        line-height: 1.05;
+      }
+
+      h1 {
+        max-width: 620px;
+        font-size: clamp(34px, 5vw, 54px);
+        font-weight: 800;
+      }
+
+      .location {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin: 18px 0;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .location svg {
+        width: 18px;
+        height: 18px;
+        flex: 0 0 auto;
+      }
+
+      .subtitle {
+        max-width: 650px;
+        margin: 0 0 22px;
+        color: var(--muted);
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(18px, 2.4vw, 23px);
+        font-style: italic;
+        line-height: 1.45;
+      }
+
+      .description {
+        max-width: 650px;
+        margin: 0 0 28px;
+        color: #302c27;
+        font-size: 15px;
+      }
+
+      .brief {
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        border-radius: 6px;
+        padding: 18px 20px;
+        background: var(--warm);
+      }
+
+      .brief-title {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 10px;
+        color: var(--accent);
+        font-weight: 800;
+      }
+
+      .brief-title svg {
+        width: 18px;
+        height: 18px;
+      }
+
+      .brief p {
+        margin: 0;
+        color: #302c27;
+        font-size: 15px;
+      }
+
+      .content {
+        border-top: 1px solid var(--line);
+        padding-top: 24px;
+      }
+
+      h2 {
+        margin-bottom: 16px;
+        font-size: 30px;
+      }
+
+      .section {
+        margin: 0 0 24px;
+      }
+
+      .section h3 {
+        margin-bottom: 8px;
+        font-size: 18px;
+        line-height: 1.25;
+      }
+
+      .section p,
+      .section-body {
+        margin: 0;
+        color: #292520;
+        font-size: 14px;
+        white-space: pre-line;
+      }
+
+      .section-body img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 16px 0;
+        border-radius: 8px;
+      }
+
+      .section-body a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      @media (max-width: 640px) {
+        .article {
+          width: min(100% - 28px, 760px);
+          padding-top: 26px;
+        }
+
+        .hero {
+          height: 260px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <figure class="hero">
+      <img src="" alt="Los Angeles's hot and lively beaches — which one do you like?" />
+    </figure>
+
+    <main class="article">
+      <h1>Los Angeles's hot and lively beaches — which one do you like?</h1>
+
+      <p class="location">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            fill="currentColor"
+            d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+          />
+        </svg>
+        <span>Los Angeles</span>
+      </p>
+
+      <p class="subtitle"></p>
+      <p class="description"></p>
+
+      <aside class="brief">
+        <p class="brief-title">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M7 3h10a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Zm1 4v2h8V7H8Zm0 4v2h8v-2H8Zm0 4v2h5v-2H8Z"
+            />
+          </svg>
+          Brief
+        </p>
+        <p>With its stunning coastline stretching over 100 kilometers, vibrant California beaches, and abundant sunshine, visitors are drawn to embrace the ocean in Los Angeles. With so many beaches available, how do you choose the perfect one for you? Today, we'll explore each option for you!</p>
+      </aside>
+
+      <section class="content" aria-labelledby="content-title">
+        <h2 id="content-title">Content</h2>
+        
+          <article class="section">
+            <div class="section-body">A 100-kilometer coastline, the vibrant California beaches, and abundant sunshine invite tourists in Los Angeles to embrace the ocean. With so many charming beaches in Los Angeles, which one is best suited for you?
+
+Santa Monica Beach
+Image: Sunset at Santa Monica.
+
+Santa Monica Beach is the beach closest to downtown and also the most lively. The stunning ocean views are highly favored by Hollywood directors, with its iconic pier frequently appearing in various major Hollywood films.
+
+This location serves as a premier family vacation destination and marks the terminus of America's historic Route 66. As evening falls, Pacific Park transforms into a vibrant entertainment complex stretching from the sand to the shoreline. The area features regular themed events, energetic street performances with California musical acts, organized souvenir shops, diverse restaurants, and thrilling amusement rides including Ferris wheels and roller coasters, making it Los Angeles's most frequently visited beach destination.
+
+Santa Monica Beach
+• Closest beach to downtown Los Angeles, endpoint of Route 66 in North America, ocean views favored by Hollywood directors.
+· A premier vacation destination for Los Angeles families seeking family holidays, and a paradise where couples can enjoy intimate moments together.
+· When evening lights glow, Pacific Paradise stretches from the beach all the way across the ocean as an endless sea of joy.
+· Theme parties are frequently held here featuring California-style band performances, making it a top choice for tourists visiting Los Angeles beaches.
+
+Malibu Beach
+Located at the northernmost stretch of beach in Los Angeles, bordering Beverly Hills where social elites and Hollywood celebrities reside. This exclusive beach serves as Malibu's private water haven and surfing destination, earning it the title "Stardust Beach," making it an ideal spot to potentially encounter a celebrity. The wildly popular Korean drama "The Heirs" also filmed scenes here, attracting many fans who traveled specifically to visit this location.
+
+Due to its distance from downtown, Malibu is considerably less crowded compared to Santa Monica Beach. However, its dynamic waves offer excellent training grounds for numerous surfers. Unlike southern beaches with their soft sand and extended coastlines, Malibu features numerous diverse rock formations scattered across the shore, creating a uniquely majestic landscape.
+This is an exclusive beach where celebrities enjoy water activities and surfing, hence it's also known as "Stardust Beach." It serves as an ideal place for fans to unexpectedly encounter celebrities. Being somewhat distant from the city center means fewer crowds here, but the wavy sea provides excellent training grounds for many surfers. Unlike beaches in the south with soft sand and longer coastlines, this area features numerous rocks of various shapes and sizes - whether standing on large boulders feeling the sea breeze or taking a leisurely walk along the beach, both experiences bring incredible serenity. It's an excellent choice for reflection and inner peace.
+
+Venice Beach Venice Beach
+Venice Beach borders Santa Monica Beach, creating a year-round, free carnival atmosphere. Local artists, weightlifters performing exhibitions, bohemian residents, and eclectic boutique shops transform this area into an exceptionally vibrant destination.
+
+Continuing along the boardwalk, visitors might find themselves unexpectedly drawn into street performers' acts. The beach exudes a rich artistic energy through tattoo artistry, textile dyeing demonstrations, divination practices, and other countercultural performances that permeate the entire shoreline. Spending a leisurely afternoon exploring Venice Beach offers an immersive experience of this distinctive American cultural landscape - a meaningful travel destination worth discovering.
+Venice Beach is located right next to Santa Monica Beach and serves as the mouth of Ballona Creek and Marina Del Rey Bay. This beach feels like a free, year-round carnival festival. Street performers, weightlifters, bohemian residents, and eclectic boutiques add extra charm to this place. Walking along the Venice Boardwalk, you might find yourself becoming part of a street artist's performance at any moment. The unique artistic atmosphere is strong here—from tattoos to tie-dye to fortune telling—various hippie-style street art fills the entire beach. Spend an afternoon wandering around Venice Beach and carefully experiencing this unique "American" culture; it would surely be a worthwhile part of your journey.
+
+Manhattan Beach
+If you are looking for a quiet spot within the city, Manhattan Beach is an excellent choice. Just a few kilometers from Santa Monica Beach, but with far fewer crowds. The scenery here is beautiful. Jogging, walking, or having a picnic along the beach are all wonderful options.
+
+Although it lacks the usual bustle found at other beaches, you gain peace and tranquility instead. There are many ocean-view hotels and apartments available for long-term rental nearby. Manhattan Beach also has good safety, making it suitable for family visits or peaceful strolls.
+Huntington Beach
+
+Huntington Beach, located south of Long Beach, is the most famous surfing capital on the West Coast of America. Before even stepping onto the sand, the giant "Surfer" sculpture at the entrance alone sends shivers down your spine. The beach is filled with handsome men and beautiful women, reminding visitors of this beach's hotness and passion. Waves here can reach 5-6 meters high; for surfers, it's a perfect surfing paradise. Tourists who love the ocean and various beach sports definitely should not miss this blue beach.
+
+This place is also the birthplace of a series of California local brands, including Vans, Hollister, etc. On the shopping street opposite the beach, you can buy the latest local clothing and beach shoes of this season; various professional surfboard shops are also worth visiting and exploring.
+This area remains the origin of numerous California-native brands, including Vans, Hollister, and more. The shopping streets across from the beach offer the latest seasonal local apparel and beach footwear, while a variety of professional surfboard shops are well worth visitors exploring and learning about.</div>
+          </article>
+        
+      </section>
+    </main>
+  </body>
+</html>

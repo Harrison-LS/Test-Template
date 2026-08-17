@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <title>Don't let the sunshine go to waste — 10 gorgeous outdoor courtyard restaurants in Los Angeles, recommended!</title>
+    <style>
+      :root {
+        --paper: #f5f1eb;
+        --ink: #163d36;
+        --body: #3f3a34;
+        --muted: #8a8379;
+        --line: #ddd5ca;
+        --accent: #d9782f;
+        --white: #fffaf4;
+        --shadow: 0 22px 70px rgba(28, 25, 20, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        line-height: 1.72;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .hero {
+        min-height: clamp(330px, 48vw, 560px);
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        padding: clamp(28px, 7vw, 70px) clamp(24px, 8vw, 76px);
+        background: #28463f;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.12)),
+          url("");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .heroInner {
+        position: relative;
+        width: min(900px, 100%);
+        color: #ffffff;
+      }
+
+      .heroLocation {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 24px;
+        color: rgba(255, 255, 255, 0.78);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .heroLocation svg {
+        width: 17px;
+        height: 17px;
+        color: #f0a45f;
+      }
+
+      h1 {
+        max-width: 880px;
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(30px, 4.8vw, 54px);
+        font-weight: 900;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .brief {
+        width: min(760px, 100%);
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 18px;
+        color: #5a5148;
+        font-size: clamp(17px, 1.9vw, 20px);
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.58;
+      }
+
+      .articleWrap {
+        width: min(900px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: clamp(42px, 6vw, 68px) 0 72px;
+      }
+
+      .content {
+        width: min(760px, 100%);
+        color: var(--body);
+        font-size: clamp(16px, 1.8vw, 18px);
+        line-height: 1.5;
+      }
+
+      .content p {
+        margin: 0 0 12px;
+      }
+
+      .content h2,
+      .content h3,
+      .content h4 {
+        margin: 46px 0 18px;
+        color: var(--ink);
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+
+      .content h2 {
+        font-size: clamp(28px, 4vw, 38px);
+      }
+
+      .content h3 {
+        font-size: clamp(23px, 3vw, 30px);
+      }
+
+      .content ul,
+      .content ol {
+        margin: 0 0 30px;
+        padding-left: 28px;
+      }
+
+      .content li {
+        margin: 8px 0;
+      }
+
+      .content blockquote {
+        margin: 34px 0;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 20px;
+        color: #5a5148;
+        font-style: italic;
+      }
+
+      .content img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 42px 0 12px;
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+      }
+
+      .content figure {
+        margin: 42px 0;
+      }
+
+      .content figure img {
+        margin: 0 0 12px;
+      }
+
+      .content figcaption {
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .backLink {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 46px;
+        border-top: 1px solid var(--line);
+        padding-top: 28px;
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.18em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .backLink:hover {
+        color: var(--accent);
+      }
+
+      @media (max-width: 720px) {
+        .hero {
+          min-height: 420px;
+          padding: 30px 24px;
+        }
+
+        .articleWrap {
+          width: min(100% - 28px, 900px);
+          padding-bottom: 48px;
+        }
+
+        .content {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="heroInner">
+        <p class="heroLocation">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+            />
+          </svg>
+          <span>Los Angeles</span>
+        </p>
+        <h1>Don't let the sunshine go to waste — 10 gorgeous outdoor courtyard restaurants in Los Angeles, recommended!</h1>
+      </div>
+    </header>
+
+    <main class="articleWrap">
+      
+
+      <article class="content">
+        
+          <p>On such bright and beautiful sunny days, this picturesque outdoor courtyard restaurant is the ideal choice for friend gatherings, brunch, and afternoon tea. Today&#39;s featured recommendation from our team brings you Los Angeles&#39; restaurants with the most stunning outdoor dining environments. Nobu Malibu appears at #1 on nearly every media list. With its comfortable and cozy outdoor setting enhanced by breathtaking blue beach views, it truly represents the finest outdoor dining experience in Greater Los Angeles. The best part is that this restaurant has no dead angles - almost every seating area provides excellent ocean vistas to admire. Whether it&#39;s a sunny afternoon or a starry night, the deep ocean serves as your perfect companion, bringing you a sense of security and peace while your emotions are stirred by magnificent flavors. Of course, with such an exceptional establishment, securing reservations is extremely difficult, and dining here can be quite expensive - the four-dollar price point isn&#39;t just for show. If you manage to get a reservation, this experience will definitely exceed expectations. Address: 22706 Pacific Coast Hwy, Malibu, CA 90265</p><p>Cliff&#39;s Edge</p><p>This famous crooked-necked tree is also a major reason that attracts crowds to Cliff&#39;s Edge. Unlike other elegant and refined outdoor dining environments, here there&#39;s also an interesting rainforest feel.</p><p><br></p><p>The food is both beautiful and delicious - it&#39;s fusion/new American cuisine worth trying. The only drawback is that during summer there are many fallen leaves and mosquitoes.</p><p>Address: 3626 W Sunset Blvd, Los Angeles, CA 90026</p><p><br></p><p>Mardi Restaurant</p><p>This restaurant was something I tried with skeptical expectations, but it gave a wonderful surprise. The moment you walk into the restaurant, you feel like you&#39;ve stepped into a European-style garden hidden between buildings. Friends sit in the courtyard casually discussing daily matters - everything feels both casual and elegant.</p><p><br></p><p>The menu is simple and basic, yet each dish is made with great care, fitting the overall atmosphere perfectly. From the dishes themselves, one can sense they&#39;re crafted by professionally trained, sophisticated chefs who focus on technique rather than chasing trendy innovations. If visiting for brunch, the roasted lamb sausage is an absolute must-try item.</p><p>If you happen to want to choose a restaurant with three or five close friends in West Hollywood, Mardi is a great choice!</p><p>Address: 8465 Holloway Dr, West Hollywood, CA 90069</p><p><br></p><p>Il Cielo</p><p>A famous wedding venue, the natural ambiance of the restaurant doesn&#39;t need much explanation. Stepping into the garden makes you feel peaceful and refined, as if living a noble life.</p><p>Many people come to enjoy the starry lights at dinner time, but I think Italian lunch is more suitable.</p><p>Not crowded and easy to reserve; on weekdays it feels like the whole yard is yours. The dishes are fresh and light, very approachable, and not greasy like dinner.</p><p>Address: 9018 Burton Way, Beverly Hills, CA 90211</p><p><br></p><p>A.O.C</p><p>Beverly never lacks restaurants with great ambiance. A.O.C was an established steakhouse in this area for generations; now it has been reimagined into smaller French and Spanish light dishes.</p><p>After sitting down, it feels as if you&#39;ve captured all the beautiful elements of life: sunlight, plants, air carrying premium butter aromas, and a contented mood.</p><p><br></p><p>Address: 8700 W 3rd St, Los Angeles, CA 90048</p><p>The Ponte</p><p>Another restaurant radiating Italian charm, a quintessential Beverly Hills establishment. Chef Scott Conant blends classic with modern to create exquisite dishes for diners. The garden courtyard atmosphere is simply the perfect bonus.</p><p><br></p><p>Address: 8965 Beverly Blvd, Los Angeles, CA 90048</p><p>Hinoki &amp; the Bird</p><p>Century City differs from Beverly Hills and Hollywood, carrying a financial district East Coast vibe. Hinoki &amp; the Bird feels like an upscale East Coast restaurant that has been transformed by Los Angeles atmosphere.</p><p><br></p><p>From the heavy metal doors to the serene, meticulously crafted interior decorations, yet the courtyard merges pastoral with modern design. I especially love the dynamic wooden structure in the courtyard, which powerfully isolates the solemn tension of the financial center from within.</p><p>The dishes blend many Asian elements with new American cuisine - the lobster roll is definitely a must-order! Try the smoked mushrooms and soy sauce ice cream; the flavors are magical. However, I have to complain about the outdoor seating - you can barely see anything after 8pm, though the atmosphere feels nice enough.</p><p><br></p><p>Address: 10 W Century Dr, Los Angeles, CA 90067</p><p>Hinoki &amp; The Bird</p><p><br></p><p>The dining style is very American country-style, with outdoor seating under tree shade or large umbrellas that provide effective sun protection. There are almost no terrible orders here. Salmon Benedict egg and bread pudding made me very impressed - it&#39;s rare to find a purely American restaurant I love this much; Alcove is one of them.</p><p><br></p><p>Address: 1929 Hillhurst Ave, Los Angeles, CA 90027</p><p>Alcove Cafe &amp; Bakery</p><p>One of the favorite brunch restaurants and wine bars in West Hollywood. The atmosphere is grand and elegant with iconic West Hollywood vibes. From red wines to cocktails, you won&#39;t be disappointed. It&#39;s perfect for people who work nearby during happy hour. Address: 8752 W Sunset Blvd, West Hollywood, CA 90069</p><p><br></p><p>Redbird</p><p>Calling Redbird a courtyard restaurant isn&#39;t entirely accurate. Although the central courtyard concept is literally &#39;a courtyard inside the building&#39; with bright sunlight scattered throughout... yet it does have transparent glass roofs that protect you from wind and rain. The color combinations, spacious layout, are eye-catching and uplifting. Redbird can be considered one of DTLA&#39;s most swanky restaurants - friends visiting LA definitely should not miss this! Address: 114 E 2nd St, Los Angeles, CA 90012</p><p><br></p><p>If you like us but don&#39;t know where to find the latest discount information, open your phone WeChat and search for &#39;吃货小分队掌上地图&#39; (Chihuao Xiaofenzhui Palm Map) - control all of America&#39;s dining scene right in your hand!</p>
+        
+
+        <a class="backLink" href="list-1.html">← Back to Los Angeles</a>
+      </article>
+    </main>
+  </body>
+</html>

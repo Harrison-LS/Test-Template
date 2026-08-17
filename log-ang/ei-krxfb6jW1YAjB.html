@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Buy tickets" />
+    <title>The Bay Area's hottest Color Factory is now open!</title>
+    <style>
+      :root {
+        --paper: #f5f1eb;
+        --ink: #163d36;
+        --body: #3f3a34;
+        --muted: #8a8379;
+        --line: #ddd5ca;
+        --accent: #d9782f;
+        --white: #fffaf4;
+        --shadow: 0 22px 70px rgba(28, 25, 20, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        line-height: 1.72;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .hero {
+        min-height: clamp(330px, 48vw, 560px);
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        padding: clamp(28px, 7vw, 70px) clamp(24px, 8vw, 76px);
+        background: #28463f;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.12)),
+          url("https://p1-q.mafengwo.net/s11/M00/53/3E/wKgBEFsnKhWAE9fAAAIauT2MuzM49.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F90");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .heroInner {
+        position: relative;
+        width: min(900px, 100%);
+        color: #ffffff;
+      }
+
+      .heroLocation {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 24px;
+        color: rgba(255, 255, 255, 0.78);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .heroLocation svg {
+        width: 17px;
+        height: 17px;
+        color: #f0a45f;
+      }
+
+      h1 {
+        max-width: 880px;
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(30px, 4.8vw, 54px);
+        font-weight: 900;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .brief {
+        width: min(760px, 100%);
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 18px;
+        color: #5a5148;
+        font-size: clamp(17px, 1.9vw, 20px);
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.58;
+      }
+
+      .articleWrap {
+        width: min(900px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: clamp(42px, 6vw, 68px) 0 72px;
+      }
+
+      .content {
+        width: min(760px, 100%);
+        color: var(--body);
+        font-size: clamp(16px, 1.8vw, 18px);
+        line-height: 1.5;
+      }
+
+      .content p {
+        margin: 0 0 0.5em;
+      }
+
+      .content h2,
+      .content h3,
+      .content h4 {
+        margin: 46px 0 18px;
+        color: var(--ink);
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+
+      .content h2 {
+        font-size: clamp(28px, 4vw, 38px);
+      }
+
+      .content h3 {
+        font-size: clamp(23px, 3vw, 30px);
+      }
+
+      .content ul,
+      .content ol {
+        margin: 0 0 30px;
+        padding-left: 28px;
+      }
+
+      .content li {
+        margin: 8px 0;
+      }
+
+      .content blockquote {
+        margin: 34px 0;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 20px;
+        color: #5a5148;
+        font-style: italic;
+      }
+
+      .content img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 42px 0 12px;
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+      }
+
+      .content figure {
+        margin: 42px 0;
+      }
+
+      .content figure img {
+        margin: 0 0 12px;
+      }
+
+      .content figcaption {
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .backLink {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 46px;
+        border-top: 1px solid var(--line);
+        padding-top: 28px;
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.18em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .backLink:hover {
+        color: var(--accent);
+      }
+
+      @media (max-width: 720px) {
+        .hero {
+          min-height: 420px;
+          padding: 30px 24px;
+        }
+
+        .articleWrap {
+          width: min(100% - 28px, 900px);
+          padding-bottom: 48px;
+        }
+
+        .content {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="heroInner">
+        <p class="heroLocation">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+            />
+          </svg>
+          <span>Los Angeles</span>
+        </p>
+        <h1>The Bay Area's hottest Color Factory is now open!</h1>
+      </div>
+    </header>
+
+    <main class="articleWrap">
+      
+      <p class="brief">Buy tickets</p>
+      
+
+      <article class="content">
+        
+          <p>Apart from the Ice Cream Museum, there's another place in the San Francisco Bay Area that has become extremely popular recently - Color Factory.</p><p><br></p><p>Buying Tickets</p><p><br></p><p>Since Color Factory extended their exhibition, ticket sales have been conducted through Evenbrite. When you purchase tickets on Evenbrite, you'll receive a confirmation email for nearby dates with a PDF attachment that serves as your ticket. You need to scan this code at the entrance, and at least one person must be present with matching ID. This is similar to the Ice Cream Museum - both require real-name registration.</p><p><br></p><p>Entering</p><p><br></p><p>The entry order is quite different - people don't enter in waves. Basically, a group enters at a time with significant intervals between groups, though there are still many people inside. After entering, you'll see the viral rainbow staircase. Follow the stairs down to reach the official check-in area. Here, you just need to scan the code and prepare your ticket.</p><p><br></p><p>After that, you'll be given a card, and the server will tell you exactly how to use it.</p>
+<p>This card needs to be activated on the iPad machine after entering by scanning the QR code on the card and inputting your email address.</p><p><br></p><p>The card's purpose is to freely take photos at various photography points provided by the different colored factories; shoot whatever you want. Before each photo session, scan on the nearby self-service camera machine, and your photos will be sent to the email address you registered with. This is indeed very convenient. So don't fill in your email address incorrectly~</p><p><br></p><p>What's inside the Color Factory?</p><p><br></p><p>Black and White House</p><p><br></p><p>The first place you arrive at is a monochrome house/room. This space serves as an introduction; not particularly surprising, but it offers both food and drinks.</p><p><br></p><p>The food served is cotton candy.</p><p>The drink offered is bamboo charcoal lemon juice from Pressed Juicery... The color was honestly quite... weird at first!</p><p>Is it actually drinkable? With a mindset of wanting to try everything, I took a sip.
+。。That's okay, it has a sour taste. I can't detect the bamboo charcoal flavor, but the lemon juice flavor is still noticeable.</p><p><br></p><p>Bamboo Charcoal Lemon Juice</p><p><br></p><p>Orange House</p><p><br></p><p>The scene changed from black and white to a vibrant orange house. My eyes lit up immediately. This room feels like someone is building a garage - various tools and items hang on the walls, of course there are also all kinds of snacks, along with various small ornaments. It's basically a collection of miscellaneous items, but neatly arranged.</p><p><br></p><p>Deep Blue House</p><p><br></p><p>The blue house is one of the popular spots. A sea of blue balloons floats inside like clouds. Although the entire interior has a dim color, the photo area has a beam of light shining down, making photos look very ethereal~ And there's a spot for selfies right here - don't miss it.</p><p><br></p><p>Tips:</p><p>Actually, the colorful factory doesn't have many selfie spots. Not every room has one, so if you love taking selfies, make sure to take enough photos at the designated selfie areas.</p>
+If you pass by, don't miss out!</p><p><br></p><p>                                        DISCO House</p><p><br></p><p>                    There's a transitional room in the middle with a disco ball ceiling—a shimmering spot that's great for photos, but be mindful of lighting.</p><p><br></p><p>                                        Rainbow Room</p><p><br></p><p>                    Many people go straight into the green house with the open door after viewing the Disco House, but don't forget there's also a Rainbow Room nearby~ The black background makes the colored light beams look spectacular. Photography here is equally beautiful, and due to lighting effects, your face appears slimmer—😂 Girls must come to strike poses.</p><p><br></p><p>                    The light columns here can be moved around freely. There's also storage in the black wooden barrel below; you can arrange them into whatever shape you like.</p><p><br></p><p>                                        Green House</p><p><br></p><p>                    The unique feature of the Green House is the wall illustrations, created by master artist Andy J, Miller &
+<p>Andrew Neyer's hand. Here you can hold a huge green paintbrush and doodle all over the walls as you please, but be careful not to draw beyond the wall~</p><p><br></p><p>                                        Ribbon House</p><p><br></p><p>                    Many people have probably seen various short videos of the Ribbon House online, such as people passing through it from inside and out, or lifting curtains to explore, etc. These ribbons are made into a huge square shape using ordinary gift ribbon ties, with you freely shuttling back and forth endlessly inside.</p><p><br></p><p>                                        Pink House (Staircase)</p><p><br></p><p>                    To be honest, this can't really be called a room; it's more of an transitional staircase. Before reaching the Pink House proper, there is also the world-famous rainbow elevator door located here. I particularly enjoy all the colorful circles on the floor - they feel like hopscotch from childhood, bouncing around and having fun.</p><p><br></p><p>                                        Rainbow House</p><p><br></p><p>                    The Rainbow Corridor is undoubtedly one of the most eye-catching places after going upstairs. When the sun shines brightly, it casts very beautiful shadows through the color stickers on the glass - those shadows themselves are multicolored, hitting the opposite wall with "COLOR FACTORY"
+</p><p>These characters are especially beautiful.</p><p><br></p><p>The long corridor also utilizes the same concept, just that there's no natural light here; instead, everything is illuminated by colored lights.</p><p><br></p><p>Purple Room</p><p><br></p><p>Before arriving, this purple room was probably my favorite. I was curious about the printing equipment inside and these pictures that could be printed at any moment. So this was the first room I entered.</p><p><br></p><p>There were already many printed images on the floor, and the printer kept continuously producing more; quite interesting.</p><p><br></p><p>Light Blue Room</p><p><br></p><p>The Light Blue Room is a collaboration with Method. Method is also a brand I personally like very much; everything from dish soap to hand soap is excellent, mainly because they look beautiful~</p><p>This light blue room is directly opposite the purple one; inside it's filled entirely with colorful paper bits and shreds, and there's a roller above that spins continuously. As it turns, bits fall down constantly. This area is also great for taking selfies~</p><p><br></p><p>Simply put, both the Purple Room and Light Blue Room are designed for scattering things around while taking photos. It's fun to play in them, just remember to clean off any bits from your clothes afterward~</p><p><br></p><p>Yellow Ball Pit</p><p><br></p><p>The last one is also the largest room - it's the yellow ball pit house we've been most eagerly anticipating!</p>
+!!</p><p><br></p><p>                    Before going down to play, hang up your bag. Definitely don't put important things in your pockets - many people before have lost their small personal items from the bean bag pool because they had them in their pockets, and couldn't find them at all. 😂</p><p><br></p><p>                    There are three photo spots here, but one is broken. One is in the middle position and can take more frontal photos; another near the exit allows for overhead shots, which is also very fun~ This area keeps you playing the longest. It's quite tiring - walking inside the bean bag pool is honestly not easy at all. 😂</p><p><br></p><p>                                        Gift Shop</p><p><br></p><p>                    Connected to the yellow bean bag pool is the final gift area. The gift shop isn't as engaging as the Ice Cream Museum - you rarely find truly interesting items to purchase, mostly just for browsing and taking photos. However, they do offer a final sweet treat called "Ice Cream Prince"!!! Despite being tiny in size, the flavor is surprisingly delightful~ Those with decision paralysis might want to choose Swril.</p><p><br></p><p>                                        End</p><p><br></p><p>                    I ended this visit feeling beautifully refreshed and genuinely satisfied.
+<figure>Finally, don't forget the Color Factory map. This was created by The Color Factory together with local designers who painted colorful murals on walls in different parts of San Francisco. There are a total of 17 locations. It's a very interesting way to explore the city. A must-visit spot!</figure><p><br></p><p>【Overall Evaluation】</p><p>Rich in colors, fun, requires physical effort</p><p><br></p><p>【Ticket Purchase Reference】</p><p>Need to pre-book in advance, and tickets are quite hard to get. Must be purchased on the official website.</p><p>Website: ***</p><p><br></p><p>【Average Price Reference】</p><p>About $35 per person</p><p><br></p><p>Address:</p><p>575 Sutter St, San Francisco, CA 94102</p>
+        
+
+        <a class="backLink" href="list-1.html">← Back to Los Angeles</a>
+      </article>
+    </main>
+  </body>
+</html>

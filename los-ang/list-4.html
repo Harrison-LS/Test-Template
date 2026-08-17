@@ -1,0 +1,794 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="City of Angels"
+    />
+    <title>Los Angeles</title>
+    <style>
+      :root {
+        --paper: #f5f1eb;
+        --ink: #163d36;
+        --body: #5d5a54;
+        --muted: #8a8379;
+        --line: #ddd5ca;
+        --accent: #d9782f;
+        --white: #fffaf4;
+        --text-width: 720px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        line-height: 1.7;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .page {
+        width: min(900px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 10px 0 40px;
+      }
+
+      .hero {
+        min-height: clamp(180px, 29vw, 260px);
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        border-radius: 12px;
+        padding: clamp(22px, 4vw, 38px);
+        background: #28463f;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.05) 64%),
+          url("https://p1-q.mafengwo.net/s9/M00/A8/87/wKgBs1eSKJmAJrPTABckyB0Qyd851.jpeg?imageView2%2F2%2Fw%2F680%2Fq%2F90");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .heroTitle {
+        position: relative;
+        display: flex;
+        align-items: baseline;
+        gap: 10px;
+        color: #ffffff;
+      }
+
+      .heroTitle h1 {
+        margin: 0;
+        font-size: clamp(30px, 5vw, 46px);
+        font-weight: 900;
+        line-height: 1;
+        letter-spacing: 0;
+      }
+
+      .heroTitle span {
+        color: rgba(255, 255, 255, 0.64);
+        font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+        font-size: clamp(16px, 2vw, 24px);
+        font-weight: 700;
+      }
+
+      .intro {
+        margin: 34px 0 54px;
+        color: #4f4a43;
+        font-size: clamp(17px, 2vw, 20px);
+        line-height: 1.8;
+      }
+
+      .sectionTitle {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+        gap: 14px;
+        margin: 0 0 44px;
+        color: var(--muted);
+        font-size: 14px;
+        letter-spacing: 0.16em;
+      }
+
+      .sectionTitle::before,
+      .sectionTitle::after {
+        content: "";
+        height: 1px;
+        background: var(--line);
+      }
+
+      .articleList {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .articleItem {
+        display: grid;
+        grid-template-columns: minmax(0, var(--text-width)) 140px;
+        gap: 28px;
+        justify-content: space-between;
+        border-bottom: 1px solid var(--line);
+        padding: 0 0 34px;
+        margin-bottom: 34px;
+      }
+
+      .articleItem:not(.hasImage) {
+        grid-template-columns: minmax(0, var(--text-width));
+        justify-content: start;
+      }
+
+      .articleBody {
+        width: min(100%, var(--text-width));
+        border-left: 2px solid transparent;
+        padding-left: 14px;
+        transform: translateX(0);
+        transition:
+          border-color 160ms ease,
+          transform 180ms ease;
+      }
+
+      .articleItem:hover .articleBody {
+        border-left-color: var(--accent);
+        transform: translateX(8px);
+      }
+
+      .meta {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin: 0 0 10px;
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+      }
+
+      .pin {
+        color: var(--accent);
+      }
+
+      .articleTitle {
+        width: 100%;
+        margin: 0 0 10px;
+        color: var(--ink);
+        font-size: clamp(21px, 2.5vw, 26px);
+        font-weight: 900;
+        line-height: 1.34;
+        letter-spacing: 0;
+      }
+
+      .brief {
+        width: 100%;
+        max-width: none;
+        margin: 0 0 14px;
+        color: var(--body);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        font-size: 16px;
+        line-height: 1.72;
+      }
+
+      .readMore {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        color: var(--accent);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 800;
+      }
+
+      .articleImage {
+        width: 140px;
+        aspect-ratio: 16 / 10;
+        align-self: center;
+        overflow: hidden;
+        border-radius: 9px;
+        background: var(--line);
+      }
+
+      .articleImage img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+      }
+
+      .emptyState {
+        border: 1px dashed var(--line);
+        border-radius: 10px;
+        padding: 42px 20px;
+        color: var(--muted);
+        text-align: center;
+      }
+
+      .pagination {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        margin-top: 12px;
+      }
+
+      .pageLink {
+        min-width: 96px;
+        min-height: 40px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 0 16px;
+        background: var(--white);
+        color: var(--ink);
+        font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+        font-size: 14px;
+        font-weight: 800;
+      }
+
+      .pageLink[aria-disabled="true"] {
+        pointer-events: none;
+        opacity: 0.45;
+      }
+
+      @media (max-width: 720px) {
+        .page {
+          width: min(100% - 24px, 900px);
+          padding-top: 8px;
+        }
+
+        .hero {
+          min-height: 220px;
+        }
+
+        .articleItem,
+        .articleItem.hasImage {
+          grid-template-columns: minmax(0, 1fr);
+          gap: 16px;
+        }
+
+        .articleImage {
+          width: 100%;
+          max-width: 260px;
+          justify-self: start;
+        }
+
+        .sectionTitle {
+          margin-bottom: 30px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <section class="hero">
+        <div class="heroTitle">
+          <h1>Los Angeles</h1>
+        </div>
+      </section>
+
+      
+      <p class="intro">
+        Los Angeles is located on the west coast of the United States, with a city proper population of approximately 3.8 million people, making it the second-largest city in the US (after New York). It has a typical Mediterranean climate with minimal temperature variation throughout the year, rainy winters and dry summers; spring and autumn are best for tourism. The English name is Los Angeles, abbreviated as LA. The official nickname is "City of Angels," while the colloquial term is Sank Village.
+      </p>
+      
+
+      <div class="sectionTitle"></div>
+
+      <section class="articleList" aria-label="article-list">
+        
+        
+        <article class="articleItem">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="ub_LqxQmSK0HoDq0.html">Los Angeles | All the best brunch spots might be in this one article!</a>
+            </h2>
+
+            
+            <p class="brief">After exploring, I'm convinced that L.A. is truly the brunch capital! Sleeping in until late morning, waking up refreshed by natural sunlight, and bathing in California's brilliant sunshine - pedestrians and shops on the street all feel very chill~ As for which restaurants are the best? Come along with Lulu to find out~</p>
+            
+
+          </div>
+
+          
+        </article>
+        
+        
+        <article class="articleItem">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="hMCldi2JxkN7Hx8_.html">Guide to the Global Influencer Wall | City of Angels, LALA LAND</a>
+            </h2>
+
+            
+            <p class="brief">Los Angeles, known as the "City of Angels," isn't it just LA LA LAND in real life?</p>
+            
+
+          </div>
+
+          
+        </article>
+        
+        
+        <article class="articleItem">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="r3jYNoLRomA3cQKl.html">Love Letter to Los Angeles: Griffith Observatory</a>
+            </h2>
+
+            
+            <p class="brief">Griffith Observatory
+• Located on a hilltop northwest of Los Angeles, offering panoramic views of th</p>
+            
+
+          </div>
+
+          
+        </article>
+        
+        
+        <article class="articleItem">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="S8hhKPzUOqA8pVOC.html">Unmissable towns and stunning scenery along America's Highway One!</a>
+            </h2>
+
+            
+            <p class="brief">Scenic Highlights You Cannot Miss on California Highway 1
+
+California's Highway 1 is North America's</p>
+            
+
+          </div>
+
+          
+        </article>
+        
+        
+        <article class="articleItem">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="rJ12cJDuyAytlStF.html">Being an Influencer in LA | Checking In at Los Angeles' Famous Influencer Wall Photo Spot</a>
+            </h2>
+
+            
+            <p class="brief">This is a travelogue mainly covering LA movie scene photo spot guides, so some purely sightseeing it</p>
+            
+
+          </div>
+
+          
+        </article>
+        
+        
+        <article class="articleItem">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="ZWFlVqJ99E8-VRYy.html">Los Angeles: 72 Hours of Eat, Drink & Play!</a>
+            </h2>
+
+            
+            <p class="brief">What exactly is there to do in Los Angeles? This city that appears in countless American TV shows and movies, where you can spot celebrities strolling on the streets, where not having a car feels like being footless - why does it attract visitors from around the globe? Going beyond conventional attractions like Hollywood and Universal Studios, let's explore a different kind of Los Angeles.</p>
+            
+
+          </div>
+
+          
+        </article>
+        
+        
+        <article class="articleItem">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="F6iw7a0sGbhvYgAm.html">Los Angeles Fun Guide 05: From Mouth-Watering Snacks to Famous Chef's Cuisine</a>
+            </h2>
+
+            
+            <p class="brief">Diverse Los Angeles has created a diverse food scene, featuring creative restaurants run by celebrit</p>
+            
+
+          </div>
+
+          
+        </article>
+        
+        
+        <article class="articleItem">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="kJZxVdvevxK572d1.html">Exploring Los Angeles on a Shoestring Budget: 10 Essential Cultural & Art Attractions You Cannot Miss</a>
+            </h2>
+
+            
+            <p class="brief">Top 10. Hollywood Forever Cemetery
+Eternal Hollywood, a gathering place for hippies.
+Hollywood Forev</p>
+            
+
+          </div>
+
+          
+        </article>
+        
+        
+        <article class="articleItem">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="6kPgiCKHELWgA49o.html">Hollywood Walk of Fame | The world's most star-studded pedestrian path</a>
+            </h2>
+
+            
+            <p class="brief">Grauman's Chinese Theatre
+Sidney Grauman, known as "Mr. Hollywood," built his dream Chinese Theatre </p>
+            
+
+          </div>
+
+          
+        </article>
+        
+        
+        <article class="articleItem">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="t7gKOpF51-RbrCc0.html">Where to go this weekend? A roundup of upcoming events around Los Angeles, California</a>
+            </h2>
+
+            
+            <p class="brief">LA Art Show | Los Angeles Art Exhibition
+LA Art Show
+The grandest art exhibition in all of Los Angel</p>
+            
+
+          </div>
+
+          
+        </article>
+        
+        
+        <article class="articleItem">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="s1nYcWyZd3ImtPsU.html">Los Angeles Ocean View Restaurant | Oysters, Sea Bass & Whiskey, Sipping Drinks While Feeling the Sea Breeze</a>
+            </h2>
+
+            
+            <p class="brief">Living in sunny Los Angeles, how can you miss the experience of enjoying sunshine by the seaside, fe</p>
+            
+
+          </div>
+
+          
+        </article>
+        
+        
+        <article class="articleItem">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="3VZPQC8oLxC_rMNb.html">Los Angeles County Fair: Cotton Candy Sandwich Heads Colorful Food Festival</a>
+            </h2>
+
+            
+            <p class="brief">L.A. County Fair: Cotton Candy Sandwich Takes Center Stage at Vibrant Food Festival</p>
+            
+
+          </div>
+
+          
+        </article>
+        
+        
+        <article class="articleItem">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="esMSuKTrU36Wcz7r.html">No driving required, no tour groups - GO123 Bus takes you exploring Greater Los Angeles!</a>
+            </h2>
+
+            
+            <p class="brief">Tired from self-driving? Group tours too rushed? Try something brand new!
+
+I'm a lazy person. I don'</p>
+            
+
+          </div>
+
+          
+        </article>
+        
+        
+        <article class="articleItem">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="K2xfqrTFrLT2aoB_.html">Say Goodbye to Starbucks | A Roundup of Local Niche Coffee Brands in Los Angeles</a>
+            </h2>
+
+            
+            <p class="brief">Fashionable LA, where trends and art converge naturally cannot do without its coffee culture. Major </p>
+            
+
+          </div>
+
+          
+        </article>
+        
+        
+        <article class="articleItem">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="OeOG7gIaQuh87yGB.html">Lovers of Meat, Look Over Here | A Guide to Steakhouses Around Los Angeles</a>
+            </h2>
+
+            
+            <p class="brief">No need for more words, let's dig in to the meat!
+Are you feeling hungry yet?
+Today I'll share with </p>
+            
+
+          </div>
+
+          
+        </article>
+        
+        
+        <article class="articleItem">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="ABOblHOYguTYsXQ8.html">Los Angeles's hot and lively beaches — which one do you like?</a>
+            </h2>
+
+            
+            <p class="brief">With its stunning coastline stretching over 100 kilometers, vibrant California beaches, and abundant sunshine, visitors are drawn to embrace the ocean in Los Angeles. With so many beaches available, how do you choose the perfect one for you? Today, we'll explore each option for you!</p>
+            
+
+          </div>
+
+          
+        </article>
+        
+        
+        <article class="articleItem">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="oDG2N4h6zxBfJI0P.html">Los Angeles Shopping Guide | Shopping Districts, Malls, and Outlet Stores</a>
+            </h2>
+
+            
+            <p class="brief">For Los Angeles, deciding where to shop isn't a question since excellent shopping malls, outlet stor</p>
+            
+
+          </div>
+
+          
+        </article>
+        
+        
+        <article class="articleItem">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="aE8hqkpAwXQvEC__.html">Los Angeles Flower Market: A Fragrant Universal Language of the World</a>
+            </h2>
+
+            
+            <p class="brief">Los Angeles Flower Market
+Los Angeles Flower Market: Fragrance - A Universal Language</p>
+            
+
+          </div>
+
+          
+        </article>
+        
+        
+        <article class="articleItem">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="ZWbuc454EOvX6_Ub.html">Skip the Lines! The Ultimate Los Angeles Universal Studios Guide — Read Carefully!</a>
+            </h2>
+
+            
+            <p class="brief">When it comes to Los Angeles theme parks: Disney, Six Flags... but Little Bee thinks Universal Studi</p>
+            
+
+          </div>
+
+          
+        </article>
+        
+        
+        <article class="articleItem">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="TVAKd7Ck7dCY8Zl0.html">Is there nothing fun to do in Los Angeles besides Universal Studios? That might just mean you haven't discovered these yet!</a>
+            </h2>
+
+            
+            <p class="brief">When you think of Los Angeles, Hollywood, the Walk of Fame, Disney, or Universal Studios likely come</p>
+            
+
+          </div>
+
+          
+        </article>
+        
+      </section>
+
+      
+      
+      
+      
+      
+      <nav class="pagination" aria-label="pagination">
+        <a
+          class="pageLink"
+          href="list-3.html"
+          aria-disabled="false"
+        >
+          Previous
+        </a>
+        <a
+          class="pageLink"
+          href="list-5.html"
+          aria-disabled="false"
+        >
+          Next
+        </a>
+      </nav>
+      
+    </main>
+  </body>
+</html>

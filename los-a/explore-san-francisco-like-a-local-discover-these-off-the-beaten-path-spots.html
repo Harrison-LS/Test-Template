@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Cliff Lighthouse and Stunning Bird Island Reefs" />
+    <title>Explore San Francisco like a local—discover these off-the-beaten-path spots.</title>
+    <style>
+      :root {
+        --paper: #f5f1eb;
+        --ink: #163d36;
+        --body: #3f3a34;
+        --muted: #8a8379;
+        --line: #ddd5ca;
+        --accent: #d9782f;
+        --white: #fffaf4;
+        --shadow: 0 22px 70px rgba(28, 25, 20, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        line-height: 1.72;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .hero {
+        min-height: clamp(330px, 48vw, 560px);
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        padding: clamp(28px, 7vw, 70px) clamp(24px, 8vw, 76px);
+        background: #28463f;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.12)),
+          url("https://p1-q.mafengwo.net/s10/M00/1D/E0/wKgBZ1mv1keATmLLAAHOM963pt400.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F90");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .heroInner {
+        position: relative;
+        width: min(900px, 100%);
+        color: #ffffff;
+      }
+
+      .heroLocation {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 24px;
+        color: rgba(255, 255, 255, 0.78);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .heroLocation svg {
+        width: 17px;
+        height: 17px;
+        color: #f0a45f;
+      }
+
+      h1 {
+        max-width: 880px;
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(30px, 4.8vw, 54px);
+        font-weight: 900;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .brief {
+        width: min(760px, 100%);
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 18px;
+        color: #5a5148;
+        font-size: clamp(17px, 1.9vw, 20px);
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.58;
+      }
+
+      .articleWrap {
+        width: min(900px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: clamp(42px, 6vw, 68px) 0 72px;
+      }
+
+      .content {
+        width: min(760px, 100%);
+        color: var(--body);
+        font-size: clamp(16px, 1.8vw, 18px);
+        line-height: 1.5;
+      }
+
+      .content p {
+        margin: 0 0 0.5em;
+      }
+
+      .content h2,
+      .content h3,
+      .content h4 {
+        margin: 46px 0 18px;
+        color: var(--ink);
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+
+      .content h2 {
+        font-size: clamp(28px, 4vw, 38px);
+      }
+
+      .content h3 {
+        font-size: clamp(23px, 3vw, 30px);
+      }
+
+      .content ul,
+      .content ol {
+        margin: 0 0 30px;
+        padding-left: 28px;
+      }
+
+      .content li {
+        margin: 8px 0;
+      }
+
+      .content blockquote {
+        margin: 34px 0;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 20px;
+        color: #5a5148;
+        font-style: italic;
+      }
+
+      .content img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 42px 0 12px;
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+      }
+
+      .content figure {
+        margin: 42px 0;
+      }
+
+      .content figure img {
+        margin: 0 0 12px;
+      }
+
+      .content figcaption {
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .backLink {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 46px;
+        border-top: 1px solid var(--line);
+        padding-top: 28px;
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.18em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .backLink:hover {
+        color: var(--accent);
+      }
+
+      @media (max-width: 720px) {
+        .hero {
+          min-height: 420px;
+          padding: 30px 24px;
+        }
+
+        .articleWrap {
+          width: min(100% - 28px, 900px);
+          padding-bottom: 48px;
+        }
+
+        .content {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="heroInner">
+        <p class="heroLocation">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+            />
+          </svg>
+          <span>Los Angeles</span>
+        </p>
+        <h1>Explore San Francisco like a local—discover these off-the-beaten-path spots.</h1>
+      </div>
+    </header>
+
+    <main class="articleWrap">
+      
+      <p class="brief">Cliff Lighthouse and Stunning Bird Island Reefs</p>
+      
+
+      <article class="content">
+        
+          <p>Climb to Cliffs Lighthouse and Spectacular Pigeon Island Rocks</p><p><br></p><p>After crossing the Golden Gate Bridge and turning left, you arrive at Point Bonita Lighthouse (7.5/10)</p><p>A few steps after parking will lead you to this large rock formation in Figure Two</p><p>Walking through a small path inside the rock formation gives an open feeling. At this point you can see the lighthouse in Figure Three~</p><p><br></p><p>This is the third and final lighthouse established within San Francisco Bay, coming after Alcatraz and Fort Point</p><p>In 1853 a Carrier Pigeon ship ran aground here, so it was renamed Pigeon Point. To prevent accidents, this lighthouse was built in 1872</p><p>But pay attention! This beautiful lighthouse is only open to the public from Saturday to Monday afternoons from 12:30 PM to 3:30 PM</p><p>The lighthouse sits on an independent rock formation, accessible only by a small bridge. Be careful!</p><p>Pictures really cannot capture how it looks in person. Surrounding the bridge are waves and cliffs. Purple flowers bloom on the left side while the tiny Golden Gate Bridge appears in the distance</p><p>In any case, it's just very beautiful (○'ω'○)</p><p><br></p><p>After returning to the parking lot!</p>
+<p>Go higher! Hidden here is a super beautiful viewpoint!! Rodeo Lagoon Vista Point~ (10/10)</p><p>I've been to many places, seen many seas and cliffs, but this rock formation really amazed me!</p><p>Standing at this viewpoint you can see the beautiful scenery in photo four~ Bird Island</p><p>Then we quietly climbed down from the damaged fence of the viewpoint Σ( ° △ °|||)︴ Good kids don't copy this!</p><p>Walking further, you can see a small pavilion facing the sea, filled with graffiti inside</p><p>Took a photo at the cliff edge, it's really high. Just half a meter forward is a 60-70 meter cliff..</p><p>After taking a photo, I frantically ran back ≡ω≡ Climbed back to the viewpoint and saw an incredibly beautiful sunset 🌇</p><p><br></p><p>                    Above is the viewpoint</p><p><br></p><p>                                        Cliff beach, mountain covered in wildflowers, dog paradise~</p><p><br></p><p>                    Fort Funston (9.5/10) Located at the southwest corner of San Francisco, next to San Francisco State University</p><p>Here you can find a peninsula extending into the Pacific Ocean, breezes sweeping through, steep rocky trails, dogs, and coastal beaches - perfect for hiking, paragliding, and horseback riding</p><p><br></p><p>After exiting the parking lot, you arrive at a cliffside covered with wildflowers (photos two and three)</p><p>Looking down from above, the scenery is very beautiful. Beach, sunshine - once you're here you absolutely don't want to leave</p><p>Follow the only path and walk and walk, you'll see so many dogs~ One person walks a dozen or more at once</p><p>The dogs are all gentle with leashes. Big dogs wear masks~ So no need to be scared. There's even a drinking spot for the dogs, very cute. Missing my dog already ●︿●</p><p>Walk down this slope in photo five and you'll reach the beach~ On that day the wildflowers were all blooming, super beautiful~ In the distance you can also see San Francisco from afar</p><p>Feels like not many people know about this beach. It's relatively clean with fewer people. Walk and walk and you'll see a long string of dog paw prints~</p><p>To walk across such a long stretch of beach, you need to climb up a small hill. I haven't exercised in a while and climbed until I was exhausted (￣(●●)￣)</p><p><br></p><p>                                        Still cliff, wildflower beach~</p><p><br></p><p>                    Mussel Rock Park (7.5/10) Just a little further from that cliff beach~</p><p>Maybe I approached it wrong and ended up in an awkward spot unable to get down, so I could only view from the slope</p><p>Many foreigners are surfing and paragliding, super want to try!</p>
+<p>On the day we went, a red wildflower was blooming. I felt it's a specialty of California's coast - about half-hand sized. In summer, its thick leaves seem to turn red too.</p><p><br></p><p>Cliff forest trail, seaside labyrinth, distant view of Golden Gate Bridge</p><p><br></p><p>In the upper left corner of San Francisco there is a park called Lands End - its greenery looks particularly like a forest~</p><p>Most people go to Ocean Beach. By chance I walked up a few steps and felt like discovering a treasure: Sutro Baths (9/10)</p><p><br></p><p>Passing Cliff House restaurant (there's a huge floor-to-ceiling window in the dining area; seating by the window allows you to overlook the Pacific Ocean, extremely beautiful - though I've heard it's slightly expensive. Hope to try it sometime~) leads you to Sutro Baths</p><p><br></p><p>Sutro Baths was a private ocean swimming venue built on the coast. Due to huge operational and maintenance costs being forced to close.</p><p>A fire in 1966 burned this place down. Now only the remaining concrete framework and pipes allow one to imagine its former glory</p><p>Walking to the far right you can even see a heart-shaped rock~</p><p><br></p><p>To the right of Sutro Baths there's a staircase leading up - first is a lush little grove, then it becomes a trail that's half cliff and half forest</p><p>Reaching Lands End Labyrinth (9/10) opens up your view. Have to say this seaside labyrinth still has quite an impact</p><p>Also a 40-50 meter high cliff. Standing at the top looking down on the labyrinth, to the right is the magnificent Golden Gate Bridge, to the left are cliffs and beach</p><p><br></p><p>The extremely beautiful sunrise at Twin Peaks</p><p><br></p><p>When people mention Twin Peaks (8/10), what they generally think of is night view~ Having seen the night scenery many times, we chose to watch the sunrise instead.</p><p>(But Twin Peaks night view is also super beautiful~ The first time going up I was simply shocked - the spread-out night view especially Market Street side looked fantastic)</p><p>(Remember to wear more clothes when you go up at night!)
+</p><p>Don't go when it's windy above and foggy - you can't see anything)</p><p><br></p><p>                    Left at 5pm to catch the 5:30am sunrise, but by then the sky was already lightening</p><p>After taking excited photos, someone suddenly called out "Look! The sun is rising!"</p><p>The sun revealed a glistening golden head; the first rays of sunlight hit the house. Reeds on the hillside swayed in the breeze - so beautiful</p><p><br></p><p>                    Night view of Twin Peaks at night - seeing it in person is truly impressive</p><p><br></p><p>                                        Colorful mosaic stairs - a photographer's paradise</p><p><br></p><p>                    Below Golden Gate Park lies an incredibly beautiful staircase called 16th Avenue Tiled Steps (8.5/10), built through donations from nearby residents</p><p>Fragments of stained glass were shattered then rearranged into patterns; this staircase depicts the Milky Way</p><p><br></p><p>                    At the top is the Moon River and Sun - reportedly glowing softly at night~</p><p>Recently redesigned with a succulent theme, featuring an abundance of succulents</p><p>Perfect for photography, though it gets crowded during peak hours</p><p>Note~ After climbing up, walk a few more steps to ascend another staircase that reaches the top of Grandview Park</p><p>From here you can overlook Golden Gate Park and the Pacific Ocean</p><p><br></p><p>                    There's also a smaller mosaic staircase~ called Hidden Garden Steps (8/10), located right beside the one above</p><p>This theme features plants with many mushrooms and little animals in vibrant colors, great for photos</p><p>However, the stairs are shorter, so there aren't small groves to view from afar after climbing up~</p><p><br></p><p>                                        Mission District's stunning graffiti streets</p><p><br></p><p>                    People generally avoid the Mission District because it has a significant Black population and can feel somewhat chaotic</p><p>But there are San Francisco's most beautiful graffiti walls there - connected together, spanning several blocks</p><p>I usually start by visiting Mission Dolores Park first</p><p><br></p><p>                    This park is one large sloping grassy area where many people picnic and soak in the sun; at the top someone strums a guitar while skateboarding</p><p>Then head to Bi-Rite Creamery across from the park - an ice cream shop that's been around for ages, highly recommend the lavender flavor!</p>
+</p><p>Found some photos I took for my classmates</p><p><br></p><p>                                        De Young Museum gift shop and free viewing deck</p><p><br></p><p>                    The De Young (7/10) Art Museum in Golden Gate Park should be well known to everyone~</p><p>I'm not sure if anyone noticed the museum also has a high-level free viewing deck plus gift shop</p><p>The viewing deck is on the far right when you enter, no ticket needed to get in~ Just follow the crowd and take the elevator up to around 8-9 floors</p><p><br></p><p>                    The viewing deck offers 360-degree views with good quality. The glass is quite large and clean, so the scenery is excellent~ You can overlook most of San Francisco from above</p><p>In the middle is a small gift shop selling pretty exquisite items but they're a bit pricey = =</p><p>The important thing is it's free! Also nearby are the California Academy of Sciences and Japanese Tea Garden which you can visit together</p><p><br></p><p>                                        Fun and interesting Walt Disney Museum</p><p><br></p><p>                    The various museums in downtown SF have several free days each year</p><p>Christmas, Thanksgiving, specific dates each month etc. You can check the official website for exact dates</p><p>The Walt Disney Museum is located within a nature reserve near the Golden Gate Bridge, with a large grassy area outside perfect for picnics</p><p><br></p><p>                    Inside there are many exhibition halls showcasing Walt's original drawings and all kinds of Disney collectibles</p><p>There's also a super large miniature version of Disneyland that animates every so often to display it~ hehe</p><p>I recommend this for friends who are interested in Disney and kids (⊙v⊙)</p><p><br></p><p>                    There's also a section with floor-to-ceiling windows where you can see the nearby Golden Gate Bridge~</p><p>The day I went happened to be sunset, it was absolutely beautiful~</p><p><br></p><p>                                        Natural oxygen bar, towering redwood forest</p><p><br></p><p>                    On the other side of the Golden Gate Bridge, seemingly no public transportation gets there</p><p>It's a redwood preserve. The day I went it was surrounded by mist and clouds with very few tourists, all around were towering redwoods - some so large several people couldn't wrap their arms around them</p><p>There are many forest trails scattered throughout. You can get a small booklet at the entrance showing trail lengths and difficulty levels</p><p>Note that you can only walk on the built wooden boardwalks~ Don't go down to trample the earth or touch the tree bark etc. Redwoods are still quite fragile</p><p><br></p><p>                                        Listen to sounds from the Atlantic, wave organ</p><p><br></p><p>                    Although I have no photos but it left a strong impression. The entrance is a private yacht marina and large lawn</p><p>Walking along the long narrow coastal path to the end, you can see piles of rocks arranged in patterns</p><p>It's said that when the tide comes in, seawater rushes into the stone pipes and produces sound - basically utilizing rules to give the ocean a summarizing voice~</p><p>However the water level was very low when I went there, no chance to hear the sea's voice (╯‵□′)╯︵┻━┻</p><p>Also!</p>
+This place is a super great spot to view the Golden Gate Bridge~~ When I went, it was sunset too, super beautiful~</p><p><br></p><p>                                        The magnificent Grace Cathedral that passes by on the streetcar</p><p><br></p><p>                    Board the cable car at the last stop on California Street in downtown</p><p>Go up a big hill, pass through Chinatown, and you can arrive at this magnificent Grace Cathedral~</p><p>I've never been to Europe, so this is one of the better cathedrals I've visited</p><p>The main entrance is a protected historical artifact with various reliefs on it. I heard they're gilded</p><p>Highly recommended to visit during the day~ When there's light, the stained glass windows look particularly beautiful</p><p>There are prayer services on weekends. The people praying seemed so sincere and devout that it was a bit hard for me as an atheist to fully understand</p><p>Still, it's a worthwhile place for sightseeing</p><p><br></p><p>                                        sfmoma is incredibly photogenic (to be continued)</p><p><br></p><p>                    New York has MOMA, and we in San Francisco have one too~ sfmoma opened recently a few years ago, located in downtown</p><p>There's a green lawn at the entrance with a small waterfall memorial to Martin Luther King Jr.~ The scenery is nice. Americans love sitting on the grass to soak up sunshine</p><p>The AMC cinema is also there. On the first floor is a pretty decent bubble tea shop~</p><p>MOMA's exterior is very beautiful—brown building with a skylight at the top that provides great natural lighting inside</p><p>Tickets are affordable, student tickets around $19. There are four or five levels featuring sculptures, photography, video, and paintings</p><p>There's also an outdoor garden with walls full of greenery</p><p>Although some works I couldn't quite understand haha, it's incredibly photogenic. Remember to bring your friends~</p><p><br></p><p>                                        Macy'
+s' amazing Christmas small gift</p><p><br></p><p>                    Union Square right in front is Macys~ It has 5-6 floors with large floor-to-ceiling windows on each level.</p><p>Every Christmas, the ground-floor windows are decorated with Christmas items - green wreaths, small pinecones, and such.</p><p>At night when lights turn on, it looks amazing from Union Square~</p><p>And Macys also sells Christmas items in-store! I think they're displayed really nicely haha.</p><p>Like walking into a Christmas castle~ If you like, you can buy it!</p><p><br></p><p>                    Modern architecture art museum</p><p><br></p><p>                    San Francisco Contemporary Jewish Museum is pretty close to sfmoma.</p><p>The building has a modern feel - a 3D cube slanted into the ground with many skylights.</p><p>Each museum has free days for the public or boa cardholders, you can check dates before going.</p><p>This museum's exhibitions change every three months. When I went it was "Generations: Inherited Memories and Contemporary Art."</p><p>The museum works hard to connect art, humanities, memories, and history - making people more sensitive and attentive to "historical memories"</p><p>It's actually quite small inside but the exhibits are still pretty good.</p><p><br></p><p>                    Great nighttime view spot in SoMa - Alcatraz at night</p><p><br></p><p>                    This place doesn't need much introduction haha~ It's basically a must-visit attraction in San Francisco.</p><p>Tickets need to be booked in advance, it gets quite popular.</p><p>You can book on the official website or buy tickets on-site. Daytime seems to be $40 per person and night is $55 (I already forgot 0 0).</p><p>You take a boat there and can also see the BART along the way~</p><p><br></p><p>                    The island has become a historic district - you can't pick flowers or pick up stones as souvenirs.</p><p>Near the entrance you can individually pick up a guide device, it even has Chinese!</p><p>You can see rows of small rooms in the old prison (really tiny - small bed + toilet + sink, one cage per person).</p><p>Can also see the hole dug by four escaped prisoners, the inmates' cafeteria, and isolation cells.</p><p>Following the automatic guide device makes it easy to tour completely. The narration is really good.</p><p>Different from daytime, at night you can see San Francisco's night view~ Still very beautiful.</p><p>Remember to bring a coat! It gets quite cold with strong wind at night~</p><p><br></p><p>                    Excellent lawn free golf course and forest trails</p><p><br></p><p>                    The golf courses here don't feel as out of reach as those in China (haha, this adjective might not be right)</p><p>You can enter freely without fences. If you want to play, $13 for 100 balls. Take the ball yourself and hit it (practice area).</p><p>Professional fields have caddies following you~</p><p>The scenery there is nice~ Partners who don't golf can walk around over there.</p><p><br></p><p>                    Don't forget there's also a forest path here~</p><p>All tall trees, plus a small sculpture made of raw wood.</p><p><br></p><p>                    Super fresh fruits and vegetables Ferry Building Bay Bridge viewing dock</p><p><br></p><p>                    On weekends there are farmer markets here~ You can buy very fresh produce, succulents,</p><p>Plus lots of trendy shops offering steaks, coffee, Western cuisine, etc.</p><p>A weekend stroll is awesome~ The building faces the sea and outside there's a fountain plaza.</p><p>This fountain is one of the most famous American fountains~</p><p><br></p><p>                    It's a very small dock next to the Ferry Building, just 3 minutes walk away.</p><p>Since it's not a popular attraction, people are very few.</p><p>It's an amazing spot for viewing Bay Bridge~</p><p>Walking to the end you can see BART with the sea as backdrop. It looks really beautiful.</p><p><br></p><p>                    Chocolate-scented square filled with artistic atmosphere</p><p><br></p><p>                    Ghirardelli Chocolate Factory took over this small castle~</p><p>Their chocolate shop is also here. Inside the store you get free chocolate!</p><p>There are all kinds of chocolates. Personally I'm not that fond of them, feels too sweet.</p><p>The deepest part is a store~ Selling various sweets and drinks related to chocolate~</p><p>Can even watch how chocolate is made!</p><p><br></p><p>                    Outside there are many boutique shops~ You can find lots of pretty little things.</p><p>There are street performers too, playing violins, guitars, or singing~</p><p>Buy a cup of hot cocoa, sit by the wishing fountain, listening to music. Feels super great!</p>
+</p><p><br></p><p>Ending with the school I love most~ (to be continued)</p><p><br></p><p>Wow~~ Finally reached the end!</p><p>So I'll take USF as my ending then~</p><p>Even though I usually complain a lot hahaha, the cafeteria food is terrible and the school is just average.</p><p>But I still ❤️ him~~ And I don't even let others say one word about it (⊙v⊙)</p><p>Bonus photo of our mascot who goes absolutely crazy----the masked ghostly cape-wearing muscular man (╯‵□′)╯︵┻━┻</p>
+        
+
+        <a class="backLink" href="list-1.html">← Back to Los Angeles</a>
+      </article>
+    </main>
+  </body>
+</html>

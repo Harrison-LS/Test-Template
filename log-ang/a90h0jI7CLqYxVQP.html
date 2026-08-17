@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <title>Guide | Los Angeles Airport Transportation Options - Quick Reference</title>
+    <style>
+      :root {
+        --paper: #f5f1eb;
+        --ink: #163d36;
+        --body: #3f3a34;
+        --muted: #8a8379;
+        --line: #ddd5ca;
+        --accent: #d9782f;
+        --white: #fffaf4;
+        --shadow: 0 22px 70px rgba(28, 25, 20, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        line-height: 1.72;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .hero {
+        min-height: clamp(330px, 48vw, 560px);
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        padding: clamp(28px, 7vw, 70px) clamp(24px, 8vw, 76px);
+        background: #28463f;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.12)),
+          url("");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .heroInner {
+        position: relative;
+        width: min(900px, 100%);
+        color: #ffffff;
+      }
+
+      .heroLocation {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 24px;
+        color: rgba(255, 255, 255, 0.78);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .heroLocation svg {
+        width: 17px;
+        height: 17px;
+        color: #f0a45f;
+      }
+
+      h1 {
+        max-width: 880px;
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(30px, 4.8vw, 54px);
+        font-weight: 900;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .brief {
+        width: min(760px, 100%);
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 18px;
+        color: #5a5148;
+        font-size: clamp(17px, 1.9vw, 20px);
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.58;
+      }
+
+      .articleWrap {
+        width: min(900px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: clamp(42px, 6vw, 68px) 0 72px;
+      }
+
+      .content {
+        width: min(760px, 100%);
+        color: var(--body);
+        font-size: clamp(16px, 1.8vw, 18px);
+        line-height: 1.5;
+      }
+
+      .content p {
+        margin: 0 0 12px;
+      }
+
+      .content h2,
+      .content h3,
+      .content h4 {
+        margin: 46px 0 18px;
+        color: var(--ink);
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+
+      .content h2 {
+        font-size: clamp(28px, 4vw, 38px);
+      }
+
+      .content h3 {
+        font-size: clamp(23px, 3vw, 30px);
+      }
+
+      .content ul,
+      .content ol {
+        margin: 0 0 30px;
+        padding-left: 28px;
+      }
+
+      .content li {
+        margin: 8px 0;
+      }
+
+      .content blockquote {
+        margin: 34px 0;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 20px;
+        color: #5a5148;
+        font-style: italic;
+      }
+
+      .content img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 42px 0 12px;
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+      }
+
+      .content figure {
+        margin: 42px 0;
+      }
+
+      .content figure img {
+        margin: 0 0 12px;
+      }
+
+      .content figcaption {
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .backLink {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 46px;
+        border-top: 1px solid var(--line);
+        padding-top: 28px;
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.18em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .backLink:hover {
+        color: var(--accent);
+      }
+
+      @media (max-width: 720px) {
+        .hero {
+          min-height: 420px;
+          padding: 30px 24px;
+        }
+
+        .articleWrap {
+          width: min(100% - 28px, 900px);
+          padding-bottom: 48px;
+        }
+
+        .content {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="heroInner">
+        <p class="heroLocation">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+            />
+          </svg>
+          <span>Los Angeles</span>
+        </p>
+        <h1>Guide | Los Angeles Airport Transportation Options - Quick Reference</h1>
+      </div>
+    </header>
+
+    <main class="articleWrap">
+      
+
+      <article class="content">
+        
+          <p>Los Angeles, a resort destination with sunny beaches, attracts over 40 million tourists annually. LAX Los Angeles International Airport is the fifth-busiest in passenger throughput worldwide, but as Americas second-largest city, LA is notorious for its chaotic traffic. Naturally, LAX isnt much better either. Here weve organized various transportation options for getting in and out of LAX so you wont be scrambling next time! Where do shuttle buses stop? Transportation signs at Los Angeles Airport are divided into 7 typesdifferent vehicles require different pickup locations (see image below).</p><p><br></p><p>**Airport-operated shuttles:**</p><p>Primarily serve the A Route (connecting terminals), C Route (airport to Lot C), and G Route (airport to Aviation Metro Station), all boarding at blue sign locations.</p><p><br></p><p>**Tips:**</p><p>A quick reminder: the Departures Level is located above the Arrivals Level.</p><p><br></p><p>**Hotel shuttles:**</p><p>Pick up and drop off passengers only at Lower/Arrivals Level.</p><p>Private Parking Shuttle Service:</p><p>Picks up and drops off passengers exclusively at the Upper/Departures Level.</p><p><br></p><p>Tips:</p><p>Since the airport has various renovation projects underway, please allow extra time for reaching the airport.</p><p><br></p><p>About Parking Lots</p><p>Airport Parking</p><p><br></p><p>Los Angeles is a city where not having a car makes things very inconvenient. Unlike other major cities with well-developed public transportation, many people choose to drive.</p><p><br></p><p>LAX features 7 parking structures: Structure 1, 2A, 2B, 3, 4, 5, 6, and 7. Each parking structure has vehicle height restrictions.</p><p><br></p><p>Tom Bradley International Terminal parking is located in Structures 3 &amp; 4.</p><p><br></p><p>Rates: First hour $3, then $2 every half-hour thereafter, with a daily maximum of $30.</p><p><br></p><p>Lot C (Outside Airport)</p><p>Many people consider parking at Lot C near the intersection of 96th Street and Sepulveda Boulevard, which is more economical than airport parking structures.</p><p>Pricing: $4 per hour, maximum of only $12 per day.</p><p><br></p><p>Shuttle Service: There is a free C Route shuttle bus that takes you into the airport terminal, operating 24 hours; if you want to take the shuttle back from the airport to Lot C, board at the blue LAX Shuttle-Airline Connection sign (must be boarded at Upper/Departures).</p><p><br></p><p>Website: ***</p><p><br></p><p>Private Parking Lots</p><p>Besides Lot C, there are more than 20 privately-operated parking lots and hotel-provided parking facilities within 3 miles of the airport. They offer several advantages:</p><p><br></p><p>1. More budget-friendly rates</p><p>Lot C does not allow advance parking reservations, which may leave you in a predicament of not finding a spot; however, these private parking lots allow you to reserve your parking space beforehand.</p><p><br></p><p>2. Better security</p><p><br></p><p>3. Free cancellation service</p><p><br></p><p>In addition to parking services, each lot offers various additional amenities including free newspapers, bottled water, and car wash services.</p><p><br></p><p>Shuttle Service: Each parking lot has its own free shuttle bus. To return from the airport, you can board at the orange Private Parking Lots Shuttle Zone sign (must be boarded at Upper/Departures). Detailed schedules are available on each parking lots&#39; website.</p><p>Hotel Parking and Hotel Shuttles</p><p>If you&#39;re staying at a hotel near the airport, you can take advantage of the free shuttle service to the airport; travelers who prefer to drive themselves to the airport and need parking for multiple days are also recommended to stay at an airport-area hotel one day in advance - this not only saves on parking fees but also avoids rush hour traffic.</p><p>Some hotels offer free parking with a minimum one-night stay, some allowing up to 21 days of parking; hotel parking lots generally offer better security.</p><p>Pickup Location: Take the shuttle bus at the red &quot;Hotel &amp; Parking Lot Shuttles&quot; sign (at Lower/Arrivals level)</p><p><br></p><p>About Rental Cars</p><p>Driving offers the most flexible way to explore Los Angeles, with numerous rental companies conveniently located at LAX for easy access and selection. When departing the airport, look for purple signage marking the rental car shuttle stops. Be sure to clearly communicate your specific rental company to the driver. Certain rental services provide direct pickup and drop-off at the Century Boulevard and airport intersection, requiring you to board the G Route via the blue &quot;LAX Shuttle-Airline Connection&quot; station.</p><p><br></p><p>Tips:</p><p>For those who don&#39;t want to take a ride-share but also prefer not to drive themselves to the airport, renting a one-way car for a day is an option. Pick up the vehicle near your home and return it at the airport—it&#39;s convenient and saves parking fees.</p><p><br></p><p>Arrival and Departure from Los Angeles Airport</p><p><br></p><p>Uber / Lyft</p><p>Uber and Lyft are authorized to enter and exit Los Angeles Airport. For your safety, remember to confirm that the driver and vehicle are indeed the ones you ordered through the app!</p><p>Pick-up location: Vehicles booked via mobile apps can only pick up and drop off passengers at the Upper/Departure Level. Passengers should wait near the brown &quot;Ride Service&quot; signs.</p><p><br></p><p>Taxi</p><p>Pick-up location: Board taxis at the yellow &quot;Taxis&quot; signage on the Lower/Arrivals Level.</p><p><br></p><p>Airport Shuttle - FlyAway Bus</p><p>FlyAway Bus is LAX&#39;s dedicated airport shuttle service, providing round-trip transportation between Los Angeles and six fixed locations throughout the area.</p><p>Stops: Union Station in downtown Los Angeles, Westwood near UCLA in the western part of LA, Hollywood, Long Beach, Van Nuys, and near Woodlyn Station on the Orange Line.</p><p><br></p><p>Where to board: Look for green signs marked &quot;FlyAway, Buses &amp; Long-Distance Vans.&quot;</p><p><br></p><p>Schedule: Available 7 days a week with fixed schedules.</p><p><br></p><p>For detailed timetables, please check: ***</p><p><br></p><p>Fares: Range from $8 to $10. Credit or debit cards are accepted when purchasing on board; cash is not accepted. The only place to buy FlyAway tickets with cash is at the Metrolink automated ticket machines in Union Station.</p><p><br></p><p>Website: ***</p><p><br></p><p>Shared Van Services - Super Shuttle/Prime Time Shuttle/Go Group</p><p>If you don&#39;t want to drive and still want to save money, Shared Vans are a good option. You can book online in advance with options for one-way or round-trip service to your designated destination. There are also fixed pickup points that will drop you at the airport. Besides shared vans, private shuttle services are available but cost more (though it saves time).</p><p><br></p><p>Where to board: Shared vans depart from areas marked with orange &quot;Shared Vans&quot; signs.</p><p>Chinese Ride-hailing Services</p><p><br></p><p>There are quite a few small Chinese rental car companies that provide airport shuttle services. Simply searching on Google yields many results using the keyword &quot;LAX (Chinese/Mandarin) Airport Shuttle&quot;. Well-known options include WangWang Fleet and Lantian Shuttle. Pricing varies based on distance, so it&#39;s recommended to call ahead for a quote.</p><p><br></p><p>Metro</p><p><br></p><p>The Metro station closest to the airport is Aviation/LAX on the Green Line, then transfer to the G Route bus at the LAX pickup location.</p><p><br></p><p>Return Trip: Board the blue LAX Shuttle-Airline Connection and take the G Route back to Aviation/LAX Station.</p><p><br></p><p>Bus Service</p><p><br></p><p>Pickup Location: The Metro Bus Center is located near Lot C. You can arrive via the blue sign &quot;LAX Shuttle-Airline Connection&quot; using the C Route. From here you can transfer to various routes including Los Angeles light rail, Culver City bus line, Santa Monica Blue Line, and Torrance services.</p><p>Public Transit Route Website: ***</p><p><br></p><p>Airport Shuttle Service</p><p>Route A connects various terminals. Operating hours: Runs 24 hours a day with departures every 10 minutes.</p><p>Boarding Location: Board and alight at the blue LAX Shuttle-Airline Connection signs outside the terminals.</p><p><br></p><p>Conclusion</p><p>If you&#39;re not renting a car, try to use the shuttle service where available. Since some suburban shopping malls are relatively far from downtown hotels, using shuttles instead of taking taxis can save you a significant amount of money. Thank you for watching.</p>
+        
+
+        <a class="backLink" href="list-1.html">← Back to Los Angeles</a>
+      </article>
+    </main>
+  </body>
+</html>

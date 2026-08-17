@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <title>A firsthand exploration of America's renowned private art collection destination—the Los Angeles Getty Center</title>
+    <style>
+      :root {
+        --ink: #171512;
+        --muted: #5f5a54;
+        --line: #ded6cc;
+        --paper: #ffffff;
+        --warm: #f8efe5;
+        --accent: #c47a29;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        line-height: 1.55;
+      }
+
+      .hero {
+        width: 100%;
+        height: clamp(260px, 38vw, 520px);
+        overflow: hidden;
+      }
+
+      .hero img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+      }
+
+      .article {
+        width: min(760px, calc(100% - 40px));
+        margin: 0 auto;
+        padding: 34px 0 72px;
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin: 0;
+        font-family: Georgia, "Times New Roman", serif;
+        letter-spacing: 0;
+        line-height: 1.05;
+      }
+
+      h1 {
+        max-width: 620px;
+        font-size: clamp(34px, 5vw, 54px);
+        font-weight: 800;
+      }
+
+      .location {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin: 18px 0;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .location svg {
+        width: 18px;
+        height: 18px;
+        flex: 0 0 auto;
+      }
+
+      .subtitle {
+        max-width: 650px;
+        margin: 0 0 22px;
+        color: var(--muted);
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(18px, 2.4vw, 23px);
+        font-style: italic;
+        line-height: 1.45;
+      }
+
+      .description {
+        max-width: 650px;
+        margin: 0 0 28px;
+        color: #302c27;
+        font-size: 15px;
+      }
+
+      .brief {
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        border-radius: 6px;
+        padding: 18px 20px;
+        background: var(--warm);
+      }
+
+      .brief-title {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 10px;
+        color: var(--accent);
+        font-weight: 800;
+      }
+
+      .brief-title svg {
+        width: 18px;
+        height: 18px;
+      }
+
+      .brief p {
+        margin: 0;
+        color: #302c27;
+        font-size: 15px;
+      }
+
+      .content {
+        border-top: 1px solid var(--line);
+        padding-top: 24px;
+      }
+
+      h2 {
+        margin-bottom: 16px;
+        font-size: 30px;
+      }
+
+      .section {
+        margin: 0 0 24px;
+      }
+
+      .section h3 {
+        margin-bottom: 8px;
+        font-size: 18px;
+        line-height: 1.25;
+      }
+
+      .section p,
+      .section-body {
+        margin: 0;
+        color: #292520;
+        font-size: 14px;
+        white-space: pre-line;
+      }
+
+      .section-body img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 16px 0;
+        border-radius: 8px;
+      }
+
+      .section-body a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      @media (max-width: 640px) {
+        .article {
+          width: min(100% - 28px, 760px);
+          padding-top: 26px;
+        }
+
+        .hero {
+          height: 260px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <figure class="hero">
+      <img src="" alt="A firsthand exploration of America's renowned private art collection destination—the Los Angeles Getty Center" />
+    </figure>
+
+    <main class="article">
+      <h1>A firsthand exploration of America's renowned private art collection destination—the Los Angeles Getty Center</h1>
+
+      <p class="location">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            fill="currentColor"
+            d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+          />
+        </svg>
+        <span>Los Angeles</span>
+      </p>
+
+      <p class="subtitle"></p>
+      <p class="description"></p>
+
+      <aside class="brief">
+        <p class="brief-title">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M7 3h10a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Zm1 4v2h8V7H8Zm0 4v2h8v-2H8Zm0 4v2h5v-2H8Z"
+            />
+          </svg>
+          Brief
+        </p>
+        <p></p>
+      </aside>
+
+      <section class="content" aria-labelledby="content-title">
+        <h2 id="content-title">Content</h2>
+        
+          <article class="section">
+            <div class="section-body">First Encounter with the Getty Center
+
+On our third day in Los Angeles, we finally had time to visit the white building atop Mount Santa Monica—the J. Paul Getty Museum.
+
+Long before this trip, I'd heard that Getty ranks among America's most renowned private art collections, housing the world's wealthiest art foundation. Curiosity constantly nagged me about what masterpieces might fill its walls.
+
+Initially, I knew only its reputation, having no clear understanding of what kind of museum it truly was. I assumed even at its finest, it would merely rival institutions like Guggenheim. Given common expectations surrounding private collecting, I anticipated the holdings would focus primarily on contemporary and modern works—unlikely to compete with Europe's renowned classical galleries.
+
+So this Getty visit, more about exploring an unknown new experience than a traditional pilgrimage. Hoping for pleasant surprises to round off this special 30-kilometer drive fueled by artistic enthusiasm.
+
+But after wandering through the entire museum up and down for six hours—until sunset arrived when the closing announcement played yet I still found myself reluctant to leave—I discovered all previous assumptions about Getty were wrong.
+
+This wasn't simply a modern art exhibition space as imagined, but a legitimate major art museum containing treasures spanning from medieval periods through the 20th century. Beyond the galleries lies an exquisitely landscaped garden where visitors can stroll without worrying about anything except enjoying the art. Because cafes, restaurants, shops, and leisure plazas provide everything needed to satisfy all tourist demands.
+And thus this art palace with ulterior motives and enormous expense is open free to the public. Borrowing words from its founder, oil magnate Paul Getty: Art is an inspiration. This inspiration is the love and inheritance that the Getty family has devoted to art over half a century.
+
+Transportation
+Since this place is located in the hills of Brentwood, northwest of Los Angeles, public transportation is extremely inconvenient. Most visitors arrive by car, making the $15 parking fee for the underground lot the Getty Center's only "mandatory charge."
+
+Following signs from the underground parking to the first floor leads you to an open-air platform. From here you must take a small train within the park up to the hilltop art center.
+
+Sitting on the train, gazing at the lush mountain scenery outside and the distant villa district, I silently admired Getty Center's site selection. This is Los Angeles' genuine affluent neighborhood, also the highest point in the city. Expensive land prices and remote distance - regardless of how you phrase it - are never ideal choices for building an art museum.
+
+But Getty precisely chose this hilltop. Perhaps he was telling visitors here a simple truth: Art unquestionably represents the world's most noble wealth.
+
+Getty's Treasures
+Naturally, for someone like me who arrived without adequate preparation and only understands later - until standing in the middle of the museum hall, I felt no excessive excitement or passion. White walls before my eyes, a white spiral staircase, bright tall floor-to-ceiling windows...
+
+Everything seemed overly understated and simple. Reading online that this building was designed by American famous architect Richard Meier, I merely paid lip service to paying homage.
+But when I followed the stairs up to the main exhibition hall on the second floor, I was stunned by what I saw: The spacious hall was filled with early Renaissance oil paintings—golden frames against dark red walls, wooden floors beneath my feet, crystal chandeliers above. It was clearly a European palace replica. Impressive galleries lined up one after another in a maze-like layout, bringing back that sense of awe I had felt at the Louvre.
+
+Holding a guide map and wearing an audio headset, I rushed from gallery to gallery without pause, only to discover many masterpieces—Titian, Rubens, Rembrandt, Bernini, Van Dyck... Many works I had seen in art history books were unexpectedly hidden within this modern private museum filled with contemporary energy.
+
+Of course, I must mention the Gettis proudest collection—the Impressionist series. Here are Van Goghs Irises, Manets Woman with a Parasol, Monets Sunrise, Renoirs party scenes, Degas dancers. Walking through the museum, my heart was completely shaken by the scale of the Getty collections.
+
+The main exhibitions were spread across three adjacent buildings connected by glass staircases. Artworks were arranged chronologically in different galleries: the west wing featured medieval, Renaissance, and Baroque art; the north side displayed 16th to 18th century works from France, England, and Flanders; while the south housed Impressionists like Van Gogh.
+
+To provide a better viewing experience for visitors, the Art Center prepared nine free Guided Tours with professional guides who use one hour to lead viewers through different themes, carefully experiencing the charm of art together.
+I finished listening to two tours on Renaissance and Impressionism, then casually overheard part of the Baroque exhibition tour while wandering around. In front of Monet's "Impression Sunrise," an elderly guide humorously shared with us the predicament Monet faced early in his career when his works weren't well-received. He explained how masterfully the painting handled light and shadow and color, teaching us how to appreciate Impressionism's large blocks of color and rough brushstrokes. Throughout his presentation, he occasionally cracked jokes, instantly enlivening the otherwise serious atmosphere. When the guide finished speaking, visitors' faces were all lit with joyful smiles. They eagerly moved back toward the paintings, intently examining the details we'd just learned about. A few strangers even gathered around one work to discuss: "It looks more vigorous than Monet's hay stack."
+
+A middle-aged white man pointed at Degas' "The Little Dancer" and said to a young Asian man, "Umm, well, maybe Degas wanted to show his understanding of women's body movement." The young man shyly smiled in response, causing the older man to laugh heartily. Different skin tones, different ethnicities—before art, we are all equal appreciators. Only art can transcend race and geography so completely, holding everyone tightly within the embrace of the Muse goddess. While bringing people joy, it also silently tells a story that all humanity can understand.
+Looking at the visitors coming and going through the gallery, chatting with each other, and seeing the volunteer guide with white hair walk away in the distance, I think this is exactly why art museums exist. Babylon Garden Besides the rich collection and relaxed atmosphere of visiting, what impressed me most about the Getty Center must be its sky garden reminiscent of Babylon.
+
+At first glance, this white building didn't seem special. However, when you walk inside and happen to look up at a certain platform near a corner, you can discover a breathtaking view that takes your breath away.
+
+Finally I understood Michael Graves' intentional design. He exploited every angle of the mountain landscape, paired with carefully selected greenery, and built appropriately proportioned walls so that visitors who step out from the hall's opulent Rococo style are immediately immersed in the beautiful view of Los Angeles as a whole. Behind the elegant ancient Greek sculptures, one can faintly see the spire of the Los Angeles Telecom Building. A meeting spanning four thousand years pulls our thoughts from rustic beauty straight to modern times; history and reality blend here so fittingly and delicately that there's not a trace of artifice or coercion.
+
+Walking down the stairs from the platform brings you to the garden, where neatly trimmed low greenery surrounds both sides of the fountains, with colorful flowers scattered among the shrubs. Following the path down to the pool edge, the white buildings reflect in the water and gradually break apart under the cutting flow, then slowly reveal new shadows.
+The green lawn on the hillside spreads out like an enormous mat beneath the blue sky. Lying on soft grass while gazing at clouds above, I savor how warm sunlight feels on my face—a pleasure museums rarely offer. 
+
+The entire art center is itself a masterpiece of design. We visitors become part of this artwork. Art's essence permeates every corner—every blade of grass and tree becomes an unmissable creation.
+
+Dining at the Getty
+Previously, visiting museums meant bringing your own food, diving into vast galleries without knowing when you'd emerge. But at the Getty Center, when tired or hungry, cafes and restaurants are always within reach.
+
+While the food falls short of Michelin standards at premium prices, the setting compensates beautifully. Perched beneath white umbers on lush lawns, sipping Americano coffee alongside smoked salmon salad and tiramisu makes a leisurely afternoon seem worthwhile.
+
+A small open plaza among three main buildings hosts food carts selling drinks and hot dogs. Resting on comfortable benches while enjoying freshly squeezed orange juice, the sea breeze creates an immersive experience. Gazing through architectural doorways at the bustling coastal city, watching western skies transform into radiant gold as sunset approaches feels like becoming part of this living landscape itself.
+Let me now talk about museum shops one last time. In my view, a perfect museum visit must conclude at the museum shop, because within those walls lie the museum's most essential and captivating symbols—whether ordinary postcards or books, or exquisitely designed scarves and backpacks. All are crystallizations of everyday objects fused with the collection's essence, a vibrant collision of creativity and art culture.
+
+The Gettis creative products resemble those found in museums worldwide, yet uniquely, since this institution serves not merely as an art collection and exhibition space but also as an art research center—the Getty Research Institute occupies the eastern slope beside the main building—therefore one discovers many specialized art research books categorized by subject at the shop. Examples include "Studies in Medieval French Manuscript Bibles" or "Nineteenth-Century American Photography," covering every visual arts discipline from painting and sculpture to archaeology, architecture, and photography.
+
+For ordinary visitors, acquiring a book offers both knowledge expansion and cultivated artistic appreciation. For someone like me studying art, encountering such meticulously categorized and comprehensive research materials here brings pure joy.
+
+After spending over sixty dollars carrying bags filled with treasures, I hurriedly took the last train down the hill. Looking back one final time at the Getty Center building glowing crimson under the sunset, I simply wondered when we might meet again.
+Every time I arrive in a new city, I make it a point to wander through its museums. I have visited many large and small museums around the world—witnessed the vast collections and majestic palace complexes of the Louvre and the Hermitage, explored row upon row of medieval castles in Northern Europe, visited the homes of Mozart, Andersen, and Pushkin, and once wandered into a rural museum in Idaho without realizing it. Looking at the rusted farming tools displayed on its simple exhibit tables, I found them so plain as to be almost unbelievable.
+
+Visiting the Getty Center was an entirely different experience—intimate and warmest of all. Compared to world-class cultural corridors like the Metropolitan Museum or the Louvre, the Getty feels more like a exquisite private garden. We visitors feel like guests invited into someone's home; stepping through its bright entrance gates, we are neither intimidated by ostentatious splendor nor burdened by the solemnity that comes with feeling like pilgrims approaching a sacred site. It is so approachable yet modest, like an elder who has weathered centuries of storms, opening its arms to welcome guests from all walks of life around the world.
+
+I recall seeing at the Uffizi Gallery in Florence a Gypsy woman holding her child hovering hesitantly before the temple-like museum entrance, unable to enter while staring at the imposing security guard; and at the National Palace Museum in Taipei, people climbing more than one hundred steps gasping for breath, bending forward with heads lowered, forced to bow respectfully toward the Blue Sky White Sun flag hanging high above the palace roof.
+
+Yet here stands the Getty Center—no flashy billionaire showing off its wealth—quietly resting on a small hillside in the suburbs without needing any display or exhibition of status. For those breathtaking artworks are sufficient evidence of both its stature and its artistic vision.
+It knows what we are seeking, and it precisely presents its best face to us, quietly waiting for us to explore and discover on our own. Without a single unnecessary emotional flourish, yet it always resonates with the deepest part of our hearts. I have to admit, the Getty Center gave me a perfect museum experience. Even now when I recall it, I still find myself wanting more, and the more I remember, the more I fall in love with being there - in love with that white house under the blue sky, in love with that mountain view and gardens, in love with all the artworks there. I've been thinking about what insights the Getty Center could give me. I think it probably won't be this wealthy foundation operating model, but rather the Getty family's love for art. As Paul Getty said, art itself is the best revelation - it is why we enter museums and what answers we seek. When we visit museums, what inadequate reasons do we need? If I must summarize the meaning of a museum in one phrase: the moment we step through those doors and immerse ourselves in this artistic sanctuary, the significance is already waiting for us.</div>
+          </article>
+        
+      </section>
+    </main>
+  </body>
+</html>

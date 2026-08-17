@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="An easy self-drive adventure is renting a car and discovering the sights of Saipan. There are many islands to explore by car, but renting a car and discovering Saipan is an easy choice to check off your travel bucket lists. Round-the-island road trips are very popular and Saipan makes them simple. Most of the main attractions are easy to pull together without complex planning, and you don’t even have to be a complicated driver, overseas or not." />
+    <title>An experienced driver's guide for an uncomplicated self-drive route around Saipan</title>
+    <style>
+      :root {
+        --paper: #f5f1eb;
+        --ink: #163d36;
+        --body: #3f3a34;
+        --muted: #8a8379;
+        --line: #ddd5ca;
+        --accent: #d9782f;
+        --white: #fffaf4;
+        --shadow: 0 22px 70px rgba(28, 25, 20, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        line-height: 1.72;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .hero {
+        min-height: clamp(330px, 48vw, 560px);
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        padding: clamp(28px, 7vw, 70px) clamp(24px, 8vw, 76px);
+        background: #28463f;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.12)),
+          url("https://imagedelivery.net/TdQQyAHCLdZMYcdCJx_3LA/5afec0e2-d671-4c3d-4ac9-c3e389840500/public");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .heroInner {
+        position: relative;
+        width: min(900px, 100%);
+        color: #ffffff;
+      }
+
+      .heroLocation {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 24px;
+        color: rgba(255, 255, 255, 0.78);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .heroLocation svg {
+        width: 17px;
+        height: 17px;
+        color: #f0a45f;
+      }
+
+      h1 {
+        max-width: 880px;
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(30px, 4.8vw, 54px);
+        font-weight: 900;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .brief {
+        width: min(760px, 100%);
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 18px;
+        color: #5a5148;
+        font-size: clamp(17px, 1.9vw, 20px);
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.58;
+      }
+
+      .articleWrap {
+        width: min(900px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: clamp(42px, 6vw, 68px) 0 72px;
+      }
+
+      .content {
+        width: min(760px, 100%);
+        color: var(--body);
+        font-size: clamp(16px, 1.8vw, 18px);
+        line-height: 1.5;
+      }
+
+      .content p {
+        margin: 0 0 0.5em;
+      }
+
+      .content h2,
+      .content h3,
+      .content h4 {
+        margin: 46px 0 18px;
+        color: var(--ink);
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+
+      .content h2 {
+        font-size: clamp(28px, 4vw, 38px);
+      }
+
+      .content h3 {
+        font-size: clamp(23px, 3vw, 30px);
+      }
+
+      .content ul,
+      .content ol {
+        margin: 0 0 30px;
+        padding-left: 28px;
+      }
+
+      .content li {
+        margin: 8px 0;
+      }
+
+      .content blockquote {
+        margin: 34px 0;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 20px;
+        color: #5a5148;
+        font-style: italic;
+      }
+
+      .content img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 42px 0 12px;
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+      }
+
+      .content figure {
+        margin: 42px 0;
+      }
+
+      .content figure img {
+        margin: 0 0 12px;
+      }
+
+      .content figcaption {
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .backLink {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 46px;
+        border-top: 1px solid var(--line);
+        padding-top: 28px;
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.18em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .backLink:hover {
+        color: var(--accent);
+      }
+
+      @media (max-width: 720px) {
+        .hero {
+          min-height: 420px;
+          padding: 30px 24px;
+        }
+
+        .articleWrap {
+          width: min(100% - 28px, 900px);
+          padding-bottom: 48px;
+        }
+
+        .content {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="heroInner">
+        <p class="heroLocation">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+            />
+          </svg>
+          <span>Saipan</span>
+        </p>
+        <h1>An experienced driver's guide for an uncomplicated self-drive route around Saipan</h1>
+      </div>
+    </header>
+
+    <main class="articleWrap">
+      
+      <p class="brief">An easy self-drive adventure is renting a car and discovering the sights of Saipan. There are many islands to explore by car, but renting a car and discovering Saipan is an easy choice to check off your travel bucket lists. Round-the-island road trips are very popular and Saipan makes them simple. Most of the main attractions are easy to pull together without complex planning, and you don’t even have to be a complicated driver, overseas or not.</p>
+      
+
+      <article class="content">
+        
+          <h2>About Saipan</h2> <p> Saipan is situated in the western Pacific in line with the Philippines and is the biggest island of the Northern Mariana Islands, a U.S. Commonwealth. It is easier to access there from some parts of East Asia, however, travel restrictions and flight paths may differ depending on nationality, so they must be checked before booking flights.</p><p> Two major attractions that Saipan is known for are its significant history in World War II and the Blue Grotto. Saipan was of great military significance to Japan since they used it to take control of Guam in 1941. During the second World War, American troops attacked the island in June 1944, and the aftermath of the Battle of Saipan is documented through the many war relics that can be found at various sites which is a popular diving spot. These relics can be found both above and below the surface.</p><p>The northeastern side of Saipan contains the Blue Grotto which is a wonderful site for scuba diving and snorkeling (if the conditions are right) during the summer months. It is a natural limestone cave that is open to the Pacific and has beautiful bright blue waters.</p><h2>Three Islands to Discover</h2><p><strong> In addition to Saipan, the major islets and islands that are open to the public are Tinian and Managaha Island. Managaha is suitable for swimming and other water-related activities. Tinan has a more relaxed and scenic coastline whereas Saipan is perfect for a self-drive tour around the island.</strong></p><p><img src="https://imagedelivery.net/TdQQyAHCLdZMYcdCJx_3LA/cd94b260-23dc-41a3-ca19-78bcd75e9900/public" alt="Saipan travel" loading="lazy"></p>
+Managaha Island is a great location for water sports! About 1.5 kilometers in circumference, the island is perfect for those wanting to snorkel in beautiful, clear waters, and has easy access to snorkeling. Other activities that are available include jet skiing, banana boat rides, and a variety of water sports. Once you arrive at Saipan, speedboats leave for the island, and the travel time is about 10 minutes. For those interested in walking around the island, expect to take a 20 to 30 minute walk. This is considered a day trip, so boat schedules, entrance fees, and the times that the island closes should be taken into consideration when you are planning your trip. <br/>For those interested in simply visiting to explore the island, there are usually ferry and boat transfers available for micro beach in central Saipan. Also available on the island are pre booked day tours for those interested in snorkeling and water sports. Everything from equipment to activities is bundled in order to provide you with a better deal. Make sure to do your research since everything varies from condition, prices, and operators when you make a booking.
+<p><img src="https://imagedelivery.net/TdQQyAHCLdZMYcdCJx_3LA/2e4c3a6b-5542-4274-4dd0-2836ffeeab00/public" alt="Managaha Island water activities" loading="lazy"></p>
+<b>Tinian is a great place to escape and unwind.</b> Travelers looking for a place to slow down will appreciate Tinian's smaller population and less developed tourism infrastructure compared to larger and nearby Saipan. <b>Tinian provides a great place for those who want to spend a couple of days at the beach with a place for exploring either at a slow or quick pace.</b>  Tinian has a small selection of hotels and Tinian is home to some WWII historical sites like, stone structures, airfields and landmarks, which creates a greater focus for people who enjoy history and nature compared to other islands in the Northern Marian Islands. <br><strong>Getting to Tinian is really easy and quick. </strong> Getting to Tinian from Saipan is less than a 10-minute flight. Most hotels on Saipan offer guided day trips to Tinian. Most of these trips include transportation to all the major attractions on Tinian, so you do not have to worry about planning that.   <h2>Drive Around Saipan</h2> <p>Saipan has some of the best views in the world and the dramatic cliffs along the coast offer some of the most stunning scenery.</p><p><img src="https://imagedelivery.net/TdQQyAHCLdZMYcdCJx_3LA/da13d65a-7b1d-4c91-f0e3-869251783a00/public" alt="Tinian Island" loading="lazy"></p>
+<p>Saipan is the largest and most populous of the main three islands. There is no public transportation such as buses, and the only ways to get around as a visitor are to walk, hail a taxi, or get a rental car. Taxis are costly and not readily available, so most people find that they are better off going on a self-drive trip. It is possible to see all of the major attractions in Saipan in under two days and drive through World War II memorials and several underwater attractions. Most of these are along the coast, so it makes for a good leisurely&nbsp;drive. In terms of road planning, the island is best split into three sections: a north, south and central route.</p><h3>1. What You Need to Know about Driving</h3>
+**Car Rental**
+Renting a car in Saipan is easy but there are a few requirements that vary by company. Most companies require drivers to be at least 21 years old and to present a valid driver’s license, passport, and a credit card to make a security deposit. Chinese driver’s licenses are not issued in English, so if you are going to rent a car in Saipan make sure that you understand the rental company’s policy on translations.  
+**Selecting a vehicle** Most of the roads on the western coast of Saipan are flat which makes driving easy, but the eastern, central, and southern portions of the island have roads that are more forested, have hills, and are rougher. For relaxed drives along the west coast a convertible is a good option. For driving through the interior of the island or southern parts of the island an SUV or some other  high ride car is better as they are easier to control on the unpaved roads.  
+**Renting a vehicle** Rental agencies are located around Garapan and near the I Love Saipan souvenir shop; you may want to compare pricing. However, it is usually better to reserve a vehicle online first. You will be able to check license requirements, review insurance and vehicle stipulations, request Chinese support (if available), and book the vehicle type that you prefer. Walk-in rentals have a high chance of limited availability for popular models, specialty vehicles, and convertibles.
+<p><img src="https://imagedelivery.net/TdQQyAHCLdZMYcdCJx_3LA/feaf5447-8af7-4b79-4fcf-544527b1ad00/public" alt="Saipan car rental" loading="lazy"></p>
+**Parking, Speed Limits and Driving Basics**<br> In Saipan, you have to drive on the <strong>right side of the road</strong> like in the USA. The speed limits also vary by road, with some being posted at <strong>35 mph</strong> (which is roughly about 56 km/h). Most rental cars will have mileage as their speed measurement. Always look at the signs, and do not speed, since law enforcement can give you a fine. Rental cars do not include price for gas. They will take the car with a full tank and you must return it to them with a full tank. The price of gas will not be the same as when you rented the car. There are a lot of places to park on the island, and there also many places to park for free, but always check the signs. <h3>2. Suggested Island Driving Itinerary</h3>  <strong>For Saipan, the main self-drive routes for the north will take 1 day. For the south and central sights, you can do those on another day.</strong> Most places at the airport, hotel, and tourist guides will have maps with the major attractions. You want to grab one of those maps before you head out, and highlight the places you want to go and plan a route.<br><br>Most people will suggest you download <strong>Google Maps</strong> or another app that can help you navigate offline before you go. If you have to pay for mobile data, you will also want to get a portable Wi-Fi device or an international data plan before you arrive. You will need to ensure that if you booked a Wi-Fi device, that you verify the location and its hours when you arrive at Saipan International Airport. <br> <br> Map of the Northern Route</p>
+<p><strong>North Route</strong><br><strong>Attractions: Mariana Seaside Chapel, Bird Island, and the Grotto</strong><br>Among Saipan's primary sightseeing routes, the North Route is the most straightforward to navigate. The flat terrain makes most major sights easily accessible by road and clearly marked. Additionally, Middle Road guides you most directly to the island's northern tip. A large number of attractions are gathered in this area of the island. In the months of May and June, flame trees grow on sections along Middle Road. This fills the roadside with vivid red-orange flowers and provides an excellent photo backdrop.</p><p><strong>The Grotto</strong><br>Located close to Bird Island on Saipan's northeastern coast, The Grotto is a natural limestone cave that has an underwater passage that leads the sea. The sunlight scattered through water gives the cavern a unique brilliant deep-blue color. Its clear waters and tropical marine life including tropical fish and sea turtles makes it one of the most popular diving destinations on Saipan.</p><p>Accessing The Grotto can be difficult due to a lengthy staircase and swimming conditions can change without notice. Certified divers can participate in guided dives; however, non-certified divers may be able to arrange an intro supervised dive if conditions are good. It is advisable to check conditions before you dive. Even from the viewing area, the vivid blue water of the Grotto is worth the trip.</p><p><img src="https://imagedelivery.net/TdQQyAHCLdZMYcdCJx_3LA/0bca063c-4b8d-46f5-c59a-879ff542ac00/public" alt="Saipan North Route" loading="lazy"></p>
+<p>The Blue Hole connects to the Pacific Ocean, which means the underwater currents can be very strong. <strong>Never enter the water unless you are with a certified diving instructor.</strong> Access to the site is monitored and a safety team is present. To dive here, you will have to schedule a guided diving tour in advance. They typically provide the diving gear, so you won’t have to pack your own.<br><strong>Important Notes:</strong><br>1) In the afternoons, the water tends to be choppier and conditions can become dangerous. For this reason, <strong>most dives are scheduled for the morning.</strong> 2) There are two ways to get to the diving site at the Blue Hole. You can either enter the water with your instructor or you can go down a staircase where you will find <strong>more than 100 steps which you will have to climb again after your dive, so be prepared for a long climb.</strong> You may want to grab a snack before this so you have plenty of energy. Although the diving experience is only about 1 hour, you will likely find it to be pretty tiring, so make sure you are planning not to do a self-drive immediately after diving. You should <strong>definitely dive in the morning</strong>, and then you can book an afternoon tour at your hotel <strong>and then drive to the northern attractions after a short rest at the hotel.</strong> Most people find this plan feasible.</p><p>Mariana Seaside Chapel</p><p><img src="https://imagedelivery.net/TdQQyAHCLdZMYcdCJx_3LA/8a83f502-2a52-4b71-f99d-45b4b915ec00/public" alt="Blue Hole diving" loading="lazy"></p>
+**Mariana Seaside Chapel** <br> Located at Mariana Resort, this site is about 15-20 minutes north of the city center along Middle Road. You may pass by hotels before you reach the entrance of the resort. Mariana Seaside Chapel is a **white chapel by the coast** and is a popular place for wedding photos. To get to the chapel, go through the hotel gate, and walk through the lobby to the chapel that faces the ocean. Access to the hotel grounds and the ability to take informal photos may change, so please consult the resort prior to your visit.
+<p><img src="https://imagedelivery.net/TdQQyAHCLdZMYcdCJx_3LA/71004da8-caa6-4af5-f7a5-0a43dd06a100/public" alt="Mariana Seaside Chapel" loading="lazy"></p>
+**The Japanese Last Command Post**<br>Travelling north of the two hotels, in about 20 minutes you will see two small memorials on the right side of the road; one memorializing Korean victims of the war and the other memorializing The Japanese Last Command Post.<br>The Japanese Last Command Post has been turned into a leafy park, with remnants of WWII including rusted tanks and pieces of artillery. This site is part of Guam's wartime history, when the island became one of the major military bases for the United States. B-29 bombers, which were used in the atomic bomb attacks on Hiroshima and Nagasaki, were refueled at North Field, which is also located in the northern part of Guam. The park is small and there are food stalls near the parking area.<br><br>**Bird Island**<br>Head back to the junction of Middle Road and Route 322. From there, drive Middle Road directly. You will see signage for Bird Island to the right and Blue Hole on the left. <br>Bird Island is named after the many seabirds that used to nest there. The water around the island is crystal clear. It often appears in two distinct shades of blue which vary according to the depth of the sea. When the tide is high, the rich vegetation on the islet can be seen fully and appears isolated in the Pacific Ocean. However, during low tide, the islet is connected to the main island of Guam.
+<p><img src="https://imagedelivery.net/TdQQyAHCLdZMYcdCJx_3LA/627827a2-b4b4-477a-2fb8-38e47aa68c00/public" alt="Japanese Last Command Post" loading="lazy"></p>
+<p>A viewing platform between the road and the shore offers a view of Bird Island. Bring some small binoculars, and see which delightful little critters you can see on the island. Sunrises and sunsets here are lovely. If Bird Island is your last stop on your self-drive northern route, <strong>wait for the sunset</strong> and enjoy a slow drive back to the city center.</p>
+**Bird Island**
+After exploring Suicide Cliff, head back to where Middle Road intersects with Route 322 (the point where Route 322 starts heading uphill). Proceed along Middle Road and follow the signs: Bird Island is to the right and the Blue Hole to the left.
+
+Bird Island got its name from the seabirds that used to nest here in great numbers. The island’s waters are strikingly divided into two shades of blue, from pale turquoise to an intense deep blue. At high tide, the lush islet is isolated from the mainland; at low tide, it connects. There is a lookout point along the road right before the coast that has great views of Bird Island. If you want to see the seabirds or other wildlife, bringing binoculars is a good idea.
+
+Sunrise and sunset are both beautiful times of the day here. If Bird Island is the last stop on your trip driving up the northern part of Guam, it’s a nice place to wait for the dusk to head back to central Tumon or your hotel.  
+
+Southern and Central Route Map
+<p><img src="https://imagedelivery.net/TdQQyAHCLdZMYcdCJx_3LA/dd99eda4-a33c-4c6e-46c3-9008adafa200/public" alt="Bird Island, Guam" loading="lazy"></p>
+**South and Central Routes**  ***Typical stops: Mount Carmel Cathedral, Ladder Beach, Obyan Beach, Lau Lau Beach, Tank Beach, Forbidden Island, Mount Tapochao, Our Lady of Lourdes Shrine** ** 
+
+For the south and central routes, there are more winding mountain roads than the northern routes. Drivers should keep in mind possible varied road conditions, unclear signage, and be more confident when driving. The area offers many beaches including Ladder Beach, Obyan Beach, Lau Lau Beach, and Tank Beach. There are two main ways to explore the beaches: **1. drive/beach**: drive to the beach and enjoy swimming, relaxing, and soaking up the sun; **2. ATV**: take an ATV tour along the beach.  
+
+**Tip**: If narrow mountain roads are not your thing, or you don’t feel comfortable driving on narrow winding roads, then guided day tours of the south and central routes are available. This allows you to see everything without the stress of driving.  
+
+Giant Jesus statue on Mount Tapochao
+<p><img src="https://imagedelivery.net/TdQQyAHCLdZMYcdCJx_3LA/df1b1713-806e-47bd-3b5f-421b3176dc00/public" alt="Saipan South and Central Routes" loading="lazy"></p>
+***Mount Tapochau***<br>From central Saipan, head north for about 10 minutes on Middle Road before making a right turn onto Isa Drive. Continue straight until you reach Tapochau Road, make another right, and follow the road till the end to reach Saipan's highest point.<br>At around 474 metres, Mount Tapochau gives 360-degree panoramic views of the entire island and the Pacific Ocean. You will find a large statue of Jesus near the top. The Mount Tapochau attraction is not due to it being one of the worlds highest mountains, that's reserved for the Mariana Trench which is the worlds lowest point. It is due to the contrast of the high point of Saipan and the low point of the sea.
+<p><img src="https://imagedelivery.net/TdQQyAHCLdZMYcdCJx_3LA/4254f9eb-5254-4fc9-2f7f-7095711dec00/public" alt="Mount Tapochau" loading="lazy"></p>
+**Santa Lourdes Shrine** <br> Go back to Route 1 and drive for about 15 minutes. Turn left onto Chalan Santa Lourdes. The Santa Lourdes Shrine will be on the right in less than 10 minutes. <br> The shrine is in a calm, green environment and is recognized for its natural spring and grotto dedicated to Our Lady of Lourdes. During World War II, this site was considered by many locals to have escaped serious damage, a narrative often connected to the Virgin Mary’s protection. The grotto is carved into a large old tree against the rocks. <br> People have been collecting the spring water for a long time. You may notice locals filling up containers here. If you wish to drink the spring water, check for any local health advisories first.
+<p><img src="https://imagedelivery.net/TdQQyAHCLdZMYcdCJx_3LA/9f9059c9-36dc-4b15-34c0-77430800db00/public" alt="Santa Lourdes Shrine" loading="lazy"></p>
+**Tank Beach**  
+From here, go back to Isa Drive and keep going until Kagman Road, where you’ll turn right. Keep driving along Kagman Road past the golf club entrance, and when you reach a T-junction by a school, you’ll turn left for Tank Beach. A right turn there goes towards Forbidden Island.  
+This beach got its name from World War II tank landings. The U.S. army left some machinery here, which is now war history. You’ll also find a rare type of sand at this location, known as star sand. The tiny star-shaped sand grains are from the remains of tiny sea life. The sand is also located along the shores of Saipan, but depending on the weather, currents, and other conditions, it may or may not be visible. Due to these conditions, the beach is also known as Star Sand Beach.  
+<p>In the distance, you can also see Forbidden Island.</p><p><img src="https://imagedelivery.net/TdQQyAHCLdZMYcdCJx_3LA/9ef5d189-8448-4bb2-9385-ecd42b2fb000/public" alt="Tank Beach" loading="lazy"></p>
+<p><strong>Forbidden Island</strong><br>Starting from the school, turn right at the T-junction. After less than 10 minutes, you will reach another T-junction. Turn left and then you will be going up a steep mountain road. <strong>Drive slow and be careful because the road is steep.</strong> Look for the sign for Forbidden Island near the top. Just before the sign, there is a small area to park. It is then about a 20 minute walk to the viewpoint that looks over the entire area of Forbidden Island.<br>Forbidden Island is a tidal islet located off the southeast coast of Saipan. When the tide is high, it is an islet and when the tide goes low, it connects to the main island. The local myth states that during long periods of drought, the ancient priests would sacrifice a human to the sea in hopes of bringing rain.</p><p><img src="https://imagedelivery.net/TdQQyAHCLdZMYcdCJx_3LA/2dbddf7b-fdaf-4776-2472-3a3660bb0f00/public" alt="Forbidden Island, Saipan" loading="lazy"></p><p>Aside from the unsettling myths about the island, Forbidden Island has an amazing coast all around it. In April and May, seasonal wildflowers can add color to the slopes. From the viewpoint, you can look out over the cliffs and the island below. Also, experienced hikers can go down to the base of the cliffs and snorkel in the area. VIsible sea turtles can be found near the calmer waters that are sheltered by the reefs. The hike down to the cove takes about 30 to 40 minutes. There is a narrow trail that starts by the Forbidden Island sign and goes through the forest.
+
+Safe walking routes lead to the same coastal area, although sometimes you may have to choose which trail to take. Because tides, waves, and weather can change quickly, check the conditions before you go, wear appropriate shoes, and don’t go in the water when it’s rough.
+**Tips**: The trail to Forbidden Cliff is uneven and can be slippery, so sturdy, non-slip shoes are recommended. Mosquitoes tend to swarm the forest, so  insect repellent is recommended. If you plan to go swimming, you will have to wear your swimsuit because there are no changing rooms at the base of the cliff and the rocks surrounding Forbidden Island can be slippery. Use caution. 
+
+Lau Lau Beach is a great place to relax. 
+
+**Lau Lau Beach** <br> To reach Lau Lau Beach, turn left off Isa Drive onto Lau Lau Beach Rd.  The last bit of this road will be rough, rocky, and uneven; drive slowly. Lau Lau Beach is one of Saipan’s most popular beaches for diving and snorkeling as it is suited for all levels. The waters are home to tons of marine life such as clownfish, Clark’s anemonefish, and many other types of fish. If you aren’t driving, you can just hang out on the sandy beach and relax. If you want to go diving, that can be arranged on a guided day tour with a local operator. It’s an easy option for beginners since everything is included, even hotel transfers, an instructor, and diving equipment. 
+
+*A Catholic church is the last sight.*
+<p><img src="https://imagedelivery.net/TdQQyAHCLdZMYcdCJx_3LA/ff90781b-7e9a-42f4-4b13-7fc6c8a3cc00/public" alt="Lau Lau Beach" loading="lazy"></p>
+**Mount Carmel Cathedral**<br> Get back on to Isa Drive, and head south towards the coast. Take a left onto Beach Road, and in under 10 minutes, Mount Carmel Cathedral will be on your left.  
+
+The cathedral \was first built in the Spanish Colonial era, and after World War II, it got rebuilt again. It is the largest Catholic cathedral in Saipan. The white church is built in a Spanish architectural style, and has a statue of the Virgin Mary with Jesus at the entrance. The church has a beautiful garden full of colorful flowers. The flame tree next to the church also has a beautiful display when it is in bloom.  
+
+**Tips**<br> Usually, the main entrance of the church is closed to visitors, so you may have to enter through a side door when there is access. On Sunday mornings, the church is open for worship only, so you cannot look around during that time. For the best photos of the church, visit around mid day or in the afternoon when the sun is shining on the front of the church.
+<p><img src="https://imagedelivery.net/TdQQyAHCLdZMYcdCJx_3LA/b28f7f40-f532-4073-1bac-9eabe8dd4c00/public" alt="Mount Carmel Cathedral" loading="lazy"></p>
+**Ladder Beach and Obyan Beach** <br> After visiting Mount Carmel Cathedral, if you decide to keep heading north on Beach Road, you can stop back to town for a short break, or go in the afternoon to the rest of the beaches. If you want a more adventurous way to get to Ladder Beach and Obyan Beach, you can get a guided ATV tour. Ladder Beach and Obyan Beach are located at the southern end of Saipan, near Saipan International Airport. Both are less developed and usually quieter than the island's main resort beaches. Ladder Beach has a lot of coral fragments instead of soft sand, so you should definitely wear water shoes. Obyan Beach is popular for having clear water, and you can see coral and tropical fish when the sea is calm.<br>
+An ATV is a four wheeled all-terrain vehicle designed to drive on unpaved tracks, so these are suitable for driving on beaches, and in the woods. Most guided tours include transportation to the ATV base, safety gear, and a brief  instruction before riding. Depending on the weather, road conditions, and local laws, access to some routes and beaches may be restricted, so make sure to double check with the tour operator before booking.</p> <h2>A final note</h2> <p>This relaxed Saipan itinerary can include a day trip to Managaha Island, a separate day for Tinian, and one or two days to explore Saipan by car. This will allow you to enjoy the island without being rushed. If time and conditions permit, tandem skydiving is also offered by local operators, which is a memorable experience. </p><p><img src="https://imagedelivery.net/TdQQyAHCLdZMYcdCJx_3LA/eda71fb2-7786-4451-fd9f-27e573194600/public" alt="Saipan beach itinerary" loading="lazy"></p>
+Saipan has beautiful clear waters and interesting colors along the coast. You can also see beautiful Managaha Island. Seeing the island from a sky dive gives you a cool view of the beach and water. Most sky diving companies offer a transport service from your hotel to the airport/air strip where you will be sky diving. Make sure to check everything while booking to make sure you know what is included (such as transport service). You can also ask about what other languages they speak, weather policies, weight limits, and if you have any medical issues that may restrict you from sky diving.</p><p><img src="https://imagedelivery.net/TdQQyAHCLdZMYcdCJx_3LA/d02ee78b-1eb5-4213-799a-af349b213000/public" alt="Saipan skydiving" loading="lazy"></p><p><strong>Important Note:</strong> Make sure to schedule your sky diving event before any scuba diving or make sure to leave a lot of time between the two events. If you dive and then go sky diving (or in this case, flying), you could have decompression sickness (the bends). The general rule is to wait 12 hours after a no-decompression dive, wait 18 hours after multiple dives, and wait even longer after cloud diving. Listen to your dive professional and sky dive operator. At the Blue Grotto, certified divers can scuba dive, and everyone else can snorkel if the conditions are right. Make sure to remember snorkeling does not have the same flying after diving restrictions that scuba diving does. Lau Lau Beach is another popular place to go diving, but make sure to check the planned depth and profile (which means what they are going to dive when they do a dive) with your dive operator before booking a skydive.
+<p>Saipan’s Cuisine is an adventure in itself. The Chamorro Night Market is a truly amazing experience. It takes place every Thursday Evening in the central location of Garapan. However, be sure to check for any schedule updates before making your visit. The market includes food stalls, as well as, clothing, handicraft vendors, and local musicians and dancers. Make sure to try Chamorro specialties such as red rice (hineksa agaga), tuba (a traditional coconut drink), and apigigi (a sweet wrap, coconut, leaf snack).</p><p><img src="https://imagedelivery.net/TdQQyAHCLdZMYcdCJx_3LA/03ded60d-e9b1-425d-119f-c9e8b7277f00/public" alt="Chamorro Night Market" loading="lazy"></p>
+<p>Another option is the <strong>Sunset Barbeque Dinner at Hyatt Regency Saipan</strong>. The resort was shown in the last episode of Season 2 of the Chinese variety show <em>Running Man</em>. A sunset barbeque dinner is one of the classic activities in Saipan where you get to eat Chamorro-style dishes and watch cultural shows like fire and Chamorro traditional dance. Performers invite guests on stage, so if you are shy, do not be. The dinner starts at <strong>6:00 pm</strong>, and prior reservation is encouraged. Booking online to secure your spot is also super easy, and just to be safe, arrive at the resort a little big early.<br>Another experience to consider while in Saipan is the seafood buffet. <strong>Hyatt Regency Saipan and Aqua Resort Club</strong> have been known for serving buffet style seafood dining, where you can choose from a large variety of fresh seafood. Their schedules, menus, and opening days vary, so it is best to contact them directly before making your plans.<br><strong>Hyatt Regency Saipan is centrally located</strong> at Micro Beach, and is walkable to the shops around Garapan and the duty-free shopping center. <strong>Aqua Resort Club is located on the northwestern coast of Saipan, near Middle Road</strong>, which makes it an ideal place to have lunch or dinner while traveling along the northern part of the island.</strong><h2>Conclusion</h2><p>Saipan is best suited for a self-drive trip where you can rent a car, and since the island is small, it is safe toexplore at your own pace. You can use this guide, and also leave some space to explore the island on your own. Have a great road trip in Saipan.</p><p><img src="https://imagedelivery.net/TdQQyAHCLdZMYcdCJx_3LA/fa2789e6-db53-4358-dfb5-8312ac8a0300/public" alt="Saipan self-drive trip" loading="lazy"></p>
+        
+
+        <a class="backLink" href="list-1.html">← Back to Saipan</a>
+      </article>
+    </main>
+  </body>
+</html>

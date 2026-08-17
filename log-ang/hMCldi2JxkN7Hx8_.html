@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Los Angeles, known as the "City of Angels," isn't it just LA LA LAND in real life?" />
+    <title>Guide to the Global Influencer Wall | City of Angels, LALA LAND</title>
+    <style>
+      :root {
+        --paper: #f5f1eb;
+        --ink: #163d36;
+        --body: #3f3a34;
+        --muted: #8a8379;
+        --line: #ddd5ca;
+        --accent: #d9782f;
+        --white: #fffaf4;
+        --shadow: 0 22px 70px rgba(28, 25, 20, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        line-height: 1.72;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .hero {
+        min-height: clamp(330px, 48vw, 560px);
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        padding: clamp(28px, 7vw, 70px) clamp(24px, 8vw, 76px);
+        background: #28463f;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.12)),
+          url("");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .heroInner {
+        position: relative;
+        width: min(900px, 100%);
+        color: #ffffff;
+      }
+
+      .heroLocation {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 24px;
+        color: rgba(255, 255, 255, 0.78);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .heroLocation svg {
+        width: 17px;
+        height: 17px;
+        color: #f0a45f;
+      }
+
+      h1 {
+        max-width: 880px;
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(30px, 4.8vw, 54px);
+        font-weight: 900;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .brief {
+        width: min(760px, 100%);
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 18px;
+        color: #5a5148;
+        font-size: clamp(17px, 1.9vw, 20px);
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.58;
+      }
+
+      .articleWrap {
+        width: min(900px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: clamp(42px, 6vw, 68px) 0 72px;
+      }
+
+      .content {
+        width: min(760px, 100%);
+        color: var(--body);
+        font-size: clamp(16px, 1.8vw, 18px);
+        line-height: 1.5;
+      }
+
+      .content p {
+        margin: 0 0 12px;
+      }
+
+      .content h2,
+      .content h3,
+      .content h4 {
+        margin: 46px 0 18px;
+        color: var(--ink);
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+
+      .content h2 {
+        font-size: clamp(28px, 4vw, 38px);
+      }
+
+      .content h3 {
+        font-size: clamp(23px, 3vw, 30px);
+      }
+
+      .content ul,
+      .content ol {
+        margin: 0 0 30px;
+        padding-left: 28px;
+      }
+
+      .content li {
+        margin: 8px 0;
+      }
+
+      .content blockquote {
+        margin: 34px 0;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 20px;
+        color: #5a5148;
+        font-style: italic;
+      }
+
+      .content img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 42px 0 12px;
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+      }
+
+      .content figure {
+        margin: 42px 0;
+      }
+
+      .content figure img {
+        margin: 0 0 12px;
+      }
+
+      .content figcaption {
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .backLink {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 46px;
+        border-top: 1px solid var(--line);
+        padding-top: 28px;
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.18em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .backLink:hover {
+        color: var(--accent);
+      }
+
+      @media (max-width: 720px) {
+        .hero {
+          min-height: 420px;
+          padding: 30px 24px;
+        }
+
+        .articleWrap {
+          width: min(100% - 28px, 900px);
+          padding-bottom: 48px;
+        }
+
+        .content {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="heroInner">
+        <p class="heroLocation">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+            />
+          </svg>
+          <span>Los Angeles</span>
+        </p>
+        <h1>Guide to the Global Influencer Wall | City of Angels, LALA LAND</h1>
+      </div>
+    </header>
+
+    <main class="articleWrap">
+      
+      <p class="brief">Los Angeles, known as the "City of Angels," isn't it just LA LA LAND in real life?</p>
+      
+
+      <article class="content">
+        
+          <p>The movie &quot;La La Land&quot; (爱乐之城) is a comedy musical released in mid-December 2016, telling the love story between a jazz pianist (Sebastian) and an aspiring actress (Mia). In 2017, it won six Academy Awards at the 89th Oscars including Best Actress and Best Director, attracting worldwide attention and captivating audiences.</p><p><br></p><p>The film was shot at multiple locations in Los Angeles, with Griffith Observatory being one of the most famous.</p><p><br></p><p>Griffith Observatory is one of LA&#39;s most renowned cultural attractions, having appeared in numerous TV shows and films. Its most notable appearance was in the 1955 classic &quot;Rebel Without a Cause,&quot; starring James Dean and Natalie Wood.</p><p><br></p><p>To pay homage to this iconic film, Mia and Sebastian from La La Land also visited the observatory and performed an unforgettable romantic scene at Samuel Oschin Planetarium, which has become one of the movie&#39;s most memorable moments.</p><p>Griffith Observatory, located on a hilltop near the Hollywood sign, is one of the best spots for tourists to take photos. The open-air platform at the top offers views of the entire Los Angeles city - with orderly streets, neat buildings, and downtown skyscrapers all visible at once. Witnessing the red sun setting into the sea from the platform during sunset time has a unique charm.</p><p><br></p><p>Visiting the Observatory</p><p>The observatory showcases astronomical knowledge about eight major planets and celestial bodies in the universe. Every evening when night falls, the stargazing area equipped with giant astronomical telescopes opens free of charge to the public. Visitors can clearly see stars in the sky and even the surface contours of the moon, fully experiencing the magic of the astronomical world.</p><p><br></p><p>The dome theater at the top is built to resemble the sky. Tourists recline on their seats to watch films about celestial evolution from a 360° perspective. Visitors feel as if they are immersed in the vast universe. Naked-eye 3D technology makes cosmic wonders appear within reach, right beside them.</p><p><br></p><p>Practical Information for the Observatory</p><p>Transportation: Take the Downtown DASH Weekend Observatory Shuttle and get off at Griffith Observatory Station.</p><p>Tickets: Free entry</p><p>Opening Hours: Closed on Mondays; Tuesday to Friday from 12:00 PM to 10:00 PM; weekends from 10:00 AM to 10:00 PM</p><p>Address: 2800 E. Observatory Rd, Los Angeles, CA 90027</p><p>Griffith Observatory</p><p>· Located on a hilltop northwest of Los Angeles with panoramic views of the entire city.</p><p>· Exhibits feature planetary and cosmic astronomy knowledge; the dome theater at the top is designed to mimic the sky, offering 360° viewing of films depicting celestial evolution. Naked-eye 3D technology brings all things in the universe within reach.</p><p>· The outdoor platform provides sweeping views of Los Angeles - orderly streets, neatly arranged buildings, and downtown skyscrapers are all clearly visible.</p><p>· After sunset, the observatory opens free to the public, allowing visitors to see the twinkling stars above and the contours of the Moon&#39;s surface.</p><p><br></p><p>Capture Your Own LA LA LAND Moment</p><p>Imitating LA LA LAND. by WendyW</p><p>LA LA LAND Night Views. by WendyW</p><p><br></p><p>The appearance of Griffith Observatory served as the climax of the entire film as a musical. Mia and Sebastian overlook the city from the hilltop, playfully singing duets and dancing in perfect harmony, creating one of the most iconic scenes in the movie - also the source for its posters.</p><p><br></p><p>LA LA LAND Instagram Wall</p><p>After the Pink Wall went viral, graffiti walls along Melrose Avenue in Los Angeles began appearing more frequently. Many coffee shops now feature attractive designs painted on their exteriors, with some murals being regularly updated. (Address: 8221 Melrose Avenue, West Hollywood) Not long ago there was graffiti themed around LA LA LAND, but I&#39;ve heard it has recently been changed to a Coachella Music Festival theme; no one knows if the LA LA LAND design will be restored in the future. Regardless, this iconic scene left an indelible impression on audiences&#39; hearts.</p><p><br></p><p>Exploring More Filming Locations of LA LA LAND</p><p><br></p><p>Griffith Park (Griffith Park)</p><p>Griffith Park.</p><p>A still from &quot;La La Land.&quot;</p><p>The Hollywood Sign.</p><p>Griffith Park is Los Angeles&#39;s largest local park.</p><p>After a party in Hollywood Hills, Sebastian and Mia discovered a stunning view in San Fernando Valley and filmed &quot;City of Stars&quot; there. The scene was shot at Cathy&#39;s Corner along Hollywood Hills Boulevard.</p><p><br></p><p>The famous Hollywood sign sits atop a hill in Griffith Park. While the sign itself is no longer accessible for visitors, one can still hike to the summit for panoramic views of Hollywood, with Los Angeles&#39; dazzling night lights providing an especially breathtaking sight.</p><p><br></p><p>The park features multiple attractions including an observatory, zoo, Autry National Center, and Victorian-era style station buildings. Visitors can enjoy walking along trails or participate in exciting activities such as mountain hiking, golfing, horseback riding, and miniature train tours.</p><p><br></p><p>Transportation: Take the Antelope Valley Line to Glendale Metrolink Station.</p><p><br></p><p>Opening hours: 6 a.m. to 10 p.m., with hiking trails remaining accessible only until sunset.</p><p><br></p><p>Address: 4730 Crystal Springs Dr, Los Angeles, CA, 90027</p><p><br></p><p>Griffith Park</p><p>In the movie &quot;La La Land,&quot; the two lead characters shared a dance here and performed &quot;City of Stars.&quot; That memorable stargazing scene under the night sky also took place at the observatory within the park.</p><p>The park features multiple attractions including an observatory, zoo, Ocean Life Center, and Victorian-era style station buildings. You can stroll along paths, go hiking, play golf, ride horses, and enjoy rides on miniature trains among other exciting activities.</p><p><br></p><p>The Lighthouse Cafe</p><p><br></p><p>La La Land still.</p><p>by WendyW</p><p><br></p><p>The Light House Cafe is located at Hermosa Beach and has been a jazz music venue since May 1949. Legendary jazz musicians Miles Davis, Chet Baker, Art Blakey, and Cannonball Adderley all performed here.</p><p><br></p><p>In the film, this is the jazz restaurant where the main couple went for their first date.</p><p>Address: 30 Pier Ave, Hermosa Beach, CA 90254</p><p><br></p><p>Hermosa Beach</p><p>As one of LA&#39;s eight most beautiful beaches, Hermosa Pier stretches along the Pacific Ocean, making it a popular spot for fishing and watching sunsets. After leaving the Lighthouse Café, Sebastian walked along the pier, singing &quot;City of Stars.&quot;</p><p><br></p><p>Hermosa Beach served as a filming location for the movie &quot;La La Land,&quot; where Mia and Sebastian shared romantic moments near the pier. Close by stands the Hermosa Beach Pier, a favorite date spot for couples. The nearby restaurants offer stunning ocean views, perfect for enjoying a romantic candlelit dinner while watching the sunset glow.</p><p><br></p><p>Angels Flight Railway</p><p>In montage scenes, Mia and Sebastian rode on the iconic Angels Flight railway - the Hill Street line in downtown Los Angeles. While this historic funicular has been out of service since 2013, the producers managed to secure permission for a one-day filming location shoot.</p><p><br></p><p>Built in 1901, Angels Flight was originally part of the hill street railway system in downtown LA&#39;s urban landscape.</p><p>Riding Angels Flight Railway, you can feel the strong retro charm of downtown Los Angeles.</p><p><br></p><p>Address: 351 S Hill St, Los Angeles, CA 90013</p><p><br></p><p>Angels Flight</p><p><br></p><p>Angels Flight is the filming location for the movie &quot;La La Land.&quot; In the film, Mia and Sebastian have a romantic date, sharing sweet kisses in the wooden carriages.</p><p><br></p><p>Angels Flight began operation as early as 1901, making it the world&#39;s shortest railway. Tourists can ride Angels Flight to experience this brief and enchanting journey with its retro orange-yellow and black painted body and wooden carriages.</p><p><br></p><p>In Conclusion</p><p><br></p><p>Traveling inspired by films is a beloved activity for many people. Those scenes that once touched or amazed us remain in our hearts, never fading away. By visiting the actual filming locations in reality, taking photos to commemorate your trip, you can awaken memories, honor classic movies, and continue feeling that initial sense of wonder~</p>
+        
+
+        <a class="backLink" href="list-1.html">← Back to Los Angeles</a>
+      </article>
+    </main>
+  </body>
+</html>

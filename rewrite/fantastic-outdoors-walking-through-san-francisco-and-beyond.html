@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="San Francisco City Walk" />
+    <title>Fantastic Outdoors | Walking Through San Francisco and Beyond</title>
+    <style>
+      :root {
+        --paper: #f5f1eb;
+        --ink: #163d36;
+        --body: #3f3a34;
+        --muted: #8a8379;
+        --line: #ddd5ca;
+        --accent: #d9782f;
+        --white: #fffaf4;
+        --shadow: 0 22px 70px rgba(28, 25, 20, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        line-height: 1.72;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .hero {
+        min-height: clamp(330px, 48vw, 560px);
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        padding: clamp(28px, 7vw, 70px) clamp(24px, 8vw, 76px);
+        background: #28463f;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.12)),
+          url("https://p1-q.mafengwo.net/s15/M00/15/5B/CoUBGV5iDkuATKn0AAHCLYNkoRc53.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F90");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .heroInner {
+        position: relative;
+        width: min(900px, 100%);
+        color: #ffffff;
+      }
+
+      .heroLocation {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 24px;
+        color: rgba(255, 255, 255, 0.78);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .heroLocation svg {
+        width: 17px;
+        height: 17px;
+        color: #f0a45f;
+      }
+
+      h1 {
+        max-width: 880px;
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(30px, 4.8vw, 54px);
+        font-weight: 900;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .brief {
+        width: min(760px, 100%);
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 18px;
+        color: #5a5148;
+        font-size: clamp(17px, 1.9vw, 20px);
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.58;
+      }
+
+      .articleWrap {
+        width: min(900px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: clamp(42px, 6vw, 68px) 0 72px;
+      }
+
+      .content {
+        width: min(760px, 100%);
+        color: var(--body);
+        font-size: clamp(16px, 1.8vw, 18px);
+        line-height: 1.5;
+      }
+
+      .content p {
+        margin: 0 0 0.5em;
+      }
+
+      .content h2,
+      .content h3,
+      .content h4 {
+        margin: 46px 0 18px;
+        color: var(--ink);
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+
+      .content h2 {
+        font-size: clamp(28px, 4vw, 38px);
+      }
+
+      .content h3 {
+        font-size: clamp(23px, 3vw, 30px);
+      }
+
+      .content ul,
+      .content ol {
+        margin: 0 0 30px;
+        padding-left: 28px;
+      }
+
+      .content li {
+        margin: 8px 0;
+      }
+
+      .content blockquote {
+        margin: 34px 0;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 20px;
+        color: #5a5148;
+        font-style: italic;
+      }
+
+      .content img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 42px 0 12px;
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+      }
+
+      .content figure {
+        margin: 42px 0;
+      }
+
+      .content figure img {
+        margin: 0 0 12px;
+      }
+
+      .content figcaption {
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .backLink {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 46px;
+        border-top: 1px solid var(--line);
+        padding-top: 28px;
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.18em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .backLink:hover {
+        color: var(--accent);
+      }
+
+      @media (max-width: 720px) {
+        .hero {
+          min-height: 420px;
+          padding: 30px 24px;
+        }
+
+        .articleWrap {
+          width: min(100% - 28px, 900px);
+          padding-bottom: 48px;
+        }
+
+        .content {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="heroInner">
+        <p class="heroLocation">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+            />
+          </svg>
+          <span>Los Angeles</span>
+        </p>
+        <h1>Fantastic Outdoors | Walking Through San Francisco and Beyond</h1>
+      </div>
+    </header>
+
+    <main class="articleWrap">
+      
+      <p class="brief">San Francisco City Walk</p>
+      
+
+      <article class="content">
+        
+          <p>San Francisco enjoys ideal conditions, with its mild climate year-round and over forty hills, making this city and the entire San Francisco Bay Area surrounding it a paradise for hikers. Towering redwoods that reach the clouds, cliffs that appear as ridges from one angle and peaks from another, and lush valleys await your exploration and discovery. These are outdoor experiences you cannot miss within easy driving distance of the city along these premium routes.</p><p><br></p><p>                                        San Francisco Urban Hiking</p><p><br></p><p>                    If you're ready, let's embark on this unconventional hiking adventure together, measuring San Francisco with our own footsteps! Starting at Twin Peaks in downtown, climb up along a simple trail about half a mile long, gaining approximately 400 feet of elevation. At this point, your vertical height will reach about 925 feet. From here, you'll be able to enjoy unobstructed panoramic city views in all directions. Twin Peaks is very accessible by public transportation. If you take Muni Metro K, L, or M lines to Castro Street station (Castro St. station), it's even more convenient - just walk a few blocks after exiting the station and you'll arrive at the trailhead.</p><p><br></p><p>The second urban route is the Mount Davidson Trail loop, about 1.5 miles long, which will take you to the highest point in the city.</p>
+<p>Mount Davidson is a landmark in San Francisco, also historically known as Mount Davidson Cross. This landmark view is approximately 103 feet high, so you can see it from any corner of the city. The simplest way to get to Mount Davidson is by public transportation. Take BART from downtown to Glen Park station, then take Muni Bus No. 38 to the corner of Dalewood Way and Myra Way, which marks the starting point of the trail.</p><p><br></p><p>If you want to explore a small island around San Francisco for an island hopping experience, you can take the Angel Island - Tiburon Ferry or Blue &amp; Gold Angel Island Ferry to Angel Island State Park. After hiking five miles along the trails on Angel Island, you will be rewarded with stunning views of the San Francisco skyline.</p><p><br></p><p>                                        Golden Gate National Recreation Area Hiking</p><p><br></p><p>The Golden Gate National Recreational Area spans both the Marin and San Francisco sides of the Golden Gate Bridge. It is a paradise for hikers, who come from all over the world to experience the joy of hiking.</p>
+</p><p><br></p><p>Among them, the most popular route in the Golden Gate National Recreation Area is the Land's End Trail, which has moderate difficulty and is an ideal choice for hikers of intermediate ability. Following this approximately four-mile path northwest toward San Francisco, you'll receive a panoramic view of the magnificent scenery at the Golden Gate Bridge at the trail's end. Of course, if you prefer flatter paths, you can start from the battery along the paved Golden Gate Promenade and head to the Marina Green; the scenery is stunning all along the way, so feel free to walk and take photos!</p><p><br></p><p>When summer arrives, we must mention the most popular Presidio Trails fortress path. This trail stretches approximately 24 miles in total, and when you reach three miles along the way, you'll pass by Andy Goldsworthy's famous sculptural installations: "Spire," "Wood Line," "Earth Wall," and "Tree Fall." In addition, this route is also a must-pass path for observing bird migration, so it's highly favored by birdwatching enthusiasts.</p><p><br></p><p>Hikers who love challenges and are seeking greater challenges, look here! The Ocean View Trail within the Golden Gate National Recreation Area, stretching approximately 1.2 miles with ocean views, is one you absolutely cannot miss.
+This path winds through ancient redwoods, climbing upward where you'll encounter trees that have lived 600 to 800 years. Since this is a looped trail, if you get lost, simply follow Creek Trail and you'll return to your starting point.</p><p><br></p><p>Bring the kids for a family outing to experience outdoor hiking fun—you won't want to miss Tennessee Valley Trail. This path stretches about 1.7 miles from the parking lot to Tennessee Beach, featuring flat terrain that's not strenuous and straightforward to navigate. If you time your visit well, you may catch a glimpse of the sunken SS Tennessee ship, which is only visible during low tide.</p><p><br></p><p>If you're prepared for rugged terrain, continue along half a mile of trail to reach Bonita Lighthouse at Montara Mountain's peak. If you plan to enter the lighthouse, note that it operates Sunday and Monday afternoons from 12:30 to 3:30 PM—plan accordingly based on your schedule. Additionally, experienced hikers can undertake further challenges by trekking from the shoreline to Montara Mountain's summit for a unique experience ascending from sea level to 2000 meters of elevation; this route spans approximately one mile.</p><p><br></p><p>                                        Bridge Crossing Journey</p><p><br></p><p>                    Located in Mount Diablo State Park on the East Bay, its highest peak reaches an elevation of about 3849 feet. From here you can take in breathtaking views of surrounding peaks and valleys.</p>
+The park offers trails suitable for hikers of varying experience levels, but truly magnificent scenery is only rewarded to those brave enough to challenge the dangerous peaks! One of the most popular options is Donner Creek Loop Trail. This trail is about 5 miles long and will take you past the famous Donner Creek Falls waterfall. Of course, for hikers who want to tackle longer distances, we recommend trying Mount Diablo Grand Loop Trail, which is a full 13 miles including approximately 7 miles of uphill and downhill sections—quite challenging.
+
+Mount Tamalpais State Park in northern Marin also offers hiking trails with varying degrees of difficulty. Some trails are only 2 miles long, while others extend up to 16 miles. As a favorite destination for outdoor enthusiasts, you can encounter people hiking, cycling, jogging, and picnicking in the park throughout all seasons; it is one of the city's most popular attractions. Of course, if you're well-prepared, you can also climb the peak that reaches as high as 2571 feet. Looking out from the summit, you can see the distant Farallon Islands. On clear and sunny days, some hikers have even spotted the snow-capped Sierra Nevada mountains more than 150 miles away.
+
+Photo credit: msfatii_
+pchmura8；kharizaraephoto；mickslifee；iamlauraling；bubchub；chel_seamonk；niniandme；nadya_bloom；elizabeth_infocus；egvisuals_；stephvu；gearju10；josh__wall；calicanes；eliswanderlust；deltagoldstein；sometown</p>
+        
+
+        <a class="backLink" href="list-1.html">← Back to Los Angeles</a>
+      </article>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="<h2>About "California Zephyr"</h2>" />
+    <title>You can cross America without driving yourself—ride the California Zephyr through snow-capped mountains and barren plains.</title>
+    <style>
+      :root {
+        --paper: #f5f1eb;
+        --ink: #163d36;
+        --body: #3f3a34;
+        --muted: #8a8379;
+        --line: #ddd5ca;
+        --accent: #d9782f;
+        --white: #fffaf4;
+        --shadow: 0 22px 70px rgba(28, 25, 20, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        line-height: 1.72;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .hero {
+        min-height: clamp(330px, 48vw, 560px);
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        padding: clamp(28px, 7vw, 70px) clamp(24px, 8vw, 76px);
+        background: #28463f;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.12)),
+          url("https://p1-q.mafengwo.net/s11/M00/13/F5/wKgBEFsrGhCAeRsYAAS1o-Rg3gI20.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F90");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .heroInner {
+        position: relative;
+        width: min(900px, 100%);
+        color: #ffffff;
+      }
+
+      .heroLocation {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 24px;
+        color: rgba(255, 255, 255, 0.78);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .heroLocation svg {
+        width: 17px;
+        height: 17px;
+        color: #f0a45f;
+      }
+
+      h1 {
+        max-width: 880px;
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(30px, 4.8vw, 54px);
+        font-weight: 900;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .brief {
+        width: min(760px, 100%);
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 18px;
+        color: #5a5148;
+        font-size: clamp(17px, 1.9vw, 20px);
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.58;
+      }
+
+      .articleWrap {
+        width: min(900px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: clamp(42px, 6vw, 68px) 0 72px;
+      }
+
+      .content {
+        width: min(760px, 100%);
+        color: var(--body);
+        font-size: clamp(16px, 1.8vw, 18px);
+        line-height: 1.5;
+      }
+
+      .content p {
+        margin: 0 0 0.5em;
+      }
+
+      .content h2,
+      .content h3,
+      .content h4 {
+        margin: 46px 0 18px;
+        color: var(--ink);
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+
+      .content h2 {
+        font-size: clamp(28px, 4vw, 38px);
+      }
+
+      .content h3 {
+        font-size: clamp(23px, 3vw, 30px);
+      }
+
+      .content ul,
+      .content ol {
+        margin: 0 0 30px;
+        padding-left: 28px;
+      }
+
+      .content li {
+        margin: 8px 0;
+      }
+
+      .content blockquote {
+        margin: 34px 0;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 20px;
+        color: #5a5148;
+        font-style: italic;
+      }
+
+      .content img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 42px 0 12px;
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+      }
+
+      .content figure {
+        margin: 42px 0;
+      }
+
+      .content figure img {
+        margin: 0 0 12px;
+      }
+
+      .content figcaption {
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .backLink {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 46px;
+        border-top: 1px solid var(--line);
+        padding-top: 28px;
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.18em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .backLink:hover {
+        color: var(--accent);
+      }
+
+      @media (max-width: 720px) {
+        .hero {
+          min-height: 420px;
+          padding: 30px 24px;
+        }
+
+        .articleWrap {
+          width: min(100% - 28px, 900px);
+          padding-bottom: 48px;
+        }
+
+        .content {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="heroInner">
+        <p class="heroLocation">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+            />
+          </svg>
+          <span>Los Angeles</span>
+        </p>
+        <h1>You can cross America without driving yourself—ride the California Zephyr through snow-capped mountains and barren plains.</h1>
+      </div>
+    </header>
+
+    <main class="articleWrap">
+      
+      <p class="brief"><h2>About "California Zephyr"</h2></p>
+      
+
+      <article class="content">
+        
+          <p>The California Zephyr, this sightseeing train passes through 7 states in America, going through multiple popular tourist destinations along the route, very suitable for travelers who don't want to self-drive.</p><p><br></p><p>                                        About "The California Zephyr"</p><p><br></p><p>                    The California Zephyr (CA Zephyr) is a sightseeing train, starting from San Francisco and ending in Chicago, with a total duration of 51 hours and 20 minutes. You can get on or off at intermediate stops along the way. The map below is a screenshot I took from their official website, where you can see the cities passed through and stopping points shown.</p><p><br></p><p>                                            Map of California Zephyr Stops</p><p><br></p><p>                    This train is also highly recommended for those who want to explore both the eastern and western regions of America, but are limited by time and can't self-drive, or for travelers who don't want to just see everything from an airplane without experiencing anything meaningful. The route passes through several national parks and tourist attractions, with opportunities to disembark at various stops. If you're interested in visiting Arches National Park or Colorado Valley but prefer not to drive yourself, then this California Zephyr journey would be ideal.</p><p><br></p><p>                    Like myself, departing from California and crossing the Rocky Mountains allows you to witness a breathtaking transformation: from snow-capped peaks to vast plains, from open plains to dramatic canyons, then back to snowy mountains again. As you approach the international metropolis of Chicago at journey's end, you'll also experience the vibrant urban atmosphere.</p>
+Of course, you can also start from Chicago all the way to San Francisco and see similar scenery.</p><p><br></p><p>                                        How to buy tickets?</p><p><br></p><p>                    Train tickets need to be booked online in advance</p><p>Booking website: ***</p><p>This is paid online, and the tickets are sent directly to your phone. For two people, we spent about 800+, averaging over 400 per person each. This booking isn't for one bed per person, but rather a room; booking four-person rooms would be more cost-effective. I suggest finding three friends to make it four and travel together.</p><p><br></p><p>                                        Seat selection</p><p><br></p><p>                    On the train, you can choose between regular seats or first class, which are sleeper cabins. There's a special observation car with glass on top and around it to see the scenery.</p><p><br></p><p>                    First class is the sleeper, and sleepers come in three types:</p><p>1. One person per small room</p><p>2. Two people per small room</p><p>3. Four people per small room</p><p>The choice of sleeper rooms varies, so the prices also differ slightly.</p>
+<ol><li>For this trip with two people, we booked a double-occupancy room. I didn't take photos inside the bunk beds because they really are quite small, only about 2-3 square meters. The lower bunk was very comfortable, but the upper bunk was genuinely terrible—both narrow and cramped. My biggest complaint about this train journey is how tiny and crowded the upper bunks were; it was truly uncomfortable. A four-person room would be much larger. If you can gather four friends together, choosing a four-person accommodation is both the most economical option and the most comfortable.</li><ol><li>The room could be locked from the inside but not from the outside, so if everyone leaves the room, I recommend bringing your valuables with you to prevent loss. Although I kept everything inside the room without anyone stealing it, it's still better to be cautious.</li><ol><li>Tips:</li><ol><li>The train has bathing and washing facilities that are surprisingly clean since they're first class. I tried taking a shower on the train and found it quite clean as well.</li><ol><li>Restaurant and Coffee Shop</li><ol><li>The train has both a restaurant and a coffee shop. The coffee shop is small, just suitable for buying drinks, while the restaurant occupies an entire car.</li></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></
+<p>If the dining car is full, they allow you to wait for seats; when it's our turn, they call out our numbers on the train. Breakfast and lunch are eaten by simply walking in, but dinner requires a pre-appointment of time. Just before dinner, the waiter comes to ask about your appointment time. Passengers with sleeper cars eat free because meals are included in their ticket price, so they get dinner appointments made earlier than others.</p>
+<p>The dining car offers diverse menu options, though honestly, the food is quite disappointing - typical American fare that disappoints those who dislike such cuisine but might satisfy fans of this style.</p>
+<p><br></p>
+<h2>Dining Car</h2>
+<p><br></p>
+<h3>Tips:</h3>
+<p>The train lacks network connectivity most of the time, only providing it when passing through larger cities. This suggests passengers should prepare by downloading movies or books beforehand for entertainment during the journey.</p>
+<p>If you plan to view the scenery quietly and peacefully, bring an open, contemplative mindset to truly appreciate what unfolds outside the windows.</p>
+<p><br></p>
+<h2>Scenery Along the Route</h2>
+<p><br></p>
+<h3>Day 1 — Crossing Mountains, Forests, and Plains</h3>
+<p><br></p>
+<p>The California Zephyr departs from San Francisco, with our group boarding at a small town just beyond the city limits.</p>
+<p>No one ever came to check our tickets either; the conductor didn't verify them and just told us we were fine and could move around freely on the train.</p><p><br></p><p>                                        About the Observation Car</p><p><br></p><p>                    As soon as my roommate and I got onto the observation car upstairs, we were shocked by how open it was.</p><p><br></p><p>                                            View from the Observation Car</p><p><br></p><p>                                        Leaving California</p><p><br></p><p>                    The first stop was Sacramento, the capital of California. To be honest, Sacramento really doesn't look like a state capital - it looks more like a rural area. After that, the train headed toward the suburbs. At first there were farmland and pastures, with signs of human habitation.</p><p><br></p><p>                        Historic Downtown Sacramento</p><p><br></p><p>                    The train gradually entered deep mountains; from the mountain valley one could see the American River flowing through it, with clouds swirling around the mountaintops.
+<p>To know that California enjoys sunny skies year-round, such small-scale sea of clouds is also hard to see.</p><p><br></p><p>Continuing deeper into the mountains, the altitude gradually increased, and I began to feel some discomfort in my ears. Snow appeared outside the window as well. Because spring had arrived, there could still be seen a stream where ice and snow were melting in the middle, but as the train slowly entered deep mountain areas, all that came into view was vast white snow.</p><p><br></p><p>Gradually the altitude began to decrease. Exiting from the snowy mountains, it was no longer a world of pure white around; green trees and creeks could be seen, along with some dried grass and shrubs scattered throughout.</p><p>The meltwater from high mountains is an important source of fresh water in California, and this small stream is probably where melted mountain water converges.</p><p><br></p><p>                    Nevada</p><p><br></p><p>                    The plains along the route from California into Nevada represent the most balanced beauty I found throughout the entire journey. One could faintly see a clear blue sky, rushing creeks, houses with Midwestern rural style, and distant snowy mountains visible in the background behind them. Each view individually looked quite ordinary, but combined together they formed a wonderful landscape.</p><p><br></p><p>                    Slowly, the train entered truly endless vast plains, then after leaving the prairie it moved into an area of salt flats.</p>
+</p><p><br></p><p>                                        Day 2 — Journeying Along Valleys and Rivers</p><p><br></p><p>                    The second day was the most beautiful day of the entire itinerary, traversing several canyons, pastures, and snowfields within a single day. I think the best thing about traveling in spring is being able to see dramatically different climates and landscapes along one journey. Throughout, snow and desert interwove in succession, creating a particularly novel experience.</p><p><br></p><p>                                        The Canyon Region</p><p><br></p><p>                    At the beginning, there were vast expanses of desert. Actually, we woke up a bit late so we missed a canyon that passed by in the morning, but it didn't matter; starting to appreciate now wasn't too late either.</p><p><br></p><p>                    Slowly, the train entered the canyon region, with steep rock walls and barren cliffs all around. A river mixed with sediment ran through the middle, while our train moved slowly within the canyon itself.</p><p><br></p><p>                    Slowly as the train passed through a stretch of plain.</p>
+</p><p><br></p><p>                                        Mountains, Rivers, and Valleys</p><p><br></p><p>                    After that, we entered a completely different landscape. Mountains and water were interwoven, and I could see reeds growing in the middle of rivers. This is also what makes me think that central America is different from central China (my home). Central China appears more beautiful and elegant; its mountains and waters seem like meticulously crafted Gongbi paintings—each mountain peak and river seems deliberately created by nature with careful consideration. America feels more rugged, more like a splash of ink in freehand painting style—landscapes lack some refinement but are more magnificent. I can't say which is better—everyone has their own preferences.</p><p><br></p><p>                                        Wasteland and Plains</p><p><br></p><p>                    After leaving the canyon, we gradually arrived at a vast plain. I could see snow that hadn't yet melted in some areas.</p><p><br></p><p>                    Slowly, the snow began to accumulate more extensively. Vast expanses became completely covered in white.</p><p>Snowmelt streams flowed through the snowy terrain, revealing sparse vegetation scattered throughout. Unfortunately, I was photographing through the car window glass, so the images weren't very clear—most photos appeared quite yellow.</p>
+<p>Once you arrive there, you'll know the snow is white and the sky is blue.</p><p><br></p><p>                                        Canyon and Pine Forest</p><p><br></p><p>                    After entering a canyon once more, this time it was filled with thick layers of snow and tall coniferous trees.</p><p><br></p><p>                                        Denver</p><p><br></p><p>                    After passing through a small valley, the snow began to melt. By then it had already gotten dark; the sun was about to set, so I didn't take many photos. Around 6 PM, the train traveled across vast plains and entered Denver city. The train would stop here for about an hour, allowing passengers to get off and explore.</p><p><br></p><p>                                        Day 3 — Arriving in Chicago</p><p><br></p><p>                    There was little scenery on the third day. No matter when I looked out the window, I always saw farmland and plains—exactly like what I'd seen driving on highways back home in Shandong.</p>
+</p><p>A little after 2 PM, the train entered Chicago - we had finally arrived at our destination!</p>
+        
+
+        <a class="backLink" href="list-1.html">← Back to Los Angeles</a>
+      </article>
+    </main>
+  </body>
+</html>

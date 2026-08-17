@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <title>How to eat in Los Angeles? Great value-for-money dining options await you at UCLA! Here's a complete guide for your visit!</title>
+    <style>
+      :root {
+        --paper: #f5f1eb;
+        --ink: #163d36;
+        --body: #3f3a34;
+        --muted: #8a8379;
+        --line: #ddd5ca;
+        --accent: #d9782f;
+        --white: #fffaf4;
+        --shadow: 0 22px 70px rgba(28, 25, 20, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        line-height: 1.72;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .hero {
+        min-height: clamp(330px, 48vw, 560px);
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        padding: clamp(28px, 7vw, 70px) clamp(24px, 8vw, 76px);
+        background: #28463f;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.12)),
+          url("");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .heroInner {
+        position: relative;
+        width: min(900px, 100%);
+        color: #ffffff;
+      }
+
+      .heroLocation {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 24px;
+        color: rgba(255, 255, 255, 0.78);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .heroLocation svg {
+        width: 17px;
+        height: 17px;
+        color: #f0a45f;
+      }
+
+      h1 {
+        max-width: 880px;
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(30px, 4.8vw, 54px);
+        font-weight: 900;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .brief {
+        width: min(760px, 100%);
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 18px;
+        color: #5a5148;
+        font-size: clamp(17px, 1.9vw, 20px);
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.58;
+      }
+
+      .articleWrap {
+        width: min(900px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: clamp(42px, 6vw, 68px) 0 72px;
+      }
+
+      .content {
+        width: min(760px, 100%);
+        color: var(--body);
+        font-size: clamp(16px, 1.8vw, 18px);
+        line-height: 1.5;
+      }
+
+      .content p {
+        margin: 0 0 12px;
+      }
+
+      .content h2,
+      .content h3,
+      .content h4 {
+        margin: 46px 0 18px;
+        color: var(--ink);
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+
+      .content h2 {
+        font-size: clamp(28px, 4vw, 38px);
+      }
+
+      .content h3 {
+        font-size: clamp(23px, 3vw, 30px);
+      }
+
+      .content ul,
+      .content ol {
+        margin: 0 0 30px;
+        padding-left: 28px;
+      }
+
+      .content li {
+        margin: 8px 0;
+      }
+
+      .content blockquote {
+        margin: 34px 0;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 20px;
+        color: #5a5148;
+        font-style: italic;
+      }
+
+      .content img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 42px 0 12px;
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+      }
+
+      .content figure {
+        margin: 42px 0;
+      }
+
+      .content figure img {
+        margin: 0 0 12px;
+      }
+
+      .content figcaption {
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .backLink {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 46px;
+        border-top: 1px solid var(--line);
+        padding-top: 28px;
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.18em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .backLink:hover {
+        color: var(--accent);
+      }
+
+      @media (max-width: 720px) {
+        .hero {
+          min-height: 420px;
+          padding: 30px 24px;
+        }
+
+        .articleWrap {
+          width: min(100% - 28px, 900px);
+          padding-bottom: 48px;
+        }
+
+        .content {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="heroInner">
+        <p class="heroLocation">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+            />
+          </svg>
+          <span>Los Angeles</span>
+        </p>
+        <h1>How to eat in Los Angeles? Great value-for-money dining options await you at UCLA! Here's a complete guide for your visit!</h1>
+      </div>
+    </header>
+
+    <main class="articleWrap">
+      
+
+      <article class="content">
+        
+          <p>&quot;Variety aplenty, top quality, fair prices—regret it if you don&#39;t check it out!&quot; Little Chicken&#39;s UCLA friend would rave endlessly about their campus dining hall whenever they mentioned it. After his 801st round of bragging, Little Chicken decided to take a look for himself. Without further ado, let Little Chicken (and friends) take you from the interior ambiance down to every detail—from Mapo tofu to French butter sauce—and experience firsthand what it means to be ranked #1 in America at 360°.</p><p><br></p><p>A. Dining Hall</p><p>There are four major dining halls on campus, all clustered around the dormitory area: Covel, De Neve, FEAST at Rieber, and Bruin Plate. Among them, Covel and De Neve focus on American food, known for being high-calorie dishes.</p><p><br></p><p>1. Covel</p><p>Covel used to feature steak every Tuesday, with rosemary chicken on Thursdays. Highly recommended for meat lovers. (But do check the menu beforehand.)</p><p><br></p><p>*** De Neve</p><p>What students love most about De Neve is their late-night food offering. On starving nights, Little Chicken often runs to De Neve for a midnight snack—order fried chicken strips with fries, doused in buffalo sauce and ketchup, then wash it all down with a vanilla milkshake.</p><p>Wow, this lifestyle is simply too wonderful! De Neve&#39;s roast pork chop is a signature dish you absolutely must queue for.</p><p><br></p><p>3. Feast</p><p>Feast is UCLA&#39;s famous Asian restaurant. Dishes include fried rice, meat buns, noodles, and sushi. The favorite is the spicy Sichuan-style diced chicken rice - fragrant and spicy chicken pieces with crunchy peanuts on top of fluffy white rice, no problem eating three bowls at once. Feast also has various desserts, a very large dining space, and floor-to-ceiling windows making it perfect for dates.</p><p><br></p><p>4. Bruin Plate</p><p>Bruin Plate only serves organic food and sparkling water - the healthiest cafeteria on campus. No sodas or junk food. Most of the time they serve relatively light grilled meats, but what you definitely queue for is a roasted lamb chop from the menu. Additionally, UCLA cafeterias consistently refresh their offerings each year. Last year, they opened the new Hedrick Study featuring pizza and desserts.</p><p><br></p><p>SecB coffee</p><p>Apart from the four major restaurants mentioned above, there are three more convenient cafés on hill for students to choose from.</p><p><br></p><p>1.Café 1919</p><p>Pizza is their specialty - all kinds of freshly baked pizzas that are perfect for students in a hurry heading to class who want something takeaway. Tiramisu and ice cream are also signature items at the shop.</p><p><br></p><p>2.Bruin Café</p><p>The B-café everyone knows - their roasted beef sandwich is excellent. There are also many varieties of milkshakes, yogurt cups, and fruit cups to try.</p><p><br></p><p>3.Rendezvous</p><p>Located right downstairs from Rieber Terrace, this café is also very popular among students. Mapo Tofu rice and bubble milk tea are both popular signature items.</p><p><br></p><p>UCLA Meal Plan</p><p>UCLA offers up to nine types of meal plans (meal tickets). If you have friends studying at UCLA, I strongly recommend the 19P - as the name suggests, it includes 19 swipes per week, and any unused swipes automatically carry over to the next week.</p><p>14P, like 19P, does not expire any unused swipes at the end of each week, and you can even use them to treat friends to meals together.</p><p><br></p><p>Each dining hall on campus has its own unique characteristics, and most of the food is quite delicious. To ensure everyone can find meals that suit their tastes, UCLA Dining Services updates all dining halls&#39; menus daily.</p><p><br></p><p>Faced with this universal dilemma of &quot;what to have for lunch today,&quot; simply check the menu first before deciding where to eat—you&#39;ll definitely make the right choice.</p><p><br></p><p>A note from Xiao Ji: After following friends around visiting UCLA&#39;s dining halls, they can certainly be considered among the top worth-trying lists. If you want authentic Chinese food, quickly find a friend from Peking University to rely on! Of course, if you think any other university&#39;s cafeteria is also super good, come and recommend it in the comments!</p><p><br></p><p>University of California, Los Angeles</p><p><br></p><p>Founded in 1919, UCLA (University of California, Los Angeles) is one of America&#39;s oldest comprehensive universities and a prestigious higher education institution renowned nationwide. Consistently ranking among the top fifteen globally, it remains one of the most coveted universities for students from around the world. With no fences surrounding campus, its fully open environment allows visitors to freely explore this world-class institution. Walking between colleges, students crowd together on lawns chatting and laughing, bathed in abundant sunshine.</p><p>The century-old Reiss Auditorium reflects the academy&#39;s rich heritage. The campus atmosphere, shaded by lush trees and filled with bird songs and fragrant flowers, makes visitors feel refreshed and at peace. Visitors can also tour the libraries and academic buildings of each college to fully experience the unique charm of a world-class institution.</p>
+        
+
+        <a class="backLink" href="list-1.html">← Back to Los Angeles</a>
+      </article>
+    </main>
+  </body>
+</html>

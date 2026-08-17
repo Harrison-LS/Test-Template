@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <title>Los Angeles Vibrant Fun Guide #7: A Picturesque Campus Tour</title>
+    <style>
+      :root {
+        --paper: #f5f1eb;
+        --ink: #163d36;
+        --body: #3f3a34;
+        --muted: #8a8379;
+        --line: #ddd5ca;
+        --accent: #d9782f;
+        --white: #fffaf4;
+        --shadow: 0 22px 70px rgba(28, 25, 20, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        line-height: 1.72;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .hero {
+        min-height: clamp(330px, 48vw, 560px);
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        padding: clamp(28px, 7vw, 70px) clamp(24px, 8vw, 76px);
+        background: #28463f;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.12)),
+          url("");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .heroInner {
+        position: relative;
+        width: min(900px, 100%);
+        color: #ffffff;
+      }
+
+      .heroLocation {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 24px;
+        color: rgba(255, 255, 255, 0.78);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .heroLocation svg {
+        width: 17px;
+        height: 17px;
+        color: #f0a45f;
+      }
+
+      h1 {
+        max-width: 880px;
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(30px, 4.8vw, 54px);
+        font-weight: 900;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .brief {
+        width: min(760px, 100%);
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 18px;
+        color: #5a5148;
+        font-size: clamp(17px, 1.9vw, 20px);
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.58;
+      }
+
+      .articleWrap {
+        width: min(900px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: clamp(42px, 6vw, 68px) 0 72px;
+      }
+
+      .content {
+        width: min(760px, 100%);
+        color: var(--body);
+        font-size: clamp(16px, 1.8vw, 18px);
+        line-height: 1.5;
+      }
+
+      .content p {
+        margin: 0 0 12px;
+      }
+
+      .content h2,
+      .content h3,
+      .content h4 {
+        margin: 46px 0 18px;
+        color: var(--ink);
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+
+      .content h2 {
+        font-size: clamp(28px, 4vw, 38px);
+      }
+
+      .content h3 {
+        font-size: clamp(23px, 3vw, 30px);
+      }
+
+      .content ul,
+      .content ol {
+        margin: 0 0 30px;
+        padding-left: 28px;
+      }
+
+      .content li {
+        margin: 8px 0;
+      }
+
+      .content blockquote {
+        margin: 34px 0;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 20px;
+        color: #5a5148;
+        font-style: italic;
+      }
+
+      .content img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 42px 0 12px;
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+      }
+
+      .content figure {
+        margin: 42px 0;
+      }
+
+      .content figure img {
+        margin: 0 0 12px;
+      }
+
+      .content figcaption {
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .backLink {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 46px;
+        border-top: 1px solid var(--line);
+        padding-top: 28px;
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.18em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .backLink:hover {
+        color: var(--accent);
+      }
+
+      @media (max-width: 720px) {
+        .hero {
+          min-height: 420px;
+          padding: 30px 24px;
+        }
+
+        .articleWrap {
+          width: min(100% - 28px, 900px);
+          padding-bottom: 48px;
+        }
+
+        .content {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="heroInner">
+        <p class="heroLocation">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+            />
+          </svg>
+          <span>Los Angeles</span>
+        </p>
+        <h1>Los Angeles Vibrant Fun Guide #7: A Picturesque Campus Tour</h1>
+      </div>
+    </header>
+
+    <main class="articleWrap">
+      
+
+      <article class="content">
+        
+          <p>The vibrancy and diversity of Los Angeles are also reflected in its universities. With many beautiful campuses, these institutions are not only places where students excel and grow, but also serene and picturesque destinations. Did you know? Many scenes depicting Harvard University in movies were actually filmed at UCLA. The &quot;most beautiful campus in America&quot; is right by the Malibu coast... Visiting Los Angeles&#39; four top universities will yield unique experiences.</p><p><br></p><p>University of Southern California (USC): A Dreamy Campus Favored by TV and Film Productions</p><p><br></p><p>Do you have a deep longing for the castle-like universities seen in movies? Are you curious about Kobe Bryant&#39;s daughter&#39;s dream school? If so, come visit the University of Southern California. This celebrity-producing &quot;influencer university&quot; is not only a filming location for many Hollywood films but also a dreamy, photogenic paradise perfect for leisurely exploration and photography.</p><p><br></p><p>Image source: Official website</p><p><br></p><p>The University of Southern California (University of Southern California, USC) was founded in 1880 as California&#39;s oldest private research university. Its School of Cinematic Arts and Annenberg School for Communication are both ranked number one in the nation. USC boasts an impressive alumni network that includes George Lucas, director of Star Wars; Neil Armstrong, the first person to walk on the moon; and Andrew Viterbi, founder of Qualcomm—all graduates of this prestigious institution.</p><p>At Olympic Games throughout history, USC alumni have won more than 150 gold medals.</p><p>Image from official website</p><p>Both of USC&#39;s two main campuses are located in Los Angeles. The University Park Campus is home to the Dornsife College of Letters, Arts and Sciences, the graduate school, and most professional schools; the Health Sciences Campus houses the School of Medicine, School of Pharmacy, and teaching hospital.</p><p>Image from official website</p><p>Tourists typically visit the University Park Campus, where throughout all four seasons there is vibrant life. The campus features classic red brick buildings, park-like green lawns, adorned with beautiful fountains and sculptures - a scenery as picturesque as poetry and painting. The luxurious museums, libraries, and concert halls open for public visitation also come as pleasant surprises. USC&#39;s famous attractions include the 1880 Widney Alumni House (the first building), Doheny Memorial Library (a filming location for numerous movies and TV shows), Mudd Hall with its tall towers and beautiful colonnades, and USC Village where you can eat and explore, among others.</p><p>Image from official website</p><p>The image is from the official website. You are free to explore the campus at your leisure. Before you go, don&#39;t forget to download the &quot;USC Self-Guided Tour Manual&quot; and &quot;Art and Architecture Guide&quot; from the official website, which contain detailed routes and attractions introductions, helping you complete a comprehensive campus walk without missing any important viewpoints. You can also book campus tours on the official website, where student guides will take you on a stroll around campus, sharing stories and details about USC.</p><p><br></p><p>▶ Practical Information</p><p>Address: Los Angeles CA 90007</p><p>Transportation: Accessible via Metro Line J (Silver Line) or Line E (Expo)</p><p>Official Website: https://visit.usc.edu/</p><p>Nearby Attractions: The USC Campus is adjacent to numerous museums and Exposition Park, which can be included in a day trip itinerary.</p><p><br></p><p>University of Southern California</p><p><br></p><p>UCLA (University of California Los Angeles): A Romantic Campus with Classical Literary Charm</p><p><br></p><p>With its historic red brick walls, stately architecture, campus gatherings on the green lawns, and athletic activities on shaded fields... the prestigious UCLA can help you reconnect with your youth, experiencing a truly liberating atmosphere.</p><p><br></p><p>Founded in 1919, UCLA ranks as the top public university in America and serves as a breeding ground for professionals in business/finance, high-tech industries, film production, and artistic fields.</p><p>Like USC, this area also serves as a filming location for many TV shows and movies. Pictures from the official website.</p><p><br></p><p>UCLA&#39;s campus is built on hills, beautiful like European palaces. The campus architecture features mainly Lombard style from the Renaissance period, constructed with red bricks imported from Italy. The lovely Royce Hall is the school&#39;s landmark building and also hosts major events and graduations; across from it stands Powell Library, home to over 8 million books and ranking as the third largest library in North America. Both of these historic buildings boast more than a century of history.</p><p><br></p><p>Beyond admiring the architecture, you can explore the botanical garden and sculpture garden here. You can even interact with the fountain that sprays water inward, take photos with the school mascot - the endearing Bruin Bear statue, purchase a hoodie emblazoned with UCLA at the souvenir shop, or try out UCLA&#39;s dining hall, where it is rumored that the food is exceptionally delicious.</p><p><br></p><p>UCLA offers campus tours with different themes available for reservation through their official website. Student guides will show you around the campus, visit historical buildings, and reveal lesser-known interesting stories. If you prefer self-guided exploration, you can download the &quot;UCLA Self-Guided Tour Manual&quot; from the official website to help plan your campus journey. You can also take a virtual tour on their website beforehand to preview interior spaces not normally open to the public.</p><p>▶ Practical Information</p><p>Address: Los Angeles CA 90095</p><p>Transportation to Arrive: Take BruinBus routes 1, 2, 8, 12, 17, 18, Line 6</p><p>Official Website: https://admission.ucla.edu/visit</p><p>Nearby Attractions: UCLA is on the way to Santa Monica Beach and can be arranged for a one-day visit.</p><p><br></p><p>University of California, Los Angeles</p><p>Founded in 1919, UCLA is one of America&#39;s oldest comprehensive universities and a prestigious institution renowned nationwide. It consistently ranks within the top 15 globally among universities worldwide and remains one of the most desired educational institutions for students from around the world. With no fences restricting access to its campus, this fully open environment allows countless visitors to freely explore this world-class university. Walking through the academies, students sit in crowds on the lawns chatting and laughing under abundant sunshine. The Royce Hall with its century-old history reflects the academy&#39;s remote heritage. The campus atmosphere filled with lush trees, songbirds, and fragrant flowers makes tourists feel refreshed and delighted. Visitors can also tour the libraries and various academic buildings here to fully experience the unique charm of a world-class institution.</p><p><br></p><p>Fashion Institute of Design &amp; Merchandising Los Angeles Campus (FIDM): A creative fashionable campus</p><p>What does it feel like to tour a campus like attending a fashion show? This stylish university in downtown Los Angeles will tell you!</p><p><br></p><p>The Fashion Institute of Design &amp; Merchandising (FIDM) was founded in Los Angeles in 1969 as the first fashion design college on the West Coast. This is where future designers are nurtured and the frontline for global fashion trends.</p><p><br></p><p>Walking around FIDM&#39;s campus, you can see many novel outfits. The beautiful main building features window displays designed by students full of creativity. You can even find vintage fashion magazines like Vogue from 1930 in the school library.</p><p><br></p><p>The image above is sourced online.</p><p>The FIDM Museum on campus is a place that excites film enthusiasts. Here not only are classic Hollywood costumes displayed, but there are also themed fashion exhibitions. For example, they select and display for free the best costumes from movies each year. Currently, FIDM is open to the public every Saturday and campus tours can be booked through their official website.</p><p><br></p><p>Practical Information:</p><p>Address: 919 S Grand Ave, Los Angeles CA 90015</p><p>Getting Here: You can take Metro Line D (Purple Line).</p><p>School Official Website: https://fidm.edu/</p><p>FIDM Museum Official Website: https://fidmmuseum.org/</p><p>FIDM Museum Hours: 10:00-17:00, closed on Sundays and Mondays</p><p>Nearby Attractions: FIDM is close to the Lakers home arena Crypto.com Arena and the Grammy Museum, which can be visited together.</p><p>Pepperdine University PPD: An Elegant Campus Embracing Mountains and Sea</p><p><br></p><p>How beautiful are the campuses considered most picturesque in America? Perhaps you can find your answer at this university located by the sea in Malibu. Image courtesy of the official website.</p><p><br></p><p>Pepperdine University (PPD) was founded in 1937 by wealthy businessman George Pepperdine. It is a premier private research university in California and also a religious institution, with both its law school and business school ranked among the top nationally. Its main campus in Malibu, nestled between mountains and the sea and as enchanting as a dream, was once named &quot;America&#39;s Most Beautiful Campus&quot; by Princeton Review. Image courtesy of the official website.</p><p><br></p><p>On campus, you can bask in California sunshine while enjoying uninterrupted ocean views from every angle. When pink sunsets arrive, the entire campus becomes like a living painting. The grounds feature many beautiful buildings: Mullin Town Plaza with tropical charm, the elegant and compact Stauffer Chapel, and the Smothers Theatre filled with artistic elements... What is most enviable are the red-roofed student dormitories, where residents can enjoy boundless ocean views from their windows at any time. Image courtesy of the official website.</p><p>PPC offers bookable campus tours, and you can also virtually explore this university through its official website.</p><p><br></p><p>▶ Practical Information</p><p>Address: 24255 E Pacific Coast Hwy, Malibu CA 90263</p><p>Getting There: First arrive at Santa Monica Beach, then take a taxi or Metro Line 534 to get here.</p><p>Official Website: https://seaver.pepperdine.edu/</p><p>Nearby Attractions: On the way to PPC, you&#39;ll pass by the Getty Villa Museum and Malibu Beach, which can be arranged as a one-day tour.</p>
+        
+
+        <a class="backLink" href="list-1.html">← Back to Los Angeles</a>
+      </article>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <title>Is there nothing fun to do in Los Angeles besides Universal Studios? That might just mean you haven't discovered these yet!</title>
+    <style>
+      :root {
+        --paper: #f5f1eb;
+        --ink: #163d36;
+        --body: #3f3a34;
+        --muted: #8a8379;
+        --line: #ddd5ca;
+        --accent: #d9782f;
+        --white: #fffaf4;
+        --shadow: 0 22px 70px rgba(28, 25, 20, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        line-height: 1.72;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .hero {
+        min-height: clamp(330px, 48vw, 560px);
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        padding: clamp(28px, 7vw, 70px) clamp(24px, 8vw, 76px);
+        background: #28463f;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.12)),
+          url("");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .heroInner {
+        position: relative;
+        width: min(900px, 100%);
+        color: #ffffff;
+      }
+
+      .heroLocation {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 24px;
+        color: rgba(255, 255, 255, 0.78);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .heroLocation svg {
+        width: 17px;
+        height: 17px;
+        color: #f0a45f;
+      }
+
+      h1 {
+        max-width: 880px;
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(30px, 4.8vw, 54px);
+        font-weight: 900;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .brief {
+        width: min(760px, 100%);
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 18px;
+        color: #5a5148;
+        font-size: clamp(17px, 1.9vw, 20px);
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.58;
+      }
+
+      .articleWrap {
+        width: min(900px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: clamp(42px, 6vw, 68px) 0 72px;
+      }
+
+      .content {
+        width: min(760px, 100%);
+        color: var(--body);
+        font-size: clamp(16px, 1.8vw, 18px);
+        line-height: 1.5;
+      }
+
+      .content p {
+        margin: 0 0 12px;
+      }
+
+      .content h2,
+      .content h3,
+      .content h4 {
+        margin: 46px 0 18px;
+        color: var(--ink);
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+
+      .content h2 {
+        font-size: clamp(28px, 4vw, 38px);
+      }
+
+      .content h3 {
+        font-size: clamp(23px, 3vw, 30px);
+      }
+
+      .content ul,
+      .content ol {
+        margin: 0 0 30px;
+        padding-left: 28px;
+      }
+
+      .content li {
+        margin: 8px 0;
+      }
+
+      .content blockquote {
+        margin: 34px 0;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 20px;
+        color: #5a5148;
+        font-style: italic;
+      }
+
+      .content img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 42px 0 12px;
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+      }
+
+      .content figure {
+        margin: 42px 0;
+      }
+
+      .content figure img {
+        margin: 0 0 12px;
+      }
+
+      .content figcaption {
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .backLink {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 46px;
+        border-top: 1px solid var(--line);
+        padding-top: 28px;
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.18em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .backLink:hover {
+        color: var(--accent);
+      }
+
+      @media (max-width: 720px) {
+        .hero {
+          min-height: 420px;
+          padding: 30px 24px;
+        }
+
+        .articleWrap {
+          width: min(100% - 28px, 900px);
+          padding-bottom: 48px;
+        }
+
+        .content {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="heroInner">
+        <p class="heroLocation">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+            />
+          </svg>
+          <span>Los Angeles</span>
+        </p>
+        <h1>Is there nothing fun to do in Los Angeles besides Universal Studios? That might just mean you haven't discovered these yet!</h1>
+      </div>
+    </header>
+
+    <main class="articleWrap">
+      
+
+      <article class="content">
+        
+          <p>When you think of Los Angeles, Hollywood, the Walk of Fame, Disney, or Universal Studios likely come to mind - these are naturally the top choices for tourists. But Los Angeles is far more than this. If you have additional time, I recommend staying longer here to experience authentic California culture and a more artistic &quot;City of Angels&quot;! You may not realize that these following landmarks truly best represent Los Angeles!</p><p><br></p><p>The Birthplace of Instagram Photos - Museums</p><p>Few people know that Los Angeles is actually a &quot;city of museums,&quot; being the city worldwide with the highest number of museums and galleries per capita. From natural history to cultural landscape, from classical art to modernism, every museum in Los Angeles has its own unique character. Many museums have also become favorite photo spots for tourists due to their distinctive architectural beauty~</p><p><br></p><p>Los Angeles County Museum of Art</p><p>Collection: Civilizations and arts from major continents around the world</p><p>Admission fees: Adults $25, students and seniors $21, free for minors</p><p>Visit duration: Approximately 4 hours</p><p>Most notable feature: &quot;City Lights&quot; lamp post sculptures</p><p>Address: 5905 Wilshire Blvd, Los Angeles, CA 90036</p><p>The Los Angeles County Museum of Art is also one of Los Angeles&#39; top tourist destinations, especially the &quot;City Lights&quot; column sculpture installation at its entrance. Founded in 1961, it claims to be America&#39;s largest collecting institution for contemporary art since World War II. It has always been dedicated to acquiring artworks spanning various fields including history and geography, showcasing Los Angeles&#39; unique multicultural character. As the largest art museum in western United States, it houses over 110,000 artistic treasures from ancient Egyptian times, European masterpieces, excellent Asian art collections, works originating from North and South America, Islamic art, and marginalized modern artworks—all with high aesthetic value.</p><p><br></p><p>Los Angeles County Museum of Art</p><p>The Los Angeles County Museum of Art complex includes five buildings, three outdoor sculptures, an art library, art resource center, large lecture hall and theater. Home to over 10,000 works of art, it is the largest &quot;encyclopedic&quot; public museum on America&#39;s West Coast. The interior features a column-free exhibition space that is spacious and open; combined with natural sunlight, it creates an ideal display environment for contemporary art.</p><p><br></p><p>The Broad Museum</p><p>Collection Focus: Contemporary Art</p><p>Free Admission: Free (requires advance reservation, or can join the queue on-site)</p><p>Visiting Duration: About 2-3 hours</p><p>Top Attraction: Yayoi Kusama&#39;s works</p><p>Address: 221 S Grand Ave, Los Angeles, CA 90012</p><p>The Broad Museum located on Grand Avenue in downtown Los Angeles officially opened on September 20, 2015 and became extremely popular. Inside the museum are not only outstanding contemporary artworks from around the world, but also &quot;Infinity Mirrored Room—A Billion Miles Away&quot; (Infinity Mirrored Room) by Yayoi Kusama that made the museum famous on social media. This mirrored room is decorated with LED colored lights shining like a vast starry river, making visitors feel as if they are in the Milky Way, leaving them deeply impressed. The Broad Museum building is based on the concept of &quot;Masks and Domes&quot; with unlimited creativity, featuring two exhibition floors where numerous exquisite artworks are carefully collected, very worth stopping to appreciate.</p><p><br></p><p>Broad Museum</p><p>The Getty Center</p><p>Collection Areas: From Ancient Greece to early 20th century European art</p><p>Free Admission: Yes</p><p>Visit Duration: About 4-6 hours</p><p>Main Highlights: Garden artistry, Van Gogh&#39;s masterpiece &quot;Irises&quot;</p><p>Address: 1200 Getty Center Dr, Los Angeles, CA 90049</p><p><br></p><p>The Getty Center is an important landmark cultural site in Los Angeles and also one of the most comprehensive museums in California and even worldwide that collectors highly value, a destination art lovers dream to visit.</p><p>Here is a large collection of European paintings, sculptures, decorative arts, and photography works, including Vincent van Gogh&#39;s masterpiece &quot;Irises&quot; and five Rembrandt paintings. Beyond that, the Getty Center building itself is also a work of art. Famous architect Richard Meier used square and circular structural elements to spread the Getty Center across two ridges. Visitors need to take a small train up the mountain while enjoying beautiful views of the entire valley. Stepping out of the museum leads you to the colorful Getty Central Garden, which enjoys fame not inferior to the artworks inside. Tree-lined paths, gentle streams flow along the pathways and merge into ponds; at the center of each pond lies an azalea maze, with artistic atmosphere everywhere.</p><p><br></p><p>Getty Center</p><p>- A cluster of unique buildings standing on a cliff face, representing one of Los Angeles&#39; most important and wealthiest art institutions in the world.</p><p>- Composed of six buildings, large-scale gardens, and open fields; it is one of the best locations for panoramic views of Los Angeles.</p><p>- Houses original manuscripts and old photographs from American artists, making it one of the largest collection institutions of similar artworks in America.</p><p>- Collections include Roman and Greek marble sculpture antiques, illuminated manuscripts, European paintings, drawings, sculptures, and more.</p><p><br></p><p>Huntington Library, Art Museum, and Botanical Gardens</p><p>Collection Areas: Western art from the Renaissance to the 20th century</p><p>Free admission: Adults $25, under 18 $13; first Thursday of each month free (advance reservation required)</p><p>Recommended visit duration: 6 hours</p><p>Main attraction: Garden-style museum</p><p>Address: 1151 Oxford Rd, San Marino, CA 91108</p><p>The Huntington encompasses three major components—The Huntington Library, Art Collections, and Botanical Gardens—a combination unique in America and perhaps even worldwide. Established in 1919, this museum opened to the public in 1928 according to Henry E. Huntingtons will after his death as a collector. Combining libraries, art collections, and horticulture into one entity, it is hailed as the world&#39;s most memorable garden-style museumperfect for slowing down and savoring each moment. In recent years, this place has made another grand acquisition—a Chinese Suzhou garden that was &quot;collected&quot; here; every stone and tile was transported from Jiangnan in southern China, making visitors feel like they had traveled home in an instant.</p><p><br></p><p>The Huntington Library, Art Collections, and Botanical Gardens</p><p>The Huntington Library (in English: The Huntington Library, Art Collections and Botanical Gardens, or simply &quot;The Huntington&quot;) is an educational research institution founded by Henry E. Huntington, situated in San Marino, California. Beyond its library functions, the institution also displays art collections, primarily British portrait paintings and 18th-century French furniture.</p><p><br></p><p>This library with its books, art, and horticulture has earned the title of the world&#39;s most memorable garden-style museum—offering viewing experiences that bring great joy to both body and mind. In recent years, this place has undertaken another grand project—&quot;collecting&quot; a Chinese Suzhou garden.</p><p>The Suzhou-style garden within the library is called &quot;Liu Fang Yuan.&quot; Every stone and tile in the garden was transported from Jiangnan, China, and crafted by artisans from Suzhou. Mr. Huntington personally had a great fondness for Eastern gardens during his lifetime, and many of the plants in the garden originate from China.</p><p><br></p><p>The Last Bookstore</p><p>Collection: New and old books, vintage vinyl records, comics, etc.</p><p>Free entry: Yes</p><p>Visit duration: About 1-2 hours</p><p>Most distinctive feature: One of the most beautiful independent bookstores globally</p><p>Address: 453 S Spring St, Los Angeles, CA 90013</p><p><br></p><p>This is one of North America&#39;s top ten independent bookstores and among the world&#39;s most beautiful bookstores. Located in downtown Los Angeles, it is known as &quot;Los Angeles&#39; Best Bookstore.&quot; The interior decoration has a vintage charm, with retro-style bookshelves filled with old atmosphere, adorned with starry pendant lights that create a magical academy feel. Beyond this, the store features artistic displays and photo-worthy book caves and book windows, making it a paradise for book lovers and an Instagram hotspot for young culture enthusiasts. Here you can not only buy and sell books but also choose from vintage vinyl records and comics, making it a well-deserved cultural gathering place.</p><p><br></p><p>Overlooking Los Angeles - Viewing Platforms</p><p>Griffith Observatory</p><p>Free admission: Yes</p><p>Visit duration: About 1-3 hours</p><p>Main attraction: Panoramic view of Los Angeles</p><p>Address: 2800 E Observatory Rd, Los Angeles, CA 90027</p><p>Astronomy enthusiasts will certainly not miss the Griffith Observatory. It is one of Los Angeles&#39; iconic landmarks, situated on a mountain northwest of the city center, offering views that encompass all of Los Angeles. Beyond this, it is also one of the world&#39;s renowned observatories and a filming location for countless Hollywood movies. Here, you can enter the interior to learn astronomical knowledge about planets and the universe, watch celestial motion demonstrations in the dome theater, or walk up to the open-air viewing platform to overlook downtown Los Angeles and view the entire panorama of Hollywood.</p><p>Griffith Observatory</p><p>·Located on a mountain peak northwest of Los Angeles, offering views that encompass all of Los Angeles.</p><p>·Exhibits astronomical knowledge about planets and the universe. The dome theater at the top is built to mimic the sky, allowing 360° appreciation of celestial evolution films. Bare-eye 3D technology brings cosmic wonders close at hand.</p><p>·The open-air platform offers a panoramic view of Los Angeles, with neatly arranged streets, orderly city buildings, and downtown skyscrapers all clearly visible.</p><p>· After night falls, the stargazing platform opens free of charge, allowing you to see the stars in the sky and the outline of the moon&#39;s surface.</p><p><br></p><p>California&#39;s Highest Observation Deck - OUE Skyspace LA</p><p>Is it free: Ticket required</p><p>Visit duration: About 2 hours</p><p>Main highlight: Sky Glass Slide</p><p>Address: 633 W 5th St #840, Los Angeles, CA 90071</p><p><br></p><p>OUE Skyspace is California&#39;s tallest open-air observation deck, located within the Bank of America Tower in downtown Los Angeles. Rising more than 1,000 feet above ground level, it offers a 360-degree unobstructed panoramic view of the entire Angel City. Here, you can find a cozy window-side sofa indoors to quietly enjoy the sunset, or step outside for an immersive encounter with the surrounding skyscrapers. The outdoor observation area is surrounded by floor-to-ceiling transparent glass walls, providing exceptionally wide viewing angles. It features viral attractions including a 70-story suspended transparent sky slide and angel wings photo spots, making it an essential new landmark not to miss when visiting Los Angeles.</p><p><br></p><p>Fly High, Dive Deep - Local Featured Activities</p><p>Six Flags Magic Mountain</p><p>Is it free: Ticket required</p><p>Visit duration: One day</p><p>Main feature: World-class roller coasters</p><p>Address: 26101 Magic Mountain Pkwy, Valencia, CA 91355</p><p><br></p><p>Los Angeles offers not only charming beaches and art exhibitions, but also the most thrilling Six Flags Magic Mountain. Located in Valencia within northern Los Angeles, established in 1971, it ranks first globally for having the most roller coaster theme park. To date, nearly 20 of its coasters have won world awards, including Green Lantern—the world&#39;s first 4D coaster, Goliath—America&#39;s longest coaster at over 5 kilometers, Drop Tower—the second highest drop tower globally—and Big Apple Loop—America&#39;s longest 360° loop. It is truly a paradise for adventure enthusiasts!</p><p><br></p><p>Six Flags Magic Mountain</p><p>For roller coaster enthusiasts, Six Flags Magic Mountain located in northern Los Angeles is nothing short of a holy site. Here, nearly 20 coasters have claimed world awards as the park with the most roller coasters. Strolling through the park, screams echo everywhere, and the squeaking sounds of wheels rubbing against tracks fill the air. Each attraction challenges your adrenaline and tests human limits. The world&#39;s first 4D coaster Green Lantern (GREEN LANTERN: First Flight), America&#39;s longest coaster at nearly 5 kilometers Goliath, Drop Tower—the second highest drop tower globally reaching 126 meters—and various screaming machines deliver unprecedented weightlessness experiences to visitors, making you feel as if you&#39;re about to escape Earth&#39;s gravity. Even after the ride ends, the feeling lingers long without settling.</p><p>## Whale Watching and Dolphin Watching Cruise</p><p><br></p><p>**Is it free:** Boat tickets required</p><p>**Duration:** Approximately 2-3 hours</p><p>**Main Feature:** Available year-round</p><p><br></p><p>Departing from the port at the southern tip of Los Angeles, you can experience a unique whale watching and dolphin watching tour. The climate is comfortable throughout the year, allowing for whale sightings all seasons. Humpback whales are most commonly seen in winter and spring, while blue whales are frequently spotted during summer and autumn. On lucky days, you may even witness pods of whales. Beyond whales, this area is excellent for observing kingfishers, otters, sea lions, and dolphins. The captain and crew possess extensive marine biology knowledge; their professional commentary will ensure an unforgettable experience.</p><p><br></p><p>## NBA Los Angeles Lakers/Claips Games</p><p><br></p><p>**Is it free:** Game tickets required</p><p>**Duration:** Approximately 2-3 hours</p><p>**Main Feature:** Experience the game atmosphere firsthand</p><p><br></p><p>For NBA fans, watching a favorite team&#39;s game in person is a dream come true. When visiting Los Angeles, this opportunity should not be missed! The famous Staples Center, home of both the Lakers and Clippers, is located in downtown Los Angeles.</p><p>This is a multi-purpose sports arena, one of the major sports facilities in the Los Angeles area. It hosts over 250 events annually and attracts nearly 4 million visitors each year. It is the only NBA arena shared by two teams, and also the only venue in North America to serve as home court for two NBA teams, one NHL team, and one WNBA team.</p><p><br></p><p>Hollywood Warner Bros Studio VIP Tour</p><p>Free or Paid: Ticket Required</p><p>Visit Duration: Approximately 2-3 hours</p><p>Main Highlight: Experience TV show filming locations</p><p><br></p><p>On this journey, you will have the opportunity to explore Hollywood&#39;s big film production factory, and personally visit numerous filming sites of American dramas and movies such as The Big Bang Theory, Friends, Batman, Harry Potter, and 2 Broke Girls. Through explanations and immersive experiences, understand how the American blockbusters we love are created from nothing. Get up close to the original crews and studios at the beginning of Hollywood&#39;s magic. If you&#39;re lucky, you might even encounter actors who are currently filming! It is unpredictable which face from your TV screens you will meet around the next corner.</p><p><br></p><p>Multi-Day Tour in the City - Take Away the Detailed Itinerary</p><p>Now that we have understood each of the Los Angeles landmark locations and activities mentioned above, how should one plan an itinerary reasonably?</p><p>Below is our rough categorization of attractions by location and theme. Pack your bags and go at a moment&#39;s notice!</p><p><br></p><p>Downtown One-Day Trip</p><p>Morning: The Broad (arrive early to queue)</p><p>Afternoon: The Last Bookstore - OUE Skyspace, California&#39;s highest observation deck</p><p>Evening: After dinner, schedule an NBA Los Angeles Lakers / Clippers game</p><p><br></p><p>Nature Experience One-Day Trip</p><p>Morning: Whale and dolphin watching cruise from the sea</p><p>Afternoon: The Getty Center</p><p>Evening: Sunset at Santa Monica + Pacific Park</p><p><br></p><p>Hollywood Experience One-Day Trip</p><p>Morning: Warner Bros. Studio VIP Tour</p><p>Afternoon: Walk of Fame (visit Madame Tussauds Wax Museum, Believe It Or Not! Museum, etc.)</p><p>Evening: Night views at Griffith Observatory</p><p>One-Day Sightseeing and Photography Tour</p><p>Morning: The Huntington Library, Art Gallery, and Botanical Garden</p><p>Midday: Los Angeles County Museum of Art (LACMA)</p><p>Evening: Explore Beverly Hills</p><p><br></p><p>Multi-Day Tours Around the Area - Experience More California Charm</p><p>Go Los Angeles Card</p><p><br></p><p>Much like New York&#39;s multi-attraction passes, Los Angeles offers a similar card that is perfect for tourists doing deep exploration within one city. The Go Los Angeles Card covers 26 attractions, including popular destinations such as Universal Studios tickets, Santa Monica Pier and Pacific Park admission, Madame Tussauds Wax Museum, whale watching tours, and Six Flags Magic Mountain skip-the-line tickets. It saves money and effort, ensuring you have an unforgettable Los Angeles experience.</p><p><br></p><p>Classic West Coast Three-Day Tour: Yosemite National Park, San Francisco, Highway 1</p><p><br></p><p>This classic two-city western US tour departs from Los Angeles without backtracking. After visiting iconic attractions along Highway 1, the journey continues to San Francisco.</p><p>Visiting UC Berkeley, Golden Gate Bridge, Fisherman&#39;s Wharf, and Nine Curves before returning via Yosemite National Park covers all iconic landmarks of America&#39;s West Coast, making it a top choice for first-time visitors to the United States. 4-Day National Parks Tour - Yosemite, Grand Canyon, Las Vegas Departing from Los Angeles, you can also choose to visit Las Vegas, stopping along the way at world-famous Yosemite and Grand Canyon National Parks. This is another classic American West Coast loop route. First, enter Yosemite National Park, renowned as a paradise on earth, immersing yourself in pristine nature; then arrive in Las Vegas with its dazzling neon lights that dazzle the eyes; finally head to South Rim of Grand Canyon, vast and expansive, marveling at nature&#39;s breathtaking craftsmanship, bringing your journey to a perfect conclusion. For travelers with limited time, you can also choose a small plane sightseeing tour departing from Las Vegas for same-day round trip - saving both time and effort. 5-Day Twin City Tour - Los Angeles, San Francisco, San Diego, Yosemite Departing from San Francisco, the world&#39;s romantic cultural capital, visit iconic landmarks such as Golden Gate Bridge, Fisherman&#39;s Wharf, prestigious universities, then travel along Highway One to the picturesque Monterey Peninsula. Explore Bixby Creek Bridge, Big Sur, or majestic Yosemite National Park.</p><p>Finally arriving at Los Angeles city with options including city sightseeing, Hollywood Universal Studios, or San Diego tour. Multiple choices with high flexibility~</p><p><br></p><p>Conclusion</p><p>Los Angeles - a city where once you arrive, you don&#39;t want to leave. With hundreds of large and small museums throughout the urban area and surrounding regions, countless unique California experiences and scenic views waiting for you. There are too many treasures here, so many places worth exploring that await your discovery!</p>
+        
+
+        <a class="backLink" href="list-1.html">← Back to Los Angeles</a>
+      </article>
+    </main>
+  </body>
+</html>

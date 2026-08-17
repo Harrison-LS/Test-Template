@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <title>Shopping for Vintage Items in America: The Los Angeles Rose Bowl Flea Market Is Incredibly Famous!</title>
+    <style>
+      :root {
+        --paper: #f5f1eb;
+        --ink: #163d36;
+        --body: #3f3a34;
+        --muted: #8a8379;
+        --line: #ddd5ca;
+        --accent: #d9782f;
+        --white: #fffaf4;
+        --shadow: 0 22px 70px rgba(28, 25, 20, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        line-height: 1.72;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .hero {
+        min-height: clamp(330px, 48vw, 560px);
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        padding: clamp(28px, 7vw, 70px) clamp(24px, 8vw, 76px);
+        background: #28463f;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.12)),
+          url("");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .heroInner {
+        position: relative;
+        width: min(900px, 100%);
+        color: #ffffff;
+      }
+
+      .heroLocation {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 24px;
+        color: rgba(255, 255, 255, 0.78);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .heroLocation svg {
+        width: 17px;
+        height: 17px;
+        color: #f0a45f;
+      }
+
+      h1 {
+        max-width: 880px;
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(30px, 4.8vw, 54px);
+        font-weight: 900;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .brief {
+        width: min(760px, 100%);
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 18px;
+        color: #5a5148;
+        font-size: clamp(17px, 1.9vw, 20px);
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.58;
+      }
+
+      .articleWrap {
+        width: min(900px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: clamp(42px, 6vw, 68px) 0 72px;
+      }
+
+      .content {
+        width: min(760px, 100%);
+        color: var(--body);
+        font-size: clamp(16px, 1.8vw, 18px);
+        line-height: 1.5;
+      }
+
+      .content p {
+        margin: 0 0 12px;
+      }
+
+      .content h2,
+      .content h3,
+      .content h4 {
+        margin: 46px 0 18px;
+        color: var(--ink);
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+
+      .content h2 {
+        font-size: clamp(28px, 4vw, 38px);
+      }
+
+      .content h3 {
+        font-size: clamp(23px, 3vw, 30px);
+      }
+
+      .content ul,
+      .content ol {
+        margin: 0 0 30px;
+        padding-left: 28px;
+      }
+
+      .content li {
+        margin: 8px 0;
+      }
+
+      .content blockquote {
+        margin: 34px 0;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 20px;
+        color: #5a5148;
+        font-style: italic;
+      }
+
+      .content img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 42px 0 12px;
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+      }
+
+      .content figure {
+        margin: 42px 0;
+      }
+
+      .content figure img {
+        margin: 0 0 12px;
+      }
+
+      .content figcaption {
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .backLink {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 46px;
+        border-top: 1px solid var(--line);
+        padding-top: 28px;
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.18em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .backLink:hover {
+        color: var(--accent);
+      }
+
+      @media (max-width: 720px) {
+        .hero {
+          min-height: 420px;
+          padding: 30px 24px;
+        }
+
+        .articleWrap {
+          width: min(100% - 28px, 900px);
+          padding-bottom: 48px;
+        }
+
+        .content {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="heroInner">
+        <p class="heroLocation">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+            />
+          </svg>
+          <span>Los Angeles</span>
+        </p>
+        <h1>Shopping for Vintage Items in America: The Los Angeles Rose Bowl Flea Market Is Incredibly Famous!</h1>
+      </div>
+    </header>
+
+    <main class="articleWrap">
+      
+
+      <article class="content">
+        
+          <p>Beijing has Panjiayuan, a famous antique market. While in America, I also wanted to visit such places, so I found the most famous market in the Los Angeles area: &quot;The Rose Bowl.&quot;</p><p><br></p><p>The Rose Bowl Used Goods Market</p><p><br></p><p>The Rose Bowl is incredibly famous. It was the main stadium of the 1984 Los Angeles Olympics, with a capacity of 94,000 people. It was also the site of the 1996 World Cup final, or more poignantly, the place where Baggio gazed at the blue sky with melancholy eyes after missing his penalty kick (kicking it high). The Rose Bowl truly has countless stories attached to it. In fact, Los Angeles itself only began its rapid development after the 1984 Olympics.</p><p><br></p><p>To get back on track, this stadium transforms into an antique market every second Sunday of the month.</p><p><br></p><p>America was founded only about 240 years ago. Even though there is history before its founding, you might as well not think about finding genuine artifacts at American flea markets.</p><p><br></p><p>Do Chinese items exist here? Yes, and in no small numbers. To speak plainly, they&#39;re all fake. While we can&#39;t rule out that someone&#39;s grandfather&#39;s father may have been conscripted by the Eight Nation Alliance during their invasion, you still won&#39;t encounter real items at such markets. Perhaps on some day, at some location, when a family holds a yard sale, you might stumble upon something authentic.</p><p><br></p><p>First and foremost, this place is worth visiting for collecting early technology products, such as antique cameras, vintage watches, and so on.</p><p>Even Zippo lighters have become a distinctly American characteristic. You can see steam irons where you pour boiling water inside them, wall-mounted telephones with separate handsets like those in old movies, all sorts of advertisements from wartime films, and various firearms.</p><p><br></p><p>Since there&#39;s over 200 years of history [of these items], we can&#39;t dig up Terracotta Warriors, so I scour for what I like—things China doesn&#39;t have much of, full of stories.</p><p><br></p><p>I love playing tennis, so collecting antique wooden rackets became a project. Tennis history is only about 100+ years; modern tennis was marked by wooden rackets. Wooden rackets had limited strength and complex craftsmanship, so racket faces were small, but hand-crafting and baking the wood strips was truly technical skill.</p><p><br></p><p>Also, many of those old wooden rackets were named after tennis players—equivalent to today&#39;s endorsements.</p><p><br></p><p>Luckily &quot;lucky&quot; is the English word for lucky—I happened upon a Don Budge Wilson racket. This fellow was quite impressive: the first man to achieve all four major championships in 1938. His name translates as &quot;Donald Budge.&quot; That&#39;s him.</p><p><br></p><p>The rackets I found? Here they are.</p><p><br></p><p>Before I knew it, there was a flash—and a Jack Kramer Wilson wooden racket appeared before my eyes. This is the racket that received praise from Federer.</p><p><br></p><p>This fellow played tennis incredibly well; the key point is he was one of the founders of the ATP.</p><p>US male tennis players haven&#39;t produced another top-tier talent since Agassi; the two people mentioned above are both legends in world tennis who made enormous contributions to racket development.</p><p><br></p><p>American treasure hunting - regardless of value, what matters is whether you like it. And things China doesn&#39;t have become your target. I remember seeing antique wooden rackets outside the China Open stadium, at least 3000 each. The two I picked up were only a few dollars; hanging them on the wall makes for great decoration.</p><p><br></p><p>I enjoy coffee, red wine, and tennis - after discussing tennis, let&#39;s talk about coffee. Coffee is a foreign import to us; America obviously got it much earlier than we did, brought by European Puritans to America. Many vintage pieces of antique copper and iron coffee equipment appear at flea markets.</p><p><br></p><p>These old grinders are easy to find, though they feel not very useful. I found a 1930s-40s café advertisement for my friend in the coffee industry; the text was interesting so I bought it back. Now he hangs it on the wall of his Beijing café and is extremely satisfied - still following that old principle: &quot;stuff we don&#39;t have here.&quot;</p><p><br></p><p>After discussing coffee, let me briefly mention wine. Los Angeles is in Southern California, while Napa Valley producing good wines is in Northern California, so you can disregard cultural history and stories for such markets. I simply follow the principle of buying what I like.</p><p><br></p><p>A brand new oak barrel costs 1000 dollars, but it becomes useless after a few years when there&#39;s no more oak flavor left.</p><p>As it turned out, someone acquired some items for less than $100 and then developed related products from them. On top is a wine rack made of oak slices, below is a wine cabinet crafted from half a barrel - truly creative. The wine cabinet was custom-ordered for $400, delivered within 7 days, with the wine rack included free. It&#39;s still good value for money. Maybe next year I&#39;ll go to Napa to browse around for some old items.</p><p><br></p><p>In conclusion, going to America to shop means finding things you like that can&#39;t be found in China, especially items you can carry back home. As for the wine cabinet, it has to stay in America.</p>
+        
+
+        <a class="backLink" href="list-1.html">← Back to Los Angeles</a>
+      </article>
+    </main>
+  </body>
+</html>

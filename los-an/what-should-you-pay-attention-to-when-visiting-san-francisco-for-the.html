@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Note the distinction: San Francisco VS San Francisco Bay Area" />
+    <title>What should you pay attention to when visiting San Francisco for the first time?</title>
+    <style>
+      :root {
+        --paper: #f5f1eb;
+        --ink: #163d36;
+        --body: #3f3a34;
+        --muted: #8a8379;
+        --line: #ddd5ca;
+        --accent: #d9782f;
+        --white: #fffaf4;
+        --shadow: 0 22px 70px rgba(28, 25, 20, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        line-height: 1.72;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .hero {
+        min-height: clamp(330px, 48vw, 560px);
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        padding: clamp(28px, 7vw, 70px) clamp(24px, 8vw, 76px);
+        background: #28463f;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.12)),
+          url("https://guide.mafengwo.net/img/52/90/a95905bf07bf85aa739560b480a2f840.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F90");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .heroInner {
+        position: relative;
+        width: min(900px, 100%);
+        color: #ffffff;
+      }
+
+      .heroLocation {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 24px;
+        color: rgba(255, 255, 255, 0.78);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .heroLocation svg {
+        width: 17px;
+        height: 17px;
+        color: #f0a45f;
+      }
+
+      h1 {
+        max-width: 880px;
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(30px, 4.8vw, 54px);
+        font-weight: 900;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .brief {
+        width: min(760px, 100%);
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 18px;
+        color: #5a5148;
+        font-size: clamp(17px, 1.9vw, 20px);
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.58;
+      }
+
+      .articleWrap {
+        width: min(900px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: clamp(42px, 6vw, 68px) 0 72px;
+      }
+
+      .content {
+        width: min(760px, 100%);
+        color: var(--body);
+        font-size: clamp(16px, 1.8vw, 18px);
+        line-height: 1.5;
+      }
+
+      .content p {
+        margin: 0 0 0.5em;
+      }
+
+      .content h2,
+      .content h3,
+      .content h4 {
+        margin: 46px 0 18px;
+        color: var(--ink);
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+
+      .content h2 {
+        font-size: clamp(28px, 4vw, 38px);
+      }
+
+      .content h3 {
+        font-size: clamp(23px, 3vw, 30px);
+      }
+
+      .content ul,
+      .content ol {
+        margin: 0 0 30px;
+        padding-left: 28px;
+      }
+
+      .content li {
+        margin: 8px 0;
+      }
+
+      .content blockquote {
+        margin: 34px 0;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 20px;
+        color: #5a5148;
+        font-style: italic;
+      }
+
+      .content img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 42px 0 12px;
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+      }
+
+      .content figure {
+        margin: 42px 0;
+      }
+
+      .content figure img {
+        margin: 0 0 12px;
+      }
+
+      .content figcaption {
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .backLink {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 46px;
+        border-top: 1px solid var(--line);
+        padding-top: 28px;
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.18em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .backLink:hover {
+        color: var(--accent);
+      }
+
+      @media (max-width: 720px) {
+        .hero {
+          min-height: 420px;
+          padding: 30px 24px;
+        }
+
+        .articleWrap {
+          width: min(100% - 28px, 900px);
+          padding-bottom: 48px;
+        }
+
+        .content {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="heroInner">
+        <p class="heroLocation">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+            />
+          </svg>
+          <span>Los Angeles</span>
+        </p>
+        <h1>What should you pay attention to when visiting San Francisco for the first time?</h1>
+      </div>
+    </header>
+
+    <main class="articleWrap">
+      
+      <p class="brief">Note the distinction: San Francisco VS San Francisco Bay Area</p>
+      
+
+      <article class="content">
+        
+          <p>San Francisco (also known as "San Fran") is hailed as "the city everyone loves." Like a painter's palette in an artist's hands, she creates America's most colorful and creative city through lazy touches and unplanned strokes.</p><p><br></p><p>                                                     by AQian</p><p><br></p><p>                                                     by AQian</p><p><br></p><p>                                                     by AQian</p><p><br></p><p>                    Here the climate is spring-like all year round, featuring many world-famous landmarks: the orange-red Golden Gate Bridge, the azure Fisherman's Wharf, the pure white PanAm Pyramid Building, and the four-season colorful Lombard Street; the brilliantly lit Bay Bridge, Victorian-style buildings lining every street, historic cable cars... each one will make your camera shutter snap uncontrollably.</p><p><br></p><p>                                                     by AQian</p><p><br></p><p>                                                     by AQian</p><p><br></p><p>                                        Note: San Francisco VS San Francisco Bay Area</p><p><br></p><p>                    Every time we mention San Francisco, terms like San Fran, SF Bay Area, Bay Area, and Silicon Valley inevitably come up. Let's first clarify these regional concepts.</p>
+</p><p><br></p><p>First of all, when we commonly refer to San Francisco (San Francisco), it is a city located in northern California along America's West Coast. It is California's only consolidated city-county administrative division. Its phonetic transliteration includes "Saint Francisco" or "Sanpan." This means that both San Francisco and Sanpan refer to the same location.</p><p><br></p><p>                                                     by Zoe Mengmeng</p><p><br></p><p>                                                     by Zoe Mengmeng</p><p><br></p><p>                                                     by Zoe Mengmeng</p><p><br></p><p>The San Francisco Bay Area (San Francisco Bay Area), is usually abbreviated as the Bay Area, which can be understood as the greater San Francisco metropolitan area. The Bay Area mainly includes San Francisco and multiple surrounding counties. If divided by region, it can simply be categorized into five main parts: the City of San Francisco, Peninsula, South Bay, North Bay, and East Bay.</p>
+</p><p><br></p><p>And Silicon Valley, the high-tech hub that we all know well, is actually an alternative name for "Santa Clara Valley in California." It's not just a single city but composed of many cities, with its core being the South Bay area.</p><p><br></p><p>What to do in San Francisco</p><p><br></p><p>The downtown is divided into three parts</p><p><br></p><p>As a renowned tourist destination in Northern California, San Francisco's downtown can be simply categorized into three major areas:</p><p><br></p><p>Downtown area: Located at the heart of San Francisco, featuring the vibrant Union Square and the Financial District, known as "Wall Street of the American West Coast"</p><p><br></p><p>Fisherman's Wharf area: Northeastern part of downtown, a must-visit destination for every San Francisco traveler. From here you can also visit Alcatraz Island, once infamous as America's most notorious federal penitentiary</p><p><br></p><p>Other areas: Centered around the iconic Golden Gate Bridge, which represents this district. Travelers frequently arrive at these locations - the striking Golden Gate Bridge and Haight-Ashbury, birthplace of the hippie movement, are all must-visit spots</p><p><br></p><p>Places to explore nearby</p><p><br></p><p>If you appreciate fine wines, Napa Valley is an essential stop - as a premier wine region, it will absolutely satisfy any oenophile's palate in one visit;
+<p>If you enjoy seeing tall trees, choose one of these locations: Muir Woods National Monument, Redwood National and State Parks, Sequoia &amp; Kings Canyon National Parks, or Yosemite National Park. If you're fascinated by natural landscapes, how could you miss the magnificent Lake Tahoe and Angel Island?</p><p><br></p><p>Of course, if you're a true tech enthusiast, nearby Silicon Valley is also worth visiting. Universities and tech companies represented by Stanford University and Googleplex are an essential part of any trip to San Francisco.</p><p><br></p><p>                                        Things to Know Before Traveling</p><p><br></p><p>                                        Tipping Culture</p><p><br></p><p>                    Many service industry workers in San Francisco are Asian and Latin American new immigrants. They work very hard, with tips typically around 15%～20% of the total bill.</p>
+<html><body><p>Generally, dinner tips are higher than lunch tips, and service industry requirements for tips are higher than those in restaurants.</p><p><br></p><p>In addition, when paying your bill, please note that a small number of restaurants may include tips in the total.</p><p><br></p><p>                                        How to Get There</p><p><br></p><p>                    There are three airports serving San Francisco and the Bay Area. Most travelers visiting San Francisco will use San Francisco International Airport (San Francisco International Airport, SFO). The other two airports are Oakland Airport in the East Bay and San Jose Airport in the South Bay. SFO has four terminals with a free 24-hour AirTrain connecting all terminals; you can take subway, airport shuttles, taxis, etc. to downtown.</p><p><br></p><p>                    Tips:</p><p>                    Transportation Options to Downtown:</p><p><br></p><p>1. Ride-sharing (Uber/Lyft): Around $40 during normal times, approximately $60-80 during peak hours</p><p><br></p><p>2. Taxi: $45-65 plus 15% tip; may encounter overcharging issues</p><p><br></p><p>3. Bart Subway: Level 3 at the International Terminal, about 30 minutes to downtown, tickets approximately $10;</p></body></html>
+<p>Served by stopping at Civic Center, Union Plaza, Powell St, Montgomery St/Embarcadero in downtown San Francisco, among which Powell St is closest to Union Square.</p><p><br></p><p>4. Share Van: After exiting the international terminal Level 3, look for Door to Door Van signs to find the pickup location. Each shuttle picks up 7-8 passengers at a time, with fares to downtown around $17 (excluding tips; tips are typically 10%, so it's recommended to have small bills ready).</p><p><br></p><p>                                        Local Transportation</p><p><br></p><p>                    The main transportation system in San Francisco city area is operated by Muni, with approximately 80 routes that almost cover the entire downtown area. It mainly includes light rail (Muni Metro & Light Rail), buses (Muni Bus), cable cars (Cable Car), and historic streetcars (Historic Streetcar). Some lines operate 24 hours a day, making San Francisco one of the few American West Coast cities where you can explore the entire downtown area relying solely on public transportation.</p><p><br></p><p>                    Payment methods: Pay upon boarding. Typically you can choose to pay with cash or Clipper Card (San Francisco Bay Area's universal public transit card, usable for riding BART, Muni, Caltrain, and Golden Gate Bridge toll area buses). Additionally, riders on the Muni system enjoy unlimited transfers within 90 minutes (excluding cable cars).</p>
+<p>If paying in cash for your fare, remember to request a Fare Receipt from the driver; you can show this receipt when transferring within 90 minutes.</p><p><br></p><p>                                        Light Rail Muni Metro &amp; Light Rail</p><p><br></p><p>                    The Muni Metro &amp; Light Rail system has 6 main routes: J, K, L, M, N, and T. Single fare is $2.75 (cash).</p><p><br></p><p>                                        Bus Muni Bus</p><p><br></p><p>                    Many routes are available; popular routes typically run every 10 minutes, while less frequent routes operate approximately every 20-30 minutes. Single fare is $2.75 (cash payment). You can use apps or websites like Google Maps, Next Bus, and San Francisco Public Transport to query bus routes.</p><p><br></p><p>                                        Cable Car</p><p><br></p><p>                    The historic cable cars are San Francisco's most popular transportation experience. They connect Fisherman's Wharf, Union Square, and Nob Hill. There are 3 main routes: Powell→Hyde (via Lombard Street), Powell→Mason (terminates at Fisherman's Wharf), and California Street line (via the Oakland Bay Bridge). The first two routes are more popular.</p>
+</p><p><br></p><p>                                        Vintage StreetCar Historic StreetCar</p><p><br></p><p>                    Vintage trains in the San Francisco area have been operating since 1962 with over 60 years of history, currently only F and E lines are available for public ridership. The streetcars have distinctive designs and varied colors. Most travelers choose the F line, mainly from Fisherman's Wharf to The Castro, passing through important attractions along the way like Ferry Building, City Hall, Union Bank Building etc.</p><p><br></p><p>                                                     by GreatPretender</p><p><br></p><p>                                                     by GreatPretender</p><p><br></p><p>                                        Uber &amp; Lyft</p><p><br></p><p>                    Hailing rides in San Francisco is relatively convenient and is a first choice for many time-pressed travelers. If choosing ride-sharing options like UberPOOL and Lyft Line can sometimes be even cheaper (Uber's ride-sharing is limited to urban areas only).</p>
+</p><p><br></p><p>                                        Self-driving</p><p><br></p><p>                    Going to San Francisco area, self-driving is the most convenient option. Major rental car companies include Hertz, Alamo, Avis, Enterprise, etc. You can book through their official websites or apps, or also book through platforms like Zipcar and Zuzuche, which usually have lower prices. Additionally, many people in North America recommend using Kyte platform for renting cars.</p><p><br></p><p>                                             by Baqi Dizibing</p><p><br></p><p>                    Required documents: You need to present a valid international driving license. If you have a Chinese driver's license, you should prepare an international driving license translation certification in advance. Additionally, you need to provide passport, credit card under the driver's name and related information.</p><p><br></p><p>Want to learn more about US self-driving info, please click 👇</p><p><br></p><p>                        US Car Rental Self-driving Q&amp;A</p><p><br></p><p>                                                                                                Where to rent cars?</p>
+</p><p>                                                                                                                                Can you return the car at a different location?</p><p><br></p><p>                        5270293</p><p><br></p><p>                    Strategies</p><p><br></p><p>                                        San Francisco film and TV scenes</p><p><br></p><p>                    Known as one of "America's ten most charming cities," San Francisco, besides its inclusivity from within outwards, also boasts rich culture, history, and natural landscapes. This has made it a favorite filming location for many directors. It is said that over 100 movies have left their mark with San Francisco's presence on screen, such as:</p><p><br></p><p>Golden Gate Bridge: "Rise of the Planet of the Apes," "Pacific Rim," "San Andreas"</p><p><br></p><p>Redwood National Park: "Planet of the Apes"</p><p><br></p><p>Palace of Fine Arts: "The Rock"</p><p><br></p><p>Alcatraz Island: "Escape from Alcatraz," "Birdman of Alcatraz," "X-Men: The Last Stand"</p><p><br></p><p>Chinatown: "Rumble in the Bronx" starring Jackie Chan</p><p><br></p><p>Pan American Pyramid: "The Pursuit of Happyness" starring Will Smith</p><p><br></p><p>Union Square: "Zodiac"</p><p><br></p><p>If you want to learn more about San Francisco in movie shots, please click👇</p><p><br></p><p>                        San Francisco tour guide: Find photo spots following film and TV scenes</p><p><br></p><p>                                                                                                Golden Gate Bridge | "San Andreas"</p><p>                                                                                                                                Redwood Park | "Rise of the Planet of the Apes"</p><p><br></p><p>                        1787189</p><p><br></p><p>                    Strategies</p>
+        
+
+        <a class="backLink" href="list-1.html">← Back to Los Angeles</a>
+      </article>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <title>Three Days in Los Angeles - Everything You Need Is Here!</title>
+    <style>
+      :root {
+        --paper: #f5f1eb;
+        --ink: #163d36;
+        --body: #3f3a34;
+        --muted: #8a8379;
+        --line: #ddd5ca;
+        --accent: #d9782f;
+        --white: #fffaf4;
+        --shadow: 0 22px 70px rgba(28, 25, 20, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        line-height: 1.72;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .hero {
+        min-height: clamp(330px, 48vw, 560px);
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        padding: clamp(28px, 7vw, 70px) clamp(24px, 8vw, 76px);
+        background: #28463f;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.12)),
+          url("");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .heroInner {
+        position: relative;
+        width: min(900px, 100%);
+        color: #ffffff;
+      }
+
+      .heroLocation {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 24px;
+        color: rgba(255, 255, 255, 0.78);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .heroLocation svg {
+        width: 17px;
+        height: 17px;
+        color: #f0a45f;
+      }
+
+      h1 {
+        max-width: 880px;
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(30px, 4.8vw, 54px);
+        font-weight: 900;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .brief {
+        width: min(760px, 100%);
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 18px;
+        color: #5a5148;
+        font-size: clamp(17px, 1.9vw, 20px);
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.58;
+      }
+
+      .articleWrap {
+        width: min(900px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: clamp(42px, 6vw, 68px) 0 72px;
+      }
+
+      .content {
+        width: min(760px, 100%);
+        color: var(--body);
+        font-size: clamp(16px, 1.8vw, 18px);
+        line-height: 1.5;
+      }
+
+      .content p {
+        margin: 0 0 12px;
+      }
+
+      .content h2,
+      .content h3,
+      .content h4 {
+        margin: 46px 0 18px;
+        color: var(--ink);
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+
+      .content h2 {
+        font-size: clamp(28px, 4vw, 38px);
+      }
+
+      .content h3 {
+        font-size: clamp(23px, 3vw, 30px);
+      }
+
+      .content ul,
+      .content ol {
+        margin: 0 0 30px;
+        padding-left: 28px;
+      }
+
+      .content li {
+        margin: 8px 0;
+      }
+
+      .content blockquote {
+        margin: 34px 0;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 20px;
+        color: #5a5148;
+        font-style: italic;
+      }
+
+      .content img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 42px 0 12px;
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+      }
+
+      .content figure {
+        margin: 42px 0;
+      }
+
+      .content figure img {
+        margin: 0 0 12px;
+      }
+
+      .content figcaption {
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .backLink {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 46px;
+        border-top: 1px solid var(--line);
+        padding-top: 28px;
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.18em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .backLink:hover {
+        color: var(--accent);
+      }
+
+      @media (max-width: 720px) {
+        .hero {
+          min-height: 420px;
+          padding: 30px 24px;
+        }
+
+        .articleWrap {
+          width: min(100% - 28px, 900px);
+          padding-bottom: 48px;
+        }
+
+        .content {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="heroInner">
+        <p class="heroLocation">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+            />
+          </svg>
+          <span>Los Angeles</span>
+        </p>
+        <h1>Three Days in Los Angeles - Everything You Need Is Here!</h1>
+      </div>
+    </header>
+
+    <main class="articleWrap">
+      
+
+      <article class="content">
+        
+          <p>Last summer, Mo Xiaoyu lived in Minnesota, USA for four months, and before returning home, planned an epic American West tour as her first stop she chose Los Angeles, the famous &quot;City of Angels.&quot; There are simply too many attractions to visit in LA, so Mo Xiaoyu did thorough research combined with her own travel experience, to share my itinerary guide that might help your trip!</p><p><br></p><p>I. Pre-Trip Preparations</p><p>1. What preparations need to be made before traveling?</p><p>a. Air Tickets: Friends departing from China can pay attention to flight information on various websites one to two months in advance, making it easier to purchase tickets at suitable prices.</p><p>b. Phone Cards: Purchase phone cards online; Mo Xiaoyu recommends AT&amp;T&#39;s SIM card for both internet speed and signal quality (available for sale on Taobao).</p><p><br></p><p>2. Where to stay - cheap yet convenient?</p><p>By 7 Christina</p><p><br></p><p>Hotels in Los Angeles near central subway stations tend to be quite expensive. If you&#39;re looking for better value accommodations, two areas are recommended: Koreatown and Chinatown, which aren&#39;t particularly far apart from each other.</p><p>Mo Xiaoyu stayed in Koreatown at that time; there was a bus stop not far away. Taking the bus just a few stops would get you to a nearby subway station for taking the metro, and transportation is very convenient.</p><p><br></p><p>3. What are essential phone apps?</p><p>a.</p><p>II. Itinerary Arrangement</p><p>Day 1: Settling into accommodation + Griffith Observatory</p><p><br></p><p>The airport shuttle buses are very easy to find; just follow the signs after exiting the terminal. At each entrance there are many station signs, with different routes marked in distinct colors for easy identification. Most people take the shuttle directly to Union Station at the center, then transfer to various lines inside.</p><p><br></p><p>Here is something I want to remind everyone: When you&#39;re at Union Station, you need to purchase a metro card at the automatic ticket machine. For the following days, simply add money directly into the card.</p><p><br></p><p>Griffith Observatory</p><p>As one of the world&#39;s famous observatories, standing at the Griffith Observatory and looking out, you can see the entire Los Angeles landscape right before your eyes, and you can even spot the Hollywood sign from afar.</p><p>The observatory interior features many exhibits available for viewing, plus two special shows very worth seeing. Especially impressive is the full-screen scenery set design that makes you feel like lying completely in nature while someone gently narrates how the universe was formed. For students, tickets are half price! Unlike at home, here you don&#39;t need to show a student ID - just tell the ticket seller you&#39;re a student and you can buy your ticket for five dollars!</p><p><br></p><p>DAY 2: A whole day should of course be dedicated to Hollywood</p><p>by Piaobo Fengqiao</p><p><br></p><p>If you visit Los Angeles, you must go to Hollywood! And you definitely need to reserve an entire day, otherwise you won&#39;t be satisfied! The Red Line metro takes you directly to Hollywood Station. After that, there is a long beautiful little train that free transports everyone to the gates of Hollywood.</p><p><br></p><p>I recommend downloading a Hollywood Universal Studios app before visiting. This app helps you see which areas require queuing throughout the entire park and provides an interactive panoramic map. Of course, paper maps are available at the entrance in both Chinese and English - very thoughtful!</p><p><br></p><p>The entire Hollywood Park is divided into several major themes: Harry Potter&#39;s Hogwarts School of Witchcraft and Wizardry, Transformers, The Simpsons, Minions, The Walking Dead, Kung Fu Panda, and more. Most importantly there is the Universal Studios Tour, which takes you to explore the mysteries of the entire movie world.</p><p>By: Chinesesunlight</p><p>If you are a Harry Potter fan, then you would definitely be like Mo Xiaoyu and willing to stay inside for an entire day without wanting to leave. Inside is a realistic recreation of Platform 9¾, as well as the entire Hogwarts Village; walking through the village leads directly to Hogwarts Castle.</p><p><br></p><p>By: Chinesesunlight</p><p>I recommend buying tickets online in advance beforehand. Save the electronic version on your phone and you can simply scan it at the entrance for entry, saving time waiting in line and purchasing tickets.</p><p><br></p><p>Day 3 Los Angeles 360° Panoramic Photo Spots</p><p><br></p><p>The third day is dedicated to city walking. If you want to visit many places, you can choose a car rental service online in advance. After all, Los Angeles is a city notorious for traffic congestion; if you want to visit multiple locations in one day, renting a car is more convenient.</p><p><br></p><p>Recommended locations: Los Angeles Lakers home arena, Hollywood Walk of Fame, the world-famous wealthy enclave of Beverly Hills, Instagram influencer walls.</p>
+        
+
+        <a class="backLink" href="list-1.html">← Back to Los Angeles</a>
+      </article>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Maybe I might even run into a celebrity~" />
+    <title>Live here, zero distance from Hollywood stars</title>
+    <style>
+      :root {
+        --paper: #f5f1eb;
+        --ink: #163d36;
+        --body: #3f3a34;
+        --muted: #8a8379;
+        --line: #ddd5ca;
+        --accent: #d9782f;
+        --white: #fffaf4;
+        --shadow: 0 22px 70px rgba(28, 25, 20, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        line-height: 1.72;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .hero {
+        min-height: clamp(330px, 48vw, 560px);
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        padding: clamp(28px, 7vw, 70px) clamp(24px, 8vw, 76px);
+        background: #28463f;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.12)),
+          url("");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .heroInner {
+        position: relative;
+        width: min(900px, 100%);
+        color: #ffffff;
+      }
+
+      .heroLocation {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 24px;
+        color: rgba(255, 255, 255, 0.78);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .heroLocation svg {
+        width: 17px;
+        height: 17px;
+        color: #f0a45f;
+      }
+
+      h1 {
+        max-width: 880px;
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(30px, 4.8vw, 54px);
+        font-weight: 900;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .brief {
+        width: min(760px, 100%);
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 18px;
+        color: #5a5148;
+        font-size: clamp(17px, 1.9vw, 20px);
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.58;
+      }
+
+      .articleWrap {
+        width: min(900px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: clamp(42px, 6vw, 68px) 0 72px;
+      }
+
+      .content {
+        width: min(760px, 100%);
+        color: var(--body);
+        font-size: clamp(16px, 1.8vw, 18px);
+        line-height: 1.5;
+      }
+
+      .content p {
+        margin: 0 0 12px;
+      }
+
+      .content h2,
+      .content h3,
+      .content h4 {
+        margin: 46px 0 18px;
+        color: var(--ink);
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+
+      .content h2 {
+        font-size: clamp(28px, 4vw, 38px);
+      }
+
+      .content h3 {
+        font-size: clamp(23px, 3vw, 30px);
+      }
+
+      .content ul,
+      .content ol {
+        margin: 0 0 30px;
+        padding-left: 28px;
+      }
+
+      .content li {
+        margin: 8px 0;
+      }
+
+      .content blockquote {
+        margin: 34px 0;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 20px;
+        color: #5a5148;
+        font-style: italic;
+      }
+
+      .content img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 42px 0 12px;
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+      }
+
+      .content figure {
+        margin: 42px 0;
+      }
+
+      .content figure img {
+        margin: 0 0 12px;
+      }
+
+      .content figcaption {
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .backLink {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 46px;
+        border-top: 1px solid var(--line);
+        padding-top: 28px;
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.18em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .backLink:hover {
+        color: var(--accent);
+      }
+
+      @media (max-width: 720px) {
+        .hero {
+          min-height: 420px;
+          padding: 30px 24px;
+        }
+
+        .articleWrap {
+          width: min(100% - 28px, 900px);
+          padding-bottom: 48px;
+        }
+
+        .content {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="heroInner">
+        <p class="heroLocation">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+            />
+          </svg>
+          <span>Los Angeles</span>
+        </p>
+        <h1>Live here, zero distance from Hollywood stars</h1>
+      </div>
+    </header>
+
+    <main class="articleWrap">
+      
+      <p class="brief">Maybe I might even run into a celebrity~</p>
+      
+
+      <article class="content">
+        
+          <p>"La La Land" successfully turned Los Angeles back into a City of Stars.<br>                     The most famous scene in the film is undoubtedly when Mia and Sebastian dance together on a hillside overlooking panoramic views of Los Angeles. The location where this beautiful moment was filmed is Casitas Canyon on Mount Hollywood Drive within Griffith Park.</p><p><img src="https://p1-q.mafengwo.net/s11/M00/3F/85/wKgBEFpW-CeAYWKTAAYZPer_ieo60.jpeg?imageView2%2F2%2Fw%2F680%2Fq%2F90">                     If you want to encounter famous stars in the "Movie Kingdom," feel the American Dream at Beverly Hills, and seek thrills at Universal Studios—stay in Hollywood. Not only are attractions densely packed nearby with excellent transportation, but compared to its prime location, hotel prices aren't expensive. The accommodation is very mature with various styles of hotels available.<br>                                         Hilton Los Angeles Universal City Hotel</p><p><img src="https://p1-q.mafengwo.net/s11/M00/1C/C9/wKgBEFpWyoqAJM_2AAm2gZ_IMhs00.jpeg?imageView2%2F2%2Fw%2F680%2Fq%2F90">
+Located on a hillside with beautiful surroundings and enchanting night views. Close to Universal Studios entrance with complimentary shuttle service to the studios - the perfect choice for experiencing Universal Studios fully.
+
+Spacious rooms with new facilities, open views with excellent scenery. Enjoy Chinese-style breakfast in the morning.
+
+Los Angeles Universal Studios Hilton Hotel
+
+The Los Angeles/Universal Studios Hilton Hotel is located in Universal City within the entertainment district, just a 15-minute walk to Hollywood Universal Studios and Universal CityWalk (shopping area). This hotel is 2.8 miles (4.5 km) from Warner Bros. Studio and 2.8 miles (4.6 km) from Grauman's Chinese Theater. Don't miss out on vacation amenities including the outdoor swimming pool and 24-hour fitness center. Other facilities include complimentary WiFi, concierge service, and a gift shop/newsstand.
+
+Dine at Cafe Sierra, featuring California cuisine with lunch, dinner, and brunch options. You can also visit the café or stay in your room enjoying 24-hour room service. Welcome to the bar/lounge or poolside bar for a refreshing drink and some relaxation. A full breakfast is available daily from 7:00 AM to 10:00 AM (additional fee).
+
+Featured services and amenities include high-speed cable internet access, business center, and express checkout.
+Planning an event at Universal City? This hotel features 2973 square meters (32001 square feet) of space, including meeting facilities and conference rooms. The hotel offers paid self-parking service. There are 495 guest rooms with flat-screen TVs. Digital channels meet your entertainment needs; additionally, complimentary high-speed wireless internet is available along with paid cable options. Private bathrooms include free toiletries and hair dryers. Convenience features include safes capable of storing laptops and desks; plus room service is provided upon request.<br>Lois Hollywood Hotel</p><p><img src="https://p1-q.mafengwo.net/s6/M00/58/B6/wKgB4lNsk-GASEl8AAINLHRy5ls00.jpeg?imageView2%2F2%2Fw%2F680%2Fq%2F90">The hotel's location is exceptional, positioned near Highland Park Center, Chinese Theatre, Dolby Theatre, and the Walk of Fame. Getting to Universal Studios via subway is easy, plus there is a Hertz rental counter on-site for added convenience.<br>The rooms feature simple yet sophisticated design with comprehensive amenities and comfortable bedding. You can enjoy distant views of Hollywood; nights are quiet ensuring a restful sleep.</p><p><br>Lois Hollywood Hotel<br>Lois Hollywood Hotel is situated in central Los Angeles, just steps from the Kodak Theatre and less than 5 minutes walking distance to the Hollywood Walk of Fame.
+This hotel is located 0.5 miles (0.8 kilometers) from TCL Chinese Theatre and 3.1 miles (5 kilometers) from Universal CityWalk shopping district. You will enjoy resort amenities including an outdoor swimming pool and 24-hour fitness center. Other services and facilities at this Art Deco-style hotel include free WiFi, concierge service, and a gift shop/newsstand. The hotel features two restaurants; you can dine at H2 Kitchen for American cuisine or stay in your room enjoying partial-hour room service. Additionally, the café serves delicious pastries. You can visit the bar/lounge to order your favorite drink and enjoy a refreshing beverage. A complimentary made-to-order breakfast is available daily from 6:30 AM to noon for a fee.
+
+Special services and facilities include free high-speed wired internet access, 24-hour business center, and express checkout. Planning an event in Los Angeles? This hotel offers 6,224 square meters (67,000 square feet) of space including conference centers and meeting rooms. Of the 628 guest rooms, each features an iPod dock and mini-bar to ensure home-like comfort during your travels. Your plush bed comes with down comforters and luxury linens. Free wired and wireless internet access is provided; additionally, a 37-inch LCD TV offers satellite channels to meet all your entertainment needs. Private bathrooms with shower facilities provide complimentary toiletries and hair dryers.
+
+Hollywood W Hotel
+is a design hotel that incorporates elements of fashion, music, and pop culture, located on Hollywood Boulevard where daytime shopping is very convenient. A subway station sits directly at the entrance, and Universal Studios is just two stops away, offering extremely convenient transportation.
+</p><p><img src="https://p1-q.mafengwo.net/s10/M00/DE/28/wKgBZ1mIdeyAIwL7AAJizbJxC_s28.jpeg?imageView2%2F2%2Fw%2F680%2Fq%2F90">The rooftop pool offers panoramic views of Los Angeles.<br>                    Stylishly designed rooms feature spacious areas, clean bathrooms, and very comfortable beds and pillows.</p><p><br>                        Hollywood W Hotel<br>                        Located in the heart of Hollywood at the edge of the hills, the revitalized W Hotel Hollywood has become a focal point and hub for Los Angeles. Situated near the iconic Hollywood sign, our hotel features elegantly designed dining, bars, and public areas with sophisticated yet distinctive ambiance - emphasizing social energy and interaction while providing a tranquil retreat. Guest rooms and suites offer relaxed comfort through bold, contemporary design. Many rooms boast stunning views of famous Hollywood landmarks, creating an captivating lodging experience. Positioned between Hollywood Boulevard and Sunset Boulevard, the hotel has become a landmark attracting visitors from around the world. The space feels warm and vibrant with seamless indoor-outdoor transitions, allowing you to feel the changing day and night in a joyful atmosphere where time flies by quickly.
+Welcome to your stay at Hollywood W Hotel, unleash your extraordinary charm, and discover more excitement.</p><p><br>
+Hollywood Dreams Hotel<br>
+This newly opened dream hotel is located in the heart of Hollywood. Designed by famous designers John Lautner and Richard Neutra, it combines medieval and modern architectural styles.</p><p><img src="https://p1-q.mafengwo.net/s10/M00/CE/47/wKgBZ1ndtR6ACWpjAAKDuVSVJXg70.jpeg?imageView2%2F2%2Fw%2F680%2Fq%2F90">
+With the Hollywood mountains as its backdrop, it strives to create avant-garde and high-end experiences.<br>
+The interior blends garden elements in a contemporary style; greenery decorations and hanging plants make the building fashionable and fresh.<br>
+In rooms with panoramic floor-to-ceiling windows, you can see the clear HOLLYWOOD sign right after waking up every morning. Open your curtains and enjoy the sunshine of this glitzy city while staying in bed.<br>
+Dream Hollywood Hotel, under Hyatt<br>
+Hollywood Dreams Hyatt is located in the center of Los Angeles, within a 5-minute walk from Hollywood Walk of Fame and Hollywood Boulevard.
+This hotel is 0.8 miles (1.2 km) from the Roosevelt Hotel on Hollywood Boulevard and 1.4 miles (2.2 km) from the Capitol Records Building. Resort amenities include an outdoor swimming pool and 24-hour fitness center. Free WiFi, concierge service, and a lobby fireplace are also available. 
+
+Guests can dine at Dream Rooftop restaurant enjoying California cuisine with views of the swimming pool, or stay in their room to take advantage of room service offered during select hours. The bar/lounge and poolside bar provide relaxing settings for your preferred beverage. Complimentary continental breakfast is served daily from 7:00 AM to 11:00 AM.
+
+Featured services include express check-in, express checkout, and dry cleaning/laundry service. The hotel features 178 air-conditioned rooms equipped with espresso machines and flat-screen TVs. Premium mattresses paired with down comforters and luxury linens ensure exceptional sleep quality. Free high-speed WiFi keeps you connected with friends, while digital channels provide entertainment options. Private bathrooms feature spacious rainfall showerheads and complimentary branded toiletries.
+
+Hollywood Hotel
+Located in the heart of Hollywood, this property offers easy walking access to the Walk of Fame. A subway station is nearby for convenient transportation. The hotel has hosted famous guests including Marilyn Monroe and James Dean during their visits to Hollywood.
+<br>                    The room is small but exquisite, clean and tidy, with nutritious breakfast served every morning—great value!<br>                        Hollywood Hotel<br>                        Located in the heart of Los Angeles, this hotel is less than a 5-minute walk from the Hollywood Walk of Fame and Hollywood Boulevard. It's 1.1 miles (1.7 km) from Grauman's Chinese Theatre and 3.8 miles (6 km) from Universal Studios Hollywood. Guests can enjoy scenic views from the terrace, along with complimentary WiFi and concierge services. Featured amenities include luggage storage, laundry facilities, and a safe at the front desk. All 34 air-conditioned rooms come equipped with flat-screen TVs, providing home-like comfort during your travels. Complimentary wireless internet keeps you connected with friends; satellite channels satisfy entertainment needs. Bathrooms feature showers and hair dryers. Practical amenities include safes for laptops and irons/ironing boards, plus room service available upon request.<br>                                        Roosevelt Hollywood Hotel<br>                    The first Academy Awards ceremony was held at this hotel, with the famous Walk of Fame just outside the doors and Grauman's Chinese Theatre directly across the street—an exceptional location.
+<br>                    Interior design by Yabu Pushelberg features textured hardwood floors and elegant four-poster beds, blending traditional and modern elements of classic American luxury hotels.<br>                        The Roosevelt Hollywood Hotel</p><p><img src="https://p1-q.mafengwo.net/s11/M00/28/2E/wKgBEFpW1oqAGfOLAAL2d7qArzg69.jpeg?imageView2%2F2%2Fw%2F680%2Fq%2F90">                        The Roosevelt Hollywood Hotel is located in the heart of Los Angeles, just steps away from the Hollywood Walk of Fame and Hollywood Boulevard. This luxury hotel is 0.1 miles (0.1 km) from TCL Chinese Theatre and 3.4 miles (5.4 km) from Universal Studios Hollywood. Don't miss out on numerous vacation amenities including nightclubs, outdoor swimming pools, and fitness centers. Other features of this Art Deco style hotel include free WiFi, concierge service, and wedding services. The hotel has 2 restaurants; you can choose to dine at Shirleys for American cuisine or stay in your room enjoying limited-time room service. Welcome to the poolside bar for a drink and some relaxation;
+Additionally, there are 4 bars/lounges available for you to choose from. A paid made-to-order breakfast is offered daily from 07:00 to 11:00. Featured services and facilities include a business center, dry cleaning/laundry service, and 24-hour front desk service. Planning an event in Los Angeles? This hotel offers 2323 square meters (25,005 square feet) of space, including meeting venues and conference rooms. There are 300 guest rooms featuring iPod docks and LCD TVs; you'll surely find the comfort of home on your journey. Your bedding includes down comforters and Egyptian cotton sheets. Complimentary wireless internet keeps you connected with friends; cable channels provide entertainment options. Private bathrooms offer branded toiletries and hair dryers.<br>                                        The Beverly Hills Hotel<br>                    Established in 1912, The Beverly Hills Hotel is one of the favorite hotels among Hollywood celebrities. Famous as the Pink Palace!<br>                    Spacious and comfortable rooms with terrace courtyard views provide treatment and enjoyment befitting movie stars. You can even take some toiletries home as a memento.<br>                        The Beverly Hill Hotels &amp; Resorts<br>                        Located on top of the hill in Beverly Hills, this hotel is within a 15-minute drive from the Hollywood Walk of Fame and Santa Monica Pier.
+This boutique hotel is 8.6 miles (13.9 km) from Universal Studios Hollywood and 9.4 miles (15.1 km) from Crypto.com Arena. Relax at the full-service spa; here you can enjoy massages, body treatments, and facials. If you're looking for a leisurely vacation, make good use of the outdoor pool, hot tub, and 24-hour fitness center. Other services and amenities of this Art Deco style hotel include free WiFi, concierge service, and complimentary babysitting service. Guests can take advantage of the free shuttle that operates within a 5-mile radius. The hotel features 2 restaurants; you may choose to dine at The Polo Lounge for American cuisine or stay in your room enjoying 24-hour room service. Additionally, the café serves delicious snacks. After a busy day, you can stop by the bar/lounge or poolside bar for a drink and unwind. A complimentary full breakfast is served daily from 6:00 AM to 10:30 AM. Featured services and amenities include limousine or town car service, computer stations, and express check-in. This hotel has 3 meeting rooms available for events. There are 208 uniquely decorated guestrooms featuring MP3 docks and plasma TVs; you'll surely find home-like comfort during your trip. Satellite channels and DVD players are provided to meet your entertainment needs; free wireless internet is also offered, making it easy to stay in touch with friends. Private bathrooms equipped with separate bathtubs and showers offer soaking tubs and complimentary toiletries.
+Amenities include telephones, safes, and desks.<br>                                        Tips<br>                    Los Angeles is not only where celebrities and stars gather but also hides many celebrity hotels. Whether you prefer modern fashionable design, retro elegance, or pink dreamy style, there's always one that will win your heart!<br>Hurry up and start planning! New users can also claim a 50 yuan coupon~<br>                    Hotel Overview</p>
+        
+
+        <a class="backLink" href="list-1.html">← Back to Los Angeles</a>
+      </article>
+    </main>
+  </body>
+</html>

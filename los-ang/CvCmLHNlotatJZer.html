@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <title>San Francisco Nopa Food Guide</title>
+    <style>
+      :root {
+        --ink: #171512;
+        --muted: #5f5a54;
+        --line: #ded6cc;
+        --paper: #ffffff;
+        --warm: #f8efe5;
+        --accent: #c47a29;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        line-height: 1.55;
+      }
+
+      .hero {
+        width: 100%;
+        height: clamp(260px, 38vw, 520px);
+        overflow: hidden;
+      }
+
+      .hero img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+      }
+
+      .article {
+        width: min(760px, calc(100% - 40px));
+        margin: 0 auto;
+        padding: 34px 0 72px;
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin: 0;
+        font-family: Georgia, "Times New Roman", serif;
+        letter-spacing: 0;
+        line-height: 1.05;
+      }
+
+      h1 {
+        max-width: 620px;
+        font-size: clamp(34px, 5vw, 54px);
+        font-weight: 800;
+      }
+
+      .location {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin: 18px 0;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .location svg {
+        width: 18px;
+        height: 18px;
+        flex: 0 0 auto;
+      }
+
+      .subtitle {
+        max-width: 650px;
+        margin: 0 0 22px;
+        color: var(--muted);
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(18px, 2.4vw, 23px);
+        font-style: italic;
+        line-height: 1.45;
+      }
+
+      .description {
+        max-width: 650px;
+        margin: 0 0 28px;
+        color: #302c27;
+        font-size: 15px;
+      }
+
+      .brief {
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        border-radius: 6px;
+        padding: 18px 20px;
+        background: var(--warm);
+      }
+
+      .brief-title {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 10px;
+        color: var(--accent);
+        font-weight: 800;
+      }
+
+      .brief-title svg {
+        width: 18px;
+        height: 18px;
+      }
+
+      .brief p {
+        margin: 0;
+        color: #302c27;
+        font-size: 15px;
+      }
+
+      .content {
+        border-top: 1px solid var(--line);
+        padding-top: 24px;
+      }
+
+      h2 {
+        margin-bottom: 16px;
+        font-size: 30px;
+      }
+
+      .section {
+        margin: 0 0 24px;
+      }
+
+      .section h3 {
+        margin-bottom: 8px;
+        font-size: 18px;
+        line-height: 1.25;
+      }
+
+      .section p,
+      .section-body {
+        margin: 0;
+        color: #292520;
+        font-size: 14px;
+        white-space: pre-line;
+      }
+
+      .section-body img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 16px 0;
+        border-radius: 8px;
+      }
+
+      .section-body a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      @media (max-width: 640px) {
+        .article {
+          width: min(100% - 28px, 760px);
+          padding-top: 26px;
+        }
+
+        .hero {
+          height: 260px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <figure class="hero">
+      <img src="https://p1-q.mafengwo.net/s15/M00/5C/B3/CoUBGV3YXoqAIW3OAAIHqi0Dsg802.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F90" alt="San Francisco Nopa Food Guide" />
+    </figure>
+
+    <main class="article">
+      <h1>San Francisco Nopa Food Guide</h1>
+
+      <p class="location">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            fill="currentColor"
+            d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+          />
+        </svg>
+        <span>Los Angeles</span>
+      </p>
+
+      <p class="subtitle"></p>
+      <p class="description"></p>
+
+      <aside class="brief">
+        <p class="brief-title">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M7 3h10a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Zm1 4v2h8V7H8Zm0 4v2h8v-2H8Zm0 4v2h5v-2H8Z"
+            />
+          </svg>
+          Brief
+        </p>
+        <p>4505 Burgers & BBQ (705 Divisadero St.)</p>
+      </aside>
+
+      <section class="content" aria-labelledby="content-title">
+        <h2 id="content-title">Content</h2>
+        
+          <article class="section">
+            <div class="section-body"><p>Nopa is an abbreviation for "north of the panhandle," a northern neighborhood located east of Golden Gate Park. Its central location in the city makes it an ideal destination for tourists to experience delicious food. Today, we have carefully selected three highly-rated restaurants in Nopa that you must visit if you ever get the chance to come to San Francisco!</p><p><br></p><p>                                        4505 Burgers &amp; BBQ (705 Divisadero St.)</p><p><br></p><p>                    4505 Burgers &amp; BBQ is a very lively barbecue restaurant that serves delicious homemade food and stays open late into the night. Smoked meats are the signature dishes at this barbecue restaurant. Thick pork chops, short ribs, and chicken, paired with french fries, salads, pickles, and warm buttery Parker House rolls, make your mouth water.</p><p><br></p><p>Of course, there are also various vegetables available for you to choose from - an oat and egg sandwich topped with grilled bell peppers, cheese, and buttered bread offers another delicious option. Of course, most tourists are still meat lovers. This is one of the few genuine wood-fired BBQs in San Francisco, where chefs source meats daily from local farmers, making it definitely worth a visit to try.</p>
+</p><p><br></p><p>                                        Barrel Head Brewhouse (1785 Fulton St.)</p><p><br></p><p>                    This North Park beer bar boasts a rich history and excellent reputation, offering over 40 types of beers and cocktails to choose from. At noon, they serve an unlimited Mimosa special ($20 per person, available daily until 2:30 PM), catering perfectly to lunchtime diners' needs. At Barrel Head Brewhouse, you must try their Guest Beer - a unique blend of IPA and strong black beer that can't be found anywhere else.</p><p><br></p><p>They also offer classic American brunch items -- such as bacon, scrambled eggs, yeast bread or French toast with strawberries, whipped cream, and jam. If you come on Thursday evening (closing at 9 PM), you'll enjoy a $2 discount on select beers.</p><p><br></p><p>                                        Brenda's Meat and Three (919 Divisadero St.)</p><p><br></p><p>                    Brenda Buenviaje was born and raised in New Orleans, and she innovatively incorporated modern elements into traditional Southern style, creating Brenda's
+s an excellent delicacy of Meat and Three. Brenda's Meat and Three's culinary secret is quite simple: Brenda selects one meat and three sides from her ever-changing home-style dishes. Fried chicken, fried fish, crispy thin-cut steak, accompanied by a small scoop of gravy - absolutely guaranteed to make you rave.</p><p><br></p><p>Be sure to try the beets here and New Orleans-style fried pastries, which are sweetened with chocolate or sweet cinnamon honey butter, or seasoned with chili pepper, green onions, and sharp cheddar cheese.</p><p><br></p><p>PC: @4505bbq, @ithinkiken, @infatuation_sf, @galisegal, @kristina_renee, @simplicity4554</p></div>
+          </article>
+        
+      </section>
+    </main>
+  </body>
+</html>

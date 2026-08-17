@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <title>A Los Angeles travel map you won't find on Google</title>
+    <style>
+      :root {
+        --paper: #f5f1eb;
+        --ink: #163d36;
+        --body: #3f3a34;
+        --muted: #8a8379;
+        --line: #ddd5ca;
+        --accent: #d9782f;
+        --white: #fffaf4;
+        --shadow: 0 22px 70px rgba(28, 25, 20, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        line-height: 1.72;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .hero {
+        min-height: clamp(330px, 48vw, 560px);
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        padding: clamp(28px, 7vw, 70px) clamp(24px, 8vw, 76px);
+        background: #28463f;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.12)),
+          url("");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .heroInner {
+        position: relative;
+        width: min(900px, 100%);
+        color: #ffffff;
+      }
+
+      .heroLocation {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 24px;
+        color: rgba(255, 255, 255, 0.78);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .heroLocation svg {
+        width: 17px;
+        height: 17px;
+        color: #f0a45f;
+      }
+
+      h1 {
+        max-width: 880px;
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(30px, 4.8vw, 54px);
+        font-weight: 900;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .brief {
+        width: min(760px, 100%);
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 18px;
+        color: #5a5148;
+        font-size: clamp(17px, 1.9vw, 20px);
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.58;
+      }
+
+      .articleWrap {
+        width: min(900px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: clamp(42px, 6vw, 68px) 0 72px;
+      }
+
+      .content {
+        width: min(760px, 100%);
+        color: var(--body);
+        font-size: clamp(16px, 1.8vw, 18px);
+        line-height: 1.5;
+      }
+
+      .content p {
+        margin: 0 0 12px;
+      }
+
+      .content h2,
+      .content h3,
+      .content h4 {
+        margin: 46px 0 18px;
+        color: var(--ink);
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+
+      .content h2 {
+        font-size: clamp(28px, 4vw, 38px);
+      }
+
+      .content h3 {
+        font-size: clamp(23px, 3vw, 30px);
+      }
+
+      .content ul,
+      .content ol {
+        margin: 0 0 30px;
+        padding-left: 28px;
+      }
+
+      .content li {
+        margin: 8px 0;
+      }
+
+      .content blockquote {
+        margin: 34px 0;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 20px;
+        color: #5a5148;
+        font-style: italic;
+      }
+
+      .content img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 42px 0 12px;
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+      }
+
+      .content figure {
+        margin: 42px 0;
+      }
+
+      .content figure img {
+        margin: 0 0 12px;
+      }
+
+      .content figcaption {
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .backLink {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 46px;
+        border-top: 1px solid var(--line);
+        padding-top: 28px;
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.18em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .backLink:hover {
+        color: var(--accent);
+      }
+
+      @media (max-width: 720px) {
+        .hero {
+          min-height: 420px;
+          padding: 30px 24px;
+        }
+
+        .articleWrap {
+          width: min(100% - 28px, 900px);
+          padding-bottom: 48px;
+        }
+
+        .content {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="heroInner">
+        <p class="heroLocation">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+            />
+          </svg>
+          <span>Los Angeles</span>
+        </p>
+        <h1>A Los Angeles travel map you won't find on Google</h1>
+      </div>
+    </header>
+
+    <main class="articleWrap">
+      
+
+      <article class="content">
+        
+          <p>As America&#39;s largest city on the West Coast, &quot;Angel City&quot; Los Angeles holds a spot in many travelers&#39; bucket lists. It truly has too many attractions that draw visitors back again and again: Venice Beach perpetually bathed in sunshine, countless film and TV filming locations, Hollywood where celebrity stars frequently appear, Beverly Hills where the wealthy reside, plus those scattered cafes, museums, and chic boutiques throughout the streets... When California&#39;s golden sunset light falls on one&#39;s side profile, even traffic jams look cinematic.</p><p><br></p><p>Just last month, Mars received an invitation from the Los Angeles Tourism Bureau to spend a mere week &quot;playing&quot; around Los Angeles in a decidedly non-touristy way. We explored three locations and have compiled this unconventional travel map for you. A gentle reminder: unlocking these destinations requires SPF50 PA++++ sunscreen.</p><p><br></p><p>After enduring 12 hours of physically and mentally demanding flight, Mars didn&#39;t rush downtown immediately. Instead, the journey began at Venice Beach. With its expansive 75-mile coastline featuring renowned surfing spots, Venice Beach stands as a must-experience destination on Los Angeles&#39; beaches.</p><p><br></p><p>Beyond the breathtaking beach that makes the Pacific sea look mundane and endless sunlit shores, Venice Beach harbors a rich history of winding alleyways and canal-adjacent areas filled with countless shopping stores and delightful restaurants. Summer transforms the scene, bringing poets, painters, agile skateboarders, youthful cyclists, and diverse street performers everywhere you look.</p><p><br></p><p>Hotel Erwin offers convenient proximity to Venice Beach, just three minutes away, with select rooms providing stunning panoramic views of the coastline.</p><p>Most importantly, there is a Rooftop Bar on the top floor with spectacular views—perfect for having a few drinks while adjusting to the time zone.</p><p><br></p><p>After overcoming jet lag, we officially began this challenging journey. Compared to just taking photos of the Hollywood Sign from afar at a rooftop bar, riding horses in Griffith Park to view the Hollywood Sign sounds more exciting? So we arrived at Los Angeles&#39;s only horse ranch—Hollywood Sunset Ranch.</p><p><br></p><p>Having pre-booked our schedule and filled out a personal information form, staff began explaining safety precautions and basic techniques for horseback riding. The entire process was so fast-paced it made my traveling companions quite nervous. But in fact, first-time riders don&#39;t need to worry about safety; each horse has its own name and personality and is well-trained. You just need to get along with them properly during the two-hour ride.</p><p><br></p><p>Riding up a trail to the top of Hollywood Hill, we enjoyed panoramic 360-degree views of the city—from the Hollywood Sign to the Pacific Ocean and down into the valleys, all of Los Angeles spread out before us. Beyond our two-hour riding lesson, visitors can choose from multiple themed experiences including Lunch Ride, Sunset Dinner Ride, BBQ Ride, and Kids&#39; Party rides.</p><p>Maryandere Bay is one of the largest man-made dinghy harbors in America, just minutes&#39; drive from Los Angeles International Airport. When arriving at LAX, Mars didn&#39;t expect that a few days later she would do 90 minutes of water yoga at the nearby harbor.</p><p><br></p><p>YOGAqua Water Yoga Classes</p><p><br></p><p>YOGAqua&#39;s classes are suitable for yoga practitioners of all levels. Just like horseback riding, you don&#39;t need to worry about safety when trying water yoga for the first time. Professional yoga instructors will guide you through your practice smoothly and they guarantee three times &quot;no one has ever fallen off the paddleboard before.&quot; In this completely unguarded state, I floated on the paddleboard, experiencing in a unique way Los Angeles&#39; distinctive tranquility and the athletic joy of water yoga.</p><p><br></p><p>During this Los Angeles trip, we also experienced:</p><p>Learning to mix cocktails at The Association</p><p>Learning to make tonkotsu ramen at FOODSTORY</p><p>Taking an improvisational theater class at Improv-LA</p><p><br></p><p>Improv-LA studio was founded by experienced improvisational actor Keith Saltojanes. Whether you are a professional actor, amateur enthusiast, or simply want to release your true nature due to some force beyond control, you can come to Improv-LA to learn or strengthen your performance skills. It is good to occasionally liberate yourself.</p><p>These once-in-a-lifetime Los Angeles experiences you can boldly plan your itinerary for - Live Like A Local - see another side of yourself and Los Angeles.</p><p><br></p><p>Los Angeles is a city where food culture is extremely inclusive and diverse, gathering nearly the best foods from around the world here. In a one-week trip, we dined at American restaurants, Japanese restaurants, Chinese cuisine, Thai dishes, even Peruvian food; from food plazas to vegetarian establishments - everyone has their own preferences, takes what they need, rarely disappointed.</p><p><br></p><p>Grand Central Market is known as Los Angeles&#39; &quot;city kitchen.&quot; This 30,000 square foot market has stood firm since opening in 1917, remaining after experiencing different eras of prosperity and economic depression, holding its ground in the same spot. Here besides tasting many authentic foreign delicacies and desserts, over 50 stalls sell various fresh produce, raw fish and seafood, condiments, dry goods, and more ingredients.</p><p><br></p><p>There&#39;s China Café, an old shop with neon lights famous for wonton noodles; Tacos Tumbras a Tomas favored by tourists; DTLA Cheese claimed as cheese expert; the popular egg dish restaurant EGGSLUT; authentic smoked barbecue from central Texas - Horse Thief BBQ. Besides that, tempting German sausages, vegetable mix, oysters, Wexler&#39;s deli and more, various kinds of food attract many travel enthusiasts and foodies to linger within.</p><p>Flake is a family-run restaurant where three generations have worked since the establishment in 2008, always adhering to simple and fresh principles. It serves delicious sandwiches and various snacks for customers. If your itinerary includes Venice Beach, you should stop by here to enjoy an authentic American brunch under California sunshine.</p><p><br></p><p>Sunny Spot was founded by LA&#39;s renowned DJ Dave Reiss and is an excellent spot for neighbors and friends to gather, relax, share food and drinks. The restaurant has both indoor and outdoor garden areas. The menu offers a vacation-style version of A-Frame (another famous LA restaurant) with adventurous flavors such as pineapple pork chops and baskets full of chicken wings. Bartender Brian Butler from A-Frame also created a rum-focused cocktail list, making for perfect wine pairings.</p><p><br></p><p>Tavern opened in 2009 and was designed by Jeffrey Alan Marks. It is the largest and most charming restaurant in Los Angeles. More accurately, Tavern is actually a &quot;gourmet market&quot; offering refined service along with a bar serving craft cocktails and handcrafted wines. Former US President Obama, Jessica Alba, Cindy Crawford, Gwyneth Paltrow, and others have all dined here.</p><p><br></p><p>Café Gratitude has three locations in Los Angeles and is a vegetarian restaurant beloved by celebrity couple Beyoncé and Jay Z, with many other celebrities as regular patrons.</p><p>The restaurant is famous for its dishes made entirely from 100% organic ingredients, with each dish named after different moods.</p><p><br></p><p>DAMA Restaurant, located in downtown Los Angeles, opened recently as a new creation by Steve Livigni and Pablo Moix from the Scopa Restaurant Bar Group, quickly earning rave reviews. The restaurant features beautiful surroundings decorated with tropical island vibes and retro Latin style. It includes an outdoor terrace, multi-level dining area, and lounge, serving exquisite appetizers, seafood, and meat dishes. Order a cocktail or wine to pair with your meal and enjoy a romantic evening.</p><p><br></p><p>Los Balcones is a well-known Peruvian restaurant in Los Angeles, owned by the Rodriguez family&#39;s three brothers—Jorge, Eduard, and Walter. They grew up in Ica, Peru, and throughout the 1950s, the entire family frequently visited Los Angeles with their parents. In the 1960s, the Rodriguez family decided to immigrate to Los Angeles, but even after leaving their homeland, they remained closely united by Peruvian cuisine as a bond.</p><p><br></p><p>The dishes served at the restaurant are also enriched by the Rodriguez brothers&#39; experiences and stories, offering both traditional classic Peruvian dishes and modified Peruvian cuisine that blends with California flavors from Los Angeles.</p><p><br></p><p>Sorra is a rooftop bar and fusion restaurant that incorporates characteristics of Californian, Mexican, and Chinese cuisine into its Japanese-inspired menu.</p><p>The bar offers spectacular views overlooking the entire city from above, allowing guests to watch Los Angeles transform in vibrant colors from day into night. Beyond this, Sorra takes cocktails seriously, offering several fruit-forward, fun drinks—have a sip while enjoying Los Angeles&#39;s sunset.</p><p><br></p><p>Los Angeles is not only a culinary paradise but also a shopper&#39;s haven, though perhaps for some only. High-end boutiques and luxury stores here may not always offer the best prices compared to other &quot;shopping paradises,&quot; plus there&#39;s an additional 10% sales tax. Yet virtually every streetwear brand maintains a presence in the city. For those who love street fashion, this is truly paradise.</p><p><br></p><p>Melrose/Fairfax District houses Los Angeles&#39;s highest concentration of brand stores—impossible to explore fully in one day. The famous Paul Smith wall is here too, where visitors spend hours taking photos.</p><p><br></p><p>**Supreme**—requiring lottery-style registration and long queues for weekly new drops</p><p>**RIPNDIP**—opening beside Supreme with equally commanding presence</p><p>**Dover Street Market Los Angeles**</p><p><br></p><p>Rei Kawakubo&#39;s sixth global location opened last year in Los Angeles. Inside the all-white Dover Street Market spanning 15,000 square feet, alongside COMME des GARÇONS and its CDG line, you&#39;ll find Stussy, Nike, BrainDead, Palace, Off-White™, Noah, and other street fashion and athletic brands.</p><p>Invested $1 billion in renovation, Westfield Century City spans 120,000 square meters, housing over 200 shops and restaurants. Among them are a newly constructed three-story Nordstrom department store, a completely renovated three-story Bloomingdale&#39;s department store, a modern brand-new Macy&#39;s department store, the luxurious Equinox fitness club and spa center, as well as Eataly - the first Italian supermarket on America&#39;s West Coast with significant social media presence.</p><p><br></p><p>Westfield Century City features clear shopping wayfinding, including sunny outdoor dining corridors, quiet bars, and private cabanas nestled beside peaceful sidewalks and gardens. The shopping center is planted with numerous trees of diverse shapes and sizes, allowing you to shop &quot;in nature.&quot;</p><p><br></p><p>Los Angeles&#39; artistic journey begins with a stay at The Mayfair Hotel in Downtown. This highly distinctive hotel appeals to artists, musicians, writers, actors - guests here come from varied professional backgrounds yet share refined life tastes.</p><p><br></p><p>The universally acclaimed highlight arrives: The Getty Center is an important landmark cultural destination in Los Angeles and one of the most-visited museums in America.</p><p>Getty features a modern architectural style with spacious interiors, housing European, Asian, and American artworks dating back to the medieval period across four pavilions located east, south, west, and north. At the center lies the beautiful Central Garden, where wisteria vines climb along the perimeter. A man-made stream flows gently from a stone waterfall, cascading down onto the pool bottom covered with azaleas - exquisite garden design. Staff members modify the horticultural arrangements seasonally, transforming the Getty into an evolving work of art that changes throughout the year.</p><p><br></p><p>The MOCA STORE offers a more enjoyable shopping experience than the museum itself!</p><p><br></p><p>Angels Flight - The world&#39;s shortest railway, revived thanks to &quot;La La Land&quot;</p><p><br></p><p>Bradbury Building - A filming location for &quot;Blade Runner&quot;</p><p><br></p><p>The tour concludes in the authentic Arts District, where artists and guides lead visitors through murals and graffiti created by local Los Angeles artists. While street art is technically illegal elsewhere in LA, this neighborhood grants artists remarkable creative freedom. However, it&#39;s not completely unrestricted - if you believe your work improves upon existing pieces, you&#39;re permitted to modify or even overwrite them. This ongoing cycle of artistic reinterpretation means the very murals we admire today might disappear before our next visit, making each viewing a fleeting moment worth treasuring.</p><p><br></p><p>The next vacation season is quickly approaching - hurry and create your own Los Angeles travel map!</p><p>Photo &amp; Text / Feng Yiqian</p><p>Layout Design / Sherry</p><p>Some images courtesy of the Los Angeles Tourism and Convention Bureau</p>
+        
+
+        <a class="backLink" href="list-1.html">← Back to Los Angeles</a>
+      </article>
+    </main>
+  </body>
+</html>

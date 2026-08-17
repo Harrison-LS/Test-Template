@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <title>Five days in Los Angeles - choose from three unique itineraries!</title>
+    <style>
+      :root {
+        --paper: #f5f1eb;
+        --ink: #163d36;
+        --body: #3f3a34;
+        --muted: #8a8379;
+        --line: #ddd5ca;
+        --accent: #d9782f;
+        --white: #fffaf4;
+        --shadow: 0 22px 70px rgba(28, 25, 20, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        line-height: 1.72;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .hero {
+        min-height: clamp(330px, 48vw, 560px);
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        padding: clamp(28px, 7vw, 70px) clamp(24px, 8vw, 76px);
+        background: #28463f;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.12)),
+          url("");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .heroInner {
+        position: relative;
+        width: min(900px, 100%);
+        color: #ffffff;
+      }
+
+      .heroLocation {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 24px;
+        color: rgba(255, 255, 255, 0.78);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .heroLocation svg {
+        width: 17px;
+        height: 17px;
+        color: #f0a45f;
+      }
+
+      h1 {
+        max-width: 880px;
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(30px, 4.8vw, 54px);
+        font-weight: 900;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .brief {
+        width: min(760px, 100%);
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 18px;
+        color: #5a5148;
+        font-size: clamp(17px, 1.9vw, 20px);
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.58;
+      }
+
+      .articleWrap {
+        width: min(900px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: clamp(42px, 6vw, 68px) 0 72px;
+      }
+
+      .content {
+        width: min(760px, 100%);
+        color: var(--body);
+        font-size: clamp(16px, 1.8vw, 18px);
+        line-height: 1.5;
+      }
+
+      .content p {
+        margin: 0 0 12px;
+      }
+
+      .content h2,
+      .content h3,
+      .content h4 {
+        margin: 46px 0 18px;
+        color: var(--ink);
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+
+      .content h2 {
+        font-size: clamp(28px, 4vw, 38px);
+      }
+
+      .content h3 {
+        font-size: clamp(23px, 3vw, 30px);
+      }
+
+      .content ul,
+      .content ol {
+        margin: 0 0 30px;
+        padding-left: 28px;
+      }
+
+      .content li {
+        margin: 8px 0;
+      }
+
+      .content blockquote {
+        margin: 34px 0;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 20px;
+        color: #5a5148;
+        font-style: italic;
+      }
+
+      .content img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 42px 0 12px;
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+      }
+
+      .content figure {
+        margin: 42px 0;
+      }
+
+      .content figure img {
+        margin: 0 0 12px;
+      }
+
+      .content figcaption {
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .backLink {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 46px;
+        border-top: 1px solid var(--line);
+        padding-top: 28px;
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.18em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .backLink:hover {
+        color: var(--accent);
+      }
+
+      @media (max-width: 720px) {
+        .hero {
+          min-height: 420px;
+          padding: 30px 24px;
+        }
+
+        .articleWrap {
+          width: min(100% - 28px, 900px);
+          padding-bottom: 48px;
+        }
+
+        .content {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="heroInner">
+        <p class="heroLocation">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+            />
+          </svg>
+          <span>Los Angeles</span>
+        </p>
+        <h1>Five days in Los Angeles - choose from three unique itineraries!</h1>
+      </div>
+    </header>
+
+    <main class="articleWrap">
+      
+
+      <article class="content">
+        
+          <p>Los Angeles is rich in tourism resources and suitable for tourists of all ages; different groups&#39; needs can be met here. So how to scientifically arrange travel routes, and which type of travel method suits you best? This guide will help you plan your Los Angeles trip through three themes: artistic journey, thrilling journey, and romantic journey!</p><p><br></p><p>Two Pictures to Understand Los Angeles</p><p><br></p><p>Los Angeles as We Speak of It</p><p>Los Angeles generally refers to Los Angeles County, a vast area comprising 88 cities, such as Beverly Hills, Santa Monica, Long Beach, and downtown Los Angeles. However, when we mention going to Los Angeles for tourism, we usually refer to the greater Los Angeles region, which includes surrounding counties like Orange County and Riverside County, among five counties in total. Many famous attractions are located here, such as Disney Land in Orange County and the Desert Outlet Mall in Riverside County.</p><p><br></p><p>Los Angeles Region Attractions Distribution Map</p><p><br></p><p>As one of the most popular tourism cities on the U.S. West Coast, Los Angeles has extremely rich tourism resources with numerous attractions, roughly categorized into museums within the city, coastal beaches along the shoreline, and theme parks in surrounding areas.</p><p>I. Cultural Journey - Museums/Trip Photography</p><p><br></p><p>Features:</p><p>Both artistic and trendy, ideal for art lovers seeking cultural experiences as well as photography enthusiasts. Features low physical exertion with a slow-paced itinerary to fully enjoy California&#39;s charm. All attractions are conveniently located near the city center, prioritizing comfort and relaxation throughout.</p><p><br></p><p>Itinerary:</p><p>DAY 1 - Getty Center - Santa Monica Beach</p><p>DAY 2 - Broad Museum of Contemporary Art - The Last Bookstore - OUE Skyspace Observation Deck</p><p>DAY 3 - Los Angeles County Museum of Art (LACMA) - Beverly Hills - Melrose Instagram Wall</p><p>DAY 4 - Hollywood Walk of Fame - Madame Tussauds Wax Museum - Griffith Observatory</p><p>DAY 5 - Universal Studios Hollywood / Disney Theme Park</p><p><br></p><p>Featured Attractions Introduction:</p><p><br></p><p>1. Getty Center</p><p><br></p><p>Introduction: The Getty Center is a significant cultural landmark in Los Angeles and one of the most renowned museums worldwide, particularly famous for its extensive art collections. It houses an impressive array of European paintings, sculptures, decorative arts, and photography that attracts art enthusiasts from around the globe.</p><p>Not only that, but the Getty Center building itself is also a work of art. Visitors take a miniature train up the hill, enjoying panoramic views of the entire valley along the way. Upon exiting the museum lies the colorful Getty Central Garden, equally famous as the artworks inside. Tree-lined paths flow with gentle streams that converge into ponds along the trails. At the center of each pond sits an azalea maze. Artistic atmosphere pervades every corner.</p><p><br></p><p>Address: 1200 Getty Center Dr, Los Angeles, CA 90049</p><p>Admission Price: Free</p><p>Opening Hours: Tuesday-Friday and Sunday 10:00-17:30; Saturday 10:00-21:00; Closed on Mondays</p><p>Transportation: Visitors can drive or take bus route 234 to the Sepulveda / Getty Center station. Parking is available at a lot at the foot of the hill, then ride the tram up and down to the art center atop the hill.</p><p>Official Website: ***</p><p><br></p><p>2. The Last Bookstore</p><p>Introduction: One of North America&#39;s top ten independent bookstores and among the world&#39;s most beautiful bookstores, this establishment is located in downtown Los Angeles and carries the reputation as &quot;Los Angeles&#39; Best Bookstore.&quot; The interior features antique-style decoration with vintage bookshelves filled with nostalgic atmosphere. Starry hanging lights add decorative charm, creating a magical academy ambiance. Moreover, artistic photo spots including book caves and book windows are thoughtfully arranged inside this book lover&#39;s paradise, making it an Instagram-worthy destination for artsy travelers.</p><p>Address: 453 S Spring St, Los Angeles, CA 90013</p><p>Ticket Price: Free</p><p>Opening Hours: Friday-Saturday 10:00am-11:00pm, Other Days 10:00am-10:00pm</p><p>Transportation: Take Metro Purple Line or Red Line to Pershing Square Station, then walk about 3 minutes to arrive</p><p>Website: ***</p><p><br></p><p>3. Los Angeles County Museum of Art</p><p>Introduction: The Los Angeles County Museum of Art is also one of Los Angeles&#39; tourist attractions, especially the &quot;City Lights&quot; lamp post groups at the entrance. Founded in 1961, it claims to be the largest contemporary art collection since World War II in America. It has always been dedicated to collecting artworks encompassing various fields such as history and geography, showcasing LA&#39;s unique multicultural character. As the largest art museum on the US West Coast, it houses over 110,000 artistic treasures from ancient Egyptian times onward, masterpieces by European masters, excellent Asian art collections, artifacts from North and South America, Islamic and marginalized modern art, etc., with high aesthetic value.</p><p>Address: 5905 Wilshire Blvd, Los Angeles, CA 90036</p><p>Ticket Price: Adults $15, Seniors/Students $10, Children Free</p><p>Opening Hours: Mon/Tue/Thu 11:00-17:00, Fri 11:00-20:00, Sat/Sun 10:00-19:00, Wed Closed</p><p>Transportation: Take bus #20 to Wilshire Blvd. &amp; Ogden Ave. station</p><p>Website: ***</p><p>4. The Broad Museum</p><p>Overview: Located on Grand Avenue in downtown Los Angeles, The Broad Museum is extremely popular. The collection includes outstanding contemporary artworks from around the world, as well as &quot;Infinity Mirrored Room - Soul Beyond a Million Light Years&quot; (Infinity Mirrored Room) that made this museum famous, created by Yayoi Kusama. This mirrored room is decorated with LED colored lights that shimmer like the vast galaxy, making visitors feel as if they&#39;re in the Milky Way, leaving them shocked and amazed.</p><p>Address: 221 S Grand Ave, Los Angeles, CA 90012</p><p>Ticket Price: Free</p><p>Opening Hours: Tuesday-Wednesday 11:00-17:00, Thursday-Saturday 11:00-20:00, Sunday 10:00-18:00, Closed on Mondays</p><p>Transportation: Take the Purple Line, White Line, or Gray Line to Grand Ave and 2nd St W station</p><p>Official Website: ***</p><p><br></p><p>5. Madame Tussauds Hollywood</p><p>Overview: Located on the Hollywood Walk of Fame near the Chinese Theatre and Kodak Theatre, Madame Tussauds Hollywood has become another popular attraction on the star-studded street. The wax museum features eighteen themed exhibition areas with over a hundred celebrity wax figures. Here, you can view your favorite celebrities and famous film personalities up close, from golden age movie stars to today&#39;s contemporary celebrities and filmmakers - all are available here.</p><p>Address: 6933 Hollywood Blvd, Hollywood, CA 90028</p><p>Ticket Price: Free</p><p>Opening Hours: All Day</p><p>Transportation: Take buses #212, #217, or #312 and get off at the Hollywood / Highland Station</p><p>Official Website: ***</p><p><br></p><p>II. Thrilling Journey - Theme Parks/Hollywood</p><p>Features</p><p>High participation level, ideal for movie enthusiasts and roller coaster lovers. Requires good physical stamina with early starts and late returns, exploring major California theme parks and exciting experiences.</p><p><br></p><p>Itinerary Schedule</p><p>DAY1 Universal Studios</p><p>DAY2 Six Flags Magic Mountain</p><p>DAY3 OUE Skyspace Observation Deck - Los Angeles County Museum of Art / Broad Museum - Santa Monica Pacific Park</p><p>DAY4 Warner Bros. Studio Tour Hollywood - Griffith Observatory</p><p>DAY5 Disneyland</p><p>Featured Attractions Introduction</p><p>1. Hollywood Universal Studios</p><p>Introduction: Hollywood Universal Studios is an original movie-themed amusement park located on a film and television studio lot in the northwest suburbs of downtown Los Angeles. It is a must-visit destination for tourists visiting Los Angeles. Inside, besides rides and attractions related to movies and The Wizarding World of Harry Potter, there are also tram tours that take you behind the scenes at Universal Studios production studios and through some real filming locations.</p><p>Address: 100 Universal City Plaza, Universal City, CA 91608, USA</p><p>Ticket Prices: General tickets $109-$129, Fast Track skip-the-line tickets $179-$259</p><p>Opening Hours: 10:00-18:00. Park operating hours vary daily and may open earlier or close later depending on special events at the park. Please refer to the official website for accurate information.</p><p>Transportation: Take the Red Line Metro to Universal City Station. The station is not far from the exit, with a free shuttle bus available that takes only 2-3 minutes to reach Universal Studios.</p><p>Official Website: ***</p><p><br></p><p>2. OUE Skyspace LA - California&#39;s Highest Observation Deck</p><p>Introduction: OUE Skyspace is California&#39;s highest open-air observation deck, located inside the Bank of America Tower in downtown Los Angeles. At over 1,000 feet above ground level, it offers a 360-degree panoramic view of the entire Angel City with no blind spots. Here, you can not only find a small window-side sofa indoors to quietly admire the sunset, but also go outdoors for an intimate encounter with the surrounding skyscrapers.</p><p>The outdoor observation deck features floor-to-ceiling transparent glass surrounding all sides, offering excellent panoramic views. It also includes a viral 70-story suspended transparent slide and angel wings photo spots - making it a must-visit new landmark when exploring Los Angeles.</p><p><br></p><p>Address: 633 W 5th St #840, Los Angeles, CA 90071</p><p>Ticket prices: Adult ticket $25, Child ticket $19. Ticket + slide combo: Adult $33, Child $27.</p><p>Opening hours: 10:00-22:00</p><p>Transportation: Take buses 16, 17, 18, 53, 55, 62, 316, or 355 to the 5th &amp; Grand stop, then walk one minute.</p><p>Attraction website: ***</p><p><br></p><p>**Six Flags Magic Mountain**</p><p><br></p><p>Introduction: Los Angeles is home not only to charming beaches and art exhibitions, but also the most thrilling Six Flags Magic Mountain. Located in Valencia, northern Los Angeles, this amusement park holds the title for the world&#39;s largest collection of roller coasters. To date, nearly 20 roller coasters within the park have won world awards, including Green Lantern (the first 4D roller coaster worldwide), Goliath (longest roller coaster in America), Drop Tower (second highest drop tower globally), and Big Wheel (America&#39;s longest 360° roller coaster). It truly is paradise for adventure lovers!</p><p><br></p><p>Address: 26101 Magic Mountain Pkwy, Valencia, CA 91355</p><p>Ticket prices: Adult $72.99, Child $47.99</p><p>Opening hours: Opens at 10:30 AM; typically closes between 8:00-9:00 PM (specific times vary - check official website).</p><p>Transportation: By car, or first take the Metro Red Line to North Hollywood station, transfer to the North Hollywood 757 Express Bus at Regional Transit (MRTC) station, then transfer to Santa Clarita Express Bus Route 3 or 7 to Six Flags Magic Mountain.</p><p><br></p><p>Website: ***</p><p><br></p><p>4. Warner Bros. Studio Tour Hollywood</p><p>Introduction: Here you&#39;ll have the opportunity to explore Hollywood&#39;s major film production facilities, visit filming locations of many popular TV shows and movies like &quot;The Big Bang Theory,&quot; &quot;Friends,&quot; &quot;Batman,&quot; &quot;Harry Potter,&quot; &quot;2 Broke Girls,&quot; and more. Through guided tours and immersive experiences, learn how beloved American blockbusters come from concept to screen, and get up close with the original production crews and studio lots at the beginning of Hollywood&#39;s magic. If you&#39;re lucky, you might even encounter actors currently filming!</p><p><br></p><p>Address: 3400 Warner Blvd, Burbank, CA 91505</p><p>Ticket Prices: Adults $69, Children $59</p><p>Opening Hours: 8:30 am - 4:30 pm</p><p>Transportation: Take a bus to Olive/Hollywood Way station and you&#39;ll arrive.</p><p><br></p><p>Website: ***</p><p>III. Romantic Journey - Scenic Views/Unique Experiences</p><p>Features</p><p>Romantic and unique, perfect for couples and honeymooners. Visit the most beautiful viewpoints in Los Angeles of all sizes, participate in local specialty experiences, create unforgettable memories, with a focus on enjoying life.</p><p><br></p><p>Itinerary</p><p>DAY 1 Disney California Adventure Park</p><p>DAY 2 Whale and Dolphin Watching Cruise - Long Beach</p><p>DAY 3 OUE Skyspace Observatory - Los Angeles County Museum of Art / Broad Contemporary Art Museum</p><p>DAY 4 Hollywood Walk of Fame - Santa Monica Pacific Park - Griffith Observatory</p><p>DAY 5 Universal Studios</p><p><br></p><p>Featured Attractions</p><p>1. Griffith Observatory</p><p>Introduction: One of Los Angeles&#39; iconic landmarks, perched on a hill northwest of downtown with panoramic views of the entire city. This world-renowned astronomical observatory has been featured in countless Hollywood films. Beyond exploring its interior exhibits about planetary and cosmic phenomena or watching the planetarium&#39;s celestial displays, visitors can access an open-air observation deck for sweeping vistas of downtown Los Angeles and the Hollywood Hills.</p><p>Address: 2800 E Observatory Rd, Los Angeles, CA 90027</p><p>Ticket Price: Free</p><p>Opening Hours: Tue-Fri 12:00 PM - 10:00 PM, Weekends 10:00 AM - 10:00 PM, Closed on Mondays.</p><p>Transportation: Take the downtown DASH bus or Weekend Observatory Shuttle to Griffith Observatory Station.</p><p>Official Website: ***</p><p><br></p><p>2. Disney Land Park</p><p><br></p><p>Overview: Disneyland in Anaheim is the world&#39;s first Disney theme park and the only one built under Walt Disney&#39;s supervision, filled with traditional Disney charm. Within this theme park, you&#39;ll experience more dreamy and fascinating sensations rather than thrilling adventure feelings.</p><p>Address: 1313 Disneyland Dr, Anaheim, CA 92802, USA</p><p>Ticket Price: One-day adult ticket $104, child ticket $98. Two-day adult ticket $225, child ticket $210. One-day two-park ticket $154.</p><p>Opening Hours: 8:00 AM - midnight (California Disneyland), 8:00 AM - 10:00 PM (Disney California Adventure). Operating hours vary by season for each park; please refer to the official website for accurate information.</p><p>Transportation: Take buses 43, 83, 430, or 460 to Disneyland Station.</p><p><br></p><p>Website: ***</p><p><br></p><p>3. Santa Monica</p><p>Introduction: Santa Monica is the beach closest to downtown Los Angeles and the terminus of US Route 66 in North America, with ocean views beloved by Hollywood directors. This area also features Pacific Park - the only amusement park on the water along the West Coast. Countless tourists visiting each year cannot resist enjoying some fun at Pacific Park, making it the top choice for beach visits when traveling to Los Angeles.</p><p><br></p><p>Address: Pacific Coast Hwy, Santa Monica, CA 90401 America</p><p>Admission Price: Free</p><p>Opening Hours: All day long</p><p>Transportation: Take buses 20, 33, or 534 to Ocean / Colorado Station</p><p>Website: ***</p><p><br></p><p>4. Whale and Dolphin Watching Tour from Harbor</p><p>Introduction: Departing from the port at the southern tip of Los Angeles, you can experience a unique whale-watching and dolphin-watching journey. The temperature is comfortable year-round with whales visible throughout all seasons. Gray whales are most commonly seen in winter and spring, while blue whales appear most frequently in summer and fall. If lucky, you might even encounter groups of whales. This area also offers excellent opportunities to spot kingfishers, otters, sea turtles, dolphins, and sea lions. With professional captains and crew members leading the way, you are guaranteed an unforgettable experience.</p><p><br></p><p>Address: 400 Main St, Newport Beach, CA 92661, USA</p><p>Admission Price: Adults $32-36, Children/Seniors $26-30</p><p>Transportation: Take public transportation to Balboa-Palm Station</p><p>Website: ***</p><p>Transportation Options</p><p>Self-driving</p><p>Los Angeles is America&#39;s second-largest city, but public transportation is not well-developed, so the best way to explore is by renting a car and driving yourself.</p><p>Parking lots in western America are much more numerous and larger than those in the east, so even within the city center you won&#39;t worry about finding parking spaces. Tourist attractions also have dedicated parking areas, which is very convenient.</p><p>Uber</p><p>Besides self-driving, using an app to hail a ride is the most convenient option with the best value for money. For exploring within the city center, this is a good choice.</p><p>Metro</p><p>Metro is the general term for Los Angeles public transportation, consisting of subways, light rail, and buses. There are 6 lines in total for subway and light rail combined, with the Red Line and Light Blue Line being the most commonly used. The one-way fare is $1.75 USD.</p><p><br></p><p>Accommodation Options</p><p>Los Angeles is very large, and public transportation cannot reach every corner, so choosing where to stay is especially important. If you want to experience coastal living, it is recommended to stay near Santa Monica. Those seeking trendy experiences and famous hotels should consider the Beverly Hills area.</p><p>Beverly Hills: This area features numerous attractions concentrated in one location, with abundant options for shopping and dining. The transportation system is well-developed, making it the annual venue for the Academy Awards. Though Beverly Hills is a renowned affluent district, hotel prices remain reasonable. The surrounding accommodation landscape is mature and safe, offering everything from convenient hotels to ultra-luxury stays.</p><p><br></p><p>Koreatown: Located in downtown Los Angeles, this area has fewer attractions but offers more affordable hotel rates. It&#39;s conveniently positioned—Beverly Hills and Santa Monica are not far to the west, downtown is nearby to the east, and Hollywood lies just north. The similar distances make it ideal for travelers driving themselves. Plus, Koreatown boasts an extensive selection of dining options that stay open late into the evening.</p><p><br></p><p>Santa Monica: This is the most popular beach destination locally, perfect for visitors seeking a vacation atmosphere and coastal lifestyle experience.</p><p><br></p><p>Conclusion</p><p>After reading this guide, have you discovered a travel theme that suits your preferences? Then pack this itinerary and set off for Los Angeles to experience the carefree California coast lifestyle of the West Coast!</p>
+        
+
+        <a class="backLink" href="list-1.html">← Back to Los Angeles</a>
+      </article>
+    </main>
+  </body>
+</html>

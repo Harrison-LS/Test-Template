@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <title>Being an Influencer in LA | Checking In at Los Angeles' Famous Influencer Wall Photo Spot</title>
+    <style>
+      :root {
+        --paper: #f5f1eb;
+        --ink: #163d36;
+        --body: #3f3a34;
+        --muted: #8a8379;
+        --line: #ddd5ca;
+        --accent: #d9782f;
+        --white: #fffaf4;
+        --shadow: 0 22px 70px rgba(28, 25, 20, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        line-height: 1.72;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .hero {
+        min-height: clamp(330px, 48vw, 560px);
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        padding: clamp(28px, 7vw, 70px) clamp(24px, 8vw, 76px);
+        background: #28463f;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.12)),
+          url("");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .heroInner {
+        position: relative;
+        width: min(900px, 100%);
+        color: #ffffff;
+      }
+
+      .heroLocation {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 24px;
+        color: rgba(255, 255, 255, 0.78);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .heroLocation svg {
+        width: 17px;
+        height: 17px;
+        color: #f0a45f;
+      }
+
+      h1 {
+        max-width: 880px;
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(30px, 4.8vw, 54px);
+        font-weight: 900;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .brief {
+        width: min(760px, 100%);
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 18px;
+        color: #5a5148;
+        font-size: clamp(17px, 1.9vw, 20px);
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.58;
+      }
+
+      .articleWrap {
+        width: min(900px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: clamp(42px, 6vw, 68px) 0 72px;
+      }
+
+      .content {
+        width: min(760px, 100%);
+        color: var(--body);
+        font-size: clamp(16px, 1.8vw, 18px);
+        line-height: 1.5;
+      }
+
+      .content p {
+        margin: 0 0 12px;
+      }
+
+      .content h2,
+      .content h3,
+      .content h4 {
+        margin: 46px 0 18px;
+        color: var(--ink);
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+
+      .content h2 {
+        font-size: clamp(28px, 4vw, 38px);
+      }
+
+      .content h3 {
+        font-size: clamp(23px, 3vw, 30px);
+      }
+
+      .content ul,
+      .content ol {
+        margin: 0 0 30px;
+        padding-left: 28px;
+      }
+
+      .content li {
+        margin: 8px 0;
+      }
+
+      .content blockquote {
+        margin: 34px 0;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 20px;
+        color: #5a5148;
+        font-style: italic;
+      }
+
+      .content img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 42px 0 12px;
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+      }
+
+      .content figure {
+        margin: 42px 0;
+      }
+
+      .content figure img {
+        margin: 0 0 12px;
+      }
+
+      .content figcaption {
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .backLink {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 46px;
+        border-top: 1px solid var(--line);
+        padding-top: 28px;
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.18em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .backLink:hover {
+        color: var(--accent);
+      }
+
+      @media (max-width: 720px) {
+        .hero {
+          min-height: 420px;
+          padding: 30px 24px;
+        }
+
+        .articleWrap {
+          width: min(100% - 28px, 900px);
+          padding-bottom: 48px;
+        }
+
+        .content {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="heroInner">
+        <p class="heroLocation">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+            />
+          </svg>
+          <span>Los Angeles</span>
+        </p>
+        <h1>Being an Influencer in LA | Checking In at Los Angeles' Famous Influencer Wall Photo Spot</h1>
+      </div>
+    </header>
+
+    <main class="articleWrap">
+      
+
+      <article class="content">
+        
+          <p>This is a travelogue mainly covering LA movie scene photo spot guides, so some purely sightseeing items are omitted.</p><p><br></p><p>For girls who really want to recreate movie scenes, you must stay in LA for several more days.</p><p><br></p><p>If you choose to drive from SF to LA like I did, plan an extra day because LA traffic isn&#39;t fake. Remember the scene at the beginning of the movie where people got out of cars and danced during the traffic jam? Real-life traffic jams aren&#39;t that pleasant.</p><p><br></p><p>Recreating film locations presents significant challenges since filming spots are dispersed across different directions. The Lighthouse Café is particularly distant from downtown, making it difficult to capture iconic moments. Visitors should begin their return journey before 4 PM to avoid the afternoon rush hour caused by nearby attractions like St Monica Beach and Venice Beach. These beaches make for an ideal combined itinerary.</p><p><br></p><p>The Observatory draws substantial crowds, requiring ample time allocation. The famous dance location where characters escaped the party sits midway up the mountain path, surrounded by numerous photographers and vehicles. Local wildlife warnings suggest caution about lingering in this area.</p><p><br></p><p>From below starts LA near downtown photo-friendly influencer walls and other photo spots!</p><p><br></p><p>First stop Melrose Avenue</p><p>The most famous influencer wall gathering place has to be Melrose Avenue. The two rainbow wall photos below were at the Paul &amp; Smith entrance - originally all pink, specially painted in rainbow colors to celebrate the gay parade, supposedly will last a month! If security guards are present, they&#39;ll prohibit using DSLR cameras and only allow phone photography, but the guards often aren&#39;t there, so everyone can time it right to go!</p><p><br></p><p>The wall below is reportedly new, also on this street but I don&#39;t know which store exactly - everyone can keep an eye out for it.</p><p><br></p><p>This cat wall seems many people have photographed; it&#39;s a bit dirty and needs post-processing filters. When photographing this wall, just imagine yourself as a cute little kitty!</p><p><br></p><p>The three photos below were taken in the neighborhood near Alfred Tea Room on Melrose. LA has many houses with very high color saturation - great for photography. Alfred Tea Room has two locations on Melrose; one mainly sells coffee, the other sells milk tea. I went to the milk tea shop; taste is average but it&#39;s still an influencer store. The exterior is very unique and many people take photos there.</p><p><br></p><p>The photo below was taken at Alfred Tea Room&#39;s exterior wall.</p><p><br></p><p>Is this skirt familiar?</p><p>Yes, that&#39;s the dress Emma Stone and Ryan Gosling wore on their date at the Griffith Observatory! There are many vintage cars on LA streets, and there are also many vintage shops on Melrose Street. LA girls are more fashionable and pay more attention to dressing up than girls from other parts of America (foreign friends say LA girls are typically &quot;high maintenance&quot;). Wearing La La Land dresses is quite suitable here. This wall is near the Paul &amp; Smith pink wall.</p><p><br></p><p>This wall is very tall, so photographers need to stand in the middle of the road to capture the full shot. Another option is to take it from a side angle. The traffic on this street isn&#39;t heavy, so quickly snapping two photos while crossing the road is feasible. Many people queue up to take pictures here, so you should be shameless and not too shy when posing in front of everyone. There were too many people there, so I hesitated to take more photos. It was a pity that I only took two before leaving. Girls who go again must take plenty of photos; otherwise, you won&#39;t find any images you love later. On my way back to the car, I changed into another dress—this is the pink backless dress Emma Stone and Ryan Gosling wore while strolling on the bridge, which is also my favorite one.</p><p><br></p><p>This wall is near Made in LA but on the opposite street. The clothing rule for taking photos on this street is to wear highly saturated colors but preferably solid colors. This works well against both gray backgrounds like Made in LA and rainbow walls like the one shown below.</p><p><br></p><p>This wall is also near Made in LA, and the color contrasts are quite beautiful!</p><p>Cute Simpsons mural wall! A bit away from Made in LA, this spot really shows how important it is to wear solid colors - I brought a floral dress but couldn&#39;t use it at all~</p><p><br></p><p>The colorful walls near the Simpson wall are great for posing when you can&#39;t think of poses - moving around while taking photos works well!</p><p><br></p><p>One angel wings wall is on Melrose and another in downtown near Philz Coffee. This wall is super popular/instagrammable and looks great in photos, with many people queuing up. As always, be bold with your poses!</p><p><br></p><p>This wall is directly across from Philz Coffee on Hope Street.</p><p><br></p><p>This pink one is the angel wings wall on Melrose Avenue!</p><p><br></p><p>Second stop: Downtown</p><p><br></p><p>Downtown has an area called Art District with many excellent brunch spots (I also recommend a few in Silver Lake), so you can have brunch early and then start your beautiful photo journey! The white floral dress below from Reformation was purchased on Melrose Avenue, haha.</p><p>Parking is very difficult in this district; overall, parking in LA is quite troublesome. You cant park on yellow or red lines on the street, and you need to carefully observe that each street has different time limits for parking. Melrose generally requires paid parking charged by the hour. In Art District here, italmost impossible to find free on-street parking spots. We circled around several times before finding a parking lot for $10 where you can park as long as you want. Even the paid spots were very scarce; when we left, cars were lined up outside waiting to get in but no spots available. The skill for finding parking spots isnt just about finding empty spaces, but also watching which cars are preparing to leave; when you see a car that is about to depart, park nearby and use your turn signals (left or right) to indicate youve taken the spot. Graffiti walls abound throughout this area. The graffiti wall inside our parking lot blends seamlessly with vehicles parked beneath it.</p><p><br></p><p>Art District offers numerous design-forward small shops and photogenic walls, perfect for leisurely exploration and capturing moments.</p><p><br></p><p>The next two points are in downtown but about a 15-minute walk from Art District. The first point is Bradbury Building, an extremely historic structure where many films were shot. Its interior elevator no longer works. Right beside it is Blue Bottle Coffee; I tested the cold brew and hot latte and both were excellent - you can drink coffee while exploring. Since the top has glass windows, the lighting inside the building is beautiful. We saw several models and photographers taking pictures there; in the second photo below are those two models standing on the stairs waiting for the photographer.</p><p>The next few photos were taken by myself at the same angles. This spot is definitely great for photography! Girls should choose fairy-like long dresses similar to what the model wore in the second photo with the white dress - these will absolutely create images of fairies descending from heaven! This is my favorite spot in LA!</p><p><br></p><p>One attraction very close to Bradbury Building is Angel&#39;s Flight, which appeared for a few seconds in La La Land and was one of the locations where Jennifer Lawrence and Ryan Gosling had their date scene. It&#39;s actually out of service now, currently enclosed for renovation, so while you could enter and take photos inside before, it&#39;s not allowed anymore, though it might reopen in the future.</p><p><br></p><p>Climbing up Angel&#39;s Flight reveals a beautiful indoor park - several office buildings surround a pool, with a leisure and entertainment area above the pool. Many people sit by the pool eating and chatting, making it a great spot to take some photos!</p><p><br></p><p>As you can see from this photo, the miniature train station has been fenced off so no entry is allowed, so you can only take a couple of shots from outside. You can choose the saturated orange color of this train station as your background!</p><p><br></p><p>Third Stop: The Springs</p><p>I came here specifically for the influencer wall - the colorful dotted wall - but couldn&#39;t find it when I arrived. I only discovered the day before leaving LA that the dot wall isn&#39;t on the exterior at all, you need to go inside this store and look for the wall within. Hoping future visitors can find it!</p><p>Despite not being able to capture the dotted wall, we accidentally discovered a completely pink building near The Springs where many people were taking photos. Here, I changed into the last La La Land-style dress I bought - the yellow one Gwyneth Paltrow wore to the party where Ryan Gosling was the performing guest and then both ran out together to dance on the mountain.</p><p><br></p><p>Next to the pink building is a very cute mural wall! The best part is that it even has a recessed doorway, perfect for girls to step inside and blend seamlessly with the entire wall. The dress color happens to match so well~</p><p><br></p><p>This wall is across from the pink building, so everyone can take photos here too!</p><p><br></p><p>Photo spot requiring confirmation before visiting:</p><p><br></p><p>After arriving in LA, my friend told me there&#39;s a great photo location at Elsinore Park View - a park near Chinatown with a tree swing hanging from above that&#39;s perfect for photos and offers a view of the entire Los Angeles. When we drove up early in the morning, we discovered you need to climb an additional small hill with very steep terrain, sandy ground, and no clear path. After reaching the top, we found the swing had broken and only two ropes remained. So girls, if you&#39;re planning to go there, please check first whether it&#39;s been repaired, otherwise you&#39;ll be going for nothing like me! If you do visit, definitely wear sneakers with good grip since going up and down is slightly dangerous.</p><p>Final Words</p><p>I spent too little time in LA and didn&#39;t get to try many places. Girls who are interested can still go listen to stand-up comedy—I just didn&#39;t have time for that on this trip. LA is a very fashionable city; you see people everywhere in New York wearing t-shirts, shorts, and flip-flops, but I hardly saw any of that in LA. Everyone dresses beautifully and appropriately here, so bring your most beautiful skirts to LA to take lots of photos! With these walls as backgrounds, each of us would be internet celebrities hahaha!</p>
+        
+
+        <a class="backLink" href="list-1.html">← Back to Los Angeles</a>
+      </article>
+    </main>
+  </body>
+</html>

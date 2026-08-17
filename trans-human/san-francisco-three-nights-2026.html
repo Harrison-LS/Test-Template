@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="I visited San Francisco for my son's college graduation. My brother was able to come from Japan as well, and the trip was great with all the nice weather." />
+    <title>San Francisco Three Nights 2026</title>
+    <style>
+      :root {
+        --paper: #f5f1eb;
+        --ink: #163d36;
+        --body: #3f3a34;
+        --muted: #8a8379;
+        --line: #ddd5ca;
+        --accent: #d9782f;
+        --white: #fffaf4;
+        --shadow: 0 22px 70px rgba(28, 25, 20, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        line-height: 1.72;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .hero {
+        min-height: clamp(330px, 48vw, 560px);
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        padding: clamp(28px, 7vw, 70px) clamp(24px, 8vw, 76px);
+        background: #28463f;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.12)),
+          url("https://imagedelivery.net/TdQQyAHCLdZMYcdCJx_3LA/6afbcb66-d05b-459e-4f9b-b32ee9a08f00/public");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .heroInner {
+        position: relative;
+        width: min(900px, 100%);
+        color: #ffffff;
+      }
+
+      .heroLocation {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 24px;
+        color: rgba(255, 255, 255, 0.78);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .heroLocation svg {
+        width: 17px;
+        height: 17px;
+        color: #f0a45f;
+      }
+
+      h1 {
+        max-width: 880px;
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(30px, 4.8vw, 54px);
+        font-weight: 900;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .brief {
+        width: min(760px, 100%);
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 18px;
+        color: #5a5148;
+        font-size: clamp(17px, 1.9vw, 20px);
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.58;
+      }
+
+      .articleWrap {
+        width: min(900px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: clamp(42px, 6vw, 68px) 0 72px;
+      }
+
+      .content {
+        width: min(760px, 100%);
+        color: var(--body);
+        font-size: clamp(16px, 1.8vw, 18px);
+        line-height: 1.5;
+      }
+
+      .content p {
+        margin: 0 0 0.5em;
+      }
+
+      .content h2,
+      .content h3,
+      .content h4 {
+        margin: 46px 0 18px;
+        color: var(--ink);
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+
+      .content h2 {
+        font-size: clamp(28px, 4vw, 38px);
+      }
+
+      .content h3 {
+        font-size: clamp(23px, 3vw, 30px);
+      }
+
+      .content ul,
+      .content ol {
+        margin: 0 0 30px;
+        padding-left: 28px;
+      }
+
+      .content li {
+        margin: 8px 0;
+      }
+
+      .content blockquote {
+        margin: 34px 0;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 20px;
+        color: #5a5148;
+        font-style: italic;
+      }
+
+      .content img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 42px 0 12px;
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+      }
+
+      .content figure {
+        margin: 42px 0;
+      }
+
+      .content figure img {
+        margin: 0 0 12px;
+      }
+
+      .content figcaption {
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .backLink {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 46px;
+        border-top: 1px solid var(--line);
+        padding-top: 28px;
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.18em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .backLink:hover {
+        color: var(--accent);
+      }
+
+      @media (max-width: 720px) {
+        .hero {
+          min-height: 420px;
+          padding: 30px 24px;
+        }
+
+        .articleWrap {
+          width: min(100% - 28px, 900px);
+          padding-bottom: 48px;
+        }
+
+        .content {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="heroInner">
+        <p class="heroLocation">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+            />
+          </svg>
+          <span>San Francisco</span>
+        </p>
+        <h1>San Francisco Three Nights 2026</h1>
+      </div>
+    </header>
+
+    <main class="articleWrap">
+      
+      <p class="brief">I visited San Francisco for my son's college graduation. My brother was able to come from Japan as well, and the trip was great with all the nice weather.</p>
+      
+
+      <article class="content">
+        
+          <p>Our Hawaiian Airlines flight to San Francisco was scheduled for early afternoon, so it was a pretty simple itinerary for us.</p><p>To my delight, the meal included a hot chicken pesto sandwich, which is my favourite. I thought it was really good.</p><p>When we arrived in San Francisco at approximately 8:30 p.m., my husband, who came a bit earlier, picked us up from the airport with our son, and we drove to an In-N-Out by the hotel for dinner. My sports-loving brother was particularly happy because he knew it was one of Shohei Ohtani's favourites, which made the stop even more special.</p><p>In-N-Out is a good deal considering the quality compared to the fast food options back in Hawaii. Even a McDonald's combo meal is over $10 in Hawaii and prices have definitely gone up everywhere. McDonald's is probably one of the worst options for fast food, so it was a nice change to find something better.</p><p><img src="https://imagedelivery.net/TdQQyAHCLdZMYcdCJx_3LA/c9de614d-0cb3-4831-cebb-95f5e8137e00/public" alt="San Francisco arrival" loading="lazy"></p>
+<p>Perhaps it was my hunger, but this was easily the best In-N-Out I have ever had! This place was almost full even though it was a weekday and after 9 p.m.</p><p>Picking where we were going to stay was difficult because my brother was traveling with us. We thought about getting an Airbnb and hotels downtown, but my husband was really set on renting a car, so we booked a hotel by the airport. I didn't really look forward to it, but it actually ended up being a decent option because they had free breakfast, airport shuttle, and laundry too. The hotel is a bit old but the rooms were decent.</p><p>The bathroom was nice and so was the bathtub. I found some weird brown stains on the tub wall, but the tub was actually really clean.</p><p><img src="https://imagedelivery.net/TdQQyAHCLdZMYcdCJx_3LA/8c7817a5-8815-485c-86e9-9501ab06af00/public" alt="Airport hotel stay" loading="lazy"></p>
+<p>The bathtub was clean and spacious, but there was some sort of stain on the wall that looked like a water stain.</p><p>The room came with a coffee maker, microwave, and mini-refrigerator.</p><p>There were also a lot of hangers.</p><p>The next day, I walked around to explore the hotel more. The lobby was big.</p><p>I didn\'t expect more than continental breakfast, but they offered a few different egg options and sausage or potatoes on some days.</p><p>There was yogurt, juice, and items for your own waffles as well.</p><p>Breakfast included was a plus in expensive San Francisco.</p><p>Hotel’s exterior.</p><p>My last visit was rainy and cold, and this visit was sunny and pleasant. It was cool, but not too chilly.</p><p>Shuttle-bus schedule and the shuttle stops at some nearby hotels too. </p><p><img src="https://imagedelivery.net/TdQQyAHCLdZMYcdCJx_3LA/c3083a9b-e9ee-48c2-498b-786377b7a100/public" alt="San Francisco hotel stay" loading="lazy"></p>
+<p>Shuttle bus schedule. The service also stops at some nearby hotels.</p> <p>The laundry was a huge help. We never had to wait for anyone else to finish the. Each wash took 30 minutes and each dry took 30 minutes, at $2 per cycle.</p> <p>There was also a gym. My husband especially appreciated that, along with the complimentary parking.</p> <p>Then it was time for a half day of sightseeing with my daughter and brother, who were in San Francisco for the first time. My husband dropped us off at Union Square, and the three of us went off on our own.</p> <p>This was my third time in San Francisco but I had only been to Union Square once on my first trip almost 30 years ago. I couldn’t remember anything. Was it always like this?</p><p><img src="https://imagedelivery.net/TdQQyAHCLdZMYcdCJx_3LA/984cac05-5052-4c78-d1c2-0c9e37bbcf00/public" alt="Union Square sightseeing" loading="lazy"></p>
+<p>I had heard some retail stores closed due to safety concerns, but Macy’s and other high-end stores were open. Maybe things have calmed down a bit, and it's nice to see.</p> <p>My daughter was excited to visit a collectible-figure store, especially since she can’t find one in Hawaii.</p> <p>We finally got to ride the cable car! A highlight is seeing the operator hand-crank the cable car for the return trip.</p> <p>It was funny because I wanted to grab the running board and rail stand like this but only younger people were doing it so I didn't—haha.</p> <p>This is our cable car.</p> <p>We were lucky to get outer seats.</p> <p>The ride was awesome and the cable car provided a great view of the city's lovely buildings.</p><p><img src="https://imagedelivery.net/TdQQyAHCLdZMYcdCJx_3LA/b065209f-c83d-4516-0bb4-06ac47681e00/public" alt="San Francisco cable car" loading="lazy"></p>
+<p>I got off at the very end of the line and walked to my next stop. San Francisco is full of hills, but that is part of its charm.</p><p>Even the fire trucks have a stylish, vintage feel.</p><p>So beautiful.</p><p>I got to my favorite street, Lombard St. I wanted to walk to the top and then go down but the steep hills got me tired so I just gave up and laughed. Definitely a reminder that I need to exercise more.</p><p>It was even more beautiful because the sun was shining.</p><p><img src="https://imagedelivery.net/TdQQyAHCLdZMYcdCJx_3LA/907c6510-4dd2-4f77-01d8-61cd548b9600/public" alt="Lombard Street" loading="lazy"></p>
+<p>This was my first time using a self-driving Waymo from here to downtown where my husband was waiting. It was so exciting, and I felt totally safe the entire time! I know the photo doesn’t do it justice, but I had a super smooth ride. The experience was a bit pricey but considering I’ll remember it forever, it was worth it. Regular rideshares cost about the same but the wait for Waymo was a lot shorter. When we finally got moving, we received a little too much traffic in the narrow space in front of us, but the good news is it was another Waymo, and they let us go.</p><p>We went to Fisherman’s Wharf next.</p><p><img src="https://imagedelivery.net/TdQQyAHCLdZMYcdCJx_3LA/206b8369-baf8-4488-e187-1666bc960d00/public" alt="Waymo ride" loading="lazy"></p>
+<p>Next stop was Fisherman's Wharf.</p><p>Last year when we came to Fisherman's Wharf, I remember eating at the restaurant that had closed down and moved next door, so we tried this place instead.</p><p>We got the classic clam chowder in a sourdough bread bowl, and some fried calamari. The portions were large, and both were really good.</p><p>Unlike some other places, we could see Alcatraz Island from here.</p><p>We also really liked walking by the water.</p><p>But the best part was...</p><p>...the sea lions! My daughter is really into animals, and even though it was pretty cold next to the water, she was really happy to sit and watch them for a really long time. I was happy she was enjoying it.</p><p><img src="https://imagedelivery.net/TdQQyAHCLdZMYcdCJx_3LA/7d5f0616-95db-4e4e-c92d-6c71ad7fda00/public" alt="Fisherman’s Wharf sea lions" loading="lazy"></p>
+<p>When I was going back to the hotel, I noticed a really old and grand building and I wondered what it was. Turns out it was City Hall! It's on a whole different scale compared to the one in Hawaii.</p><p>After a long rest, we went out to get souvenirs. I forgot to take pictures, but we shopped a lot at the nearby Trader Joe's. It was an enjoyable shopping experience because their food selection is really good, unique, and often reasonably priced.</p><p>After that, we had dinner at the Chinese restaurant next to the hotel. Because it was by the water, the view was lovely too.</p><p><img src="https://imagedelivery.net/TdQQyAHCLdZMYcdCJx_3LA/d36668a8-cead-42ad-8fe3-2ab0233d6400/public" alt="City Hall and Trader Joe’s" loading="lazy"></p>
+<p>Many Indian and Chinese restaurants in San Francisco may add to the quality of the food, and this is certainly true for this stir-fry of pork, eggplant, and green beans, which was excellent.</p> <p>Equally delicious was the dish with tofu and squid. We also got fried rice and chow fun, and all of the dishes were excellent.</p> <p>Graduation day was the following day.<br /> We went to breakfast in the breakfast area, which got so busy, a few tables and chairs were set up in the terrace outside.</p> <p>Even landing and take-off plane breakfast was a nice experience.</p> <p>First we went to our son's college. It was overcast and much colder than by the hotel where we got our first sample of San Francisco weather. Perhaps not so surprisingly.</p><p><img src="https://imagedelivery.net/TdQQyAHCLdZMYcdCJx_3LA/80729da6-b99a-457b-5edf-f4eaea54dd00/public" alt="San Francisco food and graduation" loading="lazy"></p>
+<p>We all went to my son’s college first. As expected, it was overcast and much colder than near our hotel-the typical San Francisco welcome!</p> <p>Like last time, we had a meal from the cafeteria. I love it there!</p> <p>The buffet was amazing. And so was the salad bar. It was full of vegetables and I think I counted at least 5 different dessert options. And, of course, there were drinks too.</p> <p>Then, we went to the campus bookstore and bought some college branded jackets. My older son was really happy to get something and was surprised at how big an American university campus can be.</p> <p>Later, we wore the graduation gowns and took some memories photos around the campus. There were photo shoots happening everywhere.</p><p><img src="https://imagedelivery.net/TdQQyAHCLdZMYcdCJx_3LA/7e398a81-91da-49c8-0d71-ea5e607bc700/public" alt="San Francisco college campus" loading="lazy"></p>
+He said that the American ballparks were beautiful. \We all went to the train together. The speech was held at the baseball stadium. Then, everyone took photographs around the college while everyone else took photographs as well. There were guests too. There are other places that have more than seven thousand graduates! I said \\"Congratulations son!" After that, we finished the day with dinner. We walked through a lot of people to take pictures with him and his friends. I really appreciated him, but it was a great picture, so it was awesome that we found him, but it was really hard to find him. He was a challenge.  My brother really liked going to Oracle Park, and it made me really happy. He said American ballparks are beautifully maintained.  The speech was held at the baseball stadium. \\"Here it comes\\" I said.   We all took the train to the place together.   Friends joined in as well. \\"Congratulations to all!\\" There were lots of guests too and \there were a lot of graduates as well.  There were more than seven thousand.
+<p><img src="https://imagedelivery.net/TdQQyAHCLdZMYcdCJx_3LA/52ef7c96-0b1f-40d1-0eba-fe38ada9cc00/public" alt="Graduation at Oracle Park" loading="lazy"></p>
+<p>Then, our whole family along with his girlfriend went to a dinner to celebrate.</p><p>We picked an Italian restaurant that my son has been wanting to go to.</p><p>I didn’t take a lot of pictures, but here is the mushroom risotto I got. The food and atmosphere were amazing.<br /><br />After dropping my son and the rest at their hotel, and helping my daughter get something she forgot in a Waymo, we got back to the hotel after 11 p.m. We were tired, but it was a great day.</p><p><img src="https://imagedelivery.net/TdQQyAHCLdZMYcdCJx_3LA/28e0b9dd-8ad3-42d2-ed13-9c6b29dec300/public" alt="Celebratory Italian dinner" loading="lazy"></p>
+<p>The following day, my brother was the first to leave. He was the first out of us three. It was my daughter and I who went to the Las Vegas flight. That’s when I made my first mistake. I thought my suitcase would make it through the low-cost airline’s carry-on limit, but the wheels went over the limit. I was forced to pay $79 for checking it. It was even more painful because I measured it with a tape.  I could have cried.</p><p>Still, I figured I could just be optimistic about it. I was hoping that meant we’d have some good luck waiting for us in Vegas.</p><p><img src="https://imagedelivery.net/TdQQyAHCLdZMYcdCJx_3LA/aee48ea2-504f-4454-171f-df924cb98c00/public" alt="Las Vegas travel" loading="lazy"></p>
+<p>Before Memorial Day, I prepared for the large crowds expected at the airport by arriving early. With lots of time left to wait, I was glad to see that there were a lot of shops at SFO to help kill time.</p><p>There were a variety of fresh, healthy meals available at one of the airport's restaurants. They looked great and tasted even better!</p><p>There were also many trendy and fashionable gifts available at the souvenir shops.</p><p>My time in San Francisco was great and now I am on to Las Vegas!</p><p><img src="https://imagedelivery.net/TdQQyAHCLdZMYcdCJx_3LA/5336a332-695f-48e7-73f8-9d58e437ee00/public" alt="San Francisco International Airport" loading="lazy"></p>
+<p>Our time in San Francisco was amazing.</p> <p>Farewell San Francisco, we are headed to Las Vegas next!</p><p><img src="https://imagedelivery.net/TdQQyAHCLdZMYcdCJx_3LA/20d29ab4-9280-41f0-1961-ca7650457100/public" alt="San Francisco to Las Vegas" loading="lazy"></p>
+        
+
+        <a class="backLink" href="list-1.html">← Back to San Francisco</a>
+      </article>
+    </main>
+  </body>
+</html>

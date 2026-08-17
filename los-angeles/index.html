@@ -1,4 +1,7 @@
 
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,7 +11,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-	<title>Callie HTML Template</title>
+	<title>Los Angeles | San Francisco</title>
 
 	<!-- Google font -->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CMuli:400,700" rel="stylesheet">
@@ -22,6 +25,60 @@
 	<!-- Custom stlylesheet -->
 	<link type="text/css" rel="stylesheet" href="../css/style.css" />
 
+	<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" crossorigin="anonymous"></script>
+	<script>
+		window.googletag = window.googletag || { cmd: [] };
+
+		googletag.cmd.push(function () {
+			googletag.defineSlot(
+				'/23323840973/ca-pub-5241421136842676-tag/green.letreco.cc-Top-1',
+				[[300, 100], [336, 280], [320, 100], [300, 250], 'fluid'],
+				'div-top-1'
+			).addService(googletag.pubads());
+
+			var anchorSlot = googletag.defineOutOfPageSlot(
+				'/23323840973/ca-pub-5241421136842676-tag/green.letreco.cc-Bottom-Anchor',
+				googletag.enums.OutOfPageFormat.BOTTOM_ANCHOR
+			);
+
+			if (anchorSlot) {
+				anchorSlot.addService(googletag.pubads());
+			}
+
+			var interstitialSlot = googletag.defineOutOfPageSlot(
+				'/23323840973/ca-pub-5241421136842676-tag/green.letreco.cc-Interstitial',
+				googletag.enums.OutOfPageFormat.INTERSTITIAL
+			);
+
+			if (interstitialSlot) {
+				interstitialSlot.addService(googletag.pubads());
+			}
+
+			googletag.pubads().enableSingleRequest();
+
+			googletag.pubads().enableLazyLoad({
+				fetchMarginPercent: 200,
+				renderMarginPercent: 100,
+				mobileScaling: 2
+			});
+
+			googletag.pubads().collapseEmptyDivs(true);
+			googletag.enableServices();
+
+			googletag.display('div-top-1');
+
+			if (anchorSlot) {
+				googletag.display(anchorSlot);
+			}
+
+			if (interstitialSlot) {
+				googletag.display(interstitialSlot);
+			}
+		});
+	</script>
+
+	
+
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 	<!--[if lt IE 9]>
@@ -32,6 +89,11 @@
 </head>
 
 <body>
+	<center>
+	<!-- /23323840973/ca-pub-5241421136842676-tag/green.letreco.cc-Top-1 -->
+	<div id="div-top-1" style="min-width:300px;min-height:100px;"></div>
+	</center>
+
 	<!-- HEADER -->
 	<header id="header">
 		
@@ -44,7 +106,7 @@
 				<div class="container">
 					<!-- logo -->
 					<div class="nav-logo">
-						<a href="../index.html" class="logo brand-text"><span class="brand-pink">S</span>an <span class="brand-blue">F</span>rancisc<span class="brand-gold">o</span></a>
+						<a href="/los-angeles/index.html" class="logo brand-text"><span class="brand-pink">S</span>an <span class="brand-blue">F</span>rancisc<span class="brand-gold">o</span></a>
 					</div>
 					<!-- /logo -->
 
@@ -71,7 +133,7 @@
 				<div class="container">
 					<!-- nav -->
 					<ul class="nav-menu">
-						<li><a href="../index.html">Home</a></li>
+						<li><a href="/los-angeles/index.html">Home</a></li>
 						<li class="has-dropdown megamenu">
 							<a href="#">Travel</a>
 							<div class="dropdown tab-dropdown">
@@ -169,6 +231,10 @@
 								</div>
 							</div>
 						</li>
+						<li><a href="/los-angeles/about.html">About</a></li>
+						<li><a href="/los-angeles/contact.html">Contact</a></li>
+						<li><a href="/los-angeles/privacy-policy.html">Privacy Policy</a></li>
+						<li><a href="/los-angeles/terms-of-use.html">Terms of Use</a></li>
 					</ul>
 					<!-- /nav -->
 				</div>
@@ -178,14 +244,16 @@
 			<!-- Aside Nav -->
 			<div id="nav-aside">
 				<ul class="nav-aside-menu">
-					<li><a href="../index.html">Home</a></li>
+					<li><a href="/los-angeles/index.html">Home</a></li>
 					<li class="has-dropdown"><a>Categories</a>
 						<ul class="dropdown">
 							<li><a href="#">Travel</a></li>
 						</ul>
 					</li>
-					<li><a href="../about.html">About Us</a></li>
-					<li><a href="../contact.html">Contacts</a></li>
+					<li><a href="/los-angeles/about.html">About</a></li>
+					<li><a href="/los-angeles/contact.html">Contact</a></li>
+					<li><a href="/los-angeles/privacy-policy.html">Privacy Policy</a></li>
+					<li><a href="/los-angeles/terms-of-use.html">Terms of Use</a></li>
 				</ul>
 				<button class="nav-close nav-aside-close"><span></span></button>
 			</div>
@@ -437,11 +505,9 @@
 		<div class="container">
 			<!-- row -->
 			<div class="row">
-				<div class="col-md-8">
+				<div class="col-md-8" id="index-feed-list" data-total-pages="0">
 					
-					<div class="section-row loadmore text-center">
-						<a href="#" class="primary-button">Load More</a>
-					</div>
+					
 				</div>
 			</div>
 			<!-- /row -->
@@ -456,16 +522,16 @@
 		<div class="footer-bottom row">
 			<div class="col-md-6 col-md-push-6">
 				<ul class="footer-nav">
-					<li><a href="../index.html">Home</a></li>
-					<li><a href="../about.html">About Us</a></li>
-					<li><a href="../contact.html">Contacts</a></li>
+					<li><a href="/los-angeles/index.html">Home</a></li>
+					<li><a href="/los-angeles/about.html">About Us</a></li>
+					<li><a href="/los-angeles/contact.html">Contacts</a></li>
 					<li><a href="#">Advertise</a></li>
-					<li><a href="#">Privacy</a></li>
+					<li><a href="/los-angeles/privacy-policy.html">Privacy</a></li>
 				</ul>
 			</div>
 			<div class="col-md-6 col-md-pull-6">
 				<div class="footer-copyright">
-					Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> &amp; distributed by <a href="https://themewagon.com" target="_blank">ThemeWagon</a>
+					Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved
 				</div>
 			</div>
 		</div>
@@ -479,6 +545,31 @@
 	<script src="../js/bootstrap.min.js"></script>
 	<script src="../js/jquery.stellar.min.js"></script>
 	<script src="../js/main.js"></script>
+	<script>
+		(function () {
+			var list = document.getElementById("index-feed-list");
+			var button = document.getElementById("index-load-more");
+			var wrapper = document.getElementById("index-load-more-wrap");
+
+			if (!list || !button || !wrapper) return;
+
+			var currentPage = 1;
+			var totalPages = Number(list.getAttribute("data-total-pages")) || 1;
+
+			button.addEventListener("click", function () {
+				currentPage += 1;
+				var nextItems = list.querySelectorAll('[data-page="' + currentPage + '"]');
+
+				for (var index = 0; index < nextItems.length; index += 1) {
+					nextItems[index].hidden = false;
+				}
+
+				if (currentPage >= totalPages) {
+					wrapper.hidden = true;
+				}
+			});
+		})();
+	</script>
 
 </body>
 

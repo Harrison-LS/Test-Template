@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Muni Bus" />
+    <title><p>San Francisco Travel Tips & Public Transportation Guide</p></title>
+    <style>
+      :root {
+        --paper: #f5f1eb;
+        --ink: #163d36;
+        --body: #3f3a34;
+        --muted: #8a8379;
+        --line: #ddd5ca;
+        --accent: #d9782f;
+        --white: #fffaf4;
+        --shadow: 0 22px 70px rgba(28, 25, 20, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        line-height: 1.72;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .hero {
+        min-height: clamp(330px, 48vw, 560px);
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        padding: clamp(28px, 7vw, 70px) clamp(24px, 8vw, 76px);
+        background: #28463f;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.12)),
+          url("https://imagedelivery.net/TdQQyAHCLdZMYcdCJx_3LA/a5b4c80f-4d29-4a7c-c3a0-c65c1542d700/public");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .heroInner {
+        position: relative;
+        width: min(900px, 100%);
+        color: #ffffff;
+      }
+
+      .heroLocation {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 24px;
+        color: rgba(255, 255, 255, 0.78);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .heroLocation svg {
+        width: 17px;
+        height: 17px;
+        color: #f0a45f;
+      }
+
+      h1 {
+        max-width: 880px;
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(30px, 4.8vw, 54px);
+        font-weight: 900;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .brief {
+        width: min(760px, 100%);
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 18px;
+        color: #5a5148;
+        font-size: clamp(17px, 1.9vw, 20px);
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.58;
+      }
+
+      .articleWrap {
+        width: min(900px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: clamp(42px, 6vw, 68px) 0 72px;
+      }
+
+      .content {
+        width: min(760px, 100%);
+        color: var(--body);
+        font-size: clamp(16px, 1.8vw, 18px);
+        line-height: 1.5;
+      }
+
+      .content p {
+        margin: 0 0 0.5em;
+      }
+
+      .content h2,
+      .content h3,
+      .content h4 {
+        margin: 46px 0 18px;
+        color: var(--ink);
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+
+      .content h2 {
+        font-size: clamp(28px, 4vw, 38px);
+      }
+
+      .content h3 {
+        font-size: clamp(23px, 3vw, 30px);
+      }
+
+      .content ul,
+      .content ol {
+        margin: 0 0 30px;
+        padding-left: 28px;
+      }
+
+      .content li {
+        margin: 8px 0;
+      }
+
+      .content blockquote {
+        margin: 34px 0;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 20px;
+        color: #5a5148;
+        font-style: italic;
+      }
+
+      .content img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 42px 0 12px;
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+      }
+
+      .content figure {
+        margin: 42px 0;
+      }
+
+      .content figure img {
+        margin: 0 0 12px;
+      }
+
+      .content figcaption {
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .backLink {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 46px;
+        border-top: 1px solid var(--line);
+        padding-top: 28px;
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.18em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .backLink:hover {
+        color: var(--accent);
+      }
+
+      @media (max-width: 720px) {
+        .hero {
+          min-height: 420px;
+          padding: 30px 24px;
+        }
+
+        .articleWrap {
+          width: min(100% - 28px, 900px);
+          padding-bottom: 48px;
+        }
+
+        .content {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="heroInner">
+        <p class="heroLocation">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+            />
+          </svg>
+          <span>Los Angeles</span>
+        </p>
+        <h1><p>San Francisco Travel Tips & Public Transportation Guide</p></h1>
+      </div>
+    </header>
+
+    <main class="articleWrap">
+      
+      <p class="brief">Muni Bus</p>
+      
+
+      <article class="content">
+        
+          {"text":"<p>It's tourism season again. Recently I've seen huge crowds of tourists flooding the streets of San Francisco and realized it's that annual summer vacation period again. Traveling for getaways has become a daily pastime for people now. So in a country like the United States where self-driving tours are particularly suitable, besides driving yourself, is there no better way to travel?</p><p>As a passerby who has lived in this city of San Francisco for nearly ten years, I'm going to summarize the comprehensive collection of public transportation options in this area!</p><p><br></p><p>                                        Muni Bus</p><p><br></p><p>                    Fare: $2.75</p><p>Validity: Within two hours, you can ride unlimited times with one ticket.</p><p><br></p><p>Compared to other cities in America, San Francisco's bus system is quite developed. Throughout the city, wherever you want to go, Muni can basically help you connect routes.</p><p>Muni is a unique bus system. Unlike other cities that simply call it "bus", San Francisco's entire public transit has its own branding and unique name—Muni.</p><p><br></p><p>                    A typical Muni bus looks like this👇, which is just a regular-looking bus shuttling through the city. The speed isn't particularly fast, but certain routes have suffixes like X or R—for example 8X. These generally indicate express routes. Compared to regular lines, express buses stop fewer times and stations are farther apart. If you're in a hurry, taking an express can save quite a bit of time.</p><p><br></p>", "keyword":"San Francisco Muni bus transit"}
+<p>Now let's talk about another type of Muni. While it looks identical to regular Muni when on the street surface, this type also operates on tracks. These Muni lines are designated by letters such as Line K, Line L, etc. Compared to standard Muni, they can travel both above ground and underground - feeling like a subway system when operating below ground. These tend to extend further outside the city, for example in San Francisco's Sunset district or even beyond.</p><p><br></p><p>Muni Tickets</p><p><br></p><p>1. Single Ticket</p><p>Muni tickets look like this 👇</p><p>The ticket displays a time. After purchasing upon boarding, the driver will give you a ticket with a perforated time line. Where the tear is shows when that ticket expires, so within that timeframe you can ride any regular Muni line with valid fare. Beyond that period requires an additional purchase. Of course if you're lucky enough, maybe the driver tears off an all-day time ticket for you first thing in the morning as well. 😂</p><p><br></p><p>2. Muni Monthly Pass</p><p>In addition to individual tickets, Muni offers monthly passes like this 👇 Each year's monthly pass features different colors per month. The monthly pass is ideal for people who need to ride Muni twice almost daily. If you only use it occasionally, purchasing a monthly pass isn't recommended.</p><p><br></p><p>3. Clipper</p><p><img src="https://imagedelivery.net/TdQQyAHCLdZMYcdCJx_3LA/19e1c393-9310-4425-0041-795802f83600/public" alt="Muni tickets" loading="lazy"></p>
+<p>Since Muni only accepts exact cash for tickets with no change given, you'll wonder what happens if you lack small bills? The everyday solution is 👇 this thing called Clipper. This device hasn't changed much in appearance, so it still looks like this today. You can buy Clipper cards at large supermarkets (like Walgreens etc.), and you can load any amount onto them. Tap to board and tap to exit - same process as back home.</p><p><br></p><p>                                        Bart Subway</p><p><br></p><p>                    Fare: $?? (varies by route)</p><p>Validity: Single-use per ride, cannot be reused.</p><p><br></p><p>For daily commuting, the Bart subway is probably the most popular choice among office workers. Since most people who work in San Francisco proper live farther away, some buses can reach them but are very slow. Many choose Bart instead - it's faster and more efficient. Also for getting to the airport or crossing bridges to Berkeley or Oakland, Bart is usually the best option.</p><p><br></p><p>                    In terms of hardware, American transit systems aren't as new as domestic ones; Bart feels particularly worn out, and underground trains make especially loud noises. The interior is also quite dated.</p><p><br></p><p>                    Since Bart uses distance-based pricing, each ticket machine shows fare indicators - the first price is for single rides, the second price is for round trips. If you buy a round-trip ticket, remember to retrieve it at the exit gate to reuse later. Round-trip tickets have no time expiration.</p><p><br></p><p><img src="https://imagedelivery.net/TdQQyAHCLdZMYcdCJx_3LA/82e3deb5-e81e-4183-30a3-8c4dbeae6800/public" alt="Bart subway" loading="lazy"></p>
+<p>                    Tips:</p><p>                    1. BART's only restriction is fare limits: for example, if you buy a ticket from 7:30 to Point A, but need to get off at Point B due to some reason, then your fare should be $8.75. In this case, before exiting through the gate, find a machine and pay the difference in fare.</p><p>2. The Clipper Card introduced on Muni can also be used on BART; you simply tap the card when entering and exiting through the gates.</p><p><br></p><p>                                        Taxi Cabs</p><p><br></p><p>                    Fare: Starting at $3.5</p><p>Availability: Pickup/drop-off anytime</p><p><br></p><p>                    San Francisco's taxi fleet has shrunk significantly. With Uber and Lyft disrupting the market, the already struggling industry now features fewer cabs on the streets. While traditional taxis still exist, those who prefer or need them can call 333-3333 for reliable service.</p><p>During my initial visits to America, before ride-sharing services existed, I'd pre-book taxis to airports with scheduled pickup times and locations. This provided convenience but came at a premium price.</p><p><br></p><p>                    San Francisco offers diverse taxi sizes, particularly useful at airports. When traveling with family carrying extensive luggage including large suitcases and personal items, airport staff can recommend appropriately sized vehicles - even oversized SUVs that accommodate heavy loads like moving belongings 😂 This flexibility makes them highly practical for travelers with substantial baggage.</p><p><br></p><p><img src="https://imagedelivery.net/TdQQyAHCLdZMYcdCJx_3LA/cd753de8-eae3-4cba-d917-09c1aa195800/public" alt="San Francisco transportation" loading="lazy"></p>
+<p>Taxi payments accept both cash and credit cards. However, please be reminded that San Francisco is a city where tipping is expected. When paying with cash, you need to provide an additional tip amount; when using card payment, the system will automatically prompt you to choose different tip percentages such as 15%, 20%, etc.</p><p><br></p><p>Tips:</p><p>Personal recommendation: If you don't want to pay a tip of 15% or more, paying with cash gives you more freedom.</p><p><br></p><p>UBER & Lyft</p><p><br></p><p>Fare: $?? (depends on route)</p><p>Durability/Availability: Advance reservation makes it convenient and fast</p><p><br></p><p>New emerging ride-hailing pioneers - one UBER, one Lyft. They have become an indispensable mode of transportation for people living in San Francisco city. If you're a permanent resident in the urban area and frequently use Uber and Lyft, you'll often receive discount coupons from them as rewards. As a result, each time you take Uber or Lyft, the price isn't that expensive.</p><p><br></p><p>Overall, Uber and Lyft are much cheaper than taxis, especially in San Francisco where they are numerous with relatively good service quality.</p><p>Neither company is definitively better than the other; I compare prices each time when using them. In terms of service quality, both are about the same.</p><p><br></p><p>You'll often see drivers who work for both Uber and Lyft simultaneously. Both companies allow you to request a ride anytime through their mobile apps. After setting your pickup location, you wait for the driver to accept the order - usage similar to Didi in China.</p><p><br></p>
+```
+
+keyword: Uber & Lyft San Francisco transportation
+<p>Both Uber and Lyft allow multiple stops, which is convenient if passengers have different drop-off locations - you can call one vehicle for everyone. You can also schedule pickups at fixed times in advance, such as during off-peak hours or anytime when it's harder to get a ride. Vehicle options can be selected based on your needs.</p><p><img src="https://imagedelivery.net/TdQQyAHCLdZMYcdCJx_3LA/5cb154ff-907c-400c-e5b6-1037a6bb2500/public" alt="multi-stop rides and scheduled pickups" loading="lazy"></p>
+        
+
+        <a class="backLink" href="list-1.html">← Back to Los Angeles</a>
+      </article>
+    </main>
+  </body>
+</html>

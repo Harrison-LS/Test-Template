@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Four Barrel Coffee" />
+    <title>American upscale lifestyle — exploring San Francisco's most prestigious coffee shops!</title>
+    <style>
+      :root {
+        --paper: #f5f1eb;
+        --ink: #163d36;
+        --body: #3f3a34;
+        --muted: #8a8379;
+        --line: #ddd5ca;
+        --accent: #d9782f;
+        --white: #fffaf4;
+        --shadow: 0 22px 70px rgba(28, 25, 20, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        line-height: 1.72;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .hero {
+        min-height: clamp(330px, 48vw, 560px);
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        padding: clamp(28px, 7vw, 70px) clamp(24px, 8vw, 76px);
+        background: #28463f;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.12)),
+          url("https://p1-q.mafengwo.net/s10/M00/F4/6E/wKgBZ1mvor-AJkLzAAhVexAUa4Y96.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F90");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .heroInner {
+        position: relative;
+        width: min(900px, 100%);
+        color: #ffffff;
+      }
+
+      .heroLocation {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 24px;
+        color: rgba(255, 255, 255, 0.78);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .heroLocation svg {
+        width: 17px;
+        height: 17px;
+        color: #f0a45f;
+      }
+
+      h1 {
+        max-width: 880px;
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(30px, 4.8vw, 54px);
+        font-weight: 900;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .brief {
+        width: min(760px, 100%);
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 18px;
+        color: #5a5148;
+        font-size: clamp(17px, 1.9vw, 20px);
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.58;
+      }
+
+      .articleWrap {
+        width: min(900px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: clamp(42px, 6vw, 68px) 0 72px;
+      }
+
+      .content {
+        width: min(760px, 100%);
+        color: var(--body);
+        font-size: clamp(16px, 1.8vw, 18px);
+        line-height: 1.5;
+      }
+
+      .content p {
+        margin: 0 0 0.5em;
+      }
+
+      .content h2,
+      .content h3,
+      .content h4 {
+        margin: 46px 0 18px;
+        color: var(--ink);
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+
+      .content h2 {
+        font-size: clamp(28px, 4vw, 38px);
+      }
+
+      .content h3 {
+        font-size: clamp(23px, 3vw, 30px);
+      }
+
+      .content ul,
+      .content ol {
+        margin: 0 0 30px;
+        padding-left: 28px;
+      }
+
+      .content li {
+        margin: 8px 0;
+      }
+
+      .content blockquote {
+        margin: 34px 0;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 20px;
+        color: #5a5148;
+        font-style: italic;
+      }
+
+      .content img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 42px 0 12px;
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+      }
+
+      .content figure {
+        margin: 42px 0;
+      }
+
+      .content figure img {
+        margin: 0 0 12px;
+      }
+
+      .content figcaption {
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .backLink {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 46px;
+        border-top: 1px solid var(--line);
+        padding-top: 28px;
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.18em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .backLink:hover {
+        color: var(--accent);
+      }
+
+      @media (max-width: 720px) {
+        .hero {
+          min-height: 420px;
+          padding: 30px 24px;
+        }
+
+        .articleWrap {
+          width: min(100% - 28px, 900px);
+          padding-bottom: 48px;
+        }
+
+        .content {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="heroInner">
+        <p class="heroLocation">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+            />
+          </svg>
+          <span>Los Angeles</span>
+        </p>
+        <h1>American upscale lifestyle — exploring San Francisco's most prestigious coffee shops!</h1>
+      </div>
+    </header>
+
+    <main class="articleWrap">
+      
+      <p class="brief">Four Barrel Coffee</p>
+      
+
+      <article class="content">
+        
+          <p>Four Barrel Coffee</p><p><br></p><p>                    Four Barrel Coffee's shop is very unique, with a rustic industrial style; the earthenware tableware is also FF's favorite.</p><p>The American-style decoration appears steady and grand, with a touch of sophisticated vibe in its modern feel.</p><p>Those four taxidermied animal heads on top - spending so much on a coffee shop design, I doubt there's another who would go this far.</p><p><br></p><p>                    Four Barrel Coffee does overall marketing well; on their official website, there are also irregular coffee-related courses, some free and some with a fee.</p><p>There are also public welfare activities like donations to help the poor and more. As a coffee shop, achieving this level of overall marketing - what else can you complain about?</p><p><br></p><p>                    Overall rating: ★★★★☆</p><p>Environment rating: ★★★☆☆</p><p>Noise index: ★★★☆☆</p><p><br></p><p>                    This coffee shop has an outdoor seating area; more thoughtfully, they've prepared a bicycle parking area as well, which is also attractive.</p><p>If you like reading and drinking coffee while basking in the sun, this shop's exterior is quite nice. The sunlight is good, the view is excellent, mainly because of its great location - can you not have some style being in Vanlencia?</p><p><img src="https://pixabay.com/get/gf323465f3511ac771c5a2c89bba97742b17240d67683eae93b4970644c91eb03f2bf651f4e33bc380f431f99c3db839d.jpg" alt="Four Barrel Coffee review" loading="lazy"></p>
+<p><br></p>
+<p>                                        The Mill</p><p><br></p>
+<p>The Mill is a sister store of Four Barrel Coffee, under the same parent company. They actually have three locations, but The Mill differs quite a bit from Four Barrel Coffee in overall style. Stepping into The Mill gives you an immediate warm furniture-style feeling. If not for the heavy American-style decoration elements inside, just looking at those wall partitions and displays alone still feels somewhat Japanese-style. The entire store is luxuriously large - only this place can afford such grandeur in this location. Across from it on a nearby street lies the famous Alamo Square with its iconic seven sisters building cluster, and down another block sits the renowned DMV office. This prime real estate choice really speaks volumes about their investment strategy.</p><p><br></p>
+<p>The Mill boasts its own dedicated baking area positioned directly behind the cash register, featuring an open-concept design that invites customers to observe the craft. Their artisan bread selection stands out as a signature offering, with an entire wall of racks displaying various wholesome varieties that most patrons enthusiastically purchase for take-home enjoyment. Beyond their renowned breads, they're celebrated for creative toast preparations paired with diverse cream cheese blends, complemented by fresh seasonal vegetables and fruit accompaniments.</p><p><img src="https://pixabay.com/get/g1db73a688a1e240c6d02b8ef7d60a7d7e2803fdf5a827de40883eb3c762d4419d499e552d28d6061709403f255546aef.jpg" alt="The Mill coffee shop" loading="lazy"></p>
+<p>Freshly roasted, still warm when you get your hands on it~</p><p><br></p><p>                    Overall rating: ✭✭✭✩✩</p><p>Environment rating: ✭✭✭✩✩</p><p>Noise level: ✭✭✩✩✩</p><p><br></p><p>                    Just like his sister's location, this coffee shop also has an outdoor seating area. However, since it happens to be next to a main road district, there are quite a few vehicles nearby, and the outside doesn't have tables - just street parking spaces.</p><p>Alamo Square nearby is worth visiting after finishing your coffee, see the seven sisters' houses, and enjoy some sunshine.</p><p><br></p><p>                                        Sextant Coffee Roasters</p><p><br></p><p>                    FF was a cafe I occasionally drive past and noticed there happens to be a stylish-looking coffee shop nearby with very few people inside. It looked quite quiet. Then I checked online - oh my! There's Wi-Fi!! Have to admit, many coffee shops inexplicably lack Wi-Fi (perhaps unconsciously unwilling to let customers stay too long... well, whatever). This one is about 10+ minutes walk from FF, which is very convenient. Walk over for a cup of coffee and handle some emails, then slowly stroll back home.</p><p><img src="https://pixabay.com/get/g3bdc186bb8bb4be0b5d977bf4a9aeee4b365766aa6494bea365103ecef478dfd9582ea00e53358057a4cd6964539bf8b.jpg" alt="coffee shop review" loading="lazy"></p>
+<p>                    This shop has a very typical SOMA district layout - long and narrow, medium-sized space, just right. Has a backyard with umbrellas. Love sun? Enjoy it outside. Prefer indoors? You can do that too. Having options is good. The store has its own coffee machine, but since it's a newly opened cafe, operations aren't fully established yet. However, the coffee in the shop is nice, and the latte art is quite creative. There aren't many dessert varieties, but enough to go with a cup of coffee.</p>
+<p><br></p>
+<p>                    The surroundings near Sextant are average - mostly auto repair shops, but San Francisco's Costco is right next door. Visiting Costco after your coffee purchase makes this location quite convenient for shopping and grabbing refreshments in one trip.</p>
+<p><br></p>
+<p>                    Overall rating: ✭✭✭✩✩</p>
+<p>Environment rating: ✭✭✭✩✩</p>
+<p>Noise level: ✭✩✩✩✩</p>
+<p><br></p>
+<p>                    The reviewer visited early on a weekend, so there were very few people - creating a comfortable atmosphere. They plan to return during weekdays to assess whether this space would be suitable for regular work.</p><p><img src="https://pixabay.com/get/gcc7e8212117a6cfd1c0f96c9811d2aff07183bc65a0e566c988eb0c26730d1b2720a34cf587724e21bfa310eccda1a9d.jpg" alt="SOMA district cafe" loading="lazy"></p>
+        
+
+        <a class="backLink" href="list-1.html">← Back to Los Angeles</a>
+      </article>
+    </main>
+  </body>
+</html>

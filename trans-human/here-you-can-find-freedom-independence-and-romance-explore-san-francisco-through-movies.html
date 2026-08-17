@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="《Big Hero 6》-Japan town Japan Town" />
+    <title>Here you can find freedom, independence, and romance—explore San Francisco through movies</title>
+    <style>
+      :root {
+        --paper: #f5f1eb;
+        --ink: #163d36;
+        --body: #3f3a34;
+        --muted: #8a8379;
+        --line: #ddd5ca;
+        --accent: #d9782f;
+        --white: #fffaf4;
+        --shadow: 0 22px 70px rgba(28, 25, 20, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        line-height: 1.72;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .hero {
+        min-height: clamp(330px, 48vw, 560px);
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        padding: clamp(28px, 7vw, 70px) clamp(24px, 8vw, 76px);
+        background: #28463f;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.12)),
+          url("https://p1-q.mafengwo.net/s12/M00/BC/95/wKgED1w4E0GAHJGyAAGRbG4LUdI75.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F90");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .heroInner {
+        position: relative;
+        width: min(900px, 100%);
+        color: #ffffff;
+      }
+
+      .heroLocation {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 24px;
+        color: rgba(255, 255, 255, 0.78);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .heroLocation svg {
+        width: 17px;
+        height: 17px;
+        color: #f0a45f;
+      }
+
+      h1 {
+        max-width: 880px;
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(30px, 4.8vw, 54px);
+        font-weight: 900;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .brief {
+        width: min(760px, 100%);
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 18px;
+        color: #5a5148;
+        font-size: clamp(17px, 1.9vw, 20px);
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.58;
+      }
+
+      .articleWrap {
+        width: min(900px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: clamp(42px, 6vw, 68px) 0 72px;
+      }
+
+      .content {
+        width: min(760px, 100%);
+        color: var(--body);
+        font-size: clamp(16px, 1.8vw, 18px);
+        line-height: 1.5;
+      }
+
+      .content p {
+        margin: 0 0 0.5em;
+      }
+
+      .content h2,
+      .content h3,
+      .content h4 {
+        margin: 46px 0 18px;
+        color: var(--ink);
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+
+      .content h2 {
+        font-size: clamp(28px, 4vw, 38px);
+      }
+
+      .content h3 {
+        font-size: clamp(23px, 3vw, 30px);
+      }
+
+      .content ul,
+      .content ol {
+        margin: 0 0 30px;
+        padding-left: 28px;
+      }
+
+      .content li {
+        margin: 8px 0;
+      }
+
+      .content blockquote {
+        margin: 34px 0;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 20px;
+        color: #5a5148;
+        font-style: italic;
+      }
+
+      .content img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 42px 0 12px;
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+      }
+
+      .content figure {
+        margin: 42px 0;
+      }
+
+      .content figure img {
+        margin: 0 0 12px;
+      }
+
+      .content figcaption {
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .backLink {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 46px;
+        border-top: 1px solid var(--line);
+        padding-top: 28px;
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.18em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .backLink:hover {
+        color: var(--accent);
+      }
+
+      @media (max-width: 720px) {
+        .hero {
+          min-height: 420px;
+          padding: 30px 24px;
+        }
+
+        .articleWrap {
+          width: min(100% - 28px, 900px);
+          padding-bottom: 48px;
+        }
+
+        .content {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="heroInner">
+        <p class="heroLocation">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+            />
+          </svg>
+          <span>Los Angeles</span>
+        </p>
+        <h1>Here you can find freedom, independence, and romance—explore San Francisco through movies</h1>
+      </div>
+    </header>
+
+    <main class="articleWrap">
+      
+      <p class="brief">《Big Hero 6》-Japan town Japan Town</p>
+      
+
+      <article class="content">
+        
+          <p>San Francisco, this unique island city similar to many places like New York, Seattle and even Hawaii, differs from others due to its diverse human history and artistic atmosphere. Here you can find freedom, independence, romance, and through up to 100 movies you can taste her. The recent popular movies "Big Hero 6", "Dawn of the Planet of the Apes" and Disney's newest animated film "Inside Out" are all based on San Francisco for shooting and production. "I have left my heart in San Francisco", people who've been here will all leave their "heart" behind, so let's follow the editor to start this San Francisco movie journey.</p><p><br></p><p>                                        Big Hero 6 - Japan town</p><p><br></p><p>"Baymax" was born in Old Chinatown! The film uses San Francisco as a background, creating an Old Chinatown (San Fransokyo) that blends Western and Japanese culture. Watching Hiro and Baymax fly low over Japan Town from the sky isn't as good as walking it yourself.</p><p><br></p><p>Only 3 Japan towns remain in all of the US, San Francisco's Japan town is one of them, with pink as the main color theme, numerous Japanese cuisine shops along the street, a small corner that concentrates immigrant culture.</p><p><br></p><p>                    Tips:</p><p>                    Every April Japan Town holds a series of cherry blossom festival celebration activities - singing and dancing performances, flower arranging art, drumming shows, traditional parades, and of course various snacks.</p>
+<p>If you love Japanese cuisine like our editor, then this is definitely the right place for you~</p><p><br></p><p>Hotel recommendation at Japan Center: Hotel Kabuki, located right next to Japan Center. The hotel features Japanese-style decoration with screens, antique fans, and cherry blossoms, showcasing unique charm.</p><p><br></p><p>                                        "Rise of the Planet of the Apes"-Muir Woods Muir Forest Park</p><p><br></p><p>                    In the movie, Caesar leads the group of apes wandering freely in the massive redwood forest. This pristine sanctuary is Muir National Forest, located about 20 kilometers north of the Golden Gate Bridge. Every "redwood giant" in Muir Woods has lived for over a thousand years. You can truly appreciate the greatness of nature when you are here. When visiting, don't forget to also stop by Point Bonita Lighthouse and the small town of Sausalito. Millennial redwoods, century-old city - it will surely make your trip worthwhile.</p><p><br></p><p>                                        "Godzilla 2"-Golden Gate Bridge</p><p><br></p><p>                    The Golden Gate Bridge has already become a symbol of San Francisco. Any major film shot in San Francisco simply cannot be made without footage of the Golden Gate Bridge.</p>
+In the movie, Godzilla appears in San Francisco and destroys the Golden Gate Bridge. Among these scenes, the tense moments when the school bus driver takes shelter on the Golden Gate Bridge have left a deep impression on film fans.
+
+Tips:
+
+To appreciate the Golden Gate Bridge, you can visit Crissy Field Park, where you can view the entire bridge from the beach. And locals like to walk their dogs on the beach; if you love dogs, you definitely shouldn't miss this place. Additionally, setting sail from under the Golden Gate Bridge is also a good choice. There are double-seater sailing boats available; admiring the red bridge at sunset from on board offers a unique experience. Visitors typically choose to bike across the bridge, which features dedicated 1.2-kilometer-long cycling and walking paths on both sides. Experience this spectacular scenery firsthand by taking a ride over the iconic structure.
+
+"Inside Out" - Lombard Street, The Nine-Bend Flower Street
+
+Disney's latest blockbuster "Inside Out" is another San Francisco-set film following "Big Hero 6". In the movie, Riley's family moves from Minnesota to San Francisco, and Riley goes through sadness and anger before gradually accepting and falling in love with this city.
+<html><body><p>The film features iconic San Francisco landmarks such as Lombard Street, the Golden Gate Bridge, and Chinatown. Lombard Street is lined with blooming flora throughout the seasons: hydrangeas in spring; roses in summer; chrysanthemums in autumn—creating a vibrant tapestry of color. From the hilltop vantage point, one can also view the Bay Bridge and Coit Tower.</p><p><br></p><p>                                        "Mission Impossible"  "Mrs. Doubtfire"-Palace of Arts</p><p><br></p><p>                    This Romanesque-style building was constructed in 1915 to commemorate San Francisco's rebirth from the earthquake devastation. With its iconic dome, colonnades, and reflecting pool—it invites you to embrace your artistic sensibilities. The touching scene where Sean Connery as Max Dent reunites with his daughter in a garden appears here in "Mission Impossible." Additionally, Anne Hathaway's "The Princess Diaries" and Robin Williams' "Mrs. Doubtfire" were also filmed at this location.</p><p><br></p><p>                    Tips:</p><p>                    The Palace of Arts is small yet exquisitely designed; despite being a century-old structure, it harmonizes beautifully with the modern surroundings. With its leisurely atmosphere, charming birds, and colorful flowers—it's definitely worth a visit.</p></body></html>
+<p>Very close to Golden Gate Bridge, can be arranged to view on the same day.</p><p><br></p><p>The Pursuit of Happyness-Chinatown</p><p><br></p><p>Starring Will Smith, The Pursuit of Happyness is an inspirational film based on a true story. It tells the tale of a salesman with his son wandering and struggling at the lowest level of the city before finally becoming a millionaire. Most scenes in the movie were filmed in San Francisco. The area where he lived and struggled was filmed in Chinatown. Chinese people arrived in San Francisco in the 19th century, and due to severe racial discrimination at that time, they were segregated into what is now Chinatown. Because of this, Chinatown could completely be self-sufficient. Now there are banks with Chinese services, Chinese schools, Chinese newspapers, restaurants, etc., making it a little China.</p><p><br></p><p>Recommended accommodation near Chinatown:</p><p><br></p><p>InterContinental Mark Hopkins, around $249/night.</p><p><br></p><p>The Fairmont San Francisco, around $350/night.</p>
+</p><p><br></p><p>Both hotels are located within Chinatown, near the financial district. Looking down from your hotel window, you'll see streets filled with Chinese shops and people with black hair and yellow skin - doesn't that give you a different sense of closeness?~</p><p><br></p><p>More Chinatown hotel price comparisons *** Expedia/Hotels.com/Priceline.com</p><p><br></p><p>                                        "The Godfather", "The Shawshank Redemption" - Alcatraz Island Devil's Island</p><p><br></p><p>                    The small island houses what is claimed to be the most tightly-guarded prison in American history, and because it's perpetually cold, damp with overcast skies, Alcatraz Island has been nicknamed "Devil's Island." Native Americans were the first to use Cartez Island as a prison, designating it as an exile zone for unwanted individuals. In 1907, Americans transformed this island into a federal penitentiary due to its treacherous geography and frequent shark appearances, using it to imprison serious criminals. Notable inmates included Chicago's "Godfather" Capone and "Birdman" Strauder. The most famous was Phillip Grother, who documented his prison experience in "Uncle Sam's Devil Island," revealing the terror and violence within.</p><p><br></p><p>                    Tips:</p><p>                    Devil's Island tickets are highly sought after, requiring advance booking 1-2 months ahead. I'll share a cost-saving strategy: visitors to San Francisco typically plan multiple attractions—Devil's Island, cable car rides, aquarium visits—making CityPass the optimal choice. Purchase your Devil's Island ticket online first, then visit the harbor counter on travel day to activate and upgrade it through Citypass.</p>
+Or call 415-981-7625 to reserve your CityPass, along with advance ferry tickets to Alcatraz Island. They will be mailed to your address when ready.</p><p><br></p><p>After visiting Alcatraz Island, you definitely shouldn't miss Fisherman's Wharf, where you can find authentic sourdough bread, fresh Dungeness crab, delicious oysters... and perhaps even see a massive cruise ship preparing for its voyage to Alaska.</p>
+        
+
+        <a class="backLink" href="list-1.html">← Back to Los Angeles</a>
+      </article>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <title>16 Must-Try Dishes in Los Angeles</title>
+    <style>
+      :root {
+        --paper: #f5f1eb;
+        --ink: #163d36;
+        --body: #3f3a34;
+        --muted: #8a8379;
+        --line: #ddd5ca;
+        --accent: #d9782f;
+        --white: #fffaf4;
+        --shadow: 0 22px 70px rgba(28, 25, 20, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        line-height: 1.72;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .hero {
+        min-height: clamp(330px, 48vw, 560px);
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        padding: clamp(28px, 7vw, 70px) clamp(24px, 8vw, 76px);
+        background: #28463f;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.12)),
+          url("");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .heroInner {
+        position: relative;
+        width: min(900px, 100%);
+        color: #ffffff;
+      }
+
+      .heroLocation {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 24px;
+        color: rgba(255, 255, 255, 0.78);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .heroLocation svg {
+        width: 17px;
+        height: 17px;
+        color: #f0a45f;
+      }
+
+      h1 {
+        max-width: 880px;
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(30px, 4.8vw, 54px);
+        font-weight: 900;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .brief {
+        width: min(760px, 100%);
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 18px;
+        color: #5a5148;
+        font-size: clamp(17px, 1.9vw, 20px);
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.58;
+      }
+
+      .articleWrap {
+        width: min(900px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: clamp(42px, 6vw, 68px) 0 72px;
+      }
+
+      .content {
+        width: min(760px, 100%);
+        color: var(--body);
+        font-size: clamp(16px, 1.8vw, 18px);
+        line-height: 1.5;
+      }
+
+      .content p {
+        margin: 0 0 12px;
+      }
+
+      .content h2,
+      .content h3,
+      .content h4 {
+        margin: 46px 0 18px;
+        color: var(--ink);
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+
+      .content h2 {
+        font-size: clamp(28px, 4vw, 38px);
+      }
+
+      .content h3 {
+        font-size: clamp(23px, 3vw, 30px);
+      }
+
+      .content ul,
+      .content ol {
+        margin: 0 0 30px;
+        padding-left: 28px;
+      }
+
+      .content li {
+        margin: 8px 0;
+      }
+
+      .content blockquote {
+        margin: 34px 0;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 20px;
+        color: #5a5148;
+        font-style: italic;
+      }
+
+      .content img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 42px 0 12px;
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+      }
+
+      .content figure {
+        margin: 42px 0;
+      }
+
+      .content figure img {
+        margin: 0 0 12px;
+      }
+
+      .content figcaption {
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .backLink {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 46px;
+        border-top: 1px solid var(--line);
+        padding-top: 28px;
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.18em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .backLink:hover {
+        color: var(--accent);
+      }
+
+      @media (max-width: 720px) {
+        .hero {
+          min-height: 420px;
+          padding: 30px 24px;
+        }
+
+        .articleWrap {
+          width: min(100% - 28px, 900px);
+          padding-bottom: 48px;
+        }
+
+        .content {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="heroInner">
+        <p class="heroLocation">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+            />
+          </svg>
+          <span>Los Angeles</span>
+        </p>
+        <h1>16 Must-Try Dishes in Los Angeles</h1>
+      </div>
+    </header>
+
+    <main class="articleWrap">
+      
+
+      <article class="content">
+        
+          <p>Delicious food always brings happiness, and breakfast is key to replenishing your positive energy for a brand new day. Speaking of breakfast, do you prefer the Eastern-inspired Chinese morning tea or the uniquely exotic American breakfast? Apple Sister spent 17 hours in Los Angeles trying all 16 most popular dishes favored by LA locals, and carefully produced a short video showcasing these delicacies. Please enjoy to your heart&#39;s content, foodies! :)</p><p><br></p><p>Pancakes | Cafe Gratitude - Jason Mraz&#39;s Favorite Restaurant</p><p>512 Rose Ave Unit A (at 5th Ave.), Venice, CA</p><p><br></p><p>Cafe Gratitude is a renowned creative restaurant with three branches in Los Angeles. Its 100% organic vegetarian philosophy attracts many celebrities who advocate healthy lifestyles, including magician Jason Mraz, Oscar winner Anne Hathaway, and Emily Blunt.</p><p><br></p><p>The signature dish is buckwheat flaxseed pancakes. Smooth butter naturally spreads on the warm pancakes, paired with fresh fruit - one bite brings you full of nutty fragrance.</p><p>With a cup of matcha latte, happiness overflows from this classic American breakfast.</p><p>Cold-pressed juice</p><p>Moon Juice | The juice shop loved by trendy fashionistas</p><p>507 Rose Ave, Venice, CA 90291</p><p>California produces fresh fruits and vegetables throughout the four seasons year-round, making cold-pressed juice one of its common products. Across from Cafe Gratitude lies the charmingly small Moon Juice, which offers 100% organic juices made through cold pressing, nut milks, and snacks with virtually no additives.</p><p>As a yoga enthusiast who values healthy living, I tried this deep green juice. A rich vegetable freshness glided from the tip to the root of my tongue—refreshing and delicious.</p><p>Juices, jams, and various healthy additive-free snacks</p><p>Burrito</p><p>Flake | People line up early in the morning just for burritos</p><p>507 Rose Ave, Venice, CA 90291</p><p>Eggs, bacon, and avocado perfectly combined in this wrap.</p><p><br></p><p>Flake, located at the corner of Rose Avenue – a food hub area – may not have a large space, but offers a complete variety of breakfast options: from Brazilian acai bowls to Mexican burritos, from simple cookies to sandwiches packed with fillings. It&#39;s truly an ideal spot for a casual breakfast.</p><p><br></p><p>When you come here, you won&#39;t suffer from decision paralysis – as locals say, &quot;You can&#39;t go wrong with any choice&quot; (you can&#39;t go wrong with any option. It&#39;s all so good.)</p><p><br></p><p>Queuing in long lines to buy breakfast is part of American culture.</p><p><br></p><p>Chicken and Waffles</p><p>Cerveteca | A Dialogue with Southern Soul Food</p><p>523 Rose Ave (at Rennie Ave), Venice, CA</p><p><br></p><p>Chicken &amp; waffle is a classic of southern soul food – you might not have visited Louisiana, but when you&#39;re in America, how can you not try fried chicken paired with waffles?</p><p>As soon as two pieces of golden crispy fried chicken were served, the roasted chicken was tender on the inside and crisp on the outside with aroma filling the air. The juicy, flavorful chicken chunks paired with thick and chewy waffles created an excellent taste experience that made you can&#39;t help but drool.</p><p><br></p><p>Fish taco | A classic in Mexican cuisine</p><p>523 Rose Ave (at Rennie Ave), Venice, CA</p><p>Tacos are as common in Mexican cuisine as egg pancakes are for Chinese breakfast. The flexible corn tortilla wraps around rich and delicious fillings. Fish tacos are even more iconic among tacos. Since you&#39;re at Venice Beach&#39;s most popular Mexican restaurant, you must try a fish taco. Thin yet sturdy handmade tortillas soak up abundant sauce, with shredded vegetables and pickled carrots paired with large pieces of fish. After one, you&#39;ll find it so delicious that you want another.</p><p><br></p><p>Croissant | A breakfast spot that satisfies your three meals a day</p><p>320 Sunset Ave, Venice, CA</p><p>Gjusta is located opposite Gold&#39;s Gym, where celebrities frequently visit. It is a deli + bakery, best known for its handmade breads and pastries. As soon as you enter, you can see a glass cabinet filled with various types of scones, croissants, bread pudding, and more. Among them, the savory scone (Gruyere cheese paired with spinach) is extremely popular; you need to arrive early if you want to get one.</p><p><br></p><p>Here, every item is a classic choice. If I must recommend one combination, it&#39;s simply the plain handmade croissant paired with a rich latte. The croissants radiate an intense buttery fragrance that lingers pleasantly in your mouth after eating.</p><p><br></p><p>[Images]</p><p>Handmade Croissants</p><p>Exquisitely shaped plate with savory cheese spinach scones; holding in hand is sesame nut scone</p><p><br></p><p>Besides the simple croissant with coffee, Gjusta also offers the option to sit in the backyard and enjoy a hearty breakfast featuring fresh fruits and cheeses from the farmers&#39; market.</p><p><br></p><p>Santa Monica Farmers Market | The best farmer&#39;s market in Southern California</p><p>Wednesdays, Saturdays: 8AM - 2PM</p><p>Arizona Ave. (between 2nd &amp; 4th St.), Santa Monica, CA</p><p>Every Wednesday and Saturday, an abundance of farm-fresh produce from around Los Angeles gathers at the best farmers market in Los Angeles — Santa Monica Farmers Market. Open from 8 AM to 2 PM, all year round without closing on holidays.</p><p><br></p><p>This farmers market can almost meet all your needs, from fresh, organic seasonal fruits and vegetables to pasture-raised meat and poultry, a wide variety of cheeses, nuts, honey, olive oil, fresh flowers and plants, even dried fruits, milk, and freshly baked breads and pastries — everything is available.</p><p><br></p><p>Fresh blackberries and raspberries $10 for 3 boxes</p><p>Throughout the year, Southern California produces fresh vegetables abundantly</p><p>Taste honey and propolis</p><p>Organic cheese sold directly from farms, holding pesto jack</p><p>Brazilian acai berry bowl</p><p><br></p><p>Real Food Daily | New favorite for health-conscious, fitness-loving individuals with a sunny disposition</p><p><br></p><p>514 Santa Monica Blvd (at 6th St), Santa Monica, CA</p><p>Real Food Daily is a star among vegetarian restaurants in Los Angeles. We recommend this Acai Bowl because it&#39;s only served on weekend brunches. Brazilian blueberry acai is a new favorite among American fitness enthusiasts. The texture is silky smooth like ice cream while being low in calories and very healthy. The bowl is also paired with crunchy nuts and fresh fruits, creating great layers of flavor and texture. And from the naturally dehydrated goji berry ingredients, you can see the careful craftsmanship.</p><p><br></p><p>Huckleberry Cafe | Happiness-doubling breakfast spot + bakery</p><p>1014 Wilshire Blvd (at 10th Ct) Santa Monica, CA</p><p><br></p><p>Celebrity couple Josh and Zoe in the restaurant industry opened five restaurants with very different styles in their hometown of Santa Monica. Among them, Huckleberry is a paradise for breakfast lovers; Zoe, who comes from a baker&#39;s background, has an exquisite pursuit of ingredients and production quality, like Japanese craftsmen making wooden dolls day after day.</p><p><br></p><p>The most praised item among Zoys breads is the blueberry cornmeal cake, which sells out within two hours daily and is extremely sought-after.</p><p>And the freshly baked bread pudding has a cloud-like texture, served in open ceramic bowls where you can scoop out spoonfuls. It melts in your mouth, warming the heart—just like first love.</p><p><br></p><p>If bakery isn&#39;t your thing, you absolutely cannot miss this egg-themed formal breakfast. Named after Dr. Seuss&#39;s famous children&#39;s book &quot;Green Eggs &amp; Ham,&quot; this dish aims to encourage diners to maintain their curiosity about new experiences.</p><p><br></p><p>The English muffin has a chewy interior with a lightly toasted exterior. Soaked in pure Californian olive oil and green pesto sauce, it looks incredibly appetizing. Runny soft-boiled eggs, Italian Parma ham (prosciutto), and emerald arugula create a beautiful yellow-green combination that&#39;s mouthwatering at first glance. Taking a bite of half the egg releases the yolk, with lingering aromas that stay between your lips—truly unforgettable!</p><p><br></p><p>**Burger &amp; Beer**</p><p><br></p><p>**Father&#39;s Office | The Best Burgers in LA, Period**</p><p><br></p><p>1018 Montana (between 10th &amp; 11th St), Santa Monica, CA</p><p><br></p><p>Signature Burger: Office Burger — Rated as LA&#39;s Top Choice</p><p>Father&#39;s Office earned rave reviews from Esquire magazine with just one burger: LA&#39;s best burgers.</p><p><br></p><p>When you come here, be sure to enjoy the classic pairing of &quot;burger + beer.&quot; The medium-rare beef is fresh and juicy, served with crisp pickles and lettuce. The caramelized onions are cooked to perfection—their soft texture combines beautifully with BBQ sauce. Take a bite and cheese flows everywhere.</p><p><br></p><p>This place isn&#39;t about being &quot;healthy&quot; or low sugar/low fat—it&#39;s another level entirely: old American tough guy style—drinking craft beer at the dark brown wooden bar, chatting and watching games.</p><p><br></p><p>The restaurant offers over 55 types of craft beer. This Victory Golden Monkey is light with a hint of spiciness.</p><p><br></p><p>Ice Cream</p><p>Sweet Rose Creamery | The highest realm of ice cream cones</p><p><br></p><p>826 Pico Blvd, Santa Monica, CA</p><p><br></p><p>There are three Sweet Rose (subtly sweet rose) locations in Santa Monica, famous for their youthful decor and high-quality handmade ice cream. A sister store to Huckleberry.</p><p>Plan for a weekend to share soft, slightly sticky ice cream and crispy waffle cones with your best friend.</p><p><br></p><p>The most popular flavors are: Salted caramel, Chocolate mint, and Olive oil. If you don&#39;t want coffee but crave that caffeine-induced alertness, try the ice cream from Cafe Luxxe, a well-known local coffee shop - enjoy the rich aroma of coffee combined with the silkiness of organic milk.</p><p><br></p><p>Matcha Latte</p><p>Urth Caffé | Delightful matcha latte art that melts customers&#39; hearts</p><p>2327 Main St (at Hollister Ave.) Santa Monica, CA</p><p>Adorable pig pattern on the matcha latte and Thai pearl milk tea</p><p>One of the places where Hollywood celebrities frequently appear. With 2 branches in Los Angeles, on a lazy Sunday come for lunch - order a matcha latte and watch as baristas create beautiful latte art for you. A wonderful treat to both eyes and taste buds.</p><p>Cat and swan latte art designs</p><p>Various desserts, all with huge portions</p><p><br></p><p>Japanese rice balls (omusubi)</p><p><br></p><p>Sunny Blue | First Japanese Omusubi Shop in Southern California</p><p>2728 Main St (at Hill St) Santa Monica, CA</p><p>As the first Japanese omusubi shop in Southern California, the store is small like a Kyoto cafe, but this doesn&#39;t deter people from queuing patiently to try it.</p><p>One mushroom-flavored rice ball and one beef-flavored rice ball, each wrapped with crispy nori and sesame seeds around sushi rice, refreshing yet meaty. The fragrant rice gives a feeling of home when chewed.</p><p>Just steps away lies Southern California&#39;s most picturesque sun-drenched beach. Sit by the shore eating an omusubi, drinking Japanese green tea, leisurely enjoying an afternoon.</p><p><br></p><p>Coffee</p><p><br></p><p>Intelligentsia | Have a damn good coffee</p><p>1331 Abbot Kinney Blvd (at Andalusia Ave.) Venice, CA</p><p>Originating in Chicago, Intelligentsia Coffee is located on Los Angeles&#39; trendy Abbot Kinney street where fashion-forward people gather.</p><p>Coffee beans are fresh roasted daily with excellent quality. The shop uses German retro roasters. As recommended by local experts, if you want a cup of carefully brewed damngood coffee, Intelligentsia is a must-visit.</p><p><br></p><p>The entrance features an inset corridor with desert plants on both sides, perfectly welcoming customers who queue up every day. For a cup of coffee with authentic flavor and rigorous brewing technique, the wait is worth it.</p><p><br></p><p>Pizza - Abbot&#39;s Pizza | Super thin crust pizza with great chewiness</p><p>1407 Abbot Kinney Blvd (California Ave), Venice, CA</p><p><br></p><p>Some love Chicago&#39;s thick deep-dish pizza, some prefer thin crust with a satisfying bite like New York pizza. On the refined Abbot Kinney street, you can find this thoughtful gluten-free pizza. The small shop is frequented by bearded gentlemen and blonde women with red lips and curvy figures. Intense mozzarella cheese paired with juicy, aromatic tomatoes, intersecting with clear olive oil and cracked pepper creates a delicious pizza that&#39;s flavorful without being greasy.</p><p>Cronuts - Croissant Donuts</p><p>DK&#39;s Donuts | 34 Years Dedicated to Making LA&#39;s Best Donuts</p><p>1614 Santa Monica Blvd (16th St) Santa Monica, CA</p><p>This 24-hour shop focused on donuts for 34 years has a long queue at all hours except late night. Their most famous items are the $4 upgraded cronuts (croissant + donuts) and wownuts (waffle + donut). Don&#39;t be misled by &quot;Donuts&quot; in the name - this 24-hour open shop is rare in Los Angeles, where you can buy hot dogs, sandwiches, coffee, and more. A must-visit late-night diner to note down.</p><p><br></p><p>Classic cronuts flavors include: original glazed, red velvet, and maple bacon (maple syrup with bacon). The diced bacon pieces blend with the fine sugar on top of the donut, creating a sweetness that goes deep into your heart.</p><p><br></p><p>Original article, contact for permission to reprint.</p><p>WeChat Official Account: AppleSister_</p><p>Twitter @AppleSisterUSA</p><p>Zhihu: Zheng Chenyu</p>
+        
+
+        <a class="backLink" href="list-1.html">← Back to Los Angeles</a>
+      </article>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="App for scheduling" />
+    <title>How to Book Michelin Restaurants in the US</title>
+    <style>
+      :root {
+        --paper: #f5f1eb;
+        --ink: #163d36;
+        --body: #3f3a34;
+        --muted: #8a8379;
+        --line: #ddd5ca;
+        --accent: #d9782f;
+        --white: #fffaf4;
+        --shadow: 0 22px 70px rgba(28, 25, 20, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        line-height: 1.72;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .hero {
+        min-height: clamp(330px, 48vw, 560px);
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        padding: clamp(28px, 7vw, 70px) clamp(24px, 8vw, 76px);
+        background: #28463f;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.12)),
+          url("https://p1-q.mafengwo.net/s11/M00/24/11/wKgBEFqXfNaABdMRAAUvx_wm4yA17.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F90");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .heroInner {
+        position: relative;
+        width: min(900px, 100%);
+        color: #ffffff;
+      }
+
+      .heroLocation {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 24px;
+        color: rgba(255, 255, 255, 0.78);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .heroLocation svg {
+        width: 17px;
+        height: 17px;
+        color: #f0a45f;
+      }
+
+      h1 {
+        max-width: 880px;
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(30px, 4.8vw, 54px);
+        font-weight: 900;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .brief {
+        width: min(760px, 100%);
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 18px;
+        color: #5a5148;
+        font-size: clamp(17px, 1.9vw, 20px);
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.58;
+      }
+
+      .articleWrap {
+        width: min(900px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: clamp(42px, 6vw, 68px) 0 72px;
+      }
+
+      .content {
+        width: min(760px, 100%);
+        color: var(--body);
+        font-size: clamp(16px, 1.8vw, 18px);
+        line-height: 1.5;
+      }
+
+      .content p {
+        margin: 0 0 0.5em;
+      }
+
+      .content h2,
+      .content h3,
+      .content h4 {
+        margin: 46px 0 18px;
+        color: var(--ink);
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+
+      .content h2 {
+        font-size: clamp(28px, 4vw, 38px);
+      }
+
+      .content h3 {
+        font-size: clamp(23px, 3vw, 30px);
+      }
+
+      .content ul,
+      .content ol {
+        margin: 0 0 30px;
+        padding-left: 28px;
+      }
+
+      .content li {
+        margin: 8px 0;
+      }
+
+      .content blockquote {
+        margin: 34px 0;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 20px;
+        color: #5a5148;
+        font-style: italic;
+      }
+
+      .content img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 42px 0 12px;
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+      }
+
+      .content figure {
+        margin: 42px 0;
+      }
+
+      .content figure img {
+        margin: 0 0 12px;
+      }
+
+      .content figcaption {
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .backLink {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 46px;
+        border-top: 1px solid var(--line);
+        padding-top: 28px;
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.18em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .backLink:hover {
+        color: var(--accent);
+      }
+
+      @media (max-width: 720px) {
+        .hero {
+          min-height: 420px;
+          padding: 30px 24px;
+        }
+
+        .articleWrap {
+          width: min(100% - 28px, 900px);
+          padding-bottom: 48px;
+        }
+
+        .content {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="heroInner">
+        <p class="heroLocation">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+            />
+          </svg>
+          <span>Los Angeles</span>
+        </p>
+        <h1>How to Book Michelin Restaurants in the US</h1>
+      </div>
+    </header>
+
+    <main class="articleWrap">
+      
+      <p class="brief">App for scheduling</p>
+      
+
+      <article class="content">
+        
+          <p>The primary reason first-time visitors to Michelin restaurants are confused and hesitant about whether to dine there is the reservation issue. Basically 99% of Michelin restaurants require advance booking before entry, unlike regular walk-in restaurants—this aspect makes them somewhat exclusive. Thinking from the Michelin restaurant's perspective: due to ingredient freshness and quantity limitations, chefs must know exactly how many diners will arrive in order to decide how much food to prepare. Therefore, reservations at Michelin restaurants are very necessary.</p><p><br></p><p>So how do you begin making a reservation? How is it done? What platform should be used? These questions tend to confuse aspiring food enthusiasts who want to try but don't know where to start. No problem; below I will recommend several Michelin restaurant positioning apps suitable for use within the United States. The Michelin restaurants I have dined at were mostly booked through these methods.</p><p><br></p><p>Apps used for reservations</p><p><br></p><p>1. OpenTable</p><p><br></p><p>First, it is definitely highly recommended to use the leading American restaurant reservation platform: OpenTable.</p>
+Basically 80% of Michelin restaurants can be located through this APP. After registering an account to book, you can also accumulate points to exchange for discount coupons~</p><p><br></p><p>                                        2. Yelp</p><p><br></p><p>                    The second recommended app cannot fully be considered a reservation seat app; it's more of a restaurant search app. Unlike professional foodies who are definitely familiar with it, yes that is Yelp. It can be said to be the US version of an advanced Dianping (Chinese review site). I use it to search for restaurants, read reviews and view this restaurant's information etc. After Yelp upgraded, now it can also book many restaurants, but there are almost no Michelin-accepted reservations 😂 There are more reservations for small-to-medium restaurants. Also Yelp's "new stores" search function is one of my favorites; it can effectively help me quickly acquire information about nearby new store openings.</p><p><br></p><p>                                        3. Resy</p><p><br></p><p>                    Resy accepts reservations at restaurants that are more upscale/high-end. Even if the prices are affordable, this restaurant's interior style is also very stylish/pretentious; it's a high-end positioning app.</p>
+<p>Currently accepted cities are limited but still expanding continuously; several major US cities are on the list, so no worries.</p><p><br></p><p>                                        4. Reserve</p><p><br></p><p>                    Reserve is very similar to Resy in interface and feel, also following a high-end route. Some Michelin restaurant official websites will directly redirect booking here for guests to make reservations, so it also has partnerships with some Michelin restaurants. Like Resy, Reserve is my backup option; the one I use most is still OpenTable.</p><p><br></p><p>                                        5. Tock</p><p><br></p><p>                    Tock is a new player, and its approach differs from others. Tock adopts a pre-payment model because generally Michelin menus have fixed prices; Tock collects meal fees (or wine pairing fees) for each person in advance, so after guests confirm their reservation to dine, they don't need to pay extra, restaurants are assured, and guests can better manage their schedules.</p>
+</p><p><br></p><p>                    Of course, if you need to modify or cancel, each reservation will be prompted before payment about what time period before cancellation and modification are free; if it exceeds that, full payment is required. Tock's system is more like buying tickets for dining, but many three-star restaurants sell here. Personally, I think the user system is very user-friendly, easy to use, simple, and convenient.</p><p><br></p><p>                                        Summary</p><p><br></p><p>                    Regarding reservation locations, OpenTable is definitely the first choice, but it certainly cannot cover all Michelin restaurants. For example, La French Laundry has no option but to book directly through their official website, which means calling the restaurant or using their own reservation system on their official site. Several Michelin restaurants in Napa Valley adopt this model. My advice is: first choose OpenTable for reservations, then check the official website information. The webpage will definitely show a "Reservation" phrase; just follow the steps and you'll be fine.</p>
+        
+
+        <a class="backLink" href="list-1.html">← Back to Los Angeles</a>
+      </article>
+    </main>
+  </body>
+</html>

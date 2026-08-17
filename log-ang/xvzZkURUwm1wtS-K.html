@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <title>Complete and Practical Guide to California Disneyland!</title>
+    <style>
+      :root {
+        --paper: #f5f1eb;
+        --ink: #163d36;
+        --body: #3f3a34;
+        --muted: #8a8379;
+        --line: #ddd5ca;
+        --accent: #d9782f;
+        --white: #fffaf4;
+        --shadow: 0 22px 70px rgba(28, 25, 20, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        line-height: 1.72;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .hero {
+        min-height: clamp(330px, 48vw, 560px);
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        padding: clamp(28px, 7vw, 70px) clamp(24px, 8vw, 76px);
+        background: #28463f;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.12)),
+          url("");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .heroInner {
+        position: relative;
+        width: min(900px, 100%);
+        color: #ffffff;
+      }
+
+      .heroLocation {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 24px;
+        color: rgba(255, 255, 255, 0.78);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .heroLocation svg {
+        width: 17px;
+        height: 17px;
+        color: #f0a45f;
+      }
+
+      h1 {
+        max-width: 880px;
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(30px, 4.8vw, 54px);
+        font-weight: 900;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .brief {
+        width: min(760px, 100%);
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 18px;
+        color: #5a5148;
+        font-size: clamp(17px, 1.9vw, 20px);
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.58;
+      }
+
+      .articleWrap {
+        width: min(900px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: clamp(42px, 6vw, 68px) 0 72px;
+      }
+
+      .content {
+        width: min(760px, 100%);
+        color: var(--body);
+        font-size: clamp(16px, 1.8vw, 18px);
+        line-height: 1.5;
+      }
+
+      .content p {
+        margin: 0 0 12px;
+      }
+
+      .content h2,
+      .content h3,
+      .content h4 {
+        margin: 46px 0 18px;
+        color: var(--ink);
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+
+      .content h2 {
+        font-size: clamp(28px, 4vw, 38px);
+      }
+
+      .content h3 {
+        font-size: clamp(23px, 3vw, 30px);
+      }
+
+      .content ul,
+      .content ol {
+        margin: 0 0 30px;
+        padding-left: 28px;
+      }
+
+      .content li {
+        margin: 8px 0;
+      }
+
+      .content blockquote {
+        margin: 34px 0;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 20px;
+        color: #5a5148;
+        font-style: italic;
+      }
+
+      .content img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 42px 0 12px;
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+      }
+
+      .content figure {
+        margin: 42px 0;
+      }
+
+      .content figure img {
+        margin: 0 0 12px;
+      }
+
+      .content figcaption {
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .backLink {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 46px;
+        border-top: 1px solid var(--line);
+        padding-top: 28px;
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.18em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .backLink:hover {
+        color: var(--accent);
+      }
+
+      @media (max-width: 720px) {
+        .hero {
+          min-height: 420px;
+          padding: 30px 24px;
+        }
+
+        .articleWrap {
+          width: min(100% - 28px, 900px);
+          padding-bottom: 48px;
+        }
+
+        .content {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="heroInner">
+        <p class="heroLocation">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+            />
+          </svg>
+          <span>Los Angeles</span>
+        </p>
+        <h1>Complete and Practical Guide to California Disneyland!</h1>
+      </div>
+    </header>
+
+    <main class="articleWrap">
+      
+
+      <article class="content">
+        
+          <p>As a seasoned Disney fan who can&#39;t even remember how many times I&#39;ve been to Disneyland, often asked by friends for advice on visiting the park, after searching through all major websites and forums without finding satisfactory guides, I decided to create my own.</p><p><br></p><p>This guide provides detailed introductions to the main attractions at LA Disneyland and offers incredibly useful tips for visiting.</p><p><br></p><p>LA Disneyland is divided into three parts: Disneyland (DL), Disney California Adventure (CA), and Downtown Disney.</p><p><br></p><p>The first part of this guide will introduce the main attractions of these three places.</p><p><br></p><p>Before detailing individual Disney attractions, I want to highlight two SHOWs upfront. These SHOWs are comparable to the Great Wall for Beijing, or the Colosseum for Rome - even if you plan not to do anything else in the park, you must see these two.</p><p><br></p><p>First: The fireworks performance at Disneyland (DL)</p><p>Second: The fountain water show &quot;World of Color&quot; at Disney California Adventure (CA)</p><p><br></p><p>Both shows are held in the evening with performance times that vary daily, but they&#39;re always scheduled so you have time to watch both. Simply following the crowd works fine.</p><p><br></p><p>Part 1 - DL Disneyland</p><p>Disneyland is located on the right side upon entering.</p><p><br></p><p>Disneyland is divided into several sections:</p><p><br></p><p>Main Street: Located at the entrance of Disneyland, this is a long street featuring mostly souvenir shops and restaurants, including Starbucks.</p><p>Actually, its greatest purpose is that it serves as the best viewing spot for watching Disney&#39;s nighttime character parade and fireworks show. Every time that happens, the entire street becomes completely filled with people... and for a moment, you get this feeling like you&#39;re back in China.</p><p><br></p><p>Adventure Land:</p><p>Located to the left of Main Street, this area is themed around a primeval forest and an ancient Native American tribe. Here are the attraction descriptions:</p><p><br></p><p>Indiana Jones Adventure: The story is set about a century ago when an American mining company went into Native American territory to mine for resources and got trapped in a dark cave filled with skeletons, magic spells, venomous snakes, and lava, escaping on a bumpy jeep.</p><p>The scene design is very well done, immersing you through hearing, sight, and touch in the feeling of being in this mysterious forbidden land of the Indians, sitting in an old, dilapidated jeep, swaying while dodging and fleeing for your life. Out of 10 points, I&#39;d give it a 7 - highly worth trying.</p><p><br></p><p>Enchanted TIKI Room: Sit on a chair while listening to several parrots tell jokes. Well, the key thing is I still don&#39;t understand what they&#39;re saying, and after being there for about 5 minutes, I decisively left. Out of 10 points... well, anyway I wouldn&#39;t recommend going there.</p><p><br></p><p>Jungle Cruise: A simulated steamship cruise through a tropical jungle, experiencing the ecology of that environment where you can see many animals - of course most are fake. Just listen to their calls; overall it recreates the feeling of an original jungle, quite relaxed and comfortable for relaxing your mind and body. You can use this after Indiana Jones to calm down your emotions.</p><p>I rate this at 5 out of 10, but worth trying if you have plenty of time.</p><p><br></p><p>**Tarzan&#39;s Tree House**: Tarzan&#39;s tree house where you walk among trees 70 feet tall, experiencing how savages live. Honestly, I didn&#39;t feel much from it - just a walk. Rating: 4/10.</p><p><br></p><p>**Tomorrowland**: Located on the right side of Main Street, a land filled with futuristic technology. I think everything most fun in the entire Disney park is here (not including California Adventure Park). Here are the attractions:</p><p><br></p><p>**Space Mountain**: The most popular attraction in the entire park, hands down. You ride a spaceship through interstellar travel, roaming boundless space admiring brilliant starfields, then joining combat where you feel explosions constantly erupting beside your ears and laser weapons whizzing past. You&#39;ll definitely be shocked by the cosmic scenes inside - very real and magnificent. Rating: 9/10.</p><p><br></p><p>You might ask why not full marks for the most popular attraction? Good question - that&#39;s exactly why I don&#39;t want to give perfect scores...</p><p><br></p><p>**Star Tours**: Also super popular. The theme is Star Wars, where you board a spaceship going to some planet, but accidentally end up with that yellow talking funny robot from Star Wars as your driver. He doesn&#39;t know how to fly though, so obviously things go wrong. As soon as the ship leaves, you encounter the big boss of Star Wars, who plays around with you using Force powers. After barely escaping and being hunted down in various ways, you travel through wormholes - super super super exciting and fun!</p><p>!! A 4D experience. I give it a perfect 10 out of 10. Definitely worth going to.</p><p><br></p><p>Tomorrowland Theater: A Star Wars movie theater, nothing special to recommend, but if you haven&#39;t seen it, you can try it.</p><p><br></p><p>Buzz Lightyear Astro Blasters: Toy Story&#39;s Buzz Lightyear attraction, two people ride in cars holding laser guns and shoot at target boards to see who scores higher. Honestly, I only figured out how this game works halfway through playing. Each time you pull the trigger, a red dot is fired, but the problem is those red dots are hard to spot. With so many people around, you start confused about which one belongs to you. Out of 10, I give it 5 because similar games exist at California Adventure Park and that version is far more enjoyable, which I&#39;ll introduce later.</p><p><br></p><p>Disneyland Monorail: More like a form of transportation than an attraction. Similar to Shanghai&#39;s maglev trains, though it looks more like the Red Robo-Railman character. It heads toward Downtown Disney. Only ride if you need to, and don&#39;t treat it as a game.</p><p><br></p><p>Finding Nemo Submarine Voyage: Just submarines that swim around the bottom of the lake in circles while you watch movies inside. That&#39;s all there is to it. Watching the submarine from the shore seems interesting, but stepping inside feels underwhelming. I&#39;d give this 6 out of 10; families with kids might enjoy it.</p><p><br></p><p>Fantasyland:</p><p>This is where the famous Disney Castle is located, right at the end of Main Street.</p><p>In front of the castle stands a famous statue featuring Disney founders holding Mickey Mouse. Bludo also provides photo opportunities throughout this plaza. I won&#39;t introduce each attraction in this land one by one—they&#39;re all things like carousels, teacup rides, small planes, and boats—so I only pass through. Those with children can try them out. Only one attraction is particularly fun: Matterhorn Bobsleds, located at that prominent snow mountain. You slide down the mountain&#39;s narrow passages at high speed on a bobsled. The obstacles scattered everywhere and the occasional appearance of yeti monsters add a lot to this experience. Out of 10 points, I&#39;d give it 7—a very good spot.</p><p><br></p><p>New Orleans Square: Located to the left of Adventureland, there are only two attractions—Pirates of the Caribbean at the entrance and Haunted Mansion. Pirates is themed around Caribbean pirates, primarily for sightseeing. It showcases life in the 17th century with scenes of pirate battles, drinking, treasure hunting, and women. The settings and characters are quite realistic, creating a somewhat oppressive atmosphere. You can even see what appears to be the male lead from Pirates of the Caribbean! It&#39;s definitely a unique attraction. Out of 10 points, I&#39;d give it 6.</p><p><br></p><p>Haunted Mansion: Located at this land&#39;s exit, it&#39;s a ghost house about an entire family dying in a mansion that then becomes haunted. The sightseeing format is similar to Pirates of the Caribbean, except the themes and settings are different. Its portrayal of darkness, lightning, and haunting scenes is very well done—not terribly scary, but still gives you a bit of nervousness. It&#39;s a uniquely characteristic ghost house.</p><p>I&#39;d rate it 6 out of 10.</p><p><br></p><p>Frontierland:</p><p>Located on the left side of the castle, in front of Adventureland. I recommend only one attraction here—Big Thunder Mountain. It&#39;s a thrilling small train ride that races through mines, very similar to Snow Mountain mentioned above. I give it 7 out of 10. If you&#39;re short on time, just do one of them.</p><p><br></p><p>I&#39;ve already written about the slightly fun attractions at Disneyland. The rest feel like they&#39;re prepared for kids, so let me take a shortcut and skip this part, hehe.</p><p><br></p><p>Part 2 California Adventure Park</p><p>California Adventure (CA) is located on the left side at the entrance. Compared to Disneyland, CA is much smaller.</p><p><br></p><p>CA is divided into the following sections:</p><p><br></p><p>Buena Vista Street: The main street at the entrance, featuring various souvenirs and snacks. Starbucks is also here.</p><p><br></p><p>Hollywood Land:</p><p>Located on the left side of the park with an old American style from last century—it&#39;s quite classy. The main attractions include:</p><p><br></p><p>Actually, inside it&#39;s mostly various shows—there are 3D movies, Disney cartoon character dancing shows, and outdoor concerts. Since this park is small, you don&#39;t need to search around much; everything is close by.</p><p>But there is one attraction I want to introduce with great enthusiasm—the Tower of Terror!! Yes, you got it right! That huge brown building you can see from the moment you enter the park is it!</p><p><br></p><p>It&#39;s an elevator, somewhat similar to a drop tower ride, but trust me, it&#39;s much more fun—super thrilling!!!! On my first try, I was clutching onto someone next to me so tightly, wouldn&#39;t let go no matter what... The person beside me broke down from watching me. This feeling of excitement—those who experience it know. With a maximum score of 10 points, I give it 10 points, not afraid that it will become arrogant with praise.</p><p><br></p><p>CondorFlats:</p><p>Located on the right side of the park, there is only one attraction called Soarin Over California. You sit in an airplane and glide above, overlooking all of California—from mountains to rivers, from fields to coastlines, from the continuous flow at Golden Gate Bridge to snow skiers&#39; smooth movements at snowy peaks, immersing you completely in California&#39;s grandeur. I give it 7 out of 10 points, very worth trying.</p><p><br></p><p>GrizzlyPeak:</p><p>Located on the right side of the park, continue walking along Condor Flats. There are only two attractions here:</p><p><br></p><p>RiverRun, a white water rafting ride where you sit in a circular rubber raft and flow down along channels built into the mountain—the height changes are moderate and it&#39;s quite interesting. This project will get your clothes slightly wet, but it is a great place to cool off on hot summer days. With 10 as maximum points, I give it 6.</p><p><br></p><p>RedwoodCreek Challenge Trail, this is an outdoor adventure activity featuring climbing rope bridges, hollow log slides, rock climbing, and more. It is the only attraction at Disney that you don&#39;t sit on anything while experiencing it. There is a certain level of difficulty and it consumes quite a bit of physical energy.</p><p>On a scale of 10, I give it a 7.</p><p><br></p><p>BugsLand: Created based on &quot;A Bug&#39;s Life,&quot; this land features entertainment attractions mainly for children. The main experience is feeling what it&#39;s like to be a bug - wandering through a world where even grass grows enormous and everywhere you hear insects chirping. It feels quite novel. It&#39;s on the route from Hollywood Land to Cars Land, worth seeing just to look around.</p><p><br></p><p>CarsLand: Cars. The entire land is modeled after the deserted town by Highway 66 in California from Disney/Pixar&#39;s movie &quot;Cars,&quot; including those huge rocks. The entire scene is an incredible recreation of the movie - identical! Inside are 1:1 scale animated characters - the cars themselves - that can move, run, and talk. Extremely popular.</p><p><br></p><p>However, I&#39;d recommend only one attraction in this entire land: Radiator Springs Racers. Want to experience the thrill of racing along Highway 66&#39;s rocky section with the movie&#39;s main characters? This is where you come. Experience the acceleration of a race car and the intense sensation of side slopes exceeding 60°. One of the most popular attractions, on a scale of 10 I give it a 9.</p><p><br></p><p>Paradise Pier: A giant Ferris wheel and a roller coaster that runs almost through the entire land, the high-flying Flying School, Toy Story&#39;s 4D shooting experience. This park has the highest density of entertainment projects and offers the most fun things to do.</p><p>Located at the far end of the park is one of Disney&#39;s two must-see shows - the fountain water screen show &quot;World of Color.&quot;</p><p><br></p><p>California Screaming, it&#39;s a roller coaster, hands down the best I&#39;ve ever ridden. Just watching others ride from below makes my heart race. Thinking about riding myself soon makes me feel a bit shaky on my feet. Yes, that&#39;s just how awesome it is. No need for me to explain more - you&#39;ll know how much fun it is once you&#39;re there. Out of 10 points, I give it a perfect 10.</p><p><br></p><p>Mickey&#39;s Fun Wheel features a huge Mickey Mouse head and is the signature attraction at CA Disneyland. Unlike regular Ferris wheels, this one has swinging gondolas, making your first ride absolutely surprising... completely unprepared for it~~ Out of 10 points, I give it an 8.</p><p><br></p><p>Toy Story Midway Mania is a Toy Story 4D shooting game. Compared to the Buzz Lightyear attraction at previous Disney parks, this one is way more exciting. Similar concept of sitting in a vehicle and shooting with a gun, but this place is 4D - you have to wear 4D glasses. In your view, every time you pull the trigger, green lasers really shoot out in circles. The effect is incredibly realistic, far superior! It&#39;s the hottest attraction at the entire CA park, without a doubt.</p><p><br></p><p>The other few are just small entertainment projects that are quite common, so I won&#39;t introduce each one individually.</p><p><br></p><p>Part 3: Downtown Disney Shopping District</p><p>It&#39;s just a commercial street, featuring Disney&#39;s largest store inside where you can buy all the Disney merchandise available. Plus things like Starbucks, Lego, Hardee&#39;s, sunglasses - they&#39;re all there.</p><p><br></p><p>That&#39;s it for the attractions at LA Disney (I&#39;m exhausted...).</p><p><br></p><p>Part 4: The Ultimate Guide!!!</p><p>Now comes the real stuff, here are the strategies!!!!! Many friends ask me, with so many places and so much fun stuff, how is it possible to fit everything into one day? But buying two-day tickets means spending more money, or else you don&#39;t have time. Heh, keep reading below.</p><p><br></p><p>Disney has designed its queue systems for entertainment projects very cleverly, but many new visitors to Disney, especially those with limited English, often overlook this and just patiently line up, resulting in wasting a huge amount of time. For the attractions I mentioned earlier, you&#39;re looking at minimum 40-minute waits, while popular rides during peak times can have you queuing for nearly two hours. Sticking to traditional lines will quickly drive visitors into emotional distress and tears.</p><p><br></p><p>To address this challenge, I&#39;ll introduce Disney&#39;s two most effective tools: Fastpass and single line service. FASTPASS is a strategic queue management system where guests insert their tickets at designated machines to receive a time-stamped ticket allowing skip-the-line access during specific return windows. These passes strategically schedule visitors to minimize wait times while maintaining park flow and reducing congestion around major attractions.</p><p>And you can use this time to queue for other attractions or rest and grab a meal. By the way, you&#39;re limited to two of these items at most, and need to request them again once they&#39;re used up.</p><p><br></p><p>Single Line - don&#39;t misunderstand, it&#39;s not exclusively for single people (those who are unpartnered). Since most entertainment facilities only accommodate a few riders per session, families often find that after boarding there are still 1-2 seats empty, but the family behind also arrives as a complete unit and is unwilling to split up. At this point, the vacant seats become available for Single Line riders. Simply put, as long as you&#39;re prepared to sit alone or with strangers on rides, choose the Single Line. With good luck, you might even end up sitting near your companions. The Single Line can save at least half an hour of queue time - I&#39;m not deceiving you. If your group doesn&#39;t mind having fun separately and in different configurations, this is worth utilizing properly - it&#39;s incredibly useful. Of course, couples aren&#39;t recommended for this strategy - otherwise, when the girlfriend gets scared, who will she hold onto?</p><p><br></p><p>Of course, not all entertainment attractions offer both of these options, but basically all the enjoyable ones do. This follows Disney&#39;s official map and guidebook.</p><p><br></p><p>***Proven Effective: One Day Two Parks Strategy***</p><p><br></p><p>Alright, I&#39;ve covered what needs to be said, now let me specifically teach you how to complete both parks in a single day.</p><p><br></p><p>First, Disney opens at 8am - don&#39;t hesitate, the earlier you enter, the better. Fewer crowds and shorter queues. Since CA Park is smaller, make it your first destination.</p><p><br></p><p>Upon entering, walk down that street then turn left and head straight for HollywoodLand&#39;s Tower of Terror. I&#39;m not recommending you ride it yet - rather, go there to obtain a FASTPASS. The machine sits directly across from the attraction.</p><p>After picking it up, continue walking and you will see A Bug&#39;s Life attractions. After experiencing the feeling of being a bug, you arrive at Cars Land. The racing game is located at the very end - get your FP there.</p><p><br></p><p>Next, check the times on the two FPs you received. Generally, there is plenty of time, so you can wander around nearby. Turn right at Cars Land exit to return near the entrance area, then go to Condor Flats and queue up. After playing it, if you have enough time left, walk forward to experience River Run. When that&#39;s done, you should be able to return to use those two FP attractions.</p><p><br></p><p>After finishing, head into Paradise Pier first. Get your PF for the California Screamin&#39; roller coaster, then go queue up for Toy Story Land attraction, and finally ride the Ferris Wheel. Remember that the entrance on the right side of the Ferris Wheel offers swaying gondola seats.</p><p><br></p><p>By the time you&#39;re done with those activities, your PF times should also be about ready to use. You can go enjoy the roller coaster then.</p><p><br></p><p>If it&#39;s still early before noon at 12:00 PM at this point, you can continue exploring and enjoying other attractions - you&#39;ll have plenty of time left. If it has already been noon, I recommend walking back through your route. When passing River Run again on your way back, go get the World of Color spray fountain show PF, so you know when the performance begins.</p><p><br></p><p>Basically, spend your morning hours at CA because it&#39;s small and closes early, so going in the morning would be better.</p><p><br></p><p>After lunch with a brief rest around noon, you can head to Disneyland Park - straight from the exit and you arrive.</p><p>At Disneyland, we also started by getting two of the most popular FastPasses: Hyperspace Mountain and Star Tours. Their locations are on the right side of the statue showing an old man holding Mickey Mouse at the entrance; they&#39;re marked on maps. If you can&#39;t find them, just ask the staff - they&#39;re very enthusiastic and helpful.</p><p><br></p><p>Once you have your FastPasses, you can enjoy attractions at your leisure. After using up those two FastPasses, go to Indiana Jones to get your last FP. Then use it for Haunted Mansion after experiencing the ride. Return quickly to use it right away.</p><p><br></p><p>By this point, you&#39;ll have basically experienced all the fun attractions. Before the two shows mentioned at the beginning of this guide start, you&#39;ll still have extra time to choose some projects that interest you. When showtime arrives, go watch - a breathtaking SHOW! Then end the day in perfect style. Perfect!</p>
+        
+
+        <a class="backLink" href="list-1.html">← Back to Los Angeles</a>
+      </article>
+    </main>
+  </body>
+</html>
