@@ -27,6 +27,7 @@
 		.category-grid {
 			display: flex;
 			flex-wrap: wrap;
+			align-items: flex-start;
 		}
 		.category-grid-post {
 			display: flex;
@@ -34,6 +35,12 @@
 		}
 		.category-grid-post .post {
 			width: 100%;
+		}
+		.category-page-post .post-no-image .post-body {
+			position: relative;
+			margin: 0;
+			padding: 0;
+			background: transparent;
 		}
 		@media only screen and (max-width: 767px) {
 			.category-featured .post.post-thumb .post-img {

@@ -1,5 +1,5 @@
 {% macro card(post, postClass="", titleClass="", showExcerpt=false) %}
-<div class="post{% if postClass %} {{ postClass }}{% endif %}">
+<div class="post{% if postClass %} {{ postClass }}{% endif %}{% if not post.image %} post-no-image{% endif %}">
 	{% if post.image %}
 	<a class="post-img" href="{{ post.url | default('blog-post.html') }}">
 		<img src="{{ post.image }}" alt="{{ post.title }}">
