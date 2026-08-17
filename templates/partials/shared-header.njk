@@ -1,5 +1,6 @@
 {% import "partials/post-macros.njk" as posts %}
 {% set menuTabs = headerMenuTabs | default(page.menuTabs) %}
+{% set headerCategories = sidebarCategories | default(sidebar.categories) %}
 		<!-- NAV -->
 		<div id="nav">
 			<!-- Top Nav -->
@@ -7,7 +8,8 @@
 				<div class="container">
 					<!-- logo -->
 					<div class="nav-logo">
-						<a href="{{ home_url | default('index.html') }}" class="logo brand-text"><span class="brand-pink">S</span>an <span class="brand-blue">F</span>rancisc<span class="brand-gold">o</span></a>
+						{% set logo_content = logo | default('<span class="brand-pink">S</span>an <span class="brand-blue">F</span>rancisc<span class="brand-gold">o</span>') %}
+						<a href="{{ home_url | default('index.html') }}" class="logo brand-text">{{ logo_content | safe }}</a>
 					</div>
 					<!-- /logo -->
 
@@ -36,7 +38,7 @@
 					<ul class="nav-menu">
 						<li><a href="{{ home_url | default('index.html') }}">Home</a></li>
 						<li class="has-dropdown megamenu">
-							<a href="#">Travel</a>
+							<a href="#">Category</a>
 							<div class="dropdown tab-dropdown">
 								<div class="row">
 									<div class="col-md-2">
@@ -80,7 +82,9 @@
 					<li><a href="{{ home_url | default('index.html') }}">Home</a></li>
 					<li class="has-dropdown"><a>Categories</a>
 						<ul class="dropdown">
-							<li><a href="#">Travel</a></li>
+							{% for category in headerCategories %}
+							<li><a href="{{ category.url | default('#') }}">{{ category.name }}</a></li>
+							{% endfor %}
 						</ul>
 					</li>
 					<li><a href="{{ about_url | default('../about.html') }}">About</a></li>

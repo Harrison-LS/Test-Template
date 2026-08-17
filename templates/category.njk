@@ -48,7 +48,7 @@
 
 <body>
 	<header id="header">
-		{% set headerMenuTabs = [page.menuTabs[0]] %}
+		{% set headerMenuTabs = page.menuTabs %}
 		{% include "partials/shared-header.njk" %}
 
 		<div class="page-header">
@@ -107,7 +107,7 @@
 					{% endif %}
 				</div>
 
-				{% set sidebarCategories = [sidebar.categories[0]] %}
+				{% set sidebarCategories = sidebar.categories %}
 				{% include "partials/shared-sidebar.njk" %}
 			</div>
 		</div>
