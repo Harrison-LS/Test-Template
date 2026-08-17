@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <title>Lovers of Meat, Look Over Here | A Guide to Steakhouses Around Los Angeles</title>
+    <style>
+      :root {
+        --paper: #f5f1eb;
+        --ink: #163d36;
+        --body: #3f3a34;
+        --muted: #8a8379;
+        --line: #ddd5ca;
+        --accent: #d9782f;
+        --white: #fffaf4;
+        --shadow: 0 22px 70px rgba(28, 25, 20, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        line-height: 1.72;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .hero {
+        min-height: clamp(330px, 48vw, 560px);
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        padding: clamp(28px, 7vw, 70px) clamp(24px, 8vw, 76px);
+        background: #28463f;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.12)),
+          url("");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .heroInner {
+        position: relative;
+        width: min(900px, 100%);
+        color: #ffffff;
+      }
+
+      .heroLocation {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 24px;
+        color: rgba(255, 255, 255, 0.78);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .heroLocation svg {
+        width: 17px;
+        height: 17px;
+        color: #f0a45f;
+      }
+
+      h1 {
+        max-width: 880px;
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(30px, 4.8vw, 54px);
+        font-weight: 900;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .brief {
+        width: min(760px, 100%);
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 18px;
+        color: #5a5148;
+        font-size: clamp(17px, 1.9vw, 20px);
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.58;
+      }
+
+      .articleWrap {
+        width: min(900px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: clamp(42px, 6vw, 68px) 0 72px;
+      }
+
+      .content {
+        width: min(760px, 100%);
+        color: var(--body);
+        font-size: clamp(16px, 1.8vw, 18px);
+        line-height: 1.5;
+      }
+
+      .content p {
+        margin: 0 0 12px;
+      }
+
+      .content h2,
+      .content h3,
+      .content h4 {
+        margin: 46px 0 18px;
+        color: var(--ink);
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+
+      .content h2 {
+        font-size: clamp(28px, 4vw, 38px);
+      }
+
+      .content h3 {
+        font-size: clamp(23px, 3vw, 30px);
+      }
+
+      .content ul,
+      .content ol {
+        margin: 0 0 30px;
+        padding-left: 28px;
+      }
+
+      .content li {
+        margin: 8px 0;
+      }
+
+      .content blockquote {
+        margin: 34px 0;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 20px;
+        color: #5a5148;
+        font-style: italic;
+      }
+
+      .content img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 42px 0 12px;
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+      }
+
+      .content figure {
+        margin: 42px 0;
+      }
+
+      .content figure img {
+        margin: 0 0 12px;
+      }
+
+      .content figcaption {
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .backLink {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 46px;
+        border-top: 1px solid var(--line);
+        padding-top: 28px;
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.18em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .backLink:hover {
+        color: var(--accent);
+      }
+
+      @media (max-width: 720px) {
+        .hero {
+          min-height: 420px;
+          padding: 30px 24px;
+        }
+
+        .articleWrap {
+          width: min(100% - 28px, 900px);
+          padding-bottom: 48px;
+        }
+
+        .content {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="heroInner">
+        <p class="heroLocation">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+            />
+          </svg>
+          <span>Los Angeles</span>
+        </p>
+        <h1>Lovers of Meat, Look Over Here | A Guide to Steakhouses Around Los Angeles</h1>
+      </div>
+    </header>
+
+    <main class="articleWrap">
+      
+
+      <article class="content">
+        
+          <p>No need for more words, let&#39;s dig in to the meat!</p><p>Are you feeling hungry yet?</p><p>Today I&#39;ll share with you some specialty steakhouse restaurants here in Los Angeles~</p><p>Simple &amp; Authentic LA Landmark Steakhouse | Lawry&#39;s The Prime Rib</p><p>Lawry&#39;s The Prime Rib is a landmark steakhouse in Los Angeles. According to reliable historical records, this upscale beef and seafood restaurant located on La Cienega Blvd in Beverly Hills has been open since 1938. It has long been famous in the culinary world for its premium rib cuts and ribeye steaks in different preparations, while lobster and salmon dishes are also very authentic~</p><p>Looking at the pictures, you can already taste it! For steak lovers, Lawry&#39;s Cut of course is the top recommendation. Said to be the restaurant&#39;s signature dish. This traditional + most popular steak comes with a famous signature rotating bowl salad. The servers perform live in front of guests, spinning the salad bowl and tossing the dressing right before your eyes. Before you eat, they carefully provide an ice-cold fork to ensure freshness at serving time. High-quality ingredients and thoughtful service—what reason is there not to visit!</p><p>When the main course steak arrives, chefs will slice steaks of different doneness and size based on each guest&#39;s individual preferences right in front of them.</p><p>Lawry&#39;s Steakhouse - The first bite reveals a savory flavor with hints of sweetness. Its greatest feature is the incredibly tender meat bursting with juice. Truly one of the leading steak restaurants, compared to another famous steakhouse known for its crispy exterior and tender interior, this place offers an exceptionally smooth mouthfeel that literally melts in your mouth.</p><p><br></p><p>As suggested by the name &quot;Lawry&#39;s The Prime Rib,&quot; which focuses on prime rib roast, I recommend first-time visitors try the Lawry Cut Traditional Steak Set Menu, which already includes salad and basic sides. If you&#39;d like more, you can add appetizers or desserts to complete your experience. This way you can enjoy this famous restaurant&#39;s specialty dishes without spending too much - elegant yet accessible.</p><p><br></p><p>Phone:</p><p>(310) 652-2827</p><p><br></p><p>Address:</p><p>100 La Cienega Blvd, Beverly Hills, CA 90211</p><p><br></p><p>Refined and delicate American style | CUT</p><p><br></p><p>As the title suggests, this steakhouse is truly American-style. Who says American steaks can only be bold and rugged? They can also be refined and delicate - take CUT Restaurant in Beverly Hills for example.</p><p><br></p><p>The ingredients here are top-tier with great variety, featuring Angus beef from the United States and Australia, Japanese Wagyu, and authentic Hyogo A5 Kobe beef from Japan. The delicious grilled meat cooked over hardwood and charcoal is irresistible to any meat lover.</p><p>You also don&#39;t need to worry about unbalanced nutrition; there is an abundance of fresh vegetables and creative side dishes here. As for the dining environment and the selection of aged wines, you can rest assured - I can only use words like &quot;awe-inspiring&quot; or &quot;breathtaking&quot; to describe this restaurant&#39;s collection.</p><p><br></p><p>Phone: (310) 276-8500</p><p>Address: 9500 Wilshire Blvd, Beverly Hills, CA 90212, USA</p><p><br></p><p>Romantic delicacies and beautiful scenery can indeed be enjoyed together | Mastro&#39;s Ocean Club</p><p><br></p><p>Who says you cannot enjoy both fine dining and beautiful views? In the gorgeous Southern California coastline, this is not possible! Located in Malibu, Mastro&#39;s Ocean Club, this high-end steakhouse is truly impressive. Being well-off, they choose only prime locations for their stores; for instance, in Los Angeles, they prefer opening in places like Malibu, Newport, and Beverly Hills. By the seaside with windows offering scenic views, you enjoy exquisite food while living a comfortable life.</p><p><br></p><p>Of course, the steaks here must also be quite good, especially bone-in ribeyes and New York strip steaks. The ingredients use &quot;wet-aged&quot; steak cooking methods, which can effectively prevent excessive moisture loss from the beef, so they are characterized by rich meat flavor and soft, juicy texture.</p><p>Besides the delicious steak, the sides and desserts are also excellent. The &quot;Lobster Mashed Potatoes&quot; is simply a side dish that excites you just by hearing the name, let alone the legendary cream cake that people say once eaten, you&#39;ll never forget. If there&#39;s an important occasion, you can choose to spend it here—you definitely won&#39;t regret it~</p><p>Phone: (310) 454-4357</p><p>Address: 18412 Pacific Coast Hwy, Malibu, CA 90265, USA</p><p><br></p><p>Modern Italian-Style Steak | Baltaire</p><p>To be honest, Baltaire&#39;s steakhouse in the affluent Brentwood area is quite pricey. Baltaire&#39;s steaks feature a modern Italian style with exceptional flavor. As you can imagine, opening a steakhouse in such a prestigious location requires a perfectly designed interior environment. Features like courtyards, greenery, retractable roofs, and an L-shaped bar are all present here—understated luxury with real character. After all, only a bright and uniquely modern restaurant fits the high-end background of this area.</p><p><br></p><p>This atmosphere is perfect for business-casual dining. The selection of steaks is very wide-ranging, from USDA Prime to Wagyu Tasting options available. When specially crafted sauces meet dry-aged beef and premium cote de boeuf (cow rib chops), it&#39;s truly unique—photos prove the authenticity~</p><p>Also available are exquisite and delicious Prime filet and the &quot;Porterhouse,&quot; which is perfect for sharing between two people. Besides steaks, the land, sea, and air dishes here are actually quite good; it&#39;s said that the Bloody Mary cocktail is particularly popular and performs excellently. Phone: (424) 273-1660 Address: 11647 San Vicente Blvd, Los Angeles, CA 90049, USA</p>
+        
+
+        <a class="backLink" href="list-1.html">← Back to Los Angeles</a>
+      </article>
+    </main>
+  </body>
+</html>

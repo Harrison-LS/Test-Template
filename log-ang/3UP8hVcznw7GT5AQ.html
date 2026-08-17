@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <title>What's worth buying at Los Angeles Desert Hills Outlets?</title>
+    <style>
+      :root {
+        --paper: #f5f1eb;
+        --ink: #163d36;
+        --body: #3f3a34;
+        --muted: #8a8379;
+        --line: #ddd5ca;
+        --accent: #d9782f;
+        --white: #fffaf4;
+        --shadow: 0 22px 70px rgba(28, 25, 20, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        line-height: 1.72;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .hero {
+        min-height: clamp(330px, 48vw, 560px);
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        padding: clamp(28px, 7vw, 70px) clamp(24px, 8vw, 76px);
+        background: #28463f;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.12)),
+          url("");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .heroInner {
+        position: relative;
+        width: min(900px, 100%);
+        color: #ffffff;
+      }
+
+      .heroLocation {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 24px;
+        color: rgba(255, 255, 255, 0.78);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .heroLocation svg {
+        width: 17px;
+        height: 17px;
+        color: #f0a45f;
+      }
+
+      h1 {
+        max-width: 880px;
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(30px, 4.8vw, 54px);
+        font-weight: 900;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .brief {
+        width: min(760px, 100%);
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 18px;
+        color: #5a5148;
+        font-size: clamp(17px, 1.9vw, 20px);
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.58;
+      }
+
+      .articleWrap {
+        width: min(900px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: clamp(42px, 6vw, 68px) 0 72px;
+      }
+
+      .content {
+        width: min(760px, 100%);
+        color: var(--body);
+        font-size: clamp(16px, 1.8vw, 18px);
+        line-height: 1.5;
+      }
+
+      .content p {
+        margin: 0 0 12px;
+      }
+
+      .content h2,
+      .content h3,
+      .content h4 {
+        margin: 46px 0 18px;
+        color: var(--ink);
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+
+      .content h2 {
+        font-size: clamp(28px, 4vw, 38px);
+      }
+
+      .content h3 {
+        font-size: clamp(23px, 3vw, 30px);
+      }
+
+      .content ul,
+      .content ol {
+        margin: 0 0 30px;
+        padding-left: 28px;
+      }
+
+      .content li {
+        margin: 8px 0;
+      }
+
+      .content blockquote {
+        margin: 34px 0;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 20px;
+        color: #5a5148;
+        font-style: italic;
+      }
+
+      .content img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 42px 0 12px;
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+      }
+
+      .content figure {
+        margin: 42px 0;
+      }
+
+      .content figure img {
+        margin: 0 0 12px;
+      }
+
+      .content figcaption {
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .backLink {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 46px;
+        border-top: 1px solid var(--line);
+        padding-top: 28px;
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.18em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .backLink:hover {
+        color: var(--accent);
+      }
+
+      @media (max-width: 720px) {
+        .hero {
+          min-height: 420px;
+          padding: 30px 24px;
+        }
+
+        .articleWrap {
+          width: min(100% - 28px, 900px);
+          padding-bottom: 48px;
+        }
+
+        .content {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="heroInner">
+        <p class="heroLocation">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+            />
+          </svg>
+          <span>Los Angeles</span>
+        </p>
+        <h1>What's worth buying at Los Angeles Desert Hills Outlets?</h1>
+      </div>
+    </header>
+
+    <main class="articleWrap">
+      
+
+      <article class="content">
+        
+          <p>There are many outlets in the Greater Los Angeles area. Desert Hills Outlets claims to have the most stores and biggest discounts, but it is also farthest from downtown. If you have enough time, you can take a shuttle bus there to shop for deals.</p><p><br></p><p>In comparison, Castle Hill Outlets doesn&#39;t have as many stores (I actually spent a whole day there and wasn&#39;t sure about the exact discounts without comparison), but it&#39;s only a 30-minute drive from downtown, with eating and shopping all in one place.</p><p><br></p><p>What&#39;s worth buying?</p><p><br></p><p>As a guy who doesn&#39;t really enjoy shopping and has no real sense of brand pricing, I&#39;m lucky to have tools like Taobao that let me compare prices online. Plus, fellow shoppers constantly share their recommendations.</p><p><br></p><p>Honestly, MK (Michael Kors), CK (Calvin Klein), Coach, and Tommy are the most worthwhile stores to visit in this outlet mall, and each has Chinese-speaking shopping assistants available.</p><p><br></p><p>Let me walk through each store&#39;s experience: Michael Kors offers both men&#39;s and women&#39;s collections with decent styles. Some items also appear in airport shops. Discounts typically start around 30-40% off, then move to 25%, with additional savings on purchases over $500 (getting an extra 15% off).</p><p><br></p><p>Calvin Klein typically runs at 50-60% off, with some newer items at 30%. The quality and style are genuinely impressive—these don&#39;t feel like typical outlet merchandise. Underwear is especially affordable and well-made.</p><p><br></p><p>Tommy Hilfiger offers discounts ranging from 30-50% off, still significantly cheaper than Hong Kong prices. Kate Spade also has strong markdowns with styles available in-store and plenty of special deals worth noting.</p><p><br></p><p>Coach&#39;s women&#39;s handbags present a slight value challenge. The designs feel distinctly outlet-oriented, with noticeable differences from full-price store versions.</p><p>As for men&#39;s bags, the value for money is much better. The discounts range from 30% to 50% off, and some styles are available in-store.</p><p><br></p><p>The ones with the lowest value proposition should be those sports brand big names. Their discount power doesn&#39;t compare to Hong Kong, and the styles are hard to bear. Spending a day at the outlet mall is about fine, and eating isn&#39;t an issue either - Starbucks and Subway can basically satisfy basic needs.</p><p><br></p><p>Some people like to rush for Black Friday deals; then of course the discounts are very significant. But what the shopping assistants said is true as well: everything has to be grabbed quickly when it goes on sale, but even grabbing doesn&#39;t guarantee you&#39;ll get it, plus there are long queues upon entering stores - truly with no shopping enjoyment left.</p>
+        
+
+        <a class="backLink" href="list-1.html">← Back to Los Angeles</a>
+      </article>
+    </main>
+  </body>
+</html>

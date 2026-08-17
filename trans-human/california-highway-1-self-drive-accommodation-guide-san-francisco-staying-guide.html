@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Route 1: San Francisco" />
+    <title>California Highway 1 Self-Drive Accommodation Guide | San Francisco Staying Guide</title>
+    <style>
+      :root {
+        --paper: #f5f1eb;
+        --ink: #163d36;
+        --body: #3f3a34;
+        --muted: #8a8379;
+        --line: #ddd5ca;
+        --accent: #d9782f;
+        --white: #fffaf4;
+        --shadow: 0 22px 70px rgba(28, 25, 20, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        line-height: 1.72;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .hero {
+        min-height: clamp(330px, 48vw, 560px);
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        padding: clamp(28px, 7vw, 70px) clamp(24px, 8vw, 76px);
+        background: #28463f;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.12)),
+          url("https://p1-q.mafengwo.net/s11/M00/BE/1B/wKgBEFtgJd6AaDBoAAoKIAW4hjc93.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F90");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .heroInner {
+        position: relative;
+        width: min(900px, 100%);
+        color: #ffffff;
+      }
+
+      .heroLocation {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 24px;
+        color: rgba(255, 255, 255, 0.78);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .heroLocation svg {
+        width: 17px;
+        height: 17px;
+        color: #f0a45f;
+      }
+
+      h1 {
+        max-width: 880px;
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(30px, 4.8vw, 54px);
+        font-weight: 900;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .brief {
+        width: min(760px, 100%);
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 18px;
+        color: #5a5148;
+        font-size: clamp(17px, 1.9vw, 20px);
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.58;
+      }
+
+      .articleWrap {
+        width: min(900px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: clamp(42px, 6vw, 68px) 0 72px;
+      }
+
+      .content {
+        width: min(760px, 100%);
+        color: var(--body);
+        font-size: clamp(16px, 1.8vw, 18px);
+        line-height: 1.5;
+      }
+
+      .content p {
+        margin: 0 0 0.5em;
+      }
+
+      .content h2,
+      .content h3,
+      .content h4 {
+        margin: 46px 0 18px;
+        color: var(--ink);
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+
+      .content h2 {
+        font-size: clamp(28px, 4vw, 38px);
+      }
+
+      .content h3 {
+        font-size: clamp(23px, 3vw, 30px);
+      }
+
+      .content ul,
+      .content ol {
+        margin: 0 0 30px;
+        padding-left: 28px;
+      }
+
+      .content li {
+        margin: 8px 0;
+      }
+
+      .content blockquote {
+        margin: 34px 0;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 20px;
+        color: #5a5148;
+        font-style: italic;
+      }
+
+      .content img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 42px 0 12px;
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+      }
+
+      .content figure {
+        margin: 42px 0;
+      }
+
+      .content figure img {
+        margin: 0 0 12px;
+      }
+
+      .content figcaption {
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .backLink {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 46px;
+        border-top: 1px solid var(--line);
+        padding-top: 28px;
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.18em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .backLink:hover {
+        color: var(--accent);
+      }
+
+      @media (max-width: 720px) {
+        .hero {
+          min-height: 420px;
+          padding: 30px 24px;
+        }
+
+        .articleWrap {
+          width: min(100% - 28px, 900px);
+          padding-bottom: 48px;
+        }
+
+        .content {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="heroInner">
+        <p class="heroLocation">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+            />
+          </svg>
+          <span>Los Angeles</span>
+        </p>
+        <h1>California Highway 1 Self-Drive Accommodation Guide | San Francisco Staying Guide</h1>
+      </div>
+    </header>
+
+    <main class="articleWrap">
+      
+      <p class="brief">Route 1: San Francisco</p>
+      
+
+      <article class="content">
+        
+          <p>First Route Segment: San Francisco</p><p><br></p><p>                                             by ijt7epn</p><p><br></p><p>                    Recommended Attractions to Visit: Fisherman's Wharf, Lombard Street (Nine-Bend Flower Hill), Palace of Fine Arts, Golden Gate Bridge</p><p>Best Time to Travel: April - October</p><p><br></p><p>                    San Francisco is the starting point of this route and also America's most vibrant creative city. The orange-red Golden Gate Bridge, sapphire blue Fisherman's Wharf, pure white Pan-Pacific Pyramid Building, and colorfully changing four seasons Lombard Street all attract you to linger here, allowing you to use your heart to feel this city's unique atmosphere.</p><p><br></p><p>                                        Accommodation Overview</p><p><br></p><p>                    1. Recommended Areas for Staying:</p><p>Union Square is the most bustling central area of San Francisco, with many shopping malls and boutique stores gathering here. Famous Chinatown is also located here. At the same time, Union Square has excellent transportation development, with two rail lines passing through and most buses stopping there, therefore becoming the first choice for accommodation for most tourists.</p>
+</p><p><br></p><p>2. Recommended Hotel Types:</p><p>San Francisco is known as the birthplace of boutique hotels, with unique styles across various rooms. Boutique hotels are particularly concentrated near Union Square. It's recommended to stay at well-known boutique hotels for a unique hotel experience.</p><p><br></p><p>3. April-October Reference Price: 960 RMB/night</p><p><br></p><p>San Francisco Mark Hopkins InterContinental Hotel | InterContinental Mark Hopkins San Francisco</p><p><br></p><p>Key Features: Filming location for the movie "Pulp Fiction"</p><p>April-October Reference Price: 2425 RMB/night</p><p><br></p><p>The hotel was renovated from Mark Hopkins Castle and is one of America's historic InterContinental hotels. Located in high altitude Nob Hill, staying on upper floors offers direct views of San Francisco's city skyline and the bay. The rooftop Sky Lounge observation deck is also excellent. We recommend trying any of the 100 different martinis listed on the menu.</p>
+</p><p><br></p><p>                    This is still one of the filming locations for the movie "Speed Racer".</p><p><br></p><p>                        Mark Hopkins International Hotel in San Francisco</p><p>                        Mark Hopkins is one of the best hotels in the city, with a rich history that continues to shine brilliantly since its grand opening in 1926. It is conveniently located at the intersection of three cable car lines, just minutes from Union Square. Every suite exudes unique and luxurious style. This San Francisco luxury hotel offers breathtaking panoramic views of the city, while Top of the Mark's signature martini menu remains a guest favorite. When it first opened, it was hailed as "perfect architecture," and its reputation continues to spread worldwide.</p><p><br></p><p>                                        Hotel Zeppelin San Francisco</p><p><br></p><p>                    Keywords: Interior design-focused decor</p><p>Reference price (April-October): 2100 RMB/night</p><p><br></p><p>                    The hotel is located in the theater district of downtown, with Union Square just a 300-meter walk away.
+<p>The interior design of the hotel is incredibly cool, with elevators decorated in leather and each floor featuring large photos of Jerry Garcia and Grace Slick. The bathroom wallpaper in the rooms displays names of famous bands and lesser-known ones.</p><p><br></p><p>San Francisco Zeppelin Hotel</p><p>The San Francisco Zeppelin Hotel is located in downtown San Francisco, a 3-minute walk from Union Square and 13 minutes from the San Francisco Museum of Modern Art. This hotel is within 1 mile (1.6 km) of Moscone Center and 1.7 miles (2.7 km) from Oracle Park. Guests can fully utilize vacation amenities such as the fitness center, plus enjoy free WiFi and concierge services. Other features include a game room/lounge, wedding services, and a fireplace in the lobby. You can enjoy a nice meal at Zeppelin Café or have some snacks at the hotel's café. After a busy day, you might want to relax at the bar/lounge. A paid breakfast is available daily from 07:00 to 11:00. Breakfast-inclusive reservations provide guests with a daily meal voucher (each person receives a limited breakfast allowance), usable in the hotel's on-site restaurant. Any portion exceeding the included allowance must be paid by guests personally. Featured services and amenities include a 24-hour business center, dry cleaning/laundry service, and 24-hour front desk service.</p>
+This hotel features 4 conference rooms that can be used for events. There are 196 air-conditioned guest rooms equipped with espresso machines and LED TVs; you'll definitely find the comfort of home during your travels. Complimentary wireless internet is provided, making it easy to stay connected with friends; cable channels meet your entertainment needs. Private bathrooms with shower/bathtub combinations offer complimentary toiletries and hair dryers. Amenities include a telephone, as well as a safe for storing laptops and a desk.</p><p><br></p><p>                                        Chancellor Hotel on Union Square</p><p><br></p><p>                    Keywords: Shopping mall, cable car within 200 meters</p><p>April - October reference price: 2100 RMB/night</p><p><br></p><p>                    The hotel is located opposite Union Square Park with excellent location. You can see MACY&#39;S, cable cars, westfield and some major brand stores directly from the room window, all within 200 meters. The building was constructed in 1914, featuring European-style interior decoration and lobby that have a strong historical feel.</p><p><br></p><p>                    Front desk provides complimentary fruit, cookies, coffee, and hot tea daily, with very thoughtful service.</p>
+</p><p><br></p><p>Union Square Grand Hotel San Francisco</p><p>The Union Square Manager Hotel is centrally located in downtown San Francisco, just steps away from Union Square and only a 3-minute drive to Lombard Street. The hotel is 4.8 miles (7.8 km) from the Golden Gate Bridge. Guests can enjoy convenient amenities including free WiFi, public area televisions, and concierge services. After a busy day, relax at our bar/lounge. Featured services include computer stations, dry cleaning/laundry service, and 24-hour front desk service. Of the 137 guest rooms featuring refrigerators and flat-screen TVs, you will find comfort like home during your travels. Complimentary wireless internet keeps you connected with friends; satellite channels meet your entertainment needs. Bathrooms offer shower/bathtub combinations, free toiletries, and hair dryers. Amenities include safes, desks, and telephones with free local calls.</p><p><br></p><p>HI San Francisco City Center Hostel | American International Youth Hostel in Downtown San Francisco</p><p><br></p><p>Keywords: Cozy hostel</p><p>April-October reference price: 904 RMB/night</p><p><br></p><p>A well-known hostel located in the city center with numerous events and great atmosphere, perfect for travelers who enjoy making friends.</p>
+<p>The hotel public areas feature a coffee shop, bar, and 3 lounges. Offers multi-bed dormitory beds and private rooms, with free wireless internet connection.</p><p><br></p><p>                    Click here to start your journey now!</p><p><br></p><p>                    【Cover image from Mafengwo user: Guandong Zhang, special thanks to Guandong Zhang's sharing!】</p>
+        
+
+        <a class="backLink" href="list-1.html">← Back to Los Angeles</a>
+      </article>
+    </main>
+  </body>
+</html>

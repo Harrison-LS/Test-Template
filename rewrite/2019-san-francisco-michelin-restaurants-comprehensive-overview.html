@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Samsung Restaurant" />
+    <title>2019 San Francisco Michelin Restaurants Comprehensive Overview</title>
+    <style>
+      :root {
+        --paper: #f5f1eb;
+        --ink: #163d36;
+        --body: #3f3a34;
+        --muted: #8a8379;
+        --line: #ddd5ca;
+        --accent: #d9782f;
+        --white: #fffaf4;
+        --shadow: 0 22px 70px rgba(28, 25, 20, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        line-height: 1.72;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .hero {
+        min-height: clamp(330px, 48vw, 560px);
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        padding: clamp(28px, 7vw, 70px) clamp(24px, 8vw, 76px);
+        background: #28463f;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.12)),
+          url("https://p1-q.mafengwo.net/s14/M00/2D/73/wKgE2l1IaR6ABz-QAAWPH0UF6Q059.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F90");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .heroInner {
+        position: relative;
+        width: min(900px, 100%);
+        color: #ffffff;
+      }
+
+      .heroLocation {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 24px;
+        color: rgba(255, 255, 255, 0.78);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .heroLocation svg {
+        width: 17px;
+        height: 17px;
+        color: #f0a45f;
+      }
+
+      h1 {
+        max-width: 880px;
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(30px, 4.8vw, 54px);
+        font-weight: 900;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .brief {
+        width: min(760px, 100%);
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 18px;
+        color: #5a5148;
+        font-size: clamp(17px, 1.9vw, 20px);
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.58;
+      }
+
+      .articleWrap {
+        width: min(900px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: clamp(42px, 6vw, 68px) 0 72px;
+      }
+
+      .content {
+        width: min(760px, 100%);
+        color: var(--body);
+        font-size: clamp(16px, 1.8vw, 18px);
+        line-height: 1.5;
+      }
+
+      .content p {
+        margin: 0 0 0.5em;
+      }
+
+      .content h2,
+      .content h3,
+      .content h4 {
+        margin: 46px 0 18px;
+        color: var(--ink);
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+
+      .content h2 {
+        font-size: clamp(28px, 4vw, 38px);
+      }
+
+      .content h3 {
+        font-size: clamp(23px, 3vw, 30px);
+      }
+
+      .content ul,
+      .content ol {
+        margin: 0 0 30px;
+        padding-left: 28px;
+      }
+
+      .content li {
+        margin: 8px 0;
+      }
+
+      .content blockquote {
+        margin: 34px 0;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 20px;
+        color: #5a5148;
+        font-style: italic;
+      }
+
+      .content img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 42px 0 12px;
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+      }
+
+      .content figure {
+        margin: 42px 0;
+      }
+
+      .content figure img {
+        margin: 0 0 12px;
+      }
+
+      .content figcaption {
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .backLink {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 46px;
+        border-top: 1px solid var(--line);
+        padding-top: 28px;
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.18em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .backLink:hover {
+        color: var(--accent);
+      }
+
+      @media (max-width: 720px) {
+        .hero {
+          min-height: 420px;
+          padding: 30px 24px;
+        }
+
+        .articleWrap {
+          width: min(100% - 28px, 900px);
+          padding-bottom: 48px;
+        }
+
+        .content {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="heroInner">
+        <p class="heroLocation">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+            />
+          </svg>
+          <span>Los Angeles</span>
+        </p>
+        <h1>2019 San Francisco Michelin Restaurants Comprehensive Overview</h1>
+      </div>
+    </header>
+
+    <main class="articleWrap">
+      
+      <p class="brief">Samsung Restaurant</p>
+      
+
+      <article class="content">
+        
+          <p>San Francisco is year-round hailed as the foodie capital, home to some of the world's finest restaurants. This year, several San Francisco restaurants once again earned prestigious Michelin star certifications. Quickly follow Director to get acquainted with each one:</p><p><br></p><p>                                        Three-Star Restaurants</p><p><br></p><p>                                        Atelier Crenn</p><p><br></p><p>                    Address: 3127 Fillmore St</p><p><br></p><p>                        Atelier Crenn</p><p><br></p><p>                    Atelier Crenn is an extremely artistic restaurant. Before dining, each guest receives a poem, with every line representing a dish.</p><p><br></p><p>                                            Atelier Crenn</p><p><br></p><p>                    The chef at this restaurant, Dominique Crenn, was the first female chef to earn three Michelin stars.</p><p><img src="https://pixabay.com/get/gcc26b47bcd2cc854f2c98c67cf3da41b65eb2cd8056e138872316f133bf5aa627a1aea48a1b6badaf9b0b47138da17fc.jpg" alt="Michelin-starred San Francisco restaurants" loading="lazy"></p>
+<p>She has stayed in many countries across Europe and Asia, so she is very skilled at blending various flavors together to give you a brand new dining experience.</p><p><br></p><p>                                            Atelier Crenn</p><p><br></p><p>                                        Benu</p><p><br></p><p>                    Address: 22 Hawthorne St.</p><p><br></p><p>                        Benu</p><p><br></p><p>                    This restaurant specializes in Asian flavors, very suitable for those with Chinese palates. Chef Corey Lee customizes different menus every night, giving you absolute surprises.</p><p><br></p><p>                                            Benu</p><p><br></p><p>                    The signature dishes here include white sturgeon caviar and fresh sea urchin, seafood lovers will definitely enjoy them.</p><p><img src="https://pixabay.com/get/g41f7d4dfa2246cb3efc29ae8828e83f11115708d24ce3698867c81031a0425ec57e732ecf10a9ad0dd591b63e89d696c.jpg" alt="Asian cuisine" loading="lazy"></p>
+<p>At the same time, his home's interior decoration is also quite unique; the earth-tone color scheme and exquisite detail design are as impeccable as his dishes.</p><p><br></p><p>							Benu</p><p><br></p><p>					Quince</p><p><br></p><p>		Address: 470 Pacific Ave.</p><p><br></p><p>		Quince</p><p><br></p><p>Located in Jackson Square, Quince is famous for its native Californian-style dishes. This restaurant is situated in a historic, charming landmark building and is headed by celebrity chef Michael Tusk.</p><p><br></p><p>				Quince</p><p><br></p><p>He is very skilled at cooking exquisite delicacies using fresh seasonal ingredients.</p><p><img src="https://pixabay.com/get/g20ecf3d3052367975342201b8eaba94fb0859fb259b284bbdd75a1c3a5c8a57e9a5af7f488fcd5df60605cc6bc469485.jpg" alt="Quince restaurant" loading="lazy"></p>
+Here every night there are two menus to choose from, along with complementary wines, guaranteed to leave you fully satisfied.
+
+Quince
+
+Two-star restaurant
+
+Campton Place Restaurant
+
+Address: Taj Campton Place, 340 Stockton St.
+
+Campton Place
+
+Campton Place is a restaurant offering creative Indian cuisine. Chef Srijith Gopinathan incorporates local California flavors into traditional Indian dishes, absolutely giving your taste buds a brand new experience.
+
+Campton Place
+
+What wonderful collisions will occur when exotic secret recipes meet fresh, locally unique ingredients?
+<p><img src="https://pixabay.com/get/g5c1b871f932877b31fccb82fa7b5d4cf8ddf51361dc4eec008ca4afbcc8e8bc60d80055fba9030350777f665db08000f.jpg" alt="creative Indian cuisine" loading="lazy"></p>
+<p>You only know when you taste it yourself!</p><p><br></p><p>                                            Campton Place</p><p><br></p><p>                                        Lazy Bear</p><p><br></p><p>                    Address: 3416 19th St.</p><p><br></p><p>                        Lazy Bear</p><p><br></p><p>                    Lazy Bear is probably one of the most unique dining experiences in San Francisco. Diners are seated at two long tables, and food is prepared right before their eyes in an open kitchen and then served.</p><p><br></p><p>                                            Lazy Bear</p><p><br></p><p>                    Chef David Barzelay wants to create a theatrical experience for his guests, so he has waitstaff demonstrate every behind-the-scenes detail of the dishes' preparation.</p><p><img src="https://pixabay.com/get/g2297c896345238641e504c4e2840a9b1c3ee3acce8a6c4aef12dd60fbae6b40348eabe971c96700552516d76a2a5b5e5.jpg" alt="Lazy Bear restaurant" loading="lazy"></p>
+<p>Curious? Go explore quickly!</p><p><br></p><p>							Lazy Bear</p><p><br></p><p>						One-star restaurant</p><p><br></p><p>					Angler</p><p><br></p><p>		Address: 132 The Embarcadero</p><p><br></p><p>This restaurant creates its menu based on freshly caught seafood each day, serving you the freshest and most delicious taste.</p><p><br></p><p>					Angler</p><p><br></p><p>His cooking methods are also quite unique; all ingredients are cooked on a large wood-fired stove, preserving the food's original flavors while adding a unique fragrant aroma. Additionally, it is located right next to the inner harbor pier, allowing you to satisfy both your taste buds and eyes while enjoying delicious food.</p><p><img src="https://pixabay.com/get/g6a90649ea1f0058adb93b976c5c3ea834ad1f678e127e22b7b4f0f02ae640bcc51dbdb6b5a052b790a75b58d8dddbeee.jpg" alt="Angler Restaurant" loading="lazy"></p>
+</p><p><br></p><p>                                            Angler</p><p><br></p><p>                                        Hashiri</p><p><br></p><p>                    Address: 4 Mint Pl.</p><p><br></p><p>For those who love Japanese cuisine, you absolutely cannot miss Hashiri. This restaurant perfectly embodies the Tokyo Dogenzaka style, seamlessly blending classical and modern elements.</p><p><br></p><p>                                            Hashiri</p><p><br></p><p>                    At the same time, they are meticulous about the quality of their dishes, perfectly combining traditional Japanese flavors with local specialties, giving you the most unique taste experience.</p><p><br></p><p>                                            Hashiri</p><p><br></p><p>                                        In Situ</p><p><br></p><p>                    Address: SFMOMA, 151 3rd St.</p><p><br></p><p>                        In Situ</p><p><br></p><p>                    In Situ, located within the San Francisco Museum of Modern Art, is committed to pushing the combination of food and art to its limits.</p><p><img src="https://pixabay.com/get/g70b4296cf2c5ffc394b4955cf4cae3c599eba0d3430a76dc9fd7772078923c0a39795683b87b29ee7822c6515b966065.jpg" alt="Japanese cuisine" loading="lazy"></p>
+<p>The dishes here not only satisfy your taste buds but also provide you with a visual feast.</p><p><br></p><p>                        San Francisco Museum of Modern Art</p><p>                        The San Francisco Museum of Modern Art is the first museum dedicated solely to collecting modern art on America's West Coast. One of the most distinctive features of this museum is its tall cylindrical zebra-striped skylight, through which light shines directly from the roof down to the basement floor, providing excellent natural lighting. Its innovative exterior design not only embodies San Francisco's artistic spirit but has also become a target for photography enthusiasts around the world. The museum houses works by 20th-century representative Western artists such as Henri Matisse (a Fauvist French painter), Andy Warhol (an American Pop Art painter), Frida Kahlo (a Mexican female painter), and others.</p><p>The San Francisco Contemporary Art Museum is a branch of New York's MoMA, slightly smaller in scale but still full of highlights. Especially if you happen to attend some special exhibitions, you've got yourself a treat!</p><p><br></p><p>                                            In Situ</p><p><br></p><p>                    Many dishes are inspired by the collections within the museum—come and immerse yourself in art!</p><p><img src="https://pixabay.com/get/g3ad3cb2b6c079fc1032c87a7f1d36c07658e31095bba7727e4de361f900b5e83848665bcc56cf0072388c8e32263c0d2.jpg" alt="San Francisco art museums dining" loading="lazy"></p>
+</p><p><br></p><p>    In Situ</p><p><br></p><p>                  San Francisco still has many Michelin restaurants, foodies like you, what are you waiting for?</p><p><br></p><p>Image sources: @norbertoned, @cuisinesolutions, @vinoman23, @qqforfood, @eieieieieidorian, @quince_sf, @camptonplacerestaurant, @lazybearsf, @anglersanfrancisco, @hashirisf, @insitu_sfmoma, SF Chronicle</p><p><img src="https://pixabay.com/get/g79b3023a5838fd7708597c43f0cc4688aedcd288aed80eecb14ff952d4bf90ec07d4f95756e75e4202e1608026874120.jpg" alt="San Francisco Michelin restaurants" loading="lazy"></p>
+        
+
+        <a class="backLink" href="list-1.html">← Back to Los Angeles</a>
+      </article>
+    </main>
+  </body>
+</html>

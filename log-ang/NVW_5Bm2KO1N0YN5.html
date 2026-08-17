@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <title>Route 66 | An abandoned American highway that remains incredibly popular!</title>
+    <style>
+      :root {
+        --paper: #f5f1eb;
+        --ink: #163d36;
+        --body: #3f3a34;
+        --muted: #8a8379;
+        --line: #ddd5ca;
+        --accent: #d9782f;
+        --white: #fffaf4;
+        --shadow: 0 22px 70px rgba(28, 25, 20, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        line-height: 1.72;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .hero {
+        min-height: clamp(330px, 48vw, 560px);
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        padding: clamp(28px, 7vw, 70px) clamp(24px, 8vw, 76px);
+        background: #28463f;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.12)),
+          url("");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .heroInner {
+        position: relative;
+        width: min(900px, 100%);
+        color: #ffffff;
+      }
+
+      .heroLocation {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 24px;
+        color: rgba(255, 255, 255, 0.78);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .heroLocation svg {
+        width: 17px;
+        height: 17px;
+        color: #f0a45f;
+      }
+
+      h1 {
+        max-width: 880px;
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(30px, 4.8vw, 54px);
+        font-weight: 900;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .brief {
+        width: min(760px, 100%);
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 18px;
+        color: #5a5148;
+        font-size: clamp(17px, 1.9vw, 20px);
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.58;
+      }
+
+      .articleWrap {
+        width: min(900px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: clamp(42px, 6vw, 68px) 0 72px;
+      }
+
+      .content {
+        width: min(760px, 100%);
+        color: var(--body);
+        font-size: clamp(16px, 1.8vw, 18px);
+        line-height: 1.5;
+      }
+
+      .content p {
+        margin: 0 0 12px;
+      }
+
+      .content h2,
+      .content h3,
+      .content h4 {
+        margin: 46px 0 18px;
+        color: var(--ink);
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+
+      .content h2 {
+        font-size: clamp(28px, 4vw, 38px);
+      }
+
+      .content h3 {
+        font-size: clamp(23px, 3vw, 30px);
+      }
+
+      .content ul,
+      .content ol {
+        margin: 0 0 30px;
+        padding-left: 28px;
+      }
+
+      .content li {
+        margin: 8px 0;
+      }
+
+      .content blockquote {
+        margin: 34px 0;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 20px;
+        color: #5a5148;
+        font-style: italic;
+      }
+
+      .content img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 42px 0 12px;
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+      }
+
+      .content figure {
+        margin: 42px 0;
+      }
+
+      .content figure img {
+        margin: 0 0 12px;
+      }
+
+      .content figcaption {
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .backLink {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 46px;
+        border-top: 1px solid var(--line);
+        padding-top: 28px;
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.18em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .backLink:hover {
+        color: var(--accent);
+      }
+
+      @media (max-width: 720px) {
+        .hero {
+          min-height: 420px;
+          padding: 30px 24px;
+        }
+
+        .articleWrap {
+          width: min(100% - 28px, 900px);
+          padding-bottom: 48px;
+        }
+
+        .content {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="heroInner">
+        <p class="heroLocation">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+            />
+          </svg>
+          <span>Los Angeles</span>
+        </p>
+        <h1>Route 66 | An abandoned American highway that remains incredibly popular!</h1>
+      </div>
+    </header>
+
+    <main class="articleWrap">
+      
+
+      <article class="content">
+        
+          <p>Starting point: Chicago</p><p>What consciousness is Route 66, as novelists John Steinbeck wrote in his book "The Grapes of Wrath": "Route 66 is the mother road, the flight path..." Route 66 witnessed a nation's suffering, yet also witnessed American spirit of freedom, bravery and enterprising. What a meaningful road this is. No wonder Xiao Qun had seen many pictures of Route 66 in many Dalian cafes before, originally every entrepreneur has such a road in their heart.</p><p>Route 66 starts from Adams Street in Chicago to the east, ending at Santa Monica Pacific Coast in Los Angeles, California to the west. It crosses through 8 American states, passing Illinois, Missouri, Kansas, Oklahoma, Texas, New Mexico, Arizona and California, three time zones, with a total length of 3943 kilometers.</p><p>As one of America's most important land transportation arteries in the first half of the 20th century, Route 66 spread worldwide through American culture, becoming globally one of the most famous roads.</p><p>It is that road where Forrest Gump crossed alone through America in the film "Forrest Gump". It was also Nora Jones' wandering path to rediscover her once-lost self in Wong Kar-wai's road movie "Blueberry Night". It is also largely the setting for Jack Kerouac's novel "On The Road" that influenced a generation of Americans.</p>
+<p>Indeed, this is exactly where Route 66 begins; a journey of American dreams is about to commence.</p><p><br></p><p>                                        The small towns passed through are all unique and varied</p><p><img src="https://images.pexels.com/photos/29148031/pexels-photo-29148031.jpeg"></p><p>                    WILMING IL</p><p>Wilming - this tiny town has just one gas station and one store, yet it features a massive giant statue holding a rocket. This is the famous Gemini Giant.</p><p>                    BRAIDWOOD IL</p><p>Braidwood, home to the famous Polka Dot Car Restaurant lies here; it seems as if this town exists only for this restaurant. Pale blue polka dots surround the establishment - that era's fashion still remains popular today.</p><p>                    DWIGHT IL</p><p>Dwight, featuring the 1940 "Texaco Gas Station." The original appearance of these historic gas stations is preserved well here. Many people journeyed through Dwight heading west to seek a wealthier life.</p><p>                    You can see the worn-out gauges, wooden structures, rusted metal sign advertisements. Though no longer functional, they still showcase the civilization and glory of that time.</p>
+</p><p>                    ODELL IL</p><p>Odel, next to the dilapidated stores of ExxonMobil, an old American oil company with round and classic Pegasus logos hung beside it. A tattered U.S. flag fluttered in the wind. The small town at the starting point of Route 66 was quite dense, not yet experiencing the desolation of the highway, making travelers full of anticipation for the journey ahead.</p><p>                    PONTIAC IL</p><p>Pontiac is a city whose keyword is "murals", not graffiti. The content all tells stories related to Route 66. The most striking feature is the massive Route 66 sign mural beside the Wishing Well Motel. This city also has a celebrity named Bob Odemire, who is a legend of this road. During college, he painted aerial views of American cities; later he purchased a Chevrolet school bus and traveled along Route 66 painting pictures. He lived on this road using environmentally friendly and energy-saving methods.</p><p>                    ATLANTA IL</p><p>Atlanta has a shop filled with old things related to Route 66. The walls are covered with vintage photos from the highway's glorious era, aged car toys, portable fuel cans used back then, metal tin shoe polish, and various license plates. The owner of this shop says: "This shop is mine; it's full of my memories," he said. Previously this shop had no name; recently it got a name called "Uncle".
+That's right, this is the shop owner Mike, but how can this be called a store? It's clearly a house of memories. I walked out of this shop and looked up to see a brand new large sign hanging above that said "Memories".
+
+STANTON IL
+
+Stanton, a small town with less than 20 people, unexpectedly has a biological research institute. Besides keeping crocodiles and jaguars, there are also some snakes, toads, etc. Of course, this is also an animal shelter, where many abandoned pets live here.
+
+CUBA IL
+
+Cuba, there's a Mellamek Mountain Cemetery here, with less absurdity and more sanctity. Every grave is inlaid with a metal plate on the ground, and every detail on each metal plate tells a story. The wind blows, rising these stories together towards heaven.
+
+ROLLA MO
+
+Rolla is just a trading post, a Mule Trading Post, long abandoned of course, and no mules are seen either. Many parallel roads exist, but Route 66 is what's loved.
+
+CARTHAGE MO
+
+Carthage, heading west, we entered the true lengthy "highway state", driving only driving... chasing clouds, chasing light, chasing sunset glow, you can never imagine what kind of excitement the next stop will bring you.
+
+WEBB CITY MO
+
+Webb City, the water tower in Webb City is like an alien spacecraft from Men in Black. Some of that sci-fi color attracts me like magic.
+</p><p>CARTERVILLE MO</p><p>Carterville, this seemingly abandoned ghost town sparks intense curiosity for exploration. The deserted streets, forsaken storefronts, and weathered Route 66 sign all hint at past prosperity, now replaced by an eerie desolation reminiscent of a crime scene from an American TV drama.</p><p>GALENA MO</p><p>Galena is the creative inspiration behind Pixar's "Cars" characters. Here you can discover authentic inspirations: Dusty Boogie's trailer board character, Judge and veteran racer Hudson Doc, and the real-life model that inspired Red Fire Truck.</p><p>COMMERCE OK</p><p>Commerce has a dessert shop named "DK."</p><p>OKLAHOMA CITY OK</p><p>Oklahoma City features a remarkable installation: a blue whale sculpture by Hugh Davis, created around 40 years ago. This unique architectural work was built as a dreamlike gift for Zelta, his wife who devoted her life to studying whales.</p><p>HYDRO OK</p><p>The Hydro barbershop occasionally catches my attention with its unusual entrance display - a complete firefighting suit hangs prominently at the door.</p>
+" 'This is my honor,' the boss said. 'I used to be a firefighter; after retiring, I came here to run this shop.' " The card on the counter reads "CITY BARBER SHOP," signed by Mr. Ed, with a small line of text at the top saying "My job is what gives you your head" - a pun, American humor! The back of the card has three lines: 1. If you don't know me, you'll lose nothing. 2. If you don't know our church, you'll lose something. 3. If you don't know Jesus, you'll lose everything.</p><p>CLINTON OK</p><p>Clinton, this small town that shares its name with the President has all kinds of little shops: there's a gun shop selling semi-automatic pistols, revolvers, and rifles; rifle prices range from 300 to 500 USD. Interestingly, besides firearms they also sell toys, auto accessories, and some clothes. A bear hide hangs on the wall above the cash register - quite rugged.</p><p>GUYMON OK</p><p>Guymon - I caught Pioneer Day. Pioneer Day commemorates the American westward migration of that time. It's a major American cultural parade and a microcosm of American culture; you'll see American car culture, cowboy culture, Native American culture, and some Mexican culture in the parade.</p><p>SPRINGER OK</p><p>Springer - A distinctive yellow sign reads "Welcome to New Mexico." The roads in New Mexico give a strong sense of loneliness. There are many deserts; no cars around, a straight road stretching endlessly without end.</p>
+</p><p>                    ROSWELL NM</p><p>Roswell, on the evening of July 6, 1947, suddenly a loud clap of thunder made the earth tremble. The next day, local rancher Marco Brazos decided to check the livestock he raised on his ranch. However, he discovered many glowing pieces scattered across the grass, neither metal nor plastic. Looking further ahead, they found a dilapidated giant creature lying in the grass, resembling some kind of structural framework. Afterwards, the US Air Force also discovered what appeared to be the body of a dwarf humanoid alien nearby... This is the famous Roswell incident that occurred in New Mexico state.</p><p>                    LUPTON AZ</p><p>Chief Yellowhorse Trading Post, this trading post stretches across a long distance, with sections of highway lined by trade stations. At its eastern starting point, near the roadside lies a large open plaza containing a massive cave. Scattered throughout the cliff walls are various Indian tents.</p><p>                    WINSLOW AZ</p><p>Winslow, in 1972, The Eagles' hit single "Take it Easy" catapulted to fame, with lyrics specifically celebrating Winslow.</p><p>                    WILLIAMS AZ</p><p>Williams, since Williams is near the southern rim of the Grand Canyon and serves as the terminal station for the southern end of the Grand Canyon Railway, many travelers stop here before heading to the Grand Canyon. As an important transfer hub, this place is bustling with activity. Finally I experienced that this road is not always lonely.</p>
+</p><p>                    SELIGMAN AZ</p><p>Seligman, some say Seligman is the best-preserved Route 66 town.</p><p>                    KINGMAN AZ</p><p>Kingman, what strikes you immediately is the seemingly endless variety of old cars; it's truly impressive. These cars share one common characteristic—all are classic American cars!</p><p>                    ORO GRANDE CA</p><p>Oro Grande, the Bottle Man was drawn here. Before leaving, I read a Route 66 special issue from City People magazine by author Zeng Han; the most memorable thing was the Bottle Man. His house is not hard to find. Traveling along Route 66 into California and arriving at Oro Grande, if you pay attention to the roadside, you'll see a prominent gate with a wheel, an iron bull, and a trident-shaped iron frame covered in glass bottles.</p><p>                                        Destination: Santa Monica Beach</p><p>                    Los Angeles, every long story eventually finds an ending, and even the most extraordinary journey reaches its destination. This final city on the route is known as both the City of Sin and the Angel City—Los Angeles.</p>
+        
+
+        <a class="backLink" href="list-1.html">← Back to Los Angeles</a>
+      </article>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <title>February 2019, Los Angeles Full of Chinese New Year Atmosphere</title>
+    <style>
+      :root {
+        --paper: #f5f1eb;
+        --ink: #163d36;
+        --body: #3f3a34;
+        --muted: #8a8379;
+        --line: #ddd5ca;
+        --accent: #d9782f;
+        --white: #fffaf4;
+        --shadow: 0 22px 70px rgba(28, 25, 20, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        line-height: 1.72;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .hero {
+        min-height: clamp(330px, 48vw, 560px);
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        padding: clamp(28px, 7vw, 70px) clamp(24px, 8vw, 76px);
+        background: #28463f;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.12)),
+          url("");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .heroInner {
+        position: relative;
+        width: min(900px, 100%);
+        color: #ffffff;
+      }
+
+      .heroLocation {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 24px;
+        color: rgba(255, 255, 255, 0.78);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .heroLocation svg {
+        width: 17px;
+        height: 17px;
+        color: #f0a45f;
+      }
+
+      h1 {
+        max-width: 880px;
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(30px, 4.8vw, 54px);
+        font-weight: 900;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .brief {
+        width: min(760px, 100%);
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 18px;
+        color: #5a5148;
+        font-size: clamp(17px, 1.9vw, 20px);
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.58;
+      }
+
+      .articleWrap {
+        width: min(900px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: clamp(42px, 6vw, 68px) 0 72px;
+      }
+
+      .content {
+        width: min(760px, 100%);
+        color: var(--body);
+        font-size: clamp(16px, 1.8vw, 18px);
+        line-height: 1.5;
+      }
+
+      .content p {
+        margin: 0 0 12px;
+      }
+
+      .content h2,
+      .content h3,
+      .content h4 {
+        margin: 46px 0 18px;
+        color: var(--ink);
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+
+      .content h2 {
+        font-size: clamp(28px, 4vw, 38px);
+      }
+
+      .content h3 {
+        font-size: clamp(23px, 3vw, 30px);
+      }
+
+      .content ul,
+      .content ol {
+        margin: 0 0 30px;
+        padding-left: 28px;
+      }
+
+      .content li {
+        margin: 8px 0;
+      }
+
+      .content blockquote {
+        margin: 34px 0;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 20px;
+        color: #5a5148;
+        font-style: italic;
+      }
+
+      .content img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 42px 0 12px;
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+      }
+
+      .content figure {
+        margin: 42px 0;
+      }
+
+      .content figure img {
+        margin: 0 0 12px;
+      }
+
+      .content figcaption {
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .backLink {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 46px;
+        border-top: 1px solid var(--line);
+        padding-top: 28px;
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.18em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .backLink:hover {
+        color: var(--accent);
+      }
+
+      @media (max-width: 720px) {
+        .hero {
+          min-height: 420px;
+          padding: 30px 24px;
+        }
+
+        .articleWrap {
+          width: min(100% - 28px, 900px);
+          padding-bottom: 48px;
+        }
+
+        .content {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="heroInner">
+        <p class="heroLocation">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+            />
+          </svg>
+          <span>Los Angeles</span>
+        </p>
+        <h1>February 2019, Los Angeles Full of Chinese New Year Atmosphere</h1>
+      </div>
+    </header>
+
+    <main class="articleWrap">
+      
+
+      <article class="content">
+        
+          <p>Although you may be far from home, you must never take Spring Festival lightly! There are definitely activities not to miss~ The editor here has summarized Los Angeles 2019 Spring Festival activities for everyone so you can also feel a strong taste of traditional Chinese New Year in Los Angeles~ If your schedule is arranged well, you can visit various different styles of Spring Festival celebrations and experience the New Year atmosphere~</p><p><br></p><p>Experience the happiest New Year at the happiest place on Earth - Disneyland</p><p>What could be more suitable than &quot;the happiest place on earth&quot; for celebrating Lunar New Year? This year Disney seems especially enthusiastic about Chinese New Year, with month-long activities to commemorate the Year of the Pig. Many Disney characters will wear traditional Chinese clothing to celebrate the arrival of Spring Festival. Essential elements like lanterns are scattered throughout Disneyland. It is particularly worth mentioning that the Three Little Pigs from Disney classic animation will also participate in parades to celebrate the Year of the Pig. Friends can take photos with Mulan, Mickey, and Minnie, as well as watch the parades. There are also delicious delicacies from China, Japan, Korea, and Vietnam throughout the park. Disney fans shouldn&#39;t hesitate.</p><p><br></p><p>Spring Festival dates:</p><p>1/25-2/17</p><p>Address:</p><p>Disneyland Resort, 1313 S</p><p>Disneyland Dr Anaheim</p><p>Website:</p><p>***</p><p><br></p><p>Want to experience an exciting Lunar New Year? Universal Studios welcomes you!</p><p>Each Lunar New Year, Universal Studios adds numerous Chinese Spring Festival elements to celebrate the arrival of the农历New Year. This year brings new attractions too! Friends can celebrate Chinese New Year with bilingual Transformers figurines (they even speak Mandarin!), and at the lantern-decorated Universal Studios Plaza, you can take holiday photos with characters like Minions and Kung Fu Panda and others. Who wouldn&#39;t long for a place like this - fun to explore while being filled with festive atmosphere?</p><p><br></p><p>Time:</p><p>Spring Festival dates:</p><p>February 2 - February 17</p><p><br></p><p>Location:</p><p>Universal Studios Hollywood &amp; Universal CityWalk, Universal City</p><p><br></p><p>Website:</p><p>***</p><p><br></p><p>Tribute to Traditional Chinese New Year - Golden Dragon Parade</p><p><br></p><p>When it comes to one of Los Angeles&#39; oldest traditional events, it must be the Chinese New Year parade and festival celebrations held in Los Angeles Chinatown. This marks the 120th edition. The Chinatown Central Plaza New Year celebrations this year feature a wide variety of performances ranging from kung fu demonstrations to traditional music performances; there are also food trucks, face painting, storytelling, paper folding, and various other activities. But what attracts people most is the Golden Dragon Parade in the afternoon, starting at approximately 1pm. Those interested should not miss it!</p><p><br></p><p>Spring Festival date:</p><p>February 9, 1:00 PM</p><p><br></p><p>Location:</p><p>Los Angeles Chinatown</p><p><br></p><p>Website:</p><p>***</p><p>Hidden Treasures in the City - Alhambra Lunar New Year Festival</p><p>If Downtown feels too crowded or far away for you, there are also Chinese Spring Festival activities in the ethnic area of Alhambra! There are over 250 food and craft booths, lion dances, kung fu demonstrations, and many other performances. Oh right, this year it&#39;s held on Valley Boulevard between Almanor Street and Vega Street - don&#39;t mix up the streets! Neighbors can come attend~</p><p>Spring Festival Time:</p><p>February 9, 10:00 am</p><p>Address:</p><p>From Almanor St to Vega St, Alhambra</p><p>Website:</p><p>***</p><p>Celebrate New Year with Exercise - L.A. Chinatown Firecracker Run</p><p>Do any friends worry like me about calories skyrocketing during the Spring Festival? Thoughtful Chinatown traditional events save you! Here you can participate in 5K or 10K running/walking, and 20 or 30+ mile cycling to celebrate New Year activities~ Isn&#39;t that unique? The event starts and ends at Chinatown Central Plaza - those who love running should sign up quickly~</p><p>Spring Festival Time: February 16-17 Tickets: $25-$110 Address: Chinatown Central Plaza, Chinatown | 943 N Broadway, Los Angeles Website: *** South Coast Plaza Lunar New Year - South Coast Plaza Spring Festival Celebration After being busy all year and having a major holiday, isn&#39;t the urge to shop irresistible? The caring SouthCoast shopping mall satisfies you! During the Spring Festival period, South Coast Plaza will celebrate the new year with special gifts, family activities, and various free entertainment performances. Customers have multiple ways to participate in the celebration, such as receiving gifts when purchasing a certain amount of items, exclusive New Year products from international top brands, in-store celebration events, premium brand giveaways, art and history exhibitions, specialty store window displays, and free weekend public entertainment shows~ Action is better than hesitation, everyone go quickly! Spring Festival Time: January 31-February 18 Address: 3333 Bristol St, Costa Mesa, CA 92626 Website: ***{***} Aren&#39;t many friends already itching to participate? Finally, we wish everyone good luck throughout the Year of the Pig, may all your wishes come true and everything goes smoothly!</p>
+        
+
+        <a class="backLink" href="list-1.html">← Back to Los Angeles</a>
+      </article>
+    </main>
+  </body>
+</html>

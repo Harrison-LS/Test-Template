@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="2018 - awakening style genes and seeking retro vibes in LA~" />
+    <title>Los Angeles | Turns out, stylish people live here</title>
+    <style>
+      :root {
+        --paper: #f5f1eb;
+        --ink: #163d36;
+        --body: #3f3a34;
+        --muted: #8a8379;
+        --line: #ddd5ca;
+        --accent: #d9782f;
+        --white: #fffaf4;
+        --shadow: 0 22px 70px rgba(28, 25, 20, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        line-height: 1.72;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .hero {
+        min-height: clamp(330px, 48vw, 560px);
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        padding: clamp(28px, 7vw, 70px) clamp(24px, 8vw, 76px);
+        background: #28463f;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.12)),
+          url("");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .heroInner {
+        position: relative;
+        width: min(900px, 100%);
+        color: #ffffff;
+      }
+
+      .heroLocation {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 24px;
+        color: rgba(255, 255, 255, 0.78);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .heroLocation svg {
+        width: 17px;
+        height: 17px;
+        color: #f0a45f;
+      }
+
+      h1 {
+        max-width: 880px;
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(30px, 4.8vw, 54px);
+        font-weight: 900;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .brief {
+        width: min(760px, 100%);
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 18px;
+        color: #5a5148;
+        font-size: clamp(17px, 1.9vw, 20px);
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.58;
+      }
+
+      .articleWrap {
+        width: min(900px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: clamp(42px, 6vw, 68px) 0 72px;
+      }
+
+      .content {
+        width: min(760px, 100%);
+        color: var(--body);
+        font-size: clamp(16px, 1.8vw, 18px);
+        line-height: 1.5;
+      }
+
+      .content p {
+        margin: 0 0 12px;
+      }
+
+      .content h2,
+      .content h3,
+      .content h4 {
+        margin: 46px 0 18px;
+        color: var(--ink);
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+
+      .content h2 {
+        font-size: clamp(28px, 4vw, 38px);
+      }
+
+      .content h3 {
+        font-size: clamp(23px, 3vw, 30px);
+      }
+
+      .content ul,
+      .content ol {
+        margin: 0 0 30px;
+        padding-left: 28px;
+      }
+
+      .content li {
+        margin: 8px 0;
+      }
+
+      .content blockquote {
+        margin: 34px 0;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 20px;
+        color: #5a5148;
+        font-style: italic;
+      }
+
+      .content img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 42px 0 12px;
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+      }
+
+      .content figure {
+        margin: 42px 0;
+      }
+
+      .content figure img {
+        margin: 0 0 12px;
+      }
+
+      .content figcaption {
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .backLink {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 46px;
+        border-top: 1px solid var(--line);
+        padding-top: 28px;
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.18em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .backLink:hover {
+        color: var(--accent);
+      }
+
+      @media (max-width: 720px) {
+        .hero {
+          min-height: 420px;
+          padding: 30px 24px;
+        }
+
+        .articleWrap {
+          width: min(100% - 28px, 900px);
+          padding-bottom: 48px;
+        }
+
+        .content {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="heroInner">
+        <p class="heroLocation">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+            />
+          </svg>
+          <span>Los Angeles</span>
+        </p>
+        <h1>Los Angeles | Turns out, stylish people live here</h1>
+      </div>
+    </header>
+
+    <main class="articleWrap">
+      
+      <p class="brief">2018 - awakening style genes and seeking retro vibes in LA~</p>
+      
+
+      <article class="content">
+        
+          <p>Los Angeles once shone with stars; today it not only continues Hollywood&#39;s glorious history but also reflects modern urban fashion design. Select the following hotels, taking you through Hollywood&#39;s world of light and shadow.</p><p><br></p><p>**Hotel Overview | Instagram Hotspots**</p><p><br></p><p>Thriving Los Angeles never lacks interesting and luxurious hotels. You might not know them, but you&#39;ll be unable to forget them after seeing a photo—perhaps because of a certain color or a pool. Actually, these hotels are not only design-forward with prime locations and unique views; they&#39;re perfect spots for photography. Calling them &quot;influencer hotels&quot; is truly apt.</p><p><br></p><p>**The LINE Hotel | Lan Hotel**</p><p>*High-Aesthetic Industrial Style*</p><p><br></p><p>This LINE Hotel embraces an industrial aesthetic. Located in Los Angeles&#39; Koreatown, it was created by Korean-American designer Sean Knibb. The colonial revival architecture blends seamlessly with unique design elements—creating a harmonious experience worth exploring.</p><p><br></p><p>The rooms exude the sophistication and simplicity of industrial design. Floor-to-ceiling windows offer panoramic views: witnessing city traffic during the day, gazing at distant Hollywood landscapes, admiring urban nightscapes at evening. Counting stars from your bed is incredibly relaxing.</p><p>The hotel restaurant is located beside the swimming pool, surrounded by lush greenery. Dappled light and shadow fall through the glass roof onto the tables, making you want to lazily spend an afternoon here.</p><p><br></p><p>Nearby attractions: Koreatown, Hollywood Walk of Fame, TCL Chinese Theatre, etc.</p><p><br></p><p>Ryan Los Angeles Hotel</p><p>The Langham Hotel is located in downtown Los Angeles, within a 5-minute drive from Wilton Theater and Los Angeles Convention Center. This hotel is 2.8 miles (4.6 km) from Downtown LA Entertainment Complex and 2.9 miles (4.6 km) from Crypto.com Arena. You can fully utilize vacation facilities such as the outdoor swimming pool, plus enjoy free WiFi and concierge services. Other amenities include in-hotel shopping, wedding services, and banquet halls.</p><p><br></p><p>You can enjoy a delicious meal at the restaurant; or have snacks at the cafe. Or simply stay in your room and enjoy partial-hour room service. After a busy day, why not relax at the poolside bar. A complimentary cooked-to-order breakfast is available daily from 7:00 AM to 11:00 AM.</p><p><br></p><p>Featured services and facilities include business center, dry cleaning/laundry service, and 24-hour front desk service.</p><p><br></p><p>With 383 guest rooms featuring iPod docks and flat-screen TVs, you will definitely find home-like comfort during your journey. Free wireless internet is provided for easy connection with friends;</p><p>Wired channels are available to meet your entertainment needs. Private bathrooms equipped with bathtubs or showers offer complimentary toiletries and hair dryers. Additional amenities include telephones, safes, and desks.</p><p><br></p><p>Dream Hollywood Hotel | Dream Hollywood</p><p><br></p><p>This newly opened dream hotel is located in the heart of Hollywood. Designed by renowned architects John Lautner and Richard Neutra, it combines medieval and modern architectural styles.</p><p><br></p><p>The entire hotel occupies half a city block, surrounded by neatly arranged palm trees with the Hollywood mountains as a backdrop. It aims to create avant-garde yet luxurious experiences.</p><p><br></p><p>Garden elements are seamlessly integrated into the contemporary style, where greenery adds touches of freshness that make the architecture both fashionable and refreshing.</p><p><br></p><p>Guest rooms feature floor-to-ceiling windows offering panoramic views - upon waking each day, you can see the clear HOLLYWOOD sign from bed. Simply draw back the curtains to enjoy Hollywood&#39;s sunlight while still lying down.</p><p><br></p><p>The bathrooms are encircled by glass with mosaic decorations and textured marble walls that exude luxury. Taking a bath while surrounded by garden greenery and cityscapes is extremely relaxing.</p><p><br></p><p>The swimming pool was designed by a Canadian company renowned for creating complex water features for Cirque du Soleil. During the day, it serves as a place for fun and play; at night, it transforms into a dance floor with capacity for 500 people.</p><p>Tao Lounge is located on the top floor, mainly crafted with wood and stone, offering views of the expansive Hollywood landscape. The famous Tao Restaurant is dedicated to creating an ancient temple atmosphere - mysterious and exquisite, endlessly intriguing. The hotel&#39;s grand opening featured remarkable celebrity presence, with international stars like Leonardo DiCaprio and Orlando Bloom among many others appearing. It&#39;s no surprise that it quickly became a popular hotel on Instagram upon opening.</p><p><br></p><p>Nearby attractions: Hollywood Walk of Fame, TCL Chinese Theatre, Dolby Theatre, etc.</p><p><br></p><p>Dream Hollywood Hotel, part of Hyatt</p><p>The Dream Hollywood Hyatt is situated in central Los Angeles, within less than a 5-minute walk from the Hollywood Walk of Fame and Hollywood Boulevard. The hotel is 0.8 miles (1.2 kilometers) from the Hollywood Roosevelt Hotel and 1.4 miles (2.2 kilometers) from the Hollywood Bowl. You can enjoy vacation amenities including an outdoor pool and a 24-hour fitness center. This hotel also offers free WiFi, concierge service, and a lobby fireplace. You can visit Dream Rooftop restaurant to enjoy California cuisine while admiring the pool view; or stay in your room and enjoy room service during limited hours.</p><p>Welcome to our bar/lounge or poolside bar. Order your favorite drink and relax. Paid breakfast service is available daily from 07:00 AM to 11:00 AM. Featured services include express check-in, express checkout, and dry cleaning/laundry service.</p><p><br></p><p>There are 178 air-conditioned guest rooms equipped with espresso machines and flat-screen TVs; you will find the comfort of home during your journey. Your selected comfortable bed features down comforters and premium bedding. Free wireless internet is available for easy communication with friends; digital channels meet your entertainment needs. Private bathrooms featuring shower facilities offer large rainfall showerheads and branded toiletries.</p><p><br></p><p>The Beverly Hills Hotel | The Pink Palace</p><p><br></p><p>Born in 1912, this hotel is one of the favorites among Hollywood stars. Celebrated as the Pink Palace, everything here is pink, fulfilling all your fantasies about girlhood charm!</p><p><br></p><p>Fashion bloggers often take photos at the hotel entrance.</p><p><br></p><p>Pink can be found everywhere - walls, decorations, tables and chairs, and more.</p><p><br></p><p>The pool appears like a sapphire soaking in a pink atmosphere, clear and captivating.</p><p>Having lunch at the poolside restaurant, savoring expertly crafted cocktails, or enjoying a delicate afternoon tea after swimming are all delightful experiences. Spacious and comfortable rooms with terrace and garden views provide treatment enjoyed by Hollywood stars, while toiletries can be taken as souvenirs to commemorate your stay. Nearby attractions include Beverly Hills and the Getty Center, among others.</p><p><br></p><p>The Polo Lounge Hotel in Beverly Hills is situated at the peak of Beverly Hill, less than 15 minutes by car from the Hollywood Walk of Fame and Santa Monica Pier. This home-style hotel is 8.6 miles (13.9 km) from Hollywood Universal Studios and 9.4 miles (15.1 km) from Crypto.com Arena. Relax at our full-service spa, where you can enjoy massages, body treatments, and facials. If you want a leisurely vacation, make good use of the outdoor swimming pool, hot tubs, and 24-hour fitness center. Other services and facilities at this Art Deco-style hotel include free WiFi, concierge service, and complimentary babysitting. Guests can ride the free shuttle bus with a range up to 5 miles. The hotel features 2 restaurants; you may choose to dine at The Polo Lounge for American cuisine or stay in your room enjoying 24-hour room service delivery.</p><p>In addition to coffee shop offerings, delicious pastries are also served. After a busy day, you can enjoy a drink at the bar/lounge or poolside bar to relax. A full breakfast is available daily from 06:00 to 10:30 for a fee. Featured services and amenities include limousine or town car service, computer stations, and express check-in. The hotel has three meeting rooms that can be used for events. There are 208 individually decorated guest rooms featuring MP3 docking stations and plasma televisions; you will certainly find home comfort during your journey. Satellite channels and DVD players are provided to meet your entertainment needs, while free wireless internet keeps you connected with friends. Private bathrooms feature separate bathtubs and showers, offering soaking tubs and complimentary toiletries. Conveniences include a telephone, along with an in-room safe and a writing desk.</p><p><br></p><p>Hotel Bel-Air | Hotel Bel-Air</p><p>Spring all year round under Californian sunshine</p><p><br></p><p>Hotel Bel-Air and The Beverly Hills are both part of the Dorchester Collection. Staying at Bel-Air gives you an illusion of being in paradise, with pink architecture reminiscent of scenes from &quot;The Grand Budapest Hotel&quot; - dreamy and aesthetically pleasing.</p><p><br></p><p>The hotel resembles a large estate surrounded by greenery and flourishing flowers.</p><p><br></p><p>Compared to New York where land is extremely expensive, Los Angeles hotels have overwhelming spatial advantages. This property features luxurious American style with exquisite details in every corner.</p><p>The pink tones and vintage elegant decorations make it an ideal venue for weddings and entertaining guests. Distant sunlight, nearby pink walls, and golden cups and plates freeze beautiful moments here.</p><p><br></p><p>The interior garden is quiet and beautiful; the swan lake is more like a small secret realm waiting for unknown explorers.</p><p><br></p><p>Marilyn Monroe stayed here multiple times over 10 years, as did Prince Charles, Margaret Thatcher, The Beatles, Britney Spears, Audrey Hepburn, Elizabeth Taylor, leaving precious memories.</p><p><br></p><p>Cosmetic influencer Chiara Ferragni is also a regular visitor to Bel-Air and often takes photos there.</p><p><br></p><p>Since opening in the 1950s, this hotel has consistently ranked among top resorts—achieving this is no small feat; experiencing it makes you appreciate its beauty even more.</p><p><br></p><p>Nearby attractions: Beverly Hills, Getty Center, etc.</p><p><br></p><p>Bel-Air Dorchester Collection Hotel</p><p>The Dorchester Collection Bel-Air Hotel is located in central Los Angeles, only an 8-minute drive from Rodeo Drive and an 11-minute drive from Sunset Boulevard. This home-style hotel is 6.5 miles (10.5 km) from Mulholland Highway and 8 miles (12.9 km) from the Hollywood Walk of Fame.</p><p>Relax at our full-service spa where you can enjoy massages, body treatments, and facials. Be sure to experience vacation amenities including the outdoor pool, steam room, and 24-hour fitness center. This hotel offers free WiFi, concierge service, and babysitting services (for a fee). You can grab a quick bite at Wolfgang Puck restaurant or enjoy a drink at our bar/lounge with garden views. Alternatively, stay in your room and take advantage of 24-hour room service, with additional on-demand cooking available for a fee.</p><p><br></p><p>Special amenities include free high-speed wired internet, limousine or executive car service, and computer stations. Planning an event in Los Angeles? This hotel provides 247 square meters (2,660 sq ft) of space featuring a conference center and 2 meeting rooms.</p><p><br></p><p>Our 103 uniquely decorated guest rooms feature heated floors and plasma TVs. Choose one to treat yourself—your upgraded bed comes with down comforters and Egyptian cotton sheets. Cable channels and DVD player are available for your entertainment, while complimentary wireless internet keeps you connected with friends. Conveniences include a telephone, safe, and desk.</p><p><br></p><p>**Vintage History**</p><p>Perhaps in the eyes of most travelers, American history may not seem particularly long, but we have selected these historically significant Los Angeles hotels that showcase America&#39;s vintage elegance.</p><p>Beverly Wilshire, A Four Seasons Hotel | Pretty Woman</p><p><br></p><p>Amidst the confluence of celebrities and tycoons in Beverly Hills, luxury hotels abound, yet none alone carries the entire legend of Hollywood to this day. To date, many Hollywood galas continue to be held here, testifying to its extraordinary status.</p><p><br></p><p>A century of history has transformed elaborate ceremonial rituals into everyday experiences.</p><p><br></p><p>When night falls, you see elegantly attired guests arriving for banquets, scenes reminiscent of plotlines from Hollywood films.</p><p><br></p><p>The pool has also appeared in movies; &quot;Pretty Woman,&quot; filmed on location here, further enhances the hotel&#39;s legendary allure.</p><p><br></p><p>Amidst romantic candlelight, indulge in exquisite dining while taking in panoramic views of the city&#39;s vibrant night scene and savoring Hollywood&#39;s unique charm.</p><p><br></p><p>Every detail in the rooms is captivating: meticulously embroidered bath towels, Ferragamo bath essences, and luxuriously soft bedding. Holding a glass of champagne, one might feel transformed into a film protagonist.</p><p><br></p><p>Every evening spent here holds precious value.</p><p><br></p><p>Nearby attractions include Beverly Hills and the Hollywood Walk of Fame.</p><p>Beverly Hills Four Seasons Hotel</p><p>The hotel features 395 modern guest rooms, including 137 luxurious suites, located at the highest point on Rodeo Drive. Experience warm and hospitable service here, enjoy Michelin-starred restaurants, and world-class spa facilities. Features include a duplex fitness center with views of the pool deck equipped with state-of-the-art equipment, a Mediterranean-style swimming pool and jacuzzi, 24-hour business center, and amenities for families and children.</p><p><br></p><p>The Hollywood Roosevelt | The Hollywood Roosevelt</p><p>Oscar&#39;s Birthplace</p><p><br></p><p>Built in 1926 and named after America&#39;s second president, Franklin D. Roosevelt. Officially opened in 1927 with the first Academy Awards ceremony held at this hotel.</p><p><br></p><p>Inside the hotel, you can see many Oscar-related items. Outside is the famous Hollywood Walk of Fame, and directly across the street is the Chinese Theatre with an excellent location.</p><p><br></p><p>The interior design by Yabu Pushelberg features quality hardwood floors, elegant four-poster beds, blending traditional American luxury hotel heritage with modern elements.</p><p>The bottom of the pool features a mural artwork by renowned artist David Hockey. Tropicana Pool Café beside the pool is a casual café during the day, transforming into one of the city&#39;s lively nightspots in the evening. Surrounded by eye-catching red signage and lush green palm trees, many famous stars still choose to stay here during award ceremony periods. Nearby attractions: Hollywood Walk of Fame, TCL Chinese Theatre, Dolby Theatre, etc.</p><p><br></p><p>Roosevelt Hotel Hollywood</p><p>The Roosevelt Hotel Hollywood is located in central Los Angeles, just steps away from the Hollywood Walk of Fame and Hollywood Boulevard. This luxury hotel is 0.1 miles (0.1 kilometers) from TCL Chinese Theatre and 3.4 miles (5.4 kilometers) from Universal Studios Hollywood. Do not miss out on numerous resort facilities including nightclubs, an outdoor swimming pool, and a fitness center. Other features of this Art Deco style hotel include complimentary WiFi, concierge service, and wedding services. The hotel has 2 restaurants; you may choose to dine at Shirleys for American cuisine, or stay in your room and enjoy room service during select hours. Welcome to the poolside bar for a drink and some relaxation; additionally, there are 4 bars/lounges available for your choice. A complimentary made-to-order breakfast is served daily from 07:00 to 11:00.</p><p>Featured services and facilities include a business center, dry cleaning/laundry service, and 24-hour front desk service. Planning an event in Los Angeles? This hotel offers 2323 square meters (25005 square feet) of space, including meeting venues and conference rooms. With 300 guest rooms featuring iPod docks and LCD televisions, you will find the comfort of home on your journey. Your bed is equipped with down comforters and Egyptian cotton sheets. Complimentary wireless internet keeps you connected with friends; cable channels satisfy your entertainment needs. Private bathrooms provide luxury toiletries and hair dryers.</p><p><br></p><p>Millennium Biltmore Los Angeles | Hollywood&#39;s Golden Era</p><p>Opened in 1923, the hotel has hosted numerous Academy Award ceremonies and remains a popular wedding venue, film location, and favorite hotel for celebrities.</p><p><br></p><p>Ornate Austrian crystal chandeliers illuminate spaces adorned with hand-painted murals on ceilings, creating an atmosphere of elegance and romance.</p><p><br></p><p>Under soaring high ceilings, intricate European architectural details with carved columns and decorative elements transform the space into what resembles a breathtaking art museum.</p><p><br></p><p>The opera-like terrace restaurant, classical bar, and luxurious tableware invite guests to step back in time to medieval times.</p><p>It is said that Oscar trophy designer Cedric Gibbons had his inspiration while dining at the Millennium Hotel, sketching out what would become the iconic award design. Two years later, the Oscar statue was born. The swimming pool faithfully recreates Roman style - with exquisite columns, pool edges, and gold-plated handrails bringing ancient Roman noble court life back to your vision. Rooms carry forward the hotel&#39;s elegance and luxury. With elaborate decoration and refined bedding, finish your evening with a perfect signature cocktail and relive Hollywood&#39;s golden age. This historic establishment has welcomed numerous distinguished visitors - from U.S. President John F. Kennedy to renowned filmmaker Cecil B. DeMille and legendary actress Betty Davis. Its allure surpasses many of Los Angeles&#39; well-known attractions. Nearby attractions: Downtown Los Angeles, Little Tokyo, etc. Los Angeles Millennium Biltmore Hotel Tips: Have you been tempted after seeing these hotels~ Not visiting Los Angeles means a bee friend is not a good influencer. Expecting comments from bees, perhaps the selected hotel will have surprise discounts!</p>
+        
+
+        <a class="backLink" href="list-1.html">← Back to Los Angeles</a>
+      </article>
+    </main>
+  </body>
+</html>

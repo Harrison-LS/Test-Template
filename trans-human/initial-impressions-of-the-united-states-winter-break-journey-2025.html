@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <title>Initial Impressions of the United States: Winter Break Journey, 2025</title>
+    <style>
+      :root {
+        --paper: #f5f1eb;
+        --ink: #163d36;
+        --body: #3f3a34;
+        --muted: #8a8379;
+        --line: #ddd5ca;
+        --accent: #d9782f;
+        --white: #fffaf4;
+        --shadow: 0 22px 70px rgba(28, 25, 20, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        line-height: 1.72;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .hero {
+        min-height: clamp(330px, 48vw, 560px);
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        padding: clamp(28px, 7vw, 70px) clamp(24px, 8vw, 76px);
+        background: #28463f;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.12)),
+          url("https://imagedelivery.net/TdQQyAHCLdZMYcdCJx_3LA/40978ea2-acf0-4ca1-b030-b5575b59c100/public");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .heroInner {
+        position: relative;
+        width: min(900px, 100%);
+        color: #ffffff;
+      }
+
+      .heroLocation {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 24px;
+        color: rgba(255, 255, 255, 0.78);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .heroLocation svg {
+        width: 17px;
+        height: 17px;
+        color: #f0a45f;
+      }
+
+      h1 {
+        max-width: 880px;
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(30px, 4.8vw, 54px);
+        font-weight: 900;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .brief {
+        width: min(760px, 100%);
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 18px;
+        color: #5a5148;
+        font-size: clamp(17px, 1.9vw, 20px);
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.58;
+      }
+
+      .articleWrap {
+        width: min(900px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: clamp(42px, 6vw, 68px) 0 72px;
+      }
+
+      .content {
+        width: min(760px, 100%);
+        color: var(--body);
+        font-size: clamp(16px, 1.8vw, 18px);
+        line-height: 1.5;
+      }
+
+      .content p {
+        margin: 0 0 0.5em;
+      }
+
+      .content h2,
+      .content h3,
+      .content h4 {
+        margin: 46px 0 18px;
+        color: var(--ink);
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+
+      .content h2 {
+        font-size: clamp(28px, 4vw, 38px);
+      }
+
+      .content h3 {
+        font-size: clamp(23px, 3vw, 30px);
+      }
+
+      .content ul,
+      .content ol {
+        margin: 0 0 30px;
+        padding-left: 28px;
+      }
+
+      .content li {
+        margin: 8px 0;
+      }
+
+      .content blockquote {
+        margin: 34px 0;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 20px;
+        color: #5a5148;
+        font-style: italic;
+      }
+
+      .content img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 42px 0 12px;
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+      }
+
+      .content figure {
+        margin: 42px 0;
+      }
+
+      .content figure img {
+        margin: 0 0 12px;
+      }
+
+      .content figcaption {
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .backLink {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 46px;
+        border-top: 1px solid var(--line);
+        padding-top: 28px;
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.18em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .backLink:hover {
+        color: var(--accent);
+      }
+
+      @media (max-width: 720px) {
+        .hero {
+          min-height: 420px;
+          padding: 30px 24px;
+        }
+
+        .articleWrap {
+          width: min(100% - 28px, 900px);
+          padding-bottom: 48px;
+        }
+
+        .content {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="heroInner">
+        <p class="heroLocation">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+            />
+          </svg>
+          <span>San Francisco</span>
+        </p>
+        <h1>Initial Impressions of the United States: Winter Break Journey, 2025</h1>
+      </div>
+    </header>
+
+    <main class="articleWrap">
+      
+
+      <article class="content">
+        
+          <p>A Long Time Coming</p><p>We had wanted to go to the United States for several years. After visiting Canada in 2017, the question became when we would go to the States. We were meant to go in 2020, but like everything else, we had to push the trip to 2024. By then, two older friends had joined us, making it a five-person trip across three generations.</p><p>I had to change our itinerary many times. Most of the things I wanted to do had to be taken off; when we could put them on the list, we would only have time for quick stops. By April 2024, we were all set with our planned route, flights, hotels, and rental car. Then, one of the older travelers got sick. Should we cancel or postpone? It was a tough call, but we didn’t want either of the two older travelers to miss the trip. We postponed it to winter break 2025, which meant spending the Lunar New Year in the United States.</p><p>Our new travel dates were 19 January to 12 February 2025. That is a total of 25 days.</p><p>Itinerary Overview</p><p><img src="https://imagedelivery.net/TdQQyAHCLdZMYcdCJx_3LA/c58f326e-099a-4c36-1ec4-1fe89b9da900/public" alt="United States road trip" loading="lazy"></p>
+Since this trip is focused on seeing many places in a short amount of time, the destination selection was simple. For the west coast, we selected San Francisco, Los Angeles and San Diego. For the east coast, we chose New York, Boston, Philadelphia, and Washington, DC.
+We allocated eight days for the west coast: three days for San Francisco, three days for Los Angeles, and two days for San Diego. For the east coast, we spent a total of eight days in New York before and after the other stops, and three days each for Boston, Philadelphia, and Washington, DC.
+The original trip planned for summer holidays was converted into a trip for winter breaks. The most significant alteration was changing the order of the itinerary from going East Coast then West Coast, to starting with the West Coast followed by the East Coast so we could celebrate the Lunar New Year with friends and family in New York. We also removed the planned road trip along the Pacific Coast Highway because winter is not a good season for that. Some parts of Highway 1 have been closed and detoured multiple times because of repairs and landslides so it is good to check the road conditions before planning a trip to drive there.
+In regard to the detailed itinerary, we aligned with most of the group’s interests in four main categories which were visiting family/friends, shopping at outlets, seeing famous sites, and university tours. From there, the layout of the schedule fell into place. The following attractions are places we visited and can recommend. For planning, it is worth looking at other travel accounts and recent travel guides. 
+
+One City at a Time  
+San Francisco
+<p><img src="https://imagedelivery.net/TdQQyAHCLdZMYcdCJx_3LA/661fa3cb-6448-4573-571a-7c86df8f4b00/public" alt="United States multi-city itinerary" loading="lazy"></p>
+San Francisco's first streetcars are also first class. They give access to Fisherman’s Wharf as well as other attractions. If you are going to explore on foot, a day pass is a good choice to help with getting on and off transport as you go. Winter is a great time to visit Fisherman’s Wharf since sea lions tend to cluster around Pier 39. Pick a restaurant on the bay, there's great views from the window as you eat seasonal seafood from the menu. \n\nWe used public transport again and got off at the southern end of Golden Gate Bridge. The viewpoints here are not as high as the northern side but being level with the bridge towers is pretty awesome. If you still have the energy you can walk across it both ways. We decided to skip Chinatown as lots of shops were shut for the Lunar New Year. We also went to the Golden State Warriors Chase Center and I was lucky to find something I liked at the team store. On our way to Los Angeles, we detoured to visit our first university campus of the trip which was Stanford. \n\nIn the city, we also made the most of the great public transport system with Muni buses, light rail, cable cars, BART, and regional trains. We were able to use all of the above directly from where we stayed near Union Square, which was also a great spot for sightseeing. Like other big cities it is best to stay watchful of your surroundings, especially after dark.
+
+San Francisco winter weather can be dry and sunny. Therefore, moisturizer and sunscreen are important. One can still see the United States' leading technology hubs at San Francisco. <p> A landmark at Fisherman's Wharf <p> The view of the Golden Gate Bridge from Fisherman's Wharf <p> My son and the Golden Gate Bridge <p> Street scene of San Francisco <p> Golden States Warriors team store <p> Waterpfront Plaza <p> Chase Center, the home of the Golden States Warriors <p> Stanford University arcades <p> Memorial Church <p> Hoover Tower <p> Los Angeles: <p><p><img src="https://imagedelivery.net/TdQQyAHCLdZMYcdCJx_3LA/abbe795c-02cf-41e0-1981-6f015f4f2b00/public" alt="San Francisco travel" loading="lazy"></p>
+The Getty Center has been closed because of the wildfires, so we changed our plans and went to The Huntington instead. The best part of the visit was seeing their library collection, which has incredibly rare Western books and has items like The First Folio of Shakespeare, the Declaration of Independence, and first editions of books by some of the most famous authors.
+
+You should definitely go and see Griffith Observatory as you can get some great views of Los Angeles, and you can see the Hollywood sign clearly. For those of you that are going to Hollywood for the first time, you can also walk along Hollywood Boulevard and visit the wax museum. While we were at UCLA, we watched some students that were competing and the vibe was super professional. Unfortunately, we didn’t make it to Universal Studios Hollywood so that is going to have to be saved for a future trip. However, we did go outlet shopping and we spent way more time there than we originally planned. 
+
+Los Angeles is the easiest to get around by car, although some routes can be done using public transit or ride hail services. For dinner in the evening it was nice to have a neighborhood near UCLA to stay in, as it was nice and convenient. Sightseeing in my opinion was not necessary and I preferred to live and work in San Francisco more. 
+
+The “No. 1” signs around UCLA
+Los Angeles street scene
+TCL Chinese Theater
+View over Los Angeles
+Observatory telescope
+U.S. Declaration of Independence
+Do you know the title of this book?
+San Diego:
+The main reason for visiting was the USS Midway Museum, and it was spectacular. The interior feels like a maze; without the marked route, it would be easy to lose your way among the passageways.
+
+San Diego was a chill place like a resort. There were many retired couples spending time basking in the atmosphere. We also went to an outlet mall close to the US-Mexico border, which made the trip even more like a shopping tour.\n\n<p>Forward section</p>\n<p>Flight deck</p>\n<p>Stern</p>\n<p>Panoramic view</p>\n<p>Boston:</p><p><img src="https://imagedelivery.net/TdQQyAHCLdZMYcdCJx_3LA/1d571fe8-89cf-43d7-6291-b3c74454dd00/public" alt="Los Angeles and San Diego travel" loading="lazy"></p>
+It was snowing on the first day of our trip in Boston. It was a very beautiful winter wonderland and made the city feel completely different. While in the city we visited Harvard and MIT. They felt very nice and serene during the winter but also very empty. The silence was deafening. At the Harvard Art Museums, I was able to see some artifacts from the Mogao Caves which up until this point, I had no real understanding of their significance. However, after visiting them in June and seeing some of the damaged murals, I felt very saddened about the cultural heritage that has been removed from its original site. I was also frustrated that I did not know the real significance of the site prior to visiting it.  
+
+The Quincy Market wasn't very nice and felt like a glorified food court. The Boston Common was much better and was worth the walk, especially the skating rink. In summer the pond has a nice rippling effect but in winter it becomes a stage for skaters. It is unfortunate that we did not have the opportunity to go to the Museum of Fine Arts, Boston. I will have to go back to Boston again to visit it.  
+
+Distinct seasons, easy to use public transport, and a downtown area that is easy to walk around Boston is one of the best cities to visit in the east coast.
+
+Staying downtown, we had a subway station right underneath our hotel, which made getting around really easy.</p><p>Outdoor skating rink</p><p>A massive Starbucks kettle spewing steam</p><p>Night views of the Boston skyline</p><p>Heavy snowfall</p><p>Harvard's front gate</p><p>A white down jacket campus staff</p><p>Walking in the snow</p><p>My trophy and MIT</p><p>Philadelphia:</p><p>Walking around the University of Pennsylvania was the main reason for our visit. The campus is huge, almost like a small city. We checked out a couple of popular places to take pictures, saw two of the Six Steeds of the Zhao Mausoleum at the Penn Museum, and then went to City Hall and Independence Hall. Honestly, if you don't know a lot about US history, these sites aren't very interesting, similar to Boston's Freedom Trail and the rest of the places in the area.</p><p><img src="https://imagedelivery.net/TdQQyAHCLdZMYcdCJx_3LA/e3a34efa-7ae0-4426-46ad-83321e9f0000/public" alt="Winter in Boston" loading="lazy"></p>
+Overall, I marvel at how quickly a national capital can become a city with extreme poverty. This is an important lesson for countries that are experiencing rapid urban growth. \n\nIndependence Hall\n\nLiberty Bell\n\nMemorial of an early U.S. naval commander who was allied with the French\n\nBirthplace of the first U.S. flag (historically recognized)\n\nPhiladelphia city plan\n\nCity Hall; the figure on top is of William Penn, after whom Pennsylvania is named.\n\nBenjamin Franklin, one of the founders of the University of Pennsylvania\n\nSaluzi, one of the Six Steeds of Zhaoling\n\nQuanmaogua, one of the Six Steeds of Zhaoling\n\nWashington, D.C.\n\nIt is the capital, so it is monumental, formal, and on a grand scale. Each building is imposing and solemn. The wide streets and organized grid creates structure, making it easy to navigate.  Of course, with a plethora of museums and monuments, three days is not nearly enough. I primarily went to The National Museum of Natural History, The National Air and Space Museum, The National Museum of American History, The White House, The U.S. Capitol, The Washington Monument, and The Lincoln Memorial. I saw The Pentagon from a distance. One thing that stood out was how U.S. history is often taught from a wartime perspective... In China, it is taught with a greater focus on the changing borders and the size of territory. \n\nThe White House\n\nThe Washington Monument\n\nThe Lincoln Memorial statue \n\nHotel night view\n\nPrinceton University, New Jersey\n\nWe stopped here briefly while passing.
+
+The museum was closed for renovation so we had to walk around the campus and I would still recommend it. The town is quiet, unhurried, and fits the university's long association with scholarship in the social sciences and humanities.  
+Arch  
+Campus gate  
+Mascot  
+New York
+<p><img src="https://imagedelivery.net/TdQQyAHCLdZMYcdCJx_3LA/70ef85ed-001d-421d-4af6-31d6ad29c800/public" alt="U.S. East Coast travel" loading="lazy"></p>
+<p>I spent an entire week in New York. I remember going to MoMA and different bookstores for two days by myself. Then for two or three days after that I went out with friends and family who live in New York, and we mostly ticked off all the major tourist spots. The combination of Central Park and The Met is also great. I also went to see the Statue of Liberty on the Staten Island Ferry. It's a free ride, and I would have actually preferred paying to go to the island, but I wanted to see her like the new immigrants in old movies as someone who just arrived in the country.</p><p>What did I think of the city overall? It was kind of like how it was for me being from Shanghai. The subway system was also really good and I stayed at the library in Manhattan. I also got used to the smell at the subway stations because I would be on the train so it was much more bearable.
+
+Seeing New York in real life, gave me a strange sensation, even if most of my impressions of the city came from books and movies. </p> <p> Snow covering New York. </p> <p> Manhattan as a street. </p> <p> Lunar New Year at chinatown. </p> <p> The government. </p> <p> The bridge. </p> <p> Looking at the skyscrapers. </p> <p> Times Square. </p> <p> Library ceiling. </p> <p> Library reading desks and bookshelves. </p> <p> Outside the window. </p> <p> Sutra illustration from the Medicine Buddha Sutra, Yuan dynasty mural, Guangsheng Temple's Mahavira Hall. </p> <p> We are law-abiding citizens, so why can’t it be free? </p> <p> Greetings, Lady Liberty. </p> <p> Impressive? The queue to touch the bull testicles was even thicker. </p> <p> Return my earned money. </p> <p> Money and religion</p><p> MoMA was the museum I wanted the most; I traveled to White Plains from Grand Central Terminal. </p> <p> The painting I wanted to see the most at MoMA. </p> <p> This should be Trinity Church, I think. </p> <p> I believe this to be Rockefeller Center. </p> <p> An upscale dining car. </p> <p> This place was made for romance in the movies. </p> <p> A military recruitment office in the center of the busy commercial area. </p> <p> Lower Manhattan in the afternoon. </p><p><img src="https://imagedelivery.net/TdQQyAHCLdZMYcdCJx_3LA/a49817e8-d601-4e0b-89d1-a2dc9a4f8900/public" alt="New York City travel diary" loading="lazy"></p> <p> Lower
+In total, our family of three spent around RMB 120,000. The largest expense was airfare. It could have been much cheaper, but we booked during summer holiday's peak pricing and changed our flights. Had we made different selections we could have saved almost RMB 20,000. Another large expense was lodging. We spent the entire trip staying at hotels, typically paying about US$300 per room per night.</p><p>At least in the US, travel expenses are hard to avoid. The sales tax and tipping can be an unexpected expense for many visitors from China. In the People’s Republic of China tax is included into displayed cost. Another difference is tipping, which is not expected at all in China but when you go to a full-service restaurant in the US, they expect you to leave a tip, and they put suggestions on the bill that include 15%, 18%, or even 20%.</p><p>As an example, the bowl of noodles in New York City costs US$25 but you’ll leave paying a lot more because of the sales tax and tip, which are separate from the displayed price. The sales tax is about 11%, which makes it US$27.75 without tip, and adding a 15% tip makes it US$31.50. On the other hand, prices at many fast-food restaurants include tax, and you are not expected to tip.</p><p>Enough of my rambling—take a look at the photos in the article. I think they turned out quite well. Thanks for reading!</p><p><img src="https://imagedelivery.net/TdQQyAHCLdZMYcdCJx_3LA/30f349a5-6fca-4d3c-b69a-0b110d891100/public" alt="US travel costs" loading="lazy"></p>
+        
+
+        <a class="backLink" href="list-1.html">← Back to San Francisco</a>
+      </article>
+    </main>
+  </body>
+</html>

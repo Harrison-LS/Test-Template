@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Stanford University" />
+    <title>What Are the Best Places to Visit Around San Francisco? Silicon Valley Tech & Culture Day Tour</title>
+    <style>
+      :root {
+        --paper: #f5f1eb;
+        --ink: #163d36;
+        --body: #3f3a34;
+        --muted: #8a8379;
+        --line: #ddd5ca;
+        --accent: #d9782f;
+        --white: #fffaf4;
+        --shadow: 0 22px 70px rgba(28, 25, 20, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        line-height: 1.72;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .hero {
+        min-height: clamp(330px, 48vw, 560px);
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        padding: clamp(28px, 7vw, 70px) clamp(24px, 8vw, 76px);
+        background: #28463f;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.12)),
+          url("https://guide.mafengwo.net/img/1d/24/b8675e28196baaf7ea65a74155510abe.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F90");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .heroInner {
+        position: relative;
+        width: min(900px, 100%);
+        color: #ffffff;
+      }
+
+      .heroLocation {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 24px;
+        color: rgba(255, 255, 255, 0.78);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .heroLocation svg {
+        width: 17px;
+        height: 17px;
+        color: #f0a45f;
+      }
+
+      h1 {
+        max-width: 880px;
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(30px, 4.8vw, 54px);
+        font-weight: 900;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .brief {
+        width: min(760px, 100%);
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 18px;
+        color: #5a5148;
+        font-size: clamp(17px, 1.9vw, 20px);
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.58;
+      }
+
+      .articleWrap {
+        width: min(900px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: clamp(42px, 6vw, 68px) 0 72px;
+      }
+
+      .content {
+        width: min(760px, 100%);
+        color: var(--body);
+        font-size: clamp(16px, 1.8vw, 18px);
+        line-height: 1.5;
+      }
+
+      .content p {
+        margin: 0 0 0.5em;
+      }
+
+      .content h2,
+      .content h3,
+      .content h4 {
+        margin: 46px 0 18px;
+        color: var(--ink);
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+
+      .content h2 {
+        font-size: clamp(28px, 4vw, 38px);
+      }
+
+      .content h3 {
+        font-size: clamp(23px, 3vw, 30px);
+      }
+
+      .content ul,
+      .content ol {
+        margin: 0 0 30px;
+        padding-left: 28px;
+      }
+
+      .content li {
+        margin: 8px 0;
+      }
+
+      .content blockquote {
+        margin: 34px 0;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 20px;
+        color: #5a5148;
+        font-style: italic;
+      }
+
+      .content img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 42px 0 12px;
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+      }
+
+      .content figure {
+        margin: 42px 0;
+      }
+
+      .content figure img {
+        margin: 0 0 12px;
+      }
+
+      .content figcaption {
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .backLink {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 46px;
+        border-top: 1px solid var(--line);
+        padding-top: 28px;
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.18em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .backLink:hover {
+        color: var(--accent);
+      }
+
+      @media (max-width: 720px) {
+        .hero {
+          min-height: 420px;
+          padding: 30px 24px;
+        }
+
+        .articleWrap {
+          width: min(100% - 28px, 900px);
+          padding-bottom: 48px;
+        }
+
+        .content {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="heroInner">
+        <p class="heroLocation">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+            />
+          </svg>
+          <span>Los Angeles</span>
+        </p>
+        <h1>What Are the Best Places to Visit Around San Francisco? Silicon Valley Tech & Culture Day Tour</h1>
+      </div>
+    </header>
+
+    <main class="articleWrap">
+      
+      <p class="brief">Stanford University</p>
+      
+
+      <article class="content">
+        
+          <p>San Francisco and its surrounding areas are home to numerous top-tier universities, while Silicon Valley (Silicon Valley), just 60 minutes by car from downtown, is synonymous with the high-tech industry. Here gather many technology companies along with world-renowned Stanford University. While enjoying the beautiful scenery, you might as well visit these "high-precision and advanced" spots, adding uniqueness and cultural atmosphere to your San Francisco trip.</p><p><br></p><p>                                        Stanford University</p><p><br></p><p>                    Distance from San Francisco: 35 minutes by car</p><p><br></p><p>Established in 1885, Stanford University can certainly be considered one of the premier universities in America. For travelers, the Spanish-style buildings with yellow brick and red tiles are the main attraction. Walking among them, you're immediately enveloped in a rich academic atmosphere. As a top-tier university closely linked to Silicon Valley, it's also a pilgrimage site for IT professionals.</p><p><br></p><p>                    Additionally, Stanford University has over 30 restaurants where you can have lunch on campus.</p><p><br></p><p>                                        Stanford Bookstore</p><p><br></p><p>                    This bookstore is more like a tourist souvenir shop. The three-story store mainly sells campus-related merchandise and clothing.</p><p><img src="https://pixabay.com/get/g94f13721a63b0406fb01f44ccbeedc10b41fbbba628292f78b3e0f4d6643c59350753ac337d890799b787eda5e9d7ec6.jpg" alt="Stanford University" loading="lazy"></p>
+<p><br></p>
+<p>by Yi Xie Jun</p>
+<p><br></p>
+<p>by Yi Xie Jun</p>
+<p><br></p>
+<p>by Yi Xie Jun</p>
+<p><br></p>
+<p>Main Quad</p>
+<p><br></p>
+<p>Located at the center of Stanford University, Main Quad is the oldest building on campus. Currently it mainly houses humanities faculty, and major electrical events and activities take place in its central plaza. The Stanford Memorial Church to the south is also a popular photo spot for students.</p>
+<p><br></p>
+<p>by Yi Xie Jun</p>
+<p><br></p>
+<p>Hoover Tower</p>
+<p><br></p>
+<p>The 86-meter tall Hoover Tower is the highest building on campus. The first floor can be visited for free, and from the 14th-floor top one can overlook the entire campus, though now only Stanford students and faculty are permitted to reach the summit.</p><p><img src="https://pixabay.com/get/g68abb464eafbd82a61c9c9fa505c249f1489f6651e1b4d5b9939b0624f3c9d87be30edd6bb1a18a872fa248ca6433be2.jpg" alt="Stanford University landmarks" loading="lazy"></p>
+</p><p><br></p><p>                                             by Yi Xie Jun</p><p><br></p><p>                                        Palm Drive</p><p><br></p><p>                    The main entrance to campus, with nearby Palm Drive, and slightly farther Stanford Main Quad, Memorial Church, Hoover Tower, and the small hill in the distance make up Stanford's most classic view.</p><p><br></p><p>                                        Cantor Arts Center</p><p><br></p><p>                    This modern art gallery opened to the public in 1894, featuring over 130,000 square feet of exhibition space including a sculpture garden. With 24 galleries and a collection spanning 5,000 years of artistic works.</p><p><br></p><p>                                        Arizona Garden</p><p><br></p><p><img src="https://pixabay.com/get/gd866cabb1ac00939b95c813a58252dd693346f59b015ec13a3ae45decd025fc4252e0a980fe7ccce2c693f34de049973.jpg" alt="Stanford campus landmarks" loading="lazy"></p><p>                    A small botanical garden dedicated to cacti and succulent plants research. Not essential to visit as a must-see spot, but worth stopping by along the way.
+</p><p><br></p><p>                    Tips:</p><p>                    If you want to learn more about Stanford University's history, you can visit the official website (visit.stanford.edu) in advance to book a free campus tour.</p><p><br></p><p>                    Opening hours: Bookstore 9:00-19:00, Sunday 10:00/11:00-18:00; Church Monday through Thursday 9:00-16:00, Friday 9:00-13:00; Hoover Tower open 10:00 - 3:30pm; Cantor Arts Center 11:00-17:00 (closed on Monday and Tuesday)</p><p>Admission fees: Free casual campus tour, most buildings accessible to students only; Hoover Tower's 14th floor, $5 (students and faculty only)</p><p>How to get there: Drive to Tresidder Parking Lot, weekdays 8:00-16:00 with fee of about $4/hour, can only use ParkMobile app downloaded from US account; or drive to Stanford Shopping Center, free parking, then walk 13 minutes to Arizona Garden; take the free Marguerite Shuttle to Tresidder Union station</p><p>How to dine: Need to ask students to help swipe your card into Wilbur Dining or Lakeside Dining, pay with your own credit card, about $25 per person on average</p><p><br></p><p>                                        Hewlett Packard Garage</p><p><br></p><p>                    In the history of Silicon Valley entrepreneurship, the garage has always been a magical place.</p>
+
+silicon valley
+<p>For Silicon Valley, the garage is synonymous with the birthplace of startups. Travelers visiting Silicon Valley always feel compelled to pay homage to these famous "garages." Among them, the most renowned is HP, which created the "garage culture," and its original wooden garage has become a pilgrimage site for makers around the globe.</p><p><br></p><p>1939, William Hewlett (William Hewlett) and David Packard (David Packard), who met at Stanford University, established HP Company in Garage 367. Therefore, this ancient and simple wooden garage with only over thirty square meters is considered the "birthplace of Silicon Valley." There is a sign outside that briefly introduces this history; today travelers cannot enter the garage interior for visits, but they can take photos outside to commemorate their trip.</p><p><br></p><p>Google Headquarters Googleplex</p><p><br></p><p>About 15 minutes by car from HP's garage, you arrive at Google's headquarters. The office campus is open to visitors; walking around outdoors, you can feel the Google culture atmosphere. Besides strolling and taking photos on the lawn near the main office area—checking in with dinosaur sculptures—you can also go to the Google Visitor Center to purchase limited edition merchandise and enjoy a cup of coffee at Cafe that features the Google logo.</p><p><img src="https://pixabay.com/get/g2f43985eaf3ecf0de9aa4542b8ed43a64675b9f94151ed200fe7ac5ed316f5219a505a7a90b6059ce6622a4c9cac7584.jpg" alt="Silicon Valley garage startups" loading="lazy"></p>
+<p><br></p>
+<p>                                                     by Mars User</p>
+<p><br></p>
+<p>                                                     by Mars User</p>
+<p><br></p>
+<p>                                                     by Mars User</p>
+<p><br></p>
+<p>                        Hicks Liu</p>
+<p>                        Lv.16</p>
+<p><br></p>
+<p>                    The visitor center at Apple is an Apple Store plus Cafe plus some cultural creative products. As for Apple's Infinite Loop building, you can only catch a glimpse of a corner through the gaps between trees in the distance. But you cannot walk right up to it because even the distant entrance doors are inaccessible. It feels like Apple's system - emphasizing closed source.</p>
+<p><br></p>
+<p>                    Opening hours: Monday to Saturday, 9:00 ~ 18:00;</p><p><img src="https://pixabay.com/get/gd1fca0369cacc4a553a6ec43260fccada9bfb1b4308bcde92a7fb42c74a2f97e7d733b346ab105a8593aac3f4aa23690.jpg" alt="Apple visitor center and Infinite Loop building" loading="lazy"></p>
+<p>Sunday, 10:00～17:00, check online in advance for holidays</p><p>Warm reminder: Some office building lobbies are open to the public for visits during certain times. You can consult with staff in advance.</p><p>How to arrive: Navigate to 1600 Amphitheatre Plwy and find the free visitor parking lot</p><p><br></p><p>Tips:</p><p>Most companies inside Silicon Valley do not allow public access. You need to enter the office area with a Google employee guide to explore the internal environment and check out the company cafeteria.</p><p><br></p><p>Computer History Museum</p><p>About 10 minutes' drive from Google headquarters, you can reach this privately donated Computer History Museum. Founded in 1996, it is currently recognized as the largest and most significant computer museum in the world. The museum contains 20 exhibition zones, divided chronologically, showcasing developments from ancient computing to the CD era, personal computer era, modern software, and future applications, each period with rich collections and explanations.</p><p><img src="https://pixabay.com/get/g29f154385e36a89bce5cbe1a8d26a7dab7eaf264164db66362c4316dace1c87601d124d17db0f8d96811651e3b13129e.jpg" alt="Computer History Museum" loading="lazy"></p>
+<p>Here, you can witness firsthand how technology develops rapidly and how it influences and transforms our lives.</p><p><br></p><p>Opening Hours: 10:00-17:00 (Closed on Mondays and Tuesdays; no reservation required)</p><p>Suggested Admission Fee: $17.5, discounted tickets at $13.5</p><p><br></p><p>Intel Museum</p><p><br></p><p>The Intel Museum, opened in 1983, is located on the first floor of the headquarters main building and is now one of Silicon Valley's famous destinations. Upon entering, you can pick up a museum guide at the visitor center to follow guided tours through various areas. Learn about more than six decades of Intel's history, the general chip manufacturing process, the company's groundbreaking signature products, and the stories of its two main founders, Robert Noyce and Gordon Moore. Overall it is quite "technical," making it perfect for tech enthusiasts.</p><p><br></p><p>Opening Hours: Monday through Friday 9:00-18:00, Saturday 10:00-17:00</p><p>Suggested Admission Fee: Free</p><p>How to Get There: Navigate to The Intel Museum and Intel Museum Store, 2200 Mission College Boulevard Santa Clara California. There is free parking for visitors in front of the building.</p><p><br></p><p>Tech Museum of Innovation</p><p><br></p><p>The Tech Museum of Innovation, established in 1990, is one of Silicon Valley's most popular museums and attracts many technology enthusiasts to visit.</p><p><img src="https://pixabay.com/get/gcc3db31b20d4be88e9d482719a48acf20b29b0bd95fc8077b9aeba8179bba1ec960f9807ea270904415a6f4849e9201a.jpg" alt="Silicon Valley museums" loading="lazy"></p>
+<p>The museum is primarily hands-on oriented and can absolutely be called an excellent place to exercise your brain. Here, you can experience various exhibits including the Astronaut Pilot Seat (Jet Pack Chair), hand-eye coordination game to clear online spam (Whack-A-Spam), space disorientation simulation (Mixed Up in Space), Imagination Playground, Energy Harvesting Design (Harnessing Energy), and Red-Green Color Blindness Test.</p><p><br></p><p>Opening hours: Tuesday through Friday, 10:00～15:00; Saturday and Sunday, 10:00～17:00; Closed on Mondays</p><p>Ticket price: $28</p><p><br></p><p>Apple Park Headquarters</p><p><br></p><p>Although the Apple Park Headquarters is not open to the public, visitors can go to the nearby visitor center (Apple Park Visitor Center) to purchase merchandise and experience Vision Pro, or visit a nearby cafe for coffee, then head upstairs to enjoy views from the terrace.</p><p><img src="https://pixabay.com/get/gdc5cc2936316ef3303deaf6c4e82f4b30405f6dea93ef001a7d3acc47e4903ce2406e07eaf467715e0d471cb54ecab2a.jpg" alt="interactive museum exhibits" loading="lazy"></p>
+</p><p><br></p><p>                    Opening hours: Visitor center, 10:00~18:00</p><p><img src="https://pixabay.com/get/g6f843a0d2c39a561e03a09b0b8ea3fcddbfb4c701d6905851bd7bb3fe4b4dbd796382d5bab7672666a1ef638c3886a9a.jpg" alt="Visitor center opening hours" loading="lazy"></p>
+        
+
+        <a class="backLink" href="list-1.html">← Back to Los Angeles</a>
+      </article>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Eat at Michelin, eat in the Bay Area" />
+    <title>Eat | Exploring Michelin Restaurants in San Francisco (Part 2)</title>
+    <style>
+      :root {
+        --paper: #f5f1eb;
+        --ink: #163d36;
+        --body: #3f3a34;
+        --muted: #8a8379;
+        --line: #ddd5ca;
+        --accent: #d9782f;
+        --white: #fffaf4;
+        --shadow: 0 22px 70px rgba(28, 25, 20, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        line-height: 1.72;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .hero {
+        min-height: clamp(330px, 48vw, 560px);
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        padding: clamp(28px, 7vw, 70px) clamp(24px, 8vw, 76px);
+        background: #28463f;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.12)),
+          url("https://p1-q.mafengwo.net/s12/M00/D8/08/wKgED1wzJ3WAS1qBAA2RllTWCXM08.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F90");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .heroInner {
+        position: relative;
+        width: min(900px, 100%);
+        color: #ffffff;
+      }
+
+      .heroLocation {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 24px;
+        color: rgba(255, 255, 255, 0.78);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .heroLocation svg {
+        width: 17px;
+        height: 17px;
+        color: #f0a45f;
+      }
+
+      h1 {
+        max-width: 880px;
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(30px, 4.8vw, 54px);
+        font-weight: 900;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .brief {
+        width: min(760px, 100%);
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 18px;
+        color: #5a5148;
+        font-size: clamp(17px, 1.9vw, 20px);
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.58;
+      }
+
+      .articleWrap {
+        width: min(900px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: clamp(42px, 6vw, 68px) 0 72px;
+      }
+
+      .content {
+        width: min(760px, 100%);
+        color: var(--body);
+        font-size: clamp(16px, 1.8vw, 18px);
+        line-height: 1.5;
+      }
+
+      .content p {
+        margin: 0 0 0.5em;
+      }
+
+      .content h2,
+      .content h3,
+      .content h4 {
+        margin: 46px 0 18px;
+        color: var(--ink);
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+
+      .content h2 {
+        font-size: clamp(28px, 4vw, 38px);
+      }
+
+      .content h3 {
+        font-size: clamp(23px, 3vw, 30px);
+      }
+
+      .content ul,
+      .content ol {
+        margin: 0 0 30px;
+        padding-left: 28px;
+      }
+
+      .content li {
+        margin: 8px 0;
+      }
+
+      .content blockquote {
+        margin: 34px 0;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 20px;
+        color: #5a5148;
+        font-style: italic;
+      }
+
+      .content img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 42px 0 12px;
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+      }
+
+      .content figure {
+        margin: 42px 0;
+      }
+
+      .content figure img {
+        margin: 0 0 12px;
+      }
+
+      .content figcaption {
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .backLink {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 46px;
+        border-top: 1px solid var(--line);
+        padding-top: 28px;
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.18em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .backLink:hover {
+        color: var(--accent);
+      }
+
+      @media (max-width: 720px) {
+        .hero {
+          min-height: 420px;
+          padding: 30px 24px;
+        }
+
+        .articleWrap {
+          width: min(100% - 28px, 900px);
+          padding-bottom: 48px;
+        }
+
+        .content {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="heroInner">
+        <p class="heroLocation">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+            />
+          </svg>
+          <span>Los Angeles</span>
+        </p>
+        <h1>Eat | Exploring Michelin Restaurants in San Francisco (Part 2)</h1>
+      </div>
+    </header>
+
+    <main class="articleWrap">
+      
+      <p class="brief">Eat at Michelin, eat in the Bay Area</p>
+      
+
+      <article class="content">
+        
+          <p>Dining at Michelin Level, Dining in the Bay Area</p><p><br></p><p>This article continues from our previous introduction to show you the remaining San Francisco three-star Michelin dining options~</p><p>San Francisco</p><p><br></p><p>                                        4. COI | Fusion Seafood + Molecular Gastronomy, Double Punch Attack</p><p><br></p><p>                    COI - 373 Broadway, San Francisco, CA 94133, USA</p><p>(415) 393-9000</p><p><br></p><p>Coi specializes in fusion cuisine and represents the pinnacle of California dining. Its signature approach is to source the finest ingredients throughout the entire Bay Area: local seasonal seafood, free-range eggs from major ranches, lively and delicious free-range poultry, cattle, and sheep—then present them using molecular gastronomy techniques, making COI one of the most anticipated two-Michelin-star establishments.</p><p>Since Michelin two-star restaurant COI's executive chef Daniel Patterson announced he would step back to focus on family life and building his own restaurant empire, he found his replacement: Matthew Kirkley, a former chef at Chicago's L2O and Vegas Robuchon restaurants.</p><p><img src="https://pixabay.com/get/gf5b33e3538e3d581a0ca7da29ba35fcdf9d94518b7beec277231f24546d8d4df6d65d7b70018f11bf0e388cb4986ccdf.jpg" alt="COI Fusion Cuisine" loading="lazy"></p>
+Welcomed a person who would completely change the restaurant's fate.
+
+Because according to Michelin Guide International Director, agreeing to upgrade Coi from two stars to three was because of its head chef Matthew Kirkley's innovative seafood dishes. When Matthew Kirkley took over in 2016, he immediately moved away from Daniel's previous vegetable-focused menu and instead transformed the main menu into a seafood feast, boldly using locally sourced but lesser-known ingredients like raw sea urchin, Meyer lemon, radish, etc.
+
+Last year, Coi secured its Michelin two-star status and successfully navigated the risky transition period typical of chef changes. This year marked another significant achievement as the restaurant officially earned its three-star rating.
+
+The dining experience feels experimental, with menus that change frequently enough to ensure each visit offers something entirely new. Diners encounter ingredients from fresh perspectives, exploring both their appearance and fundamental structure in a way that feels genuinely refreshing.
+
+Pricing starts at $250, with a modern interior design requiring formal attire for the meal.
+
+Reservations can be made through OpenTable or by phone.
+
+Wine Country
+
+5. The French Laundry | Deserving its reputation as possibly America's premier restaurant
+
+Booking: Advance reservations open via calendar date appointments two months ahead, or attempt to secure through OpenTable
+
+The West Coast's pioneering Michelin three-star establishment and most celebrated French dining destination across the United States.
+<p><img src="https://pixabay.com/get/g1588b23eab9a22179dda11e8bc9af39fb7b546782370d357cea4b3f4c2abb7bd3a5f1b985e7eea6f47a321d3f67af898.jpg" alt="Michelin starred restaurants" loading="lazy"></p>
+<p>Situated at a winery in Napa, it carries a pastoral charm; its exterior is aged, yet its heart continuously upgrades to keep pace with the times.</p><p>Its wine list is as worth carefully tasting and studying as its dishes. The menu that chefs research through daily meetings brings different surprises each time; not to mention this place serves as an incubator for renowned Western chefs altogether. If you could only eat at one restaurant throughout all of America, who else besides The French Laundry?</p><p><br></p><p>Reservation: Phone reservations open on a calendar date two months in advance, or you may try to grab them through Open Table.</p><p><br></p><p>6. Restaurant at Meadowood | Creativity Blended with Light Luxury</p><p><br></p><p>COI - 373 Broadway, San Francisco, CA 94133, USA</p><p>(415) 393-9000</p><p>Coi specializes in Fusion cuisine and can be considered the comprehensive embodiment of California dishes. Its specialty lies in gathering the finest ingredients from the entire Bay Area: local seasonal specialties seafood, farm-raised chickens' eggs from various ranches, lively and very happy poultry with excellent meat, and cattle and sheep - then presenting them through molecular gastronomy techniques, making Coi become one of the most anticipated Michelin two-star establishments.</p><p><img src="https://pixabay.com/get/g07a3ae4d5d578e98a7a74e2da54ba81ee85fbf509586d4c61da576772c3e3942accc2abed0c7be25b2d64d769cb90685.jpg" alt="Michelin Fusion Cuisine" loading="lazy"></p>
+<p>Since Michelin two-star restaurant Coi's executive chef Daniel Patterson announced stepping back into the background to focus on family and building his own restaurant empire, he found a successor: Matthew Kirkley, former chef of Chicago's L2O and Vegas Robuchon restaurants. A person who would completely transform the restaurant's destiny has arrived.</p><p><br></p><p>The Restaurant at Meadowood - 900 Meadowood Ln, St Helena, CA 94574, USA</p><p>(707) 967-1205</p><p><br></p><p>Luxury hotel, upscale restaurant, private vegetable garden - all are connected to Restaurant at Meadowood. This second three-star Michelin restaurant in the Bay Area earned its reputation on contemporary Californian cuisine that's currently extremely popular worldwide. Chef Christopher Kostow's menu is like a short symphony, presenting seasonal freshness and clever use of local ingredients through every dish.</p><p><img src="https://pixabay.com/get/g710243c405e36224c941bbc26bec545c276263af42e487333a63f63f9ed900efd6540d9d25bf91b8bb43609e2160cf1b.jpg" alt="Michelin-star restaurant" loading="lazy"></p><p>Creativity combined with light luxury, perfect support from locally sourced ingredients and local production, paired with impeccable environment and service, plus the winery's prime location.
+<p>In this mood and setting, not getting drunk or having a great big meal would be disrespecting this trip.</p><p><br></p><p>                    Reservations: Book in advance by phone, or grab on OpenTable</p><p><br></p><p>Peninsula</p><p><br></p><p>                                        7. Manresa｜Time and effort eventually pay off, rising from the ashes</p><p><br></p><p>Manresa - 320 Village Ln, Los Gatos, CA 95030, USA</p><p>(408) 354-4330</p><p><br></p><p>                    Time and effort eventually pay off, rising from the ashes are probably the best words to describe Manresa. Established in 2002, this restaurant was suddenly hit by a fire that forced it to close for half a year. But this phoenix rising from flames quickly gained Michelin's three-star recognition, erasing San Jose South Bay's embarrassment of having no Michelin restaurants.</p><p>It is important to know that the main star here is not meat, but vegetables. Vegetables take center stage with fish as a secondary option, completely overturning conventional Western dining concepts. Featured farms provide exclusive produce and vegetables, carefully raised cows, sheep, chickens, and ducks - all ingredients are delivered directly from their origin farm. The purpose is naturally to ensure ingredient freshness.</p><p><img src="https://pixabay.com/get/g7e82c677e0aab587802b91ad5d12f417e03507a686706ae9bb9d0a4adafbaa42e35b53a808d98c6b1ee10b2f26448e67.jpg" alt="Manresa restaurant" loading="lazy"></p>
+</p>
+        
+
+        <a class="backLink" href="list-1.html">← Back to Los Angeles</a>
+      </article>
+    </main>
+  </body>
+</html>

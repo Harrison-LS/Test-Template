@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <title>Los Angeles Travel Guide | Eat, Stay, Play, Shop - All in One Place!</title>
+    <style>
+      :root {
+        --ink: #171512;
+        --muted: #5f5a54;
+        --line: #ded6cc;
+        --paper: #ffffff;
+        --warm: #f8efe5;
+        --accent: #c47a29;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        line-height: 1.55;
+      }
+
+      .hero {
+        width: 100%;
+        height: clamp(260px, 38vw, 520px);
+        overflow: hidden;
+      }
+
+      .hero img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+      }
+
+      .article {
+        width: min(760px, calc(100% - 40px));
+        margin: 0 auto;
+        padding: 34px 0 72px;
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin: 0;
+        font-family: Georgia, "Times New Roman", serif;
+        letter-spacing: 0;
+        line-height: 1.05;
+      }
+
+      h1 {
+        max-width: 620px;
+        font-size: clamp(34px, 5vw, 54px);
+        font-weight: 800;
+      }
+
+      .location {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin: 18px 0;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .location svg {
+        width: 18px;
+        height: 18px;
+        flex: 0 0 auto;
+      }
+
+      .subtitle {
+        max-width: 650px;
+        margin: 0 0 22px;
+        color: var(--muted);
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(18px, 2.4vw, 23px);
+        font-style: italic;
+        line-height: 1.45;
+      }
+
+      .description {
+        max-width: 650px;
+        margin: 0 0 28px;
+        color: #302c27;
+        font-size: 15px;
+      }
+
+      .brief {
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        border-radius: 6px;
+        padding: 18px 20px;
+        background: var(--warm);
+      }
+
+      .brief-title {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 10px;
+        color: var(--accent);
+        font-weight: 800;
+      }
+
+      .brief-title svg {
+        width: 18px;
+        height: 18px;
+      }
+
+      .brief p {
+        margin: 0;
+        color: #302c27;
+        font-size: 15px;
+      }
+
+      .content {
+        border-top: 1px solid var(--line);
+        padding-top: 24px;
+      }
+
+      h2 {
+        margin-bottom: 16px;
+        font-size: 30px;
+      }
+
+      .section {
+        margin: 0 0 24px;
+      }
+
+      .section h3 {
+        margin-bottom: 8px;
+        font-size: 18px;
+        line-height: 1.25;
+      }
+
+      .section p,
+      .section-body {
+        margin: 0;
+        color: #292520;
+        font-size: 14px;
+        white-space: pre-line;
+      }
+
+      .section-body img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 16px 0;
+        border-radius: 8px;
+      }
+
+      .section-body a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      @media (max-width: 640px) {
+        .article {
+          width: min(100% - 28px, 760px);
+          padding-top: 26px;
+        }
+
+        .hero {
+          height: 260px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <figure class="hero">
+      <img src="" alt="Los Angeles Travel Guide | Eat, Stay, Play, Shop - All in One Place!" />
+    </figure>
+
+    <main class="article">
+      <h1>Los Angeles Travel Guide | Eat, Stay, Play, Shop - All in One Place!</h1>
+
+      <p class="location">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            fill="currentColor"
+            d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+          />
+        </svg>
+        <span>Los Angeles</span>
+      </p>
+
+      <p class="subtitle"></p>
+      <p class="description"></p>
+
+      <aside class="brief">
+        <p class="brief-title">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M7 3h10a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Zm1 4v2h8V7H8Zm0 4v2h8v-2H8Zm0 4v2h5v-2H8Z"
+            />
+          </svg>
+          Brief
+        </p>
+        <p></p>
+      </aside>
+
+      <section class="content" aria-labelledby="content-title">
+        <h2 id="content-title">Content</h2>
+        
+          <article class="section">
+            <div class="section-body">Los Angeles is a must-visit city in the Western United States, featuring iconic landmarks, theme parks, sunny beaches, and trendy spots. Yet many people overlook it as merely a transit destination. If you have more time, I recommend staying here. Follow this guide to experience authentic Los Angeles through dining, accommodation, entertainment, and shopping!
+
+Pre-trip Guide
+Why Choose Los Angeles
+As one of the most popular tourist cities on the U.S. West Coast, Los Angeles offers incredibly rich tourism resources with numerous attractions. The Hollywood district, home to top-tier pop culture, showcases the charm of this fashion capital; the vibrant coastal beaches provide excellent spots for water activities; extensive theme parks allow visitors to escape from complicated real-world life; plus emerging trendy landmarks and colorful art museums make it suitable for tourists of all preferences and ages.
+
+Choosing the Best Season to Visit
+Los Angeles is a city suitable for visiting any month, thanks to its mild year-round climate with indistinct seasons. Nearly 300 days annually feature sunny weather, classified as Mediterranean climate requiring sun protection. If you dislike excessive heat, it's recommended to avoid June through August, yet this period offers the best conditions for water activities and provides the longest daylight hours.
+Transportation Options
+
+Self-Drive: Although Los Angeles is the second largest city in America, public transportation is not well-developed. The best way to explore is by renting a car and driving yourself. Parking lots in Western America are much more numerous and larger than those in the East, making it very convenient.
+
+Uber: Besides self-driving, hailing rides through apps is most convenient and offers the best value-for-money ratio.
+
+Metro: Metro is the general term for Los Angeles public transportation, consisting of subways, light rail, and buses. There are 6 lines between subways and light rails combined, with the Red Line and Purple Line being most commonly used. One-way fare is $1.75 USD.
+
+Spending Situation
+
+Tax rate is relatively high at around 9.5%. No tax refund available except at duty-free stores.
+
+Understanding the Real Los Angeles with One Map
+
+The Los Angeles people imagine is usually downtown LA, which is the area labeled "Los Angeles" on maps. However, when referring to Los Angeles generally, it means Los Angeles County - a very large region containing 88 cities such as Beverly Hills, Santa Monica, Long Beach, and downtown LA itself - all belonging to Los Angeles County. Additionally, when we colloquially mention visiting Los Angeles, we typically refer to the Greater Los Angeles area, which includes surrounding Orange County, Riverside County, and four other counties. Some famous attractions are located here: Disney California Adventure in Orange County, Desert Outlets in Riverside County, among others.
+Los Angeles Must-Visit Attractions
+Hollywood Universal Studios
+Introduction: Hollywood Universal Studios is an original film-themed amusement park located on a movie and television studio lot in the northwest suburbs of Los Angeles, making it a must-visit destination for tourists arriving in Los Angeles. In addition to attractions related to movies and The Wizarding World of Harry Potter, there are tram tours that will take you behind the scenes of Universal Studios production techniques and some real filming locations.
+Address: 100 Universal City Plaza, Universal City, CA 91608, USA
+Ticket Prices: Standard ticket $109-$129, Express No-Wait Ticket $179-$259
+Opening Hours: 10:00-18:00. Park operating hours vary daily and may be adjusted earlier or later for special events. Please refer to the official park website for accurate information.
+Transportation: Take the Red Line Metro to Universal City Station, then take a free shuttle bus which is located not far from the exit. It takes only 2-3 minutes to reach Universal Studios.
+Official Website: ***
+California Disneyland
+Introduction: Located in Anaheim, this Disneyland is the world's first Disney theme park and also the only one built under the direct supervision of Walt Disney, founder of Disney. It is filled with traditional Disney charm.
+In this theme park, you will gain more dreamy and fun experiences rather than thrilling and exciting adventures.
+
+Address: 1313 Disneyland Dr, Anaheim, CA 92802, USA
+
+Ticket Prices: Single-day adult ticket $104, child ticket $98. Two-day adult ticket $225, child ticket $210. One-day two-park ticket $154.
+
+Opening Hours: 08:00-Next day 00:00 (California Disney Theme Park), 08:00-22:00 (Disney California Adventure). The opening hours of each park may be adjusted in different seasons; please refer to the official website for specific information.
+
+Transportation: Take buses 43, 83, 430, or 460 and get off at Disneyland Station.
+
+Attraction Official Website: ***
+
+Santa Monica
+Introduction: Santa Monica is the beach closest to downtown Los Angeles and the end of North American Route 66. The ocean view has been favored by Hollywood directors for years. Here there is also Pacific Park - the only amusement park on the sea along the West Coast. Countless tourists who visit here every year will involuntarily enjoy some fun at Pacific Park, making it the first choice for visitors to Los Angeles to visit beaches.
+
+Address: Pacific Coast Hwy, Santa Monica, CA 90401 America
+
+Ticket Prices: Free
+
+Opening Hours: All day
+
+Transportation: Can take buses 20, 33, or 534 and get off at Ocean / Colorado Station
+
+Attraction Official Website: ***
+Getty Center
+Introduction: The Getty Center is an important iconic cultural landmark in Los Angeles, one of California's richest museums or even worldwide collections, a favorite destination for art lovers. It houses extensive European paintings, sculptures, decorative arts, and photography works. Moreover, the architecture itself is a work of art; visitors take a small train up the hill while enjoying panoramic views of the valley. Beyond the museum lies the vibrant Getty Central Garden, equally renowned as artworks inside - tree-lined paths, gentle streams flowing into ponds along the walkways, with a azalea maze in the center of each pond, artistry permeating every corner.
+Address: 1200 Getty Center Dr, Los Angeles, CA 90049
+Ticket Price: Free
+Opening Hours: Tuesday-Friday and Sunday 10:00-17:30, Saturday 10:00-21:00; Monday closed
+Transportation: Visitors can drive or take bus route 234 at Sepulveda / Getty Center stop. Vehicles park in lots at the hill base, then a tram shuttle operates between parking and the summit art center.
+Official Website: ***
+
+OUE Skyspace Observation Deck
+Introduction: OUE Skyspace is California's highest open-air observation deck, located within the Bank of America Building in downtown Los Angeles, rising over 1,000 feet above ground level, offering 360-degree uninterrupted panoramic views of Angel City.
+Here you can not only find a small sofa by the window indoors to quietly enjoy the sunset, but also go outdoors to have an intimate experience with the surrounding skyscrapers. The outdoor observation deck is surrounded by floor-to-ceiling transparent glass on all sides, offering excellent views. It features viral attractions including a 70-story exterior transparent slide and angel wings for photo opportunities, making it a must-visit new landmark in Los Angeles.
+
+Address: 633 W 5th St #840, Los Angeles, CA 90071
+Ticket Prices: Adult ticket $25, Child ticket $19. Ticket + Slide combo: Adult $33, Child $27.
+Opening Hours: 10:00-22:00
+Transportation: Take buses 16, 17, 18, 53, 55, 62, 316, or 355 to the 5th & Grand stop, then walk one minute.
+
+Griffith Observatory
+Brief Description: This is one of Los Angeles' iconic landmarks, located on a hill northwest of downtown with panoramic views of the entire city. Beyond that, it is also a world-famous observatory and a filming location for countless Hollywood movies. Here you can not only enter the observatory to learn about planets and cosmic astronomy, watch celestial motion demonstrations in the dome theater, or walk up to the outdoor observation deck to gaze upon downtown Los Angeles and Hollywood's full panorama.
+Address: 2800 E Observatory Rd, Los Angeles, CA 90027
+Ticket Price: Free
+Opening Hours: Tuesday-Friday 12:00pm-10:00pm, Weekend 10:00am-10:00pm, Closed on Mondays.
+Transportation: Take the Downtown DASH Weekend Observatory Shuttle and get off at Griffith Observatory Station.
+Official Website: ***
+
+Six Flags Magic Mountain
+Introduction: Los Angeles offers not only charming beaches and art exhibitions, but also the most thrilling Six Flags Magic Mountain. Located in Valencia, northern Los Angeles, established in 1971, it ranks at the top of amusement parks with the most roller coasters worldwide. To date, nearly 20 roller coasters within the park have won world awards, including the world's first 4D roller coaster Green Lantern, America's longest roller coaster Goliath, the second tallest drop tower globally, and America's longest 360° looping roller coaster - without a doubt, it is paradise for adventure lovers!
+Address: 26101 Magic Mountain Pkwy, Valencia, CA 91355
+Ticket Price: Adults $72.99, Children $47.99
+Opening Hours: Opens at 10:30am, closes around 8:00pm-9:00pm; specific times reference the official website.
+Transportation: Drive, or first take the Metro Red Line to North Hollywood station, transfer to the North Hollywood Express Bus 757 at Regional Transit (MRTC) station, then transfer to the Santa Clarita Express Bus 3 or 7 and get off at Six Flags Magic Mountain to arrive.
+
+Hollywood Walk of Fame
+Introduction: Built in 1958, the Hollywood Walk of Fame is a sidewalk extending along Hollywood Boulevard and Vine Street in the United States, a famous cultural historical landmark of Los Angeles. The street features over 2000 star-shaped medals with names of Hollywood celebrities embedded, commemorating their contributions to the entertainment industry. Famous Madame Tussauds Wax Museum, Chinese Theatre, and Kodak Theater are located on this avenue.
+Address: 6901 Hollywood Blvd, Los Angeles, CA 90028, USA
+Admission Price: Free
+Opening Hours: All day
+Transportation: Take buses 212, 217, or 312 and get off at Hollywood / Highland station to arrive.
+
+Accommodation Recommendations
+Los Angeles is extremely large, and public transportation cannot reach every corner, so choosing where to stay becomes especially important. If you want to experience seaside life, I recommend staying near Santa Monica; fashion-forward explorers and fans of influencer hotels should consider the Beverly Hills area.
+
+Beverly Hills
+Overview: This area has many attractions concentrated together, numerous options for shopping and dining, excellent transportation infrastructure, and it hosts the annual Oscars. While famously affluent, hotel prices are not exorbitant. The surrounding lodging environment is mature and safe, offering everything from convenient hotels to ultra-luxurious properties.
+
+Signature Hotel: The Beverly Hills Hotel
+This property with its romantic charm has been called the Pink Palace by Californians. If you're a social media enthusiast, you've surely seen its viral photos. The entire hotel is surrounded by 12 acres of lush greenery, striped lounge chairs, a blue pool, a romantic café, and palm trees cascading along the exterior walls. Every detail comes together perfectly. This should be considered the original influencer hotel; Marilyn Monroe once stayed here for three months consecutively. Beyond its stunning appearance, the service is equally impressive. Luxury car pickup with dedicated drivers is provided within a three-mile radius, creating scenes reminiscent of American blockbusters—truly cool and unparalleled.
+
+Koreatown
+Introduction: Located in central Los Angeles, there are fewer attractions but hotel prices are more affordable. Beverly Hills and Santa Monica are not far to the west, downtown is nearby to the east, and Hollywood is within reach to the north—all at similar distances, making it ideal for tourists who drive. Additionally, Koreatown offers many dining options that stay open very late.
+
+Featured Hotels: The LINE Hotel
+A trendy industrial-style hotel designed by Korean-American designers, featuring industrial minimalist design. The cafe within the hotel is also very famous. Convenient location with an elegant atmosphere; a subway station right at the entrance makes it easy to get anywhere.
+
+Santa Monica
+Introduction: This is the most popular beach area locally, perfect for tourists who want to enjoy vacation and seaside life.
+
+Featured Hotels: Shore Hotel
+Excellent location with Santa Monica Beach directly opposite the main entrance, close to Pacific Park. Restaurants line both sides of the property, shopping centers nearby—extremely convenient. Every room features a private balcony, and oceanfront rooms offer breathtaking views across the vast Pacific Ocean.
+
+Local Food Recommendations
+American Fast Food: In-N-Out Burger
+In-N-Out Burger is the most popular burger chain on the West Coast, serving fresh unfrozen beef with a simple menu of three classic burgers. Beyond their standard offerings, they accommodate any flavor preferences through secret menu items, including healthy lettuce-wrapped options. Their fries and milkshakes are signature dishes that draw customers consistently.
+Shake Shack
+If the West has In-N-Out Burger, then the East has Shake Shack. Some say that the Statue of Liberty, Empire State Building, and Shake Shack burgers are collectively known as New York's three iconic landmarks, which sufficiently shows its status and importance. You can also experience this New York specialty burger shop in Los Angeles. Recommended items include burgers, shakes, and fries - all highly worth trying.
+
+Chick-Fil-A
+This fast food chain is not as famous domestically (in China) as the previous two, but it's considered #1 in American hearts and minds, with revenue even surpassing McDonald's. It's a burger shop that only sells chicken products. If you love fried chicken burgers, you absolutely cannot miss this! Consistently ranked #1 for 2 consecutive years in Fast Restaurant magazine's annual best American fast food poll.
+
+Seafood Restaurants
+The Boiling Crab
+A California specialty restaurant to definitely try, a crab-focused seafood chain with affordable prices and fresh ingredients - don't miss out.
+Address: 
+
+Bubba Gump Shrimp
+Opened after the movie "Forrest Gump" was released, located on Santa Monica Beach. Primarily a shrimp-based seafood restaurant featuring local specialties - very worth trying.
+Address: 301 Santa Monica Pier Building 9, Santa Monica, CA 90401
+Korean Restaurant
+Sun Nong Dan
+A legendary beef hot pot restaurant open 24 hours a day, year-round; you'll likely need to queue during most times. Their signature dish is the beef rib soup - truly tender meat with fresh broth that leaves you wanting more.
+
+Address: 3470 W 6th St #7, Los Angeles, CA 90020
+BCD Tofu House
+Los Angeles offers not only beef hot pot but also authentic tofu hot pot with genuine flavors. This chain restaurant has most locations open 24 hours a day, year-round. They serve food quickly and maintain unique procedures and standards.
+
+Address: 
+Gang Dong Bak (Korean BBQ by Kang Ho-dong)
+This is a traditional Korean BBQ chain founded by the famous South Korean variety show host Kang Ho-dong. With nearly 100 branches worldwide, it offers authentic flavors well worth trying, though expect to queue during meal times.
+
+Address: 
+Japanese Restaurant
+Men Oh
+This ramen shop known as "Men Wang" has an interesting background - it's a branch of a famous local ramen restaurant in Tokushima, Japan. Located in Little Tokyo with its high concentration of Japanese people, the portions are generous and prices affordable.
+Address: 456 E 2nd St, Los Angeles, CA 90012
+Honda - Ya Izakaya
+One of the top-rated Japanese izakayas in Little Tokyo, offering a wide variety of delicious Japanese yakitori skewers with excellent flavor. Also features specialty dishes perfect for pairing with drinks and various Japanese cuisine options - plenty to choose from.
+
+Address: 333 S Alameda St, Ste 314, Los Angeles, CA 90013
+Shopping Recommendations
+Rodeo Drive - Beverly Hills
+Known as one of the "World's Top 10 Shopping Paradises," featuring exquisite jewelry and designer apparel from renowned international artisans. The luxurious storefronts resemble art galleries, earning it the title of the world's most expensive shopping avenue. It is said that all top 50 global brands are available here, along with high-end stores owned and operated by celebrities themselves - hence its reputation as a "celebrity wardrobe." A must-visit when coming to Los Angeles.
+
+Third Street - Santa Monica
+Located along the Pacific coastline near Santa Monica Beach, this outdoor shopping promenade features a complete range of fashion brands. With over 80 restaurants, supermarkets, bookstores, coffee shops, and digital product stores gathered here, catering to both luxury and mainstream tastes.
+Only 5 minutes walk from the beach - shopping, dining, watching the ocean, perfect for spending a whole day over the weekend.
+
+Melrose Avenue
+This is LA's street for trendy brands, also a gathering place for social media influencers photo walls. The entire avenue stretches about 10 kilometers, with large, exaggerated graffiti everywhere full of symbols representing American freedom and wildness. For fashion-seeking young people, Melrose Avenue is an absolute must-visit trend hub.
+
+Desert Hills Outlets
+LA's largest outlet mall, also California's largest, featuring 180 designer specialty stores. Generous discounts, extensive brand selection - all the major brands you can think of are here. Known as "a shopping paradise in the desert."
+
+Conclusion
+Los Angeles is a city where visitors rarely want to leave, its unique culture and charm drawing countless people back time and again. If you have more time, I recommend staying longer to experience authentic California style and the artistic "City of Angels!"</div>
+          </article>
+        
+      </section>
+    </main>
+  </body>
+</html>

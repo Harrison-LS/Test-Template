@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A 3-minute short film takes you on a quick food tour around San Francisco~" />
+    <title>San Francisco 48-Hour Guide: A Food Map Known by Locals</title>
+    <style>
+      :root {
+        --paper: #f5f1eb;
+        --ink: #163d36;
+        --body: #3f3a34;
+        --muted: #8a8379;
+        --line: #ddd5ca;
+        --accent: #d9782f;
+        --white: #fffaf4;
+        --shadow: 0 22px 70px rgba(28, 25, 20, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        line-height: 1.72;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .hero {
+        min-height: clamp(330px, 48vw, 560px);
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        padding: clamp(28px, 7vw, 70px) clamp(24px, 8vw, 76px);
+        background: #28463f;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.12)),
+          url("https://p1-q.mafengwo.net/s11/M00/E1/A3/wKgBEFtEHbeAWcuaAAI9JWgGBoQ48.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F90");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .heroInner {
+        position: relative;
+        width: min(900px, 100%);
+        color: #ffffff;
+      }
+
+      .heroLocation {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 24px;
+        color: rgba(255, 255, 255, 0.78);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .heroLocation svg {
+        width: 17px;
+        height: 17px;
+        color: #f0a45f;
+      }
+
+      h1 {
+        max-width: 880px;
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(30px, 4.8vw, 54px);
+        font-weight: 900;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .brief {
+        width: min(760px, 100%);
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 18px;
+        color: #5a5148;
+        font-size: clamp(17px, 1.9vw, 20px);
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.58;
+      }
+
+      .articleWrap {
+        width: min(900px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: clamp(42px, 6vw, 68px) 0 72px;
+      }
+
+      .content {
+        width: min(760px, 100%);
+        color: var(--body);
+        font-size: clamp(16px, 1.8vw, 18px);
+        line-height: 1.5;
+      }
+
+      .content p {
+        margin: 0 0 0.5em;
+      }
+
+      .content h2,
+      .content h3,
+      .content h4 {
+        margin: 46px 0 18px;
+        color: var(--ink);
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+
+      .content h2 {
+        font-size: clamp(28px, 4vw, 38px);
+      }
+
+      .content h3 {
+        font-size: clamp(23px, 3vw, 30px);
+      }
+
+      .content ul,
+      .content ol {
+        margin: 0 0 30px;
+        padding-left: 28px;
+      }
+
+      .content li {
+        margin: 8px 0;
+      }
+
+      .content blockquote {
+        margin: 34px 0;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 20px;
+        color: #5a5148;
+        font-style: italic;
+      }
+
+      .content img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 42px 0 12px;
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+      }
+
+      .content figure {
+        margin: 42px 0;
+      }
+
+      .content figure img {
+        margin: 0 0 12px;
+      }
+
+      .content figcaption {
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .backLink {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 46px;
+        border-top: 1px solid var(--line);
+        padding-top: 28px;
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.18em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .backLink:hover {
+        color: var(--accent);
+      }
+
+      @media (max-width: 720px) {
+        .hero {
+          min-height: 420px;
+          padding: 30px 24px;
+        }
+
+        .articleWrap {
+          width: min(100% - 28px, 900px);
+          padding-bottom: 48px;
+        }
+
+        .content {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="heroInner">
+        <p class="heroLocation">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+            />
+          </svg>
+          <span>Los Angeles</span>
+        </p>
+        <h1>San Francisco 48-Hour Guide: A Food Map Known by Locals</h1>
+      </div>
+    </header>
+
+    <main class="articleWrap">
+      
+      <p class="brief">A 3-minute short film takes you on a quick food tour around San Francisco~</p>
+      
+
+      <article class="content">
+        
+          <p>2006, on my first visit to San Francisco, I fell in love with The Golden City that has both sunshine and fog; since then I've come every year for a few weeks to try out the local restaurants; 2016, I moved to San Francisco and worked at Uber; today, I'm sharing my private "Weekend Food Tour List" through short videos. Next time you visit San Francisco, why not take advantage of good weather and embark on a delicious 48-hour exploration~</p><p><br></p><p>                                        A 3-minute short film takes you to quickly eat your way through San Francisco~</p><p><br></p><p>                    Donuts + coffee is a classic American breakfast pairing. Originally simple donuts, with unique and particular flavors, become a microcosm of American middle-class life. Dynamo means an energetic person; the shop lives up to its name - this small shop is the engine for nearby office workers. Sugar-filled handmade donuts paired with rich coffee = an energized morning.</p><p><br></p><p>                                            A $1 donut meant for dogs</p><p><br></p><p>                    Classic flavors</p><p>Bacon Maple Apple flavor</p><p>Contains apple-fried dough rings, paired with crispy bacon and delicate maple syrup. After finishing, be sure to go on a brisk walk to burn off those calories.</p>
+Spiced Chocolate is also worth trying, the spicy chocolate has a rich taste and lingering aftertaste.</p><p><br></p><p>Dynamo (Closed Mondays)</p><p>📍2760 24th St</p><p>San Francisco, CA 94110</p><p>415- 920-1978</p><p>📍110 Yacht Road</p><p>San Francisco, CA 94123</p><p>415- 920-1978</p><p><br></p><p>Dynamo Donut & Coffee Kiosk</p><p><br></p><p>If you have limited time in San Francisco but want to experience a variety of culinary delights, Ferry Building is an excellent choice. Many popular shops have branches here. My favorite is the mushroom and vegetable flavored Empanada (South American pastry).</p><p><br></p><p>Frog Hollow Farm sources all ingredients from its own organic farm, and all jams and toppings are homemade.</p><p><br></p><p>📍1 Ferry Building #46</p><p>San Francisco, CA 94111</p><p>415-445-0990</p><p><br></p><p>Ferry Building Marketplace</p><p>Ambarcadro</p><p>Fax: 415-591-0951</p><p>Email: ***</p><p>Website: ***</p><p>This market, spanning 65,000 square feet, is located within a central plaza. It's a unique marketplace that brings together agricultural products from the Bay Area and famous specialty food vendors.</p>
+</p><p>Open every day. High-quality restaurants and shops form a complete feast of delicacies.</p><p><br></p><p>Every day at noon, office workers at Ferry Building line up to buy Vietnamese rice rolls and Banh Mi sandwiches.</p><p><br></p><p>Out the Door is a sister restaurant to The Slanted Door, California's first famous Vietnamese restaurant. Its cuisine is more casual. Both restaurants are located at Ferry Building, with sunshine, sea water, and the bridge right outside - visually delightful food.</p><p><br></p><p>The Slanted Door means "slanted door," because the designer created a unique slanting line. And Out the Door simply means "outside the door." Since it serves Vietnamese street food, that's exactly what it's called - got it?</p><p><br></p><p>Isn't a $3 bun and porridge a standard Chinese breakfast meal?</p><p><br></p><p>Out the Door</p><p>📍2232 Bush St</p><p>San Francisco, CA 94115</p><p>415-923-9575</p><p>📍1 Ferry Building</p><p>San Francisco, CA 94111</p><p>415-321-3740</p><p><br></p><p>Out the Door</p><p><br></p><p>Humphry Slocombe's name is somewhat tricky to pronounce, derived from the main characters' names in the British comedy "Are You Being Served?"
+There are shops at both Ferry Building by the waterfront and Mission, each matching their prestigious names in craftsmanship. <p><br></p>
+<p>Rated as one of America's top five ice cream shops, they're soon opening an ice cream truck.</p><p><br></p>
+<p>Instagram:@humphryslocombe</p><p><br></p>
+<p>Classic Flavors</p>
+<p>secret breakfast</p>
+<p>Secret Breakfast, contains Bourbon whiskey.</p>
+<p>blue bottle vietnamese coffee</p>
+<p>Blue Bottle Vietnamese Coffee, refreshing and invigorating.</p>
+<p><br></p>
+<p>Humphry Slocombe</p>
+<p>📍2790A Harrison St</p>
+<p>San Francisco, CA 94110</p>
+<p>415-550-6971</p>
+<p>📍1 Ferry Building</p>
+<p>San Francisco, CA 94111</p>
+<p>415-550-6971</p>
+<p><br></p>
+<p>Humphry Slocombe Ice Cream</p>
+<p><br></p>
+<p>Bi-Rite is a small grocery store with 70 years of history.</p>
+Most people know Bi-Rite for their ice cream. Bi-Rite Creamery has been named one of America's best ice cream shops by numerous major lists multiple times. The shop is small in size, but its rich, creamy ice cream attracts countless people who queue up daily to taste it. Beyond the ice cream, every item in the store exudes a passion for life and a pursuit of quality.</p><p><br></p><p>                     Bi-Rite Market</p><p>📍550 Divisadero St</p><p>San Francisco, CA 94117</p><p>415-551-7900</p><p>📍3639 18th St</p><p>San Francisco, CA 94110</p><p>415-241-9760</p><p><br></p><p>                        Bi-Rite Creamery</p><p><br></p><p>                    Oboro tofu is Eiji's signature dish. Unlike regular ready-made tofu, it arrives in a whole pot of tofu and soy milk, paired with an assortment plate containing minced ginger, perilla leaves, chopped scallions, shredded katsuobushi (bonito flakes), sesame seeds, grated pink radish, and soy sauce.</p>
+<p>When tasting cloud tofu, do not rush to add ingredients. First, try the original flavor of the tender and smooth tofu to experience the rich bean fragrance.</p><p><br></p><p>                    Besides the signature cloud tofu, Eiji's soba noodles (soba) and mochi are also excellent. The handmade mochi has a rough exterior but surprises inside, with an extremely thin skin that melts in your mouth. Paired with juicy strawberries, it's fresh and natural.</p><p><br></p><p>                     Eiji (Closed on Mondays)</p><p>📍317 Sanchez St</p><p>San Francisco, CA 94114</p><p>415-558-8149</p><p><br></p><p>                        Eiji</p><p><br></p><p>                    Blue Bottle Coffee from Oakland can be considered one of the pioneers of third-wave independent coffee. </p><p><br></p><p>                    This Blue Bottle at the corner deep inside Mint Plaza is clean and minimalist, creating a striking contrast with the surrounding limestone buildings. At first glance, an unassuming Blue Bottle sign catches your eye—square-shaped with blue trim. It's understated yet not subtle; those who understand can tell by quickly scanning the coffee machines on the counter, siphon equipment, stylishly dressed baristas, and the long queue at the entrance that this shop holds its weight.</p>
+</p><p><br></p><p>                    Classic Flavors</p><p>siphon brew siphon coffee</p><p>New Orleans iced coffee New Orleans Iced Coffee</p><p>cold brew ice drip coffee</p><p><br></p><p>Blue Bottle Coffee</p><p>📍66 Mint Plaza</p><p>(at Jessie St)</p><p>San Francisco, CA 94103</p><p><br></p><p>                        Blue Bottle Coffee (Mint Plaza)</p><p>                        This coffee shop uses handmade equipment to craft coffee. Their most famous offering is the siphon-style coffee that's typically only available in Tokyo. Their morel water-poached eggs and European-style sandwiches are also highly loved.</p><p><br></p><p>                    Greek gyros is actually a wrap, using Pita bread rolled with slices/skewers of grilled meat, tomato, onion, fries, and yogurt-cucumber sauce. It's also convenient to take away~</p><p><br></p><p>                     Soma StrEat Food Park</p><p>📍428 11th St</p><p>San Francisco, CA 94103</p><p><br></p><p>                        SoMa Streat Food Park</p><p><br></p><p>                    Mama Ji's is a Chinese home-style restaurant outside Chinatown. The owner lady's hometown is in Sichuan, and most of their signature dishes have traditional Sichuan flavors. The owner is from Europe and enjoys craft beer.
+They've blended their respective cultures into this Chinese restaurant, so you'll see pairings like Sichuan cuisine + Austrian craft beer.</p><p><br></p><p>                     Mama Ji&#39;s</p><p>📍4416 18th Street St</p><p>San Francisco, CA 94114</p><p>415-626-4416</p><p><br></p><p>                        Mama Ji&#39;s</p><p><br></p><p>                    Sightglass Coffee is a cafe invested in by Twitter's founder. With its convenient location plus a design aesthetic that flows from inside to outside, this has become a favorite coffee shop among Airbnb and Pinterest employees.</p><p><br></p><p>The summer&#39;s most popular item is undoubtedly affogato: A piece of soft vanilla or chocolate ice cream paired with espresso—the melting sweetness gives way to a hint of tart coffee bitterness. Cold mixed with warmth, indescribably wonderful.</p><p><br></p><p>                                            Hand-drawn cup depicting the espresso-making process</p><p><br></p><p>                                            Vanilla affogato</p><p><br></p><p>                    Sightglass Coffee</p><p>📍270 7th St</p><p>(btwn Howard &amp;
+Folsom St.)</p><p>San Francisco, CA 94103</p><p><br></p><p>                        Sightglass Coffee</p><p><br></p><p>                    Namu Gaji is a modern Korean restaurant where the owners come from three different fields - chef, engineer, and musician. The Osaka-style okonomiyaki tastes good too, with bonito flakes and seaweed topped with mayonnaise, crispy and fragrant.</p><p><br></p><p>                     Namu Gaji (Closed Mondays)</p><p>📍499 Dolores St</p><p>San Francisco, CA 94110</p><p>415-431-6268</p><p><br></p><p>                        Namu Gaji</p><p><br></p><p>                    Traditional Italian pizza with classic flavors like Margherita (tomato, mozzarella cheese and basil), 4 Formaggi (four cheeses) etc., yet it has won over many customers because of the thin, crispy but chewy crust.</p>
+<p>Another major feature is that there's a sunny-side-up egg with a runny yolk in the center of the pizza.</p><p><br></p><p>Pizzería Delfina</p><p>📍3611 18th St</p><p>(btwn Guerrero St & Oakwood St)</p><p>San Francisco, CA 94110</p><p><br></p><p>Pizzeria Delfina - San Francisco</p><p><br></p><p>BY</p><p>Creative ideas: Apple Sister, Fan</p><p>Photography & Editing: Fan</p><p>Special thanks: Second Brother</p><p>Layout: Xiao Peng, Chan</p><p>This article is original; please contact for permission if reusing</p><p>WeChat Official Account: AppleSister_</p><p>Zhihu: Zheng Chenyu</p><p>Weibo: @Apple Sister in the USA</p>
+        
+
+        <a class="backLink" href="list-1.html">← Back to Los Angeles</a>
+      </article>
+    </main>
+  </body>
+</html>

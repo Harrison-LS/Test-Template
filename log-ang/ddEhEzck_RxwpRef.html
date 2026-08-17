@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <title>Los Angeles Shopping Guide: Offline & Online, Luxury Markets — All in One</title>
+    <style>
+      :root {
+        --paper: #f5f1eb;
+        --ink: #163d36;
+        --body: #3f3a34;
+        --muted: #8a8379;
+        --line: #ddd5ca;
+        --accent: #d9782f;
+        --white: #fffaf4;
+        --shadow: 0 22px 70px rgba(28, 25, 20, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        line-height: 1.72;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .hero {
+        min-height: clamp(330px, 48vw, 560px);
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        padding: clamp(28px, 7vw, 70px) clamp(24px, 8vw, 76px);
+        background: #28463f;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.12)),
+          url("");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .heroInner {
+        position: relative;
+        width: min(900px, 100%);
+        color: #ffffff;
+      }
+
+      .heroLocation {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 24px;
+        color: rgba(255, 255, 255, 0.78);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .heroLocation svg {
+        width: 17px;
+        height: 17px;
+        color: #f0a45f;
+      }
+
+      h1 {
+        max-width: 880px;
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(30px, 4.8vw, 54px);
+        font-weight: 900;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .brief {
+        width: min(760px, 100%);
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 18px;
+        color: #5a5148;
+        font-size: clamp(17px, 1.9vw, 20px);
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.58;
+      }
+
+      .articleWrap {
+        width: min(900px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: clamp(42px, 6vw, 68px) 0 72px;
+      }
+
+      .content {
+        width: min(760px, 100%);
+        color: var(--body);
+        font-size: clamp(16px, 1.8vw, 18px);
+        line-height: 1.5;
+      }
+
+      .content p {
+        margin: 0 0 12px;
+      }
+
+      .content h2,
+      .content h3,
+      .content h4 {
+        margin: 46px 0 18px;
+        color: var(--ink);
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+
+      .content h2 {
+        font-size: clamp(28px, 4vw, 38px);
+      }
+
+      .content h3 {
+        font-size: clamp(23px, 3vw, 30px);
+      }
+
+      .content ul,
+      .content ol {
+        margin: 0 0 30px;
+        padding-left: 28px;
+      }
+
+      .content li {
+        margin: 8px 0;
+      }
+
+      .content blockquote {
+        margin: 34px 0;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 20px;
+        color: #5a5148;
+        font-style: italic;
+      }
+
+      .content img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 42px 0 12px;
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+      }
+
+      .content figure {
+        margin: 42px 0;
+      }
+
+      .content figure img {
+        margin: 0 0 12px;
+      }
+
+      .content figcaption {
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .backLink {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 46px;
+        border-top: 1px solid var(--line);
+        padding-top: 28px;
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.18em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .backLink:hover {
+        color: var(--accent);
+      }
+
+      @media (max-width: 720px) {
+        .hero {
+          min-height: 420px;
+          padding: 30px 24px;
+        }
+
+        .articleWrap {
+          width: min(100% - 28px, 900px);
+          padding-bottom: 48px;
+        }
+
+        .content {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="heroInner">
+        <p class="heroLocation">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+            />
+          </svg>
+          <span>Los Angeles</span>
+        </p>
+        <h1>Los Angeles Shopping Guide: Offline & Online, Luxury Markets — All in One</h1>
+      </div>
+    </header>
+
+    <main class="articleWrap">
+      
+
+      <article class="content">
+        
+          <p>Taxes: Taxes vary across different US states. Places like California and NYC have higher taxes, though there are also tax-free states.</p><p><br></p><p>Shipping: Most shopping websites offer free shipping when you reach a minimum purchase amount or during promotional events. Otherwise, shipping fees differ based on delivery speed. For example, Saks Fifth Avenue charges starting at $7.99 for shipping. Amazon Prime members can enjoy fast 2-3 day delivery (standard is 5-7 days), but this benefit is free only for one month; afterward it requires payment unless you cancel the membership in advance if you don&#39;t want to pay.</p><p><br></p><p>Returns: Returns are very convenient in the US, as long as they meet the return policy requirements. Many websites even offer free return shipping.</p><p><br></p><p>Discounts: In my opinion, discounts come and go, and what&#39;s appealing depends on personal preference. Besides well-known major sales like Black Friday and Christmas, smaller discounts typically appear at season endings or during holidays. To be honest, shopping malls are N times more crowded during discount seasons than usual, significantly reducing the shopping experience.</p><p><br></p><p>On Labor Day, I visited Ten Thousand Villages with crowds about 3-5 times larger than normal. Many stores required queuing to enter, and tasks like trying on clothes or checking out were exhausting enough just thinking about them. Beyond queuing, there was still more queuing. In summary: if you have good stamina and endurance, and happen to catch a discount season, go ahead and shop enthusiastically. If you prefer not to compromise your shopping experience, it&#39;s better to buy items on regular days. During annual new collection seasons like March and September, you can even experience products exclusive to certain markets early on. For instance, this time TF (Tom Ford), YSL, Dior, Nars, etc.&#39;s new makeup collections launched in Europe and the US earlier than in China.</p><p>Shopping Mall Categories</p><p>Luxury Consumer Goods: Luxury shops on Rodeo Drive, Bloomingdales, Nordstrom, Neiman Marcus...</p><p>Discount Consumer Goods: Various outlet malls</p><p>Low-price Stores: TJ Maxx, Target</p><p>Supermarkets: Costco, Ralphs</p><p>Online Shopping: Amazon US, Shopbop, Revolve...</p><p>Of course, the above is not all-inclusive. Feel free to add more suggestions.</p><p><br></p><p>The Grove</p><p>Address: 189 The Grove Dr, Los Angeles, CA 90036</p><p>Parking: Paid parking lot</p><p>The Grove is an open-air shopping center and is very popular in LA. It&#39;s said that many celebrities and influencers frequently visit here. After visiting, you&#39;ll definitely feel it was worth the trip. Here you can find Nordstrom, Barney&#39;s New York, as well as brand stores such as Topshop, Zara, Coach, MK, etc. When tired, you can go to the adjacent Farmer&#39;s Market, sit under a sun umbrella eating food and enjoying the gentle breeze - very quickly you&#39;ll be refreshed. Inside Farmer&#39;s Market there is also a boutique supermarket with slightly higher prices. If that still isn&#39;t enough, opposite there is another Whole Foods Market, continue eating away!</p><p>Famous Barney&#39;s New York department store has a small storefront but houses many brands, mainly luxury ones.</p><p><br></p><p>Grove Shopping Center</p><p>· Los Angeles&#39; most popular shopping center with an open plaza design featuring courtyards, water features, and vintage streetcars that recreate 1920s Los Angeles.</p><p>· Home to numerous retail stores and restaurants including major fashion and accessory brands like Barneys New York, Johnny Was, Michael Kors, Theodore, etc.</p><p>· Besides high-end luxury brands, it also offers accessible trendy labels such as fast-fashion ZARA and TOPSHOP beloved by young trendsetters.</p><p>· Even the most demanding shoppers can find exactly what they want; when tired from shopping, head to restaurants for a hearty meal - both shopping and dining fully satisfied.</p><p><br></p><p>South Coast Plaza</p><p>Website: ***</p><p>Address: 3333 Bristol Street Costa Mesa, CA, 92626</p><p>Parking: Free parking lot</p><p>Located near Irvine, composed of Bloomingdale&#39;s, Macy&#39;s, Nordstrom, and others; since they&#39;re interconnected, shopping here is very convenient.</p><p>The brands inside are also very diverse, including luxury brands, mid-range clothing brands, shoes, and cosmetics. Personally, I think it is suitable for buying cosmetics, clothes, and shoes here. Of course, you can check the discounts on dealmoon before purchasing. If you see something wonderful that makes you unable to walk away, then go ahead and start shopping freely!</p><p><br></p><p>The Gadiva store at South Coast Plaza is so tempting that even looking through the window makes your mouth water.</p><p><br></p><p>South Coast Plaza</p><p>- A premier global shopping destination, featuring over 250 fashion brands, independent designer boutiques, and highly acclaimed top-tier restaurants.</p><p>- Featured brands include luxury labels such as Cartier, Chanel, Dior, D&amp;G, Hermès, etc., as well as American brands like Coach, J. Crew, Michael Kors, and Tory Burch.</p><p>- Home to over 30 restaurants and cafes, including globally famous chain Din Tai Fung, Marché Moderne selected as the best French restaurant, AnQi for Asian cuisine, etc. Shopping and dining are both enjoyable.</p><p>- Show your passport at the service desk to receive a South Coast Plaza pass, enjoying discounts in stores and restaurants.</p><p><br></p><p>Rodeo Drive</p><p>Official website: ***</p><p>Address: 268 Via Rodeo Dr Beverly Hills, CA 90210</p><p>Parking: Paid parking lot (approximately $5 for one hour) or metered street parking</p><p><br></p><p>Rodeo Drive is a must-visit destination for most tourists. The tourist sightseeing buses frequently driving on the not very spacious streets serve as the best proof of its popularity.</p><p>Of course, this is also where you can often see luxury cars and where wealthy people shop. To adapt to the situation, many luxury stores have staff members who speak Chinese. We accompanied our friends in and out of several shops, with absolutely no language barriers.</p><p><br></p><p>Rodeo Drive</p><p>· Often called the &quot;celebrity wardrobe,&quot; Rodeo Drive is Los Angeles&#39; premier shopping street and one of the favorite shopping destinations for celebrities.</p><p>· Here you can find the latest branded products from around the world, such as Giorgio Armani, Chanel, Dolce &amp; Gabbana, and many other international luxury brands.</p><p>· Each luxury brand has its own exclusive villa with unique design styles, creating a distinctive landscape along Rodeo Drive.</p><p>· Besides shops, there are also high-end restaurants, bars, galleries, and other venues, allowing you to enjoy both great food and wonderful sights while shopping.</p><p><br></p><p>Hollywood &amp; Highland Center</p><p>Website: ***</p><p>Address: 6801 Hollywood Boulevard Los Angeles, CA 90028-6145</p><p>Parking: Paid parking garage or metered parking</p><p>Near the Hollywood Walk of Fame and connected to the Dolby Theatre, there are not many shops. When you get tired from shopping, you can sit at an outdoor restaurant, eat food while watching pedestrians on the sidewalk. On a covered walkway on one side, you can see the HOLLYWOOD sign from afar. Even if you don&#39;t buy anything, it is still worth visiting.</p><p>Standing at one corner of the mall&#39;s terrace, you can enjoy a panoramic view of LA&#39;s beautiful scenery. Last time I visited in November, but Christmas atmosphere was already quite strong everywhere, and back then I was still very thin. Desert Hills Outlet Mall Official website: *** Address: 48400 Seminole Drive #300, Cabazon, CA Parking: Free parking lot This outlet mall is quite large with a wide range of brands, so many people come here. Designer stores mostly carry seasonal items, requiring careful shopping to find good deals. Personally, I think stores like Sandro, Maje, and SW are decent choices where you can get discounted items without styles that are too dated. Coach, MK, and TB are practically白菜价 (extremely cheap), as many people leave with five or six bags each. I personally saw several Chinese women buying N handbags in one go at a Coach store, saying such low prices make them easy to gift back home. So if you dont have specific requirements on styles, its recommended to shop here indeed very affordable. Each store has staff who speak Chinese, and UnionPay cards are also accepted for payment. When we visited there was even a promotion offering $25 in bonus cards for every $500 spent the same day. Ontario Mills Outlets</p><p>Website: ***</p><p>Address: 1 Mills Cir, Ontario, CA</p><p>Parking: Free parking</p><p><br></p><p>Located conveniently nearby, I frequently visit here. The entire outlet mall is indoors, making it quite pleasant to browse through, though it does get crowded on weekends. Focused mainly on American brands, it&#39;s ideal for purchasing sneakers and items from Coach and MK. The Victoria&#39;s Secret store stands out with its impressive size compared to other outlets.</p><p><br></p><p>Overall, whether visiting any outlet mall, it suits people without specific style requirements who want discounted quality pieces. Success requires either being quick-eyed or exploring department stores instead (though those locations typically offer fewer discount opportunities).</p><p><br></p><p>Discount Retailers: TJ Maxx, Target</p><p>Website: ***</p><p>Website: ***</p><p>Parking: Free parking</p><p><br></p><p>TJ Maxx operates as a comprehensive shopping destination with extensive product ranges - apparel, accessories, footwear, home goods, beauty products, and food items. Despite its compact footprint, shoppers can discover discounted brands including MK, CK, and KS at remarkably low prices. As previously noted, CK is famously cheap in America, which proves accurate here. Items are very affordable, typically a few dollars to around ten or fifteen dollars. Careful browsing reveals many branded items at bargain prices.</p><p><br></p><p>Target mirrors TJ Maxx&#39;s appeal but distinguishes itself through enhanced cosmetic selections, diverse food options, and an integrated CVS pharmacy presence within the store environment.</p><p>Overall, if you spend a significant amount of time in the US, it is worth occasionally browsing these chain stores; after all, you can find little items and it is rewarding. Similar ones include Ross, Nordstrom Rack.</p><p><br></p><p>Supermarkets: Costco, Ralphs</p><p>Parking: Free parking</p><p><br></p><p>Costco is a large chain supermarket in America. The layout inside resembles IKEA&#39;s pickup hall on the first floor. You need to get a membership card before shopping; whether it is home goods, food, or daily necessities, everything is sold in bulk packages at very cheap prices. Therefore many locals drive here to purchase household consumables and groceries.</p><p><br></p><p>Ralphs is different. It belongs to smaller American chain supermarkets, but the selection inside is comprehensive. You can find vegetables, fruits, meats, snacks, health supplements, daily necessities, and more. If you plan on self-driving, why not buy some snacks at the supermarket for your trip - it makes journeys much more interesting. Especially here, Häagen-Dazs ice cream sells for $7 per two large buckets; thinking about it makes my mouth water.</p><p><br></p><p>Online Shopping: Amazon, Shopbop, Revolve...</p><p>The Dealmoon mentioned earlier displays promotions in a list format. If you find it somewhat complicated to look through, you can shop directly from various websites.</p><p>***: No need to elaborate further—everything is available; you can find all kinds of items.</p><p>***、***: Primarily American domestic brands</p><p>***: Discounted big-name brands</p><p>Official websites of major shopping malls: You can check promotional information at any time. For example, some &quot;buy X get Y free&quot; activities might be missed if you&#39;re rushing around, so you could first learn whether your favorite brands have promotions.</p><p>Cosmetics: La Mer, Lancôme, Estée Lauder...</p><p>Actually, buying cosmetics in the US, especially high-end brands, will be cheaper than domestically for two reasons. First, some brands aren&#39;t available in China and need to be purchased through personal shoppers or shipped overseas; buying in the US at least saves on shipping costs. Second, there&#39;s the tariff issue. As for comparing which country—US or Europe—is cheaper, you need to put more effort into extensive comparison shopping.</p><p>Premium brands like Chantecaille, Natura Bisse, Omorovicza, Revive, Erno Laszlo, and Valmont that are difficult to find domestically can all be purchased here. Individual preferences for skincare and cosmetics vary widely; if focusing purely on price, purchasing premium brands like La Mer represents a smart investment.</p><p>For Clinique and Kiehl&#39;s, personal research shows the Beijing Capital Duty-Free shop offers better pricing. Similar findings apply to lipsticks and other cosmetics. When specific shades or packaging aren&#39;t critical, buying at the duty-free store provides significant savings.</p><p>Where to buy: Major department stores like Bloomingdale&#39;s, Macy&#39;s, and Nordstrom. Barneys New York, Bergdorf Goodman, and Neiman Marcus are luxury, upscale department stores. For cosmetics, you can find some brands not available at other malls - for example, Zelens and Aesop at Barneys New York. If time permits, you can purchase from various brand official websites or Sephora and have them shipped to your accommodation. There are discounts, and the product selection is more complete.</p>
+        
+
+        <a class="backLink" href="list-1.html">← Back to Los Angeles</a>
+      </article>
+    </main>
+  </body>
+</html>

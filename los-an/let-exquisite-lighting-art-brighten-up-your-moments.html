@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="The Bay Lights" />
+    <title>Let exquisite lighting art brighten up your moments!</title>
+    <style>
+      :root {
+        --paper: #f5f1eb;
+        --ink: #163d36;
+        --body: #3f3a34;
+        --muted: #8a8379;
+        --line: #ddd5ca;
+        --accent: #d9782f;
+        --white: #fffaf4;
+        --shadow: 0 22px 70px rgba(28, 25, 20, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        line-height: 1.72;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .hero {
+        min-height: clamp(330px, 48vw, 560px);
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        padding: clamp(28px, 7vw, 70px) clamp(24px, 8vw, 76px);
+        background: #28463f;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.12)),
+          url("https://p1-q.mafengwo.net/s15/M00/A0/08/CoUBGV4mls-AcHviAAM0AcJMgEk64.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F90");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .heroInner {
+        position: relative;
+        width: min(900px, 100%);
+        color: #ffffff;
+      }
+
+      .heroLocation {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 24px;
+        color: rgba(255, 255, 255, 0.78);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .heroLocation svg {
+        width: 17px;
+        height: 17px;
+        color: #f0a45f;
+      }
+
+      h1 {
+        max-width: 880px;
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(30px, 4.8vw, 54px);
+        font-weight: 900;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .brief {
+        width: min(760px, 100%);
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 18px;
+        color: #5a5148;
+        font-size: clamp(17px, 1.9vw, 20px);
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.58;
+      }
+
+      .articleWrap {
+        width: min(900px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: clamp(42px, 6vw, 68px) 0 72px;
+      }
+
+      .content {
+        width: min(760px, 100%);
+        color: var(--body);
+        font-size: clamp(16px, 1.8vw, 18px);
+        line-height: 1.5;
+      }
+
+      .content p {
+        margin: 0 0 0.5em;
+      }
+
+      .content h2,
+      .content h3,
+      .content h4 {
+        margin: 46px 0 18px;
+        color: var(--ink);
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+
+      .content h2 {
+        font-size: clamp(28px, 4vw, 38px);
+      }
+
+      .content h3 {
+        font-size: clamp(23px, 3vw, 30px);
+      }
+
+      .content ul,
+      .content ol {
+        margin: 0 0 30px;
+        padding-left: 28px;
+      }
+
+      .content li {
+        margin: 8px 0;
+      }
+
+      .content blockquote {
+        margin: 34px 0;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 20px;
+        color: #5a5148;
+        font-style: italic;
+      }
+
+      .content img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 42px 0 12px;
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+      }
+
+      .content figure {
+        margin: 42px 0;
+      }
+
+      .content figure img {
+        margin: 0 0 12px;
+      }
+
+      .content figcaption {
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .backLink {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 46px;
+        border-top: 1px solid var(--line);
+        padding-top: 28px;
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.18em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .backLink:hover {
+        color: var(--accent);
+      }
+
+      @media (max-width: 720px) {
+        .hero {
+          min-height: 420px;
+          padding: 30px 24px;
+        }
+
+        .articleWrap {
+          width: min(100% - 28px, 900px);
+          padding-bottom: 48px;
+        }
+
+        .content {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="heroInner">
+        <p class="heroLocation">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+            />
+          </svg>
+          <span>Los Angeles</span>
+        </p>
+        <h1>Let exquisite lighting art brighten up your moments!</h1>
+      </div>
+    </header>
+
+    <main class="articleWrap">
+      
+      <p class="brief">The Bay Lights</p>
+      
+
+      <article class="content">
+        
+          <p>As night falls and city lights begin to glow, San Francisco shines brilliantly. Countless extraordinary light art installations illuminate the city, creating unique wonders. As part of the Illuminate SF San Francisco Light Festival, these permanent lighting artworks have become distinctive attractions. Join us on a charming journey exploring interesting neighborhoods to discover captivating light art.</p><p><br></p><p>                                            Source: explorandoportland</p><p><br></p><p>                    You can easily reach these spectacular and eco-conscious light installations via public transportation, and most of them are completely free to visit. From North Beach to Embarcadero or Bayview Yerba Buena and the Golden Gate Bridge area, countless exquisite light artworks await your discovery. Start your journey now!</p><p><br></p><p>                                        The Bay Lights</p><p><br></p><p>                    Address: San Francisco Bay Bridge West Span</p><p><br></p><p>\&quot;</p>
+<span class="p">"The Bay Lights" was designed by artist Leo Villareal, who illuminated the San Francisco Bay Bridge using 25,000 white LED bulbs. These LEDs stretch westward along the bridge, randomly creating unique patterns and designs. This art installation began construction in 2013, taking two years to complete as a gift to the people of California.</span><p><br></p><p class="p">Today, this has become one of San Francisco's must-visit attractions. Whether at dusk or dawn, you can see the bridge shimmering with golden light. Walking along the Embarcadero on the northern side of the bridge, or visiting the Exploratorium museum located at Pier 14, are both excellent locations to find the best angles for photographing this lighting art.</p><p><br></p><p class="p">                                        Image source: coolhunting</p><p><br></p><p class="p">                                        Image source: blotch</p><p><br></p><p class="p">Day for Night</p><p><br></p><p class="p">                    Address: Salesforce Tower</p><p><br></p><p class="p">"Day for Night" is an installation by prolific lighting artist Jim Campbell. This design sits atop the tallest building west of the Mississippi River and stands as a modern miracle in itself.</p>
+</p><p><br></p><p>This installation consists of 11,000 lights and video components, showcasing scenes filmed around San Francisco. Unless it's a foggy night, you can almost see the twinkling "Day for Night" from anywhere in the city—even farther away.</p><p><br></p><p>                                            Source: brandomora21</p><p><br></p><p>                                        Tara Mechani</p><p><br></p><p>                    Address: Patricia's Green</p><p><br></p><p>"Tara Mechani" is a large-scale light art piece designed by Dana Albany, inspired by ancient Buddhist women and combined with female robot characteristics. Notably, 80% of this sculpture is made from recycled materials, and visitors can even walk inside it.</p><p><br></p><p>                                            Source: fittsanfrancisco</p><p><br></p><p>                                            Source: ricardos_sf</p><p><br></p><p>                                        Language of the Birds</p><p><br></p><p>                    Address: Broadway and Columbus Ave.</p><p><br></p><p>The light art "Language of the Birds," created by Brian Goggin and Dorka Keehn, consists of 23 solar-powered "books" suspended above the street, mimicking bird movements as they float in mid-air.</p>
+</p><p><br></p><p>As pedestrians pass under the "Flock" north of Broadway, they can see various words in different languages embedded into the plaza floor, representing American, Italian, and Chinese communities scattered throughout San Francisco—these multicultural communities intertwine here, growing together and prospering.</p><p><br></p><p>                                            Image by: a.n.n.a_marie</p><p><br></p><p>                                            Image by: spandanar</p><p><br></p><p>                                        LOVE OVER RULES</p><p><br></p><p>                    Address: Annie Alley at Mission Street</p><p><br></p><p>"Love over rules" is a large text-based light art installation, Hank Willis Thomas's first permanent public artwork. Although Thomas lives in New York, he maintains close ties to San Francisco's arts and culture scene.</p>
+</p><p><br></p><p>                                            Source image: i.m.awake</p><p><br></p><p>                                            Source image: virginatlantic</p><p><br></p><p>                                        Bayview Rise</p><p><br></p><p>                    Address: Pier 92 (Third Street and Cargo Way)</p><p><br></p><p>"Bayview Rise," created by artists Laura Haddad and Tom Drugan, stands 187 feet tall and projects the stories of Bayview's history and development. Depart from Embarcadero, hop on Muni Line 3, and follow Third Street directly to the heart of Dogpatch.</p><p><br></p><p>When you arrive at Bayview Gateway Park, you can see this artwork located at Pier 92. On your return journey, stop in Dogpatch to explore various art shops, restaurants, bars, craft stores, and more around.</p>
+</p><p><br></p><p>                                            Image source: lranola</p><p><br></p><p>                                            Image source: coy_ibanez</p>
+        
+
+        <a class="backLink" href="list-1.html">← Back to Los Angeles</a>
+      </article>
+    </main>
+  </body>
+</html>

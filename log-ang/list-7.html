@@ -1,0 +1,792 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="City of Angels"
+    />
+    <title>Los Angeles</title>
+    <style>
+      :root {
+        --paper: #f5f1eb;
+        --ink: #163d36;
+        --body: #5d5a54;
+        --muted: #8a8379;
+        --line: #ddd5ca;
+        --accent: #d9782f;
+        --white: #fffaf4;
+        --text-width: 720px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        line-height: 1.7;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .page {
+        width: min(900px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 10px 0 40px;
+      }
+
+      .hero {
+        min-height: clamp(180px, 29vw, 260px);
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        border-radius: 12px;
+        padding: clamp(22px, 4vw, 38px);
+        background: #28463f;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.05) 64%),
+          url("https://p1-q.mafengwo.net/s9/M00/A8/87/wKgBs1eSKJmAJrPTABckyB0Qyd851.jpeg?imageView2%2F2%2Fw%2F680%2Fq%2F90");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .heroTitle {
+        position: relative;
+        display: flex;
+        align-items: baseline;
+        gap: 10px;
+        color: #ffffff;
+      }
+
+      .heroTitle h1 {
+        margin: 0;
+        font-size: clamp(30px, 5vw, 46px);
+        font-weight: 900;
+        line-height: 1;
+        letter-spacing: 0;
+      }
+
+      .heroTitle span {
+        color: rgba(255, 255, 255, 0.64);
+        font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+        font-size: clamp(16px, 2vw, 24px);
+        font-weight: 700;
+      }
+
+      .intro {
+        margin: 34px 0 54px;
+        color: #4f4a43;
+        font-size: clamp(17px, 2vw, 20px);
+        line-height: 1.8;
+      }
+
+      .sectionTitle {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+        gap: 14px;
+        margin: 0 0 44px;
+        color: var(--muted);
+        font-size: 14px;
+        letter-spacing: 0.16em;
+      }
+
+      .sectionTitle::before,
+      .sectionTitle::after {
+        content: "";
+        height: 1px;
+        background: var(--line);
+      }
+
+      .articleList {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .articleItem {
+        display: grid;
+        grid-template-columns: minmax(0, var(--text-width)) 140px;
+        gap: 28px;
+        justify-content: space-between;
+        border-bottom: 1px solid var(--line);
+        padding: 0 0 34px;
+        margin-bottom: 34px;
+      }
+
+      .articleItem:not(.hasImage) {
+        grid-template-columns: minmax(0, var(--text-width));
+        justify-content: start;
+      }
+
+      .articleBody {
+        width: min(100%, var(--text-width));
+        border-left: 2px solid transparent;
+        padding-left: 14px;
+        transform: translateX(0);
+        transition:
+          border-color 160ms ease,
+          transform 180ms ease;
+      }
+
+      .articleItem:hover .articleBody {
+        border-left-color: var(--accent);
+        transform: translateX(8px);
+      }
+
+      .meta {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin: 0 0 10px;
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+      }
+
+      .pin {
+        color: var(--accent);
+      }
+
+      .articleTitle {
+        width: 100%;
+        margin: 0 0 10px;
+        color: var(--ink);
+        font-size: clamp(21px, 2.5vw, 26px);
+        font-weight: 900;
+        line-height: 1.34;
+        letter-spacing: 0;
+      }
+
+      .brief {
+        width: 100%;
+        max-width: none;
+        margin: 0 0 14px;
+        color: var(--body);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        font-size: 16px;
+        line-height: 1.72;
+      }
+
+      .readMore {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        color: var(--accent);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 800;
+      }
+
+      .articleImage {
+        width: 140px;
+        aspect-ratio: 16 / 10;
+        align-self: center;
+        overflow: hidden;
+        border-radius: 9px;
+        background: var(--line);
+      }
+
+      .articleImage img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+      }
+
+      .emptyState {
+        border: 1px dashed var(--line);
+        border-radius: 10px;
+        padding: 42px 20px;
+        color: var(--muted);
+        text-align: center;
+      }
+
+      .pagination {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        margin-top: 12px;
+      }
+
+      .pageLink {
+        min-width: 96px;
+        min-height: 40px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 0 16px;
+        background: var(--white);
+        color: var(--ink);
+        font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+        font-size: 14px;
+        font-weight: 800;
+      }
+
+      .pageLink[aria-disabled="true"] {
+        pointer-events: none;
+        opacity: 0.45;
+      }
+
+      @media (max-width: 720px) {
+        .page {
+          width: min(100% - 24px, 900px);
+          padding-top: 8px;
+        }
+
+        .hero {
+          min-height: 220px;
+        }
+
+        .articleItem,
+        .articleItem.hasImage {
+          grid-template-columns: minmax(0, 1fr);
+          gap: 16px;
+        }
+
+        .articleImage {
+          width: 100%;
+          max-width: 260px;
+          justify-self: start;
+        }
+
+        .sectionTitle {
+          margin-bottom: 30px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <section class="hero">
+        <div class="heroTitle">
+          <h1>Los Angeles</h1>
+        </div>
+      </section>
+
+      
+      <p class="intro">
+        Los Angeles is located on the west coast of the United States, with a city proper population of approximately 3.8 million people, making it the second-largest city in the US (after New York). It has a typical Mediterranean climate with minimal temperature variation throughout the year, rainy winters and dry summers; spring and autumn are best for tourism. The English name is Los Angeles, abbreviated as LA. The official nickname is "City of Angels," while the colloquial term is Sank Village.
+      </p>
+      
+
+      <div class="sectionTitle"></div>
+
+      <section class="articleList" aria-label="article-list">
+        
+        
+        <article class="articleItem">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="eAbFjyyERjNhrp3a.html">6 Major Attractions in Just 4 Hours! New 2019 Guide to Universal Studios Hollywood!</a>
+            </h2>
+
+            
+            <p class="brief">According to incomplete statistics, most tourists traveling to the United States visit Los Angeles, and nearly 99% of those going to Los Angeles will at least once visit Universal Studios. Here you can see that from five- or six-year-old children to adults in their forties and fifties all become somewhat "out of control" with constant screaming. In short, the rides, facilities, and atmosphere here cannot be experienced anywhere else.</p>
+            
+
+          </div>
+
+          
+        </article>
+        
+        
+        <article class="articleItem">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="1n2QsFsCuLtgHTFp.html">When visiting California Disney Land, staying at these 5 hotels is all you need.</a>
+            </h2>
+
+            
+            <p class="brief">Residing in the location of the world's first Disney theme park</p>
+            
+
+          </div>
+
+          
+        </article>
+        
+        
+        <article class="articleItem hasImage">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="bFFTIOlJu0_RdIhz.html">All of Los Angeles' Viral Tourist Attractions in 24 Hours! (Complete Route Guide Inside)</a>
+            </h2>
+
+            
+            <p class="brief">Los Angeles is the second largest city in America after New York, the birthplace of Hollywood, and a</p>
+            
+
+          </div>
+
+          
+          <a class="articleImage" href="bFFTIOlJu0_RdIhz.html" aria-label="All of Los Angeles' Viral Tourist Attractions in 24 Hours! (Complete Route Guide Inside)">
+            <img src="https://p1-q.mafengwo.net/s13/M00/E0/58/wKgEaVxlLnCAF3hJAAHtRq0eB8k99.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F90" alt="All of Los Angeles' Viral Tourist Attractions in 24 Hours! (Complete Route Guide Inside)" />
+          </a>
+          
+        </article>
+        
+        
+        <article class="articleItem">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="EyASpw0pwJsQpBHY.html">Affordable accommodations in Los Angeles</a>
+            </h2>
+
+            
+            <p class="brief">Great-value airport accommodation with unique views of planes taking off and landing~</p>
+            
+
+          </div>
+
+          
+        </article>
+        
+        
+        <article class="articleItem">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="gWhrSdEie5bd2JNR.html">What is worth buying at Los Angeles International Airport?</a>
+            </h2>
+
+            
+            <p class="brief">LAX International Airport has N terminals, but international routes are concentrated at Tom Bradley </p>
+            
+
+          </div>
+
+          
+        </article>
+        
+        
+        <article class="articleItem">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="o7oSKoDzWTg7tWDm.html">Fun | The Ultimate Guide to Exploring Los Angeles' Most Popular Instagrammable Spots</a>
+            </h2>
+
+            
+            <p class="brief">Can walls become internet celebrities? In Los Angeles—a city filled with artists—numerous art walls </p>
+            
+
+          </div>
+
+          
+        </article>
+        
+        
+        <article class="articleItem">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="kH-vKSTgablxc07Z.html">Why Los Angeles as the first stop? All the highlights of Angel City are right here.</a>
+            </h2>
+
+            
+            <p class="brief">For many travelers visiting the United States, Los Angeles is often their first arrival in American </p>
+            
+
+          </div>
+
+          
+        </article>
+        
+        
+        <article class="articleItem">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="rKHbChN6rmflcfI_.html">After multiple self-driving trips across America's Route 66, I've discovered these 15 fun things!</a>
+            </h2>
+
+            
+            <p class="brief">First encountered Route 66 through American TV dramas—a convertible driving through ranches, deserts, plateaus... full of western cowboy charm. Later learning more, I fell in love even more with the unique towns, signs, shops, and shop owners along this route. Neon-lit motels flashing bright lights, ancient gas stations—throughout your journey you'll be bewildered by all kinds of novel surprises!</p>
+            
+
+          </div>
+
+          
+        </article>
+        
+        
+        <article class="articleItem">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="0eMm3jkh5Gf8WGxP.html">Guide to the Global Influencer Wall | Redemption Mountain: From Faith to Fashion</a>
+            </h2>
+
+            
+            <p class="brief">Do you believe there is love in this world? "Yes, I believe very much. I think all people in the world love me, and I hope humanity is filled with love." Redemption Mountain, this "art installation" located in Southern California's desert, has become hugely popular due to its vibrant colors and the story behind it. Come here to feel the power of faith and love, and visit a unique influencer wall.</p>
+            
+
+          </div>
+
+          
+        </article>
+        
+        
+        <article class="articleItem">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="qU-lGbETaPT3ugeq.html">Los Angeles Vibrant Fun Guide #8: New Luxury Experiences in LA</a>
+            </h2>
+
+            
+            <p class="brief">What Luxury Experiences Are Available in Los Angeles? Whether it's checking into a world-class hotel</p>
+            
+
+          </div>
+
+          
+        </article>
+        
+        
+        <article class="articleItem">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="J4f2xaRDfRzOs6D3.html">Complete guide to food, drink, stay and travel in Beverly Hills! Beyond shopping, there's so much more you can do here!</a>
+            </h2>
+
+            
+            <p class="brief">Whether you are visiting Los Angeles for the first time or returning multiple times, a stroll throug</p>
+            
+
+          </div>
+
+          
+        </article>
+        
+        
+        <article class="articleItem">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="R3c5rmzzzpz1HJ1E.html">【Los Angeles】Awaken Your Dreams of LA with 15 Reasons You Must Visit</a>
+            </h2>
+
+            
+            <p class="brief">For those of you who, like me, frequently follow world-famous fashion bloggers on Instagram, you sho</p>
+            
+
+          </div>
+
+          
+        </article>
+        
+        
+        <article class="articleItem">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="4I83k0mi-IC7wh_j.html">Los Angeles [RV Micro-Trip] Special Edition</a>
+            </h2>
+
+            
+            <p class="brief">On the Road RV Introduction
+
+Los Angeles RV Micro-travel Series
+NO1: Joshua Tree National Park + Sal</p>
+            
+
+          </div>
+
+          
+        </article>
+        
+        
+        <article class="articleItem">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="cY_kfPLLEgh8YaWL.html">Guide to World-Famous Instagram Walls | Los Angeles' "Love Wall"—Born by Coincidence, Yet Unexpectedly Went Viral</a>
+            </h2>
+
+            
+            <p class="brief">A few spray paint cans of different colors, combined with simple heart elements, accidentally created an Instagram-famous influencer wall.</p>
+            
+
+          </div>
+
+          
+        </article>
+        
+        
+        <article class="articleItem">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="M5GgAAsNR5eaiGGi.html">Los Angeles Travel Guide | Eat, Stay, Play, Shop - All in One Place!</a>
+            </h2>
+
+            
+            <p class="brief">Los Angeles is a must-visit city in the Western United States, featuring iconic landmarks, theme par</p>
+            
+
+          </div>
+
+          
+        </article>
+        
+        
+        <article class="articleItem">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="GAbBxDicX8puzGC1.html">Master Los Angeles' Instagram-Famous Walls: Complete Guide to Locations and Highlights</a>
+            </h2>
+
+            
+            <p class="brief">▶︎ Surprising Discoveries at Street Corners
+Tips:
+2019 Latest Update, Most Complete Guide Including </p>
+            
+
+          </div>
+
+          
+        </article>
+        
+        
+        <article class="articleItem">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="F07cC783WscRWwxG.html">Super CHIC vibes! These are all the stunning Los Angeles Instagram influencer shots captured right here!</a>
+            </h2>
+
+            
+            <p class="brief">Who would be willing to go home with ordinary travel photos... Nobody raise their hands?
+
+Los Angele</p>
+            
+
+          </div>
+
+          
+        </article>
+        
+        
+        <article class="articleItem">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="ktIoOyZJJjKU7nlb.html">Ultimate Guide to the World's Most Famous Photo Spots | City of Angels - LA LA LAND</a>
+            </h2>
+
+            
+            <p class="brief">The most iconic scene from "La La Land" is undoubtedly the playful waltz between the lead couple at the Griffith Observatory in Los Angeles.</p>
+            
+
+          </div>
+
+          
+        </article>
+        
+        
+        <article class="articleItem">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="9rsv7agmsN7y9Ait.html">Los Angeles Vibrant Fun Guide 04: Experience Art's Full Charm from Every Angle</a>
+            </h2>
+
+            
+            <p class="brief">Los Angeles boasts world-class museums and art galleries that serve not only as artistic sanctuaries</p>
+            
+
+          </div>
+
+          
+        </article>
+        
+        
+        <article class="articleItem">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="IABBRWZvxnt2uP4A.html">Informative guide: How to personally attend an NBA game and stir things up! (Seat selection and purchasing...</a>
+            </h2>
+
+            
+            <p class="brief">When vacationing in the United States, failing to experience an intense and passionate NBA game would surely become one of your biggest regrets. In America, the NBA is one of the four major professional sports leagues, but its influence in China and around the world clearly dwarfs American football, baseball, and ice hockey combined. With fierce competition and legendary stars, it attracts and influences nearly 300 million fans globally.</p>
+            
+
+          </div>
+
+          
+        </article>
+        
+      </section>
+
+      
+      
+      
+      
+      
+      <nav class="pagination" aria-label="pagination">
+        <a
+          class="pageLink"
+          href="list-6.html"
+          aria-disabled="false"
+        >
+          Previous
+        </a>
+        <a
+          class="pageLink"
+          href="list-8.html"
+          aria-disabled="false"
+        >
+          Next
+        </a>
+      </nav>
+      
+    </main>
+  </body>
+</html>

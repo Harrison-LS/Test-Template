@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Experience San Francisco Through Movies" />
+    <title>Not Just Bumblebee - Explore San Francisco Through Movies</title>
+    <style>
+      :root {
+        --paper: #f5f1eb;
+        --ink: #163d36;
+        --body: #3f3a34;
+        --muted: #8a8379;
+        --line: #ddd5ca;
+        --accent: #d9782f;
+        --white: #fffaf4;
+        --shadow: 0 22px 70px rgba(28, 25, 20, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        line-height: 1.72;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .hero {
+        min-height: clamp(330px, 48vw, 560px);
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        padding: clamp(28px, 7vw, 70px) clamp(24px, 8vw, 76px);
+        background: #28463f;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.12)),
+          url("https://p1-q.mafengwo.net/s12/M00/E8/89/wKgED1w0XA2AYFFXAAMjEB76Stk97.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F90");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .heroInner {
+        position: relative;
+        width: min(900px, 100%);
+        color: #ffffff;
+      }
+
+      .heroLocation {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 24px;
+        color: rgba(255, 255, 255, 0.78);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .heroLocation svg {
+        width: 17px;
+        height: 17px;
+        color: #f0a45f;
+      }
+
+      h1 {
+        max-width: 880px;
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(30px, 4.8vw, 54px);
+        font-weight: 900;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .brief {
+        width: min(760px, 100%);
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 18px;
+        color: #5a5148;
+        font-size: clamp(17px, 1.9vw, 20px);
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.58;
+      }
+
+      .articleWrap {
+        width: min(900px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: clamp(42px, 6vw, 68px) 0 72px;
+      }
+
+      .content {
+        width: min(760px, 100%);
+        color: var(--body);
+        font-size: clamp(16px, 1.8vw, 18px);
+        line-height: 1.5;
+      }
+
+      .content p {
+        margin: 0 0 0.5em;
+      }
+
+      .content h2,
+      .content h3,
+      .content h4 {
+        margin: 46px 0 18px;
+        color: var(--ink);
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+
+      .content h2 {
+        font-size: clamp(28px, 4vw, 38px);
+      }
+
+      .content h3 {
+        font-size: clamp(23px, 3vw, 30px);
+      }
+
+      .content ul,
+      .content ol {
+        margin: 0 0 30px;
+        padding-left: 28px;
+      }
+
+      .content li {
+        margin: 8px 0;
+      }
+
+      .content blockquote {
+        margin: 34px 0;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 20px;
+        color: #5a5148;
+        font-style: italic;
+      }
+
+      .content img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 42px 0 12px;
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+      }
+
+      .content figure {
+        margin: 42px 0;
+      }
+
+      .content figure img {
+        margin: 0 0 12px;
+      }
+
+      .content figcaption {
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .backLink {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 46px;
+        border-top: 1px solid var(--line);
+        padding-top: 28px;
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.18em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .backLink:hover {
+        color: var(--accent);
+      }
+
+      @media (max-width: 720px) {
+        .hero {
+          min-height: 420px;
+          padding: 30px 24px;
+        }
+
+        .articleWrap {
+          width: min(100% - 28px, 900px);
+          padding-bottom: 48px;
+        }
+
+        .content {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="heroInner">
+        <p class="heroLocation">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+            />
+          </svg>
+          <span>Los Angeles</span>
+        </p>
+        <h1>Not Just Bumblebee - Explore San Francisco Through Movies</h1>
+      </div>
+    </header>
+
+    <main class="articleWrap">
+      
+      <p class="brief">Experience San Francisco Through Movies</p>
+      
+
+      <article class="content">
+        
+          <p>Explore San Francisco Through Movies</p><p><br></p><p>San Francisco has been one of the centers of American hippie culture and modern liberalism and progressivism in the 20th and early 21st centuries. Known for its cool summers, frequent fog, rolling hills, mixed architectural styles, and attractions like the Golden Gate Bridge, cable cars, Alcatraz Prison, and Chinatown. Now join Xiao Chengzi on a San Francisco movie tour~</p><p><br></p><p>                                        Golden Gate Bridge | "Bumblebee"</p><p><br></p><p>                    Have you seen the recently released "Bumblebee"? At the end of the film, Bumblebee and the female lead Charlie Watson say goodbye together on top of Fort Point Hill next to the Golden Gate Bridge, then Bumblebee drives onto the bridge to reunite with Optimus Prime.</p><p><br></p><p>Many American movies feature iconic scenes of the Golden Gate Bridge. Previously, Xiao Chengzi wrote a special article about the bridge—"Movies Ruin It a Thousand Times, Tourists Love It Like Their First Love"—covering the best viewpoints for seeing it!</p><p><br></p><p>                                        Muir Woods National Monument | "Dawn of the Planet of the Apes"</p><p><br></p><p>                    In the film, Caesar leads his apes wandering freely through massive redwood forests. This sanctuary is Muir Woods National Monument, located about 20 kilometers north of the Golden Gate Bridge.</p>
+</p><p>Every "redwood giant" in Muir Woods has lived over 1000 years. Only by truly being here can one feel the greatness of nature. When visiting this place, don't forget to also visit Point Bonita Lighthouse and the small town of Sausalito. Thousand-year-old redwoods, century-old city - absolutely worth the trip.</p><p><br></p><p>Palace of Fine Arts | "The Princess Diaries"</p><p><br></p><p>To commemorate San Francisco's rebirth from the earthquake, the Palace of Fine Arts was built for the Panama-Pacific Exposition held in 1915. This Roman-style building features a round dome and colonnades, plus weeping willow trees swaying by a fountain - creating an amazing atmosphere.</p><p><br></p><p>Many movies have been filmed at the Palace of Fine Arts. For example, "The Princess Diaries" (2001), starring Julia Roberts and Anne Hathaway, was set here with the Palace as the site of their wedding. There's also "Mrs. Doubtfire" (2006) featuring Robin Williams.</p><p><br></p><p>Alcatraz | "Mission: Impossible"</p><p><br></p><p>This island served as a primary filming location, where two protagonists engaged in fierce combat with rebels on this site.</p>
+<html><body><p>And in 2006, Hugh Jackman's starring sci-fi film X-Men 3: The Last Stand, as well as The Godfather and The Shawshank Redemption, were also filmed on the island.</p><p>From 1907 to 1963 it served as a military prison and federal prison. It has now transformed into a tourist attraction prison, filled with restaurants, seafood shops, and souvenir stores. Departing from Fisherman's Wharf, take a cruise ship at Pier 33, and you'll arrive at the island in just 15 minutes. Tickets for Alcatraz Island are highly sought after and generally require advance booking of 1-2 months ahead; visitors can book their travel dates on the official website //***.</p><p><br></p><p>                                        Nine Bends Flower Street | Vertigo</p><p><br></p><p>                    Lombard Street, officially known in America as Nine Bends Flower Street, is lined with trees and flowers throughout: hydrangeas in spring; roses in summer; and chrysanthemums in autumn, making it beautifully adorned. From the higher parts of this flower street, you can also get distant views of the Bay Bridge and Coit Tower. It was originally built to ease traffic congestion in San Francisco. At first, there were no curves at all—it went straight up and down—but later it was discovered that the slope was too steep, affecting safety. After much discussion and modification, it became its current winding appearance. San Francisco has many roads with extremely steep slopes, but this design is indeed unique.</p><p>Flower Street is one-way only, allowing traffic from higher to lower areas. The entrance at the bottom features a large red sign: Do Not Enter—be sure not to go the wrong way!</p></body></html>
+Additionally, due to the sharp curves, steep slopes, and heavy traffic flow, vehicles cannot exceed 8 km/h, making it an excellent place to test driving skills.</p><p><br></p><p>                                        Chinatown | The Pursuit of Happyness</p><p><br></p><p>                    The "Happyness" used in the film title comes from a wall at the front of a Chinese American daycare center in San Francisco's Chinatown. Many scenes depicting life and struggle were filmed in Chinatown. When Chinese people first arrived in San Francisco during the 19th century, they faced severe racial discrimination and were segregated into what is now the Chinatown area. Because of this isolation, Chinatown was able to become completely self-sufficient. Today, it features banks with Chinese services, Chinese language schools, Chinese-language newspapers, restaurants, and more, truly functioning as a "little China."</p>
+        
+
+        <a class="backLink" href="list-1.html">← Back to Los Angeles</a>
+      </article>
+    </main>
+  </body>
+</html>

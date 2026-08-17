@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Blue Bottle" />
+    <title>San Francisco Coffee Tour | Besides Blue Bottle, You Need to Know These</title>
+    <style>
+      :root {
+        --paper: #f5f1eb;
+        --ink: #163d36;
+        --body: #3f3a34;
+        --muted: #8a8379;
+        --line: #ddd5ca;
+        --accent: #d9782f;
+        --white: #fffaf4;
+        --shadow: 0 22px 70px rgba(28, 25, 20, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        line-height: 1.72;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .hero {
+        min-height: clamp(330px, 48vw, 560px);
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        padding: clamp(28px, 7vw, 70px) clamp(24px, 8vw, 76px);
+        background: #28463f;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.12)),
+          url("https://p1-q.mafengwo.net/s11/M00/96/7A/wKgBEFsoa6mABJ_hAA7a-x9GANA91.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F90");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .heroInner {
+        position: relative;
+        width: min(900px, 100%);
+        color: #ffffff;
+      }
+
+      .heroLocation {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 24px;
+        color: rgba(255, 255, 255, 0.78);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .heroLocation svg {
+        width: 17px;
+        height: 17px;
+        color: #f0a45f;
+      }
+
+      h1 {
+        max-width: 880px;
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(30px, 4.8vw, 54px);
+        font-weight: 900;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .brief {
+        width: min(760px, 100%);
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 18px;
+        color: #5a5148;
+        font-size: clamp(17px, 1.9vw, 20px);
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.58;
+      }
+
+      .articleWrap {
+        width: min(900px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: clamp(42px, 6vw, 68px) 0 72px;
+      }
+
+      .content {
+        width: min(760px, 100%);
+        color: var(--body);
+        font-size: clamp(16px, 1.8vw, 18px);
+        line-height: 1.5;
+      }
+
+      .content p {
+        margin: 0 0 0.5em;
+      }
+
+      .content h2,
+      .content h3,
+      .content h4 {
+        margin: 46px 0 18px;
+        color: var(--ink);
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+
+      .content h2 {
+        font-size: clamp(28px, 4vw, 38px);
+      }
+
+      .content h3 {
+        font-size: clamp(23px, 3vw, 30px);
+      }
+
+      .content ul,
+      .content ol {
+        margin: 0 0 30px;
+        padding-left: 28px;
+      }
+
+      .content li {
+        margin: 8px 0;
+      }
+
+      .content blockquote {
+        margin: 34px 0;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 20px;
+        color: #5a5148;
+        font-style: italic;
+      }
+
+      .content img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 42px 0 12px;
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+      }
+
+      .content figure {
+        margin: 42px 0;
+      }
+
+      .content figure img {
+        margin: 0 0 12px;
+      }
+
+      .content figcaption {
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .backLink {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 46px;
+        border-top: 1px solid var(--line);
+        padding-top: 28px;
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.18em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .backLink:hover {
+        color: var(--accent);
+      }
+
+      @media (max-width: 720px) {
+        .hero {
+          min-height: 420px;
+          padding: 30px 24px;
+        }
+
+        .articleWrap {
+          width: min(100% - 28px, 900px);
+          padding-bottom: 48px;
+        }
+
+        .content {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="heroInner">
+        <p class="heroLocation">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+            />
+          </svg>
+          <span>Los Angeles</span>
+        </p>
+        <h1>San Francisco Coffee Tour | Besides Blue Bottle, You Need to Know These</h1>
+      </div>
+    </header>
+
+    <main class="articleWrap">
+      
+      <p class="brief">Blue Bottle</p>
+      
+
+      <article class="content">
+        
+          <p>Many people drank their first cup of Blue Bottle in Tokyo, but in fact it is an authentically San Francisco-based coffee brand. Obviously, coffee enthusiasts must visit the Blue Bottle flagship store when they arrive in the Bay Area, and then? There are many other brands that stood out among the third wave of specialty coffee movement, so we'll drink them one by one!</p><p><br></p><p>                                        Blue Bottle</p><p><br></p><p>                    Among San Francisco's four major coffee brands, Blue Bottle started earliest and became famous earliest. Founder W. James Freeman initially only sold coffee from a cart at the Farmer's Market outside the Ferry Building in San Francisco, then after gaining many fans through word of mouth, he opened his first store in a converted garage space in Hayes Valley. This happened back in 2005.</p><p><br></p><p>                    Hayes Valley has now become one of the best dining and shopping areas in San Francisco, while this tiny garage Blue Bottle #1 is still there. Before heading to Yosemite, my friend and I first came here for a latte with almond milk - a perfect start to the day.</p><p><img src="https://pixabay.com/get/g4d939736180833c368e854f377253d49bba833ab8534aec635a03cd3deac39aac493deccd77982ea142d67bda3c86882.jpg" alt="Blue Bottle Coffee" loading="lazy"></p>
+<p>                    There are cookies for dogs, and they're free.</p><p><br></p><p>                    Although famous in San Francisco, Blue Bottle's headquarters is actually located in Oakland. This place focuses mainly on roasting beans, has a cupping room (open classes can be viewed online), as well as a small coffee bar.</p><p><br></p><p>                    I ordered a cup of New Orleans coffee with chicory added to black coffee. The subtle sweetness of the chicory powder balanced the bitterness of the dark roast coffee, making it an interesting flavor worth trying.</p><p><br></p><p>                    Blue Bottle Coffee</p><p>315 Linden St, San Francisco, CA 94102</p><p>***</p><p><br></p><p>                        Blue Bottle Coffee (Mint Plaza)</p><p>                        This coffee shop uses purely handmade craftsmanship to create their coffee equipment.</p>
+
+keyword: Blue Bottle Coffee Mint Plaza
+<p>The most famous item here is siphon coffee, which is typically only found in Tokyo. The truffle poached eggs and European-style sandwiches are also very popular.</p><p><br></p><p>                                        Sightglass Coffee</p><p><br></p><p>                    Established in 2009, Sightglass Coffee is the youngest of San Francisco's four prominent coffee chains but performs exceptionally well.</p><p>Many well-known local spaces now serve its coffee. For example, when SFMoMA (San Francisco Museum of Modern Art) reopened after a three-year closed renovation in 2016, Sightglass Coffee replaced the former Blue Bottle as the new resident cafe. Impressive, isn't it?</p><p><br></p><p>                    The owners of Sightglass Coffee are brothers Jerad &amp; Justin Morrison from Oregon. They also started by roasting coffee beans and only opened their shop to the public once their customer base stabilized. If you want to have a cup of Sightglass Coffee, I recommend visiting this flagship store on 7th Street. Its tall loft space includes a bean-roasting area, an elegant coffee bar counter, and excellent second-floor seating with great views.</p><p><img src="https://pixabay.com/get/g3e9cfa3f393b0ec53d6cb2bb13fb1f527801d47b4f6e6df2077c23edc34055c7b4553cbc683124b7f420cc31882f9742.jpg" alt="Sightglass Coffee" loading="lazy"></p>
+</p><p><br></p><p>                    Bread and pastries come from b. patisserie as well as Neighbor Bakehouse (two excellent shops, to be introduced in a later post).</p><p><br></p><p>                    Sightglass Coffee</p><p>270 7th St, San Francisco, CA 94103</p><p>***</p><p><br></p><p>                        Sightglass Coffee</p><p><br></p><p>                                        Four Barrel Coffee</p><p><br></p><p>                    Four Barrel Coffee's owner Jeremy Tooker is one of the founders of Ritual Coffee Roasters*, who started his own business in 2008. Walking into their original Valencia St location, you can instantly feel this cafe's artistic atmosphere - antique CDs next to the counter, a whole wall of artwork in the seating area, black and white slides playing on the white walls... The ambiance is particularly special.</p><p><img src="https://pixabay.com/get/g7275504571de8989f3de5b98e98f2f9be53cf236d1df8f12d11a9e2c7f248ec48967f3b942b65751cd3e6e345bde4aee.jpg" alt="San Francisco artisan coffee shops" loading="lazy"></p>
+<p>Four Barrel has also recently partnered with famous bread baker Josey Baker to open The Mill bakery, another great spot that will be introduced in the next installment.</p><p><br></p><p>I ordered a nitro coffee with quite high acidity, and one sip instantly sobered me up.</p><p><br></p><p>Four Barrel Coffee</p><p>375 Valencia St, San Francisco, CA 94103</p><p>***</p><p><br></p><p>Four Barrel Coffee</p><p><br></p><p>Verve Coffee Roasters</p><p><br></p><p>Verve Coffee Roasters comes from Santa Cruz, a surfing paradise about an hour and a half drive from San Francisco. Stepping into the store, it truly is a leisurely yet vibrant space - bright colors, clean lines, a mix of wood, metal, and green plants, giving an overall feeling that's... very fresh!</p><p><img src="https://pixabay.com/get/g9b0c6ca606cbddd601849aa966ccb7c993869d76ea4618893955f3bbbfdb144ab36911dd3d351510ee6520224fd65aee.jpg" alt="coffee shop review" loading="lazy"></p>
+<p>The brand has expanded to over ten stores since starting in 2007, including three in Tokyo and Kamakura. Those planning a trip to Japan recently should bookmark this.</p><p><br></p><p>Ordered a honey lavender draft latte here, with a subtle lavender flavor. A cold nitrogen latte on a slightly warm sunny afternoon in San Francisco is perfect.</p><p><br></p><p>By the way, the bread served here comes from Manresa Bread, created by the famous three-star restaurant Manresa team. If you're hungry, it's completely fine to have some.</p><p><br></p><p>Verve Coffee Roasters</p><p>2101 Market St, San Francisco, CA 94114</p><p>***</p><p><br></p><p>fifty/fifty</p><p><br></p><p>The previously mentioned brands are all well-known coffee shops. The fifty/fifty to be introduced below is a small and down-to-earth corner cafe.</p><p><img src="https://pixabay.com/get/gf02ff69668d119b6a00232b4f8baca375e1a7c8fb2b9556accf0c67c8ff4b29145da2288b3d17def50ba4413f20b6e5b.jpg" alt="Verve Coffee Roasters" loading="lazy"></p>
+</p><p>I couldn't find much information online about this place; I also found it through a recommendation from a local friend. No fancy decoration, but the coffee is quite good, and it's quiet and relaxed - no crowds coming to take pilgrimage photos for social media. If you happen to be in the area nearby, you can come have a cup, or take it out to Arsicault Bakery (about a 10-minute walk away) to enjoy with top-tier croissants together (mhm, that will be introduced in the next post).</p><p><br></p><p>                    fifty / fifty</p><p>3157 Geary Blvd, San Francisco, CA 94118</p><p><br></p><p>                                        Samovar Tea & Chai Bar</p><p><br></p><p>                    After finishing coffee, I'd like to recommend you a tea house - Samovar Tea Bar. Owner Jesse Jacobs was originally an ordinary office worker who went in at nine and out at five, but one day he could no longer bear the monotonous work, so he decided to open his own tea shop. Having a special fondness for Eastern teas, he hopes to provide a healthy spiritual corner where city people can "temporarily escape the chaotic real world and rediscover lost creativity and happiness".</p><p><img src="https://pixabay.com/get/ge9af17db876929201aedd5f1d9350ea57010f65c29206f8908b6006db0e62173f2617e8a67fb3c213052aa385b414db9.jpg" alt="Samovar Tea Bar" loading="lazy"></p>
+</p><p><br></p><p>The store offers a rich variety of teas from Japan, the United States, China, Taiwan, India, and more. However, Castro's most famous item is chai tea. Four large copper pots serve steaming hot chai tea with options for milk or almond milk—just smelling it brings happiness.</p><p><br></p><p>Here you can also enjoy toast with honey and bee pollen... a healthy treat that truly reflects health-conscious San Francisco.</p><p><br></p><p>Beyond this original Castro location, Jesse has also opened a Samovar Tea Lounge inside Yerba Buena Garden. It features more spacious open space, double-story high ceilings with floor-to-ceiling windows, and sofa seating overlooking the garden. I'd love to visit someday on my next trip to San Francisco.</p><p><br></p><p>Samovar Tea &amp; Chai Bar</p><p>411 Valencia St, San Francisco</p><p>***</p><p><br></p><p>Boba Guys</p><p><br></p><p>Boba Guys is a bubble tea shop.</p>
+
+Boba
+<p>Eh, why still drink bubble tea in America? Because it's too popular, I just have to be curious and check it out.</p><p>Founders Bin Chen and Andrew Chau were originally ordinary office workers. One day, after discovering their favorite bubble tea shop had closed down, they decided to open one themselves. The ingredients they use are all high-quality organic foods (the logos on the wall are all farms and manufacturers they partner with), so prices are higher than typical bubble tea shops, but in San Francisco this health-conscious city, it's very popular. Several branches have continuous business.</p><p>Besides classic bubble tea, Boba Guys has various drinks to choose from, like horchata (Mexican rice drink), Thai milk tea, taro smoothie (made with real taro, not powder or artificial flavoring), etc. Toppings include almond tofu, grass jelly, chia seeds, and can be mixed and matched freely. Delicious, and it might be the healthiest bubble tea I've ever had.</p><p>Boba Guys</p><p>Many branches available, check their website</p><p>***</p><p>-----</p><p>In San Francisco coffee shops + tea houses recommendations, which one is your favorite? Please leave a comment to tell me :) Next post will be desserts + breads + ice cream, let&#39;s</p><p><img src="https://pixabay.com/get/g22423550796c4abec93ad3fc3e08a876c9fa0eff0275e848c38aac4c8d7e5a40b3940a1b0fad41782da20b84102123dd.jpg" alt="Boba Guys" loading="lazy"></p>
+s go let&#39;s go.
+
+Image/Text: Sugared &amp; Spiced (WeChat Official Account sugarednspiced)
+
+Welcome to share with your Moments | For reprints on other platforms, please leave a message first to obtain authorization
+
+▼ Scan QR code to follow Sugared &amp; Spiced WeChat Official Account :)
+        
+
+        <a class="backLink" href="list-1.html">← Back to Los Angeles</a>
+      </article>
+    </main>
+  </body>
+</html>

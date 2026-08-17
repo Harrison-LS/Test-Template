@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="What exactly is there to do in Los Angeles? This city that appears in countless American TV shows and movies, where you can spot celebrities strolling on the streets, where not having a car feels like being footless - why does it attract visitors from around the globe? Going beyond conventional attractions like Hollywood and Universal Studios, let's explore a different kind of Los Angeles." />
+    <title>Los Angeles: 72 Hours of Eat, Drink & Play!</title>
+    <style>
+      :root {
+        --paper: #f5f1eb;
+        --ink: #163d36;
+        --body: #3f3a34;
+        --muted: #8a8379;
+        --line: #ddd5ca;
+        --accent: #d9782f;
+        --white: #fffaf4;
+        --shadow: 0 22px 70px rgba(28, 25, 20, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        line-height: 1.72;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .hero {
+        min-height: clamp(330px, 48vw, 560px);
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        padding: clamp(28px, 7vw, 70px) clamp(24px, 8vw, 76px);
+        background: #28463f;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.12)),
+          url("");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .heroInner {
+        position: relative;
+        width: min(900px, 100%);
+        color: #ffffff;
+      }
+
+      .heroLocation {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 24px;
+        color: rgba(255, 255, 255, 0.78);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .heroLocation svg {
+        width: 17px;
+        height: 17px;
+        color: #f0a45f;
+      }
+
+      h1 {
+        max-width: 880px;
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(30px, 4.8vw, 54px);
+        font-weight: 900;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .brief {
+        width: min(760px, 100%);
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 18px;
+        color: #5a5148;
+        font-size: clamp(17px, 1.9vw, 20px);
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.58;
+      }
+
+      .articleWrap {
+        width: min(900px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: clamp(42px, 6vw, 68px) 0 72px;
+      }
+
+      .content {
+        width: min(760px, 100%);
+        color: var(--body);
+        font-size: clamp(16px, 1.8vw, 18px);
+        line-height: 1.5;
+      }
+
+      .content p {
+        margin: 0 0 12px;
+      }
+
+      .content h2,
+      .content h3,
+      .content h4 {
+        margin: 46px 0 18px;
+        color: var(--ink);
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+
+      .content h2 {
+        font-size: clamp(28px, 4vw, 38px);
+      }
+
+      .content h3 {
+        font-size: clamp(23px, 3vw, 30px);
+      }
+
+      .content ul,
+      .content ol {
+        margin: 0 0 30px;
+        padding-left: 28px;
+      }
+
+      .content li {
+        margin: 8px 0;
+      }
+
+      .content blockquote {
+        margin: 34px 0;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 20px;
+        color: #5a5148;
+        font-style: italic;
+      }
+
+      .content img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 42px 0 12px;
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+      }
+
+      .content figure {
+        margin: 42px 0;
+      }
+
+      .content figure img {
+        margin: 0 0 12px;
+      }
+
+      .content figcaption {
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .backLink {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 46px;
+        border-top: 1px solid var(--line);
+        padding-top: 28px;
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.18em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .backLink:hover {
+        color: var(--accent);
+      }
+
+      @media (max-width: 720px) {
+        .hero {
+          min-height: 420px;
+          padding: 30px 24px;
+        }
+
+        .articleWrap {
+          width: min(100% - 28px, 900px);
+          padding-bottom: 48px;
+        }
+
+        .content {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="heroInner">
+        <p class="heroLocation">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+            />
+          </svg>
+          <span>Los Angeles</span>
+        </p>
+        <h1>Los Angeles: 72 Hours of Eat, Drink & Play!</h1>
+      </div>
+    </header>
+
+    <main class="articleWrap">
+      
+      <p class="brief">What exactly is there to do in Los Angeles? This city that appears in countless American TV shows and movies, where you can spot celebrities strolling on the streets, where not having a car feels like being footless - why does it attract visitors from around the globe? Going beyond conventional attractions like Hollywood and Universal Studios, let's explore a different kind of Los Angeles.</p>
+      
+
+      <article class="content">
+        
+          <p>Looking at Los Angeles Panorama: Stahl House</p><p>Beverly Wilshire, a Four Seasons Hotel Los Angeles</p><p>¥3127</p><p><br></p><p>Stahl House</p><p>For a good journey, of course choose a great hotel. The Beverly Wilshire, a Four Seasons Hotel Los Angeles is highly recommended!</p><p>Come to Los Angeles and sleep with Hollywood stars at this hotel!</p><p><br></p><p>You can see the entire Los Angeles from Stahl House. A masterpiece by modernist designer Pierre Koenig that architecture enthusiasts flock to admire. At dusk and night it&#39;s even more beautiful like a painting—simply a dream house. Remember to book in advance! The camera cannot be used, but your phone is fine!</p><p><br></p><p>Website: ***</p><p><br></p><p>Perhaps California&#39;s Wine Cellar-Restaurant with the Most Collection: Wally&#39;s</p><p><br></p><p>Wally&#39;s Restaurant serves as both wine cellar and bar-restaurant. Upon entering, you are immediately struck by the massive wine display. For someone like me who loves wine, walking inside feels like a mouse falling into a rice bin! Here they store over 2500 varieties of wines from around the world, more than 200 types of cheese, and also sell some small snacks to take home. The food is excellent—fresh and organic. I bought several bottles including a California Pinot Noir to take with me!</p><p>Address: 447 Canon Dr, Beverly Hills, CA 90210</p><p>Gym Where You Might Run Into Celebrities</p><p><br></p><p>Los Angeles is a city full of sports and fitness—judging by the gyms everywhere and people running around, it&#39;s obvious. By 5 AM, you can already see someone out for their morning run. My travel companion Ye Xiaobei is even more of a fitness fanatic, going to the gym twice a day. At 7 AM she heads to SoulCycle Beverly Hills, which is extremely popular in the US. Inside feels completely like a nightclub; 45 minutes and you&#39;re sweating profusely. It&#39;s said many Hollywood celebrities love this place. Last time, I even ran into Beckham while hotel staff from Four Seasons were taking classes here. Remember to make an appointment to experience it!</p><p><br></p><p>Address: 9465 Wilshire Boulevard, Beverly Hills, CA</p><p>Email: ***</p><p><br></p><p>A Scenic Hiking Paradise Worth Seeing</p><p><br></p><p>Another sports destination is the Hollywood Hills—here besides being a hiking paradise it&#39;s also a running paradise. Remember to wear light clothing for your walk. Besides enjoying views of all of Los Angeles, you even have a chance of seeing a big star walking their dog!</p><p><br></p><p>A Legendary Restaurant That Feels Like A Movie: Mr. Chow</p><p>Had dinner at the legendary Mr. Chow tonight. The restaurant was founded by Zhou Yinghua, second son of Peking Opera master Zhou Xinfang, whose background is both fascinating and传奇—you can look him up if you&#39;re curious. His wife Qiu Liren was also a famous Shanghai socialite from the Republic era; all his wives were quite legendary in their own right. Upon entering, there&#39;s an Andy Warhol portrait of Zhou Yinghua. Countless celebrities, socialites, and politicians have dined here—street cred outweighs culinary quality. The food may not be exceptional and it&#39;s expensive, but you go to Mr. Chow for the name alone.</p><p><br></p><p>Address: 344 North Camden Drive, Beverly Hills, CA 90210</p><p><br></p><p>Here, the only concern is whether your card limit will hold up—everything from luxury brands to boutique design stores is available. If you have time, consider renting a car and spending several days exploring interesting shops around this city.</p><p><br></p><p>Healthy and light restaurant: Sweetgreen</p><p><br></p><p>This fresh-and-light Sweetgreen focuses on organic healthy salads where you can customize any combination of ingredients. The beverages are refreshingly healthy too. Every section feels like it&#39;s from Kinfolk magazine pages—they even secured $20 million in venture funding!</p><p><br></p><p>Website: ***</p><p><br></p><p>Best steakhouse in Los Angeles</p><p>If you ask me where the best steakhouse in Los Angeles is, I&#39;ll tell you without hesitation: CUT at The Beverly Wilshire Four Seasons Hotel, a Michelin one-star restaurant! Of course! Ask any seasoned Los Angeles foodie, and theyll give the same answer. This iconic establishment was created through collaboration between renowned architect Richard Meier and celebrity chef Wolfgang Puck. The atmosphere feels completely different during the day versus night, with an overall artistic ambiance throughout.</p><p><br></p><p>The beef primarily features American beef as well as Japanese wagyu. The meat melts in your mouth, filling your palate with rich beef flavor!!</p><p><br></p><p>Phone: +1-310-2768500</p><p>Address: Beverly Wilshire A Four Seasons Hotel, 9500 Wilshire Boulevard, Beverly Hills, CA 90212</p><p><br></p><p>The thing I love most about traveling is exploring markets. Besides being able to select many interesting ingredients, you can also experience the daily lives of locals. One morning at The Blvd chef Tomas from the Beverly Wilshire Four Seasons Hotel took us to the Santa Monica Farmers Market to buy lunch ingredients. The market sources produce from organic farms in California. Then we cooked a delicious lunch using the ingredients we purchased, experiencing a true farm-to-table journey!</p><p><br></p><p>A restaurant famous enough that even celebrities call just to make reservations</p><p>Chef Wolfgang Puck&#39;s restaurant empire is incredibly vast. Dining at Spago (Michelin two-star) flagship location in Los Angeles last night was so popular that the hotel ended up calling directly to have the chef make a reservation. It focuses primarily on California ingredients and is many Hollywood celebrities&#39; favorite. Plus, if you don&#39;t dress nicely going in, it&#39;s completely like food delivery or cleaning staff - everyone inside looks as ostentatious as &quot;Downton Abbey&quot;. The vegetarian girl next to me ordered the most expensive pizza I&#39;ve ever eaten in my life - a 1000 RMB white truffle pizza!! However for the steak portion I personally think it wasn&#39;t as good as Mandarin Oriental Cuts, so not too much recommended~!</p><p><br></p><p>Phone: +1-310-3850880</p><p>Address: 176 North Canon Drive, Beverly Hills, CA 90210</p><p><br></p><p>More beautiful aspects of Los Angeles can only be discovered by exploring it personally!</p>
+        
+
+        <a class="backLink" href="list-1.html">← Back to Los Angeles</a>
+      </article>
+    </main>
+  </body>
+</html>

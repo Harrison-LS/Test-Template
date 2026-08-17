@@ -1,0 +1,793 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="City of Angels"
+    />
+    <title>Los Angeles</title>
+    <style>
+      :root {
+        --paper: #f5f1eb;
+        --ink: #163d36;
+        --body: #5d5a54;
+        --muted: #8a8379;
+        --line: #ddd5ca;
+        --accent: #d9782f;
+        --white: #fffaf4;
+        --text-width: 720px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        line-height: 1.7;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .page {
+        width: min(900px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 10px 0 40px;
+      }
+
+      .hero {
+        min-height: clamp(180px, 29vw, 260px);
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        border-radius: 12px;
+        padding: clamp(22px, 4vw, 38px);
+        background: #28463f;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.05) 64%),
+          url("https://p1-q.mafengwo.net/s9/M00/A8/87/wKgBs1eSKJmAJrPTABckyB0Qyd851.jpeg?imageView2%2F2%2Fw%2F680%2Fq%2F90");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .heroTitle {
+        position: relative;
+        display: flex;
+        align-items: baseline;
+        gap: 10px;
+        color: #ffffff;
+      }
+
+      .heroTitle h1 {
+        margin: 0;
+        font-size: clamp(30px, 5vw, 46px);
+        font-weight: 900;
+        line-height: 1;
+        letter-spacing: 0;
+      }
+
+      .heroTitle span {
+        color: rgba(255, 255, 255, 0.64);
+        font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+        font-size: clamp(16px, 2vw, 24px);
+        font-weight: 700;
+      }
+
+      .intro {
+        margin: 34px 0 54px;
+        color: #4f4a43;
+        font-size: clamp(17px, 2vw, 20px);
+        line-height: 1.8;
+      }
+
+      .sectionTitle {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+        gap: 14px;
+        margin: 0 0 44px;
+        color: var(--muted);
+        font-size: 14px;
+        letter-spacing: 0.16em;
+      }
+
+      .sectionTitle::before,
+      .sectionTitle::after {
+        content: "";
+        height: 1px;
+        background: var(--line);
+      }
+
+      .articleList {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .articleItem {
+        display: grid;
+        grid-template-columns: minmax(0, var(--text-width)) 140px;
+        gap: 28px;
+        justify-content: space-between;
+        border-bottom: 1px solid var(--line);
+        padding: 0 0 34px;
+        margin-bottom: 34px;
+      }
+
+      .articleItem:not(.hasImage) {
+        grid-template-columns: minmax(0, var(--text-width));
+        justify-content: start;
+      }
+
+      .articleBody {
+        width: min(100%, var(--text-width));
+        border-left: 2px solid transparent;
+        padding-left: 14px;
+        transform: translateX(0);
+        transition:
+          border-color 160ms ease,
+          transform 180ms ease;
+      }
+
+      .articleItem:hover .articleBody {
+        border-left-color: var(--accent);
+        transform: translateX(8px);
+      }
+
+      .meta {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin: 0 0 10px;
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+      }
+
+      .pin {
+        color: var(--accent);
+      }
+
+      .articleTitle {
+        width: 100%;
+        margin: 0 0 10px;
+        color: var(--ink);
+        font-size: clamp(21px, 2.5vw, 26px);
+        font-weight: 900;
+        line-height: 1.34;
+        letter-spacing: 0;
+      }
+
+      .brief {
+        width: 100%;
+        max-width: none;
+        margin: 0 0 14px;
+        color: var(--body);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        font-size: 16px;
+        line-height: 1.72;
+      }
+
+      .readMore {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        color: var(--accent);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 800;
+      }
+
+      .articleImage {
+        width: 140px;
+        aspect-ratio: 16 / 10;
+        align-self: center;
+        overflow: hidden;
+        border-radius: 9px;
+        background: var(--line);
+      }
+
+      .articleImage img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+      }
+
+      .emptyState {
+        border: 1px dashed var(--line);
+        border-radius: 10px;
+        padding: 42px 20px;
+        color: var(--muted);
+        text-align: center;
+      }
+
+      .pagination {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        margin-top: 12px;
+      }
+
+      .pageLink {
+        min-width: 96px;
+        min-height: 40px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 0 16px;
+        background: var(--white);
+        color: var(--ink);
+        font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+        font-size: 14px;
+        font-weight: 800;
+      }
+
+      .pageLink[aria-disabled="true"] {
+        pointer-events: none;
+        opacity: 0.45;
+      }
+
+      @media (max-width: 720px) {
+        .page {
+          width: min(100% - 24px, 900px);
+          padding-top: 8px;
+        }
+
+        .hero {
+          min-height: 220px;
+        }
+
+        .articleItem,
+        .articleItem.hasImage {
+          grid-template-columns: minmax(0, 1fr);
+          gap: 16px;
+        }
+
+        .articleImage {
+          width: 100%;
+          max-width: 260px;
+          justify-self: start;
+        }
+
+        .sectionTitle {
+          margin-bottom: 30px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <section class="hero">
+        <div class="heroTitle">
+          <h1>Los Angeles</h1>
+        </div>
+      </section>
+
+      
+      <p class="intro">
+        Los Angeles is located on the west coast of the United States, with a city proper population of approximately 3.8 million people, making it the second-largest city in the US (after New York). It has a typical Mediterranean climate with minimal temperature variation throughout the year, rainy winters and dry summers; spring and autumn are best for tourism. The English name is Los Angeles, abbreviated as LA. The official nickname is "City of Angels," while the colloquial term is Sank Village.
+      </p>
+      
+
+      <div class="sectionTitle"></div>
+
+      <section class="articleList" aria-label="article-list">
+        
+        
+        <article class="articleItem">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="EPQxq5KYGE3CdO1F.html">Los Angeles Arts District: A Private Custom Motorcycle Shop Where Coffee and Fine Wine Come Together Perfectly</a>
+            </h2>
+
+            
+            <p class="brief">Los Angeles Arts District
+The Los Angeles Arts District: A private custom motorcycle shop where coff</p>
+            
+
+          </div>
+
+          
+        </article>
+        
+        
+        <article class="articleItem">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="Zt6HadGgRWRsIkW6.html">A firsthand exploration of America's renowned private art collection destination—the Los Angeles Getty Center</a>
+            </h2>
+
+            
+            <p class="brief">First Encounter with the Getty Center
+
+On our third day in Los Angeles, we finally had time to visit</p>
+            
+
+          </div>
+
+          
+        </article>
+        
+        
+        <article class="articleItem">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="ru57CTHo_hlQu2VN.html">Los Angeles Shopping Guide: Top 5 Major Shopping Destinations!</a>
+            </h2>
+
+            
+            <p class="brief">Shopping in Los Angeles
+Super useful tips!
+Rumor has it 85% of people missed this
+Get started now!
+
+</p>
+            
+
+          </div>
+
+          
+        </article>
+        
+        
+        <article class="articleItem">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="-PVljd822zJQJmAL.html">A-Jiao's Wedding Banquet Venue Fully Revealed! A Century-Long Celebration That Rivals Lin Quan and Angelababy's Spectacular Weddings!</a>
+            </h2>
+
+            
+            <p class="brief">The maiden who once claimed no one would marry her ultimately wedded to love.</p>
+            
+
+          </div>
+
+          
+        </article>
+        
+        
+        <article class="articleItem">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="77zZF8oj68giup17.html">Don't let the sunshine go to waste — 10 gorgeous outdoor courtyard restaurants in Los Angeles, recommended!</a>
+            </h2>
+
+            
+            <p class="brief">On such bright and beautiful sunny days, this picturesque outdoor courtyard restaurant is the ideal </p>
+            
+
+          </div>
+
+          
+        </article>
+        
+        
+        <article class="articleItem">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="PblBzr0sc37hMZQe.html">Local Chinese Locals Guide Your Visit | How to Plan LA's Most Iconic One-Day Tour</a>
+            </h2>
+
+            
+            <p class="brief">Shopping malls in America generally open around 10 AM, so before that time you can sleep naturally i</p>
+            
+
+          </div>
+
+          
+        </article>
+        
+        
+        <article class="articleItem">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="YmyYbZVkUf7BhOg_.html">Los Angeles | Where Hollywood Stars Gather - How Should You Explore It?</a>
+            </h2>
+
+            
+            <p class="brief">As the home base for celebrities and influencers, Los Angeles perfectly embodies a fun and photogeni</p>
+            
+
+          </div>
+
+          
+        </article>
+        
+        
+        <article class="articleItem">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="upn2wyY_XAJyNMSi.html">Los Angeles Vibrant Fun Guide 06: Stunning Venues and Premier Events</a>
+            </h2>
+
+            
+            <p class="brief">Beyond movies and romance, Los Angeles is also a city of sports. It boasts world-class stadiums and </p>
+            
+
+          </div>
+
+          
+        </article>
+        
+        
+        <article class="articleItem">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="vjPAJdbQCzF2uLt8.html">Detailed Analysis! Go Los Angeles Card: All-in-One Pass for Los Angeles Attractions, A Must-Have for Visiting LA</a>
+            </h2>
+
+            
+            <p class="brief">▶︎ What Is The "Go Los Angeles Card"
+The "Go Los Angeles Card" is a curated pass that includes over </p>
+            
+
+          </div>
+
+          
+        </article>
+        
+        
+        <article class="articleItem">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="GY4McCf70nkwlJFH.html">How to get your 10-year US Visa Step by Step! Tips for the US Visa Interview!</a>
+            </h2>
+
+            
+            <p class="brief">Whether you plan to visit the United States or use a U.S. visa to travel to other countries, applying for a U.S. visa is your first step! Since the introduction of the 10-year multiple-entry visa option, more and more people are considering traveling to America. The U.S. is indeed an ideal destination perfect for both tourism and shopping. However, this highly valuable visa isn't something you can obtain easily. If you want approval on your first attempt, read through everything below!</p>
+            
+
+          </div>
+
+          
+        </article>
+        
+        
+        <article class="articleItem">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="4xv2KeIxjbH9YTSX.html">Which Los Angeles Michelin restaurants do you know?</a>
+            </h2>
+
+            
+            <p class="brief">As a food lover, I enjoy everything from humble street snacks to fine dining delicacies. Today, let </p>
+            
+
+          </div>
+
+          
+        </article>
+        
+        
+        <article class="articleItem">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="Q5E80X-Trn0PjZTD.html">Los Angeles Japanese Style Family Day: Fine Wines, Fancy Dresses, Non-stop Party Fun!</a>
+            </h2>
+
+            
+            <p class="brief">Los Angeles Japanese-Style Family Day: Fine Wines, Stylish Attire, Nonstop Fun</p>
+            
+
+          </div>
+
+          
+        </article>
+        
+        
+        <article class="articleItem">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="5wY1v6UetvQRYV_h.html">California Disneyland Detailed Tour Guide</a>
+            </h2>
+
+            
+            <p class="brief">As Disney's first resort in the world, this is the birthplace of Disney culture, carrying Walt's perfect vision for theme parks while bringing authentic Disney fairy tales directly to visitors.</p>
+            
+
+          </div>
+
+          
+        </article>
+        
+        
+        <article class="articleItem">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="MMhP2LUz2QzAhUg7.html">Three Days in Los Angeles - Everything You Need Is Here!</a>
+            </h2>
+
+            
+            <p class="brief">Last summer, Mo Xiaoyu lived in Minnesota, USA for four months, and before returning home, planned a</p>
+            
+
+          </div>
+
+          
+        </article>
+        
+        
+        <article class="articleItem">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="X6MgojyINXq1Lyw6.html">Los Angeles | Mountain-Top RV Homestay, Next Door to Hollywood Stars</a>
+            </h2>
+
+            
+            <p class="brief">On a hilltop in Los Angeles covering 160,000 square meters lies a homestay converted from a vintage RV. Guests can camp at the summit, enjoy sunsets, gaze at the starry sky, and even overlook Nicolas Cage's home! The owners are a Hollywood celebrity couple who have hosted more than 7,000 guests over the past five years, including many celebrities.</p>
+            
+
+          </div>
+
+          
+        </article>
+        
+        
+        <article class="articleItem">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="HQgO8w4K2YRLxgQN.html">Wow, I never realized Instagram bloggers edit their photos like this!</a>
+            </h2>
+
+            
+            <p class="brief">I've been traveling around LA recently and met a photographer who shoots for Instagram influencers~ Through some coaxing and trickery on my part, I was able to get you guys the Instagram influencer's private photo editing methods! Lalala, after organizing everything up, here's the complete package~ Don't feel too touched, I'm just such a generous girl~</p>
+            
+
+          </div>
+
+          
+        </article>
+        
+        
+        <article class="articleItem">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="sLwgbhuj_1mXgtUj.html">Stay | Los Angeles Hotel Booking Secrets</a>
+            </h2>
+
+            
+            <p class="brief">Los Angeles Hotel Recommendations
+
+Previously, I recommended hotel options in San Francisco. Now let</p>
+            
+
+          </div>
+
+          
+        </article>
+        
+        
+        <article class="articleItem">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="v0cikDvTpP1rzFrN.html">A Los Angeles travel map you won't find on Google</a>
+            </h2>
+
+            
+            <p class="brief">As America's largest city on the West Coast, "Angel City" Los Angeles holds a spot in many travelers</p>
+            
+
+          </div>
+
+          
+        </article>
+        
+        
+        <article class="articleItem">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="C6PImAQRhqEMM5kN.html">What to do on your first trip to Los Angeles? Do it this way for an authentic and fun experience.</a>
+            </h2>
+
+            
+            <p class="brief">City of Angels Los Angeles is hailed as America's "Pearl of the West Coast." Situated in southern Ca</p>
+            
+
+          </div>
+
+          
+        </article>
+        
+        
+        <article class="articleItem">
+          <div class="articleBody">
+            
+            <p class="meta">
+              <span class="pin">⊙</span>
+              <span>Los Angeles</span>
+            </p>
+            
+
+            <h2 class="articleTitle">
+              <a href="T15EoOgxlw_NvBzW.html">Smorgasburg: A Foodie's New Paradise in Los Angeles</a>
+            </h2>
+
+            
+            <p class="brief">Los Angeles Food Market Smorgasburg~
+Smorgasburg Food Market: A New Paradise for Foodies in Los Ange</p>
+            
+
+          </div>
+
+          
+        </article>
+        
+      </section>
+
+      
+      
+      
+      
+      
+      <nav class="pagination" aria-label="pagination">
+        <a
+          class="pageLink"
+          href="list-1.html"
+          aria-disabled="false"
+        >
+          Previous
+        </a>
+        <a
+          class="pageLink"
+          href="list-3.html"
+          aria-disabled="false"
+        >
+          Next
+        </a>
+      </nav>
+      
+    </main>
+  </body>
+</html>

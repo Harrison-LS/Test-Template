@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <title>Los Angeles Fun Guide 05: From Mouth-Watering Snacks to Famous Chef's Cuisine</title>
+    <style>
+      :root {
+        --ink: #171512;
+        --muted: #5f5a54;
+        --line: #ded6cc;
+        --paper: #ffffff;
+        --warm: #f8efe5;
+        --accent: #c47a29;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        line-height: 1.55;
+      }
+
+      .hero {
+        width: 100%;
+        height: clamp(260px, 38vw, 520px);
+        overflow: hidden;
+      }
+
+      .hero img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+      }
+
+      .article {
+        width: min(760px, calc(100% - 40px));
+        margin: 0 auto;
+        padding: 34px 0 72px;
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin: 0;
+        font-family: Georgia, "Times New Roman", serif;
+        letter-spacing: 0;
+        line-height: 1.05;
+      }
+
+      h1 {
+        max-width: 620px;
+        font-size: clamp(34px, 5vw, 54px);
+        font-weight: 800;
+      }
+
+      .location {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin: 18px 0;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .location svg {
+        width: 18px;
+        height: 18px;
+        flex: 0 0 auto;
+      }
+
+      .subtitle {
+        max-width: 650px;
+        margin: 0 0 22px;
+        color: var(--muted);
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(18px, 2.4vw, 23px);
+        font-style: italic;
+        line-height: 1.45;
+      }
+
+      .description {
+        max-width: 650px;
+        margin: 0 0 28px;
+        color: #302c27;
+        font-size: 15px;
+      }
+
+      .brief {
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        border-radius: 6px;
+        padding: 18px 20px;
+        background: var(--warm);
+      }
+
+      .brief-title {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 10px;
+        color: var(--accent);
+        font-weight: 800;
+      }
+
+      .brief-title svg {
+        width: 18px;
+        height: 18px;
+      }
+
+      .brief p {
+        margin: 0;
+        color: #302c27;
+        font-size: 15px;
+      }
+
+      .content {
+        border-top: 1px solid var(--line);
+        padding-top: 24px;
+      }
+
+      h2 {
+        margin-bottom: 16px;
+        font-size: 30px;
+      }
+
+      .section {
+        margin: 0 0 24px;
+      }
+
+      .section h3 {
+        margin-bottom: 8px;
+        font-size: 18px;
+        line-height: 1.25;
+      }
+
+      .section p,
+      .section-body {
+        margin: 0;
+        color: #292520;
+        font-size: 14px;
+        white-space: pre-line;
+      }
+
+      .section-body img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 16px 0;
+        border-radius: 8px;
+      }
+
+      .section-body a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      @media (max-width: 640px) {
+        .article {
+          width: min(100% - 28px, 760px);
+          padding-top: 26px;
+        }
+
+        .hero {
+          height: 260px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <figure class="hero">
+      <img src="" alt="Los Angeles Fun Guide 05: From Mouth-Watering Snacks to Famous Chef's Cuisine" />
+    </figure>
+
+    <main class="article">
+      <h1>Los Angeles Fun Guide 05: From Mouth-Watering Snacks to Famous Chef's Cuisine</h1>
+
+      <p class="location">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            fill="currentColor"
+            d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+          />
+        </svg>
+        <span>Los Angeles</span>
+      </p>
+
+      <p class="subtitle"></p>
+      <p class="description"></p>
+
+      <aside class="brief">
+        <p class="brief-title">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M7 3h10a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Zm1 4v2h8V7H8Zm0 4v2h8v-2H8Zm0 4v2h5v-2H8Z"
+            />
+          </svg>
+          Brief
+        </p>
+        <p></p>
+      </aside>
+
+      <section class="content" aria-labelledby="content-title">
+        <h2 id="content-title">Content</h2>
+        
+          <article class="section">
+            <div class="section-body">Diverse Los Angeles has created a diverse food scene, featuring creative restaurants run by celebrity chefs, viral Instagram hotspots, historic farmers' markets, and authentic flavors from around the world. You can eat your way from downtown all along the coastline, from street food carts to Michelin-starred establishments. If you're good at finding deals, you can also enjoy affordable delicious food!
+
+**Gathering Place of Delicious Snacks**
+
+**01 Century-Old Market: Central Market**
+
+The Grand Central Market, opened in 1917, is affectionately called "the kitchen" by locals. This historic traditional market is both a tourist attraction and paradise for foodies. With dozens of shops in this bohemian-style food city, vendors sell fresh produce, seafood, creative items, and street food from various countries.
+
+*[Image source: official website]*
+
+From Mexican tacos to Southeast Asian laksa, from Italian pasta to Japanese ramen, from sandwiches to donuts, from freshly squeezed juices to craft beers, the endless array of food stalls whets your appetite.
+The popular famous shops here include the internet-famous breakfast spot Eggslut, Sarita's Pupuseria (filming location for "La La Land"), Tacos Tumbras a Tomas (a popular Mexican taco stand), McConnell's Fine Ice Creams (an established ice cream shop), and more.
+Practical Information:
+Price per person: $-$$, approximately 3~30 USD
+Address: 317 S Broadway Los Angeles CA90013
+Opening hours: 8:00-21:00
+Official website: https://grandcentralmarket.com/
+Grand Central Market
+02 An Authentic Farmers Market: The Original Farmer's Market
+
+Located next to The Grove shopping center, the farmers market with fixed stalls (The Original Farmer's Market) has been operating for a full 90 years. In addition to serving as both a "wet market" and "grocery market," it also functions as a gathering place for snacks and delicacies, featuring farm-made cheese, handmade ice cream, freshly made chocolate, mulled wine in winter, and more.
+Image source: official website
+Here you can enjoy delicacies from various countries: Pampas Grill (all-you-can-eat Brazilian churrasco), Monsieur Marcel (French restaurant), authentic Du-par's Pie for traditional British pies, and the famous Trejo's Tacos Mexican taco chain, etc.
+Image source: official website
+▶Practical Information
+Average price per person: $-$$, 3~30 USD
+Address: 6333 W 3rd St Los Angeles CA90036
+Operating hours: Sunday to Thursday 10:00-20:00; Friday and Saturday 10:00-21:00
+Official website: https://farmersmarketla.com/
+Ten Popular Restaurant Recommendations
+01 Michelin Two-Star Seafood Restaurant: Providence
+Source image from official website
+
+Celebrity chef Michael Cimarusti creates award-winning dishes, consistently using sustainable wild seafood as ingredients. Each dish resembles a work of art with exquisite plating and flavors that leave diners praising it endlessly. Among the most impressive signature dishes are cigar beef rolls, sea urchin custard eggs, and more.
+
+Source image from official website
+
+Practical Information:
+Average price: $$$$ (286 USD)
+Address: 5955 Melrose Ave, Los Angeles, CA 90038
+Official website: https://providencela.com/
+
+Providence
+
+Providence is a restaurant specializing in local cuisine. Its interior design features rustic elegance; while not luxurious, it creates a comfortable and cozy atmosphere. Soft lighting establishes a pleasant and relaxed dining environment. The waitstaff wear well-fitted suits and appear energetic and enthusiastic. The restaurant specializes in seafood and steak dishes, led by the renowned James Beard award-winning chef. Menu options include:
+
+1) Prix fixe - 85 USD per person, allowing guests to choose one appetizer, one main course, and one dessert each.
+Or choose several dishes as a set menu from the restaurant, with three options in total (5-course series at $105 per person; 9-course at $130 per person; Chef's tasting menu offers 13 courses at $175 per person). Of course, there are also specialty dish sets, all featuring the most luxurious cuisine from this restaurant.
+
+02 A French Restaurant with Viral Brunch: Republique
+
+Republique (Republic) Restaurant has a strong historical atmosphere. The century-old building it occupies was originally Charlie Chaplin's office and is now transformed into a French restaurant with a bakery, café, and bar at the front, followed by a formal dining area at the back. With its high glass roof, vintage long tables and chairs, plus Los Angeles's pleasant weather, this restaurant is ideal for photography.
+
+Image source from official website
+
+This place offers an extremely popular viral Brunch. The food is healthy and fresh with many bread options to choose from. The Kimchi Fried Rice that every table orders is perfect for Asian tastes; even Jay Chou has come to try it. Note that Brunch cannot be reserved in advance; it's best to arrive by 10 AM to queue.
+
+Image source from theinfatuation.com
+▶Practical Information
+Per person: $$, $39
+Address: 624 S La Brea Ave Los Angeles CA 90036 
+Official website: https://republiquela.com/  
+République
+03 Super popular Italian restaurant in an old warehouse: Bestia
+The extremely popular Bestia is one of the top Italian restaurants in LA and is reportedly among the hardest to book. Located in the Arts District, it was renovated from an old factory warehouse. The restaurant's name is painted on the exterior wall in white paint only. With a hard-edged style, it showcases modern Italian spatial art.
+Image source: studiounltd.com
+The signature Roasted Barrow Bone is almost ordered by every table. Chewy spinach gnocchi mixed with marrow oil tastes delicious. Excellent Italian pasta and pizza of above-average quality will never disappoint diners.
+Image from the internet
+The chef also owns another highly popular sister restaurant called Bavel, specializing in creative Middle Eastern cuisine. Located in the same art district, it is equally worth trying.
+
+▶ Practical Information
+Average Price: $$$, $69
+Address: 2121 E 7th Pl, Los Angeles, CA 90021
+Official Website: https://bestiala.com/
+
+Bestia Restaurant
+- One of the best Italian restaurants in Los Angeles, offering a culinary feast where creativity and classics coexist.
+- Situated in the art district, transformed from an old warehouse with red-and-white brick walls that still retain their industrial era charm.
+- Features the chef's signature cured meats and handmade pasta, creative pizzas, and exquisite Italian desserts that will dazzle your taste buds.
+- Prices are on the higher side; a service fee is added at checkout. Weekend dinner reservations should be made several days in advance.
+
+150-Year-Legend Neapolitan Pizza Shop: L'Antica Pizzeria Da Michele
+As a historic classic restaurant in Hollywood, L'Antica Pizzeria Da Michele boasts 150 years of history. Specializing in traditional wood-fired Neapolitan pizza, it is the birthplace of Margherita pizza and attracts food lovers from around the world to visit.
+Image source: napolitoday.it
+
+Many celebrity photos hang on the walls of this restaurant - Julia Roberts, Jude Law, Maradona, and more have all dined here. You can even take a photo by the pizza oven for a souvenir. The signature Margherita pizza is a must-order when you enter - with thin, crispy dough, the perfect ratio of cheese to tomato sauce, topped with fresh basil leaves, it's absolutely delicious!
+
+Image source: official website
+
+Practical Information
+Per person: $$$, $50
+Address: 1534 N McCadden Pl, Los Angeles, CA 90028
+Website: https://damicheleusa.com/
+
+05 Country-style Vegetarian Restaurant: The Butcher's Daughter
+
+Although the name suggests a butcher's establishment, this is actually a completely vegetarian restaurant. The interior is filled with warmth and greenery, featuring Moroccan-inspired design. The Venice location has a refreshing green and white color scheme paired with natural wood tables and chairs, creating an uplifting atmosphere.
+
+Image source: tryotter.com
+Not in the mood for meat today? Then try some vegetarian dishes! The restaurant has gone viral from New York all the way to Los Angeles, offering fresh and delicious food with rich textures and incredibly creative dishes that are popular with health-conscious and picky diners... avocado toast, fruit salad, Thai rice noodles... you'll feel relaxed without guilt after a whole day of eating.
+Picture sourced from official website
+▶Practical Information
+Average price per person: $$, $30
+Address: 1205 Abbot Kinney Blvd Venice CA 90291 (Venice location)
+8755 Melrose Ave West Hollywood CA 90069 (West Hollywood location, opened September 2022) 
+Official website: https://www.thebutchersdaughter.com/la/ 
+06 California-style Bar and Restaurant: Horses
+Located on Sunset Boulevard, Horses was formerly the legendary private club Ye Coach & Horses, a favorite haunt among Hollywood celebrities. After several changes of ownership, it returned at the end of 2021 under chef Liz Johnson and Will Aghajanian.
+Image from la.eater.com
+
+New Horses exudes California bistro charm, featuring three uniquely decorated dining areas that are both artistic and beautiful. The bar's composite wood counter adds a rich texture, while signature roasted chicken, endive Caesar salad, burger fries, and reinvented cocktails all make mouths water.
+
+Image from la.eater.com
+
+▶ Practical Information
+Average price: $$$, $75 per person
+Address: 7617 Sunset Blvd Los Angeles CA 90046
+Website: https://www.horsesla.com/
+
+07 Authentic Southern Italian Cuisine: Ospi
+
+Dedicated to bringing the best of southern Italy's cuisine to Los Angeles, top chef Jackson Kalb opened this Ospi restaurant in Venice, Los Angeles. The menu blends half classic and half modern Italian style.
+
+Image from official website
+The restaurant's homemade pasta and pizza are both authentic. The signature is Romana Tonda style pizza; you can try the thin-crust pizza with pepperoni, pineapple, jalapeño, and tomato sauce, which is highly recommended by the chef.
+
+Image from official website
+
+▶ Practical Information
+Average price: $$$, $60
+Address: 2025 Pacific Ave Venice CA 90291
+Official website: https://www.ospivenice.com/
+
+Section 8: Michelin-recommended Mexican snacks - Mariscos Jalisco
+Mexican tacos are LA's iconic street food; the taco carts selling them are also a signature streetside sight, and Mariscos Jalisco's seafood tacos and various Mexican snacks are quite famous in Los Angeles.
+
+Image from thrillist.com
+
+Their signature shrimp taco is worth visiting specifically for: a fried tortilla wrapped with shrimp, mashed potatoes, vegetables, topped with large slices of avocado, and drizzled with salsa sauce - extremely delicious when eaten in one bite.
+▶ Practical Information
+Average per person: $, 10 dollars
+Address: 3040 E Olympic Blvd Los Angeles CA 90023
+
+10 Legendary Late-Night Taco Food Truck: Leo's Tacos
+Leo's Tacos is another wildly popular taco food truck in Los Angeles. This shop typically operates only at night and early morning hours. It is famous for its $2 Al pastor tacos, featuring salty-sweet roasted pork on two round corn tortillas with refreshing pineapple to cut the grease, topped with various flavors of salsa sauce that leave you wanting more.
+
+▶ Practical Information
+Average per person: $, 2 dollars
+Address: Chain locations, main store at 1515 S La Brea Ave Los Angeles CA 90019
+
+10 Famous Vegetarian Hot Dog Restaurant: Earle's on Crenshaw
+Two brothers spent over 30 years evolving from a hot dog cart to a fast food restaurant. They advocate for a healthy lifestyle, transforming high-calorie American fast food into vegetarian options that have been widely embraced by diners, even attracting coverage from a NETFLIX documentary.
+At Earle's on Crenshaw, you can heartily enjoy vegan burgers, vegan hot dogs, and veggie chili fries, served with whole wheat or gluten-free bread - indulging in classic American cuisine without any guilt.
+Source photo courtesy of the official website
+▶ Practical Information
+Average price: $10
+Address: 3864 Crenshaw Blvd, Los Angeles, CA 90008, USA
+Official website: https://www.earlesrestaurant.com/menu
+Dine L.A. Value Guide
+Want to eat at Michelin-starred restaurants at ultra-low prices and experience dining halls that are usually out of reach? Then dont miss the annual two-time Los Angeles Food Festival (DineL.A.) event, which lasts about two weeks each time. During this period, hundreds of Los Angeles restaurants will offer DineL.A. menus with super-value set meals for diners to enjoy. Most participating DineL.A. restaurants charge $15-35 for lunch and $25-65 for dinner, with a small portion exceeding $65 - compared to the restaurant's regular prices, getting in is a win!
+You can view all participating restaurants via https://www.discoverlosangeles.com/dinela, remember to book in advance as spots are limited.</div>
+          </article>
+        
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="4505 Burgers & BBQ (705 Divisadero St.)" />
+    <title>San Francisco Nopa Food Guide</title>
+    <style>
+      :root {
+        --paper: #f5f1eb;
+        --ink: #163d36;
+        --body: #3f3a34;
+        --muted: #8a8379;
+        --line: #ddd5ca;
+        --accent: #d9782f;
+        --white: #fffaf4;
+        --shadow: 0 22px 70px rgba(28, 25, 20, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        line-height: 1.72;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .hero {
+        min-height: clamp(330px, 48vw, 560px);
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        padding: clamp(28px, 7vw, 70px) clamp(24px, 8vw, 76px);
+        background: #28463f;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.12)),
+          url("https://p1-q.mafengwo.net/s15/M00/5C/B3/CoUBGV3YXoqAIW3OAAIHqi0Dsg802.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F90");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .heroInner {
+        position: relative;
+        width: min(900px, 100%);
+        color: #ffffff;
+      }
+
+      .heroLocation {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 24px;
+        color: rgba(255, 255, 255, 0.78);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .heroLocation svg {
+        width: 17px;
+        height: 17px;
+        color: #f0a45f;
+      }
+
+      h1 {
+        max-width: 880px;
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(30px, 4.8vw, 54px);
+        font-weight: 900;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .brief {
+        width: min(760px, 100%);
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 18px;
+        color: #5a5148;
+        font-size: clamp(17px, 1.9vw, 20px);
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.58;
+      }
+
+      .articleWrap {
+        width: min(900px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: clamp(42px, 6vw, 68px) 0 72px;
+      }
+
+      .content {
+        width: min(760px, 100%);
+        color: var(--body);
+        font-size: clamp(16px, 1.8vw, 18px);
+        line-height: 1.5;
+      }
+
+      .content p {
+        margin: 0 0 0.5em;
+      }
+
+      .content h2,
+      .content h3,
+      .content h4 {
+        margin: 46px 0 18px;
+        color: var(--ink);
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+
+      .content h2 {
+        font-size: clamp(28px, 4vw, 38px);
+      }
+
+      .content h3 {
+        font-size: clamp(23px, 3vw, 30px);
+      }
+
+      .content ul,
+      .content ol {
+        margin: 0 0 30px;
+        padding-left: 28px;
+      }
+
+      .content li {
+        margin: 8px 0;
+      }
+
+      .content blockquote {
+        margin: 34px 0;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 20px;
+        color: #5a5148;
+        font-style: italic;
+      }
+
+      .content img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 42px 0 12px;
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+      }
+
+      .content figure {
+        margin: 42px 0;
+      }
+
+      .content figure img {
+        margin: 0 0 12px;
+      }
+
+      .content figcaption {
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .backLink {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 46px;
+        border-top: 1px solid var(--line);
+        padding-top: 28px;
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.18em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .backLink:hover {
+        color: var(--accent);
+      }
+
+      @media (max-width: 720px) {
+        .hero {
+          min-height: 420px;
+          padding: 30px 24px;
+        }
+
+        .articleWrap {
+          width: min(100% - 28px, 900px);
+          padding-bottom: 48px;
+        }
+
+        .content {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="heroInner">
+        <p class="heroLocation">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+            />
+          </svg>
+          <span>Los Angeles</span>
+        </p>
+        <h1>San Francisco Nopa Food Guide</h1>
+      </div>
+    </header>
+
+    <main class="articleWrap">
+      
+      <p class="brief">4505 Burgers & BBQ (705 Divisadero St.)</p>
+      
+
+      <article class="content">
+        
+          <p>Nopa is an abbreviation for "north of the panhandle," a northern neighborhood located east of Golden Gate Park. Its central location in the city makes it an ideal destination for tourists to experience delicious food. Today, we have carefully selected three highly-rated restaurants in Nopa that you must visit if you ever get the chance to come to San Francisco!</p><p><br></p><p>                                        4505 Burgers &amp; BBQ (705 Divisadero St.)</p><p><br></p><p>                    4505 Burgers &amp; BBQ is a very lively barbecue restaurant that serves delicious homemade food and stays open late into the night. Smoked meats are the signature dishes at this barbecue restaurant. Thick pork chops, short ribs, and chicken, paired with french fries, salads, pickles, and warm buttery Parker House rolls, make your mouth water.</p><p><br></p><p>Of course, there are also various vegetables available for you to choose from - an oat and egg sandwich topped with grilled bell peppers, cheese, and buttered bread offers another delicious option. Of course, most tourists are still meat lovers. This is one of the few genuine wood-fired BBQs in San Francisco, where chefs source meats daily from local farmers, making it definitely worth a visit to try.</p>
+</p><p><br></p><p>                                        Barrel Head Brewhouse (1785 Fulton St.)</p><p><br></p><p>                    This North Park beer bar boasts a rich history and excellent reputation, offering over 40 types of beers and cocktails to choose from. At noon, they serve an unlimited Mimosa special ($20 per person, available daily until 2:30 PM), catering perfectly to lunchtime diners' needs. At Barrel Head Brewhouse, you must try their Guest Beer - a unique blend of IPA and strong black beer that can't be found anywhere else.</p><p><br></p><p>They also offer classic American brunch items -- such as bacon, scrambled eggs, yeast bread or French toast with strawberries, whipped cream, and jam. If you come on Thursday evening (closing at 9 PM), you'll enjoy a $2 discount on select beers.</p><p><br></p><p>                                        Brenda's Meat and Three (919 Divisadero St.)</p><p><br></p><p>                    Brenda Buenviaje was born and raised in New Orleans, and she innovatively incorporated modern elements into traditional Southern style, creating Brenda's
+s an excellent delicacy of Meat and Three. Brenda's Meat and Three's culinary secret is quite simple: Brenda selects one meat and three sides from her ever-changing home-style dishes. Fried chicken, fried fish, crispy thin-cut steak, accompanied by a small scoop of gravy - absolutely guaranteed to make you rave.</p><p><br></p><p>Be sure to try the beets here and New Orleans-style fried pastries, which are sweetened with chocolate or sweet cinnamon honey butter, or seasoned with chili pepper, green onions, and sharp cheddar cheese.</p><p><br></p><p>PC: @4505bbq, @ithinkiken, @infatuation_sf, @galisegal, @kristina_renee, @simplicity4554</p>
+        
+
+        <a class="backLink" href="list-1.html">← Back to Los Angeles</a>
+      </article>
+    </main>
+  </body>
+</html>

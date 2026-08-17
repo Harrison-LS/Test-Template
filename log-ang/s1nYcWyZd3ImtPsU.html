@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <title>Los Angeles Ocean View Restaurant | Oysters, Sea Bass & Whiskey, Sipping Drinks While Feeling the Sea Breeze</title>
+    <style>
+      :root {
+        --paper: #f5f1eb;
+        --ink: #163d36;
+        --body: #3f3a34;
+        --muted: #8a8379;
+        --line: #ddd5ca;
+        --accent: #d9782f;
+        --white: #fffaf4;
+        --shadow: 0 22px 70px rgba(28, 25, 20, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        line-height: 1.72;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .hero {
+        min-height: clamp(330px, 48vw, 560px);
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        padding: clamp(28px, 7vw, 70px) clamp(24px, 8vw, 76px);
+        background: #28463f;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.12)),
+          url("");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .heroInner {
+        position: relative;
+        width: min(900px, 100%);
+        color: #ffffff;
+      }
+
+      .heroLocation {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 24px;
+        color: rgba(255, 255, 255, 0.78);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .heroLocation svg {
+        width: 17px;
+        height: 17px;
+        color: #f0a45f;
+      }
+
+      h1 {
+        max-width: 880px;
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(30px, 4.8vw, 54px);
+        font-weight: 900;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .brief {
+        width: min(760px, 100%);
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 18px;
+        color: #5a5148;
+        font-size: clamp(17px, 1.9vw, 20px);
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.58;
+      }
+
+      .articleWrap {
+        width: min(900px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: clamp(42px, 6vw, 68px) 0 72px;
+      }
+
+      .content {
+        width: min(760px, 100%);
+        color: var(--body);
+        font-size: clamp(16px, 1.8vw, 18px);
+        line-height: 1.5;
+      }
+
+      .content p {
+        margin: 0 0 12px;
+      }
+
+      .content h2,
+      .content h3,
+      .content h4 {
+        margin: 46px 0 18px;
+        color: var(--ink);
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+
+      .content h2 {
+        font-size: clamp(28px, 4vw, 38px);
+      }
+
+      .content h3 {
+        font-size: clamp(23px, 3vw, 30px);
+      }
+
+      .content ul,
+      .content ol {
+        margin: 0 0 30px;
+        padding-left: 28px;
+      }
+
+      .content li {
+        margin: 8px 0;
+      }
+
+      .content blockquote {
+        margin: 34px 0;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 20px;
+        color: #5a5148;
+        font-style: italic;
+      }
+
+      .content img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 42px 0 12px;
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+      }
+
+      .content figure {
+        margin: 42px 0;
+      }
+
+      .content figure img {
+        margin: 0 0 12px;
+      }
+
+      .content figcaption {
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .backLink {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 46px;
+        border-top: 1px solid var(--line);
+        padding-top: 28px;
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.18em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .backLink:hover {
+        color: var(--accent);
+      }
+
+      @media (max-width: 720px) {
+        .hero {
+          min-height: 420px;
+          padding: 30px 24px;
+        }
+
+        .articleWrap {
+          width: min(100% - 28px, 900px);
+          padding-bottom: 48px;
+        }
+
+        .content {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="heroInner">
+        <p class="heroLocation">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+            />
+          </svg>
+          <span>Los Angeles</span>
+        </p>
+        <h1>Los Angeles Ocean View Restaurant | Oysters, Sea Bass & Whiskey, Sipping Drinks While Feeling the Sea Breeze</h1>
+      </div>
+    </header>
+
+    <main class="articleWrap">
+      
+
+      <article class="content">
+        
+          <p>Living in sunny Los Angeles, how can you miss the experience of enjoying sunshine by the seaside, feeling the ocean breeze, and savoring delicious food?</p><p><br></p><p>Eating alone as a lone wolf? Friends visiting Shanji Village - where to take them for a meal? Parents coming to town - still wondering where to eat that&#39;s comfortable with a nice environment?</p><p><br></p><p>Of course, go relax by the beach!</p><p><br></p><p>Today, our little team has compiled LA&#39;s ocean-view restaurant guide for 2018!</p><p>Sorted from low to high price.</p><p><br></p><p>1. Whiskey Red&#39;s Restaurant $$</p><p>Rosemary roasted chicken, fresh oysters of the season, limited-time champagne brunch every Sunday from 9am-2pm, whiskey chicken wings...</p><p>Escape the city&#39;s hustle and bustle and enjoy a hearty brunch on a weekend morning!</p><p>This American small shop has a rich menu that can definitely satisfy your picky taste buds. With its relaxed and casual dining atmosphere, this restaurant is included in LA&#39;s Top 17 Scenic Restaurants.</p><p>Address: 13813 Fiji Way, Marina Del Rey, CA 90292</p><p><br></p><p>2. ONYX Rooftop Bar</p><p>This rooftop bar is located at the Shangri-La Hotel. As soon as you sit down, you can take in views of the Santa Monica Beach from above.</p><p>Friends who&#39;ve tried it are all choosing whiskey and cocktails. After 10 PM there are many people and service is slower. Suggest enjoying a drink at sunset or after work to relax, then moving on to another venue~</p><p><br></p><p>Address: 1019, 1301 Ocean Ave, Santa Monica, CA 90401</p><p>3. The Venice Whaler</p><p>Seafood🦐, beer🍺, cocktails🍸. Located by Venice Beach, this American restaurant is a favorite choice for many LA locals. The reputation of their various mixed drinks, beers, and white wines surpasses the seafood. Rated as one of the top four restaurants in Los Angeles area for best Bloody Marys.</p><p>Address: 10 Washington Blvd, Venice, CA 90292</p><p>4. Duke&#39;s Malibu $$</p><p>A scenic yet low-key Hawaiian-style small spot with a relaxed summer atmosphere near Malibu Beach, perfect for catching up with friends over the weekend.</p><p>⚠️ Note: Best to make reservations in advance. This restaurant requires you to accept $6 valet parking service (not including tip), so please choose your parking location carefully.</p><p>Address: 21150 Pacific Coast Hwy, Malibu, CA 90265</p><p>5. Malibu Farm Restaurant $$$</p><p>Malibu Farm is divided into a restaurant and cafe section, located at the entrance and far end of the marina respectively. Claimed to have the best ocean view in Malibu Beach, this restaurant focuses on healthy organic ingredients from farm-to-table. It gets quite crowded at night, so I recommend visiting during the day. The Cafe offers an even better extended coastal scenery! Recommended dishes: salmon salad and Vegan Coconut Bowl.</p><p>Address: 23000 Pacific Coast Hwy, Malibu, CA 90265</p><p>6. The Loft $$$</p><p>Delicious food! Ocean view! Music!</p><p><br></p><p>The Loft is a low-key American restaurant located within the Montage Hotel. Since fewer people know about it, the atmosphere is elegant. During meals there are piano performances bringing relaxed and pleasant music. It&#39;s one of the niche ocean-view restaurants in Los Angeles worth trying.</p><p>Address: 30801 Coast Hwy, Laguna Beach, CA 92651</p><p>7. Water Grill $$$</p><p>One of Santa Monica&#39;s top ten restaurants, this place boasts an excellent location right next to Santa Monica Beach. Even with many tourists, the service is wonderful. Visitors all say the seafood is crisp and fresh, reasonably priced, and even the oysters are perfectly shucked!</p><p>Address: 1401 Ocean Ave, Santa Monica, CA 90401</p><p>Water Grill- Los Angeles</p><p>·Water Grill is located in LA Downtown, specializing in seafood and traditional American cuisine, ranking highly on various food lists.</p><p>·Recommended dishes: Lobster Bisque, Wild Pacific swordfish, Caramel bread pudding, etc.</p><p>·Many locals visit; almost always fully booked. Recommend reserving in advance via the restaurant&#39;s website.</p><p>·There are five locations, with another highly popular branch situated right on Santa Monica Beach.</p><p><br></p><p>8. 1 Pico $$$</p><p>Friends come to Mountain Chicken Village for fun but don&#39;t know where to take them for a meal?</p><p>This should be the right choice. It&#39;s a California-style cocktail restaurant located right next to Santa Monica Beach—low-key yet sophisticated. Perfect for having dinner after a beach walk. Enjoying drinks with a sea breeze is extremely pleasant.</p><p><br></p><p>Address: 1 Pico Blvd, Santa Monica, CA 90405</p><p><br></p><p>*** Del Rey $$$</p><p>A restaurant with excellent reputation, known for visually stunning dishes and warm atmosphere, beautifully plated, very convenient parking—perfect for upscale company dinners and gatherings with friends.</p><p><br></p><p>Address: 4451 Admiralty Way, Marina Del Rey, CA 90292</p><p><br></p><p>Cafe del Rey</p><p>***</p><p><br></p><p>Price range: ¥198 - ¥510 ($31-$80 USD)</p><p><br></p><p>10. Geoffrey&#39;s Malibu $$$</p><p>This legendary &quot;internet celebrity restaurant&quot; on the West Coast—one of the top proposal locations—has been visited by many celebrities since last century, including Marilyn Monroe and President Kennedy, to today&#39;s Kardashians and supermodel Kendall Jenner. It has built a strong reputation through brunch and comprehensive Malibu beach views with romantic scenery. Visitors say portions are generous; the sea bass and lemon bars are exceptional. Some believe the view is more appealing than the food, and service is average.</p><p>Tips:</p><p>⚠️ Note: It&#39;s recommended that visitors book in advance. This restaurant offers valet parking service, which guests find very convenient.</p><p>Address: 27400 Pacific Coast Hwy, Malibu, CA 90265</p><p><br></p><p>11. Moonshadows Malibu $$$</p><p>Dining at this restaurant always feels peaceful and relaxing. Enjoying seafood while watching the golden sunset over Malibu Beach - you couldn&#39;t be happier. Highly recommend the lobster noodles and Tuna tartare - smooth and delicious. Suggest arriving early for dinner to avoid peak hours, and you can even secure a good spot to watch the sunset.</p><p>Address: 20356 Pacific Coast Hwy, Malibu, CA 90265</p><p><br></p><p>12. Nobu Malibu $$$$</p><p>Nobu Malibu $$$$</p><p>22706 Pacific Coast Hwy, Malibu, CA 90265</p><p>Compared to the bustling atmosphere of Santa Monica, enjoying delicious food while quietly listening to the waves at Malibu Beach is a wonderful choice. This is Nobu, an upscale Japanese restaurant with branches on both coasts as well as in Beijing and Hong Kong. Besides sushi, you can see various celebrities here: Maria Carey who lost weight, youK and his girlfriend Stella, Gal Gadot of Wonder Woman...</p><p><br></p><p>Nobu&#39;s Omakase is very classic - fresh and crisp seafood, beef that is fatty but not greasy. If you arrive early, you can also take a stroll by the beach to watch the sunset.</p><p><br></p><p>Address: 22706 Pacific Coast Hwy, Malibu, CA 90265 Nobu Malibu</p><p>If you like us and don&#39;t know where to find the latest discount information, open your phone WeChat search: Eater&#39;s Squad Map App - master all of America right in your hand!</p>
+        
+
+        <a class="backLink" href="list-1.html">← Back to Los Angeles</a>
+      </article>
+    </main>
+  </body>
+</html>

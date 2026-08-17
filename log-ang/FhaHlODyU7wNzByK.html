@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="CityPass: 5 items" />
+    <title>Buy a Pass and Explore San Francisco</title>
+    <style>
+      :root {
+        --paper: #f5f1eb;
+        --ink: #163d36;
+        --body: #3f3a34;
+        --muted: #8a8379;
+        --line: #ddd5ca;
+        --accent: #d9782f;
+        --white: #fffaf4;
+        --shadow: 0 22px 70px rgba(28, 25, 20, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        line-height: 1.72;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .hero {
+        min-height: clamp(330px, 48vw, 560px);
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        padding: clamp(28px, 7vw, 70px) clamp(24px, 8vw, 76px);
+        background: #28463f;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.12)),
+          url("https://p1-q.mafengwo.net/s12/M00/F4/DC/wKgED1u7_EOAFTZYAAGWSO86otc25.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F90");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .heroInner {
+        position: relative;
+        width: min(900px, 100%);
+        color: #ffffff;
+      }
+
+      .heroLocation {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 24px;
+        color: rgba(255, 255, 255, 0.78);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .heroLocation svg {
+        width: 17px;
+        height: 17px;
+        color: #f0a45f;
+      }
+
+      h1 {
+        max-width: 880px;
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(30px, 4.8vw, 54px);
+        font-weight: 900;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .brief {
+        width: min(760px, 100%);
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 18px;
+        color: #5a5148;
+        font-size: clamp(17px, 1.9vw, 20px);
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.58;
+      }
+
+      .articleWrap {
+        width: min(900px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: clamp(42px, 6vw, 68px) 0 72px;
+      }
+
+      .content {
+        width: min(760px, 100%);
+        color: var(--body);
+        font-size: clamp(16px, 1.8vw, 18px);
+        line-height: 1.5;
+      }
+
+      .content p {
+        margin: 0 0 0.5em;
+      }
+
+      .content h2,
+      .content h3,
+      .content h4 {
+        margin: 46px 0 18px;
+        color: var(--ink);
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+
+      .content h2 {
+        font-size: clamp(28px, 4vw, 38px);
+      }
+
+      .content h3 {
+        font-size: clamp(23px, 3vw, 30px);
+      }
+
+      .content ul,
+      .content ol {
+        margin: 0 0 30px;
+        padding-left: 28px;
+      }
+
+      .content li {
+        margin: 8px 0;
+      }
+
+      .content blockquote {
+        margin: 34px 0;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 20px;
+        color: #5a5148;
+        font-style: italic;
+      }
+
+      .content img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 42px 0 12px;
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+      }
+
+      .content figure {
+        margin: 42px 0;
+      }
+
+      .content figure img {
+        margin: 0 0 12px;
+      }
+
+      .content figcaption {
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .backLink {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 46px;
+        border-top: 1px solid var(--line);
+        padding-top: 28px;
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.18em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .backLink:hover {
+        color: var(--accent);
+      }
+
+      @media (max-width: 720px) {
+        .hero {
+          min-height: 420px;
+          padding: 30px 24px;
+        }
+
+        .articleWrap {
+          width: min(100% - 28px, 900px);
+          padding-bottom: 48px;
+        }
+
+        .content {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="heroInner">
+        <p class="heroLocation">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+            />
+          </svg>
+          <span>Los Angeles</span>
+        </p>
+        <h1>Buy a Pass and Explore San Francisco</h1>
+      </div>
+    </header>
+
+    <main class="articleWrap">
+      
+      <p class="brief">CityPass: 5 items</p>
+      
+
+      <article class="content">
+        
+          <p>There are countless ways to explore San Francisco - do whatever you want!</p><p>You can visit in one day, or stay for a month or two and still won't get tired of it; that's just how magical this city is.</p><p>When talking about the most cost-effective way to play, when not following a group tour in a hurry, each city's CityPass is also a good choice.</p><p><br></p><p>To say within the US not every city has CityPass, currently there are 13 cities providing CityPass. So what exactly is CityPass? Let's explain!</p><p>CityPass is a relatively magical existence, recommending travelers if the city you're going to has CityPass, definitely buy it don't miss out! Why? Because both saves money and saves time, saving money is unquestionable, how about saving time? Having CityPass at many attractions where queues are needed is equivalent to you holding a VIP card, having priority rights to enter, or standing in shorter lines.</p><p><br></p><p>Today we'll explain in detail exactly how to use San Francisco's CityPass.</p><p>(For more details refer to the official website info 👉***)</p><p><br></p><p>San Francisco's CityPass comes in two types, one has fixed five contents, where the last one can choose between two options, the first four are all fixed; another type is also called C3, it's a more humanized mode of San Francisco's CityPass, meaning giving 8 choice items, tourists can select 3 to play from within based on their own needs.</p>
+</p><p><br></p><p>
+Let's first talk about the first fixed five-item CityPass. The CityPass can be purchased at the official website, or at designated local vendors such as cable car ticket offices or ticket counters for attractions included in the CityPass. Personally, I recommend buying from the official website and planning your itinerary in advance.
+</p><p><br></p><p>
+CityPass: 5 items
+</p><p><br></p><p>
+Let's first talk about the first fixed five-item CityPass. The CityPass can be purchased at the official website, or at designated local vendors such as cable car ticket offices or ticket counters for attractions included in the CityPass. Personally, I recommend buying from the official website and planning your itinerary in advance.
+</p><p><br></p><p>
+San Francisco's CityPass includes five items, namely:
+</p><p>1. Three days of unlimited rides on cable cars and Muni buses</p><p>2. California Academy of Sciences ticket</p><p>3. Battleship tour</p><p>4. Fisherman's Wharf Aquarium ticket</p><p>5. Choose one ticket: either Exploratorium admission or SFMOMA admission</p><p><br></p><p>13-Day Cable Car and Muni Bus Passport</p><p>2California Academy of Sciences</p><p>3Blue &amp;</p>
+<p>Gold Fleet Bay Cruise Adventure</p><p>4 Aquarium of the Bay</p><p>5 Exploratorium OR San Francisco Museum of Modern Art — SFMOMA</p><p><br></p><p>CityPass prices are $89.00 for adults and $69.00 for children, saving more than 40% compared to buying these separately.</p><p><br></p><p>The way to use it is: at each attraction, show this small booklet. For example, if you're visiting the Science Museum today, when checking in, show the page inside corresponding to the Science Museum—it functions like a ticket entry. Just remember, CityPass tickets are single-use and provide basic entry only; special exhibitions are not included!</p><p><br></p><p>CityPass is worth mentioning for its cable car and bus passes. These must be kept safe because they appear as pages inside the booklet. Each pass can be used for three days, and ticket checking upon boarding relies entirely on this. With just one page, you can handle all your transportation needs—San Francisco's transit system is quite developed after all.</p>
+<p>Using the streetcar this way is the best deal, after all a single one-way ticket costs $7 per person. Think about it - riding round-trip for three days makes this absolutely worthwhile!</p><p><br></p><p>Recommended usage:</p><p><br></p><p>Day1</p><p>SFMOMA — Flower Field — Streetcar — Nine Curves Flower Street</p><p>(Bus can take you to transfer points)</p><p><br></p><p>Day2</p><p>Tech Museum — Japanese Garden Tea House (inside Golden Gate Park) — Golden Gate Park</p><p><br></p><p>Day3</p><p>Streetcar — Chocoholics Heaven — Fisherman's Wharf — Ship Tours — Aquarium</p><p><br></p><p>CityPass: 3 attractions</p><p><br></p><p>The second CityPass option, the "choose 3 from 8" mode.</p><p><br></p><p>Tourists can freely choose three attractions from the following eight options:</p>
+California Academy of Sciences</p><p>Blue &amp; Gold Fleet Bay Cruise Adventure</p><p>Aquarium of the Bay</p><p>Exploratorium</p><p>San Francisco Museum of Modern Art — SFMOMA</p><p>The Walt Disney Family Museum</p><p>Bay City Bike &amp; Parkwide Bike Rentals</p><p>de Young Museum + Legion of Honor</p><p><br></p><p>Please note that the 8-select-3 package does not include cable cars and buses. This is a point worth mentioning. On the other hand, this package does allow bicycle rentals, so if you enjoy getting fit while traveling, this package should be perfect for you.</p><p><br></p><p>The CityPass 8-select-3 pricing is $69.00 for adults and $54.00 for children, saving more than 30% compared to buying these tickets individually.</p><p><br></p><p>Recommended way to use it:</p><p><br></p><p>For attractions covered by CityPass that are conveniently located along your route, I recommend adding nearby sites to visit. This approach saves time while providing an enjoyable experience.</p>
+</p><p><br></p><p>Day 1</p><p>SFMOMA——Fairchild——Chinatown——Fisherman's Wharf</p><p><br></p><p>Day 2</p><p>Rent bikes——Golden Gate Park——de Young Museum + Legion of Honor</p>
+        
+
+        <a class="backLink" href="list-1.html">← Back to Los Angeles</a>
+      </article>
+    </main>
+  </body>
+</html>

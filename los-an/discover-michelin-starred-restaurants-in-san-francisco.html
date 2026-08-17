@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Which Michelin three-star restaurants are in San Francisco?" />
+    <title>Discover Michelin-Starred Restaurants in San Francisco</title>
+    <style>
+      :root {
+        --paper: #f5f1eb;
+        --ink: #163d36;
+        --body: #3f3a34;
+        --muted: #8a8379;
+        --line: #ddd5ca;
+        --accent: #d9782f;
+        --white: #fffaf4;
+        --shadow: 0 22px 70px rgba(28, 25, 20, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        line-height: 1.72;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .hero {
+        min-height: clamp(330px, 48vw, 560px);
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        padding: clamp(28px, 7vw, 70px) clamp(24px, 8vw, 76px);
+        background: #28463f;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.12)),
+          url("https://p1-q.mafengwo.net/s12/M00/CC/E1/wKgED1wkm-uADCzbAAM6sQu4Xh444.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F90");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .heroInner {
+        position: relative;
+        width: min(900px, 100%);
+        color: #ffffff;
+      }
+
+      .heroLocation {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 24px;
+        color: rgba(255, 255, 255, 0.78);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .heroLocation svg {
+        width: 17px;
+        height: 17px;
+        color: #f0a45f;
+      }
+
+      h1 {
+        max-width: 880px;
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(30px, 4.8vw, 54px);
+        font-weight: 900;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .brief {
+        width: min(760px, 100%);
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 18px;
+        color: #5a5148;
+        font-size: clamp(17px, 1.9vw, 20px);
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.58;
+      }
+
+      .articleWrap {
+        width: min(900px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: clamp(42px, 6vw, 68px) 0 72px;
+      }
+
+      .content {
+        width: min(760px, 100%);
+        color: var(--body);
+        font-size: clamp(16px, 1.8vw, 18px);
+        line-height: 1.5;
+      }
+
+      .content p {
+        margin: 0 0 0.5em;
+      }
+
+      .content h2,
+      .content h3,
+      .content h4 {
+        margin: 46px 0 18px;
+        color: var(--ink);
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+
+      .content h2 {
+        font-size: clamp(28px, 4vw, 38px);
+      }
+
+      .content h3 {
+        font-size: clamp(23px, 3vw, 30px);
+      }
+
+      .content ul,
+      .content ol {
+        margin: 0 0 30px;
+        padding-left: 28px;
+      }
+
+      .content li {
+        margin: 8px 0;
+      }
+
+      .content blockquote {
+        margin: 34px 0;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 20px;
+        color: #5a5148;
+        font-style: italic;
+      }
+
+      .content img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 42px 0 12px;
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+      }
+
+      .content figure {
+        margin: 42px 0;
+      }
+
+      .content figure img {
+        margin: 0 0 12px;
+      }
+
+      .content figcaption {
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .backLink {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 46px;
+        border-top: 1px solid var(--line);
+        padding-top: 28px;
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.18em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .backLink:hover {
+        color: var(--accent);
+      }
+
+      @media (max-width: 720px) {
+        .hero {
+          min-height: 420px;
+          padding: 30px 24px;
+        }
+
+        .articleWrap {
+          width: min(100% - 28px, 900px);
+          padding-bottom: 48px;
+        }
+
+        .content {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="heroInner">
+        <p class="heroLocation">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+            />
+          </svg>
+          <span>Los Angeles</span>
+        </p>
+        <h1>Discover Michelin-Starred Restaurants in San Francisco</h1>
+      </div>
+    </header>
+
+    <main class="articleWrap">
+      
+      <p class="brief">Which Michelin three-star restaurants are in San Francisco?</p>
+      
+
+      <article class="content">
+        
+          <p>In 2018, a total of 55 restaurants in the Bay Area received Michelin stars, one more than last year's 54, with 7 of them earning the honor of three-star Michelin restaurants.</p><p>Additionally, Michelin also rated three other regions in the United States, namely New York City, Chicago, and Washington D.C.</p><p>Every year when Michelin publishes a new guidebook, it re-rates restaurants.</p><p>Even those restaurants that have already been recognized with Michelin stars need to work tirelessly every year to maintain their status or seek higher star ratings;</p><p>However, for unfortunate restaurants that are demoted or removed from the list due to poor performance, it could be a devastating blow.</p><p><br></p><p>Which three-star restaurants in San Francisco?</p><p><br></p><p>San Francisco has 7 Michelin restaurants!</p><p>Three stars: "Exceptional cuisine and worth the journey,"</p><p>Nothing can deter your desire to taste it, truly extraordinary flavors.</p><p>Benu, San Francisco</p><p>Coi，San Francisco</p><p>Saison, San Francisco</p><p>Quince, San Francisco</p><p>The French Laundry, Wine Country</p><p>The Restaurant at Meadowood, Wine Country</p><p>Manresa, Peninsula，San Francisco</p><p><br></p><p>1. Benu｜Embracing diversity and pioneering its own path</p><p><br></p><p>Address: Benu - 22 Hawthorne St, San Francisco, CA 94105, USA</p><p>Phone: (415) 685-4860</p><p>Reservations: Book two months in advance; phone reservations accepted Monday through Saturday morning</p><p>In the United States, new American cuisine is as diverse as this nation itself, filled with various cultures and flavors.</p>
+<p>Embracing diverse influences, forging unique paths, and celebrating seasonal variety are all symbols of the vibrant culinary scene on the West Coast. Even self-created innovative cooking philosophies can be embraced by Californians who have always loved new things, as long as the dishes are delicious.</p><p><br></p><p> Benu is a quintessentially "California" example. Chef Corey Lee, an American of Korean descent who immigrated to the US at age five, has intimate knowledge of Chinese, Japanese, and Korean cuisines. Starting at 17, he received traditional refined French culinary training. After mastering all these skills, Benu was born, building on French cooking techniques while incorporating his own Asian elements, using California seasonal ingredients to blend multiple cooking methods into a highly distinctive culinary philosophy.</p><p><br></p><p> So at Benu you experience atypical Asian cuisine prepared through Western cooking techniques. It can also be said that these Asian delicacies are designed with modern American taste preferences in mind. From presentation to flavor, what kind of surprises await - isn't it already fascinating just thinking about it?</p><p><br></p><p> Benu</p><p><br></p><p> 2. Saison | San Francisco's Most Expensive Japanese Restaurant</p><p><br></p><p> Address: Saison - 178 Townsend St, San Francisco, CA 94107, USA</p><p>Phone: (415) 828-7990</p><p>Reservation: Call 90 days in advance, or book through OpenTable</p><p>Saison's focus on Japanese cuisine made its membership in the three-star club hardly surprising. Its location in SoMa District makes it equally unsurprising that it is called San Francisco's most expensive restaurant.</p>
+From its name one can guess that "Saison" is certainly related to season, and it's also the most highly-rated seasonal restaurant in America.</p><p><br></p><p>                    The restaurant's environment is as poetic as poetry itself, even the Kashmiri shawls specially prepared for customers who are cold come at a premium price, not to mention how carefully selected ingredients and designed menus. In the open kitchen, you can see under head chef Joshua Skenes' leadership, the cooking team completing new dishes in an orderly and planned rhythm.</p><p><br></p><p>                    By the way, the chef isn't of Japanese descent and doesn't favor traditional white attire. This unconventional American approach demystifies the Michelin three-star establishment by eliminating formal dress expectations. Guests can simply arrive, watch the culinary team prepare meals, and begin dining without any restrictions.</p><p><br></p><p>                                        3. Quince｜From daughter-in-law to matriarch, a new three-star</p><p><br></p><p>                    Address: Quince - 470 Pacific Ave, San Francisco, CA 94133, USA</p><p>Phone: (415) 775-8500</p><p>Website: ***</p><p>Reservations: Call two months in advance or book through the official website.</p>
+</p><p><br></p><p>                    Modern Italian plus French fusion with California flavors, Quince has been at the Michelin two-star position since its opening in 2003 and finally achieved success last year by becoming a member of the three-star club. The restaurant was transformed from a 1907 red brick warehouse at Jackson Square through restoring Art Deco style, creating a stylish and elegant atmosphere. It features a circular lounge and wine cellar, collecting fine wines from around the world.</p><p><br></p><p>                    Ingredients are mostly seasonal, with Chef Michael Tusk sourcing from multiple farmers markets. Herbs and plants come from the restaurant's rooftop garden, cheese is sourced from local farms, and fruit is delivered fresh daily.</p><p>Among the three-star clubs, newly promoted Quince has one of the most affordable prices - the standard Prix Fixe Menu is only $220 before tax and tip. Regarding Quince's promotion, Michelin International Director Michael Ellis stated that because Chef Michael Tusk pays great attention to detail and carefully handles every small dish with the ability to turn ordinary into extraordinary, creating dining experiences beyond expectations for guests, so it successfully achieved this ranking.</p>
+        
+
+        <a class="backLink" href="list-1.html">← Back to Los Angeles</a>
+      </article>
+    </main>
+  </body>
+</html>

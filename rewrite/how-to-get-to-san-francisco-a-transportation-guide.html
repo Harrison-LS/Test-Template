@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Go to San Francisco" />
+    <title>How to Get to San Francisco: A Transportation Guide</title>
+    <style>
+      :root {
+        --paper: #f5f1eb;
+        --ink: #163d36;
+        --body: #3f3a34;
+        --muted: #8a8379;
+        --line: #ddd5ca;
+        --accent: #d9782f;
+        --white: #fffaf4;
+        --shadow: 0 22px 70px rgba(28, 25, 20, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        line-height: 1.72;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .hero {
+        min-height: clamp(330px, 48vw, 560px);
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        padding: clamp(28px, 7vw, 70px) clamp(24px, 8vw, 76px);
+        background: #28463f;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.12)),
+          url("https://p1-q.mafengwo.net/s15/M00/39/74/CoUBGV4AF0mANdwWAAL2CuLZW9A26.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F90");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .heroInner {
+        position: relative;
+        width: min(900px, 100%);
+        color: #ffffff;
+      }
+
+      .heroLocation {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 24px;
+        color: rgba(255, 255, 255, 0.78);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .heroLocation svg {
+        width: 17px;
+        height: 17px;
+        color: #f0a45f;
+      }
+
+      h1 {
+        max-width: 880px;
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(30px, 4.8vw, 54px);
+        font-weight: 900;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .brief {
+        width: min(760px, 100%);
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 18px;
+        color: #5a5148;
+        font-size: clamp(17px, 1.9vw, 20px);
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.58;
+      }
+
+      .articleWrap {
+        width: min(900px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: clamp(42px, 6vw, 68px) 0 72px;
+      }
+
+      .content {
+        width: min(760px, 100%);
+        color: var(--body);
+        font-size: clamp(16px, 1.8vw, 18px);
+        line-height: 1.5;
+      }
+
+      .content p {
+        margin: 0 0 0.5em;
+      }
+
+      .content h2,
+      .content h3,
+      .content h4 {
+        margin: 46px 0 18px;
+        color: var(--ink);
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+
+      .content h2 {
+        font-size: clamp(28px, 4vw, 38px);
+      }
+
+      .content h3 {
+        font-size: clamp(23px, 3vw, 30px);
+      }
+
+      .content ul,
+      .content ol {
+        margin: 0 0 30px;
+        padding-left: 28px;
+      }
+
+      .content li {
+        margin: 8px 0;
+      }
+
+      .content blockquote {
+        margin: 34px 0;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 20px;
+        color: #5a5148;
+        font-style: italic;
+      }
+
+      .content img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 42px 0 12px;
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+      }
+
+      .content figure {
+        margin: 42px 0;
+      }
+
+      .content figure img {
+        margin: 0 0 12px;
+      }
+
+      .content figcaption {
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .backLink {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 46px;
+        border-top: 1px solid var(--line);
+        padding-top: 28px;
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.18em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .backLink:hover {
+        color: var(--accent);
+      }
+
+      @media (max-width: 720px) {
+        .hero {
+          min-height: 420px;
+          padding: 30px 24px;
+        }
+
+        .articleWrap {
+          width: min(100% - 28px, 900px);
+          padding-bottom: 48px;
+        }
+
+        .content {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="heroInner">
+        <p class="heroLocation">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+            />
+          </svg>
+          <span>Los Angeles</span>
+        </p>
+        <h1>How to Get to San Francisco: A Transportation Guide</h1>
+      </div>
+    </header>
+
+    <main class="articleWrap">
+      
+      <p class="brief">Go to San Francisco</p>
+      
+
+      <article class="content">
+        
+          <p>San Francisco consists of a total of 49 square miles of major streets, alleys, narrow streets, and hillside roads. While they may seem complicated at first glance, the city is actually well-connected so you don't need to worry. Read through this San Francisco transportation guide and download the recommended travel apps to guarantee yourself becoming a San Francisco transit expert! After reading this transportation guide, you'll discover that even without renting a car, you can smoothly get from the airport to any destination you want. Using multiple forms of transportation is not only more affordable but can also save up to 99% of your travel time - what's not to love? Next, let's take a look at the convenient transportation options available in San Francisco?</p><p><br></p><p>                                          Image source: jorgeams1975</p><p><br></p><p>                                        Arriving at San Francisco</p><p><br></p><p>                                        Arriving at San Francisco International Airport (SFO)</p><p><br></p><p>                    United Airlines is a frequent user of San Francisco International Airport, operating numerous domestic and international flights annually. Among these, United's domestic flight hub at SFO is located in Terminal 3, with most international flights departing from the dedicated International Terminal.</p>
+</p><p><br></p><p>                                            Image source: ruhrpoet</p><p><br></p><p>                        San Francisco International Airport</p><p>                        San Francisco International Airport is located about 13 miles south of downtown San Francisco, bordering Millbrae and San Bruno in San Mateo County. It is a major commercial airport in California with direct flights to major cities across the Americas, Europe, Asia, and Australia.</p><p><br></p><p>                                        BART Metro</p><p><br></p><p>                    Bay Area Rapid Transit (BART) is a rapid transit system. Taking BART away from San Francisco International Airport is both economical and helps avoid traffic congestion. After picking up luggage at the airport, passengers follow signs to board the red or blue AirTrain, then transfer to BART at Garage G station. BART fares vary based on distance traveled - in short terms, farther destinations cost more. For example, a round trip from San Francisco International Airport to downtown San Francisco is about $19.30 (one-way approximately $9.65).
+<p>Passengers can purchase tickets themselves at the automatic ticket machines located at the BART station platform of San Francisco International Airport, then tap their cards to enter and exit. Some BART stations' automatic ticket vending machines also sell multi-ride passes that can be used on any BART-operated transportation, including Muni buses and streetcars within San Francisco downtown area.</p><p><br></p><p>Image Source: raffafa28</p><p><br></p><p>You can also purchase the San Francisco Airport BART discount ticket in advance. This coupon valued at $21 will cover your entire round-trip journey between the San Francisco downtown and the airport. However, please note that this coupon must be exchanged in advance at the information desk of Terminal G at San Francisco International Airport. Once you have obtained the tickets, you can board any BART train to leave the airport. The round-trip BART operates daily until 11:50 PM, with approximately 3-4 trains per hour on average. The full journey takes about 30 minutes, allowing you to arrive safely in San Francisco downtown!</p><p><br></p><p>Ride-sharing Apps</p><p><br></p><p>The commonly used ride-hailing apps in San Francisco are Lyft and Uber. These apps can help users book private car services.</p>
+</p><p>Scheduled vehicles will wait at the Arrival/Ticketing level. Exact fares depend on distance and traffic conditions, but typically reaching downtown San Francisco such as Union Square takes about 30 minutes, costing approximately $30-40.</p><p><br></p><p>                                            Image source: thegingersnap</p><p><br></p><p>                                        Carpool &amp; Shuttle Bus</p><p><br></p><p>                    Some minivans shuttling between San Francisco Airport offer private or carpool services. The fare from San Francisco Airport to downtown is about $17, of course the price varies by number of passengers and stops, with travel time ranging from 35-90 minutes. You can find this service at the exit of the domestic terminal arrival level.</p><p><br></p><p>                                        Taxis &amp; Limousines</p><p><br></p><p>                    Numerous taxi and limousine companies serve San Francisco Airport, and you can find them at all terminals' Arrival/Baggage floors.</p>
+<p>Uniformed taxi coordinators will be on-site daily from 7 AM to 1 AM directing operations and keeping everything organized. All taxis use meters for fare calculation, with a journey from the airport to downtown San Francisco taking approximately 30 minutes, costing about $45-$60.</p><p><br></p><p>SamTrans buses</p><p><br></p><p>The San Mateo County Transit Agency, commonly known as SamTrans, provides dedicated bus services from the airport to downtown, including routes KX, 292, 397 and 398, with fares of only $2-$5. Each terminal has slightly different boarding locations: Terminal 2: Arrivals/Baggage Claim level, central island near Gate 2; Terminal 3: Arrivals/Baggage Claim level, sidewalk near Gate 4; International Terminal: Level 1 Gate A or sidewalk near Gate G.</p><p><br></p><p>Image source: basecampvagabond</p>
+        
+
+        <a class="backLink" href="list-1.html">← Back to Los Angeles</a>
+      </article>
+    </main>
+  </body>
+</html>

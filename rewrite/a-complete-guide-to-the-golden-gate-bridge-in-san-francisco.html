@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <title>A Complete Guide to the Golden Gate Bridge in San Francisco</title>
+    <style>
+      :root {
+        --paper: #f5f1eb;
+        --ink: #163d36;
+        --body: #3f3a34;
+        --muted: #8a8379;
+        --line: #ddd5ca;
+        --accent: #d9782f;
+        --white: #fffaf4;
+        --shadow: 0 22px 70px rgba(28, 25, 20, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        line-height: 1.72;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .hero {
+        min-height: clamp(330px, 48vw, 560px);
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        padding: clamp(28px, 7vw, 70px) clamp(24px, 8vw, 76px);
+        background: #28463f;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.12)),
+          url("https://imagedelivery.net/TdQQyAHCLdZMYcdCJx_3LA/2d56e14f-cd6f-497a-7f59-c1d06bac6100/public");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .heroInner {
+        position: relative;
+        width: min(900px, 100%);
+        color: #ffffff;
+      }
+
+      .heroLocation {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 24px;
+        color: rgba(255, 255, 255, 0.78);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .heroLocation svg {
+        width: 17px;
+        height: 17px;
+        color: #f0a45f;
+      }
+
+      h1 {
+        max-width: 880px;
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(30px, 4.8vw, 54px);
+        font-weight: 900;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .brief {
+        width: min(760px, 100%);
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 18px;
+        color: #5a5148;
+        font-size: clamp(17px, 1.9vw, 20px);
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.58;
+      }
+
+      .articleWrap {
+        width: min(900px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: clamp(42px, 6vw, 68px) 0 72px;
+      }
+
+      .content {
+        width: min(760px, 100%);
+        color: var(--body);
+        font-size: clamp(16px, 1.8vw, 18px);
+        line-height: 1.5;
+      }
+
+      .content p {
+        margin: 0 0 0.5em;
+      }
+
+      .content h2,
+      .content h3,
+      .content h4 {
+        margin: 46px 0 18px;
+        color: var(--ink);
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+
+      .content h2 {
+        font-size: clamp(28px, 4vw, 38px);
+      }
+
+      .content h3 {
+        font-size: clamp(23px, 3vw, 30px);
+      }
+
+      .content ul,
+      .content ol {
+        margin: 0 0 30px;
+        padding-left: 28px;
+      }
+
+      .content li {
+        margin: 8px 0;
+      }
+
+      .content blockquote {
+        margin: 34px 0;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 20px;
+        color: #5a5148;
+        font-style: italic;
+      }
+
+      .content img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 42px 0 12px;
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+      }
+
+      .content figure {
+        margin: 42px 0;
+      }
+
+      .content figure img {
+        margin: 0 0 12px;
+      }
+
+      .content figcaption {
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .backLink {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 46px;
+        border-top: 1px solid var(--line);
+        padding-top: 28px;
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.18em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .backLink:hover {
+        color: var(--accent);
+      }
+
+      @media (max-width: 720px) {
+        .hero {
+          min-height: 420px;
+          padding: 30px 24px;
+        }
+
+        .articleWrap {
+          width: min(100% - 28px, 900px);
+          padding-bottom: 48px;
+        }
+
+        .content {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="heroInner">
+        <p class="heroLocation">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+            />
+          </svg>
+          <span>San Francisco</span>
+        </p>
+        <h1>A Complete Guide to the Golden Gate Bridge in San Francisco</h1>
+      </div>
+    </header>
+
+    <main class="articleWrap">
+      
+
+      <article class="content">
+        
+          The Golden Gate Bridge is one of the most famous landmarks in San Francisco. The towers that rise above the bridge are painted International Orange, their unique color is part of the reason for the bridge's photographic quality. This guide includes the two easiest places to get good photos and how to get there.<br><br> <strong>Best Photo Spots</strong><br> 1. Battery Spencer<br> - Location: Golden Gate Bridge, San Francisco, CA 94129<br><br>- View: The full bridge with the bay and historical military defenses in the frame. You can also get a great photo of you and the bridge in the background.<br><br>- Tip: In the afternoon the light is better for photos, but the fog and the wind can be really annoying. Check the weather and bring a coat.<br><br> 2. The Golden Gate Bridge Welcome Center<br> - Location: Golden Gate Bridge Welcome Center, San Francisco, CA 94129<br><br>- View: This spot offers a great close-up of the bridge with the famous red railings and some landscaping. The lighting can be moody and clean.
+<br><br>- Tip: You can read about the bridge's history at the welcome center, and then visit some of the viewpoints nearby. It can be really busy so try to go early.<br><br> <strong>How to get there</strong> <strong>Driving:</strong> Enter any of the above viewpoints in your navigation to get there.<br><strong>Public Transportation:</strong> Muni's 28 bus stops at the Golden Gate Bridge. The bus stops and routes change often so check the Muni website before you get on the bus.
+
+Expect Lowery overpass and Battery Spencer to have packed parking spots, especially over the weekend, so follow parking regulations and get there early.  
+
+<strong>Walking or Cycling</strong>: The overpass has a separate walkway for pedestrians and cyclists, so you can choose which side to use. It takes about 45 minutes to 60 minutes, depending on walking speed and duration of breaks. Make sure to dress to protect yourself from wind and be careful of your belongings as you will be exposed to strong winds.
+<p><img src="https://imagedelivery.net/TdQQyAHCLdZMYcdCJx_3LA/07d8de01-1eb3-4c2d-c578-635530085600/public" alt="Golden Gate Bridge photo guide" loading="lazy"></p>
+Must-know photo tips:
+<p><strong>Outfits</strong>: Light colors look good with the bridges red-orange towers. They also pair nicely with the blue sky and navy sweatshirts photograph well. Blue will create a clean contrast with the bridge and sky and provide a good backdrop.<br> - <strong>Wind</strong>: Bring a windproof jacket to help keep your lower layers safe from the winds and for added movement to the photo.  You'll want to be careful because the wind can become very strong.<br> - <strong>Safety</strong>: There may be steep drop-offs where Battery Spencer ends. Be careful where you step as the are may be closed to dropped ends.<br> - <strong>Golden Gate Bridge</strong>: Fog can block the bridge so find a spot with better visibilty to see the Bridge. Look at the weather before you go.  Be prepared to lose visibility because of the fog. </p><p><img src="https://imagedelivery.net/TdQQyAHCLdZMYcdCJx_3LA/77942036-7263-4564-1b5d-84da09a45d00/public" alt="Golden Gate Bridge photo tips" loading="lazy"></p>
+
+Planning to take pictures of the Golden Gate Bridge will likely take half a day of your time and to really enjoy the view, make sure to pick a clear day.  You may even see an unforgettable sunset.  Don't forget to use the tips!
+        
+
+        <a class="backLink" href="list-1.html">← Back to San Francisco</a>
+      </article>
+    </main>
+  </body>
+</html>

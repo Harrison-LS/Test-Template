@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <title>Rediscover Traditional Delicacies | Recommended Peking Duck Restaurants in Los Angeles</title>
+    <style>
+      :root {
+        --paper: #f5f1eb;
+        --ink: #163d36;
+        --body: #3f3a34;
+        --muted: #8a8379;
+        --line: #ddd5ca;
+        --accent: #d9782f;
+        --white: #fffaf4;
+        --shadow: 0 22px 70px rgba(28, 25, 20, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        line-height: 1.72;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .hero {
+        min-height: clamp(330px, 48vw, 560px);
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        padding: clamp(28px, 7vw, 70px) clamp(24px, 8vw, 76px);
+        background: #28463f;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.12)),
+          url("");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .heroInner {
+        position: relative;
+        width: min(900px, 100%);
+        color: #ffffff;
+      }
+
+      .heroLocation {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 24px;
+        color: rgba(255, 255, 255, 0.78);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .heroLocation svg {
+        width: 17px;
+        height: 17px;
+        color: #f0a45f;
+      }
+
+      h1 {
+        max-width: 880px;
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(30px, 4.8vw, 54px);
+        font-weight: 900;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .brief {
+        width: min(760px, 100%);
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 18px;
+        color: #5a5148;
+        font-size: clamp(17px, 1.9vw, 20px);
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.58;
+      }
+
+      .articleWrap {
+        width: min(900px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: clamp(42px, 6vw, 68px) 0 72px;
+      }
+
+      .content {
+        width: min(760px, 100%);
+        color: var(--body);
+        font-size: clamp(16px, 1.8vw, 18px);
+        line-height: 1.5;
+      }
+
+      .content p {
+        margin: 0 0 12px;
+      }
+
+      .content h2,
+      .content h3,
+      .content h4 {
+        margin: 46px 0 18px;
+        color: var(--ink);
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+
+      .content h2 {
+        font-size: clamp(28px, 4vw, 38px);
+      }
+
+      .content h3 {
+        font-size: clamp(23px, 3vw, 30px);
+      }
+
+      .content ul,
+      .content ol {
+        margin: 0 0 30px;
+        padding-left: 28px;
+      }
+
+      .content li {
+        margin: 8px 0;
+      }
+
+      .content blockquote {
+        margin: 34px 0;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 20px;
+        color: #5a5148;
+        font-style: italic;
+      }
+
+      .content img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 42px 0 12px;
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+      }
+
+      .content figure {
+        margin: 42px 0;
+      }
+
+      .content figure img {
+        margin: 0 0 12px;
+      }
+
+      .content figcaption {
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .backLink {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 46px;
+        border-top: 1px solid var(--line);
+        padding-top: 28px;
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.18em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .backLink:hover {
+        color: var(--accent);
+      }
+
+      @media (max-width: 720px) {
+        .hero {
+          min-height: 420px;
+          padding: 30px 24px;
+        }
+
+        .articleWrap {
+          width: min(100% - 28px, 900px);
+          padding-bottom: 48px;
+        }
+
+        .content {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="heroInner">
+        <p class="heroLocation">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+            />
+          </svg>
+          <span>Los Angeles</span>
+        </p>
+        <h1>Rediscover Traditional Delicacies | Recommended Peking Duck Restaurants in Los Angeles</h1>
+      </div>
+    </header>
+
+    <main class="articleWrap">
+      
+
+      <article class="content">
+        
+          <p>With the weekend approaching, are your friends starting to call each other again to arrange meal gatherings? The buddies in the editor&#39;s office decided they wanted to try this &quot;high-end&quot; delicacy - roast duck. So the editor had a flash of inspiration, and in this issue we&#39;ll list some roast duck shops near us in Los Angeles for you~</p><p><br></p><p>Meizhou DongPo | MeiZhou DongPo Restaurant</p><p><br></p><p>Although this restaurant specializes in Sichuan cuisine, the must-order is definitely Dongpo Roast Duck / Meizhou Roast Duck. After entering and looking around, you&#39;ll discover that almost every table&#39;s must-order is this Meizhou DongPo Roast Duck.</p><p><br></p><p>Made from premium ducks, elevated based on Beijing roast duck characteristics, the roast duck instantly wins your heart with its glistening appearance and rich aroma from the moment it arrives at the table; as the chef skillfully removes the duck skin, meat, and legs, piling them into a pagoda shape, just watching this &quot;skin-peeling performance&quot; makes you feel like your appetite can&#39;t wait any longer.</p><p><br></p><p>Inheriting Beijing roast duck traditions, combining techniques from many schools, made with care using premium ducks, finally creating a Dongpo Roast Duck with delicately fragrant meat and crispy non-greasy skin; the spring pancakes are thin yet elastic, more addictive when paired with dipping sauces: first eating the duck skin dipped in sugar; second wrapping duck meat in pancake rolls; third enjoying the rich aromatic duck bone soup.</p><p><br></p><p>Actually from the moment of the chef&#39;s &quot;skin-peeling performance,&quot; we can see that Meizhou DongPo&#39;s roast duck skin looks very thin, almost without that scary white fat layer you&#39;d worry about - surely they put significant effort into their cooking technique.</p><p>Pick up a piece of roast duck, dip it in granulated sugar before eating. You will find that the skin is fragrant and crispy, melting slowly without needing much chewing. Most importantly, you&#39;ll discover this roast duck skin isn&#39;t greasy at all—it lacks the oily richness found in other roast ducks while still achieving that crisp-yet-not-greasy quality. The duck meat has a fresh, delicate flavor, giving the impression that this roasted duck contains less fat than the average roast duck dish.</p><p><br></p><p>Beyond the roast duck, there are many unique dishes here that will certainly not disappoint you.</p><p><br></p><p>**Huqifu Feipian - Sliced Beef**</p><p>The fragrance of beef tongue, the crispness of tripe, and the chewiness of shank combine with spicy-numbing flavors in perfect harmony. The fresh, fragrant, smooth taste is irresistible. The legendary story of husband and wife creating this dish has established it as a century-old classic.</p><p><br></p><p>**Shangxin Liangfen - Sichuan Heartbreakers**</p><p>This dish earned its name because it&#39;s said that Sichuan locals would shed tears of homesickness from the familiar taste upon taking just one bite. It is specially made with pea flour, handcrafted for authenticity and true Sichuan preparation. Refreshing and tender cool jelly paired with sweet-sour slightly spicy seasoning—yellow jelly complemented by red chili oil—creates a dish complete in both color and flavor, making your appetite soar!</p><p><br></p><p>**Gongbao Ji Ding - Kung Pao Chicken**</p><p>Let me put it this way: Meizhou Dongpo&#39;s Kung Pao Chicken is definitely not in the American-Chinese style.</p><p>Ding Baozhen, during his time in Sichuan, created the famous &quot;Kung Pao Chicken&quot; that became renowned worldwide. The peanuts are crispy, the chicken cubes tender, with a sweet-sour and numbingly-spicy flavor when eaten, leaving an endless aftertaste - authentic Chinese taste.</p><p><br></p><p>Also featuring seasonal specialty: Bamboo shoots braised with meat</p><p><br></p><p>Su Dongpo wrote a lighthearted poem saying: &quot;Without bamboo, one becomes vulgar; without meat, one becomes thin. Neither vulgar nor thin - bamboo shoots braised with pork.&quot;</p><p><br></p><p>Beijing Yuan | Beijing Tasty House</p><p>As the name suggests, this is an authentic Beijing restaurant.</p><p><br></p><p>The signature dish here must be the Peking Hanging Oven Roast Duck.</p><p><br></p><p>After enjoying the crispy skin and tender meat, the remaining duck frame can be chosen to be roasted into a complimentary duck bone soup. The duck frame soup from this establishment is highly recommended - the cabbage added to the broth gives the rich flavor a hint of sweetness.</p><p><br></p><p>Besides roast duck, the variety of dishes is also complete.</p><p><br></p><p>For example, the famous Lamb Spine Pot in Beijing~</p><p><br></p><p>If youve ordered enough substantial dishes, dont forget to order several home-style dishes with unique flavors, such as Boiling Water Fish, Sauerkraut and Pork Pot, Lamb Buns... Each has its own characteristics, covering sweet, sour, bitter, spicy, salty.</p><p><br></p><p>Address: 172 E Valley Blvd, San Gabriel, CA 91776 | (626) 573-3062</p><p>Tongshunju | Beijing Restaurant</p><p>Actually, when first hearing the name &quot;Tongshunju,&quot; friends from Beijing would definitely think of those roast duck restaurants located in Beijing. Tongshunju in Los Angeles is also a restaurant that has gained recognition among many people from Beijing.</p><p>The environment is comfortable, and the decor features distinctive Beijing characteristics.</p><p>Here you can enjoy authentic Beijing dishes such as braised liver (chao gan), haluzhu, and fried sauce noodles. There are various exquisitely crafted old Beijing pastries like Lu Dagu, Pea Yellow Cake, and more; of course, it must include Peking Duck.</p><p>Address: 250 W Valley Blvd, Suite B2, San Gabriel, CA 91776 | (626) 570-8598</p><p><br></p><p>Lu Ding Ji | Duck House</p><p>Lu Ding Ji is a historic restaurant in Los Angeles with over 20 years of history, and it was also the first restaurant to serve Peking duck in Los Angeles history.</p><p>Authentic Beijing duck roasting involves many procedures. Lu Ding Ji&#39;s roasted duck skin is slice after slice thin and crispy; the fatty layer under the skin is roasted into crispy oil bits, with excess fat removed.</p><p>The duck skin becomes soggy once it cools down or sits too long, so a bowl of hot water is thoughtfully placed under the plate to maintain temperature.</p><p><br></p><p>It seems the owner of this restaurant favors that understated luxury from the Republic era. It&#39;s said that both the screens at the entrance and the doors to private rooms were dismantled and repurposed from former wealthy households - truly authentic antiques. The restaurant&#39;s decor uses bold colors but they match perfectly together.</p><p>Business Address: 501 S Atlantic Blvd Monterey Park CA 91754</p><p>Phone Number: 626-284-3227</p><p>Hours of Operation: 11:30 AM - 3:00 PM; 5:00 PM - 10:00 PM</p><p><br></p><p>Jin Ya Zi Tasty Duck</p><p><br></p><p>Peking duck is divided into &quot;hanging oven roasted duck&quot; and &quot;sealed oven roasted duck.&quot;</p><p><br></p><p>Jin Ya Zi&#39;s Peking duck uses the sealed oven method. Unlike previous restaurants, this place offers no tableside service; everything is prepared and sliced in the kitchen. About 15 minutes after seating, the sliced duck with lotus leaf pancakes arrives.</p><p><br></p><p>The boneless sliced duck has delicate knife work but a lighter color.</p><p><br></p><p>During holidays, shredded green onions and cucumber are placed on warm thin pancake skins, then a piece of duck meat or duck skin is added, followed by some sweet bean sauce spread on top - the texture is crispy just right.</p><p>The duck skin and meat at this shop have a milder flavor, so don&#39;t spread too much sweet bean sauce, or you&#39;ll overpower the duck&#39;s natural aroma—what a shame.</p><p><br></p><p>Address: 1039 E Valley Blvd, San Gabriel, CA 91776</p><p><br></p><p>Lastly, here&#39;s a close-up GIF of the crispy duck skin. Does it make your mouth water? This weekend, go ahead and give it a try!</p>
+        
+
+        <a class="backLink" href="list-1.html">← Back to Los Angeles</a>
+      </article>
+    </main>
+  </body>
+</html>

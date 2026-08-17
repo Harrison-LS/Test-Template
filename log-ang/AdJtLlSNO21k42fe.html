@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <title>Weekend Travel Hit | Los Angeles Area 2-Day Trip Guide | Be Sure to Bookmark!</title>
+    <style>
+      :root {
+        --paper: #f5f1eb;
+        --ink: #163d36;
+        --body: #3f3a34;
+        --muted: #8a8379;
+        --line: #ddd5ca;
+        --accent: #d9782f;
+        --white: #fffaf4;
+        --shadow: 0 22px 70px rgba(28, 25, 20, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        line-height: 1.72;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .hero {
+        min-height: clamp(330px, 48vw, 560px);
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        padding: clamp(28px, 7vw, 70px) clamp(24px, 8vw, 76px);
+        background: #28463f;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.12)),
+          url("");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .heroInner {
+        position: relative;
+        width: min(900px, 100%);
+        color: #ffffff;
+      }
+
+      .heroLocation {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 24px;
+        color: rgba(255, 255, 255, 0.78);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .heroLocation svg {
+        width: 17px;
+        height: 17px;
+        color: #f0a45f;
+      }
+
+      h1 {
+        max-width: 880px;
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(30px, 4.8vw, 54px);
+        font-weight: 900;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .brief {
+        width: min(760px, 100%);
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 18px;
+        color: #5a5148;
+        font-size: clamp(17px, 1.9vw, 20px);
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.58;
+      }
+
+      .articleWrap {
+        width: min(900px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: clamp(42px, 6vw, 68px) 0 72px;
+      }
+
+      .content {
+        width: min(760px, 100%);
+        color: var(--body);
+        font-size: clamp(16px, 1.8vw, 18px);
+        line-height: 1.5;
+      }
+
+      .content p {
+        margin: 0 0 12px;
+      }
+
+      .content h2,
+      .content h3,
+      .content h4 {
+        margin: 46px 0 18px;
+        color: var(--ink);
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+
+      .content h2 {
+        font-size: clamp(28px, 4vw, 38px);
+      }
+
+      .content h3 {
+        font-size: clamp(23px, 3vw, 30px);
+      }
+
+      .content ul,
+      .content ol {
+        margin: 0 0 30px;
+        padding-left: 28px;
+      }
+
+      .content li {
+        margin: 8px 0;
+      }
+
+      .content blockquote {
+        margin: 34px 0;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 20px;
+        color: #5a5148;
+        font-style: italic;
+      }
+
+      .content img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 42px 0 12px;
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+      }
+
+      .content figure {
+        margin: 42px 0;
+      }
+
+      .content figure img {
+        margin: 0 0 12px;
+      }
+
+      .content figcaption {
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .backLink {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 46px;
+        border-top: 1px solid var(--line);
+        padding-top: 28px;
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.18em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .backLink:hover {
+        color: var(--accent);
+      }
+
+      @media (max-width: 720px) {
+        .hero {
+          min-height: 420px;
+          padding: 30px 24px;
+        }
+
+        .articleWrap {
+          width: min(100% - 28px, 900px);
+          padding-bottom: 48px;
+        }
+
+        .content {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="heroInner">
+        <p class="heroLocation">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+            />
+          </svg>
+          <span>Los Angeles</span>
+        </p>
+        <h1>Weekend Travel Hit | Los Angeles Area 2-Day Trip Guide | Be Sure to Bookmark!</h1>
+      </div>
+    </header>
+
+    <main class="articleWrap">
+      
+
+      <article class="content">
+        
+          <p>The California sunshine is perfect right now, so pack your bags quickly and join us for an exploration adventure that slows time down - this kind of trip will definitely be awesome!</p><p>D1 Los Angeles - Joshua Tree - Salvation Mountain</p><p>11:00 Hiking at Joshua Tree National Park</p><p>Early morning drive to Joshua Tree National Park - a national park composed of desert, high mountains, rock formations, dry riverbeds and canyons, home to Mexican prickly trees called &quot;prayer trees&quot; and spiky cacti.</p><p>Hidden Valley The unique terrain, desert plants and mountain scenery make this route a must-visit for travelers. You can see magnificent boulder landscapes and Joshua Trees everywhere. This trail is not difficult and suitable for both adults and children.</p><p>12:30 Outdoor Picnic</p><p>Split Rock faces the famous Jumbo Rock and looks as if it was split by a giant with an axe. There are two miles of easy hiking trails nearby. Why not bring some food to have lunch in the wild - it adds special flavor to your trip. Sitting in the boulder crevices, the temperature is cooler than outside.</p><p>Arch Rock&#39;s bridge-like rock formation attracts visitors everywhere and is a great spot for climbing and taking photos.</p><p>Just walk along a simple hiking trail for a bit and you&#39;ll see the magnificent Arch Rock viewpoint.</p><p><br></p><p>15:00 Cactus &amp; Joshua Tree</p><p>Cholla Cactus Garden - this natural garden full of cacti looks just like the worlds depicted in Dr. Seuss&#39;s books (it is said to be his inspiration source). You can walk the short hiking trails here, but you&#39;ll likely stop along the way because you&#39;re so captivated by the vibrant cactus plants around you. Be careful though - getting pricked by cactus spines won&#39;t be fun at all.</p><p><br></p><p>17:30 Sunset Views</p><p>Remember Dwayne &quot;The Rock&quot; Johnson&#39;s movie about the San Andreas earthquake? You can see that famous fault line from Keys View. Besides that, Salton Sea and magnificent mountain views under sunset seem like those unrealistically beautiful scenes from movies.</p><p><br></p><p>D2 Salvation Mountain - Hippie Town - Los Angeles</p><p><br></p><p>10:30 Tour of Salvation Mountain (about half an hour)</p><p>Then drive to Salvation Mountain to appreciate religious artworks made from adobe, straw, and thousands of gallons of lead-free paint, experiencing a different kind of religious culture.</p><p><br></p><p>Salvation Mountain is a spontaneous performance art by a local named Leonard Knight. The entire mountain is covered with Bible verses praising God. He believes love exists everywhere and hopes people can spread love to make the world better.</p><p>11:10 Exploring Hippie Town</p><p>Drive to SLAB CITY - a liberated city pieced together in the 1960s by a group of people who traveled in RVs into a military ruin site in the Colorado desert. The last hippie town. No taxes, no mayor, but also no urban planning, no sanitation facilities, no waste management, no water or electricity supply, and it&#39;s not even clearly marked on Google Maps... Yet those veterans who&#39;ve moved past war, living hippies, dropouts, and reclusive retired workers proudly call this place home. They share in their own unique way how they chose different lives for the sake of dreams.</p><p><br></p><p>Transportation Recommendations</p><p>Closing Words</p><p>Friends, start making plans for your weekend right away! If you&#39;re curious about exploring this extraordinary destination, feel free to reach out through our contact information~</p>
+        
+
+        <a class="backLink" href="list-1.html">← Back to Los Angeles</a>
+      </article>
+    </main>
+  </body>
+</html>

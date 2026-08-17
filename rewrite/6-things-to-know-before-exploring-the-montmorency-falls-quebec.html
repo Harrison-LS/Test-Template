@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <title>6 Things to know before Exploring the Montmorency Falls, Quebec</title>
+    <style>
+      :root {
+        --paper: #f5f1eb;
+        --ink: #163d36;
+        --body: #3f3a34;
+        --muted: #8a8379;
+        --line: #ddd5ca;
+        --accent: #d9782f;
+        --white: #fffaf4;
+        --shadow: 0 22px 70px rgba(28, 25, 20, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        line-height: 1.72;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .hero {
+        min-height: clamp(330px, 48vw, 560px);
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        padding: clamp(28px, 7vw, 70px) clamp(24px, 8vw, 76px);
+        background: #28463f;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.12)),
+          url("https://images.pexels.com/photos/3744699/pexels-photo-3744699.jpeg");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .heroInner {
+        position: relative;
+        width: min(900px, 100%);
+        color: #ffffff;
+      }
+
+      .heroLocation {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 24px;
+        color: rgba(255, 255, 255, 0.78);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .heroLocation svg {
+        width: 17px;
+        height: 17px;
+        color: #f0a45f;
+      }
+
+      h1 {
+        max-width: 880px;
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(30px, 4.8vw, 54px);
+        font-weight: 900;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .brief {
+        width: min(760px, 100%);
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 18px;
+        color: #5a5148;
+        font-size: clamp(17px, 1.9vw, 20px);
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.58;
+      }
+
+      .articleWrap {
+        width: min(900px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: clamp(42px, 6vw, 68px) 0 72px;
+      }
+
+      .content {
+        width: min(760px, 100%);
+        color: var(--body);
+        font-size: clamp(16px, 1.8vw, 18px);
+        line-height: 1.5;
+      }
+
+      .content p {
+        margin: 0 0 0.5em;
+      }
+
+      .content h2,
+      .content h3,
+      .content h4 {
+        margin: 46px 0 18px;
+        color: var(--ink);
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+
+      .content h2 {
+        font-size: clamp(28px, 4vw, 38px);
+      }
+
+      .content h3 {
+        font-size: clamp(23px, 3vw, 30px);
+      }
+
+      .content ul,
+      .content ol {
+        margin: 0 0 30px;
+        padding-left: 28px;
+      }
+
+      .content li {
+        margin: 8px 0;
+      }
+
+      .content blockquote {
+        margin: 34px 0;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 20px;
+        color: #5a5148;
+        font-style: italic;
+      }
+
+      .content img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 42px 0 12px;
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+      }
+
+      .content figure {
+        margin: 42px 0;
+      }
+
+      .content figure img {
+        margin: 0 0 12px;
+      }
+
+      .content figcaption {
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .backLink {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 46px;
+        border-top: 1px solid var(--line);
+        padding-top: 28px;
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.18em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .backLink:hover {
+        color: var(--accent);
+      }
+
+      @media (max-width: 720px) {
+        .hero {
+          min-height: 420px;
+          padding: 30px 24px;
+        }
+
+        .articleWrap {
+          width: min(100% - 28px, 900px);
+          padding-bottom: 48px;
+        }
+
+        .content {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="heroInner">
+        <p class="heroLocation">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+            />
+          </svg>
+          <span>Canada</span>
+        </p>
+        <h1>6 Things to know before Exploring the Montmorency Falls, Quebec</h1>
+      </div>
+    </header>
+
+    <main class="articleWrap">
+      
+
+      <article class="content">
+        
+          <p>Taking the second spot after Old Quebec, Montmorency Falls has proven to be Quebec City's most visited attraction, regardless of season. Whether it’s a brisk morning walk, a relaxed picnic, an exciting hike through the park, or a close up encounter with the waterfall, there’s plenty to do for a few hours. Families love the open space and easy access views, and adventure seekers can ride the cable car, try their hand at traversing the cliffs, or zip line right across the falls!</p><p><img src="https://imagedelivery.net/TdQQyAHCLdZMYcdCJx_3LA/968df43e-4941-4dea-de6e-0f605dabc900/public" alt="Montmorency Falls Quebec City" loading="lazy"></p><p>There are the 4 seasons, and with them lie fabulous views at Montmorency Falls. In summer you have the green foliage, fall the golden and rusty leaves. In winter, the site is completely covered in sparkling snow, and the falls freeze into striking ice formations. The site also receives an average of 970,000 visitors and has recently undergone a 33 million dollar makeover to include a kids play area, restrooms, additional parking, picnic tables, and gardens.</p><p>Trends Hot Discount Information Click to view</p><p>6 things you should know before visiting the Montmorency Falls</p><p>About Montmorency Falls</p><p><img src="https://imagedelivery.net/TdQQyAHCLdZMYcdCJx_3LA/f9c315ca-72d5-4fd9-f532-bc348d8a7c00/public" alt="Montmorency Falls winter" loading="lazy"></p><p>In 1613, Samuel de Champlain named the falls after the Duke of Montmorency. Montmorency Falls is located just a short drive from Quebec City, and is a stunning natural landmark where the Montmorency River cascades over a rocky escarpment and into the St. Lawrence River.</p><p>At 83 meters (272 feet) tall, Montmorency Falls is almost 100 feet taller than Niagara Falls, even though Niagara has a much greater volume. It is the highest waterfall in Quebec, and the 8th highest in all of Canada!</p><p>This waterfall is also of great importance to the region’s history.</p><p><img src="https://imagedelivery.net/TdQQyAHCLdZMYcdCJx_3LA/91ada8f5-6725-4b54-e62a-a73a844fd300/public" alt="Montmorency Falls Quebec" loading="lazy"></p>The Montmorency battleground from 1759, where the British and French forces battled, was the first site of a hydroelectric power plant built in 1885 to provide electricity to Québec City. More recently, the falls have been featured in a number of films, and, today, the park is a common picnic area for residents of Québec City and a stop for tourists visiting the area. The Best Time to Visit Montmorency Falls Montmorency Falls has a lot to offer year-round, but the summer and fall seasons are best for visitors wanting to experience all the different trails, rides, and views. The views from the cable car are best when the weather is clear. Open from May to October, the zip line is a great summer activity, and the Via Ferrata circuits are best in July and August. The park is visually most beautiful in winter, but many activities are limited. Snow blankets the park, the waterfall freezes over, and ice may lead to the closure of some walks and the wooden staircases. The cable car is closed many winter days, so it's best to consider this when planning your visit. There are still plenty of activities in winter, and even more in summer. The upper walkways are open, and the frozen setting is great for snowshoeing and ice canyoning. There are also guided climbing sessions on the ice, as well as climbs for advanced climbers, on the frozen falls. Getting to Montmorency Falls Parc de la Chute-Montmorency is 13 km from downtown Québec City, roughly a 15-minute drive.
+
+The Montmorency Falls Park is visible from Autoroute 440 East, which leads to many unplanned stops by drivers discovering the attraction. The Montmorency Falls Park is also an easy destination for residents of the city, and is a great stop for those traveling by car, as well as those looking for a scenic detour while traveling along the Autoroute 440 East.  
+
+For those without a car, the Montmorency Falls Park can be reached from the city by public transportation, bike, or as part of a tour that leaves from Quebec City. The bike path that leads to the Montmorency Falls Park is located along the Corridor du Littoral, and is a great option for getting to the park, especially for those looking to spend some time in nature.
+
+Hikers and nature lovers who want to spend the day outdoors can make the trip to the Montmorency Falls Park, as the trip may take a total of four hours, depending on how many scenic stops they take along the way.
+
+There is much to see at the Montmorency Falls Park. To see it all, plan to spend an entire day at the park. Therefore, to fully experience the park, there is no entrance fee to the park, but shelter services and adventure activities may be charged separately. An added benefit is the free booklet provided by the park detailing the routes and providing historical accounts of the region's geography, along with an overview of the park's many points of interest. Two parking lots located at the top of Manoir Montmorency and at the Visitor Centre also allow you to park so that you can choose which activities you want to do first. Each of the park’s free viewpoints around the falls offers a unique view and perspective of the falls.
+
+Begin at the bottom and follow the paved pathway from the Visitor Centre to the base viewing platform. Here, the entire waterfall rises before you and is framed by the suspension bridge above and the zip line crossing the gorge. Families can stop at the playground and picnic area along the way.
+<p><img src="https://imagedelivery.net/TdQQyAHCLdZMYcdCJx_3LA/c32488f8-78c9-4db4-6b0a-6950c1df9800/public" alt="Montmorency Falls suspension bridge" loading="lazy"></p><p>There are two ways to reach the top from the Visitor Centre: the cable car or the 487 step panoramic staircase. The cable car is the clear choice for visitors wanting the aerial views, alongside those not wanting to exert themselves. One of the smartest routes is the Panoramic Circuit: cable car up, suspension bridge across, and then panoramic stairs down. This route provides the essential views without making the visit an endurance test. </p><p>  The cable car ride is approximately $12.10 for adults and $28.10 for a family ticket. Children under five ride free. You can be lazy and buy one way and round trip tickets if you want to skip the stairs. </p><p><img src="https://imagedelivery.net/TdQQyAHCLdZMYcdCJx_3LA/85a0bb6e-0452-4c8d-5b9f-38b63c503a00/public" alt="Scenic World Blue Mountains" loading="lazy"></p><p>At the top, you will find Manoir Montmorency which was originally the country residence of Prince Edward, Duke of Kent and the father of Queen Victoria. The original house built in 1780 was destroyed in a fire in '93. The building you see today is a reconstruction and maintains the original architectural character to contemporary standards. It houses a gift shop, an interpretation centre, and an outdoor restaurant that has sweeping views of the surrounding mountains. Reservations are recommended for dining. </p><p>  Beyond the manor, a suspension bridge spans the falls. </p><p><img src="https://imagedelivery.net/TdQQyAHCLdZMYcdCJx_3LA/6c3b44da-0b46-4a7c-b54d-a5a3ec4f6400/public" alt="Montmorency Falls suspension bridge" loading="lazy"></p>The bridge has been built solidly, but the height may be unnerving for those who are uneasy with heights. Those who are willing to cross it, however, are rewarded with a spectacular view of the river as it rushes to the waterfall, and they also have the opportunity to experience the deep roar of the water below. There have been earlier bridges built in this location, but this version was built in 1993 alongside the new manor.  
+
+The Panoramic staircase, which was built in 1993, descends 487 steps straight down the cliff to the bottom of the park. Climbing to the top is manageable, but it is made easier with the use of breaks. In fact, many athletes even use this staircase for training in the mornings. There are also lookout shelters at each level that will allow you to take a break and enjoy the view.  
+
+At the bottom, this path reconnects with the paved trail and a concrete promontory where they can feel the mist and spray of the falls. During the winter, the mist that is created freezes in the air and creates a natural ice cone. This type of formation is a favorite for many of the regulars.  
+
+For those who are looking for some adventure, there is more than just a scenic walk at Montmorency Falls Park. For adventurous people, there are two Via Ferrata routes as well as a third option that mixes walking with a zipline. These activities are guided, and you will be required to wear a safety harness that is attached to the rock face. The easiest route is meant for children over the age of 8, and the other activities have age restrictions of 12 and 14.  
+
+The Explorer Route is the most accessible Via Ferrata option.
+
+The route has both hiking and climbing elements, with metal grips and footholds to assist in both climbing and hiking. All participants must remain clipped to a continuous safety line. While this makes the route more physically demanding, it is still open to kids ages 8 and up.</p><p><img src="https://imagedelivery.net/TdQQyAHCLdZMYcdCJx_3LA/5884597b-91e8-47a3-b84c-3503a7c16600/public" alt="Montmorency Falls" loading="lazy"></p><p>One of the more difficult routes, Torrent de Montmorency, is a 270 meter long climb that runs alongside a waterfall.  Climbers are able to experience the rock face and waterfall climb up close as the waterfall mist sprays onto them. Due to the increased difficulty of this climb, participants must be at least 12 years old.</p><p>For the biggest adrenaline rush offered at the park, take the 300 meter long zip line that crosses over the waterfall’s cove. This double line zip line makes it possible to share the experience with a friend or partner.</p><p><img src="https://imagedelivery.net/TdQQyAHCLdZMYcdCJx_3LA/257a0211-d005-4f56-a969-45ef5776cb00/public" alt="Montmorency Falls zipline" loading="lazy"></p><p>During the winter months, ice climbing is also available to visitors on the frozen waterfall. The Sugar Loaf is a section of the waterfall that freezes solid. Beginning climbers can walk up to the wall, where they will meet their guide, to climb the wall with a professional. There is also a rental shop where climbing gear can be rented. Experienced climbers will not have a guide.</p><p>Eating Options near Montmorency Falls</p><p>Manoir Montmorency has a restaurant that serves a full menu as well as Sunday brunch. For those wishing to enjoy the views while sitting on the terrace, the restaurant is a great option.</p><p><img src="https://imagedelivery.net/TdQQyAHCLdZMYcdCJx_3LA/219fcd39-e34d-4ca8-5bc0-a7e1a929a500/public" alt="Montmorency Falls ice climbing" loading="lazy"></p><p>At the bottom of the falls is The Sandwicherie, where sandwiches and drinks can be purchased. There are also street food style meals available at LE 1759, the mobile restaurant located near the top of the staircase that offers the best view of the falls.</p><p><img src="https://imagedelivery.net/TdQQyAHCLdZMYcdCJx_3LA/5fa8b644-8cd0-46ab-ecf8-41c3ff92f900/public" alt="Montmorency Falls" loading="lazy"></p>You can also get food and drink at The Bridge Snack Bar, located at the entrance of the Boischatel sector.  
+
+Useful Information About Montmorency Falls  
+
+The park accommodates wheelchair users and visitors with limited mobility. There is no charge for entering the park, but rides and activities are available at a fee which vary depending on the season. Dogs are welcome in most areas of the park (guide dogs are allowed everywhere). The Visitor Centre has a gift shop, snack bar, and washrooms.  
+
+Interesting Facts About the Falls  
+
+Montmorency Falls is more than just a beautiful place to visit; it is also geologically an ancient fault. To put it simply, the Montmorency River flows over a big break in the earth’s crust, resulting in the spectacular waterfall.  
+
+The duke of Damville, Charles de Montmorency, whom the falls are named after, never saw them. About 150 years later, during the struggle for dominance between Britain and France, this location became of key strategic importance. The remnants of the British military posts from 1759 are still visible in the eastern sections of the park.  
+
+This battle also gave rise to a local legend. It was said that Louis and Mathilde were engaged when Louis, a soldier, was killed in combat at the falls. Mathilde was said to have dressed in her wedding gown and jumped over the falls in a fit of grief. Many believe they have seen the White Lady of the Falls.  
+
+Manoir Montmorency has a romantic story of its own.
+
+It is rumoured that the Duke of Kent was involved for 27 years with a married woman named Thérèse-Bernardine Montgenet.  
+With its gripping vistas and rich historical background, as well as its family-friendly amenities and serious adventure options, Montmorency Falls should firmly be on your list of places to see in Québec. If you’re planning a trip to Québec, booking your flights and accommodation early will generally give you cheaper options.
+        
+
+        <a class="backLink" href="list-1.html">← Back to Canada</a>
+      </article>
+    </main>
+  </body>
+</html>

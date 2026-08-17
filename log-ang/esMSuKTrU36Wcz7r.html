@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <title>No driving required, no tour groups - GO123 Bus takes you exploring Greater Los Angeles!</title>
+    <style>
+      :root {
+        --paper: #f5f1eb;
+        --ink: #163d36;
+        --body: #3f3a34;
+        --muted: #8a8379;
+        --line: #ddd5ca;
+        --accent: #d9782f;
+        --white: #fffaf4;
+        --shadow: 0 22px 70px rgba(28, 25, 20, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        line-height: 1.72;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .hero {
+        min-height: clamp(330px, 48vw, 560px);
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        padding: clamp(28px, 7vw, 70px) clamp(24px, 8vw, 76px);
+        background: #28463f;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.12)),
+          url("");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .heroInner {
+        position: relative;
+        width: min(900px, 100%);
+        color: #ffffff;
+      }
+
+      .heroLocation {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 24px;
+        color: rgba(255, 255, 255, 0.78);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .heroLocation svg {
+        width: 17px;
+        height: 17px;
+        color: #f0a45f;
+      }
+
+      h1 {
+        max-width: 880px;
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(30px, 4.8vw, 54px);
+        font-weight: 900;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .brief {
+        width: min(760px, 100%);
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 18px;
+        color: #5a5148;
+        font-size: clamp(17px, 1.9vw, 20px);
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.58;
+      }
+
+      .articleWrap {
+        width: min(900px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: clamp(42px, 6vw, 68px) 0 72px;
+      }
+
+      .content {
+        width: min(760px, 100%);
+        color: var(--body);
+        font-size: clamp(16px, 1.8vw, 18px);
+        line-height: 1.5;
+      }
+
+      .content p {
+        margin: 0 0 12px;
+      }
+
+      .content h2,
+      .content h3,
+      .content h4 {
+        margin: 46px 0 18px;
+        color: var(--ink);
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+
+      .content h2 {
+        font-size: clamp(28px, 4vw, 38px);
+      }
+
+      .content h3 {
+        font-size: clamp(23px, 3vw, 30px);
+      }
+
+      .content ul,
+      .content ol {
+        margin: 0 0 30px;
+        padding-left: 28px;
+      }
+
+      .content li {
+        margin: 8px 0;
+      }
+
+      .content blockquote {
+        margin: 34px 0;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 20px;
+        color: #5a5148;
+        font-style: italic;
+      }
+
+      .content img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 42px 0 12px;
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+      }
+
+      .content figure {
+        margin: 42px 0;
+      }
+
+      .content figure img {
+        margin: 0 0 12px;
+      }
+
+      .content figcaption {
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .backLink {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 46px;
+        border-top: 1px solid var(--line);
+        padding-top: 28px;
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.18em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .backLink:hover {
+        color: var(--accent);
+      }
+
+      @media (max-width: 720px) {
+        .hero {
+          min-height: 420px;
+          padding: 30px 24px;
+        }
+
+        .articleWrap {
+          width: min(100% - 28px, 900px);
+          padding-bottom: 48px;
+        }
+
+        .content {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="heroInner">
+        <p class="heroLocation">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+            />
+          </svg>
+          <span>Los Angeles</span>
+        </p>
+        <h1>No driving required, no tour groups - GO123 Bus takes you exploring Greater Los Angeles!</h1>
+      </div>
+    </header>
+
+    <main class="articleWrap">
+      
+
+      <article class="content">
+        
+          <p>Tired from self-driving? Group tours too rushed? Try something brand new!</p><p><br></p><p>I&#39;m a lazy person. I don&#39;t like driving myself, even more so joining group tours, but I still want to pause at each place I like, have a cup of coffee—not just for sightseeing, and not necessarily needing to tour.</p><p><br></p><p>Experiencing a city might be from the street corner to the crowds, or from the train station to the pier.</p><p><br></p><p>This time, three days, one ticket, following the bus route, I traversed this beautiful angel city—Los Angeles.</p><p><br></p><p>Following the bus, going wherever my heart desires,</p><p>When I don&#39;t want to stop, I ride along and weave through every road in the city.</p><p><br></p><p>In any case,</p><p>No rush, no hurry, follow my heart, go naturally.</p><p><br></p><p>About GO123</p><p><br></p><p>What is GO123?</p><p><br></p><p>This question was quite confusing for me before booking tickets. I&#39;ve heard of Greyhound, Starline, but had no concept whatsoever about this Go123.</p><p><br></p><p>Simply put, GO123 is a ground bus system that operates both within and outside cities. They have stops at different scenic spots where you can get on or off. With your ticket, you can disembark at the scenic spot you like, then board again to return after finishing your visit.</p><p><br></p><p>Even without self-driving, you can still arrange your itinerary independently—the places I want to stop at, the time I want to spend—it&#39;s all up to me to decide.</p><p><br></p><p>Three days for only $75 with unlimited on-and-off trips—worth it!</p><p><br></p><p>This time, why not rent a car?</p><p>First, before even arriving, friends told me this bustling city&#39;s poor road conditions can rival those of Beijing-Shanghai-Guangzhou, and parking is both difficult to find and paid.</p><p><br></p><p>Second, GPS is convenient, but for a completely unfamiliar city with 8-lane expressways running parallel, you can only say it&#39;s drivable—it&#39;s just very draining. I don&#39;t want to waste all my time on the road.</p><p><br></p><p>Third, normally renting a car for a day including insurance costs at least over $100. For three days that would be more than $300. I only spent $75, and the saved $200+ let me enjoy three big meals.</p><p><br></p><p>Since this trip is purely for sightseeing and not very long, even if we rented our own car daily, we&#39;d still be traveling between attractions every day. So rather than wasting energy on driving, it&#39;s better to go play at Universal Studios with full energy for a whole day.</p><p><br></p><p>I&#39;ll teach you how to plan:</p><p><br></p><p>Go123 has 5 routes in total, almost covering all popular attractions throughout Los Angeles. I&#39;ve organized the map and schedule to hopefully help everyone out.</p><p><br></p><p>From the map below, you can see that each color represents a main route.</p><p><br></p><p>However, this map only shows all the attractions along each main route. I&#39;ll post the daily departure times, stop durations, and pickup locations for each line.</p><p><br></p><p>Let&#39;s get started!</p><p><br></p><p>As shown in the picture above, the airport pickup/drop-off points are located at different terminals.</p><p>Friends, please don&#39;t mistake these buses for regular city buses! GO123 uses Ford high-roof coaches that are very comfortable! Sometimes depending on the route, we may also use luxury Mercedes coaches. In any case, they&#39;re very comfortable and excellent value!</p><p><br></p><p>First Route:</p><p>This route primarily stops at Universal Studios, Sheraton Universal Hotel, Hilton Universal Hotel, Chinese Theatre, Beverly Hills (Rancho Bernardo), Farmers Market, and Staples Center.</p><p><br></p><p>The bus picks up passengers sequentially from the following 5 hotels:</p><p><br></p><p>1. Crowne Plaza Hotel Commerce</p><p>Address: 6121 East Telegraph Road, Commerce, CA 90040</p><p><br></p><p>2. Millennium Biltmore Hotel</p><p>Address: 506 S Grand Ave., Los Angeles 90071</p><p><br></p><p>3. Sheraton LA Hotel</p><p>Address: 711 S Hope Street, Los Angeles 90017</p><p><br></p><p>4. Westin Bonaventure Hotel</p><p>Address: 404 S Figueroa St, Los Angeles 90071</p><p><br></p><p>5. Kawada Hotel</p><p>Address: 200 S. Hill Street, Los Angeles 90012</p><p>After finishing the last pickup at 8:10, we set off for Universal Studios! We estimated arriving around 9 o&#39;clock.</p><p><br></p><p>According to the schedule icon, the bus returns to pick people up from Universal Studios at 6:35 PM. The pickup location is where you originally got off, approximately 30 meters from the main gate of the studio.</p><p><br></p><p>For Universal Studios, I recommend that if you have enough time, you should definitely spend a full day because basically every attraction requires queuing. Plus with Harry Potter opening this year, it certainly takes an entire day to experience everything.</p><p><br></p><p>Similarly, if you&#39;re staying at the Hilton or Sheraton Universal Hotel and have already visited Universal Studios, at 9:30 AM you can take the Go123 shuttle to visit the Chinese Theater, Beverly Hills, Farmers Market, and Staples Center. The schedule is detailed in the table above.</p><p><br></p><p>Route one&#39;s journey begins!</p><p><br></p><p>The first stop is Universal Studios - this is an essential destination when visiting Los Angeles. I won&#39;t post many photos because I want everyone to discover it for themselves; if everything is shown there would be no surprises left!</p><p><br></p><p>This is the Transformers theme exhibit - a super fun place to visit!</p><p><br></p><p>&quot;The Transformers 3D roller coaster combines real-time imaging with three-dimensional high-definition media, lifelike flight simulation technology, and advanced physical effects from around the world into a perfect experience that elevates human sensory perception to its ultimate level. This represents the newest generation of theme park experiential entertainment projects.&quot;</p><p>Visitors will be immersed in an intense battle between Megatron, Optimus Prime, Bumblebee, and EVAC. EVAC is an Autobot specifically created for this amusement ride; visitors will soar through the skies and dive underground, personally participating in the life-or-death struggle between Megatron and Optimus Prime. You can also face up close the ultra-large-size Bruticus Transformers.</p><p><br></p><p>The Simpsons Theme Pavilion - A super thrilling visual roller coaster.</p><p>In the animated world of &quot;The Simpsons,&quot; board a brand new virtual roller coaster, zooming through to experience the thrill of speed and impact. Fasten your seatbelt; using advanced projection technology and powerful hydraulic power, travel through Springfield while Ms. Marge watches from 18 meters above, experiencing an extraordinary journey that&#39;s both hilarious and exciting!</p><p><br></p><p>The Chinese Theater - Teaching you how to observe stars</p><p><br></p><p>Phonograph records: Singing celebrities or record industry professionals</p><p>Radio microphone: Famous hosts or broadcasting industry professionals</p><p>Comedy-tragedy masks: Stage actors or live theater professionals</p><p>Cinematography camera: Film stars or film industry professionals</p><p>Television set: TV series stars or television industry professionals</p><p><br></p><p>Farmers Market</p><p>The Original Farmers Market in downtown Los Angeles has grown from a small centralized market started by 18 farmers in 1934 into Los Angeles&#39; largest and most popular shopping tourist destination and dining hub today. Here you&#39;ll find the freshest fruits, vegetables, meat products, as well as ethnic restaurants from various cultures, souvenir shops, bookstores and newsstands. The second floor features art galleries with periodic exhibitions of artworks.</p><p><br></p><p>Route 2: Strolling Through Santa Monica</p><p>Looking at any major map, you can see that whether heading to Universal Studios or Beverly Hills, both destinations can be connected via Route 1 and Route 2. This means your journey begins on the Route 1 bus line, then at Beverly Hills you transfer to Route 2 for a direct ride straight to Santa Monica. The photos below were all taken in Santa Monica.</p><p><br></p><p>Give yourself an afternoon of time,</p><p>have a cup of coffee, walk along the beach, and let time slowly reveal its passing...</p><p><br></p><p>This is one of California&#39;s most beautiful beaches, home to one of the world&#39;s top ten sunset views. It also marks the end of Route 66 (end of the trail 66). At the pier&#39;s edge you can find the Route 66 Last Stop Shop for souvenirs. Not only is this a premier filming location for many movies and TV series (you might encounter celebrities while walking), but it also features a famous boardwalk carnival complete with roller coasters, pirate ships, carousels, and more. At night when the LED lights on the Ferris wheel illuminate, the spectacular lighting effects create an enchanting fairy tale world.</p><p>Line Three: Quick Sightseeing, Snap Photos Along the Way</p><p>What needs special mention is that this route can be directly combined with Line One to create a &quot;one-day tour&quot; itinerary. The benefit is that this entire route passes through the Music Center, Chinatown, Old Town, Little Tokyo, Central Market, and Staples Center. Connecting with Line One allows you to continue to Beverly Hills and Farmers Market after 10 AM.</p><p><br></p><p>For friends who have more time, I wouldn&#39;t recommend this approach, because GO123 tickets allow unlimited boardings and alightings within 1-3 days. So if you&#39;re doing a relaxed self-guided tour, don&#39;t play it as rushedly as this.</p><p><br></p><p>However, these attractions are mostly small sightseeing spots, so apart from quick visits, they simply cannot reach the level of deep exploration. Therefore, for friends planning a two-day trip, I suggest dedicating one day specifically to Universal Studios and another day for a Los Angeles day tour.</p><p><br></p><p>Line Three adds three additional hotel pickup/drop-off points, namely:</p><p>Best Western South Bay Hotel</p><p>Address: 15000 Hawthorne Boulevard, Los Angeles</p><p>Sheraton Gateway Hotel</p><p>Address: 6101 West Century Boulevard, Los Angeles 90045</p><p>Note: It is rumored that due to construction on the main thoroughfare, until the end of August all passenger boarding/alighting points are at the Avion Dr lane on the left side of the hotel. During this period it serves as the hotel&#39;s only entrance and exit.</p><p><br></p><p>The Concourse Hotel</p><p>Address: 6225 W Century Boulevard, Los Angeles</p><p><br></p><p>Of course, if you plan a trip lasting three days or longer, we can look at the fourth and fifth routes.</p><p>Fourth &amp; Fifth Routes: Enjoy Disney Land + Pacific Aquarium + Shop at Outlets</p><p><br></p><p>The fourth and fifth routes can also be combined with each other, and of course they can also connect with the first and third lines. However, time is limited in a day, so not every attraction can be covered. Therefore, the main attractions to visit during these two days are four:</p><p>1.	Disney Land</p><p>2.	Pacific Aquarium</p><p>3.	Shoreline Village</p><p>4.	Citadel Outlet Mall</p><p><br></p><p>These two routes also include several pickup points for hotels:</p><p>Marriott Anaheim Hotel</p><p>Address: 700 West Convention Way, Anaheim, CA 92802</p><p><br></p><p>Double Tree Suites by Hilton Hotel, Anaheim Resort – Convention Center</p><p>Address: 2085 S Harbor Blvd., Anaheim, CA 92802</p><p><br></p><p>Wyndham Anaheim, Garden Grove</p><p>Address: 12021 Harbor Blvd., Garden Grove, CA 92840</p><p><br></p><p>Disney Land</p><p>Lines 4 and 5 both provide routes to Disneyland, just that Line 4 arrives at Disney in the morning at 8 AM and returns at 7:45 PM. Of course, if you haven&#39;t had your fill of fun and want to watch the evening fireworks, you can also take the return on Line 5 at 10:45 PM.</p><p><br></p><p>Los Angeles Disneyland has two theme parks. The first one is more cartoon-like, suitable for children or adults with a childlike heart. The second is California Adventure, which is more thrilling and suitable for adults, featuring roller coasters, drop towers, rapids, and more. Three areas include Paradise Pier presenting the sunny coastline, where California Screamin&#39; is the most popular ride within the park; Hollywood focusing on musicals, 3D animation, and theater performances, where the 3D effects film &quot;A Bug&#39;s Life&quot; is very favored by children; Golden State highlighting natural, aviation, wine country, and agriculture themes that showcase California&#39;s unique features. As for Ariel&#39;s Grotto restaurant, interestingly it has real Snow White and Mermaid characters dressed up dining with you.</p><p><br></p><p>If you want to experience both parks fully, you might really play from dawn until dusk, as some attractions sometimes require waiting times.</p><p><br></p><p>Long Beach</p><p>Whether on Line 4 or Line 5, Go123 provides everyone with a full 8 hours of stay time during which you can explore all of Long Beach.</p><p><br></p><p>First Stop: Pacific Aquarium</p><p>California&#39;s largest aquarium covers 20,000 square meters and houses over 550 species totaling 12,500 marine creatures. With aquariums ranging from 5,000 to 350,000 gallons in capacity, there is a spectacular underwater tunnel that takes you into a colorful underwater world where you can view the vibrant, diverse marine life up close. The outdoor exhibits allow you to personally pet sea turtles or small sharks, while weekends and holidays feature exciting sea lion performances. Since opening, this attraction has welcomed 13 million visitors. It ranks as the second-best place in Greater Los Angeles for families, behind only Disney.</p><p><br></p><p>Second Stop: Whale Watching by Sea</p><p>When visiting California, there is one very interesting and relaxing activity that tourists often overlook – whale watching! More than 30,000 whales migrate along the Southern California coast each year. Winter is an excellent time to spot gray whales and humpback whales, while summer belongs to blue whales – the world&#39;s largest mammals! During this 2.5-hour journey, besides seeing whales, you can also observe other marine animals such as dolphins, sea lions, and various seabirds. Dolphins chasing the cruise boat in groups and huge whales rolling in the distance create an exciting scene that will be unforgettable for a lifetime.</p><p>Note: The Pacific Aquarium and whale watching tour are packages led by aquarium professionals for learning about marine mammals. This activity takes approximately 4-5 hours. After visitors disembark at Pacific Aquarium to participate in the activity, they need to take the Aqua Bus to Shoreline Village station, then park at LOUISIANA Charlie&#39;s BBQ entrance parking lot to board the GO123 shuttle bus.</p><p><br></p><p>Third stop: Naples Island - Take a Gondola</p><p>Thanks to some genius idea for bringing Italy Venice&#39;s unique &quot;Gondola&quot; to the canals on the Pacific South Bank. With handsome boatmen&#39;s melodious songs in ears, ride small boats called &quot;Gondolas&quot; through million-dollar mansions. Drink champagne, chat with boat owners sunbathing at private docks - what a pleasant day! Besides Gondola boat tours, every Christmas magnificent decorations are also attractions for visitors.</p><p><br></p><p>Citadel Outlets Shopping Experience</p><p>The fourth route will arrive at the outlet mall at 11:30 AM, staying for 5 hours. Citadel Outlets is the &quot;Castle Outlet&quot; familiar to domestic shopping enthusiasts - the closest brand outlet store to Los Angeles. Here over 130 brand discount stores provide annual discounts of 70%-30%. Our team guests who visit can enjoy extra discounts on top of these deals. Different from other outlets, besides not needing to spend a lot of money for desired branded items, visitors can also enjoy exclusive luggage storage service along with our shopping tour.</p><p>Additionally, all merchants here accept UnionPay cards. There are currency exchange points and ATMs where you can withdraw money using your UnionPay card. If you get tired or hungry, dont worryStarbucks, Panda Express, Subway, Hot Dog on a Stick, Roll It Sushi, Pronto Café, Nibi Bistroand other Chinese and Western restaurants and fast food places are around the corner of the mall, making it convenient for you to sit down anytime for a break and replenish your energy. Below is the map.</p><p><br></p><p>If youre friends traveling to America, I think whether you choose self-guided tour, partial self-guided tour or group tour, you wont miss this most famous city on the West CoastLos Angeles.</p><p><br></p><p>Although this city may not give you an in-depth exploration of scenic spots,</p><p>its charm might be hidden in its bustling skyscrapers, noisy street corners, or intersecting roads...</p><p><br></p><p>This time, I visited Universal Studios, Hollywood Chinese Theater, Beverly Hills, Farmers Market, Santa Monica, Little Tokyo, Central Market, Chinatown, Pacific Aquarium, Disneyland, Long Beach, and Outlet Malls.</p><p>Just a small GO123 ticket,</p><p>3 days, $75,</p><p>leaving my footprints in every corner of the city.</p>
+        
+
+        <a class="backLink" href="list-1.html">← Back to Los Angeles</a>
+      </article>
+    </main>
+  </body>
+</html>

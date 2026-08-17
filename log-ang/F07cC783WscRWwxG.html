@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <title>Super CHIC vibes! These are all the stunning Los Angeles Instagram influencer shots captured right here!</title>
+    <style>
+      :root {
+        --paper: #f5f1eb;
+        --ink: #163d36;
+        --body: #3f3a34;
+        --muted: #8a8379;
+        --line: #ddd5ca;
+        --accent: #d9782f;
+        --white: #fffaf4;
+        --shadow: 0 22px 70px rgba(28, 25, 20, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        line-height: 1.72;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .hero {
+        min-height: clamp(330px, 48vw, 560px);
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        padding: clamp(28px, 7vw, 70px) clamp(24px, 8vw, 76px);
+        background: #28463f;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.12)),
+          url("");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .heroInner {
+        position: relative;
+        width: min(900px, 100%);
+        color: #ffffff;
+      }
+
+      .heroLocation {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 24px;
+        color: rgba(255, 255, 255, 0.78);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .heroLocation svg {
+        width: 17px;
+        height: 17px;
+        color: #f0a45f;
+      }
+
+      h1 {
+        max-width: 880px;
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(30px, 4.8vw, 54px);
+        font-weight: 900;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .brief {
+        width: min(760px, 100%);
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 18px;
+        color: #5a5148;
+        font-size: clamp(17px, 1.9vw, 20px);
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.58;
+      }
+
+      .articleWrap {
+        width: min(900px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: clamp(42px, 6vw, 68px) 0 72px;
+      }
+
+      .content {
+        width: min(760px, 100%);
+        color: var(--body);
+        font-size: clamp(16px, 1.8vw, 18px);
+        line-height: 1.5;
+      }
+
+      .content p {
+        margin: 0 0 12px;
+      }
+
+      .content h2,
+      .content h3,
+      .content h4 {
+        margin: 46px 0 18px;
+        color: var(--ink);
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+
+      .content h2 {
+        font-size: clamp(28px, 4vw, 38px);
+      }
+
+      .content h3 {
+        font-size: clamp(23px, 3vw, 30px);
+      }
+
+      .content ul,
+      .content ol {
+        margin: 0 0 30px;
+        padding-left: 28px;
+      }
+
+      .content li {
+        margin: 8px 0;
+      }
+
+      .content blockquote {
+        margin: 34px 0;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 20px;
+        color: #5a5148;
+        font-style: italic;
+      }
+
+      .content img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 42px 0 12px;
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+      }
+
+      .content figure {
+        margin: 42px 0;
+      }
+
+      .content figure img {
+        margin: 0 0 12px;
+      }
+
+      .content figcaption {
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .backLink {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 46px;
+        border-top: 1px solid var(--line);
+        padding-top: 28px;
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.18em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .backLink:hover {
+        color: var(--accent);
+      }
+
+      @media (max-width: 720px) {
+        .hero {
+          min-height: 420px;
+          padding: 30px 24px;
+        }
+
+        .articleWrap {
+          width: min(100% - 28px, 900px);
+          padding-bottom: 48px;
+        }
+
+        .content {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="heroInner">
+        <p class="heroLocation">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+            />
+          </svg>
+          <span>Los Angeles</span>
+        </p>
+        <h1>Super CHIC vibes! These are all the stunning Los Angeles Instagram influencer shots captured right here!</h1>
+      </div>
+    </header>
+
+    <main class="articleWrap">
+      
+
+      <article class="content">
+        
+          <p>Who would be willing to go home with ordinary travel photos... Nobody raise their hands?</p><p><br></p><p>Los Angeles has everything: beaches, trendy restaurants, shopping malls, museums, theme parks, concert venues, and sports teams. For many of us, Los Angeles is one of the primary cities that has it all. LA is even called a &quot;paradise&quot; for all Instagram lovers and photographers, featuring the most unbelievable and amazing Instagram-worthy spots. Whether you live in Los Angeles or are visiting here for the first time to find some perfect attractions, there are 12 best Instagram locations you can check out! After taking shots at these incredible places, you&#39;re guaranteed thousands of likes on your Moments feed! Includes photo inspiration</p><p><br></p><p>1. LACMA&#39;s Urban Light Exhibition</p><p>One of the most popular photos in the area is from LACMA&#39;s Urban Light exhibition. This place is perfect at any time of day - whether it&#39;s early morning, afternoon, or evening. The exhibition is especially popular at night because all the lights are on, creating a perfect Insta-worthy background for your photos. This location is ideal for shooting a cute individual photo, a group photo with friends, or a romantic shot with someone important to you. Be patient - no matter how crowded it gets, you&#39;ll have a chance to capture the perfect photo!</p><p>Los Angeles County Museum of Art is located on Wilshire Boulevard in Los Angeles, USA, adjacent to the George C. Page Museum and La Brea Tar Pits. It is the largest art museum in the western United States, attracting over one million visitors annually.</p><p><br></p><p>Address: 5905 Wilshire Blvd, Los Angeles, CA 90036</p><p>Opening Hours:</p><p>Tuesday    11:00–17:00</p><p>Wednesday  Closed</p><p>Thursday   11:00–17:00</p><p>Friday     11:00–20:00</p><p>Saturday   10:00–19:00</p><p>Sunday     10:00–19:00</p><p>Monday     11:00–17:00</p><p><br></p><p>Photo Inspiration</p><p>2. Griffith Park / Observatory</p><p>You can thank the movie La La Land for reminding you how beautiful this attraction is! Since the film&#39;s release, this has been one of the most popular tourist destinations. The Observatory offers a variety of different exhibits, exhibitions, and telescope opportunities, plus incredible city views. Not only can you spend some time browsing through the exhibits, but you can also capture some wonderful photos here. The best time to visit is during dinner hour, giving you enough time to explore and view all exhibitions. Taking outdoor photographs at sunset is absolutely beautiful!</p><p><br></p><p>Griffith Park is North America&#39;s largest urban park, making it the preferred weekend destination for Los Angeles residents with friends and family.</p><p>The massive English letters of the Hollywood sign atop the mountain are each five stories tall and world-famous. The Griffith Observatory within the park is renowned throughout Los Angeles.</p><p><br></p><p>Address: 4730 Crystal Springs Dr, Los Angeles, CA 90027</p><p><br></p><p>Opening hours: Open 24 hours</p><p><br></p><p>Griffith Observatory is an observatory located in Los Angeles, USA. Situated within Griffith Park, it is one of LA&#39;s landmarks and opened in 1935. Positioned at a high elevation, the observatory offers panoramic views of the entire Los Angeles city, making it a famous local tourist attraction.</p><p><br></p><p>Opening hours:</p><p>Tuesday     12:00–22:00</p><p>Wednesday   12:00–22:00</p><p>Thursday    12:00–22:00</p><p>Friday      12:00–22:00</p><p>Saturday    10:00–22:00</p><p>Sunday      10:00–22:00</p><p>Monday      Closed</p><p><br></p><p>Photo inspiration</p><p><br></p><p>3. Hollywood Sign</p><p>The Hollywood sign is arguably the most famous landmark throughout Los Angeles! Whether you hike to the top of the sign or view it from the base, it&#39;s worthwhile. You can also take countless adorable photos in front of the sign.</p><p><br></p><p>Formerly known as the Hollywood Landmark, the Hollywood Sign is located in Los Angeles, California, USA. It is a local landmark and an important cultural symbol of America. Situated on Mount Lee in the Santa Monica Mountains overlooking the Hollywood district of Los Angeles.</p><p>Address: Los Angeles, California ZIP Code: 90068</p><p>Location: Griffith Park, Mount Lee, Hollywood Hills, Los Angeles, California</p><p>Height: 44 feet (13.4 meters) tall, 352 feet (107.3 meters) long</p><p>Photo Inspiration</p><p><br></p><p>4. Santa Monica Pier</p><p>Among all beaches in the Los Angeles area, Santa Monica is the most popular beach. The Santa Monica Pier and Boardwalk attract many people from different parts of the world. This pier suits everyone - restaurants, arcade games, roller coasters, and beaches! Explore several different areas along the pier and take as many photos as possible. Make sure to capture adorable pictures on the beach with the giant Ferris wheel in the background!</p><p><br></p><p>Santa Monica Pier is a large double-connected pier located at Colorado Avenue&#39;s foot in Santa Monica, California. The pier features an iconic entrance that is beloved by both residents and visitors, serving as a landmark with over 100 years of history.</p><p>Address: 200 Santa Monica Pier, Santa Monica, CA 90401</p><p>Hours Open: Open 24 hours</p><p><br></p><p>Photo Inspiration</p><p><br></p><p>5. Paul Smith&#39;s Pink Wall</p><p>Paul Smith&#39;s Pink Wall is one of the most iconic Instagram spots in all of Los Angeles. Many people from near and far visit this wall just to take pictures for &#39;Gram&#39;. Prepare your best poses and bring out your chicest outfits to get perfect photos.</p><p>Address: 8221 Melrose Ave, Los Angeles, CA 90046</p><p>Photo Inspiration</p><p><br></p><p>6. Getty Museum</p><p>This museum is renowned for its incredible art and exhibits, yet it&#39;s equally famous for the stunning views of Los Angeles. Multiple locations offer ideal backdrops for all your Instagram-worthy photos. Dress up extra cute and fashionable, and prepare for a day filled with art, photography, and fun!</p><p><br></p><p>The Paul Getty Museum is an art museum located in Los Angeles, California, USA, featuring two sites: the Getty Center and the Getty Villa. The former houses Western art from the medieval period onward. It attracts an estimated 1.3 million visitors annually, making it one of the most visited museums in America; the latter displays art from ancient Greece and Rome through classical antiquity.</p><p>Address: 1200 Getty Center Dr, Los Angeles, CA 90049</p><p>Opening Hours:</p><p>Tuesday	10:00–17:30</p><p>Wednesday	10:00–17:30</p><p>Thursday	10:00–17:30</p><p>Friday	10:00–17:30</p><p>Saturday	10:00–21:00</p><p>Sunday	10:00–17:30</p><p>Monday	Closed</p><p>Photo Inspiration</p><p>7. Grove</p><p>Grove is one of the most popular attractions in Los Angeles. This outdoor shopping center is fantastic! From delicious restaurants to luxury stores, entertainment activities, and more, this place has everything. There are many spots perfect for taking Instagram-worthy photos, such as the famous Grove sign or the grassy areas. It&#39;s ideal for spending a day with friends, taking lots of photos, and shopping.</p><p>Tip: Visit The Grove during Christmas season to enjoy the most magical winter wonderland experience!</p><p><br></p><p>The Grove is a retail and entertainment center located in Los Angeles, California, situated within a historic farmers&#39; market area.</p><p>Address: 189 The Grove Dr, Los Angeles, CA 90036</p><p>Opening Hours:</p><p>Tuesday	10:00–21:00</p><p>Wednesday	10:00–21:00</p><p>Thursday	10:00–21:00</p><p>Friday	10:00–22:00</p><p>Saturday	10:00–22:00</p><p>Sunday	10:00–20:00</p><p>Monday	10:00–21:00</p><p>Photo Inspiration</p><p><br></p><p>8. The Broad</p><p>This museum is filled with surprises in every room and is known as a photographer&#39;s dream destination for Instagrammers!</p><p>Whether you plan to view the exhibits at the museum or just want to take some cute photos, you should plan to spend a few hours here! Not only are there many amazing photo opportunities, but there are also many places worth seeing. Some famous exhibits include Yayoi Kusama&#39;s works, The Infinity Mirror Rooms, and Eros.</p><p><br></p><p>The Broad is a contemporary art museum on Grand Avenue in downtown Los Angeles. Named after philanthropist Eli Broad, he funded this $140 million building that houses the Broad Art Collection. The museum offers free galleries of its permanent collection. It opened on September 20, 2015.</p><p><br></p><p>Address: 221 S Grand Ave, Los Angeles, CA 90012</p><p>Hours of Operation:</p><p>Tuesday	11:00–17:00</p><p>Wednesday	11:00–17:00</p><p>Thursday	11:00–20:00</p><p>Friday	11:00–20:00</p><p>Saturday	10:00–20:00</p><p>Sunday	10:00–18:00</p><p>Monday	Closed</p><p><br></p><p>Photo Inspiration</p><p>OUE Skyspace LA</p><p>Skyspace LA won&#39;t disappoint! This structure is California&#39;s tallest open-air observation deck, offering panoramic views of the entire city.</p><p>Skyspace is truly the only way you can see all of Los Angeles, meaning the views are incredible and the photos turn out great as well. On one of the walls there&#39;s even a painting of angel wings, making this a very worthwhile place to visit. Even on cloudy days, this place remains amazing.</p><p><br></p><p>Address: 633 W 5th St #840, Los Angeles, CA 90071</p><p>Operating Hours:</p><p>Tuesday    10:00–21:00</p><p>Wednesday  10:00–21:00</p><p>Thursday   10:00–21:00</p><p>Friday     10:00–21:00</p><p>Saturday   10:00–21:00</p><p>Sunday     10:00–21:00</p><p>Monday     10:00–21:00</p><p><br></p><p>Photo Inspiration</p><p><br></p><p>*** Drive, Beverly Hills</p><p><br></p><p>If you want to dress up nicely and feel like a celebrity for the day, head to Rodeo Drive in Beverly Hills. Rodeo Drive is home to all elegance, sophistication, and luxury. From designer stores to elegant restaurants, after spending a day here, you&#39;ll definitely feel like a star. Moreover, there are many great spots for taking some photos! Make sure to see a picture at the stairs leading to the shops.</p><p>If you&#39;re looking for more photo opportunities, all you need to do is drive around Beverly Hills streets and you&#39;ll find a spot at every corner!</p><p><br></p><p>Photo Inspiration</p><p><br></p><p>11. Disneyland</p><p>A trip to Los Angeles isn&#39;t complete without visiting Disneyland! Tickets may be pricey and lines can be a bit long, but it&#39;s worth it. Put on your Minnie Mouse ears, get ready for a full day of roller coasters, junk food, and pictures! There are plenty of spots in the park perfect for those Insta-worthy photos, so make the most of it. Don&#39;t forget to take a picture in front of the castle!</p><p><br></p><p>Disneyland, also known as California Disneyland or Anaheim Disneyland, is a Disney theme park located in Anaheim, California. As the world&#39;s first Disneyland, it is also called the original Disneyland by Disney fans. The park is about a 20-minute drive from downtown Los Angeles; opened in 1955 with over 60 years of history. Since its opening, it has been one of the most popular theme parks in the world.</p><p><br></p><p>Address: 1313 Disneyland Dr, Anaheim, CA 92802</p><p>Opening Hours:</p><p>Tuesday    09:00–21:00</p><p>Wednesday  09:00–20:00</p><p>Thursday  09:00–20:00</p><p>Friday     09:00–00:00</p><p>Saturday   08:00–00:00</p><p>Sunday     08:00–00:00</p><p>Monday     08:00–00:00</p><p><br></p><p>Photo Inspiration</p><p>12. &quot;LA Made&quot; Sign</p><p><br></p><p>If you don&#39;t visit the &quot;LA Made&quot; sign, you can&#39;t experience the most Instagram-worthy spot in Los Angeles! This sign is located on Melrose Avenue, which is a very popular street in LA. Once you find the wall, line up and wait to ensure you get perfect Instagram-worthy photos. There are many different cafes, restaurants, and shops around Melrose that you can browse after taking your photo at the wall!</p><p><br></p><p>Address: Cisco Home 8025 Melrose Ave Los Angeles, CA 90046</p><p>Photo Inspiration</p>
+        
+
+        <a class="backLink" href="list-1.html">← Back to Los Angeles</a>
+      </article>
+    </main>
+  </body>
+</html>

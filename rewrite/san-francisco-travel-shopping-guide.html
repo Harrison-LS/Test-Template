@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Large Shopping Malls Section" />
+    <title>San Francisco Travel & Shopping Guide</title>
+    <style>
+      :root {
+        --paper: #f5f1eb;
+        --ink: #163d36;
+        --body: #3f3a34;
+        --muted: #8a8379;
+        --line: #ddd5ca;
+        --accent: #d9782f;
+        --white: #fffaf4;
+        --shadow: 0 22px 70px rgba(28, 25, 20, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        line-height: 1.72;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .hero {
+        min-height: clamp(330px, 48vw, 560px);
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        padding: clamp(28px, 7vw, 70px) clamp(24px, 8vw, 76px);
+        background: #28463f;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.12)),
+          url("https://p1-q.mafengwo.net/s14/M00/06/D2/wKgE2l1syWKAV_y0AAxLDq6Ee-Q64.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F90");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .heroInner {
+        position: relative;
+        width: min(900px, 100%);
+        color: #ffffff;
+      }
+
+      .heroLocation {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 24px;
+        color: rgba(255, 255, 255, 0.78);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .heroLocation svg {
+        width: 17px;
+        height: 17px;
+        color: #f0a45f;
+      }
+
+      h1 {
+        max-width: 880px;
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(30px, 4.8vw, 54px);
+        font-weight: 900;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .brief {
+        width: min(760px, 100%);
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 18px;
+        color: #5a5148;
+        font-size: clamp(17px, 1.9vw, 20px);
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.58;
+      }
+
+      .articleWrap {
+        width: min(900px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: clamp(42px, 6vw, 68px) 0 72px;
+      }
+
+      .content {
+        width: min(760px, 100%);
+        color: var(--body);
+        font-size: clamp(16px, 1.8vw, 18px);
+        line-height: 1.5;
+      }
+
+      .content p {
+        margin: 0 0 0.5em;
+      }
+
+      .content h2,
+      .content h3,
+      .content h4 {
+        margin: 46px 0 18px;
+        color: var(--ink);
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+
+      .content h2 {
+        font-size: clamp(28px, 4vw, 38px);
+      }
+
+      .content h3 {
+        font-size: clamp(23px, 3vw, 30px);
+      }
+
+      .content ul,
+      .content ol {
+        margin: 0 0 30px;
+        padding-left: 28px;
+      }
+
+      .content li {
+        margin: 8px 0;
+      }
+
+      .content blockquote {
+        margin: 34px 0;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 20px;
+        color: #5a5148;
+        font-style: italic;
+      }
+
+      .content img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 42px 0 12px;
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+      }
+
+      .content figure {
+        margin: 42px 0;
+      }
+
+      .content figure img {
+        margin: 0 0 12px;
+      }
+
+      .content figcaption {
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .backLink {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 46px;
+        border-top: 1px solid var(--line);
+        padding-top: 28px;
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.18em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .backLink:hover {
+        color: var(--accent);
+      }
+
+      @media (max-width: 720px) {
+        .hero {
+          min-height: 420px;
+          padding: 30px 24px;
+        }
+
+        .articleWrap {
+          width: min(100% - 28px, 900px);
+          padding-bottom: 48px;
+        }
+
+        .content {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="heroInner">
+        <p class="heroLocation">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+            />
+          </svg>
+          <span>Los Angeles</span>
+        </p>
+        <h1>San Francisco Travel & Shopping Guide</h1>
+      </div>
+    </header>
+
+    <main class="articleWrap">
+      
+      <p class="brief">Large Shopping Malls Section</p>
+      
+
+      <article class="content">
+        
+          <p>California is the US state with the largest population of Chinese residents, and also attracts countless overseas tourists continuously pouring in. San Francisco as a capital is also the first stop for almost all visitors. Please read patiently to the end.</p><p><br></p><p>                                        Large Shopping Malls Section</p><p><br></p><p>                    The shopping malls recommended with "real strength" below won't conflict with sightseeing tours, within 10KM of nearby attractions.</p><p><br></p><p>                                        [Shopping Centers]</p><p><br></p><p>Union Square - Shopping and Check-in in One Place</p><p>As a San Francisco landmark, it's no longer just an internet celebrity spot. Here you can compare with the shopping paradises of New York and London, featuring everything from international luxury brands like Gucci, Louis Vuitton, Bulgari, Burberry, Chanel to affordable options such as H&amp;M, Gap, Levi's. You'll also find Uniqlo and The North Face winter gear that locals love, plus the Apple Store for exploring latest tech products.</p>
+</p><p>Why not buy a cup of coffee, sit by the street, watch the passing crowds, and feel the unique urban atmosphere here.</p><p>Value for money rating: ★★★★☆</p><p>Pros: Perfect for sightseeing and shopping, a must-visit spot in San Francisco.</p><p>Cons: Located in the city center, prices are relatively high. Shopping off-season is more affordable.</p><p>Address: Union Square, San Francisco, CA 94108</p><p>Website: ***</p><p><br></p><p>Embarcadero Center has a unique architectural style</p><p>This is a shopping destination for many people who work at nearby financial institutions, featuring popular American brands like Gap and Banana Republic. The spacious design creates a pleasant shopping experience; do not miss the landmark Embarcadero Cinema here.</p><p>Value for money rating: ★★★☆☆</p><p>Pros: A paradise for architectural photography enthusiasts, with an impressive authentic IMAX cinema.</p><p>Cons: Targets high-end consumers with premium pricing.</p><p>Address: Two Embarcadero Center, 2 Embarcadero Center, San Francisco, CA 94111</p><p>Website: ***</p><p><br></p><p>Stanford Shopping Center is an excellent destination for gift shopping</p><p>This is the most classic open-air mall in the Bay Area.</p>
+<p>This place is relatively low-key compared to other crowded areas; during shopping seasons it's not as packed with people. There are large stores here like Apple Store, Neiman Marcus, Microsoft.</p><p>Product value-for-money rating: ★★★★★</p><p>Pros: Low crowd density, convenient to Stanford University.</p><p>Cons: Far from downtown area.</p><p>Address: 660 Stanford Shopping Center, Palo Alto, CA 94304</p><p><br></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [Specialty Shopping Districts]</p><p><br></p><p>Alemany Flea Market - find what you like</p><p><br></p><p>This flea market is located next to San Francisco Public Library, not very large in size, and many items sold are small trinkets, but if you look carefully you can still find some interesting antiques, such as children's toys, home decorations, slightly old musical instruments, kitchenware, etc. You can even buy 12 books for $35! There are also various small items at $1 each.</p><p><br></p><p>Product value-for-money rating: ★★★★★</p><p><br></p><p>Pros: Interesting exploration, discover through browsing and searching here.</p>
+</p><p>Drawbacks: Every Sunday 7am-3pm</p><p>Address: Alemany Flea Market - 100 Alemany Blvd, San Francisco, CA 94110, USA</p><p><br></p><p>Hayes Valley Shopping near the Painted Ladies</p><p><br></p><p>Right next to the famous tourist attraction Painted Ladies, an excellent shopping area in downtown. Fully embodies the fusion of San Francisco's art and commerce, with nearby art galleries, interior design studios, outdoor coffee shops, and elegantly atmospheric bars. No large chain brands here; instead there are more uniquely styled boutiques. Grab a cup of the famous Blue Bottle Coffee and wander through these art-filled small shops - it's refreshingly pleasant.</p><p>Product Value Index: ★★★★☆</p><p>Pros: Close to popular photo spots, well-stocked inventory, mature shopping district</p><p>Drawbacks: Central city prices are relatively high</p><p>Address: Haight-Ashbury, San Francisco, CA</p><p><br></p><p>Haight/Ashbury</p><p>Experience authentic San Francisco vibe - this was once a gathering place for hippies in the 60s and still retains much of that hippie culture today.</p>
+Here you can find clothing with eccentric styles as well as antique shops filled with exotic charm. On the streets, you can also see many hippies high in the clouds, which is an interesting local spectacle.</p><p>Value-for-money rating: ★★★☆☆</p><p>Pros: Paradise for nostalgic items, prices are negotiable</p><p>Cons: Not suitable for everyone</p><p>Address: Haight-Ashbury, San Francisco, CA</p><p><br></p><p>                    Westfield San Francisco Centre</p><p><br></p><p>Westfield San Francisco Centre is located on Market Street in downtown San Francisco. It is not only a must-visit shopping destination for many tourists, but also a popular shopping center for locals.</p><p>Combining major department stores like Nordstrom and Bloomingdale's, Westfield features top American trendy and luxury brands such as Bottega Veneta and Louis Vuitton, along with highly popular brands including Hugo Boss, Tumi, Kate Spade, Tory Burch, Superdry, and more.</p>
+</p><p>And around year-end many stores offer additional discounts, such as Abercrombie & Fitch, Club Monaco, Bebe - worth a good round of shopping. During discount seasons there are many discounts on everything from household items to clothing and jewelry, but specific information should still be checked at official websites~</p><p><br></p><p>                                        Common Items Shopping</p><p><br></p><p>                    Walmart Supercenter - Walmart Superstore</p><p><br></p><p>A Supercenter is a comprehensive superstore with the largest sales area and widest range of products. From supermarket fresh foods, daily necessities to home appliances, as well as services like pharmacies, tire replacement, photo developing services, etc. Fresh food varieties are most diverse. All following items can be purchased in this mall.</p><p><br></p><p>If it's summer, you can centrally purchase enough water at the supermarket for convenience of having adequate hydration during hot outdoor weather.</p><p><br></p><p>                                        Sunscreen or spray</p><p><br></p><p>Because California's sun is relatively "toxic" - essential sunscreen products are needed for summer beach vacations, otherwise skin can easily turn red and become allergic under prolonged exposure.
+<p><strong>It is strongly recommended to purchase SPF 60 or above (the higher the number, the better), PA+++ or higher.</strong></p><p><br></p><p>(The image below shows SPF 110)</p><p><br></p><p>                                        Ray-Ban Sunglasses</p><p><br></p><p>                    No need to elaborate on Ray-Ban, one of the best sunglasses available, generally priced around $150.</p><p>A warm tip: Polarized lenses work exceptionally well for driving.</p><p>Address: 245 Post St, San Francisco, CA 94108</p><p><br></p><p>                                        Non-perishable Food Items</p><p><br></p><p>                    Long-distance driving during a trip can cause fatigue, so snacks and dry food are essential items. When you encounter large supermarkets, be sure to stock up on some.</p><p><br></p><p>                                        Eagle Brand Chocolate</p><p><br></p><p>                    A local San Francisco brand, delicious without being too rich, with a preference for dark chocolate flavor.</p><p>Recommended flavor: Dark chocolate with truffle</p><p><br></p><p>                                        Pepperidge Farm Cookies</p><p><br></p><p>                    There's a type of crispy cookie with just the right sweetness. It comes in a box that can be reused to store other items after consumption, making it convenient and practical.</p>
+<p>Tip: Crackers can effectively relieve excessive stomach acid, stomach pain, and other conditions.</p><p><br></p><p>Semi-hard cheese</p><p><br></p><p>In America, how could one do without cheese? Compared to the uncomfortable taste of soft cheese and the difficulty of handling hard cheese, semi-hard cheese is the best companion for fast food on the way.</p>
+        
+
+        <a class="backLink" href="list-1.html">← Back to Los Angeles</a>
+      </article>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <title>Unmissable towns and stunning scenery along America's Highway One!</title>
+    <style>
+      :root {
+        --paper: #f5f1eb;
+        --ink: #163d36;
+        --body: #3f3a34;
+        --muted: #8a8379;
+        --line: #ddd5ca;
+        --accent: #d9782f;
+        --white: #fffaf4;
+        --shadow: 0 22px 70px rgba(28, 25, 20, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+        line-height: 1.72;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .hero {
+        min-height: clamp(330px, 48vw, 560px);
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        padding: clamp(28px, 7vw, 70px) clamp(24px, 8vw, 76px);
+        background: #28463f;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.12)),
+          url("");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .heroInner {
+        position: relative;
+        width: min(900px, 100%);
+        color: #ffffff;
+      }
+
+      .heroLocation {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 24px;
+        color: rgba(255, 255, 255, 0.78);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .heroLocation svg {
+        width: 17px;
+        height: 17px;
+        color: #f0a45f;
+      }
+
+      h1 {
+        max-width: 880px;
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(30px, 4.8vw, 54px);
+        font-weight: 900;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .brief {
+        width: min(760px, 100%);
+        margin: 0 0 28px;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 18px;
+        color: #5a5148;
+        font-size: clamp(17px, 1.9vw, 20px);
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.58;
+      }
+
+      .articleWrap {
+        width: min(900px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: clamp(42px, 6vw, 68px) 0 72px;
+      }
+
+      .content {
+        width: min(760px, 100%);
+        color: var(--body);
+        font-size: clamp(16px, 1.8vw, 18px);
+        line-height: 1.5;
+      }
+
+      .content p {
+        margin: 0 0 12px;
+      }
+
+      .content h2,
+      .content h3,
+      .content h4 {
+        margin: 46px 0 18px;
+        color: var(--ink);
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+
+      .content h2 {
+        font-size: clamp(28px, 4vw, 38px);
+      }
+
+      .content h3 {
+        font-size: clamp(23px, 3vw, 30px);
+      }
+
+      .content ul,
+      .content ol {
+        margin: 0 0 30px;
+        padding-left: 28px;
+      }
+
+      .content li {
+        margin: 8px 0;
+      }
+
+      .content blockquote {
+        margin: 34px 0;
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 20px;
+        color: #5a5148;
+        font-style: italic;
+      }
+
+      .content img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 42px 0 12px;
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+      }
+
+      .content figure {
+        margin: 42px 0;
+      }
+
+      .content figure img {
+        margin: 0 0 12px;
+      }
+
+      .content figcaption {
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .backLink {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 46px;
+        border-top: 1px solid var(--line);
+        padding-top: 28px;
+        color: var(--muted);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.18em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .backLink:hover {
+        color: var(--accent);
+      }
+
+      @media (max-width: 720px) {
+        .hero {
+          min-height: 420px;
+          padding: 30px 24px;
+        }
+
+        .articleWrap {
+          width: min(100% - 28px, 900px);
+          padding-bottom: 48px;
+        }
+
+        .content {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="heroInner">
+        <p class="heroLocation">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+            />
+          </svg>
+          <span>Los Angeles</span>
+        </p>
+        <h1>Unmissable towns and stunning scenery along America's Highway One!</h1>
+      </div>
+    </header>
+
+    <main class="articleWrap">
+      
+
+      <article class="content">
+        
+          <p>Scenic Highlights You Cannot Miss on California Highway 1</p><p><br></p><p>California&#39;s Highway 1 is North America&#39;s most classic self-driving route, featuring the world&#39;s most beautiful coastal natural landscapes, while also offering diverse cultural attractions.</p><p><br></p><p>California Highway 1 is likened to a pearl necklace, connecting over a dozen world-famous tourist destinations along the way:</p><p>- The artistic town of Carmel</p><p>- The Danish-style town of Solvang</p><p>- Bixby Bridge, the tallest concrete bridge in the world</p><p>- The only purple beach on Earth</p><p>- Big Sur, one of the top 50 must-visit destinations</p><p><br></p><p>Route Overview in One Minute</p><p>[Draft]</p><p>Total Route Length: Approximately 740 kilometers</p><p>Towns En Route: Monterey-Carmel-San Simeon-Cambria-Morro Bay-Dana Village-Santa Barbara</p><p>Self-Driving Duration: 4-6 days</p><p>Recommended Travel Months: April-October</p><p><br></p><p>Details of Attractions &amp; Activities</p><p><br></p><p>Half Moon Bay State Beach (半月湾)</p><p>📍 From San Francisco, drive 40 minutes to arrive | 53 kilometers</p><p>⌚ Recommended visiting time: 2 hours</p><p>Famous for its excellent location near San Francisco and tranquil leisurely atmosphere, Half Moon Bay is world-renowned. You can play golf on the cliffs, surf at the famous Mavericks, or leisurely visit local small breweries!</p><p><br></p><p>Pigeon Point Lighthouse (鸽子角灯塔)</p><p>📍 After visiting Half Moon Bay State Beach, drive 30 minutes to arrive | 37 kilometers</p><p>⌚ Recommended visiting time: 1 hour</p><p>A lighthouse built in 1871, recognized as one of the &quot;Most Beautiful Lighthouses Globally,&quot; this site hosts a unique lighting ceremony every November specifically designed for photography, driving photography enthusiasts from around the world crazy!</p><p>Monterey (Monterey)</p><p>📍 A 1 hour 30 minute drive away from Point Lobos Lighthouse | 112 km</p><p>⌚ Recommended visit duration: 1-2 days, recommended accommodation area</p><p>A vibrant small town with rich California Spanish and Mexican cultural atmosphere, featuring the Monterey Aquarium—one of North America&#39;s largest aquariums—and Cannery Row.</p><p><br></p><p>Monterey Old Fisherman&#39;s Wharf</p><p>The wharf has restaurants, unique souvenir shops, and opportunities for whale watching. As a port, this is also the departure point for bay cruises. Locals work in fishing and nautical tourism nearby.</p><p><br></p><p>Accommodation highlights: Due to complete infrastructure, many motels are concentrated here; most visitors choose to stay locally on the first night.</p><p><br></p><p>17 Mile Drive (17 Mile Drive)</p><p>by 雪3飞who</p><p>📍 A 15 minute drive from Monterey | 13 km</p><p>⌚ Recommended visit duration: 30 minutes</p><p>Continuing south from Monterey is a 17-mile coastal highway, representing one of the most beautiful stretches of coastline on the West Coast. Along the way, you&#39;ll spot luxurious mansions partially hidden in the hillsides - each built with mountain backing and sea-facing views, offering unobstructed ocean vistas. Each property is unique, with some being quite magnificent and stunning.</p><p><br></p><p>17 Mile</p><p>17 Mile Drive is a globally renowned tourist destination situated in Monterey County, central California. This scenic route encircles the famous Pebble Beach resort area. The drive hugs the Pacific Ocean on its western and southern edges while cutting through Del Monte Forest to the east. Travelers can enjoy breathtaking views of azure waters, pristine white beaches, and dramatic rocky formations that create a continuously changing landscape with every step along the winding mountain roads. Along this picturesque journey, visitors encounter impressive luxury estates and four championship golf courses, including Pebble Beach Golf Links - consistently ranked among the world&#39;s finest golfing destinations.</p><p><br></p><p>Carmel-by-the-Sea</p><p>📍 Approximately 15 minutes to drive from 17 Mile Drive endpoint | 11 kilometers</p><p>⌚ Recommended duration: 1 day; also recommended as an accommodation base</p><p>A charming seaside artistic town that exists like a paradise on earth. The village features uniquely styled architecture and shops filled with art pieces, creating a strong bohemian atmosphere while maintaining romantic tranquility.</p><p>Carmel-by-the-Sea Coastal Town</p><p><br></p><p>Carmel-by-the-Sea coastal town has become a major highlight along California Highway One and the 17 Mile Scenic Drive with its beautiful natural environment and elegant artistic atmosphere. Here, whether it is fashion stores or antique shops, candy stores or galleries, toy stores or craft shops - from their storefronts to their products, everything catches your eye and captivates you.</p><p><br></p><p>Over a century ago, &quot;Carmel of artists, poets and writers&quot; had already become famous worldwide. In 1969, the renowned Chinese painter Zhang Daqian lived there, calling his residence &quot;a place where one can truly live.&quot;</p><p><br></p><p>In this paradise-like place of Carmel, many artists and writers with unique styles reside in this Bohemian-style small city facing the sea from the hills. The unique buildings and scenery are as beautiful as fairy tales. Local residents actively resist modernization. Even today, posting advertisements, installing neon lights, or building fast food restaurants is prohibited within the town to maintain its original charm. At the end of Ocean Avenue, Carmel&#39;s main street when heading west, lies Carmel Beach - part of the 17 Mile Drive featuring a unique large beach.</p><p><br></p><p>Accommodation Highlights: Carmel&#39;s characteristic homestays feature distinctive designs, perfect for travelers with higher accommodation expectations.</p><p><br></p><p>Hotel Recommendation - Dolphin Lodge</p><p><br></p><p>Recommended is a design homestay located at the edge of Carmel town, equipped with parking spaces, car-friendly, and convenient for visiting 17-Mile Drive and Monterey.</p><p>Bohemian-style decorations adorn every corner of the hotel. The combination of wood and leather is warm yet stylish, while the heated outdoor pool at the entrance makes an ideal spot to relax and rejuvenate.</p><p><br></p><p>Carmel Hotel</p><p><br></p><p>Carmel Hotel is located in the heart of Carmel, less than a 15-minute walk from Carmel Beach and Carmel Plaza. The hotel is 3.9 miles (6.3 km) from Fisherman&#39;s Wharf and 4.5 miles (7.2 km) from Cannery Row. Enjoy vacation amenities such as hot tubs or take in the scenery in the garden. After a busy day, stop by the bar/lounge to unwind. A free continental breakfast is served daily from 8:00 AM to 10:30 AM. Featured services and facilities include complimentary newspapers in the lobby, laundry service, and 24-hour front desk service. The hotel offers free self-parking.</p><p><br></p><p>Of the 30 guest rooms featuring refrigerators and mini-bars, you will surely find home-like comfort during your journey. Each room is equipped with extra-thick mattresses and a private balcony. Flat-screen TVs are provided to meet your entertainment needs. Private bathrooms with bathtubs or showers offer complimentary toiletries and hair dryers.</p><p><br></p><p>Bixby Creek Bridge</p><p>📍 20 minutes by car from Carmel town | 15 miles</p><p>⌚ Recommended visit time: 1 hour</p><p>West Coast&#39;s most frequently photographed bridge - a weathered arch spanning sheer cliffs above the Pacific Ocean&#39;s turbulent waves, creating a magnificent &quot;mountain-sea-bridge&quot; landscape.</p><p><br></p><p>Bixby Creek Bridge</p><p><br></p><p>Bixby Bridge is an open single-arch bridge located on California&#39;s Highway 1 in Big Sur. With a span of approximately 100 meters, it remains the longest concrete arch bridge in California&#39;s highway system. Opened in 1932, it was once the world&#39;s highest single-arch concrete bridge and continues to be one of the most popular tourist attractions today.</p><p><br></p><p>Big Sur</p><p><br></p><p>📍 15-minute drive from Bixby Bridge | 10 kilometers</p><p>⌚ Recommended visit time: 1 hour</p><p><br></p><p>Big Sur is known as one of the world&#39;s most beautiful vantage points where land meets ocean. Its winding highway with dramatic curves has been named by National Geographic as &quot;one of life&#39;s must-see scenic destinations.&quot;</p><p><br></p><p>Big Sur</p><p><br></p><p>California&#39;s highways are built like paintings along the famous Highway 1. Traveling south from San Francisco, hundreds of kilometers of winding road offer breathtaking views that leave visitors breathless.</p><p>On the left rise steep rock walls that shoot upward at an angle toward the blue sky. California pines atop the cliff ridges stand in rows and lines, densely packed in their characteristic posture: upper bodies tilted inland, green foliage at the tops intertwined for support, while brown tree trunks form countless parallel angles with the ground.</p><p><br></p><p>On the right stretches a breathtaking expanse of azure. The water, ranging from sapphire to indigo to deep blue to light blue, churns up thick pure white foam. Golden, pale yellow, grass yellow, and dark yellow beaches curve gently into the depths of waves. Rock formations extend like tentacles from coastal cliffs toward the ocean, blocking surging waves as the sea splashes out crystal-clear water that helplessly scatters in all directions.</p><p><br></p><p>This is one of 50 destinations you must visit — typical Big Sur scenery, radiating a primordial natural beauty never trodden upon.</p><p><br></p><p>Piedras Blancas Elephant Seal Rookery</p><p>📍 Drive from Big Sur: 1 hour 30 minutes | 124 km</p><p>⌚ Recommended visiting time: 30 minutes</p><p><br></p><p>A group of endearing elephant seals gathers along Highway One. From viewing platforms on low cliffs, you can see sheets and heaps of elephant seals sunbathing on the beach — a truly spectacular scene rarely witnessed.</p><p><br></p><p>Hearst Castle</p><p>📍 10 minutes drive from Elephant Seal Beach | 8.1 km</p><p>⌚ Recommended visit time: 3 hours</p><p>Known as America&#39;s most expensive private villa ever built and designated one of California&#39;s historical monuments, its rich collections possess exceptional artistic value, attracting thousands of visitors from around the world annually.</p><p><br></p><p>Solvang (Danish Village)</p><p>📍 2 hours drive from Hearst Castle | 174 km</p><p>⌚ Recommended visit time: 1 day; recommended place to stay</p><p>A fairy tale town filled with windmills offering authentic Danish scenery. Stroll through the village admiring Danish architecture and seek out windmills and the Little Mermaid statue.</p><p><br></p><p>Solvang derives its name from the Danish phrase for &quot;sunny countryside,&quot; established by early 20th-century immigrants who meticulously recreated their homeland&#39;s architectural charm and community layout in California. With approximately two-thirds of residents having Danish ancestry, this American town offers an authentic Nordic experience without requiring a transatlantic journey to Scandinavia—and everyone speaks English here.</p><p>Accommodation Highlights</p><p><br></p><p>I recommend a hotel located at the entrance of the Danish town, featuring excellent traditional Danish architecture paired with American country-style interior decoration, very distinctive.</p><p><br></p><p>Hotel Recommendation - Valley Lodge</p><p><br></p><p>The Valley Lodge with its fairytale cottage design is one of the popular hotels in the Danish town. The fireplace and warm-toned decorations make every weary traveler feel truly cozy. Parking available for self-driving guests.</p><p><br></p><p>Vineyard Lodge is located in downtown Solvang, within a 10-minute drive from Chumash Casino and Solvang Brewing Company. This spa hotel is just 0.1 miles (0.1 km) from Saint Ines Canyon and 0.2 miles (0.3 km) from the Solvang Festival Theater. Treat yourself to massages and facials. Other amenities include free WiFi, concierge service, and a lobby fireplace. Free buffet breakfast is served daily from 7:00 AM to 10:30 AM. Featured services and facilities include high-speed cable internet access, business center, and express checkout. The hotel offers free self-parking. With its 63 air-conditioned rooms, you&#39;ll find home-like comfort during your journey. Free wireless internet is provided for easy connection with friends. Bathrooms are equipped with hairdryers, toothbrushes, and toothpaste.</p><p>Amenities include a safe and tea/coffee making facilities; housekeeping service is provided upon request.</p><p>Santa Barbara (Santa Barbara)</p><p>📍40 minutes by car from Solvan | 55 km</p><p>⌚Recommended duration: 1 day, recommended accommodation location</p><p>The traditional Spanish architecture throughout Santa Barbara gives the small town a European atmosphere. Malibu Beach is one of California&#39;s most famous beaches; you can choose a restaurant with ocean views to enjoy fine dining against the backdrop of the sunset.</p><p>Santa Barbara Coastal Area</p><p>Accommodation highlights: You must stay overnight at Santa Barbara&#39;s beautiful beaches to fully experience them; this is a famous resort destination. Besides affordable chain hotels, there are also beautifully landscaped resorts available.</p><p>Hotel recommendation - Best Western Encina Hotel</p><p>Unlike traditional Best Westerns, this property in Santa Barbara feels more like a meticulously maintained inn; the greenery-surrounded lobby and courtyard create a warm, home-like atmosphere for travelers. Driving from the hotel to restaurants, shopping, or the beach is very convenient.</p><p>Encina Best Western Plus Hotel</p><p>We are located in the charming historic residential area of Santa Barbara with an excellent position near all major attractions, just miles from the breathtaking coastline and downtown, offering guests a unique experience of shopping, dining, arts, and culture. Tourist families can taste local Santa Barbara specialties during St. Jude&#39;s Day, Summer Solstice, and various summer festivals. Stay at Best Western Plus Encina Inn Suites and enjoy everything that Santa Barbara has to offer within minutes - an exceptional value! Single and double bedroom suites located in townhouses come with fully equipped kitchens, making them perfect for groups or extended stays. The on-site restaurant, outdoor pool, spa center, and fitness facilities ensure you feel cared for throughout your vacation. This Best Western Santa Barbara hotel is the first choice for business travelers, especially those heading to medical centers, Sansum Clinic, Arlington, Granada, and Lobero Theater. Many guests visit for medical treatment requiring extended stays, so maintaining physical comfort and a relaxed mood during recovery is essential. At our Santa Barbara hotel, you&#39;ll feel right at home. Our spacious and comfortable Santa Barbara hotel is your ideal choice, especially for families or friends visiting hospitals or seeing nurses and doctors. Located in central Santa Barbara, we provide exceptional value with spacious accommodations, luxurious bedding, and friendly service.</p><p>Our Santa Barbara Hotel is unique, specifically designed for extended stays and overnight guests. Stock up on your favorite foods during your vacation with our fully-equipped kitchen that ensures maximum convenience and comfort. Whether it&#39;s a weekend stay or long-term residence, we provide everything you need for a relaxing getaway.</p><p><br></p><p>After enjoying a romantic night in Santa Barbara, simply drive straight to the southern terminus of Highway 1 - Los Angeles, bringing your journey to a close. The entire route covers approximately 170 kilometers and takes about 2 hours.</p>
+        
+
+        <a class="backLink" href="list-1.html">← Back to Los Angeles</a>
+      </article>
+    </main>
+  </body>
+</html>
