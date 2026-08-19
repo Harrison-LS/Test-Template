@@ -179,6 +179,86 @@ figure>figcaption {
   margin-left: auto;
 }
 
+/* Rich-text tables and colored content sections from the article editor. */
+.section-row[data-article-id] table {
+  width: 100%;
+  max-width: 100%;
+  margin: 24px 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+  table-layout: fixed;
+  color: #1f2937;
+}
+
+.section-row[data-article-id] th,
+.section-row[data-article-id] td {
+  min-width: 80px;
+  padding: 14px 12px;
+  border: 1px solid #d9dee8;
+  vertical-align: top;
+  text-align: left;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+
+.section-row[data-article-id] th {
+  background: #f2f6ff;
+  font-weight: 700;
+}
+
+.section-row[data-article-id] th p,
+.section-row[data-article-id] td p {
+  margin: 0 0 8px;
+}
+
+.section-row[data-article-id] th p:last-child,
+.section-row[data-article-id] td p:last-child {
+  margin-bottom: 0;
+}
+
+.section-row[data-article-id] [data-rich-content-section] {
+  display: block;
+  box-sizing: border-box;
+  min-height: 72px;
+  margin: 24px 0;
+  overflow: hidden;
+}
+
+.section-row[data-article-id] [data-rich-content-section] > :first-child {
+  margin-top: 0;
+}
+
+.section-row[data-article-id] [data-rich-content-section] > :last-child {
+  margin-bottom: 0;
+}
+
+.section-row[data-article-id] [data-rich-content-section] h1,
+.section-row[data-article-id] [data-rich-content-section] h2,
+.section-row[data-article-id] [data-rich-content-section] h3 {
+  margin-bottom: 14px;
+}
+
+.section-row[data-article-id] [data-rich-content-section] ul,
+.section-row[data-article-id] [data-rich-content-section] ol {
+  margin-bottom: 12px;
+}
+
+@media (max-width: 767px) {
+  .section-row[data-article-id] table {
+    table-layout: auto;
+  }
+
+  .section-row[data-article-id] th,
+  .section-row[data-article-id] td {
+    min-width: 120px;
+  }
+
+  .section-row[data-article-id] [data-rich-content-section] {
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+}
+
 .section-title {
   position: relative;
   margin-bottom: 20px;
