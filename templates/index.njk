@@ -159,6 +159,8 @@
 						{% endfor %}
 					</div>
 
+					{% if page.categorySections and page.categorySections.length %}
+					<div id="index-category-sections">
 					{% for section in page.categorySections %}
 					<div class="row">
 						<div class="col-md-12">
@@ -173,6 +175,8 @@
 						{% endfor %}
 					</div>
 					{% endfor %}
+					</div>
+					{% endif %}
 				</div>
 				<!-- shared-sidebar:start -->
 				{% set sidebarCategories = sidebar.categories %}
@@ -192,6 +196,15 @@
 			<!-- row -->
 			<div class="row">
 				<div class="col-md-8" id="index-feed-list" data-total-pages="{{ total_pages }}">
+					{% if page.feedPosts and page.feedPosts.length %}
+					<div class="row">
+						<div class="col-md-12">
+							<div class="section-title">
+								<h2 class="title">Random Picks</h2>
+							</div>
+						</div>
+					</div>
+					{% endif %}
 					{% for post in page.feedPosts %}
 					<div
 						class="index-feed-post"
